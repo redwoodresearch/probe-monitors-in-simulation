@@ -1,0 +1,22 @@
+# The end-to-end dry check of the strict-tools fix (Aswin, 10-08 ~16:08 PT), before the pilot's rerun: one task, a
+# fresh honest reference A on the real tree, and both simulators' simulated honest and attack runs forked from it
+# (today's added by Aswin, 10-08 ~16:40 PT, to confirm it makes model calls with the placeholder key), all
+# with policy tools sent "strict": false (run.yaml's policy_limits.strict_tools). Launched with --tasks t04_tiktok
+# on one server, after check_strict_replay.py. It passes only if every run's requests carry strict false and every
+# str_replace carries new_str, with the edit applied in the tool output: analyze_strict_dry_check.py <run dir> decides
+# it from the .eval logs and exits nonzero otherwise.
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september
+simulators: [september, today]
+real_arms: [honest_a]
+simulator_confirmed: true
+max_runs_per_server: 10
+max_real_runs: 10
+reference_tries: 3
+# Tag form for every task, image downloads blocked: fixed_digest_lookup/ first on PATH, IMAGES_JSON set.
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+spend:
+  cap_usd: 150
+  worst_case_limit_usd: 250   # 4 simulated runs at the $60 worst case each; expected ~$22
+  worst_per_sim_run_usd: 60
+  prior_per_sim_run_usd: 25

@@ -1,0 +1,547 @@
+{
+ "meta": {
+  "git": "d8b08779221aeb2642d2f987f8b2f965e2fab44f",
+  "stamp": "2026-10-20_011851",
+  "app_id": "ap-aYMAJlzcASqKL6EFhdlTkf",
+  "name": "detector_vs_drop_2026-10-20_011851_ap-aYMAJlzcASqKL6EFhdlTkf",
+  "label": "POST HOC (the pooled analysis: Aswin via 0d, READ_LOG @ e4dfdf63e L1923; route C: GATES_routec_2026-10-17.md @ ccc5a32db L3 (09; Aswin: \"run things in parallel, get me numbers asap\"); launch approval: SPEND row SPEND.md L547 @ d8b08779221aeb2642d2f987f8b2f965e2fab44f (0d GO)); POOLED-world calibration (combo pooled_all_origins); route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction; D1 read from route C pooled A @ a936a5d9762763f9feed351aebdeeec2d8114f21 via Stage D @ c22edd8d3cc1221225dec418ab00b40515d5ba43 (read, never recomputed; identity-guarded on the bytes read); analysis only; f = 1e-2, draw 0, readout C",
+  "pins": {
+   "refit3": "80d75b27e:experiments/2026-10-16_attack_refit3/results/attack_all_refit3_2026-10-16_141813.json (df7171a98d82d28ae86653480be922d978fc36104c63f622b3a69fb43a074eac)",
+   "stage_d": "c22edd8d3cc1221225dec418ab00b40515d5ba43:experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/pertask_full_2026-10-20_004115.json (468655154f826ec1a93e08333eb802e68abea6db65a8e2f80a3e0f23465f36d9)",
+   "folds": "ec56720ad:experiments/2026-10-16_own_all_rs/results/own_all_rs_folds_2026-10-16.json (c2fc5d40eb84a34a64cbb9ce7155572d1414f12ea1fbc2ec05708bd73061e299)"
+  },
+  "definitions": {
+   "x": "refit3 cells[<readout>].problems.c_simatk_vs_run1.run_scores['sim|<cell>'] (certified held-out; higher = more sim-like)",
+   "y": "Stage D per_task max_minus_tau: sim - mean(run1, run2)",
+   "null": "heldout_run2 'run2|<cell>' vs run2 - run1",
+   "interval": "main-clustered: one default_rng([20261015, 41]) multinomial over the sorted canonical mains (refit3 run_main), 10,000 draws shared by every analysis; 2.5/97.5 percentiles of finite draws (>= 95% finite)"
+  },
+  "pooled_combo": "pooled_all_origins",
+  "routec": {
+   "final": "a936a5d9762763f9feed351aebdeeec2d8114f21:experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/routec_A_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json.gz@54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a",
+   "src": "c22edd8d3cc1221225dec418ab00b40515d5ba43:experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/pertask_full_2026-10-20_004115.json",
+   "sd_git": "7797f2cc29ed00571dc2091e234a6d3396936c33",
+   "sd_script_sha256": "29bd453187cb205a029ec58461bb861a899a5096d1d945d137879395af0819e7",
+   "a_sidecar": "git:095a9db4c0fedaa52fdcf103d167c8dff8675e3f:experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json@ffe923311b75313e9bd31b967326efe4c6e594da073f2c35a3ca72a07ad6e479",
+   "approval_spend": "SPEND.md L547 @ d8b08779221aeb2642d2f987f8b2f965e2fab44f"
+  },
+  "routec_label": {
+   "label": "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction; D1 read from route C pooled A @ a936a5d9762763f9feed351aebdeeec2d8114f21 via Stage D @ c22edd8d3cc1221225dec418ab00b40515d5ba43 (read, never recomputed; identity-guarded on the bytes read)",
+   "a_sidecar": "git:095a9db4c0fedaa52fdcf103d167c8dff8675e3f:experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json@ffe923311b75313e9bd31b967326efe4c6e594da073f2c35a3ca72a07ad6e479",
+   "rule": "09 @ READ_LOG 8a4e2bf84 L2213 (via Stage D template)",
+   "stage_d_reasserted": {
+    "git": "7797f2cc29ed00571dc2091e234a6d3396936c33",
+    "script_sha256": "29bd453187cb205a029ec58461bb861a899a5096d1d945d137879395af0819e7",
+    "d1_label": "09's template, exact"
+   }
+  }
+ },
+ "heldout_guard": {
+  "fold_map_violations": 0,
+  "basis": "run_attack_all.py L181 (train = fold != f, test = fold == f) and L192-223 @ 80d75b27e; run_refit3.py L279, L312-317, L429-439 @ 80d75b27e (command|L63 c fold 4 refit, train = fold != f); folds by main from the fold list @ ec56720ad",
+  "limit": "fold-map consistency plus the code's out-of-fold assignment; not a training-keys record",
+  "positive_controls_fired": {
+   "fold_minus_1": true,
+   "fold_differs_from_list": true,
+   "main_two_folds": true,
+   "x_key_dropped": true
+  },
+  "cells": [
+   "command|L63",
+   "reply|L48"
+  ],
+  "runs_checked": 7878,
+  "x_keys_checked": 1313,
+  "fold_list": "ec56720ad:experiments/2026-10-16_own_all_rs/results/own_all_rs_folds_2026-10-16.json (c2fc5d40eb84a34a64cbb9ce7155572d1414f12ea1fbc2ec05708bd73061e299)"
+ },
+ "result": {
+  "cells": 1313,
+  "cells_by_set": {
+   "S_old": 190,
+   "S_new": 303,
+   "S_newmains": 335,
+   "S_paper493": 485
+  },
+  "mains": 864,
+  "zero_row_runs_refit3": {
+   "command|L63": 6,
+   "command|L48": 6,
+   "reply|L48": 6,
+   "reply|L63": 6
+  },
+  "probes": {
+   "sol_a_uncut C": {
+    "commands L63": {
+     "sim_score_vs_drop": {
+      "point": -0.007993567622053202,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.06510593708145024,
+       0.04872889678706439
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": -0.02277744338527092,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.07727024634981257,
+       0.03189779372390862
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     },
+     "catch_flips_by_score_quartile": {
+      "quartile_edges": [
+       -0.0849946774842988,
+       0.07286320280569729,
+       0.21679560491947258
+      ],
+      "by_quartile": {
+       "Q1": {
+        "n_cells": 327,
+        "run1_caught_sim_missed": 64,
+        "sim_caught_run1_missed": 47,
+        "run2_caught_sim_missed": 69,
+        "sim_caught_run2_missed": 36
+       },
+       "Q2": {
+        "n_cells": 327,
+        "run1_caught_sim_missed": 59,
+        "sim_caught_run1_missed": 42,
+        "run2_caught_sim_missed": 53,
+        "sim_caught_run2_missed": 42
+       },
+       "Q3": {
+        "n_cells": 327,
+        "run1_caught_sim_missed": 64,
+        "sim_caught_run1_missed": 57,
+        "run2_caught_sim_missed": 58,
+        "sim_caught_run2_missed": 57
+       },
+       "Q4": {
+        "n_cells": 328,
+        "run1_caught_sim_missed": 66,
+        "sim_caught_run1_missed": 46,
+        "run2_caught_sim_missed": 66,
+        "sim_caught_run2_missed": 50
+       }
+      },
+      "excluded_cells": 4
+     }
+    },
+    "replies L48": {
+     "sim_score_vs_drop": {
+      "point": 0.049428812596627895,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.007107963207862838,
+       0.10437290001739044
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": -0.0505986365661709,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.10418858326291103,
+       0.0025115493150382395
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     },
+     "catch_flips_by_score_quartile": {
+      "quartile_edges": [
+       0.06991632825210797,
+       0.33305511329497295,
+       0.6119291078080242
+      ],
+      "by_quartile": {
+       "Q1": {
+        "n_cells": 327,
+        "run1_caught_sim_missed": 69,
+        "sim_caught_run1_missed": 45,
+        "run2_caught_sim_missed": 66,
+        "sim_caught_run2_missed": 34
+       },
+       "Q2": {
+        "n_cells": 327,
+        "run1_caught_sim_missed": 64,
+        "sim_caught_run1_missed": 43,
+        "run2_caught_sim_missed": 53,
+        "sim_caught_run2_missed": 48
+       },
+       "Q3": {
+        "n_cells": 327,
+        "run1_caught_sim_missed": 62,
+        "sim_caught_run1_missed": 54,
+        "run2_caught_sim_missed": 56,
+        "sim_caught_run2_missed": 49
+       },
+       "Q4": {
+        "n_cells": 328,
+        "run1_caught_sim_missed": 58,
+        "sim_caught_run1_missed": 50,
+        "run2_caught_sim_missed": 71,
+        "sim_caught_run2_missed": 54
+       }
+      },
+      "excluded_cells": 4
+     }
+    }
+   },
+   "FIBS|uncut C": {
+    "commands L63": {
+     "sim_score_vs_drop": {
+      "point": -0.023562205959431124,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.0802560102807154,
+       0.03264347899660033
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": 0.01116852891163254,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.04152191131908563,
+       0.06462998652177444
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    },
+    "replies L48": {
+     "sim_score_vs_drop": {
+      "point": -0.005484616630422136,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.05955212328825657,
+       0.04795211536506828
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": 0.0424748333392647,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.010970232624923214,
+       0.0959439038122442
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    }
+   },
+   "harmfulness|uncut C": {
+    "commands L63": {
+     "sim_score_vs_drop": {
+      "point": 0.008665233629129472,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.04707026510176622,
+       0.06512694870468988
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": -0.033802411251138406,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.08684273606217154,
+       0.01911280755583905
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    },
+    "replies L48": {
+     "sim_score_vs_drop": {
+      "point": 0.015556412203067258,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.04036864657594231,
+       0.07152618877808024
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": -0.006386483517574986,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.05887588100877108,
+       0.04598809584170046
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    }
+   },
+   "refusal|uncut C": {
+    "commands L63": {
+     "sim_score_vs_drop": {
+      "point": 0.03509579204477448,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.017540263903205042,
+       0.0895729290796355
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": -0.036996599053439855,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.08959377807165238,
+       0.0156389787219425
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    },
+    "replies L48": {
+     "sim_score_vs_drop": {
+      "point": 0.05315606428272537,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.0005267598764483705,
+       0.10660958270999017
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": -0.029436552951597018,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.08358723410695715,
+       0.025507081247075312
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    }
+   },
+   "high-stakes|uncut C": {
+    "commands L63": {
+     "sim_score_vs_drop": {
+      "point": -0.05036045922251524,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.10342967284640103,
+       0.003960738149668484
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": -0.012468808247798061,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.06510352810834286,
+       0.04095163579772627
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    },
+    "replies L48": {
+     "sim_score_vs_drop": {
+      "point": -0.04501768092117171,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.100845360349549,
+       0.012339700563398212
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": 0.03018478085876408,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.024095899895180156,
+       0.08431914765599541
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    }
+   },
+   "own_all_rs_uncut_L48 C": {
+    "commands L63": {
+     "sim_score_vs_drop": {
+      "point": -0.010989925482481032,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.06423048077120129,
+       0.042369284815232555
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": -0.03155770950353313,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.08534569035271132,
+       0.02338394219761619
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    },
+    "replies L48": {
+     "sim_score_vs_drop": {
+      "point": 0.035886309793962186,
+      "n_cells": 1308,
+      "n_mains": 861,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.01722003199577697,
+       0.08863144980716502
+      ],
+      "excluded": {
+       "no_detector_score": 4,
+       "no_finite_y": 1
+      }
+     },
+     "null_run2_score_vs_run2_minus_run1": {
+      "point": 0.006296903790437133,
+      "n_cells": 1311,
+      "n_mains": 863,
+      "draws": 10000,
+      "finite_draws": 10000,
+      "ci95": [
+       -0.04703252794780088,
+       0.060286717177149445
+      ],
+      "excluded": {
+       "no_detector_score": 0,
+       "no_finite_y": 2
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "git": "4f2855d2332ed2b620dfdcf069ca0f22f30e4ea4",
+ "runs": 971,
+ "class of each run's maximizing token, per world": {
+  "real1": {
+   "content": 179,
+   "round trip failed": 15
+  },
+  "real2": {
+   "content": 185,
+   "round trip failed": 9
+  },
+  "sim_sept": {
+   "content": 180,
+   "round trip failed": 11
+  },
+  "honest_a": {
+   "content": 185,
+   "round trip failed": 11
+  },
+  "honest_b": {
+   "content": 188,
+   "round trip failed": 7,
+   "whitespace": 1
+  }
+ },
+ "runs above the 1% threshold 6.0185": [
+  [
+   "honest_a",
+   "content",
+   6.1584
+  ],
+  [
+   "honest_a",
+   "content",
+   6.2445
+  ],
+  [
+   "honest_a",
+   "content",
+   6.8472
+  ],
+  [
+   "honest_b",
+   "content",
+   6.7448
+  ],
+  [
+   "real1",
+   "content",
+   7.2947
+  ],
+  [
+   "real2",
+   "content",
+   6.2113
+  ],
+  [
+   "sim_sept",
+   "content",
+   6.2447
+  ],
+  [
+   "sim_sept",
+   "content",
+   7.2842
+  ]
+ ],
+ "the two highest first-real runs (they set the threshold)": [
+  [
+   "content",
+   7.2947
+  ],
+  [
+   "content",
+   6.0185
+  ]
+ ]
+}

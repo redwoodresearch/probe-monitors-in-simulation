@@ -1,0 +1,14 @@
+# Per-tool-output examples for the Q1 text baselines (run_stage_examples.py). Same reader settings as
+# experiments/2026-10-06_activation_extraction/config/extract.yaml, so positions match the probe's.
+cohorts:                                 # aliases in simulated-control-evals src/paper/configs/real_runs.yml
+  real-honest: la_public10_real_honest_n1000          # only for the honest system prompt of each main task
+  real-attack-e1: la_public10_real_attack_n1000
+  real-attack-e2: la_public10_real_attack_reroll_n1000
+  sim-attack: la_public10_sim_astra_attack_n1000      # the v1 sim run; never the repaired sets
+arms: [real-attack-e1, real-attack-e2, sim-attack]
+exclusions_file: exclusions_v3.json      # splits/: 939 paired cells, transcripts over 32k truncated; per-sample table checked
+tokenizer: {name: Qwen/Qwen3-32B, revision: 9216db5781bf21249d130ec9da846c4624c16137}   # probe_shift.models.QWEN3_32B, the shared pin
+chat_template: {enable_thinking: false}  # as probe_shift.reader.render applies it
+max_tokens: 32768                        # cut: an output counts only if its last content token (output_end) is inside it
+one_run_per_cell: exactly one valid run per arm and cell, else the run fails (as the probe analysis)
+threads: 16

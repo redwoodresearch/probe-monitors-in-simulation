@@ -1,0 +1,10 @@
+# SUPERSEDED (RULE.md amendment 11): uncorrected staging; the corrected run is config/simh_extract_pilot_c.yaml
+# Gate 4 (RULE.md): Qwen3.5-27B extraction of the pilot's 20 staged simulated honest epochs (simh_stage_pilot_2026-10-14_153815.json)
+run: simh_q4b_extract_v1_pilot
+inputs: simh_q4b_v1_pilot
+inputs_sha256:
+  sim_honest@september.jsonl: e292995ef0c84d90b5b4beec4aea22a3241231e6c7e204eaff3c0241b995a786
+model: Qwen/Qwen3.5-27B
+shards: 2
+chunk_size: 8
+pad_to: 4096

@@ -1,0 +1,21 @@
+{
+ "status": "up",
+ "mode": "deployed",
+ "stand_in": true,
+ "servers": [
+  {
+   "name": "probe-shift_aswin-surya_sub-phase2_srvf42afca_kill-2026-11-06",
+   "mode": "deployed",
+   "call_id": "fc-01M4E83S6KAFF0RWV0YFKWT0AZ",
+   "app_id": "ap-TBlfB3dGt2fYLaEYJjuSz8",
+   "tunnel_url": "https://stand-in.invalid/v1"
+  },
+  {
+   "name": "probe-shift_aswin-surya_sub-phase2_srvf42afcb_kill-2026-11-06",
+   "mode": "deployed",
+   "call_id": "fc-01M4E83V5JYXYTDYKGB1VWK6CZ",
+   "app_id": "ap-l6eMF5DgkBS63VKQ3CvPNR",
+   "tunnel_url": "https://stand-in.invalid/v1"
+  }
+ ]
+}

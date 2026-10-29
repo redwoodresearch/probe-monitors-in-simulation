@@ -1,0 +1,14 @@
+{
+ "tasks": "tasks_il_old_all.json",
+ "tasks_sha256": "69c709d91da2f8952c0a3f4ceddf3e05cac5044f73a596eb253bb5763f70ee4e",
+ "config": "pilot_il_old_all.yaml",
+ "config_sha256": "80ecadc53dc9935e9d765cc643cdf989bfcdf82011e9a2ec78bdfabca86a633c",
+ "cells": 196,
+ "cap_usd": 4280,
+ "no_reference": [
+  "t139_model_registry",
+  "t151_model_registry",
+  "t98_model_registry"
+ ],
+ "reference_index_sha256_on_xbox1": "79acbfc1ef4523f9a57cc19dc876252159c6c1d62521001f1ac71e2644036940"
+}

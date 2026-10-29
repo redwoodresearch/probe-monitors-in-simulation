@@ -1,0 +1,100 @@
+{
+ "host": "q4",
+ "rerun_reason": "infra: RateLimitError",
+ "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+ "failures_source": {
+  "commit": "36a2047fa643a37921b2e2ae59740c0f54523a0b",
+  "path": "experiments/2026-10-14_q3_new_mains_launch/results/sim_ratelimit_failures_2026-10-15.json",
+  "sha256": "e9a8832f99656d7110b277581896022eb7ae6a588f2624ed1db0f01388b75346"
+ },
+ "rerun_of": [
+  {
+   "cell": "t221_auto_workflow",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t221_auto_workflow",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t221_auto_workflow/2026-10-15T07-16-40-00-00_la-auto-workflow-sim-attack-1_RqEva56iWQx3FVEiWrRWTf.eval",
+   "eval_sha256": "5dc09cb90f50d4716d46a6d564988bfd6f23f1202f190331e202a2537fb3969a",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t226_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t226_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t226_tiktok/2026-10-15T07-16-40-00-00_la-tiktok-sim-attack-1_KJiKbVeb6MQLVptJhvsAgm.eval",
+   "eval_sha256": "64b052705d71b796cfb1ba623435e6fd43bc81dc37178ecc8859bffc0c9ec1fa",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t233_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t233_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t233_tiktok/2026-10-15T07-28-50-00-00_la-tiktok-sim-attack-1_fhxADoYjMZ9GmZxcLoR8zX.eval",
+   "eval_sha256": "e1a8932069d4c87be007499aadfdcc8b009aee36b96cf006b9e1636d8f0eb1e9",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t250_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t250_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t250_tiktok/2026-10-15T07-25-47-00-00_la-tiktok-sim-attack-1_b6RcAUDwpsRcb3jUdQiHvX.eval",
+   "eval_sha256": "bad4d2695e13f5afa5b6c29d2a34d4ca4cde72320787e5cf668671b987c7ce44",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t255_user_tracking",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t255_user_tracking",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t255_user_tracking/2026-10-15T07-22-44-00-00_la-user-tracking-sim-attack-1_kDHSHYvch7AALXZYQPJKWi.eval",
+   "eval_sha256": "ca164a2170a430d26b43d765fead4cb63730afd6b99c618b9de0f906ab15cd0b",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t372_clinical_trial",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t372_clinical_trial",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t372_clinical_trial/2026-10-15T07-10-38-00-00_la-clinical-trial-sim-attack-1_VD5RWs3ivvv7RxUYmMAtp9.eval",
+   "eval_sha256": "a7509edb2c675a370a60099fce9acfaf9922b2abe0259f64d6f5c352012e8f83",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t376_web_scraping",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t376_web_scraping",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t376_web_scraping/2026-10-15T07-16-40-00-00_la-web-scraping-sim-attack-1_DGQwv4RLZEkLhmErTwVPxH.eval",
+   "eval_sha256": "084dc1333ec96de06368b8a643c97c642da64592853733215be3b305b2580d89",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t390_auto_workflow",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t390_auto_workflow",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t390_auto_workflow/2026-10-15T07-13-39-00-00_la-auto-workflow-sim-attack-1_DNAkATLQi8R3gahSxgnEZP.eval",
+   "eval_sha256": "4fc8cb5a39dfdd65c23f98602ff6047bbceebeba4f4b9e06548844aecb93b75d",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t393_model_registry",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t393_model_registry",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t393_model_registry/2026-10-15T07-22-44-00-00_la-model-registry-sim-attack-1_mBkmp54VVvbWGuEvH3sdGG.eval",
+   "eval_sha256": "0edb9c7dc9ebb0cd26414bc73722352db03b06c3636032e8c872cd5d4dec9d2f",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t413_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t413_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t413_media_processing/2026-10-15T07-36-00-00-00_la-media-processing-sim-attack-1_JLqjG54ZNiM2KHCQ5bwq4j.eval",
+   "eval_sha256": "b8b698dd6d693f50bd8c4402d2a88fdf59a1c6a7d27668393c7ecac0ce0ca71a",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t469_user_tracking",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "run_key": "sim_attack@september/t469_user_tracking",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q4/sim_attack@september/t469_user_tracking/2026-10-15T07-29-21-00-00_la-user-tracking-sim-attack-1_LwcisCAT5ET4gbdqPFgUXi.eval",
+   "eval_sha256": "78784f8323be9a3c57836a61425bf1ecc2282eb5c4bd385ebdc6a72bc2081075",
+   "pure_rate_limit": true
+  }
+ ]
+}

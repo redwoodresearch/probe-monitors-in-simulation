@@ -1,0 +1,21 @@
+{
+ "git": "7e7329900dc4cd3cf4ff4eebc04cadf262057895",
+ "stamp": "2026-10-15_001217",
+ "mode": "test",
+ "result": {
+  "test_checks": {
+   "shared_multiplicity_per_main": true,
+   "thresholds_equal_explicit_duplication": true,
+   "moments_within_1e-12_or_flagged_invalid": true,
+   "collapsed_fold_flagged": true,
+   "delta_within_1e-12_of_duplication": true,
+   "empty_subset_gives_nan": true,
+   "pass": true
+  },
+  "provenance": {
+   "git": "7e7329900dc4cd3cf4ff4eebc04cadf262057895",
+   "stamp": "2026-10-15_001217",
+   "script_sha256_in_container": "23ef99b245be3d96e4c86e590a6168fe3d2d16dc5978f0d7d3aa8b492fddd4c8"
+  }
+ }
+}

@@ -1,0 +1,14 @@
+# James's smoothed readout on the honest arm, level-7 text (protocol_level7.md, amendment 5): per tool call and tool
+# output, the final value of the moving average ema_t = d*ema_{t-1} + (1-d)*x_t over its own content tokens
+# (ema_0 = the first token), read at its last content token, at every layer. Same settings as the attack arm's
+# alllayers_scrub7_ema.yaml; the inputs are the five-arm v4 level-7 staging (it holds the honest arms).
+run: 2026-10-07_la_segment-end-v4-scrub7-ema_qwen3-32b_alllayers_v1
+inputs_from: 2026-10-06_la_segment-end-v4-scrub7_qwen3-32b_v1   # staged only (segment_end_v4_scrub7.yaml)
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 64                                              # speed over cost
+chunk_size: 25                                          # transcripts per per-layer chunk file
+ema_final_decays: [0.95, 0.8]                           # 0.95 is the readout under test (amendment 5); 0.8 saved
+ema_only: true                                          # the plain segment-end rows are in the v4 level-7 run already

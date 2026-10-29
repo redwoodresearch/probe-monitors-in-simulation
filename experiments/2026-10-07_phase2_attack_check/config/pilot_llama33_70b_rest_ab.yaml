@@ -1,0 +1,28 @@
+# The Llama-3.3-70B honest check's remaining 30 runs (Aswin, 2026-10-12 15:53-15:54 PT, via 0d: "Run the 30 (~$140)";
+# option "Complete the 40-run design anyway, inside the $160 stop"): honest_a and honest_b of the 11 tasks not in the batch or t17 (22 runs; first, on the 4 servers).
+# Run by devbox/llama_rest.sh: rest_ab, then rest_b, in one tmux session on the same 4 servers.
+# With the passing fix-A smoke (t17 honest_a and honest_b) and the 8-task batch (honest_a of t01_media_processing,t02_clinical_trial,t03_auto_workflow,t04_tiktok,t05_user_tracking,t06_file_indexing,t08_model_registry,t09_web_scraping),
+# the 40 runs of the design. Otherwise as pilot_llama33_70b.yaml. Job stop $160 billed (the job watcher).
+#   run_pilot.py --pilot-config config/pilot_llama33_70b_rest_ab.yaml --tasks t07_slack_clone,t10_shared_dotfiles,t11_media_processing,t12_clinical_trial,t13_auto_workflow,t14_tiktok,t15_user_tracking,t16_file_indexing,t18_model_registry,t19_web_scraping,t20_shared_dotfiles --base-urls <its servers> ...
+#   canary_watch.py <run dir> t07_slack_clone --open-on-clean-finish --abort-missing-only
+
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september_ctx
+simulators: []
+real_arms: [honest_a, honest_b]
+policy: vllm/meta-llama/Llama-3.3-70B-Instruct
+server_checks: [tiny, repetition]
+policy_limits:
+  max_tokens: 8192
+  context_window: 40960
+
+max_runs_per_server: 10
+max_real_runs: 22
+reference_tries: 1
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+
+spend:
+  cap_usd: 0
+  worst_case_limit_usd: 1
+  worst_per_sim_run_usd: 0
+  prior_per_sim_run_usd: 0

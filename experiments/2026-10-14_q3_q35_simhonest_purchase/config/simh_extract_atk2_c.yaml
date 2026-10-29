@@ -1,0 +1,11 @@
+# RULE.md amendments 11-14, LAUNCH.md 11b: Qwen3.5-27B extraction of A's 19 CORRECTED staged second-epoch simulated attack
+# epochs (results/simh_stage_c_atk2_2026-10-14_173103.json; shared cut-think gate patch ef3e9f7f); counts only after
+# format_check_simh (SIMH_SET=atk2, the donor prompt) passes on all 19
+run: simh_q4b_extract_v1_atk2_c
+inputs: simh_q4f_v1_atk2
+inputs_sha256:
+  sim_attack@september.jsonl: 831c9deffbe013c35271585ed97bb3a81a044602ac766e76b9ee779d3b21e453
+model: Qwen/Qwen3.5-27B
+shards: 3
+chunk_size: 8
+pad_to: 4096

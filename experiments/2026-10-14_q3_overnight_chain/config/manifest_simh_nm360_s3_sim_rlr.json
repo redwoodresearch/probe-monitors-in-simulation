@@ -1,0 +1,58 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_nm_s3_rlr of 2026-10-14_newmains_s3: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 2,
+  "by_arm": {
+   "sim_honest@september": 2
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_nm_s3_rlr",
+   "rel": "sim_honest@september/nm103_file_indexing/2026-10-15T21-18-01-00-00_la-file-indexing-sim-honest-1_coYQdDWXVuqTxeYFGDgkxm.eval",
+   "sha256": "2e39f93ed8fe697db96f61740700620faa6d3f2a1f62e9e4424aedc381a4fc82",
+   "bytes": 1338644,
+   "arm_dir": "sim_honest@september",
+   "task": "nm103_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s3_rlr/sim_honest@september/nm103_file_indexing/2026-10-15T21-18-01-00-00_la-file-indexing-sim-honest-1_coYQdDWXVuqTxeYFGDgkxm.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s3_rlr",
+   "stratum": "simh_nm360",
+   "launch_task": "nm103_file_indexing",
+   "first_start": "2026-10-15T14:17:59-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s3_rlr",
+   "run1_launch": "2026-10-14_newmains_s3",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "final"
+  },
+  {
+   "launch": "2026-10-15_simh_nm_s3_rlr",
+   "rel": "sim_honest@september/nm134_media_processing/2026-10-15T21-18-01-00-00_la-media-processing-sim-honest-1_HDKqJNGEBjrRDXYzSGDZCh.eval",
+   "sha256": "4d16cd935302f58df497a856b20120e7a919dd14a1e2b75aa01a40d5bd52f922",
+   "bytes": 70952,
+   "arm_dir": "sim_honest@september",
+   "task": "nm134_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s3_rlr/sim_honest@september/nm134_media_processing/2026-10-15T21-18-01-00-00_la-media-processing-sim-honest-1_HDKqJNGEBjrRDXYzSGDZCh.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s3_rlr",
+   "stratum": "simh_nm360",
+   "launch_task": "nm134_media_processing",
+   "first_start": "2026-10-15T14:17:59-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s3_rlr",
+   "run1_launch": "2026-10-14_newmains_s3",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "final"
+  }
+ ]
+}

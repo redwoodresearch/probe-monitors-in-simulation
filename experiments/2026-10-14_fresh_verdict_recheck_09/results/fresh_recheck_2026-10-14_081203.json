@@ -1,0 +1,215 @@
+{
+ "rows": {
+  "Qwen3-32B ffavg b'' L48": {
+   "fresh runs eligible": 634,
+   "fresh tasks with an eligible run": 317,
+   "cohort runs eligible": 990,
+   "rates": {
+    "0.01": {
+     "mine": {
+      "FA_fresh": [
+       3.2018927444794945,
+       2.033030063291139,
+       4.5080476927613145
+      ],
+      "FA_cohort": [
+       1.1965109407300278,
+       0.6857267496591292,
+       1.7663004268421612
+      ],
+      "delta": [
+       2.005381803749467,
+       0.7134150274700358,
+       3.399695283967297
+      ]
+     },
+     "verdict": {
+      "FA_fresh": [
+       3.2018927444794945,
+       2.033030063291139,
+       4.5080476927613145
+      ],
+      "FA_cohort": [
+       1.1965109407300276,
+       0.6857267496591292,
+       1.7663004268421612
+      ],
+      "delta": [
+       2.005381803749467,
+       0.7134150274700355,
+       3.399695283967298
+      ]
+     },
+     "max_abs_diff_points": 8.881784197001252e-16,
+     "max_abs_diff_point_only": 2.220446049250313e-16
+    },
+    "0.05": {
+     "mine": {
+      "FA_fresh": [
+       8.343848580441641,
+       6.166995268138801,
+       10.70077974926701
+      ],
+      "FA_cohort": [
+       5.7102538361667285,
+       4.3309870288386305,
+       7.198314400014017
+      ],
+      "delta": [
+       2.6335947442749124,
+       0.10622840810758667,
+       5.259132444921549
+      ]
+     },
+     "verdict": {
+      "FA_fresh": [
+       8.343848580441641,
+       6.166995268138799,
+       10.70077974926701
+      ],
+      "FA_cohort": [
+       5.7102538361667285,
+       4.3309870288386305,
+       7.198314400014015
+      ],
+      "delta": [
+       2.633594744274913,
+       0.10622840810758487,
+       5.259132444921547
+      ]
+     },
+     "max_abs_diff_points": 2.6645352591003757e-15,
+     "max_abs_diff_point_only": 4.440892098500626e-16
+    }
+   },
+   "counts_match": true
+  },
+  "Seed seed_ff (a) L48": {
+   "fresh runs eligible": 634,
+   "fresh tasks with an eligible run": 317,
+   "cohort runs eligible": 990,
+   "rates": {
+    "0.01": {
+     "mine": {
+      "FA_fresh": [
+       2.1845425867507884,
+       1.2857086525461918,
+       3.237224842767295
+      ],
+      "FA_cohort": [
+       1.1663991495782307,
+       0.6545751065500148,
+       1.7614783508374607
+      ],
+      "delta": [
+       1.0181434371725577,
+       -0.025645023047366412,
+       2.2003327442554785
+      ]
+     },
+     "verdict": {
+      "FA_fresh": [
+       2.184542586750789,
+       1.285708652546192,
+       3.2372248427672954
+      ],
+      "FA_cohort": [
+       1.1663991495782307,
+       0.6545751065500148,
+       1.7614783508374607
+      ],
+      "delta": [
+       1.018143437172558,
+       -0.02564502304736581,
+       2.2003327442554785
+      ]
+     },
+     "max_abs_diff_points": 6.036837696399289e-16,
+     "max_abs_diff_point_only": 4.440892098500626e-16
+    },
+    "0.05": {
+     "mine": {
+      "FA_fresh": [
+       9.093059936908517,
+       6.829652996845425,
+       11.430583243534478
+      ],
+      "FA_cohort": [
+       5.273308449396677,
+       3.785053344095584,
+       6.871890500315655
+      ],
+      "delta": [
+       3.81975148751184,
+       1.1039917914278534,
+       6.53828362799219
+      ]
+     },
+     "verdict": {
+      "FA_fresh": [
+       9.093059936908515,
+       6.829652996845427,
+       11.430583243534477
+      ],
+      "FA_cohort": [
+       5.273308449396677,
+       3.785053344095584,
+       6.871890500315655
+      ],
+      "delta": [
+       3.8197514875118377,
+       1.1039917914278532,
+       6.5382836279921905
+      ]
+     },
+     "max_abs_diff_points": 2.220446049250313e-15,
+     "max_abs_diff_point_only": 2.220446049250313e-15
+    }
+   },
+   "counts_match": true
+  }
+ },
+ "gates": {
+  "inputs": {
+   "stage_2026-10-13_q2_fresh_s1_inputs_v1_2026-10-14_022140.json": true,
+   "check_2026-10-13_q2_fresh_s1_qwen3-32b_l7_v1_2026-10-14_023234.json": true,
+   "extract_check_2026-10-13_q2_fresh_s1_seedcall_seed-oss-36b_v1_2026-10-14_024100.json": true,
+   "fresh_runs_fresh1013_stage1_2026-10-14_021735.json": true,
+   "stage_2026-10-13_q2_fresh_s2_inputs_v1_2026-10-14_030339.json": true,
+   "check_2026-10-13_q2_fresh_s2_qwen3-32b_l7_v1_2026-10-14_031257.json": true,
+   "extract_check_2026-10-13_q2_fresh_s2_seedcall_seed-oss-36b_v1_2026-10-14_032022.json": true,
+   "fresh_runs_fresh1013_stage2_2026-10-14_030049.json": true,
+   "stage_2026-10-13_q2_fresh_s3_inputs_v1_2026-10-14_035458.json": true,
+   "check_2026-10-13_q2_fresh_s3_qwen3-32b_l7_v1_2026-10-14_040417.json": true,
+   "extract_check_2026-10-13_q2_fresh_s3_seedcall_seed-oss-36b_v1_2026-10-14_041251.json": true,
+   "fresh_runs_fresh1013_stage3_2026-10-14_035219.json": true,
+   "stage_2026-10-13_q2_fresh_s4_inputs_v1_2026-10-14_045405.json": true,
+   "check_2026-10-13_q2_fresh_s4_qwen3-32b_l7_v1_2026-10-14_050713.json": true,
+   "extract_check_2026-10-13_q2_fresh_s4_seedcall_seed-oss-36b_v1_2026-10-14_051437.json": true,
+   "fresh_runs_fresh1013_stage4_2026-10-14_045135.json": true,
+   "stage_2026-10-13_q2_fresh_s5_inputs_v1_2026-10-14_061002.json": true,
+   "check_2026-10-13_q2_fresh_s5_qwen3-32b_l7_v1_2026-10-14_061931.json": true,
+   "extract_check_2026-10-13_q2_fresh_s5_seedcall_seed-oss-36b_v1_2026-10-14_062648.json": true,
+   "fresh_runs_fresh1013_stage5_2026-10-14_055936.json": true,
+   "stage_2026-10-13_q2_fresh_s6_inputs_v1_2026-10-14_070306.json": true,
+   "check_2026-10-13_q2_fresh_s6_qwen3-32b_l7_v1_2026-10-14_072823.json": true,
+   "extract_check_2026-10-13_q2_fresh_s6_seedcall_seed-oss-36b_v1_2026-10-14_073654.json": true,
+   "fresh_runs_fresh1013_stage6_2026-10-14_070024.json": true,
+   "stage_2026-10-13_q2_fresh_s7_inputs_v1_2026-10-14_074608.json": true,
+   "check_2026-10-13_q2_fresh_s7_qwen3-32b_l7_v1_2026-10-14_075350.json": true,
+   "extract_check_2026-10-13_q2_fresh_s7_seedcall_seed-oss-36b_v1_2026-10-14_080005.json": true,
+   "fresh_runs_fresh1013_stage7_2026-10-14_074353.json": true,
+   "runs.json": true,
+   "fresh_task_list.json": true,
+   "layer_stability/2026-10-13_232624/weights_qwen_L48_80c51d714562.npz": true,
+   "layer_stability/2026-10-13_232624/nested_qwen_L48_80c51d714562.npz": true,
+   "results/2026-10-13_185308/why_avg_scores_2026-10-13_185308.npz": true,
+   "layer_stability/2026-10-13_232625/weights_seed_L48_9437689dc6cf.npz": true,
+   "layer_stability/2026-10-13_232625/nested_seed_L48_9437689dc6cf.npz": true,
+   "results/2026-10-13_221350/why_seed_scores_2026-10-13_221350.npz": true
+  }
+ },
+ "n_fresh_listed": 634,
+ "universe_tasks": 327,
+ "git": "7c192d52807a8f3f9432a961ea2a3d0104957dd8"
+}

@@ -1,0 +1,15 @@
+{
+ "set_name": "S_old (183 tasks, matched design)",
+ "set_label": "S_old (183 tasks), matched design (sim-honest, honest B and honest C on the tasks M that have all three); the E2E record's arrays; POST HOC",
+ "source": "e2e183",
+ "record": {"git": "e61cf75bd:experiments/2026-10-15_e2e_sim_pipeline/results/e2e_2026-10-15_134139_reduce_2026-10-15_135347.json",
+            "sha256": "f7eb48b0780104fbf854959ae3e3175b194209b26a4a0d548cc96bcd3d9f03d6"},
+ "npz": {"volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+         "path": "xfer/e2e_sim/e2e_2026-10-15_134139/e2e_2026-10-15_134139_reduce_2026-10-15_135347_perdraw.npz",
+         "sha256": "b4a00e2b380ed73c3f8d2bfbf6340899599cd841034ab882b9969f58769701b3"},
+ "arms": {"sim": "sim_at_tau_sim_M", "run1": "run1_at_tau_B_M", "run2": "run2_at_tau_B_M", "yard": "run2_at_tau_C_M"},
+ "record_catch_keys": {"sim": "full", "run1": "run1", "run2": "run2", "yard": "run2_at_C"},
+ "points": ["unit0.01", "unit0.05"],
+ "point_values": [0.01, 0.05],
+ "saturation": 0.99
+}

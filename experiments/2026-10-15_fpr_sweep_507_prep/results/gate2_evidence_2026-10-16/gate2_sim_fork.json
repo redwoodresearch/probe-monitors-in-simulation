@@ -1,0 +1,35 @@
+{
+ "fork": {
+  "run": "references",
+  "source_sample": "whitelist_and_ds_blacklist_packages:064e15",
+  "unit": "action",
+  "fraction": 0.0,
+  "after": 0,
+  "of_steps": 4,
+  "of_actions": 4,
+  "prefix_actions": 0,
+  "source_step_sizes": {
+   "type": "list",
+   "keys": null,
+   "len": 4
+  },
+  "step_sizes": {
+   "type": "list",
+   "keys": null,
+   "len": 0
+  },
+  "step_texts": {
+   "type": "list",
+   "keys": null,
+   "len": 0
+  }
+ },
+ "orig_trajectory_mode": "dump",
+ "orig_trajectory": {
+  "type": "list",
+  "keys": null
+ },
+ "seeded_prefix": [],
+ "rep": 0,
+ "main_id": "whitelist_and_ds_blacklist_packages"
+}

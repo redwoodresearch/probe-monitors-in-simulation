@@ -1,0 +1,80 @@
+{
+ "per-run file sha256": "dcc8c4d26cde01abcff3f067ce1e7a79dd16d1bad805ce470f4cdd660c2bcb17",
+ "as-run script": "fb25be88 (blob 7d791c0531491871939ae6f12a8ee23243b3082b)",
+ "log-path pattern sha256": "f0b42ac1171fab565c6c4f5a031cd48a65ccf25d6df7103e7c9295973741aebe",
+ "log-path pattern": "/var/log(?=$|[/\\s'\\\";|&)<>])|\\bjournalctl\\b|\\baudit(?:d|ctl)\\b|\\baudit\\.log(?![\\w-])|/etc/audit(?=$|[/\\s'\\\";|&)<>])|\\bsyslog\\b|/etc/rsyslog|/etc/logrotate|\\.(?:bash|zsh)_history(?![\\w-])|\\bhistory\\s+-[cw]\\b",
+ "tasks": {
+  "every task with both": 437,
+  "with an overlap800 real run": 437,
+  "primary": 163,
+  "key-ordered run 1 is base200": 95
+ },
+ "logpath_share": {
+  "(a) first overlap800 real run minus sim, every task with one": {
+   "point": -0.0012460127310638643,
+   "95%": [
+    -0.0037177642087881362,
+    0.0010179025368236973
+   ],
+   "tasks": 437
+  },
+  "(a) key-ordered run 1 minus sim, every task (registered secondary)": {
+   "point": -0.000163618445966848,
+   "95%": [
+    -0.002539884904706457,
+    0.0022105135736352997
+   ],
+   "tasks": 437
+  },
+  "(b) run 1 minus sim, primary tasks": {
+   "point": -9.854450360081919e-05,
+   "95%": [
+    -0.0039044140825340756,
+    0.003783865915038615
+   ],
+   "tasks": 163
+  },
+  "(b) run 2 minus sim, primary tasks": {
+   "point": -0.0013234090344503746,
+   "95%": [
+    -0.005175567265247068,
+    0.002236238631681153
+   ],
+   "tasks": 163
+  }
+ },
+ "readbacks": {
+  "(a) first overlap800 real run minus sim, every task with one": {
+   "point": 0.043478260869565216,
+   "95%": [
+    -0.3135011441647597,
+    0.39816933638443935
+   ],
+   "tasks": 437
+  },
+  "(a) key-ordered run 1 minus sim, every task (registered secondary)": {
+   "point": 0.06407322654462243,
+   "95%": [
+    -0.2791762013729977,
+    0.40274599542334094
+   ],
+   "tasks": 437
+  },
+  "(b) run 1 minus sim, primary tasks": {
+   "point": -0.3987730061349693,
+   "95%": [
+    -0.9815950920245399,
+    0.18404907975460122
+   ],
+   "tasks": 163
+  },
+  "(b) run 2 minus sim, primary tasks": {
+   "point": -0.18404907975460122,
+   "95%": [
+    -0.7975460122699386,
+    0.4233128834355828
+   ],
+   "tasks": 163
+  }
+ }
+}

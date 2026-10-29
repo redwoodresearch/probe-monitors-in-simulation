@@ -1,0 +1,11 @@
+# F10 (PLAN_F10.md, POST HOC; NOT LAUNCHED until Aswin's OK via 0d): fx_qwen3_f9.yaml with the F10 staged run (stage_f10.py:
+# the changed runs of full + F9 + F10, arms sim-attack-fx-fullF9F10 and sim-honest-fx-fullF9F10), its own run name, 16 shards (speed rules v2: each container well under 15 min).
+run: 2026-10-13_fixfull_f10_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-13_q2_f10_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 16
+chunk_size: 10
+layers: [48, 63]

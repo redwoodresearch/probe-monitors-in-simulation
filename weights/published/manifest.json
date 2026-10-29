@@ -1,0 +1,65 @@
+{
+ "what": "The four published probes exactly as the post's scores used them, for Qwen/Qwen3.5-27B at revision fc05daec18b0a78c049392ed2e771dde82bdf654. Layer L is the output of decoder block L (Hugging Face hidden_states[L + 1]). Every published-probe score in the post was computed with these files: each scoring run recorded the sha256 of the files it loaded, and all of them equal the values below. How each probe was obtained or built, and how it scores a unit, is in pipeline/published_probes/.",
+ "licenses": "NOTICE: all four probes are derived from Qwen/Qwen3.5-27B (Apache-2.0, copy in LICENSE-QWEN-APACHE-2.0.txt); the deception probe is FAR AI's (MIT, deception_probe/LICENSE); the other three are ours (MIT, as this repository).",
+ "probes": {
+  "deception_probe": {
+   "files": ["deception_probe/fibs_qwen3.5-27b_linear_L19.safetensors", "deception_probe/fibs_qwen3.5-27b_linear_L27.safetensors", "deception_probe/fibs_qwen3.5-27b_linear_L35.safetensors", "deception_probe/fibs_qwen3.5-27b_linear_L43.safetensors", "deception_probe/fibs_qwen3.5-27b_linear_L51.safetensors", "deception_probe/fibs_qwen3.5-27b_linear_L58.safetensors"],
+   "layers": [19, 27, 35, 43, 51, 58],
+   "arrays": "per layer: linear.weight float32 [1, 5120], linear.bias [1], input_scale [1], input_mean [1] (0), platt_A [1], platt_B [1] (stored, not applied)",
+   "score": "mean over the six layers of sigmoid(linear.weight . (x_L / input_scale) + linear.bias); between 0 and 1, higher is more suspicious",
+   "code": "pipeline/published_probes/deception_probe.py",
+   "origin": "FAR AI's published weights (Hollinsworth et al. 2026, arXiv 2610.12445), Hugging Face AlignmentResearch/probe-inference-weights at revision 08942e47fc0dbebee330d51248c7eaa89cfe540e, qwen3.5-27b/linear/layer_<L>/model.pt, converted to safetensors without unpickling; we changed no value",
+   "license": "MIT, copyright 2026 FAR AI, Inc.; see deception_probe/LICENSE"
+  },
+  "harmfulness_direction": {
+   "files": ["harmfulness_direction.safetensors"],
+   "layers": [34],
+   "arrays": "direction float32 [5120], unit length",
+   "score": "x_34 . direction; higher is more suspicious",
+   "code": "pipeline/published_probes/harmfulness_and_refusal_directions.py",
+   "origin": "built by us: the difference in mean activations between 128 harmful and 128 harmless prompts (andyrdt/refusal_direction at 9d852fae1a9121c78b29142de733cb1340770cc3) at the request's last token, read on an H200 GPU",
+   "license": "ours (MIT, as this repository)"
+  },
+  "refusal_direction": {
+   "files": ["refusal_direction.safetensors"],
+   "layers": [47],
+   "arrays": "direction float32 [5120], unit length",
+   "score": "x_47 . direction; higher is more suspicious",
+   "code": "pipeline/published_probes/harmfulness_and_refusal_directions.py",
+   "origin": "built by us: the same prompts and difference, at the prompt's last token (just before the model's reply), read on an H200 GPU",
+   "license": "ours (MIT, as this repository)"
+  },
+  "high_stakes_probe": {
+   "files": ["high_stakes_probe.safetensors"],
+   "layers": [43],
+   "arrays": "direction float32 [5120] and bias [1] (the folded probe the score uses); W [5120], intercept [1], mean [5120], std [5120] (the logistic regression on standardized activations they fold)",
+   "score": "x_43 . direction + bias, the log-odds of a high-stakes situation; higher is more suspicious",
+   "code": "pipeline/published_probes/high_stakes_probe.py",
+   "origin": "trained by us: logistic regression on the mean activation over each conversation's content tokens, on the 8,000 training conversations of McKenzie et al. 2025 (Hugging Face dataset Arrrlex/models-under-pressure at revision 940d830f639617752f54fdf2bca0da7e0d856a9e, MIT license)",
+   "license": "ours (MIT, as this repository)"
+  }
+ },
+ "sha256": {
+  "deception_probe/fibs_qwen3.5-27b_linear_L19.safetensors": "0f3521840385c5b381503ca90653c16d0a3c026c9dc12eceddd7db513647eba3",
+  "deception_probe/fibs_qwen3.5-27b_linear_L27.safetensors": "aa01ede3c02494fd8714bfecd26910e22561c55266f4237835b94fc87c64e21f",
+  "deception_probe/fibs_qwen3.5-27b_linear_L35.safetensors": "9b963f9bed60451dc41f6dcc7a2c85eafdae8e7f6be21d6938111489e57dfda7",
+  "deception_probe/fibs_qwen3.5-27b_linear_L43.safetensors": "0ea17a2d5bd266910a9f0416f0fabd2a3322740969be88c0dc47db26a503aa15",
+  "deception_probe/fibs_qwen3.5-27b_linear_L51.safetensors": "236121cc9886e88eff49cf7cde7e538ba66289a82094e37dd33956d4ee20c4e0",
+  "deception_probe/fibs_qwen3.5-27b_linear_L58.safetensors": "2f1107d3ec1cf360f55965a3fbd2caa637bcc72fac219e3a5b25c74270970ff4",
+  "harmfulness_direction.safetensors": "77e6af62e1ef50ae6ce9c5d69f2ac532492f0e98144014064b5972ddb724e4f6",
+  "refusal_direction.safetensors": "7f1f3619a4c09e65d1ed78edffd954ce1e959f81f4da80fc2b05ea2bb85528ea",
+  "high_stakes_probe.safetensors": "ef0d8671c9fbae63714bb4eef0b8c93aa6c7d4ff06aa5168eda6acd63845534b"
+ },
+ "bytes": {
+  "deception_probe/fibs_qwen3.5-27b_linear_L19.safetensors": 21236,
+  "deception_probe/fibs_qwen3.5-27b_linear_L27.safetensors": 21236,
+  "deception_probe/fibs_qwen3.5-27b_linear_L35.safetensors": 21236,
+  "deception_probe/fibs_qwen3.5-27b_linear_L43.safetensors": 21236,
+  "deception_probe/fibs_qwen3.5-27b_linear_L51.safetensors": 21236,
+  "deception_probe/fibs_qwen3.5-27b_linear_L58.safetensors": 21236,
+  "harmfulness_direction.safetensors": 20648,
+  "refusal_direction.safetensors": 20648,
+  "high_stakes_probe.safetensors": 82504
+ },
+ "file_metadata_note": "Each file keeps the metadata it was written with, so its sha256 is the one the scoring runs recorded: the layer; for the directions the token position ('inst' is the request's last token, 'post' the prompt's last token), the GPU and the time of the read; for the deception probe its source file, that file's sha256 and the folder of our conversion script."
+}

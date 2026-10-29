@@ -1,0 +1,34 @@
+{
+ "git": {
+  "commit": "e93e7b491855e7f414dc8888d972cfd079406c46",
+  "dirty": true
+ },
+ "labeler": "eb014307fd1aab31",
+ "written": "2026-10-11_192900",
+ "draw0_file": "draw0.json",
+ "draw0_sha256": "c2656658baaf3aa150f83f4d105e7572bfd854f98032831621419e1f8e8f36bf",
+ "calls": 38819,
+ "tasks": 191,
+ "matches_probe_call_set": true,
+ "checks": {
+  "eval files sha-checked": 675,
+  "rows: tool, parameter and label recomputed and equal": 38819
+ },
+ "by_world": {
+  "real": {
+   "impactful": 6945,
+   "read_only": 6127
+  },
+  "sim": {
+   "impactful": 6913,
+   "read_only": 6466
+  },
+  "run2": {
+   "impactful": 6840,
+   "read_only": 5528
+  }
+ },
+ "text_sha256": "4ee58e5076c24a256f3155d1c5023d69d3fd6db110e69520105eeccee9c00024",
+ "table_file": "data/text_calls_2026-10-11_192900.json",
+ "table_sha256": "ca13d0df4e83df89539f0bc198af6774f76d196e0c0c52c22d51765c768a4c63"
+}

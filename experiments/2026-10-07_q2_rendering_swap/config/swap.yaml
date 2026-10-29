@@ -1,0 +1,14 @@
+# Q2 rendering swap (2026-10-07; approved by Aswin via the orchestrator at about 100 runs, about $8, cap $12).
+# Frozen level-0 Q2 probes; identical transcript prefixes. Only the simulated runs' text_editor insert outputs change:
+# as simulated (a diff) vs re-rendered in the real tool's style (a `cat -n` snippet plus the review note).
+n_runs: 100
+seed: 0
+inputs_from: 2026-10-06_la_segment-end_qwen3-32b_v1    # level 0's staged reader messages (read only), which the level-0 read used
+staged_run: 2026-10-07_q2_swap_inputs_v1               # new: the selected runs as staged and re-rendered (arm below)
+swap_arm: sim-attack-realstyle
+extraction_run: 2026-10-07_q2_swap_qwen3-32b_alllayers_v1   # config/alllayers_q2_swap.yaml in the all-layers extraction folder
+features_run: 2026-10-06_q2_features_eb014307fd1aab31_as_labeled
+weights_out_sub: level0_weights                         # the level-0 refit with weights (config q2_level0_weights.yaml)
+train_set: real-attack-e1                               # the frozen probes: trained on real attack runs
+layers: [9, 16, 17]
+positions: [pre_call, call_end, prev_content]

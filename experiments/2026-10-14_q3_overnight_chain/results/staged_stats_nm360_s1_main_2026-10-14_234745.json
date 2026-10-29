@@ -1,0 +1,24 @@
+{
+ "target": "nm360_s1_main",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "nm360_s1_main",
+   "arm": "honest_a",
+   "staged_file": "/ev/nm360_s1_main_v1/inputs/honest_a.jsonl",
+   "staged_sha": "7aa26ac833b580fbda7d9361a8f4ce0fa8fe490768ba432c3ae848b0f344d564",
+   "epochs": 2,
+   "max_staged_tokens": 10,
+   "n_epochs_over_32768": 0
+  },
+  {
+   "target": "nm360_s1_main",
+   "arm": "honest_b",
+   "staged_file": "/ev/nm360_s1_main_v1/inputs/honest_b.jsonl",
+   "staged_sha": "a4e3c65b42942a608e3a4979c7b8f4c1120a15c3ab85f080844ee24b8eb57114",
+   "epochs": 2,
+   "max_staged_tokens": 10,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

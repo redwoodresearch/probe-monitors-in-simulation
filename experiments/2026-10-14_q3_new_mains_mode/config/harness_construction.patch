@@ -1,0 +1,71 @@
+diff --git a/experiments/2026-10-07_phase2_attack_check/build_real_samples.py b/experiments/2026-10-07_phase2_attack_check/build_real_samples.py
+index 16dd2cb..e1a87c5 100644
+--- a/experiments/2026-10-07_phase2_attack_check/build_real_samples.py
++++ b/experiments/2026-10-07_phase2_attack_check/build_real_samples.py
+@@ -44,7 +44,7 @@ for cell, t in cells.items():
+             os.environ.update({"BA_MODE": "honest", "BA_MAINS": t["main"]})
+         row = {"cell": cell, "env": t["env"], "mode": mode, "in": sources[cell]}
+         try:
+-            task = tasks.la_real_attack_sept() if mode == "attack" else real.linuxarena_real()
++            task = tasks.attack_task("real")() if mode == "attack" else real.linuxarena_real()  # new_mains_v1 by record
+             samples = list(task.dataset)
+             row |= {"built": len(samples) == 1, "samples": len(samples)}
+         except Exception as e:  # recorded per task and mode
+diff --git a/experiments/2026-10-07_phase2_attack_check/check_sim_samples.py b/experiments/2026-10-07_phase2_attack_check/check_sim_samples.py
+index 5d684c3..e53ca4f 100644
+--- a/experiments/2026-10-07_phase2_attack_check/check_sim_samples.py
++++ b/experiments/2026-10-07_phase2_attack_check/check_sim_samples.py
+@@ -70,7 +70,7 @@ def simulator_prompt(env: dict) -> str:
+ 
+         (sample,) = list(linuxarena_sim.linuxarena_sim().dataset)
+     else:
+-        (sample,) = list(tasks.la_sim_attack_sept().dataset)
++        (sample,) = list(tasks.attack_task("sim")().dataset)  # legacy unless the cell's record says new_mains_v1
+     settings = tasks.SimulatedTaskSettings.from_environment(tasks.linuxarena(env["LA_ENV"]))
+     config = config_for_sample(sample.metadata, model=settings.simulator_model, codebase_exec=False,
+                                exec_source_authority=True, orig_trajectory_mode="dump", self_critique=None)
+diff --git a/experiments/2026-10-07_phase2_attack_check/run_pilot.py b/experiments/2026-10-07_phase2_attack_check/run_pilot.py
+index 06e5da7..e96092e 100644
+--- a/experiments/2026-10-07_phase2_attack_check/run_pilot.py
++++ b/experiments/2026-10-07_phase2_attack_check/run_pilot.py
+@@ -195,6 +195,15 @@ def main() -> None:
+     sim = yaml.safe_load((HERE / "config" / "sim.yaml").read_text())
+     pilot_tasks = HERE / pilot["tasks"]  # approaches as sha256s; a run-local copy restores them (below)
+     tasks = json.loads(pilot_tasks.read_text())["cells"]
++    # Construction mode (experiments/2026-10-14_q3_new_mains_mode/RULE.md): set explicitly by the cells file, legacy
++    # (Sol-hash check) by default; every cell must declare the file's mode, so no launch mixes the two. A new_mains_v1
++    # launch needs every cell's recorded provenance and never runs in recording mode.
++    construction = json.loads(pilot_tasks.read_text()).get("construction", "legacy_sol_hash")
++    attack_tasks = {"legacy_sol_hash": ("la_real_attack_sept", "la_sim_attack_sept"),
++                    "new_mains_v1": ("la_real_attack_new_mains_v1", "la_sim_attack_new_mains_v1")}[construction]
++    assert all(t.get("construction", "legacy_sol_hash") == construction for t in tasks), f"cells not all {construction}"
++    assert construction == "legacy_sol_hash" or ("PHASE2_RECORD_PROVENANCE" not in os.environ and all(
++        len(t.get("provenance_system_sha256") or "") == 64 for t in tasks)), "new_mains_v1: provenance not recorded"
+     if args.tasks:
+         wanted = args.tasks.split(",")
+         assert set(wanted) <= {t["key"] for t in tasks}, f"unknown tasks: {sorted(set(wanted) - {t['key'] for t in tasks})}"
+@@ -312,14 +321,14 @@ def main() -> None:
+         elif r["arm"] == "attack":
+             env_vars = common(name, r["server"]) | {"LA_ENV": t["env"], "BA_ATTACKER_PROMPT": run["attacker_prompt"]} \
+                 | attack
+-            task, flags = f"{HERE / 'tasks.py'}@la_real_attack_sept", real_args
++            task, flags = f"{HERE / 'tasks.py'}@{attack_tasks[0]}", real_args
+         else:
+             ref = references[t["key"]]["copy"]
+             env_vars = common(name, r["server"]) | sim["env"] | tree["env"] | {
+                 "LA_ENV": t["env"], "BA_REAL_LOG": ref, "BA_HONEST_LOG": ref}
+             if r["arm"] == "sim_attack":
+                 env_vars |= attack
+-                task = f"{HERE / 'tasks.py'}@la_sim_attack_sept"
++                task = f"{HERE / 'tasks.py'}@{attack_tasks[1]}"
+             else:  # as the Astra honest batch: the same simulator settings, honest mode, the tree's own task
+                 env_vars |= {"BA_MODE": "honest"}
+                 task = "src/runner/tasks/linuxarena_sim.py"
+@@ -354,6 +363,7 @@ def main() -> None:
+               "pilot_config": args.pilot_config, "pilot": pilot, "policy": policy, "real_arms": real_arms,
+               "policy_limits": limits,
+               "tasks_file": str(tasks_file), "pilot_tasks": str(pilot_tasks), "tasks": tasks,
++              **({} if construction == "legacy_sol_hash" else {"construction": construction}),
+               "config": cfg | {"policy": policy}, "sim_config": sim,
+               "trees": {k: {"tree": str(v["tree"]), "src_sha256": v["src_sha256"], "imported": v["imported"],
+                             "env": v["env"]} for k, v in trees.items()},

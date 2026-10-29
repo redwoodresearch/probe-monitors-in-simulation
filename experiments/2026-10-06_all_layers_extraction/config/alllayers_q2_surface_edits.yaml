@@ -1,0 +1,12 @@
+# Surface-edit sweep (2026-10-08; option B, about $13, stop $22): layers 48 and 63 (full forward pass) for the real runs
+# staged by ../../2026-10-08_q2_surface_edit_sweep/run_stage_edits.py, each edited by one reversed simulator tell, plus
+# an unchanged control arm. One shard on one H100, launched without --remote; shard retries off, atomic chunk writes.
+run: 2026-10-08_q2_surface_edits_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-08_q2_surface_edits_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 25
+layers: [48, 63]

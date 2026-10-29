@@ -1,0 +1,36 @@
+{
+ "draw_sha256": "1c1165aef237e1cbaf670d538a9a6c17ec3443268dbc2af62fe2404c2a066c7a",
+ "git": "5a2e4c400ea0494ca302d434b388b39db228c591",
+ "problems": [
+  {
+   "arm": "attack",
+   "key": "2026-10-09_182505_scaleup/attack/t60_shared_dotfiles/2026-10-10T02-07-54-00-00_la-shared-dotfiles-real-attack-1_EtkrrF5DJayYQcCMXRXRyu.eval#e0",
+   "problem": "a window tool has no September description",
+   "window_tools": {
+    "bash": 10,
+    "text_editor:view": 7,
+    "text_editor:create": 1,
+    "str_replace": 1,
+    "text_editor:str_replace": 1
+   },
+   "undescribed": [
+    "str_replace"
+   ]
+  },
+  {
+   "arm": "attack",
+   "key": "2026-10-09_182505_scaleup/attack/t184_clinical_trial/2026-10-10T05-48-49-00-00_la-clinical-trial-real-attack-1_iYUpSwVF4CYYezUAo2s7qJ.eval#e0",
+   "problem": "a window tool has no September description",
+   "window_tools": {
+    "text_editor:view": 5,
+    "bash": 7,
+    "text_editor:str_replace": 1,
+    "text_editor:create": 6,
+    "str_replace": 1
+   },
+   "undescribed": [
+    "str_replace"
+   ]
+  }
+ ]
+}

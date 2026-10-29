@@ -1,0 +1,13 @@
+# EXTRACTION RETRY (09 via d9 10-15 ~07:45; 0d OK ~$43): a fresh root of the SAME staged set ilnm_s5_sim2_v1 (staged sha unchanged);
+# its first root ilnm_s5_sim2_extract_v1 is never routed further or scored (attempt-1 writer GPU unrecorded, fc-01M4ZX3RPFHWZPPFWQFBYMJHVW).
+# ilnm_s5_sim2 staged by stage_chain.py (record chain_stage_ilnm_s5_sim2_2026-10-15_064157.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: ilnm_s5_sim2_extract_v1_try2
+inputs: ilnm_s5_sim2_v1
+inputs_sha256:
+  repro-c.jsonl: 34939aaeb9f392c8e3d2fcf8bfda948cb5dad49a7265e69c80bfc0d5af4941f0
+  sim_attack@september.jsonl: d022e424f4cc85f24a22ca8ebafc41b5b69cd1eb36e654e1054dc19bbbb1ed00
+model: Qwen/Qwen3.5-27B
+shards: 12
+chunk_size: 8
+pad_to: 4096

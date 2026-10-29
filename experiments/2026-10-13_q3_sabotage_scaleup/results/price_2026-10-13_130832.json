@@ -1,0 +1,125 @@
+{
+ "written": "2026-10-13_130832",
+ "git": {
+  "commit": "c9ccda22a496a530134a03cca9b370e4e74a6cc2",
+  "dirty": true
+ },
+ "inputs_sha256": {
+  "runs": "52a2e288b1cc684d8b17016adda88778fb5077388961ccd6aa3bdcf4c915accf",
+  "calls": "6dc132affb389e3dd66737d2d5db199c2bb5fe70e13a723a3c0af319e95d7595"
+ },
+ "rates_per_pair_usd": {
+  "stage1_sabotage_reported": 0.1152,
+  "stage1_sabotage_charged_or_reserved": 0.134,
+  "precision_fork_central": 0.0817,
+  "precision_fork_high": 0.1023
+ },
+ "stage1_calls_per_run": 69.74,
+ "prefixes": {
+  "pooled_reference_for_15": {
+   "new_tasks": 48,
+   "runs": 144,
+   "pairs": 720,
+   "calls": 10162,
+   "state_changing_by_world": {
+    "real": 1913,
+    "run2": 1755,
+    "sim": 1823
+   },
+   "calls_by_world": {
+    "real": 3628,
+    "run2": 3203,
+    "sim": 3331
+   },
+   "size_ratio": 1.012,
+   "usd": {
+    "stage1_sabotage_reported": {
+     "raw": 83.91,
+     "with_30pct": 109.08
+    },
+    "stage1_sabotage_charged_or_reserved": {
+     "raw": 97.64,
+     "with_30pct": 126.94
+    },
+    "precision_fork_central": {
+     "raw": 59.52,
+     "with_30pct": 77.38
+    },
+    "precision_fork_high": {
+     "raw": 74.53,
+     "with_30pct": 96.89
+    }
+   }
+  },
+  "real1_vs_sim_for_15": {
+   "new_tasks": 80,
+   "runs": 240,
+   "pairs": 1200,
+   "calls": 16781,
+   "state_changing_by_world": {
+    "real": 3040,
+    "run2": 2961,
+    "sim": 2880
+   },
+   "calls_by_world": {
+    "real": 5853,
+    "run2": 5495,
+    "sim": 5433
+   },
+   "size_ratio": 1.003,
+   "usd": {
+    "stage1_sabotage_reported": {
+     "raw": 138.56,
+     "with_30pct": 180.13
+    },
+    "stage1_sabotage_charged_or_reserved": {
+     "raw": 161.24,
+     "with_30pct": 209.62
+    },
+    "precision_fork_central": {
+     "raw": 98.29,
+     "with_30pct": 127.78
+    },
+    "precision_fork_high": {
+     "raw": 123.08,
+     "with_30pct": 160.0
+    }
+   }
+  },
+  "all_held_out": {
+   "new_tasks": 116,
+   "runs": 348,
+   "pairs": 1740,
+   "calls": 23992,
+   "state_changing_by_world": {
+    "real": 4344,
+    "run2": 4181,
+    "sim": 4072
+   },
+   "calls_by_world": {
+    "real": 8377,
+    "run2": 7784,
+    "sim": 7831
+   },
+   "size_ratio": 0.989,
+   "usd": {
+    "stage1_sabotage_reported": {
+     "raw": 198.1,
+     "with_30pct": 257.53
+    },
+    "stage1_sabotage_charged_or_reserved": {
+     "raw": 230.53,
+     "with_30pct": 299.69
+    },
+    "precision_fork_central": {
+     "raw": 140.53,
+     "with_30pct": 182.69
+    },
+    "precision_fork_high": {
+     "raw": 175.96,
+     "with_30pct": 228.75
+    }
+   }
+  }
+ }
+}

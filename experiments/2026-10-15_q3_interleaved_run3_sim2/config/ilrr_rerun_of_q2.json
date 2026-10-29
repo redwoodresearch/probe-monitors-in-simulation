@@ -1,0 +1,116 @@
+{
+ "host": "q2",
+ "rerun_reason": "infra: RateLimitError",
+ "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+ "failures_source": {
+  "commit": "36a2047fa643a37921b2e2ae59740c0f54523a0b",
+  "path": "experiments/2026-10-14_q3_new_mains_launch/results/sim_ratelimit_failures_2026-10-15.json",
+  "sha256": "e9a8832f99656d7110b277581896022eb7ae6a588f2624ed1db0f01388b75346"
+ },
+ "rerun_of": [
+  {
+   "cell": "t197_web_scraping",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t197_web_scraping",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t197_web_scraping/2026-10-15T07-45-13-00-00_la-web-scraping-sim-attack-1_RqbjHWEK4wacavqzaMdGoE.eval",
+   "eval_sha256": "814a83c0fce655892177a36f83fdd76809fbcdd962d58a57516455825489ef3f",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t232_slack_clone",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t232_slack_clone",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t232_slack_clone/2026-10-15T07-13-57-00-00_la-slack-clone-sim-attack-1_cuLXWWMuawg4fonKN6MMhg.eval",
+   "eval_sha256": "63c263b7f908d3a94f5ecf4465f7f6a86bd7771d45e21f391ce66ba3778ee00d",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t269_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t269_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t269_tiktok/2026-10-15T07-32-14-00-00_la-tiktok-sim-attack-1_gWuRtanAnWUTmU2e32jsLK.eval",
+   "eval_sha256": "158ce64f741f6c965becbdf0f4d60a0477d84c68d21d116b0a27722b0af9a296",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t270_slack_clone",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t270_slack_clone",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t270_slack_clone/2026-10-15T07-10-56-00-00_la-slack-clone-sim-attack-1_hLLkewU4hpN2DKHNoRoWyG.eval",
+   "eval_sha256": "338ac1afc091b81d5419229a7d7d2cde8112939644cc6c1f472007dd989d8f8c",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t271_slack_clone",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t271_slack_clone",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t271_slack_clone/2026-10-15T07-38-58-00-00_la-slack-clone-sim-attack-1_nhQWtjHP9GFk7tLnPZUhBQ.eval",
+   "eval_sha256": "7f5687d30abad8c6b8133ad089fe638830cf05c0cae77ad7fc87eeb247076fb7",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t353_auto_workflow",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t353_auto_workflow",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t353_auto_workflow/2026-10-15T07-19-59-00-00_la-auto-workflow-sim-attack-1_LedB6GJfBbuy5wEuxCGSoq.eval",
+   "eval_sha256": "ccfa952a03b145254db9651b723037e8f4f9ba9038ef0295c2fbd062ea66099a",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t371_user_tracking",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t371_user_tracking",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t371_user_tracking/2026-10-15T07-23-02-00-00_la-user-tracking-sim-attack-1_kvDKMdpJBey7yypKxdJCuM.eval",
+   "eval_sha256": "2bb7793a3f05391db783017c8006a9770a17b4646bf0419472b24b65689aef89",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t385_clinical_trial",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t385_clinical_trial",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t385_clinical_trial/2026-10-15T07-16-58-00-00_la-clinical-trial-sim-attack-1_97nWg8EwudjiHezEzxSQBz.eval",
+   "eval_sha256": "7ef889cf8e9db93cfc03ed82510fb917f960cf0fcf31793a9cbc53885d886b08",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t410_file_indexing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t410_file_indexing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t410_file_indexing/2026-10-15T07-19-59-00-00_la-file-indexing-sim-attack-1_fNe82NaNhcQnsKuMWagUPF.eval",
+   "eval_sha256": "4db7cdb5d84df7e715bf41d8b4f01f3a90af9eddc3bd6dd900a6fadc14415a59",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t417_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t417_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t417_tiktok/2026-10-15T07-29-09-00-00_la-tiktok-sim-attack-1_VARYGw6GFGYEwAwaPoiCrh.eval",
+   "eval_sha256": "a1dde407da1f23681a14943a02462230d6ebe734b19829caf1bc164dd2f75ce0",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t455_auto_workflow",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t455_auto_workflow",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t455_auto_workflow/2026-10-15T07-29-09-00-00_la-auto-workflow-sim-attack-1_NBAi2ZtYxuLfWwaoHqAaif.eval",
+   "eval_sha256": "aaafd4a73ff25b6a11d084d57b7dac9829447962fbbb2cfd4fc6512b50ae2eaa",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t457_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t457_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t457_media_processing/2026-10-15T07-16-58-00-00_la-media-processing-sim-attack-1_MXGYzETwd8gknqE86kWGur.eval",
+   "eval_sha256": "cdc57df16494822c936ec8a905a6c054d144dfb8eb786a02baab85ca5d4f07b4",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t507_web_scraping",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t507_web_scraping",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t507_web_scraping/2026-10-15T07-13-57-00-00_la-web-scraping-sim-attack-1_jRgmF2e2sP52ZA7YEUSDMi.eval",
+   "eval_sha256": "8a32f8b2c8deeda62560348df2d45803054c437a3bad89bdc36d77d411adf562",
+   "pure_rate_limit": true
+  }
+ ]
+}

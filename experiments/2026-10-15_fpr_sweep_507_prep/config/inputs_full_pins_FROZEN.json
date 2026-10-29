@@ -1,0 +1,333 @@
+{
+ "_what": "FROZEN pins for INPUTS_FULL (full-length build): the TEST pins of INPUTS_FULL_TEST_2026-10-16_105031 (21a1f15f...) plus the uncut census, the full-length waitlist and the dry-run counts sidecar; PROVISIONAL labels dropped (every code sha Codex-covered; see the lock NOTE)",
+ "base": {
+  "commit": "a6bde80a2",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/INPUTS_FINAL_V2_FROZEN_2026-10-16_044120.json"
+ },
+ "overrides": {
+  "S_new|R": {
+   "commit": "38b42bf2d",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new_R_2026-10-16_104459_gated.json"
+  },
+  "S_new|C": {
+   "commit": "38b42bf2d",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new_C_2026-10-16_104513_gated.json"
+  },
+  "S_old|R": {
+   "commit": "bb33b808e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_old_R_2026-10-16_044046_gated.json"
+  },
+  "S_old|C": {
+   "commit": "bb33b808e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_old_C_2026-10-16_044258_gated.json"
+  },
+  "S_newmains|R": {
+   "commit": "64e9ab71a",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_newmains_R_2026-10-16_053350_gated.json"
+  },
+  "S_newmains|C": {
+   "commit": "64e9ab71a",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_newmains_C_2026-10-16_053303_gated.json"
+  },
+  "S_paper493|R": {
+   "commit": "4d2f45e73",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_paper493_R_2026-10-16_102114_gated.json"
+  },
+  "S_paper493|C": {
+   "commit": "4d2f45e73",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_paper493_C_2026-10-16_101944_gated.json"
+  },
+  "pools_ep2|R": {
+   "commit": "93ee9afe6",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_pools_ep2_R_2026-10-16_052820_gated.json"
+  },
+  "pools_ep2|C": {
+   "commit": "93ee9afe6",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_pools_ep2_C_2026-10-16_053038_gated.json"
+  },
+  "S_new+25f|R": {
+   "commit": "f5a2504dc",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new25f_R_2026-10-16_045058_gated.json"
+  },
+  "S_new+25f|C": {
+   "commit": "f5a2504dc",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new25f_C_2026-10-16_045304_gated.json"
+  }
+ },
+ "gates": {
+  "S_new|R": {
+   "commit": "8c31e7ff5",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_R_2026-10-16_104643.json"
+  },
+  "S_new|C": {
+   "commit": "8c31e7ff5",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_C_2026-10-16_104648.json"
+  },
+  "S_old|R": {
+   "commit": "bb33b808e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_old_R_2026-10-16_044618.json"
+  },
+  "S_old|C": {
+   "commit": "bb33b808e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_old_C_2026-10-16_044711.json"
+  },
+  "S_newmains|R": {
+   "commit": "d3a6fc2e5",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_newmains_R_2026-10-16_095455.json"
+  },
+  "S_newmains|C": {
+   "commit": "d3a6fc2e5",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_newmains_C_2026-10-16_095522.json"
+  },
+  "S_paper493|R": {
+   "commit": "4ea8aae4f",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_paper493_R_2026-10-16_102253.json"
+  },
+  "S_paper493|C": {
+   "commit": "4ea8aae4f",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_paper493_C_2026-10-16_102255.json"
+  },
+  "pools_ep2|R": {
+   "commit": "82544b45b",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_pools_ep2_R_2026-10-16_053246.json"
+  },
+  "pools_ep2|C": {
+   "commit": "82544b45b",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_pools_ep2_C_2026-10-16_053355.json"
+  },
+  "S_new+25f|R": {
+   "commit": "f5a2504dc",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_R_2026-10-16_051725.json"
+  },
+  "S_new+25f|C": {
+   "commit": "f5a2504dc",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_C_2026-10-16_051740.json"
+  }
+ },
+ "inventories": {
+  "S_new": {
+   "commit": "b3f8dea7b",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/inventory_v3_2026-10-15.json",
+   "reattest": "bccb0f153835@3x40,4x5"
+  },
+  "S_old": {
+   "commit": "09b070617",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_b_fix_v1_2026-10-16_025058.json"
+  },
+  "S_newmains": {
+   "commit": "09b070617",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_b_fix_v1_2026-10-16_025058.json"
+  },
+  "S_paper493": {
+   "commit": "85447113f",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w1_v1_2026-10-16_025411.json"
+  },
+  "pools_ep2": {
+   "commit": "06077a8a8",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_ep2_v1_2026-10-16_025227.json"
+  },
+  "pools_fill": {
+   "commit": "06077a8a8",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_fill_v1_2026-10-16_025228.json"
+  },
+  "ha25f": {
+   "commit": "b880c3c3a",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_ha25f_v2_2026-10-16_044849.json"
+  },
+  "S_paper493_w23": {
+   "commit": "102b3741e",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w23_v1_2026-10-16_033210.json"
+  },
+  "il": {
+   "commit": "52532a296",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_il_v2_2026-10-16_040129.json"
+  }
+ },
+ "fits": {
+  "sol_a_uncut": {
+   "fit": {
+    "commit": "9564a41b4",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json"
+   },
+   "contract": {
+    "commit": "d4e70dbc9",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9_contract.json"
+   },
+   "refit": {
+    "commit": "d4e70dbc9",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9_refitmatch.json"
+   },
+   "files": {
+    "C": "sola_uncut_reselect/sol_a_uncut__cmd_A.npz",
+    "R": "sola_uncut_reselect/sol_a_uncut__avg_top2.npz"
+   }
+  },
+  "sol_a_uncut_pinned": {
+   "fit": {
+    "commit": "bc7a720d3",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_pinned_fit_2026-10-16_025318_cutfull_a9c06cb00d91.json"
+   },
+   "contract": {
+    "commit": "a94aa5d6c",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_pinned_fit_2026-10-16_025318_cutfull_a9c06cb00d91_contract.json"
+   },
+   "refit": {
+    "commit": "a94aa5d6c",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_pinned_fit_2026-10-16_025318_cutfull_a9c06cb00d91_refitmatch.json"
+   },
+   "files": {
+    "C": "sola_uncut_pinned/sol_a_uncut__cmd_A.npz",
+    "R": "sola_uncut_pinned/sol_a_uncut__avg_top2.npz"
+   }
+  },
+  "c_asis_uncut": {
+   "fit": {
+    "commit": "8b6124cb3",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d.json"
+   },
+   "contract": {
+    "commit": "92d4f4525",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d_contract.json"
+   },
+   "refit": {
+    "commit": "92d4f4525",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d_refitmatch.json"
+   },
+   "files": {
+    "C": "casis_uncut_inherit/c_asis_uncut__cmd_A.npz",
+    "R": "casis_uncut_inherit/c_asis_uncut__avg_top2.npz"
+   }
+  },
+  "own_all_rs_uncut_L48": {
+   "fit": {
+    "commit": "19611550c",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json"
+   },
+   "companion": {
+    "commit": "e452cb797",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_INPUTS_FULL_companion_2026-10-16.json"
+   },
+   "files": {
+    "C": "own_all_rs_uncut/own_all_rs_uncut_L48__C.npz",
+    "R": "own_all_rs_uncut/own_all_rs_uncut_L48__R.npz"
+   }
+  },
+  "own_all_rs25_uncut_L48": {
+   "fit": {
+    "commit": "19611550c",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json"
+   },
+   "companion": {
+    "commit": "e452cb797",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_INPUTS_FULL_companion_2026-10-16.json"
+   },
+   "files": {
+    "C": "own_all_rs_uncut/own_all_rs25_uncut_L48__C.npz",
+    "R": "own_all_rs_uncut/own_all_rs25_uncut_L48__R.npz"
+   }
+  },
+  "own_all_rs10_uncut_L48": {
+   "fit": {
+    "commit": "19611550c",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json"
+   },
+   "companion": {
+    "commit": "e452cb797",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_INPUTS_FULL_companion_2026-10-16.json"
+   },
+   "files": {
+    "C": "own_all_rs_uncut/own_all_rs10_uncut_L48__C.npz",
+    "R": "own_all_rs_uncut/own_all_rs10_uncut_L48__R.npz"
+   }
+  }
+ },
+ "pools_required": {
+  "source": "inventories"
+ },
+ "ood": {
+  "commit": "321adc55f",
+  "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json"
+ },
+ "ood_signature": {
+  "commit": "dd087288b",
+  "path": "experiments/2026-10-14_priority1_spec_09/READ_LOG.md"
+ },
+ "cohort": {
+  "commit": "48a90b1d2",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/nofilter_exclusions_2026-10-16_012305.json"
+ },
+ "exclusions": {
+  "commit": "6414c492b",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/exclusions_2026-10-16_102159.json"
+ },
+ "waitlist": {
+  "commit": "676866483",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/waitlist_full_2026-10-16_105729.json"
+ },
+ "estimator": {
+  "A": "registered",
+  "B": "computed beside (A) on the same draws from the pinned ilarms block (09 @ 36b9b47df \u00a73); lead by select_estimator.py (width only)"
+ },
+ "auroc_subset": {
+  "membership": "09 @ 19ba8f563: Sol (a), FIBS, harmfulness, own_all_rs",
+  "inherit": {
+   "sol_a_uncut": "Sol (a)",
+   "own_all_rs_uncut_L48": "own_all_rs_L48"
+  }
+ },
+ "census": {
+  "commit": "f62b4a0c6",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/nofilter_keys_FULL_TEST_2026-10-16_105812.json"
+ },
+ "e12": {
+  "commit": "22d7089f5",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/E12_BLOCK_2026-10-16_092322.json"
+ },
+ "ilarms": {
+  "commit": "7b058c349",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/ilarms_cut32768_2026-10-16_100056.json"
+ },
+ "relaunch_members": {
+  "commit": "051899844c53cbef27f5fac4b111a93b23374427",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/honest_b_relaunch_members_2026-10-16_032731.json"
+ },
+ "cutmap": {
+  "commit": "7febe8184",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/cutmap_32k_2026-10-16_044814.json"
+ },
+ "provisional": false,
+ "score_records": [
+  {
+   "commit": "03157caf0",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_pointer_index_2026-10-16_043351.json"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_casis_uncut_inherit_2026-10-16_044503_8cac2008.json"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_casis_uncut_inherit_2026-10-16_044516_3581019f.json"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_sola_uncut_pinned_2026-10-16_044459_1712fe97.json"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_sola_uncut_pinned_2026-10-16_044510_39fb8119.json"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_sola_uncut_reselect_2026-10-16_044455_7422dc42.json"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_sola_uncut_reselect_2026-10-16_044507_dec0f8c4.json"
+  }
+ ],
+ "dryrun_counts": {
+  "commit": "8ca194c5f",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/dryrun_counts_FULL_TEST_2026-10-16_105031.json"
+ }
+}

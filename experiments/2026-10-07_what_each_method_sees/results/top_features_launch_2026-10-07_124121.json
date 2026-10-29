@@ -1,0 +1,12 @@
+{
+ "git": "ff89138e61a4fb0e53d44751a55ab01c537cdc63",
+ "git_dirty": false,
+ "source_sha": "ea51221e5c5d1f3a",
+ "files": [
+  "experiments/2026-10-07_what_each_method_sees/analyze_top_features.py",
+  "experiments/2026-10-07_what_each_method_sees/run_top_features_modal.py",
+  "experiments/2026-10-07_what_each_method_sees/config/what_sees.yaml"
+ ],
+ "stamp": "2026-10-07_124121",
+ "modal_app": "probe-shift_aswin-surya_sub-what-sees_top-feats_kill-2026-11-06"
+}

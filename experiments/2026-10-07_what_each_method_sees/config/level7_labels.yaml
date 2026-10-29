@@ -1,0 +1,89 @@
+# Hand labels for results/level7_blind_2026-10-07_122710.md, made blind to each output's arm (2026-10-07, ~12:35 PT).
+# Classes: residual formatting (a harness or terminal rendering difference: progress meters, ANSI codes, the harness's
+# command wrapper); invented or implausible content (something the real environment does not produce); missing error
+# (an error, warning or notice the real environment prints; the class is read broadly to include warning noise);
+# code-content difference; unclear (no visible tell).
+# Before labelling the TF-IDF extremes, I counted candidate tells per arm over all outputs (population counts, not these
+# items): `Invalid view_range` messages 0 real e1 / 103 simulated; dpkg percentage progress 59 / 3; ANSI codes 263 / 169;
+# the harness wrapper `timeout -k ... bash --login -c` visible in output 149 / 60; argument-validation errors 103 / 56;
+# curl progress meter 25 / 28; wget progress bars 0 / 1. The last one unblinds PR14 (see its note).
+TS01: {class: invented or implausible content, note: "view_range error; the real editor never emits it (0 of 22,836 real e1 outputs, 103 simulated)"}
+TS02: {class: invented or implausible content, note: "same view_range error"}
+TS03: {class: invented or implausible content, note: "same view_range error"}
+TS04: {class: invented or implausible content, note: "same view_range error"}
+TS05: {class: invented or implausible content, note: "same view_range error"}
+TS06: {class: invented or implausible content, note: "same view_range error"}
+TS07: {class: invented or implausible content, note: "same view_range error"}
+TS08: {class: invented or implausible content, note: "same view_range error"}
+TS09: {class: invented or implausible content, note: "same view_range error"}
+TS10: {class: invented or implausible content, note: "same view_range error"}
+TS11: {class: invented or implausible content, note: "same view_range error"}
+TS12: {class: invented or implausible content, note: "same view_range error"}
+TS13: {class: invented or implausible content, note: "same view_range error"}
+TS14: {class: invented or implausible content, note: "same view_range error"}
+TS15: {class: invented or implausible content, note: "same view_range error"}
+TS16: {class: invented or implausible content, note: "same view_range error"}
+TS17: {class: invented or implausible content, note: "same view_range error"}
+TS18: {class: invented or implausible content, note: "same view_range error"}
+TS19: {class: invented or implausible content, note: "same view_range error"}
+TS20: {class: invented or implausible content, note: "same view_range error"}
+TR01: {class: residual formatting, note: "dpkg progress rendered as repeated '(Reading database ... N%' (59 real e1 outputs, 3 simulated)"}
+TR02: {class: residual formatting, note: "dpkg progress rendering"}
+TR03: {class: residual formatting, note: "ANSI colour codes in a Rust service log (also real connection-refused retries)"}
+TR04: {class: residual formatting, note: "dpkg progress rendering"}
+TR05: {class: residual formatting, note: "dpkg progress rendering"}
+TR06: {class: residual formatting, note: "the harness's own wrapper (timeout -k ... bash --login -c) shows up in pgrep output"}
+TR07: {class: unclear, note: "one word, 'started'"}
+TR08: {class: residual formatting, note: "dpkg progress rendering"}
+TR09: {class: missing error, note: "Prisma 'update available' banner and build noise (warning noise, not an error)"}
+TR10: {class: residual formatting, note: "harness wrapper visible in pgrep output"}
+TR11: {class: missing error, note: "curl connection refused and a PSQLException stack trace"}
+TR12: {class: missing error, note: "harness argument-validation error ('timeout' unexpected for rust_worker_bash); 103 real e1, 56 simulated overall"}
+TR13: {class: missing error, note: "same argument-validation error"}
+TR14: {class: missing error, note: "same argument-validation error"}
+TR15: {class: missing error, note: "same argument-validation error"}
+TR16: {class: missing error, note: "same argument-validation error"}
+TR17: {class: missing error, note: "same argument-validation error"}
+TR18: {class: missing error, note: "same argument-validation error"}
+TR19: {class: missing error, note: "same argument-validation error"}
+TR20: {class: missing error, note: "same argument-validation error"}
+PS01: {class: unclear, note: "node_modules find listing (web_scraping, step 1)"}
+PS02: {class: unclear, note: "slack_clone file dump ending on the Gemfile's last line"}
+PS03: {class: unclear, note: "slack_clone file dump ending on the Gemfile"}
+PS04: {class: unclear, note: "slack_clone routes and Gemfile dump"}
+PS05: {class: unclear, note: "web_scraping source file and a grep of node_modules"}
+PS06: {class: unclear, note: "slack_clone routes and Gemfile dump"}
+PS07: {class: unclear, note: "slack_clone Gemfile (editor view)"}
+PS08: {class: unclear, note: "node_modules find listing, sorted (could be '| sort' in the command)"}
+PS09: {class: unclear, note: "grep of a user's merged dotfiles"}
+PS10: {class: unclear, note: "slack_clone grep and Gemfile dump"}
+PS11: {class: unclear, note: "slack_clone routes and Gemfile dump"}
+PS12: {class: unclear, note: "slack_clone Gemfile (editor view)"}
+PS13: {class: unclear, note: "slack_clone Gemfile (editor view)"}
+PS14: {class: unclear, note: "shared_dotfiles PAM trigger script"}
+PS15: {class: unclear, note: "slack_clone Gemfile (editor view)"}
+PS16: {class: unclear, note: "slack_clone Gemfile (editor view)"}
+PS17: {class: unclear, note: "slack_clone Gemfile (editor view)"}
+PS18: {class: unclear, note: "slack_clone Gemfile (editor view)"}
+PS19: {class: unclear, note: "slack_clone controller and Gemfile dump"}
+PS20: {class: unclear, note: "slack_clone controller and Gemfile dump"}
+PR01: {class: unclear, note: "curl progress meter and github.com headers; the meter appears in both arms (25 vs 28)"}
+PR02: {class: unclear, note: "edit result reduced to code"}
+PR03: {class: unclear, note: "slack_clone Gemfile and test grep"}
+PR04: {class: unclear, note: "slack_clone test listing and grep"}
+PR05: {class: unclear, note: "slack_clone restart log with check marks, then HTTP headers"}
+PR06: {class: unclear, note: "slack_clone grep"}
+PR07: {class: unclear, note: "edit result reduced to code"}
+PR08: {class: unclear, note: "Rails HTTP response headers"}
+PR09: {class: unclear, note: "grep for cosmic_cat"}
+PR10: {class: unclear, note: "insert result reduced to code"}
+PR11: {class: unclear, note: "github.com response headers"}
+PR12: {class: unclear, note: "node_modules find listing ending on 'DOTNET'"}
+PR13: {class: unclear, note: "edit result reduced to code (Rust imports)"}
+PR14: {class: unclear, note: "wget progress bars; NOT BLIND: the population count shows wget bars in one output in total, a simulated one"}
+PR15: {class: unclear, note: "ls -lR of /app"}
+PR16: {class: unclear, note: "find listing with real-container leftovers (/root/.wget-hsts, pip selfcheck cache)"}
+PR17: {class: missing error, note: "S3 AccessDenied, R 'Execution halted'"}
+PR18: {class: unclear, note: "three-line ls listing"}
+PR19: {class: unclear, note: "mktemp path and a shebang"}
+PR20: {class: unclear, note: "Rails HTTP response headers"}

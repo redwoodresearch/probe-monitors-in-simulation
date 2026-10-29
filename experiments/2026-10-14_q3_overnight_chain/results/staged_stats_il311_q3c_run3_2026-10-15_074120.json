@@ -1,0 +1,15 @@
+{
+ "target": "il311_q3c_run3",
+ "suffix": "_try2",
+ "sets": [
+  {
+   "target": "il311_q3c_run3",
+   "arm": "attack",
+   "staged_file": "/ev/il311_q3c_run3_v1_try2/inputs/attack.jsonl",
+   "staged_sha": "22ec8a228f9b3733f5dfadd9a126fa6224464fe80ed32687acd80e56fb63d464",
+   "epochs": 33,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

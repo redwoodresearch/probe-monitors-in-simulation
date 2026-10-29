@@ -1,0 +1,102 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_q1 of 2026-10-14_154401_scaleup311_q1: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 4,
+  "by_arm": {
+   "sim_honest@september": 4
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_q1",
+   "rel": "sim_honest@september/t213_model_registry/2026-10-15T20-06-31-00-00_la-model-registry-sim-honest-1_BMqFZancFfjwtztgZ7Kp2e.eval",
+   "sha256": "edd165949f7af4ce520c477d57d8108a944d74b0eb0bcf6f92b4fed634be0028",
+   "bytes": 538350,
+   "arm_dir": "sim_honest@september",
+   "task": "t213_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q1/sim_honest@september/t213_model_registry/2026-10-15T20-06-31-00-00_la-model-registry-sim-honest-1_BMqFZancFfjwtztgZ7Kp2e.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q1",
+   "stratum": "simh_311",
+   "launch_task": "t213_model_registry",
+   "first_start": "2026-10-15T13:06:29-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q1",
+   "run1_launch": "2026-10-14_154401_scaleup311_q1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "6"
+  },
+  {
+   "launch": "2026-10-15_simh_q1",
+   "rel": "sim_honest@september/t243_tiktok/2026-10-15T20-07-02-00-00_la-tiktok-sim-honest-1_RojobxgN2HrvfunjUXqezC.eval",
+   "sha256": "041a571c8a630fc677d2493bcd45dc2d597cad790e2132087ad4a73dc6d69973",
+   "bytes": 314155,
+   "arm_dir": "sim_honest@september",
+   "task": "t243_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q1/sim_honest@september/t243_tiktok/2026-10-15T20-07-02-00-00_la-tiktok-sim-honest-1_RojobxgN2HrvfunjUXqezC.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q1",
+   "stratum": "simh_311",
+   "launch_task": "t243_tiktok",
+   "first_start": "2026-10-15T13:07:00-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q1",
+   "run1_launch": "2026-10-14_154401_scaleup311_q1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "6"
+  },
+  {
+   "launch": "2026-10-15_simh_q1",
+   "rel": "sim_honest@september/t248_user_tracking/2026-10-15T20-50-34-00-00_la-user-tracking-sim-honest-1_kPLcnuVUR37vhLFxLKbSdC.eval",
+   "sha256": "c4ad258a0a6ae99fd10b450bda43391b7532a6fba16c51377c09b432310fbe1c",
+   "bytes": 72336,
+   "arm_dir": "sim_honest@september",
+   "task": "t248_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q1/sim_honest@september/t248_user_tracking/2026-10-15T20-50-34-00-00_la-user-tracking-sim-honest-1_kPLcnuVUR37vhLFxLKbSdC.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q1",
+   "stratum": "simh_311",
+   "launch_task": "t248_user_tracking",
+   "first_start": "2026-10-15T13:50:32-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q1",
+   "run1_launch": "2026-10-14_154401_scaleup311_q1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "6"
+  },
+  {
+   "launch": "2026-10-15_simh_q1",
+   "rel": "sim_honest@september/t374_web_scraping/2026-10-15T20-50-34-00-00_la-web-scraping-sim-honest-1_7xhpPfhY8cycQbgMj46xFs.eval",
+   "sha256": "717ea62d045cdff93778d09be987da48c36863db602cb3566ff2f5bc1e827eec",
+   "bytes": 146374,
+   "arm_dir": "sim_honest@september",
+   "task": "t374_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q1/sim_honest@september/t374_web_scraping/2026-10-15T20-50-34-00-00_la-web-scraping-sim-honest-1_7xhpPfhY8cycQbgMj46xFs.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q1",
+   "stratum": "simh_311",
+   "launch_task": "t374_web_scraping",
+   "first_start": "2026-10-15T13:50:32-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q1",
+   "run1_launch": "2026-10-14_154401_scaleup311_q1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "6"
+  }
+ ]
+}

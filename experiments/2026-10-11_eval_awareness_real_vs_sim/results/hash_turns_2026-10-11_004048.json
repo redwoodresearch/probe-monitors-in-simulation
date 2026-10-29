@@ -1,0 +1,9 @@
+{
+ "packs": "probe-shift_aswin-surya_sub-la-activations/2026-10-10_la_fixed-sim-v2_probe-inputs-b-l1_v1",
+ "manifest_sha256": "e56a27e46c4f0093ab07c08fa5c994f2d76391bc6e36e12cc583fdaf6ec9bd1f",
+ "git": "b4ce870fb4f56b8a243a8a860c1eec6d1b5c7de7",
+ "counts only": true,
+ "cells with all three arms": 939,
+ "system turn": {"e2 vs e1": {"cells equal": 939, "cells differing": 0, "lines only in e2 (min/median/max)": null, "lines only in e1 (min/median/max)": null, "length e2 - e1, characters (min/median/max)": null, "differing cells by environment": {}}, "sim vs e1": {"cells equal": 939, "cells differing": 0, "lines only in sim (min/median/max)": null, "lines only in e1 (min/median/max)": null, "length sim - e1, characters (min/median/max)": null, "differing cells by environment": {}}, "distinct hashes per arm": {"e1": 535, "e2": 535, "sim": 535}},
+ "first user turn": {"e2 vs e1": {"cells equal": 939, "cells differing": 0, "lines only in e2 (min/median/max)": null, "lines only in e1 (min/median/max)": null, "length e2 - e1, characters (min/median/max)": null, "differing cells by environment": {}}, "sim vs e1": {"cells equal": 939, "cells differing": 0, "lines only in sim (min/median/max)": null, "lines only in e1 (min/median/max)": null, "length sim - e1, characters (min/median/max)": null, "differing cells by environment": {}}, "distinct hashes per arm": {"e1": 1, "e2": 1, "sim": 1}}
+}

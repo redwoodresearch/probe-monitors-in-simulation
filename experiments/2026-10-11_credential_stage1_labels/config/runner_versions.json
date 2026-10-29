@@ -1,0 +1,31 @@
+[
+  {
+    "phase": "pilot_and_initial_full_pass",
+    "source_git_revision": "e22e0e3cf57949782205c73508b5897019032e1d",
+    "path": "src/probe_shift/label_panel.py",
+    "sha256": "e2aa21fcc90f41d53291449dcc479b387990a4c4209906630676feab8c4df221",
+    "prompt_or_voting_rule_changed": false
+  },
+  {
+    "phase": "resume_after_TLS_interruption",
+    "source_git_revision": "43a7576d765fd03bacbda695d425d12a9c770d2e",
+    "path": "src/probe_shift/label_panel.py",
+    "sha256": "30de4399db19e8d72117732f803e3a1c8c56a153e144b36e8ebdaa233eb62969",
+    "prompt_or_voting_rule_changed": false
+  },
+  {
+    "phase": "approved_125_dollar_continuation_and_single_retry",
+    "source_git_revision": "79be60e45df1f9466f6e9f384447744c3f8d72a4",
+    "path": "src/probe_shift/label_panel.py",
+    "sha256": "accbe3289123c60bfed0c0dd0af6d005045c6de94f501afb661a4fc439128a55",
+    "prompt_or_voting_rule_changed": false
+  },
+  {
+    "phase": "final_once_only_provider_error_retries_and_credential_adjudication",
+    "source_git_revision": "e02799474be4182b80d8a0dd6f45d0e4d89e82ef",
+    "path": "src/probe_shift/label_panel.py",
+    "sha256": "cc112861ca7bdd3a6af835e53b829ff7e646ebdf7332b0ef6c5a3620e8b6d5ef",
+    "primary_prompt_or_voting_rule_changed": false,
+    "adjudication": "Separate credential-only follow-ups; configuration and rules recorded in credential PR"
+  }
+]

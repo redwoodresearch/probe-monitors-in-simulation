@@ -1,0 +1,14 @@
+# Replay extraction, T196 (df's RULE v7 @ 604bc7c60, gate 6): corrected B's reader settings (../2026-10-13_q4_why_weaker_POSTHOC/
+# config/q4b_extract_main.yaml @ e3beade04: Qwen3.5-27B, chunks of 8, pad 4096) on the replay's staged set (stage_replay.py
+# --mode stage). Shards 8, not B's 32: 145 runs (90 replay, 45 placebo, 10 control) against B's full set; the split changes
+# only how epochs are dealt to containers. inputs_sha256 from the stage record results/stage_t196_v1_stage_2026-10-15_182816.json.
+run: replay/t196_v1_extract_v1
+inputs: replay/t196_v1/staged_v1
+inputs_sha256:
+  replay_attack.jsonl: f45968a5ec5cf7bef37db2ec559cd91645e43ca5b4114629478cbc754c689863
+  replay_honest_b.jsonl: 4d04f04a61f7723f74ba5ca016f3dc5a8548d314ae7ac563c253406b5913df28
+  replay_control_run1.jsonl: b8992033f4b945307727eb6913a24e7adc0dddff83f5e9805e71f9128513d6a2
+model: Qwen/Qwen3.5-27B
+shards: 8
+chunk_size: 8
+pad_to: 4096

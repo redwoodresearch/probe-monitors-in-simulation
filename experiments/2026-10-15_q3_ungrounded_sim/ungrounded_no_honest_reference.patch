@@ -1,0 +1,28 @@
+--- a/src/runner/settings.py
++++ b/src/runner/settings.py
+@@ -135,6 +135,16 @@
+         "dirty": str(bool(dirty.stdout.strip())),
+         "matches_cwd": str(tree == (Path.cwd() / "src").resolve()),
+     }
++
++
++def _no_honest_reference(name: str = "BA_NO_HONEST_REFERENCE") -> bool:
++    """The UNGROUNDED arm (probe-shift experiments/2026-10-15_q3_ungrounded_sim): "1" drops the original-trajectory
++    reference (BA_HONEST_LOG) entirely, so the simulator never sees the real honest run and the manifest's
++    `condition.affordances` loses `original_trajectory`. Unset or "0" is the frozen behaviour; any other value is an
++    error rather than a silent fallback."""
++    value = os.environ.get(name, "0").strip()
++    assert value in ("0", "1"), f"{name} must be 0 or 1, got {value!r}"
++    return value == "1"
+ 
+ 
+ def _orig_trajectory_mode(name: str = "BA_HONEST_LOG_MODE") -> OrigTrajectoryMode:
+@@ -337,7 +347,7 @@
+             simulator_model=simulator_model,
+             max_steps=_integer("BA_MAX_STEPS", arena.default_max_steps),
+             real_logs=real_logs,
+-            honest_logs=_items("BA_HONEST_LOG"),
++            honest_logs=() if _no_honest_reference() else _items("BA_HONEST_LOG"),
+             orig_trajectory_mode=_orig_trajectory_mode(),
+             orig_trajectory_out_cap=_integer(
+                 "BA_HONEST_LOG_OUT_CAP",

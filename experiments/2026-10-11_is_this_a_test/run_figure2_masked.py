@@ -1,0 +1,235 @@
+"""Figure 2 (appendix), masked: one real and one simulated str_replace output, and one real and one simulated insert
+output, for the same task, from HONEST runs only. Aswin, 09:16:13 PT 2026-10-12, relayed by 0d, verbatim: "Masked
+Figure 2: yes, for the appendix's 'one real and one simulated reply side by side', masked skeletons only, nothing leaves
+Modal."
+
+Inside the Modal container (Modal CPU, where the runs live):
+- **Input:** the v4 inputs `2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/` (original text). One real honest run per
+  task, the first by key, against that task's simulated honest run.
+- **Eligible tasks:** both runs have at least one text_editor str_replace output and one insert output. The task is the
+  first eligible one ranked by sha256("20261012|" + task). In each run, the first str_replace output and the first
+  insert output are taken.
+- **Masking, before anything else:** template text survives only as a whole matching line: a first-line header
+  (HEADERS, from Inspect's text editor and control_tower's diff display) with its paths masked, an exact last-line
+  review note (FOOTERS), or the diff's fixed file names and hunk headers. Line-number gutters survive only under a
+  matching header, and only if every line between validates: Inspect's `f"{n:6}\t"` numbered consecutively, or
+  control_tower's `f"{n:>4}|{sign} "` counting up as each hunk header says. Whitespace and punctuation are kept. Every
+  other letter or digit becomes "x". A final line marks whether the output ends with a newline. A last check
+  (`leaks`) raises rather than return any skeleton line with a letter or digit other than "x" outside those forms.
+- **Trimming:** each skeleton keeps its first 7 and last 7 lines, with "…" between.
+Only the skeletons, step numbers, the two honest arms' counts, and 12-character sha256 hashes of the run keys and the task
+leave the container. No key, task name or arm label leaves. No credential scan is needed or run, since no content
+character leaves.
+
+  PYTHONPATH=src uv run --no-project --with modal modal run experiments/2026-10-11_is_this_a_test/run_figure2_masked.py
+"""
+
+import hashlib
+import json
+import os
+import re
+import subprocess
+from pathlib import Path
+
+import modal
+
+HERE = Path(__file__).parent
+ROOT = HERE.parent.parent
+APP = "probe-shift_aswin-surya_sub-itat_fig2_kill-2026-11-12"
+LA, INPUTS = "probe-shift_aswin-surya_sub-la-activations", "2026-10-06_la_segment-end-v4_qwen3-32b_v1"
+SEED, KEEP, DEADLINE = "20261012", 7, 780
+
+app = modal.App(APP)
+la = modal.Volume.from_name(LA, version=2).read_only()
+image = modal.Image.debian_slim(python_version="3.12")
+
+
+HEADERS = [  # whole-line template structures, with the path groups masked: (pattern, gutter kind)
+    (re.compile(r"^(The file )(\S+)( has been edited\. Here's the result of running `cat -n` on a snippet of the edited file:)$"), "cat"),
+    (re.compile(r"^(The file )(\S+)( has been edited\. Here's the result of running `cat -n` on a snippet of )(\S+)(:)$"), "cat"),
+    (re.compile(r"^(The file )(\S+)( has been edited\. Here's a diff showing the changes made:)$"), "diff")]
+FOOTERS = {"Review the changes and make sure they are as expected (correct indentation, no duplicate lines, etc). Edit the file again if necessary.",
+           "Review the changes and make sure they are as expected. Edit the file again if necessary."}
+DIFF_FILES = ["--- old_version", "+++ edited_version"]  # control_tower's diff display: fixed file names
+X = lambda s: "".join("x" if ch.isalnum() else ch for ch in s)  # every letter or digit to "x"
+CAT = re.compile(r"^ *([1-9][0-9]{0,6})\t")  # Inspect's cat -n: f"{n:6}\t"
+HUNK = re.compile(r"^@@ -([0-9]{1,7}),([0-9]{1,7}) \+([0-9]{1,7}),([0-9]{1,7}) @@$")
+DIFF = re.compile(r"^ *([1-9][0-9]{0,6})\|([+ -]) ")  # control_tower: f"{n:>4}|{sign} "
+
+
+def cat_gutters(lines):
+    """Gutter end per line if every line is a canonical f"{n:6}\t" with consecutive n, else None."""
+    ms = [CAT.match(x) for x in lines]
+    if not lines or not all(m and m.group(0) == f"{int(m.group(1)):6}\t" for m in ms):
+        return None
+    ns = [int(m.group(1)) for m in ms]
+    return [m.end() for m in ms] if ns == list(range(ns[0], ns[0] + len(ns))) else None
+
+
+def diff_gutters(lines):
+    """Kept prefix length per line if the lines are the fixed file names, then hunks whose headers are canonical (a start of 0 only with
+    length 0) and whose line numbers count up exactly as the hunk header says, else None."""
+    if lines[:2] != DIFF_FILES or len(lines) < 3:
+        return None
+    keep, src, tgt, left = [len(DIFF_FILES[0]), len(DIFF_FILES[1])], 0, 0, (0, 0)
+    for x in lines[2:]:
+        h, d = HUNK.match(x), DIFF.match(x)
+        if h:
+            src, ls, tgt, lt = map(int, h.groups())
+            if left != (0, 0) or x != f"@@ -{src},{ls} +{tgt},{lt} @@" or (ls and not src) or (lt and not tgt):
+                return None
+            left = (ls, lt)
+            keep.append(len(x))
+        elif d and d.group(0) == f"{int(d.group(1)):>4}|{d.group(2)} ":
+            n, sign = int(d.group(1)), d.group(2)
+            if sign == "+" and n == tgt and left[1] > 0:
+                tgt, left = tgt + 1, (left[0], left[1] - 1)
+            elif sign == "-" and n == src and left[0] > 0:
+                src, left = src + 1, (left[0] - 1, left[1])
+            elif sign == " " and n == src and left[0] > 0 and left[1] > 0:
+                src, tgt, left = src + 1, tgt + 1, (left[0] - 1, left[1] - 1)
+            else:
+                return None
+            keep.append(d.end())
+        else:
+            return None
+    return keep if left == (0, 0) and len(keep) > 2 else None
+
+
+def skeleton(text):
+    """Template text survives only as a whole matching line: a header with its paths masked, an exact review note, or
+    the diff's fixed file names and hunk headers. Gutters survive only under a matching header, and only if every
+    line between validates (canonical width, numbers counting up). Everything else alphanumeric becomes "x"."""
+    body = text.split("\n")
+    if text.endswith("\n"):
+        body = body[:-1]
+    filled = [i for i, x in enumerate(body) if x.strip()]
+    out = [X(x) for x in body]
+    if filled:
+        first, last = filled[0], filled[-1]
+        m, kind = next(((m, k) for m, k in ((pat.match(body[first]), k) for pat, k in HEADERS) if m), (None, None))
+        if m:
+            out[first] = "".join(X(g) if i % 2 == 1 else g for i, g in enumerate(m.groups()))  # odd groups are paths
+            footer = last != first and body[last] in FOOTERS
+            if footer:
+                out[last] = body[last]
+            inner = list(range(first + 1, last if footer else last + 1))
+            keep = (cat_gutters if kind == "cat" else diff_gutters)([body[i] for i in inner])
+            for i, k in zip(inner, keep or []):
+                out[i] = body[i][:k] + X(body[i][k:])
+    if len(out) > 2 * KEEP + 1:
+        out = out[:KEEP] + ["…"] + out[-KEEP:]
+    return "\n".join(out) + "\n" + ("⏎ [the output ends with a newline]" if text.endswith("\n") else "∅ [no trailing newline]")
+
+
+def leaks(skel):
+    """How many lines of a finished skeleton hold a letter or digit other than "x", outside an exact review note or
+    diff file name, a header with masked path groups, a canonical hunk header, or a canonical gutter."""
+    dirty = lambda s: any(ch.isalnum() and ch != "x" for ch in s)
+    bad = 0
+    for line in skel.split("\n")[:-1]:  # the last line is the trailing-newline marker
+        if line in FOOTERS or line in DIFF_FILES:
+            continue
+        m = next((m for m in (pat.match(line) for pat, _ in HEADERS) if m), None)
+        if m:
+            bad += any(dirty(g) for i, g in enumerate(m.groups()) if i % 2 == 1)
+            continue
+        h = HUNK.match(line)
+        if h and line == "@@ -{},{} +{},{} @@".format(*map(int, h.groups())):  # numbers only, canonical
+            continue
+        c, d = CAT.match(line), DIFF.match(line)
+        if c and c.group(0) == f"{int(c.group(1)):6}\t":
+            line = line[c.end():]
+        elif d and d.group(0) == f"{int(d.group(1)):>4}|{d.group(2)} ":
+            line = line[d.end():]
+        bad += dirty(line)
+    return bad
+
+
+def outputs(msgs, command):
+    """(step, output text) for each text_editor call with this command and its tool output, in order."""
+    out, step = [], -1
+    for j, m in enumerate(msgs):
+        if m["role"] != "assistant":
+            continue
+        step += 1
+        calls = m.get("tool_calls") or []
+        tools = []
+        for k in range(j + 1, len(msgs)):  # the tool messages right after this turn, one per call
+            if msgs[k]["role"] != "tool":
+                break
+            tools.append(k)
+        if len(tools) != len(calls):  # unpaired calls and outputs: skip the turn rather than guess
+            continue
+        for c, k in zip(calls, tools):
+            if msgs[k].get("tool_name") not in (None, c["function"]["name"]) or (c.get("id") and msgs[k].get("tool_call_id") not in (None, c["id"])):
+                continue
+            args = c["function"].get("arguments") or {}
+            args = json.loads(args) if isinstance(args, str) else args
+            if c["function"]["name"] == "text_editor" and args.get("command") == command and isinstance(msgs[k].get("content"), str):
+                out.append((step, msgs[k]["content"]))
+    return out
+
+
+@app.function(image=image, volumes={"/in": la}, cpu=(2, 2), memory=(8192, 8192), timeout=600, startup_timeout=120,
+              retries=0)  # limits equal the requests
+def figure2(own_sha: str) -> dict:
+    import traceback
+
+    null = os.open(os.devnull, os.O_WRONLY)  # no run text in logs or errors
+    os.dup2(null, 1), os.dup2(null, 2)
+    try:
+        if hashlib.sha256(Path(__file__).read_bytes()).hexdigest() != own_sha:
+            raise ValueError("the deployed script is not the launching commit's")
+        return _figure2()
+    except BaseException as e:
+        lines = [f.lineno for f in traceback.extract_tb(e.__traceback__) if f.filename.endswith("run_figure2_masked.py")]
+        raise RuntimeError(f"figure2 failed: {type(e).__name__} at run_figure2_masked.py lines {lines}") from None
+
+
+def _figure2():
+    from collections import Counter
+
+    real_arm, sim_arm = "real-honest", "sim-honest"
+    runs, arms = {}, Counter()
+    for f in sorted((Path("/in") / INPUTS / "inputs").glob("shard_*.jsonl")):
+        for r in map(json.loads, f.read_text().splitlines()):
+            if r["arm"] in (real_arm, sim_arm):  # honest runs only; other arms are never read further
+                arms[r["arm"]] += 1
+                runs.setdefault((r["arm"], r["main_task"]), []).append(r)
+    h = lambda s: hashlib.sha256(s.encode()).hexdigest()[:12]
+    counts = {"real honest": arms[real_arm], "simulated honest": arms[sim_arm]}  # constant labels only
+    if not (arms[real_arm] and arms[sim_arm]):
+        return {"honest runs": counts, "stopped": "the honest arms are not named as expected"}
+    tasks = sorted({t for a, t in runs if a == sim_arm} & {t for a, t in runs if a == real_arm},
+                   key=lambda t: hashlib.sha256(f"{SEED}|{t}".encode()).hexdigest())
+    for t in tasks:
+        real = sorted(runs[(real_arm, t)], key=lambda r: r["key"])[0]
+        sim = sorted(runs[(sim_arm, t)], key=lambda r: r["key"])[0]
+        got = {(arm, cmd): outputs(r["messages"], cmd) for arm, r in (("real", real), ("simulated", sim)) for cmd in ("str_replace", "insert")}
+        if all(got.values()):
+            skels = {k: skeleton(v[0][1]) for k, v in got.items()}
+            if any(leaks(s) for s in skels.values()):
+                raise ValueError("a skeleton kept a content character")
+            fig = {f"{arm} {cmd}": {"run key sha256": h((real if arm == "real" else sim)["key"]), "step": got[(arm, cmd)][0][0],
+                                    "skeleton": skels[(arm, cmd)]} for arm, cmd in got}
+            return {"honest runs": counts, "task sha256": h(t), "figure": fig}
+    return {"honest runs": counts, "stopped": "no paired task has both commands in both runs"}
+
+
+@app.local_entrypoint()
+def main():
+    git = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, cwd=ROOT).stdout.strip()
+    st = subprocess.run(["git", "status", "--porcelain", "--untracked-files=no"], capture_output=True, text=True, cwd=ROOT).stdout.strip()
+    tracked = subprocess.run(["git", "ls-files", "--error-unmatch", __file__], capture_output=True, cwd=ROOT).returncode == 0
+    if st or not tracked:
+        raise SystemExit("commit first: the run must come from committed code")
+    call = figure2.spawn(hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+    try:  # a 13-min deadline for the whole job, restarts included; the app stops when this launcher exits
+        out = call.get(timeout=DEADLINE) | {"git": git}
+    except (TimeoutError, modal.exception.TimeoutError):  # get() raises the builtin in modal 1.6.1
+        call.cancel()
+        raise SystemExit(f"stopped at the {DEADLINE} s deadline")
+    Path(ROOT / ".run_cache" / "is_this_a_test").mkdir(parents=True, exist_ok=True)
+    (ROOT / ".run_cache" / "is_this_a_test" / f"figure2_{git[:8]}.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
+    print(json.dumps({k: v for k, v in out.items() if k != "figure"}, indent=1))

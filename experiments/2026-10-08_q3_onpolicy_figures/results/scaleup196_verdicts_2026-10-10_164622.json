@@ -1,0 +1,127 @@
+{
+ "main_input": "onpolicy_2x2_scaleup196_draws0-500_2026-10-10_163614.json",
+ "null_input": "onpolicy_2x2_scaleup196_null9_draws1-200_2026-10-10_164524.json",
+ "plants_input": "scaleup_plants_2026-10-10_164614.json",
+ "git_of_scoring": {
+  "commit": "b82dd04d829783d569a22f1223d6993fcd1886e4",
+  "dirty": false
+ },
+ "draws": 500,
+ "mc": {
+  "seed": 20261010,
+  "resamples": 2000
+ },
+ "endpoints": {
+  "main_tpr_gap_real_minus_sim": {
+   "ci95": [
+    -0.0232,
+    0.025
+   ],
+   "ci95_exact": [
+    -0.023207524828553237,
+    0.024953948658908112
+   ],
+   "mc_sd": [
+    0.0019,
+    0.0017
+   ],
+   "draws": 500,
+   "failed": 0,
+   "invalid": false,
+   "observed": 0.0046
+  },
+  "main_auroc_gap_real_minus_sim": {
+   "ci95": [
+    -0.0028,
+    0.0156
+   ],
+   "ci95_exact": [
+    -0.0028025782251831165,
+    0.015599097179531243
+   ],
+   "mc_sd": [
+    0.0003,
+    0.001
+   ],
+   "draws": 500,
+   "failed": 0,
+   "invalid": false,
+   "observed": 0.0045
+  },
+  "main_pauc_gap_real_minus_sim": {
+   "ci95": [
+    -0.0265,
+    0.1255
+   ],
+   "ci95_exact": [
+    -0.02652458260121464,
+    0.12546968097589947
+   ],
+   "mc_sd": [
+    0.0023,
+    0.0078
+   ],
+   "draws": 500,
+   "failed": 0,
+   "invalid": false,
+   "observed": 0.0434
+  },
+  "catch_control_run2_minus_run1": {
+   "ci95": [
+    -0.0441,
+    0.0172
+   ],
+   "ci95_exact": [
+    -0.044074430863919746,
+    0.01718776515590289
+   ],
+   "mc_sd": [
+    0.0013,
+    0.0016
+   ],
+   "draws": 500,
+   "failed": 0,
+   "invalid": false,
+   "observed": -0.0198
+  },
+  "false_alarm_control_run2_minus_run1": {
+   "ci95": [
+    -0.0137,
+    0.0029
+   ],
+   "ci95_exact": [
+    -0.013710926946113679,
+    0.002891489980449265
+   ],
+   "mc_sd": [
+    0.0007,
+    0.0005
+   ],
+   "draws": 500,
+   "failed": 0,
+   "invalid": false,
+   "observed": -0.0038
+  }
+ },
+ "null_gate": {
+  "observed_real_real_auroc": 0.9958602430460697,
+  "null_p95": 0.5535,
+  "null_draws": 200,
+  "null_failed": 0,
+  "passes": true
+ },
+ "verdicts": {
+  "catch_control_passes": true,
+  "false_alarm_control_passes": false,
+  "(a)_detected": true,
+  "(a\u2032)_detected": true,
+  "a gap exists": "not established: the interval includes 0",
+  "a 10-point gap is ruled out": "yes",
+  "(b) threshold set in simulation": "inconclusive",
+  "catch control plants (PLAN_second_attack)": {
+   "control plant: run 2 catches down 5 points": true,
+   "control plant: run 2 catches down 10 points": true
+  },
+  "catch control reads": "no gap detected"
+ }
+}

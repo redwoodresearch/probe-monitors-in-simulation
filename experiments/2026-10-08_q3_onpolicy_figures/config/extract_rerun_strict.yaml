@@ -1,0 +1,13 @@
+# The rerun's attack arms (real, September-simulated, today-simulated), staged by run_replay_readouts.py --stage
+# rerun_strict_v1 --unoffered str_replace_editor,str_replace (results/replay_readouts_rerun_strict_2026-10-09_084813.json):
+# 78 context epochs, 3,617,908 tokens, 3,502 readouts. Approved by Aswin in session: extraction cap $75.
+run: 2026-10-09_rerun_strict_replay_v1
+inputs: rerun_strict_v1
+inputs_sha256:
+  attack.jsonl: a310b0c522ec86ba30e836bd84449e20c038a1c5953e4ac390cd1f9c58abbd79
+  sim_attack@september.jsonl: e3d6f1e50502d6a8f7eb8a77c52806e1df16c2ea649c359cc871c0961195b04f
+  sim_attack@today.jsonl: 2b08a2e455729e9000168adc85dbbaa9b8749838193323e1576520cee7abca29
+model: Qwen/Qwen3.5-27B
+shards: 2
+chunk_size: 10
+pad_to: 4096

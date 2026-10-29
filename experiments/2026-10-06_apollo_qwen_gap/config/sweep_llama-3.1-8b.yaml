@@ -1,0 +1,21 @@
+# Every layer of Llama-3.1-8B-Instruct, both readouts, Apollo's recipe: the model-size check within the Llama family.
+run: 2026-10-06_apollo-sweep_llama-3.1-8b
+model: meta-llama/Llama-3.1-8B-Instruct
+tokenizer: meta-llama/Llama-3.1-8B-Instruct   # the same Llama 3.1 tokenizer and template as Apollo's
+weights: own                 # downloaded to this experiment's Modal Volume (hf-hub/)
+dtype: float16
+n_gpus: 1
+chat_template: {date_string: 26 Jul 2024}
+readouts: [block_output, apollo]
+layers: all                  # 0..31
+eval_sets: [roleplaying_llama-70b-3.3, roleplaying_qwen3-32b]
+train_data: repe_honesty__plain
+detect: statement minus its last five words; statements of five words or fewer give no tokens (31 of 306)
+reg_coeff: 10
+max_iter: 2000
+val_fraction: 0.2
+split_seed: 0
+aggregation: mean of per-token scores over the detected tokens
+fit_workers: 8
+blas_threads_per_fit: 2
+pilot: {pairs: 40, eval_every: 12}

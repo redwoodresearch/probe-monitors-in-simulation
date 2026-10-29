@@ -1,0 +1,18 @@
+# Rule-based labels for every tool call (2026-10-06): read-only or impactful. Labeler: src/probe_shift/calls.py.
+cohorts:                                 # aliases in simulated-control-evals src/paper/configs/real_runs.yml
+  real-attack-e1: la_public10_real_attack_n1000
+  sim-attack: la_public10_sim_astra_attack_n1000
+  real-honest: la_public10_real_honest_n1000    # for the "LA honest + attack" training variant
+  sim-honest: la_public10_sim_astra_honest_n437   # probe_shift.cohorts; one run per main task, not in exclusions_v3, so
+                                                  # validity and the two slices come from its manifest.json
+slices:                                  # task-level flags on every row, from the sim-honest manifest; analyses drop these main tasks from every arm
+  sim_honest_local_digest_task: tasks[].contract_stamped_locally   # 91 media_processing and model_registry tasks: env digest stamped locally
+  sim_honest_redrawn_task: redrawn_after_model_calls               # 3 tasks redrawn after a timeout
+exclusions_file: exclusions_v3.json      # splits/: validity, truncation and sim reference per sample; paired tasks
+calls: every call in reader_messages(sample) of every valid sample  # submit calls and empty turns dropped, as the reader sees them
+indexing: {step: agent turn index in reader_messages, action: call index within the turn}  # same as reader.render
+labels:                                  # Aswin, 2026-10-06: read-only only if every piece is clearly read-only
+  impactful_clear: [file_delete, db_write, process_service, install, network, permissions_config, file_write, file_write_tmp]
+  impactful_unclear: [run_program, unknown, malformed]   # impactful; the robustness row leaves these out (malformed: fails bash -n)
+  read_only: [db_read, inline_code_read, file_read, inspect]   # every network call impactful (net_* fields per call); /tmp writes impactful
+handcheck: {arms: [real-attack-e1, sim-attack], n_per_arm: 50, seed: 0, max_command_chars: 2500}

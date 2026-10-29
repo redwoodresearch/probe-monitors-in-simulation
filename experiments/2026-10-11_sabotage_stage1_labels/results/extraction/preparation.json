@@ -1,0 +1,12 @@
+{
+  "requested_rows": 1457,
+  "resolved_rows": 1457,
+  "context_calls": 8369,
+  "input_bytes": 17397201,
+  "largest_input_bytes": 234336,
+  "labels_sha256": "e276aae17f99ef537ce0d26748772b794931bc86e39f937ba69fabdfbdce4928",
+  "locator_sha256": "81fca0c4495b771cb730a2c431d0ad49e01af6a89e4269c567c87c29cebdab89",
+  "index_sha256": "7a5cb12975500f9a9e41c2bf3a73db26963c4a590c5f9d315014895342160e98",
+  "key_accessed": false,
+  "selected_command_counts_exposed_to_judges": false
+}

@@ -1,0 +1,35 @@
+{
+ "plan": "PLAN.md Part B (this folder)",
+ "git": "04823b06d63ca185b43bf311239305d83744b2cc",
+ "run": "2026-10-12_110549",
+ "extraction": [
+  "2026-10-12_la_output-end-r2_olmo31-32b_alllayers_v1",
+  "2026-10-12_la_output-end-r2_olmo31-32b_perrepair_insert_v1"
+ ],
+ "arm": "insert",
+ "inputs sha256": {
+  "stage_per_repair_2026-10-12_133921.json": "5f33669b5cb1e8c573aa16ccc6e0e8d15d2c56f6d13f6af2c630808c834c4870",
+  "runs.json": "e2c86cf48983e6c93bb4ade799e47e08b2aaca0201f4a7244a5642b5de3c8784",
+  "scores_L16.npz": "b73157b4fbb46432e8aa6823a4e14270d2656456321d8b89d946e597a3044e9a",
+  "scores_L24.npz": "de23c1c3f12ffa79d67d287c713345703ea45f53b2f6ca4e48e4d02f74d863ea",
+  "scores_L32.npz": "231ab6745f682def4ca8c61af2fbec80f76ab362f9df218705a7bb19e8a82e21",
+  "scores_L40.npz": "c21042eb51468460d43fef97e085c73fb6090eff35e71137672ce03f5fbb5182",
+  "scores_L48.npz": "0fab6ab5a92e184e19836908de5e9d3a6863b195282cb8c43434a1f2034c6055",
+  "scores_L56.npz": "698c9ad803212403c80b880cc5bb7ffa9ebbc5211e330d679cc85c15c5ffb20a",
+  "scores_L63.npz": "b8bac05e45d108c9da92297bcf3765e306b195fd0344c2ff793a8ef51cd9b9e0"
+ },
+ "gate: max |re-scored - stored| nested score, by layer (tolerance 1e-3)": {
+  "16": 1.8278757729639494e-06,
+  "24": 1.5914440154585208e-06,
+  "32": 2.344449361202372e-06,
+  "40": 3.5762786865234375e-06,
+  "48": 1.8440186977386475e-06,
+  "56": 2.5058786074366735e-06,
+  "63": 2.4437904357910156e-06
+ },
+ "as-simulated runs": 939,
+ "with re-rendered scores": 427,
+ "unchanged (as-simulated scores stand)": 512,
+ "scores file": "per_repair_olmo_scores_insert_2026-10-12_145721.npz",
+ "scores sha256": "f95adc55fc2e3c99b1b78c3176637a53a6cfdfe722e5cccb896b2766c54a0437"
+}

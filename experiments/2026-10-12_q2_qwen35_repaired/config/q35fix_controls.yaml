@@ -1,0 +1,14 @@
+# Qwen3.5 repaired arm (post hoc; PLAN.md): the gate's 20 controls, simulated runs fix939 left unchanged, re-read from the
+# base staged inputs exactly as Qwen3.5's dump read them (../2026-10-06_qwen35_replication/config/qwen35_alllayers.yaml),
+# saving only the detector's layer 63.
+run: 2026-10-13_q2_q35fix_controls_qwen35-27b_l63_v1
+inputs_from: 2026-10-06_la_segment-end_qwen3-32b_v1
+transcripts: q35fix_controls.json
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null
+pad_to: 4096
+shards: 1
+chunk_size: 25
+layers: [63]

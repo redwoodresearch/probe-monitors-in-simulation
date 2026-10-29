@@ -1,0 +1,11 @@
+# 1e-4 real honest runs, RULE.md Amendment 6, the positive control: batch C's 16 shard-longest and 4 seeded staged epochs, re-staged
+# by run_rh_stage.py --target c (must equal batch C's bytes) and subset by --ref-subset, re-extracted by extract_rh.py exactly as
+# q4b_extract_c.yaml (every layer, chunk 8, pad 4096), then compared with q4b_extract_c_v1 by compare_repro.py.
+run: rh_c_ref_extract_v1
+inputs: rh_c_ref_v1
+inputs_sha256:
+  honest_b.jsonl: e32b43ecd3d79996922a78ab71c42d3a901442e8c06da158f9755ca096ffce58  # --ref-subset, 20 epochs, 5,237,218 bytes (hashed on the Volume)
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 8
+pad_to: 4096

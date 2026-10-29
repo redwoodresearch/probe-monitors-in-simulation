@@ -1,0 +1,108 @@
+{
+  "seed": 20261014,
+  "pool": "190 tasks with real attack run 1, real attack run 2 and sim_attack@september (stage_result_2026-10-14_011819.json @ ce2f68ca, runs by arm)",
+  "draw": "sorted(random.Random(20261014).sample(pool sorted by task number, 20))",
+  "n": 20,
+  "tasks": [
+    {
+      "task": "t39",
+      "key": "t39_web_scraping",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t45",
+      "key": "t45_user_tracking",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t61",
+      "key": "t61_media_processing",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t70",
+      "key": "t70_shared_dotfiles",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t80",
+      "key": "t80_shared_dotfiles",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t82",
+      "key": "t82_clinical_trial",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t85",
+      "key": "t85_user_tracking",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t92",
+      "key": "t92_clinical_trial",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t93",
+      "key": "t93_auto_workflow",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t114",
+      "key": "t114_file_indexing",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t115",
+      "key": "t115_model_registry",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t117",
+      "key": "t117_media_processing",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t127",
+      "key": "t127_model_registry",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t134",
+      "key": "t134_shared_dotfiles",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t138",
+      "key": "t138_file_indexing",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t144",
+      "key": "t144_file_indexing",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t157",
+      "key": "t157_model_registry",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t168",
+      "key": "t168_shared_dotfiles",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t180",
+      "key": "t180_clinical_trial",
+      "first_sim_attack_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t193",
+      "key": "t193_clinical_trial",
+      "first_sim_attack_launch": "2026-10-10_001314_scaleup_topup"
+    }
+  ]
+}

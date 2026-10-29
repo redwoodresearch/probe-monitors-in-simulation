@@ -1,0 +1,11 @@
+{
+ "git": "7b305891a8101e72345a99235ad3a981e123de3f",
+ "git_dirty": false,
+ "source_sha": "df7583a454713f29",
+ "files": [
+  "experiments/2026-10-07_what_each_method_sees/followups/run_honest_floor_features_modal.py",
+  "experiments/2026-10-07_what_each_method_sees/analyze_top_features.py"
+ ],
+ "modal_app": "probe-shift_aswin-surya_sub-what-sees_floor_kill-2026-11-06",
+ "staging": "/Users/aswinsurya/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/.run_cache/examples_2026-10-06_213745"
+}

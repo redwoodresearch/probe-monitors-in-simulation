@@ -1,0 +1,12 @@
+{
+ "input": "onpolicy_2x2_rerun_strict_september_null9_draws0-200_2026-10-09_111445.json",
+ "amendment": "A9 real-arm null (adopted in A18)",
+ "observed_auroc": 0.975,
+ "null_draws": 200,
+ "null_failed": 0,
+ "null_mean": 0.5158,
+ "null_max": 0.5668,
+ "null_q95": 0.5493,
+ "p": 0.005,
+ "passes_at_0.05": true
+}

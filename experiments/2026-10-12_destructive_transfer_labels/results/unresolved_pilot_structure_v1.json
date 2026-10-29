@@ -1,0 +1,1 @@
+{"fixed_structure_counts": {"calls": 50, "args_string": 50, "has_command_like_string_field": 50, "contains_python_script_suffix": 7, "contains_shell_script_suffix": 16, "contains_interpreter_dash_c": 3, "contains_heredoc_operator": 0, "contains_attachment_marker": 0}, "argument_length": {"min": 30, "median": 68.5, "max": 1099}, "raw_text_printed": false}

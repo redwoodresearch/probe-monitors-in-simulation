@@ -1,0 +1,711 @@
+{
+ "label": "own_a tight scoring targets: the 64 Sol arm folders minus the 6 no-policy-call nm360 main_v1 honest remainders (d9 setup_failures v3 @ 586ab8784; 09 ruled no scoring job)",
+ "source": "results/inventory_507_2026-10-15_022637.json (Sol manifest sha256 per folder, by key)",
+ "arms": [
+  {
+   "arm": "nm360_s1_main_s1_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "ada0720889dbb2754e4f566abf6fbcc46ec6f7178cf5e6fb28db4c9df2c2fe51",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s1_main_s1/extract_chain_nm360_s1_main_s1_extract_v1_a1_2026-10-14_232609.json",
+    "sha256": "8a2abc579a55075ab98c248b265bfae4fb5400cd8f5923b8dc73ef4f5ba94ee5",
+    "attempt": 1,
+    "run": "nm360_s1_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s1_main_s1_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "33fad5fc1b1b802bb7c92c2fb67bf73d7efbb6cae3da558be4c8c07ceb912b25",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s1_main_s1/extract_chain_nm360_s1_main_s1_extract_v1_a1_2026-10-14_232609.json",
+    "sha256": "8a2abc579a55075ab98c248b265bfae4fb5400cd8f5923b8dc73ef4f5ba94ee5",
+    "attempt": 1,
+    "run": "nm360_s1_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s1_main_s1_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "4f18db22d195b9292b3813570b312b895bd4dd2398a979c9aeb396712f864a83",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s1_main_s1/extract_chain_nm360_s1_main_s1_extract_v1_a1_2026-10-14_232609.json",
+    "sha256": "8a2abc579a55075ab98c248b265bfae4fb5400cd8f5923b8dc73ef4f5ba94ee5",
+    "attempt": 1,
+    "run": "nm360_s1_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s1_run2_s1_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "efb870633507f9a85a2df6704371bb7ae20ef6c9a9241c360b3d2d30f8b06fec",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s1_run2_s1/extract_chain_nm360_s1_run2_s1_extract_v1_a1_2026-10-14_233132.json",
+    "sha256": "8aa0754520cc4499e6c071981a91fb04f5fd85db56c74da5be4b84cdaff970e8",
+    "attempt": 1,
+    "run": "nm360_s1_run2_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s1_sim_v1_try3__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "fbbe3164a76b6afd3a868152c06e09b6ad8cff882e90a66b51544546bee6c67c",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b3_nm360_s1_sim_try3/extract_chain_nm360_s1_sim_extract_v1_try3_a1_2026-10-14_234735.json",
+    "sha256": "15b71b1f5917920699657d9c06c12287eccfdb7ac927b376745c970fa672bc24",
+    "attempt": 1,
+    "run": "nm360_s1_sim_extract_v1_try3",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s2_main_s1_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "127c114264d7ee55f09a1f3dfa72a6d87f342615755acfcea47448eaeb40f691",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s2_main_s1/extract_chain_nm360_s2_main_s1_extract_v1_a1_2026-10-14_234037.json",
+    "sha256": "1abba15b251a42661c47452a2dd7651d90f2fc2f5f5ec4a76fe8987d588807b9",
+    "attempt": 1,
+    "run": "nm360_s2_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s2_main_s1_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "6cf274845d9b91b49a9508919683334427e3e66e5599ab00c31072ce929213b0",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s2_main_s1/extract_chain_nm360_s2_main_s1_extract_v1_a1_2026-10-14_234037.json",
+    "sha256": "1abba15b251a42661c47452a2dd7651d90f2fc2f5f5ec4a76fe8987d588807b9",
+    "attempt": 1,
+    "run": "nm360_s2_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s2_main_s1_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "00c4cb4c7d03a1846fa57faebacd8e9036cd4fd566277ff5828172fe3db2a17b",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s2_main_s1/extract_chain_nm360_s2_main_s1_extract_v1_a1_2026-10-14_234037.json",
+    "sha256": "1abba15b251a42661c47452a2dd7651d90f2fc2f5f5ec4a76fe8987d588807b9",
+    "attempt": 1,
+    "run": "nm360_s2_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s2_run2_s1_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "ad7685d9bad5ecddb064baa17eee596cfd1458c3d850c53d88846dc2b7be6457",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s2_run2_s1/extract_chain_nm360_s2_run2_s1_extract_v1_a1_2026-10-14_234037.json",
+    "sha256": "fde35b6ea00e2b68bae11b3c7daa3137542978212f942b3a7a6b0454f310d785",
+    "attempt": 1,
+    "run": "nm360_s2_run2_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s2_sim_v1_try2__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "0b4fafee4d33f255b59658bc9c248e671359d0214debb35e7c037e86048ad662",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s2_sim_try2/extract_chain_nm360_s2_sim_extract_v1_try2_a1_2026-10-14_234359.json",
+    "sha256": "90a2411091cb05471f4318df19267bad05042209237b6b107eaf9ec052c9596c",
+    "attempt": 1,
+    "run": "nm360_s2_sim_extract_v1_try2",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s3_main_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "79eee820a5e91454de627bcc9b783095c8b904034cbb81abb32f5d21c575a58c",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/nm360s3main/extract_chain_nm360_s3_main_extract_v1_a1_2026-10-14_232036.json",
+    "sha256": "9d47bdc9c0e64d0cca7b539bc7befea1ca975c1034b5735f009875a2abcff28d",
+    "attempt": 1,
+    "run": "nm360_s3_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s3_main_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "bed2643a7f9f2d9c6c9cd088bce99ee12bc542d3f3a1662a17df6285e5961558",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/nm360s3main/extract_chain_nm360_s3_main_extract_v1_a1_2026-10-14_232036.json",
+    "sha256": "9d47bdc9c0e64d0cca7b539bc7befea1ca975c1034b5735f009875a2abcff28d",
+    "attempt": 1,
+    "run": "nm360_s3_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s3_main_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "c19faa194b4408f7c60695447b43ef3fb526e04b95f88762300cf8496fd01f2a",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/nm360s3main/extract_chain_nm360_s3_main_extract_v1_a1_2026-10-14_232036.json",
+    "sha256": "9d47bdc9c0e64d0cca7b539bc7befea1ca975c1034b5735f009875a2abcff28d",
+    "attempt": 1,
+    "run": "nm360_s3_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s3_run2_v1_try2__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "09bd3072372e4c41a3a0869fee148aa4313e237c9bb41287c71ec4b1fa1a5505",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/nm360s3run2/extract_chain_nm360_s3_run2_extract_v1_try2_a1_2026-10-14_232040.json",
+    "sha256": "bda560f8f3ac24a4b3960987797aa052b790ec014c26a8e6dc71c744bd13f114",
+    "attempt": 1,
+    "run": "nm360_s3_run2_extract_v1_try2",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s3_sim_s1_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "60f8dcee10595b9df07e6df650dacf7b22fb201b8a84512de992a35d79588592",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/nm360s3sims1/extract_chain_nm360_s3_sim_s1_extract_v1_a1_2026-10-14_232137.json",
+    "sha256": "56931b1f826b71900d90d915455566b79fa23cd69041159c2289029d870eb81f",
+    "attempt": 1,
+    "run": "nm360_s3_sim_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s3_sim_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "2da7ad37dc9e6d777917eba06685714abca51637777fd8d71983b06485711792",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/nm360s3sim/extract_chain_nm360_s3_sim_extract_v1_a1_2026-10-14_232419.json",
+    "sha256": "a210be398137639eb4def419303ac56947409ce87b87d1d327301721e32f54ab",
+    "attempt": 1,
+    "run": "nm360_s3_sim_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4_main_s1_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "901946664346ffc28b89c0bcbc3ca9b54b6d1a72cb9fcf30910359c98deb728e",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s4_main_s1/extract_chain_nm360_s4_main_s1_extract_v1_a1_2026-10-14_233221.json",
+    "sha256": "9aac737f138429139ba0eae84ce53899e3067a81164d02e285607050f5029dde",
+    "attempt": 1,
+    "run": "nm360_s4_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4_main_s1_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "c79ef6a838995a4cceac9c229153df6f29fb39f1db7dae204d04d9e13ee275ed",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s4_main_s1/extract_chain_nm360_s4_main_s1_extract_v1_a1_2026-10-14_233221.json",
+    "sha256": "9aac737f138429139ba0eae84ce53899e3067a81164d02e285607050f5029dde",
+    "attempt": 1,
+    "run": "nm360_s4_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4_main_s1_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "8124e092c6abd98cb669e3f6de24fd831235b9634efea9bde866cee084cd74fa",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s4_main_s1/extract_chain_nm360_s4_main_s1_extract_v1_a1_2026-10-14_233221.json",
+    "sha256": "9aac737f138429139ba0eae84ce53899e3067a81164d02e285607050f5029dde",
+    "attempt": 1,
+    "run": "nm360_s4_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4_main_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "107821da7abadcd7948278425e624d8abf5a412688cf18878b3da10630375536",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b3_nm360_s4_main/extract_chain_nm360_s4_main_extract_v1_a1_2026-10-14_234755.json",
+    "sha256": "a28c15f08f58c2d237a5b3a1be9b4bbaf5484abb6a1efce1e32c7afcd51c14c0",
+    "attempt": 1,
+    "run": "nm360_s4_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4_main_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "e247434e334a230056b9dd478704826e0393f46850bf35988097c7a30a325d14",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b3_nm360_s4_main/extract_chain_nm360_s4_main_extract_v1_a1_2026-10-14_234755.json",
+    "sha256": "a28c15f08f58c2d237a5b3a1be9b4bbaf5484abb6a1efce1e32c7afcd51c14c0",
+    "attempt": 1,
+    "run": "nm360_s4_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4_main_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "b2e61f650331769c06cf2bc8e22ab2c3a24b2b9261afa2c2af6b220e4f006375",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b3_nm360_s4_main/extract_chain_nm360_s4_main_extract_v1_a1_2026-10-14_234755.json",
+    "sha256": "a28c15f08f58c2d237a5b3a1be9b4bbaf5484abb6a1efce1e32c7afcd51c14c0",
+    "attempt": 1,
+    "run": "nm360_s4_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4_run2_s1_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "8ba02c55d65df2785aa88be02c7d33681f9f40e22709569846a69de2fa6a1ed7",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s4_run2_s1/extract_chain_nm360_s4_run2_s1_extract_v1_a1_2026-10-14_233221.json",
+    "sha256": "e2c5e8641b433360a4ae097a6304ad4bd34d21d070b08e64902729734ce339d8",
+    "attempt": 1,
+    "run": "nm360_s4_run2_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4_run2_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "74efcf8d12e976e314f8ee70096e2af44394af6a1972cd3b4708bd8ad282ef35",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b3_nm360_s4_run2/extract_chain_nm360_s4_run2_extract_v1_a1_2026-10-14_234755.json",
+    "sha256": "fc8ba5b6101255cbb5edccc638d114886ab0ec09624575ba8cd481a70e4bb3dc",
+    "attempt": 1,
+    "run": "nm360_s4_run2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_main_s1_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "2a7d6891eecce72972f55a87356c5a00615be07d2a443e6b7b4945f6d4dd4af6",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s5_main_s1/extract_chain_nm360_s5_main_s1_extract_v1_a1_2026-10-14_234038.json",
+    "sha256": "e2fd026d17fa7ca86ee7e48e8e4eaa38645791639c0abcfbdf03e4f664d8d436",
+    "attempt": 1,
+    "run": "nm360_s5_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_main_s1_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "b27e8c645b3ef090415e70778c7a09e0d760ca62331c9914bb292882ac35c916",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s5_main_s1/extract_chain_nm360_s5_main_s1_extract_v1_a1_2026-10-14_234038.json",
+    "sha256": "e2fd026d17fa7ca86ee7e48e8e4eaa38645791639c0abcfbdf03e4f664d8d436",
+    "attempt": 1,
+    "run": "nm360_s5_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_main_s1_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "062b38d07cd972264d2c5446c4add7010e0aeefa2626bf18a7cad7b309134ebf",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s5_main_s1/extract_chain_nm360_s5_main_s1_extract_v1_a1_2026-10-14_234038.json",
+    "sha256": "e2fd026d17fa7ca86ee7e48e8e4eaa38645791639c0abcfbdf03e4f664d8d436",
+    "attempt": 1,
+    "run": "nm360_s5_main_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_main_s2_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "148f054e442e1c6978d849fe44cd4da10837f71ca2928d2632b4b34810e11efe",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b5_nm360_s5_main_s2/extract_chain_nm360_s5_main_s2_extract_v1_a1_2026-10-15_002141.json",
+    "sha256": "0a3fc1d5accb46c35e4a43b46f8174e97399d507389a79786fc6f17344dfebb9",
+    "attempt": 1,
+    "run": "nm360_s5_main_s2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_main_s2_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "08e958b38301c37d40770194592296779422d371f329388b35fa81f22f8f691f",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b5_nm360_s5_main_s2/extract_chain_nm360_s5_main_s2_extract_v1_a1_2026-10-15_002141.json",
+    "sha256": "0a3fc1d5accb46c35e4a43b46f8174e97399d507389a79786fc6f17344dfebb9",
+    "attempt": 1,
+    "run": "nm360_s5_main_s2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_main_s2_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "49249ea7f06e2bdd4605d6ee16d3a723c056eb10b485ceee11540fbb7674200b",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b5_nm360_s5_main_s2/extract_chain_nm360_s5_main_s2_extract_v1_a1_2026-10-15_002141.json",
+    "sha256": "0a3fc1d5accb46c35e4a43b46f8174e97399d507389a79786fc6f17344dfebb9",
+    "attempt": 1,
+    "run": "nm360_s5_main_s2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_run2_s1_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "a7de65635d6fc4dbef718c3ff24725073a5b68c3389f29a09992258c07ef4eab",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_nm360_s5_run2_s1/extract_chain_nm360_s5_run2_s1_extract_v1_a1_2026-10-14_234038.json",
+    "sha256": "6703ad242672285c72a844d24c98c881fbfd7e54db8fb171ad77ccd6e04d8888",
+    "attempt": 1,
+    "run": "nm360_s5_run2_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_run2_s2_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "471f942e7758ff54fa24c371f680d47b9620e0500a06dcbfa4619ed9448a714c",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b5_nm360_s5_run2_s2/extract_chain_nm360_s5_run2_s2_extract_v1_a1_2026-10-15_002141.json",
+    "sha256": "620c2701951bc74f5521f7f259042b392d72d33e61132b1d3fc7dc703de8ad6f",
+    "attempt": 1,
+    "run": "nm360_s5_run2_s2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_sim_s1_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "41414aed7df4226d8f970e9dd010003a1bafa0ac0c08785816ee304303abf416",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b9_nm360_s5_sim_s1/extract_chain_nm360_s5_sim_s1_extract_v1_a1_2026-10-15_012712.json",
+    "sha256": "2bc9d6c338d17173daa49b62595ffa1e66061ef219fd859b73408ed3f91160b3",
+    "attempt": 1,
+    "run": "nm360_s5_sim_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5_sim_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "6a3861dff4dc9bea030b18c8587f171d4c97a31132e497fa2405775defa13429",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b9_nm360_s5_sim/extract_chain_nm360_s5_sim_extract_v1_a1_2026-10-15_015152.json",
+    "sha256": "8b1831076ecf6e0d5f1731e9118a7f1e1576fbb6541c5ff6b3500eed8078a808",
+    "attempt": 1,
+    "run": "nm360_s5_sim_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q1_main_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "da764d44ed2be8b50c1a97a30b3ced637e87a541babca9af738e99cf221256ec",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q1/extract_chain_su311_q1_main_extract_v1_a1_2026-10-14_192129.json",
+    "sha256": "966327da3ad6a5bb00421c506ad077a1b0de8deec9b9e147c1a202d7725d0245",
+    "attempt": 1,
+    "run": "su311_q1_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q1_main_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "f50105bf37de270da9535884f9327dba5c3192b09b6004421b9d60421b83ea01",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q1/extract_chain_su311_q1_main_extract_v1_a1_2026-10-14_192129.json",
+    "sha256": "966327da3ad6a5bb00421c506ad077a1b0de8deec9b9e147c1a202d7725d0245",
+    "attempt": 1,
+    "run": "su311_q1_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q1_main_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "2f842ed930ca49e391b1ec0599f0e1f7b33555b4fa9b2030e0ad46aba355f234",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q1/extract_chain_su311_q1_main_extract_v1_a1_2026-10-14_192129.json",
+    "sha256": "966327da3ad6a5bb00421c506ad077a1b0de8deec9b9e147c1a202d7725d0245",
+    "attempt": 1,
+    "run": "su311_q1_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q1_run2_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "95252334ea495333dd86b7e59018b9d1ff01e6fd05ac1723c4ee439690ae67c2",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q1/extract_chain_su311_q1_run2_extract_v1_a1_2026-10-14_192129.json",
+    "sha256": "c7b6ad232051285a60b6a3ef760e0cdc33fe289da9cce8232f2807996ac7cc61",
+    "attempt": 1,
+    "run": "su311_q1_run2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q1_sim_s1_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "abf717f863e10c6000fe1c7d2414b94fd8590c75bf2f17006261af5a40003e7f",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q1sims1/extract_chain_su311_q1_sim_s1_extract_v1_a1_2026-10-14_204247.json",
+    "sha256": "c9f3d36871a5fe80a0161ecc10c3d935d2bb7530f48d6840abb6a01247d88179",
+    "attempt": 1,
+    "run": "su311_q1_sim_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q1_sim_s2_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "1910acf4b19b0516d110fa425801d9dd2fb28df6f587df50c3c45cf0afa30fcc",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q1sims2/extract_chain_su311_q1_sim_s2_extract_v1_a1_2026-10-14_231851.json",
+    "sha256": "1b03c3301e364cdfd1ce4c4ca352721f7d55f8be01709bde19fd3436269bf3e5",
+    "attempt": 1,
+    "run": "su311_q1_sim_s2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q2_main_v1__attack",
+   "sol_dir": "sol_r2",
+   "sol_manifest_sha256": "4a5ff9a7f8fecc0714ab90e23c9f6c4865f5141f1732ec70f39b1ddaa8bd964e",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q2/extract_chain_su311_q2_main_extract_v1_a1_2026-10-14_194027.json",
+    "sha256": "6c064c2aa8ba26fe28851275f1dd380e787d2122a3d3bba6eb193a76099b9e75",
+    "attempt": 1,
+    "run": "su311_q2_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q2_main_v1__honest_a",
+   "sol_dir": "sol_r2",
+   "sol_manifest_sha256": "08b4fc8d215e153c8f1e0594cde696ff705b08eef5803e4024dac3c7e9d79f36",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q2/extract_chain_su311_q2_main_extract_v1_a1_2026-10-14_194027.json",
+    "sha256": "6c064c2aa8ba26fe28851275f1dd380e787d2122a3d3bba6eb193a76099b9e75",
+    "attempt": 1,
+    "run": "su311_q2_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q2_main_v1__honest_b",
+   "sol_dir": "sol_r2",
+   "sol_manifest_sha256": "52259eec06348463b407e39a4a37cd18754230f98090a1844396f4534bae3871",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q2/extract_chain_su311_q2_main_extract_v1_a1_2026-10-14_194027.json",
+    "sha256": "6c064c2aa8ba26fe28851275f1dd380e787d2122a3d3bba6eb193a76099b9e75",
+    "attempt": 1,
+    "run": "su311_q2_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q2_run2_v1__attack",
+   "sol_dir": "sol_r2",
+   "sol_manifest_sha256": "ec16c088b7d0354a22efa649141d7d47fdb4db6a60b87ce208d41a6caa9d796b",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q2/extract_chain_su311_q2_run2_extract_v1_a1_2026-10-14_194027.json",
+    "sha256": "2edfb30349db1ad6ea5159b620d1aceb8ae20cdcb44bcd560b1f36cac2c725c0",
+    "attempt": 1,
+    "run": "su311_q2_run2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q2_sim_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "ee8d97b37e063e0252d7e3779b5f4dad23a394163d2aa8eda610e26a89d6279d",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q2sim/extract_chain_su311_q2_sim_extract_v1_a1_2026-10-14_202102.json",
+    "sha256": "e8a044a273bcdc9d7bbe5377bc482b3273ff57393cb38c849b665fecb4724bda",
+    "attempt": 1,
+    "run": "su311_q2_sim_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q2r_sim_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "f084a20264a915911c667a46033961298d045a4cd86de8c23fc6ebec60d62b74",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b3_su311_q2r_sim/extract_chain_su311_q2r_sim_extract_v1_a1_2026-10-14_234802.json",
+    "sha256": "90ca101b594bfdacaae97e6df9a440430b90917a61f5cc2b6410d5f135c66e7f",
+    "attempt": 1,
+    "run": "su311_q2r_sim_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q3_main_v1__attack",
+   "sol_dir": "sol_r2",
+   "sol_manifest_sha256": "11c28404e637ce7f4b19a5a8bc93d516af0aab5ea91adba2401a441b86a8dca2",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q3/extract_chain_su311_q3_main_extract_v1_a1_2026-10-14_193143.json",
+    "sha256": "ec7d40e2ebe4a638e127cce668712fce1a615d59152ebc61ae65d1a5e44813a4",
+    "attempt": 1,
+    "run": "su311_q3_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q3_main_v1__honest_a",
+   "sol_dir": "sol_r2",
+   "sol_manifest_sha256": "86c5ff537ad421619f94163df7ee28f8035305e8797964df54a98c5667f1c4b2",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q3/extract_chain_su311_q3_main_extract_v1_a1_2026-10-14_193143.json",
+    "sha256": "ec7d40e2ebe4a638e127cce668712fce1a615d59152ebc61ae65d1a5e44813a4",
+    "attempt": 1,
+    "run": "su311_q3_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q3_main_v1__honest_b",
+   "sol_dir": "sol_r2",
+   "sol_manifest_sha256": "3c3d6b39f6b7d0fe1ef558586562fa276d3bbb740a43805c0da7df58a32a974e",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q3/extract_chain_su311_q3_main_extract_v1_a1_2026-10-14_193143.json",
+    "sha256": "ec7d40e2ebe4a638e127cce668712fce1a615d59152ebc61ae65d1a5e44813a4",
+    "attempt": 1,
+    "run": "su311_q3_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q3_run2_v1__attack",
+   "sol_dir": "sol_r2",
+   "sol_manifest_sha256": "c262b30010f0d110e78f67b43a124a86d93cb3e942d58e6def92a8968c0bb488",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q3/extract_chain_su311_q3_run2_extract_v1_a1_2026-10-14_193144.json",
+    "sha256": "168cf8a1b1ea932715da2b9746712fd6ada525eadbac34e7972de11b0006a9bf",
+    "attempt": 1,
+    "run": "su311_q3_run2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q3_sim_s1_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "158137b326a30adfc2ed2f960084c2a160645e0efd0801a9dd0be7efddf6baa3",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q3sims1/extract_chain_su311_q3_sim_s1_extract_v1_a1_2026-10-14_204837.json",
+    "sha256": "e00c95ad160aee47e3ce59dffeab05d5168cef86abb4ba5ac7cb10d99680ed6e",
+    "attempt": 1,
+    "run": "su311_q3_sim_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q3_sim_s2_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "83e0942e90c23ab0fbcf768779bde14786a9e2e0f3fc90d9047770182ace99f3",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b2_su311_q3_sim_s2/extract_chain_su311_q3_sim_s2_extract_v1_a1_2026-10-14_232346.json",
+    "sha256": "0dfca4bf05f8e2948bd64e7b952ee2135acbcfcc20cdb9e23ca292b3582abc20",
+    "attempt": 1,
+    "run": "su311_q3_sim_s2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q4_main_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "ddb29715b43cc364ca3d9905a388ac10aca090401c54d1ca903f11ccc8e957ba",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q4/extract_chain_su311_q4_main_extract_v1_a7_2026-10-14_210205.json",
+    "sha256": "318cad40184ab2a661540112e1588968f525fb271655fceea357637d054a1d2a",
+    "attempt": 7,
+    "run": "su311_q4_main_extract_v1",
+    "union": true
+   }
+  },
+  {
+   "arm": "su311_q4_main_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "90884298e6a398d222a82c7c8c94110478511c7186b6a9aeb9effb6b0a8bdf41",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q4/extract_chain_su311_q4_main_extract_v1_a7_2026-10-14_210205.json",
+    "sha256": "318cad40184ab2a661540112e1588968f525fb271655fceea357637d054a1d2a",
+    "attempt": 7,
+    "run": "su311_q4_main_extract_v1",
+    "union": true
+   }
+  },
+  {
+   "arm": "su311_q4_main_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "27e8bc0923b17ba1507e872d1c09470e6d2f696315172969925e5ad7787db313",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q4/extract_chain_su311_q4_main_extract_v1_a7_2026-10-14_210205.json",
+    "sha256": "318cad40184ab2a661540112e1588968f525fb271655fceea357637d054a1d2a",
+    "attempt": 7,
+    "run": "su311_q4_main_extract_v1",
+    "union": true
+   }
+  },
+  {
+   "arm": "su311_q4_run2_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "f735d73860ccd34089ba92640bee54d45f9531fca2d2c9ab2d4310903c55ffc5",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q4/extract_chain_su311_q4_run2_extract_v1_a7_2026-10-14_210205.json",
+    "sha256": "13added90fa12e16e7cb3d8a85020ad7655ef6c5b19f03bc4223ae47aabf20b0",
+    "attempt": 7,
+    "run": "su311_q4_run2_extract_v1",
+    "union": true
+   }
+  },
+  {
+   "arm": "su311_q4_sim_s1_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "1d27445c9f2e134e698b2c154c66edd48eea2887cc6a1e565dbb51cf5ad66986",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q4sims1/extract_chain_su311_q4_sim_s1_extract_v1_a1_2026-10-14_211004.json",
+    "sha256": "7c614f85a72e86b88ef11dcb235af9bf7e0bc960b97b20a93dec955463f9ebfc",
+    "attempt": 1,
+    "run": "su311_q4_sim_s1_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "su311_q4_sim_s2_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "62646733ee86f8f29bf64b486191069e66595add1f34782cb3906e49ecd9e080",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/q4sims2/extract_chain_su311_q4_sim_s2_extract_v1_a1_2026-10-14_232127.json",
+    "sha256": "a1d7af4844a537139e187d67dde527678ecd2dfe4c8259145e085332168583c8",
+    "attempt": 1,
+    "run": "su311_q4_sim_s2_extract_v1",
+    "union": false
+   }
+  }
+ ],
+ "excluded_no_policy_call": [
+  "nm360_s1_main_v1__honest_a",
+  "nm360_s1_main_v1__honest_b",
+  "nm360_s2_main_v1__honest_a",
+  "nm360_s2_main_v1__honest_b",
+  "nm360_s5_main_v1__honest_a",
+  "nm360_s5_main_v1__honest_b"
+ ],
+ "extract_record_note": "per arm: the Sol manifest's dump.manifest (d9's extraction record), sha256-checked; its config.attempt binds non-union chunks (Codex fix-check item 1)"
+}

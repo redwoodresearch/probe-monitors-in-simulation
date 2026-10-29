@@ -1,0 +1,211 @@
+{
+ "POST HOC": false,
+ "what": "scale-up cohort selection record (counts only)",
+ "seed": 20261014,
+ "salt": "scaleup-cohort-v1:",
+ "approach_rule_id": "fleet_first_strategy_file_stripped_v1",
+ "settings_env_commits": {
+  "auto_workflow": "9ee6fd09adb7ac43ab18d35b00acc955016a6425",
+  "clinical_trial": "17aa64c303513d5de17c27ec5c185aedcc9b9710",
+  "file_indexing": "43a47f627cdb340137daa4104d470325c9bb756f",
+  "media_processing": "9b09d2dc5feaf2f1420b27d4f0f5d1a31b56509c",
+  "model_registry": "5477b27c515247133154433149cbc3d2ed569a96",
+  "shared_dotfiles": "ac89dc4f65e638281a95db1c543015ffabb0a4f5",
+  "slack_clone": "0f51b992d4b6db6a80ce77519904dee487e9e7e1",
+  "tiktok": "2a669f801a16115a07c55982643382dc1a3e86ee",
+  "user_tracking": "275e5e1217ccba7a0fd9357124d53a79a3df94de",
+  "web_scraping": "944e87fdf2a182b2240cfe70fd7724957929393e"
+ },
+ "inputs_sha256": {
+  "splits/exclusions_v4.json": "a0ede1850566593776c9db8781553cadae95fd92d3b55c86f9bf753a304e6606",
+  "experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json": "55d9a8ec68f4685410d65c97bb84f470efb7cd8f05287384f92465ed5eadedbb"
+ },
+ "git": "90982e2f203ca2902e46baf782dead7800d4397b",
+ "rule_check_196": "196 of 196 approach_sha256 and approach_chars reproduced",
+ "paper_1000": {
+  "by_env": {
+   "auto_workflow": 100,
+   "clinical_trial": 100,
+   "file_indexing": 100,
+   "media_processing": 100,
+   "model_registry": 100,
+   "shared_dotfiles": 100,
+   "slack_clone": 100,
+   "tiktok": 100,
+   "user_tracking": 100,
+   "web_scraping": 100
+  },
+  "strategy_bearing": 519,
+  "n": 1000,
+  "phase1_paired_attack_cell": 939,
+  "main_in_437": 895,
+  "main_in_196": 431,
+  "distinct_mains": 542
+ },
+ "ours_196": {
+  "by_env": {
+   "auto_workflow": 12,
+   "clinical_trial": 44,
+   "file_indexing": 21,
+   "media_processing": 21,
+   "model_registry": 22,
+   "shared_dotfiles": 25,
+   "slack_clone": 11,
+   "tiktok": 12,
+   "user_tracking": 19,
+   "web_scraping": 9
+  },
+  "strategy_bearing": 178,
+  "n": 196,
+  "phase1_paired_attack_cell": 194,
+  "main_in_437": 176,
+  "main_in_196": 196,
+  "distinct_mains": 196
+ },
+ "remaining_804": {
+  "by_env": {
+   "auto_workflow": 88,
+   "clinical_trial": 56,
+   "file_indexing": 79,
+   "media_processing": 79,
+   "model_registry": 78,
+   "shared_dotfiles": 75,
+   "slack_clone": 89,
+   "tiktok": 88,
+   "user_tracking": 81,
+   "web_scraping": 91
+  },
+  "strategy_bearing": 341,
+  "n": 804,
+  "phase1_paired_attack_cell": 745,
+  "main_in_437": 719,
+  "main_in_196": 235,
+  "distinct_mains": 471
+ },
+ "new_main_one_cell_pool": {
+  "by_env": {
+   "auto_workflow": 44,
+   "clinical_trial": 14,
+   "file_indexing": 32,
+   "media_processing": 37,
+   "model_registry": 31,
+   "shared_dotfiles": 25,
+   "slack_clone": 37,
+   "tiktok": 43,
+   "user_tracking": 39,
+   "web_scraping": 44
+  },
+  "strategy_bearing": 147,
+  "n": 346,
+  "phase1_paired_attack_cell": 329,
+  "main_in_437": 261,
+  "main_in_196": 0,
+  "distinct_mains": 346
+ },
+ "quota_plus311": {
+  "auto_workflow|none": 27,
+  "auto_workflow|bearing": 12,
+  "clinical_trial|bearing": 10,
+  "file_indexing|none": 23,
+  "file_indexing|bearing": 7,
+  "media_processing|none": 20,
+  "media_processing|bearing": 12,
+  "model_registry|none": 12,
+  "model_registry|bearing": 15,
+  "shared_dotfiles|none": 23,
+  "shared_dotfiles|bearing": 1,
+  "slack_clone|none": 23,
+  "slack_clone|bearing": 12,
+  "tiktok|none": 21,
+  "tiktok|bearing": 18,
+  "user_tracking|none": 27,
+  "user_tracking|bearing": 8,
+  "web_scraping|none": 21,
+  "web_scraping|bearing": 19
+ },
+ "plus311": {
+  "by_env": {
+   "auto_workflow": 39,
+   "clinical_trial": 10,
+   "file_indexing": 30,
+   "media_processing": 32,
+   "model_registry": 27,
+   "shared_dotfiles": 24,
+   "slack_clone": 35,
+   "tiktok": 39,
+   "user_tracking": 35,
+   "web_scraping": 40
+  },
+  "strategy_bearing": 114,
+  "n": 311,
+  "phase1_paired_attack_cell": 294,
+  "main_in_437": 237,
+  "main_in_196": 0,
+  "distinct_mains": 311
+ },
+ "plus804": {
+  "by_env": {
+   "auto_workflow": 88,
+   "clinical_trial": 56,
+   "file_indexing": 79,
+   "media_processing": 79,
+   "model_registry": 78,
+   "shared_dotfiles": 75,
+   "slack_clone": 89,
+   "tiktok": 88,
+   "user_tracking": 81,
+   "web_scraping": 91
+  },
+  "strategy_bearing": 341,
+  "n": 804,
+  "phase1_paired_attack_cell": 745,
+  "main_in_437": 719,
+  "main_in_196": 235,
+  "distinct_mains": 471
+ },
+ "total_507": {
+  "by_env": {
+   "auto_workflow": 51,
+   "clinical_trial": 54,
+   "file_indexing": 51,
+   "media_processing": 53,
+   "model_registry": 49,
+   "shared_dotfiles": 49,
+   "slack_clone": 46,
+   "tiktok": 51,
+   "user_tracking": 54,
+   "web_scraping": 49
+  },
+  "strategy_bearing": 292,
+  "n": 507,
+  "phase1_paired_attack_cell": 488,
+  "main_in_437": 413,
+  "main_in_196": 196,
+  "distinct_mains": 507
+ },
+ "total_1000": {
+  "by_env": {
+   "auto_workflow": 100,
+   "clinical_trial": 100,
+   "file_indexing": 100,
+   "media_processing": 100,
+   "model_registry": 100,
+   "shared_dotfiles": 100,
+   "slack_clone": 100,
+   "tiktok": 100,
+   "user_tracking": 100,
+   "web_scraping": 100
+  },
+  "strategy_bearing": 519,
+  "n": 1000,
+  "phase1_paired_attack_cell": 939,
+  "main_in_437": 895,
+  "main_in_196": 431,
+  "distinct_mains": 542
+ },
+ "strategy_files_per_side_task": {
+  "0": 481,
+  "1": 402,
+  "2": 117
+ }
+}

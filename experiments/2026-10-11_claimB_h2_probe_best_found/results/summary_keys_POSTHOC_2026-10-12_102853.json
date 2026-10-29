@@ -1,0 +1,10 @@
+{
+ "planted_keys": 22,
+ "planted_equal_k1_folder": 22,
+ "unsuffixed_planted_entries_in_v3": 0,
+ "planted_equal_unsuffixed_folder": 0,
+ "other_keys": 22,
+ "other_equal": 22,
+ "git": "ec0ea71a7804741073cfd5772659c5d36992b3cb",
+ "script_sha256": "f94584a654551c6cd4841d1ebef3c343457af01ca14ce3fdaa91778109dcd965"
+}

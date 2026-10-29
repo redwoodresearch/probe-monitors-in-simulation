@@ -1,0 +1,12 @@
+# v2 (10-14 ~21:25, 4f/09/0d): a full re-extraction of the same staged inputs into a fresh root, every shard's device recorded by key (v1's attempt-1 chunks from cancelled shards have no recorded device).
+# Overnight chain: su311_q4_run2 staged by stage_chain.py (record chain_stage_su311_q4_run2_2026-10-14_193454.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: su311_q4_run2_extract_v2
+inputs: su311_q4_run2_v1
+inputs_sha256:
+  attack.jsonl: d917d74ef2f4e6d6784fcad9d09943ceadef9224db08c1a9abd8beac4b068fd4
+  repro-c.jsonl: 944a92fd34dd9dd86962ecda65bfa0fbdad1d1261d636887328b4edf25624459
+model: Qwen/Qwen3.5-27B
+shards: 8
+chunk_size: 8
+pad_to: 4096

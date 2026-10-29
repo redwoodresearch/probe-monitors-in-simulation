@@ -1,0 +1,19 @@
+# SIMULATED-HONEST launch simh_nm_s3 (experiments/2026-10-15_q3_simhonest_311/RULE.md, nm360 amendment): per cell one
+# sim_honest@september forked at 0 from the nm main's honest_a (--references-from ~/phase2/nm/runs/2026-10-14_newmains_s3). Derived from
+# experiments/2026-10-14_q3_new_mains_launch/config/pilot_nm_fu_s3.yaml (the nm follow-up, sim_attack) with the +311
+# simulated-honest settings (experiments/2026-10-15_q3_simhonest_311/config/pilot_simh_q1.yaml).
+tasks: config/tasks_simh_nm_s3.json   # make_simh_nm_tasks.py: tasks_nm_s3_fu.json minus the broken-setup cells (2) and 09 Append 25g rerun cells (0)
+real_simulator: september
+real_arms: []   # follow-up: no real arm; references from the main launch (--references-from)
+simulators: [september]
+sim_arms: [sim_honest]
+simulator_confirmed: true
+max_runs_per_server: 10
+max_real_runs: 60
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+spend:
+  cap_usd: 3806   # 59 runnable cells x $19.6 = $1156 expected + K 25 x $106 (Aswin ~12:06 via 0d: 'ignore spending cap... increase caps'; was $1648)
+  worst_case_limit_usd: 3806   # = cap: the box-side admission bound
+  worst_per_sim_run_usd: 106   # the simulated-honest continuation's value (as +311)
+  prior_per_sim_run_usd: 21.13

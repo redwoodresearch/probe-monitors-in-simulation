@@ -1,0 +1,14 @@
+# F12 (RULE.md Addition 2, 4): d9's mean-pool36 settings (mean_final, the 7 layers, cut, model, revision; as f11_qwen3.yaml) on the
+# F12 arms (sim-attack-fx-fullF9F11F12 176, sim-honest-fx-fullF9F11F12 114) plus 10 as-is reproduction runs copied
+# byte-identically from d9's two mean-pool dumps' inputs, one per shard (stage_f12.py; results/stage_f12_2026-10-14_101631.json).
+# 10 shards (about 0.83M tokens each); chunks of 5 so an early stop loses little.
+run: 2026-10-14_q2_f12_qwen3-32b_l7_v1
+inputs_from: 2026-10-14_q2_f12q_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 10
+chunk_size: 5
+layers: [16, 24, 32, 40, 48, 56, 63]
+mean_final: true

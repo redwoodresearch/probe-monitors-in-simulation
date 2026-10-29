@@ -1,0 +1,32 @@
+{
+ "git": "3b88dbaa6885e104de9de2b2d96c6f83b0800c45",
+ "render record": "ctx_render_2026-10-13_142509.json",
+ "run": "2026-10-13_g3_ctxnc_seed-oss-36b_v1",
+ "meta files by arm": {
+  "real-attack-e1": 939,
+  "real-attack-e2": 939,
+  "real-honest": 990,
+  "sim-attack": 939
+ },
+ "rows by arm": {
+  "real-attack-e1": 22836,
+  "real-attack-e2": 22720,
+  "real-honest": 22969,
+  "sim-attack": 23279
+ },
+ "rows (chunks)": 91804,
+ "non-finite values (every layer, recounted)": 0,
+ "problems": {
+  "chunk without its done marker": 0,
+  "chunk index rows != its transcripts' rows": 0,
+  "layer file with the wrong shape": 0,
+  "rows not 0..n-1": 0,
+  "meta not in its chunk's index": 0,
+  "index entries with no meta": 0,
+  "transcripts by arm != expected": 0,
+  "rows by arm != the render record's": 0
+ },
+ "prefix tokens": 0,
+ "suffix tokens": 200891382,
+ "forward seconds": 38557.1
+}

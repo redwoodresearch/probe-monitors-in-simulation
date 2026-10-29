@@ -1,0 +1,10 @@
+{
+  "families_equal": true,
+  "pw_diagnostic_equal": true,
+  "other_controls_equal": true,
+  "no_stops": true,
+  "n_verdict_114": true,
+  "group_catch_exact": true,
+  "no_non_interval_catch_failure": true,
+  "EQUAL": true
+}

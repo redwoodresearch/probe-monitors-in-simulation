@@ -1,0 +1,15 @@
+{
+ "target": "sp493_c_run2",
+ "suffix": "_try3",
+ "sets": [
+  {
+   "target": "sp493_c_run2",
+   "arm": "attack",
+   "staged_file": "/ev/sp493_c_run2_v1_try3/inputs/attack.jsonl",
+   "staged_sha": "632e9adbfcfeb1f48b2890fd352e72f6d4f3bdb4b2666039e1bd884d0c8577e8",
+   "epochs": 161,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

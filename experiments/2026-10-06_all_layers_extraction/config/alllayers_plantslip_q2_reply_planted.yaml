@@ -1,0 +1,12 @@
+# Planted-slip transfer, q2's pair P4 (#36, Qwen3-32B; ../../2026-10-12_plantslip_transfer/RULE.md, Amendment 1): layer 63
+# (full forward pass), the 32k cut and the reader of #36's dump, for the planted staged by q2_reply_stage.py
+# (results/q2_reply_stage_2026-10-12_135318.json). One orchestrator (--remote --detach); shard retries off.
+run: 2026-10-12_q2_plantslip_reply_planted_qwen3-32b_l63_v1
+inputs_from: 2026-10-12_q2_plantslip_reply_planted_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 12
+chunk_size: 25
+layers: [63]

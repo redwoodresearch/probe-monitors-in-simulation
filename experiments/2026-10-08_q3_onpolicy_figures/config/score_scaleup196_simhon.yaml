@@ -1,0 +1,24 @@
+# The simulated-honest calibration (scoring plan, exploratory follow-up 22:21 PT): the (b) follow-up's config plus the
+# strict rerun's simulated honest runs (simH, September simulator, 20 tasks) as an evaluation-only world; observed draw per call only.
+# The 196-task scoring (plan_scaleup_196_scoring_2026-10-10.md, frozen in #339, with its Amendments 1-3 on
+# aswin/q3-scoring-amendments). Aswin chose option B at about 10:27 PT on 2026-10-10 (orchestrator: "scoring option B
+# for the 196 tasks"); the draw count is the plan's, as amended. One run gives the main comparison (real -> real vs real -> sim) and the
+# real-vs-real control (real -> real vs real -> run2): run 2 is evaluated by the real-trained probe only (Amendment 3).
+# Real run 1: t01-t20 from the 20-task rerun (segment-end re-extraction, which reproduces Figure 3's draw 0 exactly),
+# t21-t196 from the scale-up's canary, launch 2 and top-up. Run 2: the second real attack batch.
+label: scaleup196_simhon
+extractions: [2026-10-09_rerun_strict_segends_v1, 2026-10-10_scaleup_canary_segends_v1, 2026-10-10_scaleup_l2_segends_v1,
+              2026-10-10_scaleup_topup_segends_v1, 2026-10-10_second_attack_segends_v1]
+worlds: {real: attack, sim: sim_attack@september, run2: attack@2026-10-10_second_attack_segends_v1, honA: honest_a, honB: honest_b, simH: sim_honest@september}
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json
+n_layers: 64
+hidden: 5120
+seed: 0
+fitter: primal
+warm_start: true
+x_cache: xcache_scaleup196_simhon
+amendments:
+  primary_simulator: "A46, commit 32666df, PR #258"
+  margin_and_primary_result: "A47, commit 3d2805e; freeze update at PR #259 head 8810192"
+  layer_selection: "A27, adopted in A42"
+  scaleup_scoring: "plan_scaleup_196_scoring_2026-10-10.md (#339), Amendments 1-6 (aswin/scaleup196-scoring)"

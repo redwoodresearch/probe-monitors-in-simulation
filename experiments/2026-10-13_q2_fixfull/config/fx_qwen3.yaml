@@ -1,0 +1,12 @@
+# fix-full (PLAN.md): layers 48 and 63 (as fix939) for every staged variant arm (F1-F8, full) of the simulated attack
+# runs and fix-full of the simulated honest runs, staged by stage_fixfull.py. Same model, revision, dtype, attention and
+# cut as fix939's extraction (alllayers_q3_fix939.yaml); shards spawned once from the local entrypoint (no --detach).
+run: 2026-10-13_fixfull_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-13_q2_fixfull_inputs_v2
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 48
+chunk_size: 25
+layers: [48, 63]

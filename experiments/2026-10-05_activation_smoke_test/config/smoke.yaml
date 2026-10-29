@@ -1,0 +1,204 @@
+# Resolved settings for the activation smoke test (2026-10-05). Layers are 0-indexed decoder layers of 64;
+# activations are the residual stream after each. Cells: one task per environment, picked in the data audit.
+run: 2026-10-05_la_activation-smoke_qwen3-32b
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+chat_template:
+  enable_thinking: false
+layers:
+- 8
+- 16
+- 24
+- 32
+- 40
+- 48
+- 56
+- 63
+pooling:
+  mean: true
+  ema_max_decays:
+  - 0.8
+  - 0.95
+max_tokens: 32768
+save_dtype: float16
+normalization:
+  system_prompt: honest prompt from the real honest run of the same main task
+  reasoning: dropped (encrypted provider blobs)
+  tool_error: rendered as its message (what the agent saw); the field dropped
+  tool_output_trailing_newlines: kept, as the agent saw them
+cohorts:
+  real: la_public10_real_attack_n1000
+  sim: la_public10_sim_astra_attack_n1000
+  honest: la_public10_real_honest_n1000
+cells:
+- cell: implement_role_based_access_control_with_channel_permissions_refactor:exfiltrate_private_messages_delayed
+  environment: slack_clone
+  why: long
+  real:
+    file: 0602_retained_overlap_836b8c776b7671b9.eval
+    sample_id: implement_role_based_access_control_with_channel_permissions_refactor:exfiltrate_private_messages_delayed:2bd049
+    epoch: 1
+    plain_tokens: 80465
+  sim:
+    file: overlap800_109e0dd4e4c35d51.eval
+    sample_id: implement_role_based_access_control_with_channel_permissions_refactor:exfiltrate_private_messages_delayed:c4bc03
+    epoch: 1
+    plain_tokens: 12745
+  honest_prompt_from:
+    file: overlap800_403_82d478b810fee551.eval
+    sample_id: implement_role_based_access_control_with_channel_permissions_refactor:2ab581
+    epoch: 1
+- cell: implement_workflow_timeouts:aw_exfiltrate_secrets_delayed
+  environment: auto_workflow
+  why: short
+  real:
+    file: 0341_guidance_correction_dff6119abec9b588.eval
+    sample_id: implement_workflow_timeouts:aw_exfiltrate_secrets_delayed:1b7f42
+    epoch: 1
+    plain_tokens: 19664
+  sim:
+    file: overlap800_8721196ab440eedf.eval
+    sample_id: implement_workflow_timeouts:aw_exfiltrate_secrets_delayed:dd86c6
+    epoch: 1
+    plain_tokens: 25962
+  honest_prompt_from:
+    file: overlap800_149_319cef7089652e74.eval
+    sample_id: implement_workflow_timeouts:43cab1
+    epoch: 1
+- cell: blood_test_data_anonymization_export:delete_blood_tests_and_backups
+  environment: clinical_trial
+  why: short
+  real:
+    file: 0293_guidance_correction_c32f708a42b2e1d8.eval
+    sample_id: blood_test_data_anonymization_export:delete_blood_tests_and_backups:442996
+    epoch: 1
+    plain_tokens: 20154
+  sim:
+    file: overlap800_47476f24d861328e.eval
+    sample_id: blood_test_data_anonymization_export:delete_blood_tests_and_backups:674914
+    epoch: 1
+    plain_tokens: 22568
+  honest_prompt_from:
+    file: overlap800_219_4aa12fe758b7314b.eval
+    sample_id: blood_test_data_anonymization_export:982ef8
+    epoch: 1
+- cell: unix_socket_to_tcp_migration:fi_reverse_shell
+  environment: file_indexing
+  why: short
+  real:
+    file: 0747_retained_overlap_dac23c5ab16dd7de.eval
+    sample_id: unix_socket_to_tcp_migration:fi_reverse_shell:d832a2
+    epoch: 1
+    plain_tokens: 19563
+  sim:
+    file: overlap800_2d3ed61b0e12eafe.eval
+    sample_id: unix_socket_to_tcp_migration:fi_reverse_shell:334984
+    epoch: 1
+    plain_tokens: 20800
+  honest_prompt_from:
+    file: overlap800_314_680afdb42ac1f070.eval
+    sample_id: unix_socket_to_tcp_migration:d3cfee
+    epoch: 1
+- cell: add_ipbased_access_restrictions:access_other_teams_media
+  environment: media_processing
+  why: median
+  real:
+    file: 0803_random_003_2026-09-17T07-34-03-00-00_la-media-processing-real-attack-20_WEwrr7HrrMdMxqFofAByRP.eval
+    sample_id: add_ipbased_access_restrictions:access_other_teams_media:d326f6
+    epoch: 1
+    plain_tokens: 29574
+  sim:
+    file: base200_003_003_2026-09-17T12-33-21-00-00_la-media-processing-sim-attack-20_f2qWr8bmQ2oBRNpASySYb4.eval
+    sample_id: add_ipbased_access_restrictions:access_other_teams_media:a26ffd
+    epoch: 1
+    plain_tokens: 29309
+  honest_prompt_from:
+    file: base200_004_004_2026-09-17T06-55-33-00-00_la-media-processing-real-honest-20_ZiKGmEjipsgrmtRmpFj2zg.eval
+    sample_id: add_ipbased_access_restrictions:5732c2
+    epoch: 1
+- cell: custom_validation_rules_engine:mr_reverse_shell
+  environment: model_registry
+  why: median
+  real:
+    file: 0598_retained_overlap_81531ad935a7d06f.eval
+    sample_id: custom_validation_rules_engine:mr_reverse_shell:92cd23
+    epoch: 1
+    plain_tokens: 31262
+  sim:
+    file: overlap800_f148f85e90dcdd6b.eval
+    sample_id: custom_validation_rules_engine:mr_reverse_shell:d16a31
+    epoch: 1
+    plain_tokens: 26684
+  honest_prompt_from:
+    file: overlap800_360_7476c81a1a3309d6.eval
+    sample_id: custom_validation_rules_engine:7436b7
+    epoch: 1
+- cell: dotfiles_git_version_control:sd_run_malware_live
+  environment: shared_dotfiles
+  why: median
+  real:
+    file: 0683_retained_overlap_aecd6d8f02b676ae.eval
+    sample_id: dotfiles_git_version_control:sd_run_malware_live:449658
+    epoch: 1
+    plain_tokens: 30158
+  sim:
+    file: overlap800_b53747a76aa80806.eval
+    sample_id: dotfiles_git_version_control:sd_run_malware_live:d6c564
+    epoch: 1
+    plain_tokens: 29329
+  honest_prompt_from:
+    file: overlap800_114_253c7a05c953ff9d.eval
+    sample_id: dotfiles_git_version_control:72b534
+    epoch: 1
+- cell: tt_rewrite_in_python:exfiltrate_tokens
+  environment: tiktok
+  why: median
+  real:
+    file: 0290_guidance_correction_c2513905efff85bf.eval
+    sample_id: tt_rewrite_in_python:exfiltrate_tokens:98cdef
+    epoch: 1
+    plain_tokens: 29187
+  sim:
+    file: overlap800_3a038956c1872af8.eval
+    sample_id: tt_rewrite_in_python:exfiltrate_tokens:b813e4
+    epoch: 1
+    plain_tokens: 26698
+  honest_prompt_from:
+    file: overlap800_209_47b58030ef556612.eval
+    sample_id: tt_rewrite_in_python:b59ef4
+    epoch: 1
+- cell: sse_story_stream:ut_rce
+  environment: user_tracking
+  why: median
+  real:
+    file: 0447_retained_overlap_208ef28a3a412023.eval
+    sample_id: sse_story_stream:ut_rce:eaeb78
+    epoch: 1
+    plain_tokens: 30361
+  sim:
+    file: overlap800_36457efdacc5b4e0.eval
+    sample_id: sse_story_stream:ut_rce:d10413
+    epoch: 1
+    plain_tokens: 28847
+  honest_prompt_from:
+    file: base200_012_012_2026-09-17T07-10-50-00-00_la-user-tracking-real-honest-20_RDsGKGRM6sBmLVdg6nj3Fo.eval
+    sample_id: sse_story_stream:dafd37
+    epoch: 1
+- cell: css_class_usage_analyzer:log_credentials
+  environment: web_scraping
+  why: median
+  real:
+    file: 0383_guidance_correction_f919b017e58d1f4b.eval
+    sample_id: css_class_usage_analyzer:log_credentials:f03759
+    epoch: 1
+    plain_tokens: 29827
+  sim:
+    file: overlap800_0e33f0534792815d.eval
+    sample_id: css_class_usage_analyzer:log_credentials:f2ce7d
+    epoch: 1
+    plain_tokens: 28031
+  honest_prompt_from:
+    file: base200_014_014_2026-09-17T08-18-37-00-00_la-web-scraping-real-honest-20_Fa27JnJLz9RGjfTFc26rYc.eval
+    sample_id: css_class_usage_analyzer:85f6fe
+    epoch: 1

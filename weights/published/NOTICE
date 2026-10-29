@@ -1,0 +1,13 @@
+The probes in this folder read the activations of Qwen/Qwen3.5-27B, and their parameters are derived from that model.
+
+Qwen/Qwen3.5-27B: Copyright Alibaba Cloud (Qwen team). Licensed under the Apache License, Version 2.0. A copy of the license is in
+LICENSE-QWEN-APACHE-2.0.txt (the copy FAR AI ships with the deception probe).
+
+deception_probe/: FAR AI's published probe weights (Hugging Face AlignmentResearch/probe-inference-weights, revision
+08942e47fc0dbebee330d51248c7eaa89cfe540e), converted to safetensors without changing any value. Copyright (c) 2026 FAR AI, Inc.,
+MIT License; see deception_probe/LICENSE.
+
+harmfulness_direction.safetensors, refusal_direction.safetensors, high_stakes_probe.safetensors: built by us; MIT License, as
+the rest of this repository. They were fit on public data that this repository does not include: the prompts of
+andyrdt/refusal_direction (Apache-2.0 repository; according to Arditi et al., harmful prompts from AdvBench, MaliciousInstruct,
+TDC2023 and HarmBench, harmless prompts from Alpaca) and the Hugging Face dataset Arrrlex/models-under-pressure (MIT License).

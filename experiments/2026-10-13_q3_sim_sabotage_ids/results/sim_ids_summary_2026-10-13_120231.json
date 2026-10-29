@@ -1,0 +1,60 @@
+{
+ "written": "2026-10-13_120231",
+ "git": {
+  "commit": "74cbc50a89c2d64c22297d224628ee494a8212a2",
+  "dirty": true
+ },
+ "inputs_sha256": {
+  "runs_phase2_196.csv": "a56dbc133913b05eb57f6d3829fee7ee99ccee97171f6f484994dc0160d30900",
+  "target_labels_v3.csv": "b6f3ebdaa3de1f28b2b6cbdcf8733085bbb6c183d6e2af68854f801a2f45a153",
+  "replay_join_v2.csv": "253f8df1013debb98a757ccdc8e856972aa6d1082772c650fc375e55daa37bf8",
+  "draw0.json": "c2656658baaf3aa150f83f4d105e7572bfd854f98032831621419e1f8e8f36bf",
+  "split_v1.json": "992e6e71793146b4df5f00d7cd98330d4f5e073f0a8379031aebfc172f818e11"
+ },
+ "metas_digests_checked": {
+  "2026-10-09_rerun_strict_segends_v1": "3f86eaf02ae1c0c6ec047099a2f555e2417f2e87ea7af206e03951bd6ee53fb3",
+  "2026-10-10_scaleup_canary_segends_v1": "820ab62ea4ba9f7388fd3a65f4d6560066d162b97fcbb05ec2a0493910ea94c7",
+  "2026-10-10_scaleup_l2_segends_v1": "511a60d045c3d6f9fab66005acee00dba8cabba73877a4ddb7ba925add38c993",
+  "2026-10-10_scaleup_topup_segends_v1": "56d23f7e7b2d6b15d20137b8cda9cd491767b24fce229d5164c1aca9b26a1ac4"
+ },
+ "files": {
+  "sim_calls_all_2026-10-13_120231.csv": {
+   "rows": 2870,
+   "sha256": "13b0a3da826196eb051d9cd82be86e949200e359b19514f71de61423982ab8e2"
+  },
+  "sim_state_changing_ids_2026-10-13_120231.csv": {
+   "rows": 1555,
+   "sha256": "811e16ccbe7e5175b8d0719f9ee227887c838306a3254fc053561983fa400e41"
+  }
+ },
+ "stage1_tasks": 40,
+ "tasks_with_a_simulated_run": 40,
+ "tasks_without_a_simulated_run": [],
+ "simulated_runs_per_task": {
+  "1": 40
+ },
+ "runs": 40,
+ "calls": 2870,
+ "calls_by_state_changing": {
+  "-1": 43,
+  "0": 1272,
+  "1": 1555
+ },
+ "state_changing_by_split": {
+  "held-out": 582,
+  "train": 973
+ },
+ "state_changing_by_tool": {
+  "bash": 1241,
+  "client_bash": 7,
+  "db_bash": 1,
+  "mp_restart": 5,
+  "py_ml_bash": 1,
+  "rust_worker_bash": 3,
+  "text_editor": 297
+ },
+ "state_changing_without_tool": 0,
+ "rule_label_without_monitor_flag": 0,
+ "state_changing_with_call_end_reading": 1555,
+ "calls_whose_label_differs_from_the_call_index_plus_1_join": 0
+}

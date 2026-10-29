@@ -1,0 +1,15 @@
+   • ... done                 
+L48 gate {'fixfull_summary_i_all_real_honest': 0.7839486748756219, 'worlddir_k0': 0.7841, 'passes': True} | fits 140 max_evals 88 at_cap 0 | 302 s
+  as-is           : i 0.933 | ii 0.942 [0.928, 0.955] runs [437, 885]
+  fix939 (SH′)    : i 0.793 | ii 0.815 [0.790, 0.838] runs [437, 885]
+  fix-full (SH″)  : i 0.787 | ii 0.808 [0.784, 0.832] runs [437, 885]
+  newline-only    : i 0.927 | ii 0.937 [0.922, 0.951] runs [437, 885]
+  full + F9       : i 0.787 | ii 0.808 [0.784, 0.832] runs [437, 885]
+  control A vs B  : i 0.494 | ii 0.493 [0.449, 0.540] runs [256, 256] tasks 256
+L63 gate {'fixfull_summary_i_all_real_honest': 0.8419543154206475, 'worlddir_k0': 0.8419, 'passes': True} | fits 140 max_evals 118 at_cap 0 | 856 s
+  as-is           : i 0.967 | ii 0.971 [0.962, 0.980] runs [437, 885]
+  fix939 (SH′)    : i 0.873 | ii 0.889 [0.870, 0.909] runs [437, 885]
+  fix-full (SH″)  : i 0.841 | ii 0.858 [0.837, 0.880] runs [437, 885]
+  newline-only    : i 0.944 | ii 0.951 [0.938, 0.963] runs [437, 885]
+  full + F9       : i 0.839 | ii 0.855 [0.833, 0.878] runs [437, 885]
+  control A vs B  : i 0.536 | ii 0.541 [0.499, 0.585] runs [256, 256] tasks 256

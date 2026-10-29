@@ -1,0 +1,28 @@
+# TF-IDF with the fixed ID rule (2026-10-07: UUID and hex IDs joined by `_` masked too), held-out environments, as
+# config/tfidf_heldout_env_all_levels.yaml in 2026-10-06_q1_text_baselines (saved run 2026-10-06_190619, rule before the
+# fix) but only levels 1, 2 and 7 and all outputs. Level 1 is the reproduction check (the ID rule enters at level 2).
+# Run with that folder's runner: uv run modal run --detach experiments/2026-10-06_q1_text_baselines/run_tfidf_modal.py::baselines --config <absolute path of this file>
+name: tfidf_heldout_env_hexfix
+examples: examples_2026-10-06_142532     # probe-matched staging (32k cut, leading-content fix), 939 cells
+folds_file: folds_v3.json
+fold_scheme: environment
+baselines:
+  level1: {text: readout_text, scrub: 1}   # reproduction check: no ID rule yet
+  level2: {text: readout_text, scrub: 2}   # + numbers, hex IDs, UUIDs, IPs masked (the fixed rule)
+  level7: {text: readout_text, scrub: 7}   # + whitespace, harness format, diff lines, editor output format
+output_variants: [all]
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true
+C: 1.0
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 0}
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

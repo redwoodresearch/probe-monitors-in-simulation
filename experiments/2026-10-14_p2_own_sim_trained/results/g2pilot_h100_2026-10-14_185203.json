@@ -1,0 +1,89 @@
+{
+ "git": "0a252c66496dce2027871e6e591bfcc4c396f621",
+ "stamp (PT)": "2026-10-14_185203",
+ "job": "g2pilot",
+ "device": "h100",
+ "result": {
+  "device": "h100",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "readout": "C",
+  "layer": 16,
+  "load_s": 26.0,
+  "rows": 13538,
+  "runs": 381,
+  "mains": 193,
+  "mixed_class_mains": 188,
+  "single_class_mains": 5,
+  "perms_done": 10,
+  "fits_done": 50,
+  "stopped_at_budget": false,
+  "fit_s_mean": 7.483339999999999,
+  "fit_s_median": 7.868,
+  "fit_s_max": 11.476,
+  "all_certified": true,
+  "selection_counts": {
+   "0": {
+    "1": {
+     "own_frac100_count": 155,
+     "available": 154,
+     "matched": false
+    },
+    "0": {
+     "own_frac100_count": 154,
+     "available": 154,
+     "matched": true
+    }
+   },
+   "1": {
+    "1": {
+     "own_frac100_count": 158,
+     "available": 156,
+     "matched": false
+    },
+    "0": {
+     "own_frac100_count": 155,
+     "available": 155,
+     "matched": true
+    }
+   },
+   "2": {
+    "1": {
+     "own_frac100_count": 155,
+     "available": 154,
+     "matched": false
+    },
+    "0": {
+     "own_frac100_count": 153,
+     "available": 153,
+     "matched": true
+    }
+   },
+   "3": {
+    "1": {
+     "own_frac100_count": 154,
+     "available": 152,
+     "matched": false
+    },
+    "0": {
+     "own_frac100_count": 151,
+     "available": 151,
+     "matched": true
+    }
+   },
+   "4": {
+    "1": {
+     "own_frac100_count": 150,
+     "available": 148,
+     "matched": false
+    },
+    "0": {
+     "own_frac100_count": 147,
+     "available": 147,
+     "matched": true
+    }
+   }
+  },
+  "seconds": 400.4,
+  "label": "TIMING ONLY; scores discarded"
+ }
+}

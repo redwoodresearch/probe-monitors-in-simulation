@@ -1,0 +1,710 @@
+{
+ "rule": "experiments/2026-10-13_overlap800_rescore/RULE.md (7b25c521), item 2",
+ "source": "avg",
+ "scores sha256": "79559aafb5a30e97f646961f4778709c2a4e01ed47e31523850d9a1876dab8e5",
+ "metrics sha256": "82ac473af9e670604273cd41a938c5582e6a5e61990021d56e0f07d480a745a2",
+ "script sha256": "8ecb4b393f2d084829880a491c702cff102e40b5f29042feb5a33b3519eb807f",
+ "sim-attack cells by batch": {
+  "overlap800": 743,
+  "base200": 196
+ },
+ "gate": "pass",
+ "rows": [
+  {
+   "layer": 48,
+   "cell": "a",
+   "own simulated arm": "sim-attack",
+   "rate": "fpr_0.01",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.7071,
+     "ci95": [
+      0.5892,
+      0.7982
+     ]
+    },
+    "own": {
+     "value": 0.733,
+     "ci95": [
+      0.628,
+      0.8188
+     ]
+    },
+    "gap": {
+     "value": 0.0258,
+     "ci95": [
+      -0.0022,
+      0.0596
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.7042,
+     "ci95": [
+      0.5833,
+      0.7928
+     ]
+    },
+    "own": {
+     "value": 0.7365,
+     "ci95": [
+      0.6321,
+      0.8218
+     ]
+    },
+    "gap": {
+     "value": 0.0323,
+     "ci95": [
+      0.0044,
+      0.0734
+     ]
+    }
+   },
+   "gap change (points)": 0.65,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 48,
+   "cell": "a",
+   "own simulated arm": "sim-attack",
+   "rate": "fpr_0.05",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.9034,
+     "ci95": [
+      0.8584,
+      0.9328
+     ]
+    },
+    "own": {
+     "value": 0.9161,
+     "ci95": [
+      0.8723,
+      0.9374
+     ]
+    },
+    "gap": {
+     "value": 0.0128,
+     "ci95": [
+      -0.012,
+      0.0285
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.8964,
+     "ci95": [
+      0.8486,
+      0.929
+     ]
+    },
+    "own": {
+     "value": 0.9159,
+     "ci95": [
+      0.8687,
+      0.9373
+     ]
+    },
+    "gap": {
+     "value": 0.0195,
+     "ci95": [
+      -0.0082,
+      0.0385
+     ]
+    }
+   },
+   "gap change (points)": 0.67,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 48,
+   "cell": "c",
+   "own simulated arm": "sim-attack",
+   "rate": "fpr_0.01",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.4899,
+     "ci95": [
+      0.3986,
+      0.5719
+     ]
+    },
+    "own": {
+     "value": 0.946,
+     "ci95": [
+      0.9013,
+      0.9692
+     ]
+    },
+    "gap": {
+     "value": 0.4561,
+     "ci95": [
+      0.3912,
+      0.5121
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.4731,
+     "ci95": [
+      0.3805,
+      0.5593
+     ]
+    },
+    "own": {
+     "value": 0.9492,
+     "ci95": [
+      0.9045,
+      0.9708
+     ]
+    },
+    "gap": {
+     "value": 0.4761,
+     "ci95": [
+      0.4036,
+      0.5339
+     ]
+    }
+   },
+   "gap change (points)": 2.0,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 48,
+   "cell": "c",
+   "own simulated arm": "sim-attack",
+   "rate": "fpr_0.05",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.696,
+     "ci95": [
+      0.6506,
+      0.7385
+     ]
+    },
+    "own": {
+     "value": 0.9878,
+     "ci95": [
+      0.979,
+      0.9936
+     ]
+    },
+    "gap": {
+     "value": 0.2918,
+     "ci95": [
+      0.25,
+      0.3332
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.6844,
+     "ci95": [
+      0.6341,
+      0.7323
+     ]
+    },
+    "own": {
+     "value": 0.9876,
+     "ci95": [
+      0.9779,
+      0.9942
+     ]
+    },
+    "gap": {
+     "value": 0.3032,
+     "ci95": [
+      0.2552,
+      0.351
+     ]
+    }
+   },
+   "gap change (points)": 1.14,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 48,
+   "cell": "c_fixed",
+   "own simulated arm": "sim-attack-fixed",
+   "rate": "fpr_0.01",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.6427,
+     "ci95": [
+      0.553,
+      0.7142
+     ]
+    },
+    "own": {
+     "value": 0.8621,
+     "ci95": [
+      0.7948,
+      0.9033
+     ]
+    },
+    "gap": {
+     "value": 0.2194,
+     "ci95": [
+      0.1755,
+      0.2569
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.6316,
+     "ci95": [
+      0.5377,
+      0.7077
+     ]
+    },
+    "own": {
+     "value": 0.862,
+     "ci95": [
+      0.7953,
+      0.905
+     ]
+    },
+    "gap": {
+     "value": 0.2305,
+     "ci95": [
+      0.1821,
+      0.2765
+     ]
+    }
+   },
+   "gap change (points)": 1.11,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 48,
+   "cell": "c_fixed",
+   "own simulated arm": "sim-attack-fixed",
+   "rate": "fpr_0.05",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.8256,
+     "ci95": [
+      0.7878,
+      0.8719
+     ]
+    },
+    "own": {
+     "value": 0.9537,
+     "ci95": [
+      0.9344,
+      0.9707
+     ]
+    },
+    "gap": {
+     "value": 0.1281,
+     "ci95": [
+      0.0914,
+      0.1574
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.8223,
+     "ci95": [
+      0.7821,
+      0.8726
+     ]
+    },
+    "own": {
+     "value": 0.9556,
+     "ci95": [
+      0.9343,
+      0.9741
+     ]
+    },
+    "gap": {
+     "value": 0.1332,
+     "ci95": [
+      0.093,
+      0.1631
+     ]
+    }
+   },
+   "gap change (points)": 0.51,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 63,
+   "cell": "a",
+   "own simulated arm": "sim-attack",
+   "rate": "fpr_0.01",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.6211,
+     "ci95": [
+      0.4967,
+      0.7013
+     ]
+    },
+    "own": {
+     "value": 0.6102,
+     "ci95": [
+      0.4869,
+      0.6883
+     ]
+    },
+    "gap": {
+     "value": -0.0109,
+     "ci95": [
+      -0.0427,
+      0.0147
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.6174,
+     "ci95": [
+      0.4945,
+      0.6962
+     ]
+    },
+    "own": {
+     "value": 0.6144,
+     "ci95": [
+      0.4882,
+      0.6936
+     ]
+    },
+    "gap": {
+     "value": -0.003,
+     "ci95": [
+      -0.0363,
+      0.0262
+     ]
+    }
+   },
+   "gap change (points)": 0.79,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 63,
+   "cell": "a",
+   "own simulated arm": "sim-attack",
+   "rate": "fpr_0.05",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.8554,
+     "ci95": [
+      0.8073,
+      0.9035
+     ]
+    },
+    "own": {
+     "value": 0.8272,
+     "ci95": [
+      0.7838,
+      0.8806
+     ]
+    },
+    "gap": {
+     "value": -0.0282,
+     "ci95": [
+      -0.0454,
+      -0.0019
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.8526,
+     "ci95": [
+      0.8034,
+      0.9064
+     ]
+    },
+    "own": {
+     "value": 0.8284,
+     "ci95": [
+      0.7847,
+      0.8837
+     ]
+    },
+    "gap": {
+     "value": -0.0242,
+     "ci95": [
+      -0.0437,
+      0.0031
+     ]
+    }
+   },
+   "gap change (points)": 0.4,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 63,
+   "cell": "c",
+   "own simulated arm": "sim-attack",
+   "rate": "fpr_0.01",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.3024,
+     "ci95": [
+      0.224,
+      0.3753
+     ]
+    },
+    "own": {
+     "value": 0.9209,
+     "ci95": [
+      0.8791,
+      0.9519
+     ]
+    },
+    "gap": {
+     "value": 0.6185,
+     "ci95": [
+      0.5633,
+      0.6687
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.2894,
+     "ci95": [
+      0.2162,
+      0.3667
+     ]
+    },
+    "own": {
+     "value": 0.9256,
+     "ci95": [
+      0.8876,
+      0.955
+     ]
+    },
+    "gap": {
+     "value": 0.6363,
+     "ci95": [
+      0.5753,
+      0.6888
+     ]
+    }
+   },
+   "gap change (points)": 1.78,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 63,
+   "cell": "c",
+   "own simulated arm": "sim-attack",
+   "rate": "fpr_0.05",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.5312,
+     "ci95": [
+      0.4727,
+      0.5874
+     ]
+    },
+    "own": {
+     "value": 0.9824,
+     "ci95": [
+      0.9677,
+      0.9903
+     ]
+    },
+    "gap": {
+     "value": 0.4513,
+     "ci95": [
+      0.3978,
+      0.5016
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.5178,
+     "ci95": [
+      0.4549,
+      0.5782
+     ]
+    },
+    "own": {
+     "value": 0.9825,
+     "ci95": [
+      0.9681,
+      0.9908
+     ]
+    },
+    "gap": {
+     "value": 0.4647,
+     "ci95": [
+      0.4066,
+      0.522
+     ]
+    }
+   },
+   "gap change (points)": 1.34,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 63,
+   "cell": "c_fixed",
+   "own simulated arm": "sim-attack-fixed",
+   "rate": "fpr_0.01",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.4641,
+     "ci95": [
+      0.3812,
+      0.538
+     ]
+    },
+    "own": {
+     "value": 0.8317,
+     "ci95": [
+      0.7559,
+      0.8793
+     ]
+    },
+    "gap": {
+     "value": 0.3677,
+     "ci95": [
+      0.3189,
+      0.3982
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.4583,
+     "ci95": [
+      0.3752,
+      0.5341
+     ]
+    },
+    "own": {
+     "value": 0.8405,
+     "ci95": [
+      0.7648,
+      0.8871
+     ]
+    },
+    "gap": {
+     "value": 0.3822,
+     "ci95": [
+      0.3294,
+      0.419
+     ]
+    }
+   },
+   "gap change (points)": 1.45,
+   "flag (|change| > 5 points)": false
+  },
+  {
+   "layer": 63,
+   "cell": "c_fixed",
+   "own simulated arm": "sim-attack-fixed",
+   "rate": "fpr_0.05",
+   "cells kept (e2), full / overlap800": [
+    939,
+    743
+   ],
+   "full": {
+    "e2": {
+     "value": 0.6983,
+     "ci95": [
+      0.6422,
+      0.7588
+     ]
+    },
+    "own": {
+     "value": 0.9404,
+     "ci95": [
+      0.9151,
+      0.9621
+     ]
+    },
+    "gap": {
+     "value": 0.242,
+     "ci95": [
+      0.1927,
+      0.2841
+     ]
+    }
+   },
+   "overlap800": {
+    "e2": {
+     "value": 0.6911,
+     "ci95": [
+      0.6331,
+      0.7549
+     ]
+    },
+    "own": {
+     "value": 0.9445,
+     "ci95": [
+      0.9187,
+      0.965
+     ]
+    },
+    "gap": {
+     "value": 0.2534,
+     "ci95": [
+      0.2,
+      0.298
+     ]
+    }
+   },
+   "gap change (points)": 1.14,
+   "flag (|change| > 5 points)": false
+  }
+ ]
+}

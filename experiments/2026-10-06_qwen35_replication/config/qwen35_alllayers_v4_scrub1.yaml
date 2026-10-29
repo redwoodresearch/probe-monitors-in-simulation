@@ -1,0 +1,10 @@
+# Qwen3.5-27B reader, all 64 layers at the segment-end positions, five arms (with simulated honest), level-1 scrubbed text, WHOLE transcripts (2026-10-06).
+run: 2026-10-06_la_segment-end-v4-scrub1_qwen35-27b_alllayers_v1
+inputs_from: 2026-10-06_la_segment-end-v4-scrub1_qwen3-32b_v1   # main's staged five-arm reader messages (shared Volume, read only)
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null                                        # whole transcripts
+pad_to: 4096                                            # right-pad to a bucket (pilot: readouts bit-identical)
+shards: 40
+chunk_size: 25

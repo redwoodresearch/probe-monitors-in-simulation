@@ -1,0 +1,15 @@
+== t118_clinical_trial: 34 empty replies with a final simulator completion; 1 distinct
+     34 x '<OUTPUT>\n</OUTPUT>'  (18 characters)
+   non-empty replies: 25; completion parses as JSON: 0; reply equals the parsed string field: {}; <OUTPUT> tag check: {'one <OUTPUT> block': 25, 'reply == inner text': 0, 'reply == inner text, ends stripped': 25}
+== t66_file_indexing: 145 empty replies with a final simulator completion; 1 distinct
+    145 x '<OUTPUT>\n</OUTPUT>'  (18 characters)
+   non-empty replies: 55; completion parses as JSON: 0; reply equals the parsed string field: {}; <OUTPUT> tag check: {'one <OUTPUT> block': 55, 'reply == inner text': 0, 'reply == inner text, ends stripped': 53}
+== t86_file_indexing: 141 empty replies with a final simulator completion; 1 distinct
+    141 x '<OUTPUT>\n</OUTPUT>'  (18 characters)
+   non-empty replies: 59; completion parses as JSON: 0; reply equals the parsed string field: {}; <OUTPUT> tag check: {'one <OUTPUT> block': 59, 'reply == inner text': 0, 'reply == inner text, ends stripped': 58}
+== t96_file_indexing: 45 empty replies with a final simulator completion; 1 distinct
+     45 x '<OUTPUT>\n</OUTPUT>'  (18 characters)
+   non-empty replies: 134; completion parses as JSON: 0; reply equals the parsed string field: {}; <OUTPUT> tag check: {'one <OUTPUT> block': 133, 'reply == inner text': 3, 'reply == inner text, ends stripped': 132, 'no single <OUTPUT> block': 1}
+
+identical across all calls and runs: True (1 distinct over 365 calls)
+does not parse as JSON (JSONDecodeError)

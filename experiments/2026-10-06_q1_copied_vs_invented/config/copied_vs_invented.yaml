@@ -1,0 +1,31 @@
+# Experiment 2 for Q1: split the real-vs-simulated separation by whether each tool output matches the simulator's
+# reference (the real honest run of the same main task it was handed). Every setting, defaults included.
+
+arms: [real-attack-e1, real-attack-e2, sim-attack]
+cohorts:
+  real-attack-e1: la_public10_real_attack_n1000
+  real-attack-e2: la_public10_real_attack_reroll_n1000
+  sim-attack: la_public10_sim_astra_attack_n1000   # the v1 sim run the cohort index cites; never the repaired sets
+
+# Per-output units: baselines-q3's staged table (one row per tool output, the probe's units; `kept` = the output's
+# last content token lies within the first 32,768 tokens). Read only. Built on splits v3 (939 paired cells).
+staged_outputs: ~/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/.run_cache/examples_2026-10-06_130135/outputs.jsonl.gz
+expected_paired_cells: 939
+
+# Raw .eval archives: the viewer session's local copy of the four cohorts (read only); a file missing there is read
+# from S3 (AWS profile redwood-sandbox) instead.
+eval_dir: ~/probe-shift-viewer/.run_cache/viewer/eval
+
+# Matching. Outputs are compared with trailing whitespace stripped.
+near_threshold: 0.9        # rapidfuzz normalized Indel similarity (difflib's ratio); >= this and not exact = "near"
+near_max_chars: 20000      # compare only each text's first 20,000 characters for "near" (speed); exact uses all
+ignore_arg_keys: [timeout] # bash calls differ only in timeout -> same command
+
+# Scores to split (read only): baselines-q3's out-of-fold per-output TF-IDF scores, cleaned text, on v3.
+tfidf_scores: ~/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/results/tfidf_cleaned_scores_2026-10-06_130213.jsonl.gz
+tfidf_baseline: tfidf_cleaned
+tfidf_outputs: all         # the model fit on all outputs (not the no-editor refit)
+
+bootstrap: 1000            # draws over main tasks for 95% intervals
+seed: 0
+n_jobs: 12

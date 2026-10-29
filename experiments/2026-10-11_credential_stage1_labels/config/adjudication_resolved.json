@@ -1,0 +1,18 @@
+{
+  "models": [
+    "openai/gpt-5.4",
+    "google/gemini-3.1-pro-preview"
+  ],
+  "budget_usd": 125,
+  "concurrency": 24,
+  "timeout_seconds": 600,
+  "reasoning_effort": "high",
+  "datasets": [
+    {
+      "kind": "credential_adjudication",
+      "prepared": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/stage1_labels/credential/adjudication",
+      "prompt": "/private/tmp/probe-credential-stage1-pr/experiments/2026-10-11_credential_stage1_labels/config/adjudication_prompt.txt",
+      "max_tokens": 16384
+    }
+  ]
+}

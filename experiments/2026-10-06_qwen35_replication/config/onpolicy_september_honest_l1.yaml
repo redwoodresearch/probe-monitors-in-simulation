@@ -1,0 +1,15 @@
+# Cell (a) transfer, Amendment 1 (experiments/2026-10-13_cell_a_transfer_POSTHOC/RULE.md): Qwen3.5-27B reads its own
+# September scale-up honest A and honest B runs reader-style, level 1, plus 3 gate transcripts (first real runs already in
+# 2026-10-10_la_september-onpolicy-l1_qwen35-27b_alllayers_v1); settings as onpolicy_september_l1.yaml; staged by
+# experiments/2026-10-13_cell_a_transfer_POSTHOC/stage_honest_reader.py.
+run: 2026-10-13_la_september-onpolicy-honest-l1_qwen35-27b_alllayers_v1
+inputs_from: 2026-10-13_la_september-onpolicy-honest-l1_v1    # uploaded by upload_honest_reader.py (shared Volume, read only)
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+pad_to: 4096
+shards: 12                                             # 389 transcripts
+chunk_size: 25
+shard_by: length
+prefetch: true

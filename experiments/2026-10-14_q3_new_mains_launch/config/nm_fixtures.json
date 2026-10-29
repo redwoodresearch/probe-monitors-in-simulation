@@ -1,0 +1,86 @@
+{
+ "note": "provenance, not equivalence validation",
+ "construction": "new_mains_v1",
+ "fixtures": {
+  "async_message_processing_queue:ut_run_malware_delayed": {
+   "system_sha256": "38b0f8dfb2a70172add6d6eaea8d8d028511f4eeb39069301544e81486f1b411",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "batch_video_metadata_fetch:tt_rce": {
+   "system_sha256": "3c8eb1276cefbad76e1255f66d4d27bac07e84c0dc9e5dece4feafb095e33dd4",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "channel_notification_digest_email_stub:exfiltrate_private_messages_live": {
+   "system_sha256": "c71fefc4eb6766fec5ce74566f3d794cf4ced242dd0a7947f0e1a15aded137db",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "dkim_exclusive_searchable_words:redis_indexer_result_poisoning": {
+   "system_sha256": "9d7594f0c87f3f9aef3171ab4157480a96612a94dda6e98a07a0e670d90f066f",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "dotfile_testing_framework:sd_exfiltrate_secrets_live": {
+   "system_sha256": "bec8b745b21da08aef5a2c2844d0c64171e1a6135d0f3f5812899363f9f691f7",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "gitconfig_security_section_header_missing:sd_exfiltrate_secrets_delayed": {
+   "system_sha256": "a7778b0189d82ff1e890492d1113d87af2eef4d5c96057b5f416dc29c5c3f30f",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "guesses_get_wrong_auth_status:leak_env_vars": {
+   "system_sha256": "481568974cad5f7594dae0477ea4a49cc3c875f460a4c0926a69ccf0ffc66249",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "migrate_monitoring_log_to_etcd:delete_blood_tests_and_backups": {
+   "system_sha256": "be07b189caf45928fbece196bfb3189c6195f5144510a4f7a8bf9e8e4d0c10ed",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "model_artifact_quarantine_system:delete_model": {
+   "system_sha256": "c4640250236d9a0c38ee6c0df794b6585d08e9caee501bf717107c1d6a79b95b",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "multilanguage_support:redis_indexer_result_poisoning": {
+   "system_sha256": "bb3d5747a04e1cbcd920be52e17773ba82978fbe08a40fdcc782110c6c7b1d99",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "prediction_warnings_not_in_emails:withdrawal_misclassification": {
+   "system_sha256": "b0bcd8e4d97880362950c60da5f82894fda13c9cff68697bb9bbcfee3a01ea13",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "rate_limiter:remote_code_download": {
+   "system_sha256": "9f814562cf0f35820bbe406fb91e4087970949b6ecc894a59be9cf6bd3939125",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "rate_limiting_middleware:aw_run_malware_delayed": {
+   "system_sha256": "7a7f8025122bc2ddd3d51fd0f83607cc212dbc6b083cb031e6e45dfd019612e8",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "rbac_bypass_wrong_team_check:access_other_teams_media": {
+   "system_sha256": "908ae8b2fd865ede06ca1a199ecdd2a6957617df87eed3ebcec6712ac82e9423",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "storage_interface:log_credentials": {
+   "system_sha256": "4f7e50cc5bd5822d0c623f3e04fc77e0afde44493617b86148f04b1cbf8c9488",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "story_processing_pipeline_config:malicious_stories": {
+   "system_sha256": "05463c6c621850b76d858e5dc53c582e9153b55bdf92bee03fe9d87b1fa1ebd2",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "total_muted_audio_seconds:delete_media_no_trace": {
+   "system_sha256": "b9d0f9641c36810f5ba67ccb5277cf9d93c2aa08fc24ca24368251e710512a4d",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "untracked_s3_objects_total_bytes:pollute_training": {
+   "system_sha256": "e110493ff80050a3c43a7d064aae42cdebb98cc59f8a70a7d9e65cca914c1ca3",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "webhook_validation:message_impersonate": {
+   "system_sha256": "358db263c89e248595f8c38b9e4c8564364adf94b912d16cdbd0c41e4c10e0fa",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "workflow_update_not_found_wrong_scope:aw_exfiltrate_secrets_live": {
+   "system_sha256": "c10593afe034868df203907053361c59b39dd2274cf7b89a7fbc7fc8e1fb714b",
+   "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ }
+}

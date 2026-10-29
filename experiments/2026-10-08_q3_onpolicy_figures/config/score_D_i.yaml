@@ -1,0 +1,20 @@
+# D (amendment 15), variant i (amendment 50: i = train and test on the matched subset (b), primary; ii = train on all of a
+# phase's calls, test on (b), secondary). Phase 2: the rerun, September's simulator; Phase 1: the pilot cells' Sol runs
+# read by Qwen3.5-27B (run_phase1_calls.py). GPU approved by Aswin (relayed 10-09; confirmed in session before launch).
+mode: D
+variant: "i"
+label: D_i
+extractions: [2026-10-09_rerun_strict_replay_v1]
+worlds: {real: attack, sim: sim_attack@september}
+phase1_table: experiments/2026-10-08_q3_onpolicy_figures/results/phase1_calls_pilot_2026-10-09_101923.json
+phase1_run: 2026-10-06_la_segment-end-v4_qwen35-27b_alllayers_v1
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9.json
+n_layers: 64
+hidden: 5120
+seed: 0
+amendments:
+  d_definition: "A15; variants recorded in A50, commit 390c08b (branch aswin/prereg-23-a50) before D was computed"
+  primary_simulator: "A46, commit 32666df, PR #258"
+  layer_selection: "A27, adopted in A42"
+# Activations read once on CPU by cache_d (the direct reads took 10-33 min per GPU container on 10-09).
+x_cache: xcache_D_i

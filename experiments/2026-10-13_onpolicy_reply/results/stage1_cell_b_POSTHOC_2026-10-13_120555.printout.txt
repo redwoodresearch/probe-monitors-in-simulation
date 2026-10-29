@@ -1,0 +1,16 @@
+== b_swapped_L1 (trained on run1; cohort 183; honest A 190, honest B 194; choices [[63, 0.01], [39, 0.01], [63, 1.0], [51, 0.001], [39, 0.001]]) passed: claim C's reply_end reproduced exactly
+  @1% catch run1  96.17 run2  97.27 [ 70.05,100.00] sim  93.44 [ 65.41, 97.84] | FA honest B   1.55 (3/194; calib k/n [1, 190]) | sim-run2  -3.83 [ -8.70,  0.00] | sim-run1  -2.73 [ -7.57,  1.65] | run2-run1   1.09 [ -2.27,  4.89]
+  @5% catch run1  98.36 run2  98.91 [ 97.25,100.00] sim  98.36 [ 95.16,100.00] | FA honest B   4.12 (8/194; calib k/n [9, 190]) | sim-run2  -0.55 [ -3.74,  1.10] | sim-run1   0.00 [ -3.21,  1.67] | run2-run1   0.55 [ -1.14,  2.29]
+  plants @1%: minus_10: detected (shift  -9.84, planted -13.66 [-18.72, -9.78]); plus_10: detected (shift   9.84, planted   6.01 [  1.10, 10.17])
+  null: AUROC 0.9910 vs p95 0.6173 passes True | reading @1%: ['a 10-point gap is ruled out'] {'yardstick_inside_5': True, 'null_passes': True, 'minus_10_detected': True, 'plus_10_detected': True}
+== b_unswapped_L1 (trained on run1; cohort 183; honest A 190, honest B 194; choices [[39, 0.0001], [63, 0.001], [39, 0.0001], [63, 1e-06], [39, 0.0001]]) 
+  @1% catch run1  97.81 run2  97.81 [ 94.76,100.00] sim  96.72 [ 94.35, 99.46] | FA honest B   0.52 (1/194; calib k/n [1, 190]) | sim-run2  -1.09 [ -3.35,  1.69] | sim-run1  -1.09 [ -2.79,  1.66] | run2-run1   0.00 [ -2.81,  3.30]
+  @5% catch run1  98.36 run2 100.00 [ 98.33,100.00] sim  99.45 [ 97.30,100.00] | FA honest B   5.15 (10/194; calib k/n [9, 190]) | sim-run2  -0.55 [ -2.21,  0.55] | sim-run1   1.09 [  0.00,  2.70] | run2-run1   1.64 [  0.00,  3.74]
+  plants @1%: minus_10: detected (shift  -9.84, planted -10.93 [-13.41, -8.11]); plus_10: detected (shift   9.84, planted   8.74 [  6.56, 11.83])
+  null: AUROC 0.9974 vs p95 0.6562 passes True | reading @1%: ['a 10-point gap is ruled out'] {'yardstick_inside_5': True, 'null_passes': True, 'minus_10_detected': True, 'plus_10_detected': True}
+== b_unswapped_L0 (trained on run1; cohort 183; honest A 190, honest B 194; choices [[39, 0.0001], [63, 0.001], [39, 0.0001], [63, 1e-06], [39, 0.0001]]) 
+  @1% catch run1  97.81 run2  97.27 [ 94.09,100.00] sim  96.72 [ 94.35, 99.46] | FA honest B   0.52 (1/194; calib k/n [1, 190]) | sim-run2  -0.55 [ -3.24,  2.22] | sim-run1  -1.09 [ -2.76,  1.65] | run2-run1  -0.55 [ -2.79,  2.69]
+  @5% catch run1  98.91 run2 100.00 [ 98.87,100.00] sim  99.45 [ 97.28,100.00] | FA honest B   5.15 (10/194; calib k/n [9, 190]) | sim-run2  -0.55 [ -2.23,  0.56] | sim-run1   0.55 [ -1.11,  1.67] | run2-run1   1.09 [ -0.55,  2.78]
+  plants @1%: minus_10: detected (shift  -9.84, planted -10.38 [-13.11, -7.57]); plus_10: detected (shift   9.84, planted   9.29 [  6.70, 12.30])
+  null: AUROC 0.9977 vs p95 0.6487 passes True | reading @1%: ['a 10-point gap is ruled out'] {'yardstick_inside_5': True, 'null_passes': True, 'minus_10_detected': True, 'plus_10_detected': True}
+written stage1_cell_b_POSTHOC_2026-10-13_120555.json

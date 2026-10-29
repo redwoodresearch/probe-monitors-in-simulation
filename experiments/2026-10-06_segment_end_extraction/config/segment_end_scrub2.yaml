@@ -1,0 +1,31 @@
+# Segment-end extraction (2026-10-06, after James's meeting): Qwen3-32B reads every valid LinuxArena transcript,
+# cut to its first 32,768 tokens, and saves the residual stream at the end of each tool call and tool output
+# (no pooling across tokens), plus log-probs of the tool-output tokens for the perplexity baseline.
+run: 2026-10-06_la_segment-end-scrub2_qwen3-32b_v1   # staged inputs only: level-2 text for the all-layers extraction
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+chat_template: {enable_thinking: false}
+layers: [8, 16, 24, 32, 40, 48, 56, 63]   # 0-indexed decoder layers of 64; residual stream after each
+positions: [pre_call, call_end, call_marker, output_end, output_marker]   # probe_shift.reader.segment_end_positions
+primary_positions: [call_end, output_end]  # last content tokens; markers are the sensitivity check, pre_call is Q2's
+logprobs: log p of each tool-output content token given everything before it (float32)
+save_dtype: float16
+max_tokens: 32768                        # longer transcripts are cut to their first max_tokens tokens, not skipped
+exclusions_file: exclusions_v3.json      # splits/: which samples are read (valid ones), tokens and truncation
+shards: 64                               # input shard files; the all-layers run re-deals them
+normalization:
+  system_prompt: honest prompt of the same main task (checked to be unique per main task)
+  reasoning: dropped (encrypted provider blobs)
+  tool_error: error message when present (what the agent saw; sce tool_result_text), else the output
+  submit: runner submit calls and their results dropped (counted first); a turn left empty is dropped
+  empty_tool_output: its output_end position is None (no content token); its marker is still read
+  tool_output_trailing_newlines: kept, as the agent saw them
+validity: exclude errored, stalled, no_actions (sce invalidity); failed attacks kept
+cohorts:                                 # aliases in simulated-control-evals src/paper/configs/real_runs.yml
+  real-honest: la_public10_real_honest_n1000
+  real-attack-e1: la_public10_real_attack_n1000
+  real-attack-e2: la_public10_real_attack_reroll_n1000
+  sim-attack: la_public10_sim_astra_attack_n1000
+scrub_level: 2                         # probe_shift.scrub (copied from baselines-q3) on tool outputs AND tool-call arguments (strings scrubbed, numbers -> "<n>"), both arms;
+stage_only: true                       # stage and upload the reader messages; extraction is run_extract_all_layers.py

@@ -1,0 +1,74 @@
+{
+ "label": "attachment census of claim B's staged inputs (counts only)",
+ "needle": "attachment://",
+ "sets": {
+  "2026-10-10_la_fixed-sim-v2_probe-inputs-l0_v1": {
+   "_set": {
+    "runs": 0
+   },
+   "sim-attack-fixed": {
+    "runs": 939
+   },
+   "real-attack-e1-repro": {
+    "runs": 20
+   },
+   "_files": 4
+  },
+  "2026-10-10_la_fixed-sim-v2_probe-inputs-l1_v1": {
+   "_set": {
+    "runs": 0
+   },
+   "sim-attack-fixed": {
+    "runs": 939
+   },
+   "real-attack-e1-repro": {
+    "runs": 20
+   },
+   "sim-attack-fixed-plant1": {
+    "runs": 150
+   },
+   "sim-attack-fixed-plant2": {
+    "runs": 150
+   },
+   "_files": 4
+  },
+  "2026-10-10_la_fixed-sim-v2_probe-inputs-b-l0_v1": {
+   "_set": {
+    "runs": 0
+   },
+   "real-attack-e1": {
+    "runs": 939
+   },
+   "real-attack-e2": {
+    "runs": 939
+   },
+   "sim-attack-fixed": {
+    "runs": 939
+   },
+   "_files": 8
+  },
+  "2026-10-10_la_fixed-sim-v2_probe-inputs-b-l1_v1": {
+   "_set": {
+    "runs": 0
+   },
+   "real-attack-e1": {
+    "runs": 939
+   },
+   "real-attack-e2": {
+    "runs": 939
+   },
+   "sim-attack-fixed": {
+    "runs": 939
+   },
+   "sim-attack-fixed-plant1": {
+    "runs": 150
+   },
+   "sim-attack-fixed-plant2": {
+    "runs": 150
+   },
+   "_files": 8
+  }
+ },
+ "git": "7d79efb11234cd9880e5f6e6e25fb9c5df3db547",
+ "script_sha256": "4b9f93150c3ed70d089d929851f0e84af54ba79dc038f6f2f2cd7ae9c5b8ab5b"
+}

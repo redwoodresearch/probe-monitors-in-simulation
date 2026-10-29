@@ -1,0 +1,11 @@
+# Overnight chain: il311_q2c_run3 staged by stage_chain.py (record chain_stage_il311_q2c_run3_2026-10-15_092546.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: il311_q2c_run3_extract_v1
+inputs: il311_q2c_run3_v1
+inputs_sha256:
+  attack.jsonl: 5baa6c384d82012f1186273f65836a42986f8517ffe4a2698b2974d0630d8634
+  repro-c.jsonl: 43080a99d91d3651960551f3cd45f0107653ff91222b90789630f3d1beea2c76
+model: Qwen/Qwen3.5-27B
+shards: 6
+chunk_size: 8
+pad_to: 4096

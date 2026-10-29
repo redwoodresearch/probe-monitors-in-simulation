@@ -1,0 +1,34 @@
+# Label-shuffle null (20 draws) for tfidf_heldout_env_pooled_all_levels at levels 0, 5 and 7: the project's null for this design's training
+# population (the attack-design nulls don't cover it). Same staging, cells, arms and folds as tfidf_heldout_env_pooled_all_levels.
+# Pooled design, every level 0-7, held-out environments: real (attack e1 + first real honest run) vs simulated
+# (attack + honest), one model trained on both cell types; attack e2 and the second real honest run are scored by the
+# same model, never trained on. Rows keep their own arm labels. Slices attack_cells and honest_cells.
+name: tfidf_heldout_env_pooled_null
+examples: examples_2026-10-06_215752     # attack (examples_2026-10-06_142532) + honest (examples_2026-10-06_213745), merged
+cells_file: config/pooled_cells_2026-10-06.json   # 939 attack cells + 437 honest cells
+folds_file: folds_v3.json
+fold_scheme: environment
+arms: {real: [real-attack-e1, real-honest], sim: [sim-attack, sim-honest], also_scored: [real-attack-e2, real-honest-2]}
+slices:
+  attack_cells: {cells_file: config/paired_cells_v3.json}
+  honest_cells: {cells_file: config/paired_honest_cells_2026-10-06_213745.json}
+baselines:
+  level0: {text: readout_text, scrub: 0}   # cleaned text as the probe reads it
+  level5: {text: readout_text, scrub: 5}   # + diff lines canonicalized
+  level7: {text: readout_text, scrub: 7}   # + editor output format canonicalized
+output_variants: [all]                   # the null is drawn for real_vs_sim, all outputs
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true
+C: 1.0
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 20}                # one flip per main task per draw (all its cells), refit on the same folds
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

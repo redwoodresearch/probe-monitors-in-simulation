@@ -1,0 +1,24 @@
+# Q1 on segment-end features (2026-10-06, after James's meeting): can a linear probe on Qwen3-32B activations tell
+# real LinuxArena attack runs from simulated ones?
+extraction_run: 2026-10-06_la_segment-end-scrub7_qwen3-32b_alllayers_v1   # every layer, level-7 scrubbed text
+folds_file: folds_v2.json          # main-task folds, shared by every track (folds_v3.json is identical)
+exclusions_file: exclusions_v3.json  # paired cells: valid in all three attack arms; sim_reference; under-32k pairing
+layers: all                        # 0-63
+positions: [output_end, call_end]  # separately trained probes: last content token of each tool output / each tool call
+sensitivity_positions: [output_marker, call_marker]   # template markers: the end-of-sequence-style check
+C: 0.01                            # L2 logistic regression on standardized features, as in the pooled pilot
+max_iter: 2000
+bootstrap: 1000                    # resamples of main tasks for 95% intervals
+shuffle_null: 100                  # refits; per main task, real and sim labels swap with probability 1/2
+random_directions: 1000            # baseline: best of this many random unit directions, picked on the training folds
+position_bands: [[0, 8192], [8192, 16384], [16384, 32768]]
+seed: 0
+n_jobs: 32
+headline_tolerance: 0.01               # headline layer: earliest within this of the best inner-CV AUROC (training folds only)
+meta_dir: meta                     # all-layers runs keep transcript metadata under meta/
+by_layer: true                     # and activations in by_layer/L<l>/ chunk files
+# Frozen protocol for the level-7 re-read: protocol_level7.md (written before any level-7 result).
+lite: false                        # inner CV for the headline layer, random directions, marker sensitivity
+inner_cv_environment: true         # headline for held-out environments (primary split): inner CV over training environments
+call_content_only: true            # call_end: drop calls whose read token is a fixed slot (timeout's final 0, escaped n)
+variants: [all_outputs, no_editor_outputs]   # primary: all outputs; no editor alongside

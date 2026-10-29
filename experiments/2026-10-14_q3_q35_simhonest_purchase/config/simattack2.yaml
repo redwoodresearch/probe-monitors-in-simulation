@@ -1,0 +1,21 @@
+# Purchase A, the second simulated attack epoch (20 tasks; keys config/a_keys.txt), ONE launch (RULE.md amendment 7), started with --references-from ~/phase2/runs/2026-10-14_simh_refs_merged (each
+# task's honest_a reference, verbatim from the launch that holds it; make_merged_refs.py). Same harness and settings as the
+# September scale-up (config/pilot_september_scaleup.yaml @ bbf0729) except: the only arm is sim_attack@september (no real arms;
+# each run forks at 0 from the task's existing honest_a) and the spend guard below. The guard plans simulator spend and
+# blocks NEW tasks only; worst_case_limit = cap + concurrency x worst, so it never throttles; the all-in hard stop is
+# allin_stop.sh. Copied into the frozen harness's config/ on the devbox.
+tasks: config/pilot_tasks_amendment9_scaleup176.json
+real_simulator: september
+simulators: [september]
+real_arms: []
+sim_arms: [sim_attack]
+simulator_confirmed: true
+max_runs_per_server: 10   # 2 servers
+max_real_runs: 24         # no real runs in this launch; as in the scale-up's canary
+reference_tries: 3        # unused: references are pinned
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+spend:
+  cap_usd: 340   # 320 + 20 summed; 20 x $16.48 = $329.60 fits
+  worst_case_limit_usd: 1140   # cap + 20 x 40
+  worst_per_sim_run_usd: 40
+  prior_per_sim_run_usd: 16.48

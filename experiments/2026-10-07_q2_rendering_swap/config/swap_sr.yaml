@@ -1,0 +1,19 @@
+# str_replace tell swap (2026-10-08; Aswin's overnight <= $5 mandate via the orchestrator, hard cap $5). The same 100
+# runs; only successful str_replace diffs change (str_replace_tells.py). V1 (as simulated) comes from the reference
+# all-layer run; frozen probes, readouts and layers as in swap_note_v5.yaml.
+n_runs: 100
+seed: 0
+inputs_from: 2026-10-06_la_segment-end_qwen3-32b_v1
+staged_run: 2026-10-08_q2_swap_sr_inputs_v1
+include_original: false
+variants:
+  sim-attack-sr-gutter: sr_gutter                    # (i) today's simulator: numbered gutter, trailing newline kept
+  sim-attack-sr-nonewline: sr_no_newline             # (ii) trailing newline stripped only
+  sim-attack-sr-both: sr_gutter_no_newline           # (iii) both: the real format
+extraction_run: 2026-10-08_q2_swap_sr_qwen3-32b_l9-17_v1   # ../2026-10-06_all_layers_extraction/config/alllayers_q2_swap_sr.yaml
+reference_extraction_run: 2026-10-07_q2_swap_qwen3-32b_alllayers_v1
+features_run: 2026-10-06_q2_features_eb014307fd1aab31_as_labeled
+weights_out_sub: level0_weights
+train_set: real-attack-e1
+layers: [9, 16, 17]
+positions: [pre_call, call_end, prev_content]

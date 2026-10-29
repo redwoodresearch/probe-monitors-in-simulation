@@ -1,0 +1,24 @@
+{
+ "stamp": "2026-10-06_133716",
+ "git": "2aa39eb5d1ee8f6dd9400d3066b25e28ef146f64",
+ "staged_outputs": "~/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/.run_cache/examples_2026-10-06_130135/outputs.jsonl.gz",
+ "edit_marker": "has been edited. Here's a diff",
+ "gutter_regex": "\\n\\s*\\d+\\|",
+ "per_arm": {
+  "real-attack-e1": {
+   "edit_outputs": 5476,
+   "with_gutter": 5476,
+   "share": 1.0
+  },
+  "real-attack-e2": {
+   "edit_outputs": 5362,
+   "with_gutter": 5362,
+   "share": 1.0
+  },
+  "sim-attack": {
+   "edit_outputs": 6623,
+   "with_gutter": 503,
+   "share": 0.0759
+  }
+ }
+}

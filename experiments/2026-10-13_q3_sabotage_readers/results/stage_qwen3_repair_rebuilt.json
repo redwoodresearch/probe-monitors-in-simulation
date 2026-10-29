@@ -1,0 +1,20 @@
+{
+ "reader": "qwen3",
+ "rebuilt_from_volume": true,
+ "counters": "missing (the staging client lost its connection)",
+ "gate": 0,
+ "limit": 0,
+ "repair": "B2 fix-full minus F7 (repair_b2.py)",
+ "staged_dir": "/v/sabreaders_qwen3_repair_v1",
+ "staged_inputs_sha256": {
+  "sim.jsonl": "df5776f9b5bcaf50240369f92351087511aa359c2d7b8bd2b1132c1987b04cdd"
+ },
+ "summary": {
+  "sim": {
+   "runs staged": 156,
+   "rows": 10541,
+   "rows read": 6847,
+   "forward tokens": 4545622
+  }
+ }
+}

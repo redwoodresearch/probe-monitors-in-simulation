@@ -1,0 +1,11 @@
+--- gate_settings.py
++++ gate_settings.py
+@@ -45,7 +45,7 @@
+ 
+ 
+ def tmux(*a: str) -> int:
+-    return subprocess.run(["tmux", "-L", "phase2", *a]).returncode
++    return subprocess.run(["tmux", "-L", "nm", *a]).returncode
+ 
+ 
+ def stop(session: str, run: Path) -> None:

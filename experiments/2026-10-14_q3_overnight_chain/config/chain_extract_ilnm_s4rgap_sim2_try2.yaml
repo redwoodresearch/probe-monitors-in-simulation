@@ -1,0 +1,11 @@
+# Overnight chain: ilnm_s4rgap_sim2_try2 staged by stage_chain.py (record chain_stage_ilnm_s4rgap_sim2_try2_2026-10-16_000214.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: ilnm_s4rgap_sim2_extract_v1_try2
+inputs: ilnm_s4rgap_sim2_v1_try2
+inputs_sha256:
+  repro-c.jsonl: 0298552fa9dea52b8bd4a118834cd2f5386e762e04863aac5c7b8e60f3e3f17f
+  sim_attack@september.jsonl: 258641e366dc8a97e701323ff0b51e43c465234e88a35aa639415953993e5771
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 8
+pad_to: 4096

@@ -1,0 +1,23 @@
+# PAIRED RATE-LIMIT RERUN q4 (Append 35 B): from pilot_il_q4_all.yaml with only tasks and caps changed.
+# INTERLEAVED +311 launch (one per box) q4_all (experiments/2026-10-15_q3_interleaved_run3_sim2/RULE.md): per cell one real attack (run3)
+# and one simulated attack (sim2), one launch, same servers. From experiments/2026-10-14_q3_scaleup_311/config/pilot_311_fu_q4_iii.yaml @ e0dec1714025.
+# FOLLOW-UP (simulated-only) launch, variant (iii), RULE.md Amendment 7. Derived from pilot_311_q4.yaml.
+# Scale-up +311, quarter Q4 (experiments/2026-10-14_q3_scaleup_311/RULE.md; Aswin via 0d: "i approve scale up, just run things
+# and get me results quickly, ensure correctness and speed"). The canary's launch A config (pilot_canary_a.yaml) on this
+# box's cells: per cell honest_a (real; the fork source), attack and honest_b (real) and sim_attack@september; plus each
+# cell's `<key>_r2` entry (real_arms [attack]): its second real attack, in this same launch (scaleup_r2_arms.patch).
+tasks: config/tasks_ilrr_q4.json   # rate-limit rerun: 11 original cells
+real_simulator: september
+real_arms: [attack]   # run3; honest_a from --references-from <the main's run dir>
+simulators: [september]
+sim_arms: [sim_attack]
+simulator_confirmed: true
+max_runs_per_server: 10   # 8 servers (servers_september_scaleup.yaml): 80 runs at once (6 servers: 60)
+max_real_runs: 60         # the 64-vCPU box's cap, as the canary and the real-honest launch
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json   # tag form for every task, as launch 2 and the canary
+spend:
+  cap_usd: 225   # 11 cells x $20.5
+  worst_case_limit_usd: 225   # = cap
+  worst_per_sim_run_usd: 75   # variant (iii): 0d
+  prior_per_sim_run_usd: 16.48

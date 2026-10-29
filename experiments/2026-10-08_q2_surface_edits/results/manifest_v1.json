@@ -1,0 +1,7 @@
+{
+ "bucket": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06",
+ "prefix": "experiments/2026-10-08_q2_surface_edits/",
+ "files": {
+  "results/tell_counts_2026-10-08_143522.json": "a0ff24f003e87b9882326069c9401f6795f591f0373392625809acba97a8eff8"
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "written": "2026-10-13_122622",
+ "git": {
+  "commit": "84dcac83a6e803da72426b07989cf700619a82ae",
+  "dirty": true
+ },
+ "inputs_sha256": {
+  "runs_phase2_196.csv": "a56dbc133913b05eb57f6d3829fee7ee99ccee97171f6f484994dc0160d30900",
+  "target_labels_v3.csv": "b6f3ebdaa3de1f28b2b6cbdcf8733085bbb6c183d6e2af68854f801a2f45a153",
+  "replay_join_v2.csv": "253f8df1013debb98a757ccdc8e856972aa6d1082772c650fc375e55daa37bf8",
+  "draw0.json": "c2656658baaf3aa150f83f4d105e7572bfd854f98032831621419e1f8e8f36bf",
+  "split_v1.json": "992e6e71793146b4df5f00d7cd98330d4f5e073f0a8379031aebfc172f818e11"
+ },
+ "worlds": [
+  "real",
+  "run2"
+ ],
+ "metas_digests": {
+  "2026-10-09_rerun_strict_segends_v1": "3f86eaf02ae1c0c6ec047099a2f555e2417f2e87ea7af206e03951bd6ee53fb3",
+  "2026-10-10_scaleup_canary_segends_v1": "820ab62ea4ba9f7388fd3a65f4d6560066d162b97fcbb05ec2a0493910ea94c7",
+  "2026-10-10_scaleup_l2_segends_v1": "511a60d045c3d6f9fab66005acee00dba8cabba73877a4ddb7ba925add38c993",
+  "2026-10-10_scaleup_topup_segends_v1": "56d23f7e7b2d6b15d20137b8cda9cd491767b24fce229d5164c1aca9b26a1ac4",
+  "2026-10-10_second_attack_segends_v1": "0ff82d957863639858e23d25d97a55b2dd39f0de4663291da64d46ff10bf25c3"
+ },
+ "digests_checked_against_check_calibration": [
+  "2026-10-09_rerun_strict_segends_v1",
+  "2026-10-10_scaleup_canary_segends_v1",
+  "2026-10-10_scaleup_l2_segends_v1",
+  "2026-10-10_scaleup_topup_segends_v1"
+ ],
+ "files": {
+  "real_run2_calls_all_2026-10-13_122622.csv": {
+   "rows": 5499,
+   "sha256": "392eff0ed547fb18b62a08bb9cd8945d5206c0a281672780affd40825acf4a1a"
+  },
+  "real_run2_state_changing_ids_2026-10-13_122622.csv": {
+   "rows": 3054,
+   "sha256": "cc6a43206541a9d033aad942fa82386957ae52c317830e9fb474e39fac6ba130"
+  }
+ },
+ "stage1_tasks": 40,
+ "tasks_without_a_run": {
+  "real": [],
+  "run2": []
+ },
+ "runs_per_task": {
+  "real": {
+   "1": 40
+  },
+  "run2": {
+   "1": 40
+  }
+ },
+ "runs": 80,
+ "runs_by_world": {
+  "real": 40,
+  "run2": 40
+ },
+ "calls": 5499,
+ "calls_by_world": {
+  "real": 2696,
+  "run2": 2803
+ },
+ "calls_by_state_changing": {
+  "-1": 108,
+  "0": 2337,
+  "1": 3054
+ },
+ "state_changing_by_world_split": {
+  "real": {
+   "held-out": 548,
+   "train": 877
+  },
+  "run2": {
+   "held-out": 470,
+   "train": 1159
+  }
+ },
+ "state_changing_by_split": {
+  "held-out": 1018,
+  "train": 2036
+ },
+ "state_changing_by_tool": {
+  "bash": 2367,
+  "client_bash": 26,
+  "db_bash": 7,
+  "mp_restart": 3,
+  "nginx_bash": 1,
+  "py_ml_bash": 4,
+  "rust_worker_bash": 12,
+  "text_editor": 634
+ },
+ "state_changing_without_tool": 0,
+ "rule_label_without_monitor_flag": 0,
+ "state_changing_with_call_end_reading": 3054,
+ "calls_whose_label_differs_from_the_call_index_plus_1_join": 12
+}

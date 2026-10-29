@@ -1,0 +1,16 @@
+{
+ "status": "starting",
+ "mode": "ephemeral",
+ "stand_in": true,
+ "servers": [
+  {
+   "name": "probe-shift_aswin-surya_sub-phase2_srv3548cfa_kill-2026-11-06",
+   "mode": "ephemeral",
+   "launch_log": "experiments/2026-10-07_phase2_attack_check/results/server_launch_probe-shift_aswin-surya_sub-phase2_srv3548cfa_kill-2026-11-06.log"
+  },
+  {
+   "name": "probe-shift_aswin-surya_sub-phase2_srv3548cfb_kill-2026-11-06",
+   "mode": "ephemeral"
+  }
+ ]
+}

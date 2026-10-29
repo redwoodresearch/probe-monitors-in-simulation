@@ -1,0 +1,42 @@
+{
+ "label": "k = 1 simulator ledger (numbers only)",
+ "calls": 400,
+ "sites": 400,
+ "starts": 400,
+ "statuses": {
+  "ok": 400
+ },
+ "spent_usd": 220.4703,
+ "mean_usd": 0.5511757500000001,
+ "max_usd": 1.1647,
+ "models": [
+  "openai/gpt-5.6-terra",
+  "openai/gpt-6-astra"
+ ],
+ "substitutions": {
+  "fallback_substitutions": 0,
+  "refusal_substitutions": 0,
+  "block_substitutions": 0,
+  "net_substitutions": 0
+ },
+ "trusted_prefix": 0,
+ "builds": 1,
+ "build": {
+  "codebase_sha256": {
+   "clinical_trial": "de1f0ed5f80930499d2003d8d427d3c6706829f920618903f2c19d45a46546cf",
+   "media_processing": "392f2d6a51ed74f4dc847699cd913367d751dce39ae4c688cf57a482d1183256",
+   "shared_dotfiles": "f718a1449aaf533e5eca9802a41c09bf81bf3f6af978ebd62fc92f515b8e141e",
+   "tiktok": "926484f0e77b5c91947fe37af65d69926b6d2d3b26ff2d6b453459a46560cee0",
+   "user_tracking": "f736e55eb15062825beac7685450361c28590aaa2a2b85edb2085a9089398056"
+  },
+  "oct7_script_sha256": "e81a82812577536ae0022fddd0a683f81cb876232251b4cdfedce01b08ed3639",
+  "script_sha256": "bcf20f14518f3181f180e4246d8cca0375ae76a38290eb87b2d3f7896c8ae5d2",
+  "sims_commit": "ba990399bfbd71aebf7636c04252d22c05720156",
+  "sims_lock_sha256": "be7019a31c693fcf49e6a853d0783b2595b1160ecc68f3f01dd5de80ead206c2",
+  "sims_src_diff_sha256": "7d2b6021d1301cc1b084441905bae9592d74cae2c201d808c322ae1763702db4",
+  "simulator_model": "openai/gpt-6-astra"
+ },
+ "results_sha256": "4a24425e9a2b049fded62bb15a707db9a7c4dc823d36ea8a75876522488873f9",
+ "git": "09d864504eb55a5746cceb2edaefbecead74f4b3",
+ "script_sha256": "454a684a33abd6dbfe40226cf7ac1961b9ba80d154cbbad2f9a4d3676dc1003e"
+}

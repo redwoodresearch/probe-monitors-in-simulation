@@ -1,0 +1,12 @@
+# All 64 layers at the segment-end positions, level-7 scrubbed text (baselines-q3's level 7): editor diffs and `cat -n`
+# snippets reduced to plain code in both arms, so insert outputs no longer differ in format. Not normalized: undo_edit's
+# "Last edit to ... undone successfully" line and the file content the real tool shows after it (simulated undo_edit
+# outputs are often a bare success line).
+run: 2026-10-06_la_segment-end-scrub7_qwen3-32b_alllayers_v1
+inputs_from: 2026-10-06_la_segment-end-scrub7_qwen3-32b_v1   # staged only (segment_end_scrub7.yaml)
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 64                                              # speed over cost
+chunk_size: 25                                          # transcripts per per-layer chunk file

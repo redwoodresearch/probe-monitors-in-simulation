@@ -1,0 +1,359 @@
+{
+ "schema": "inputs_full/v1",
+ "status": "TEST 2026-10-16 04:51 PDT",
+ "test": true,
+ "built_pt": "2026-10-16 04:51:49 PDT",
+ "rules": {
+  "lead": "09 RULE @ 129b7c4f1 (lead \u00a71, \u00a73)",
+  "freeze": "09 RULE @ cfd94c2e9 (lead \u00a74)",
+  "waitlist": "09 RULE @ 07ad588be",
+  "classes": "09 RULE \u00a77(iv) (canonical earliest root cause)",
+  "estimator": "09 RULE @ 3aaf425ef (width-only adopt rule)",
+  "cohort": "no-filter (09 @ 01012e87e)",
+  "pools": "0d: the 32k headline's pools, extracted uncut; no epoch-1 fallback (09 withdrew it)"
+ },
+ "pins_file": {
+  "path": "config/inputs_full_pins_TEST.json",
+  "sha256": "fb1e786dc4f5c882230e6f3a14906c3fdb422e3eb1061e6e6037e7e9f43ba74e"
+ },
+ "lead_readout": "C",
+ "scope": {
+  "registered_labels": [
+   "Sol (a)",
+   "FIBS",
+   "harmfulness",
+   "refusal",
+   "high-stakes",
+   "own_all_rs_L48",
+   "own_all_rs25_L48",
+   "own_all_rs10_L48",
+   "c_asis",
+   "own_frac10_L48",
+   "own_frac25_L48",
+   "own_frac100_L48"
+  ],
+  "retrains": {
+   "sol_a_uncut": "Sol (a)",
+   "own_all_rs_uncut_L48": "own_all_rs_L48",
+   "own_all_rs25_uncut_L48": "own_all_rs25_L48",
+   "own_all_rs10_uncut_L48": "own_all_rs10_L48",
+   "c_asis_uncut": "c_asis",
+   "sol_a_uncut_pinned": "Sol (a)"
+  },
+  "headline_six": [
+   "sol_a_uncut",
+   "FIBS|uncut",
+   "harmfulness|uncut",
+   "refusal|uncut",
+   "high-stakes|uncut",
+   "own_all_rs_uncut_L48"
+  ],
+  "labels": {
+   "Sol (a)|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_all_rs_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_all_rs25_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_all_rs10_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "c_asis|uncut": "registered c_asis scored on full transcripts; appendix positive control, never in S or a co-headline group",
+   "own_frac10_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_frac25_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_frac100_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "FIBS|uncut": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+   "harmfulness|uncut": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+   "refusal|uncut": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+   "high-stakes|uncut": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+   "sol_a_uncut": "whole-transcript retrain (uncut) of Sol (a)",
+   "own_all_rs_uncut_L48": "whole-transcript retrain (uncut) of own_all_rs_L48",
+   "own_all_rs25_uncut_L48": "whole-transcript retrain (uncut) of own_all_rs25_L48",
+   "own_all_rs10_uncut_L48": "whole-transcript retrain (uncut) of own_all_rs10_L48",
+   "c_asis_uncut": "whole-transcript retrain (uncut) of c_asis; appendix positive control, never in S or a co-headline group",
+   "sol_a_uncut_pinned": "sol_a_uncut with layers pinned to the 32k fit (09 @ 2d61af835); outside every group (sol_a_uncut is the primary)"
+  },
+  "auroc_subset": {
+   "membership": "09 @ 19ba8f563: Sol (a), FIBS, harmfulness, own_all_rs",
+   "inherit": {
+    "sol_a_uncut": "Sol (a)",
+    "own_all_rs_uncut_L48": "own_all_L48"
+   }
+  }
+ },
+ "base": {
+  "commit": "a6bde80a2",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/INPUTS_FINAL_V2_FROZEN_2026-10-16_044120.json",
+  "sha256": "0e065958b206dbceba8afeb3332ec68b898481da520fe3a3654ab2b6913eaadd"
+ },
+ "overrides": {
+  "S_new|R": {
+   "commit": "2adc561d5",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new_R_2026-10-16_041002_gated.json",
+   "sha256": "fe8102b38f86f22edd1843eaca39a7bc73006e01f17490c029a85af877142478"
+  },
+  "S_new|C": {
+   "commit": "4842c8473",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new_C_2026-10-16_041630_gated.json",
+   "sha256": "96d1ff482ae1cd7af804f50e9f0241dfcd5b95b7200b88d64ccc4c4518fe9306"
+  },
+  "S_old|R": {
+   "commit": "bb33b808e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_old_R_2026-10-16_044046_gated.json",
+   "sha256": "d0a318de22a65c530a6a1a0467525bd8f3322a2be7e963f9efa8c1fc618d6dcb"
+  },
+  "S_old|C": {
+   "commit": "bb33b808e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_old_C_2026-10-16_044258_gated.json",
+   "sha256": "4f960119d5580932a891815e354826cf83aac366f9d54003987ab95f6d2eeb3e"
+  },
+  "S_newmains|R": {
+   "commit": "218ca6f5a",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_newmains_R_2026-10-16_040710_gated.json",
+   "sha256": "47f8981fbe5fe47d2d3c7d748e3164c2f5c1f19c6e52f0907c3eaa00c1b988c7"
+  },
+  "S_newmains|C": {
+   "commit": "218ca6f5a",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_newmains_C_2026-10-16_041134_gated.json",
+   "sha256": "e5d372c85b95db3aef58372b4abfca6bafd2fb45efbe5df0de48f2c2d81d4bf2"
+  },
+  "S_paper493|R": {
+   "commit": "fb415e111",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_paper493_R_2026-10-16_043214_gated.json",
+   "sha256": "25a9e5a3231da8a303b9382d7023e9a2e42e64472d59cffacaffd75ae24eb1eb"
+  },
+  "S_paper493|C": {
+   "commit": "fb415e111",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_paper493_C_2026-10-16_043658_gated.json",
+   "sha256": "e7fdf1cb0c3272dbde2112b3501363999f1e1d46d9c138c556be7ae50a6781f5"
+  },
+  "pools_ep2|R": {
+   "commit": "9c904371e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_pools_ep2_R_2026-10-16_044029.json",
+   "sha256": "71ea97faeb4015e975bde24e1220333aee768f619e2f52dd86ce7653f9cf2b0d"
+  },
+  "pools_ep2|C": {
+   "commit": "9c904371e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_pools_ep2_C_2026-10-16_044157.json",
+   "sha256": "36b463705ce0d7141919e7f850269f7c259802784a6ad90935ef29d3c01218af"
+  },
+  "S_new+25f|R": {
+   "commit": "9c904371e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new25f_R_2026-10-16_044054.json",
+   "sha256": "3c99242e2ebc5697c4db1e695fe95a12c1004a9c88be54cb7fdfcdf21f58977f"
+  },
+  "S_new+25f|C": {
+   "commit": "9c904371e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new25f_C_2026-10-16_044232.json",
+   "sha256": "4cf07599737a3da63014fd1437ea0e7e3214ae518c66c77e213b689e9aeb9ba0"
+  }
+ },
+ "gates": {
+  "S_new|R": {
+   "commit": "cb7511c42",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_R_2026-10-16_041141.json",
+   "sha256": "74503f9bc333c9ea97be8d983f9c95077939def7148d00bf8145d4eb45fd0b72"
+  },
+  "S_new|C": {
+   "commit": "e2ec8c4d2",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_C_2026-10-16_041816.json",
+   "sha256": "a61f06c32e91f6bb50a446deb5b59045b098f77167ca7f641d4c050c7a674495"
+  },
+  "S_old|R": {
+   "commit": "bb33b808e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_old_R_2026-10-16_044618.json",
+   "sha256": "5fd9c0f359dc428d696ca86c6cbf14dd29c69a9c92f20eec4412dcb87d2c2dee"
+  },
+  "S_old|C": {
+   "commit": "bb33b808e",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_old_C_2026-10-16_044711.json",
+   "sha256": "a976014d7ef7e5a1ab3c68799a16a6981abf517ad10dd3af958e3f73f8f0f309"
+  },
+  "S_newmains|R": {
+   "commit": "0093df634",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_newmains_R_2026-10-16_041932.json",
+   "sha256": "8383e10380b0bc7556dc7a1ec88dd64e5ebf65d3bc599c4c87f7a2f810981575"
+  },
+  "S_newmains|C": {
+   "commit": "0093df634",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_newmains_C_2026-10-16_042050.json",
+   "sha256": "40e612e12779bb71eaf7fa22f0f57d49c7e12fc7f5762407fa30808653ea8383"
+  },
+  "S_paper493|R": {
+   "commit": "fb415e111",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_paper493_R_2026-10-16_044958.json",
+   "sha256": "910123cfdf3596a4fa3becd0ba87d2f6f73369d036f02d7250a1ce3cd8ccc50c"
+  },
+  "S_paper493|C": {
+   "commit": "fb415e111",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_paper493_C_2026-10-16_045039.json",
+   "sha256": "5515dee54e815884e76352febb54c31ecc55ba303c7c022d23189818598b66fd"
+  },
+  "pools_ep2|R": {
+   "pending": "CUT: gate job running"
+  },
+  "pools_ep2|C": {
+   "pending": "CUT: gate job running"
+  },
+  "S_new+25f|R": {
+   "pending": "CUT: gate job running"
+  },
+  "S_new+25f|C": {
+   "pending": "CUT: gate job running"
+  }
+ },
+ "inventories": {
+  "S_new": {
+   "commit": "b3f8dea7b",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/inventory_v3_2026-10-15.json",
+   "sha256": "19306ffa7c42ab35a62715c1a18822a43c6273492e5ede9b2f62cd9e428ad9a3",
+   "reattest": "bccb0f153835@3x40,4x5"
+  },
+  "S_old": {
+   "commit": "09b070617",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_b_fix_v1_2026-10-16_025058.json",
+   "sha256": "4a5d0fb3cad32740f849df5def3c7a03a40a18aa4c42bc360709f0c740973d03"
+  },
+  "S_newmains": {
+   "commit": "09b070617",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_b_fix_v1_2026-10-16_025058.json",
+   "sha256": "4a5d0fb3cad32740f849df5def3c7a03a40a18aa4c42bc360709f0c740973d03"
+  },
+  "S_paper493": {
+   "commit": "85447113f",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w1_v1_2026-10-16_025411.json",
+   "sha256": "3dc8a91a52d694c8959db640b1de5688d2a6a657641d8ee7f79d4cff8aa2d067"
+  },
+  "pools_ep2": {
+   "commit": "06077a8a8",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_ep2_v1_2026-10-16_025227.json",
+   "sha256": "963ee204bfbb411f14aa0162a642442532c32cf1ec4783663cda6b228520126f"
+  },
+  "pools_fill": {
+   "commit": "06077a8a8",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_fill_v1_2026-10-16_025228.json",
+   "sha256": "e55927ba25f073369cd8e9ce02530e72097f92fc31f7db7d2779f39d470e9b3a"
+  },
+  "ha25f": {
+   "commit": "85447113f",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_ha25f_v1_2026-10-16_025414.json",
+   "sha256": "a626647f118a84ca181e54dc69872a31b9ebc3c90793c49192e56ef9d3ce8c08"
+  },
+  "S_paper493_w23": {
+   "commit": "102b3741e",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w23_v1_2026-10-16_033210.json",
+   "sha256": "b11a63f5914c1c5d199c3401104acd9697b6d3e7095802f24e67635895dc98f5"
+  },
+  "il": {
+   "commit": "52532a296",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_il_v2_2026-10-16_040129.json",
+   "sha256": "c0cb0f0cd30ebd452363e16a140bd62ffe439ec0c6a13c7d80df4f3270621ec6"
+  }
+ },
+ "roles_old": {
+  "q4f_main_v1__attack": "real",
+  "q4f_main_v1__honest_a": "real",
+  "q4f_main_v1__honest_b": "real",
+  "q4f_main_v1__sim_attack": "real",
+  "q4f_run2_v1__attack": "real",
+  "q4f_c_v1__honest_b": "real",
+  "rh1e4_stage_v1__honest_b": "relaunch",
+  "simh_q4f_v1_full_b1__sim_honest": "simh",
+  "simh_q4f_v1_full_b2__sim_honest": "simh"
+ },
+ "fits": {
+  "sol_a_uncut": {
+   "pending": "SOLA-UNCUT fit"
+  },
+  "own_all_rs_uncut_L48": {
+   "pending": "4f fit (RISK)"
+  },
+  "own_all_rs25_uncut_L48": {
+   "pending": "4f fit"
+  },
+  "own_all_rs10_uncut_L48": {
+   "pending": "4f fit"
+  },
+  "c_asis_uncut": {
+   "pending": "4f / SOLA-UNCUT fit"
+  },
+  "sol_a_uncut_pinned": {
+   "pending": "SOLA-UNCUT pinned-layer fit (record @ bba016d7a; files sola_uncut_pinned)"
+  }
+ },
+ "pools_required": {
+  "pending": "the post-extraction uncut pool coverage record (CUT; 0d: every required pool, no fallback)"
+ },
+ "ood": {
+  "commit": "321adc55f",
+  "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json",
+  "sha256": "5f6198e6ba2f20751d7a76889ca6c7f26ed414368a0e7b92cfcae497bc50e36c",
+  "signature": {
+   "commit": "dd087288b",
+   "path": "experiments/2026-10-14_priority1_spec_09/READ_LOG.md",
+   "sha256": "2903ec8fcf1f659d52fd123c8418e24b3792db7e0d60a95f09e2fbc829f75a16"
+  }
+ },
+ "cohort": {
+  "commit": "48a90b1d2",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/nofilter_exclusions_2026-10-16_012305.json",
+  "sha256": "f154cad6df7e5018485617ab5a22644fbb03549e3b315355b81312764bbcb65f"
+ },
+ "exclusions": {
+  "commit": "09e42576f",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/exclusions_2026-10-16_043215.json",
+  "sha256": "19999bccb20a610dfd6892e9d9772ab674787322743b70b5787bb320cf2547ad"
+ },
+ "waitlist": {
+  "commit": "07ec46730c29acc1453fbe9218fceb2ffd8ef469",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/waitlist_full_TEST_2026-10-16_033507.json",
+  "sha256": "100ec8eb14c0c088f8ef4d5879cca58562718c468b409a103b9d0f152553ca8e"
+ },
+ "census": {
+  "pending": "the uncut census (runner --inputs-full --keys-only) once the overrides land"
+ },
+ "e12": {
+  "commit": "2385f562b",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/E12_BLOCK_2026-10-16_035654.json",
+  "sha256": "5e6d844389d2baf3bd4a8a32df1e83e4a3fa6113ba8b0ba5bb06447d3ffa1e59"
+ },
+ "ilarms": {
+  "commit": "065a4e9f00642a71040d521b535b4fbf087f63a0",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/ilarms_cut32768_2026-10-16_044912.json",
+  "sha256": "8472cc26cbae03e1794a05cf22d4b5ff67ce48f03b3219a00616b4807aa38d04"
+ },
+ "relaunch_members": {
+  "commit": "051899844c53cbef27f5fac4b111a93b23374427",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/honest_b_relaunch_members_2026-10-16_032731.json",
+  "sha256": "27f3cf8ec6b38b83d93e7b0a0e69231b42935319587e42b97fa688b22aac0c1c"
+ },
+ "cutmap": {
+  "commit": "7febe8184",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/cutmap_32k_2026-10-16_044814.json",
+  "sha256": "6c4ca00817a3cb11f3fe975287b2109cda73d875e5f4a61c8188415b95bb56cc"
+ },
+ "waitlist_pending": [
+  "waitlist not checked (waitlist, exclusions or uncut census pending)"
+ ],
+ "paired_pool_exclusions": [
+  {
+   "root": "sp493_g4_simh_v1_try2__sim_honest",
+   "key": "sp493_t196|t115_model_registry",
+   "class": "H_sim cell without an admitted H_A member (paired-pool rule)"
+  }
+ ],
+ "estimator": {
+  "A": "registered",
+  "B": "computed beside (A) on the same draws from the pinned ilarms block (09 @ 36b9b47df \u00a73); lead by select_estimator.py (width only)"
+ },
+ "pending": [
+  "pools_required: the post-extraction uncut pool coverage record (CUT; 0d: every required pool, no fallback)",
+  "census: the uncut census (runner --inputs-full --keys-only) once the overrides land",
+  "gates.pools_ep2|R: CUT: gate job running",
+  "gates.pools_ep2|C: CUT: gate job running",
+  "gates.S_new+25f|R: CUT: gate job running",
+  "gates.S_new+25f|C: CUT: gate job running",
+  "fits.sol_a_uncut: SOLA-UNCUT fit",
+  "fits.own_all_rs_uncut_L48: 4f fit (RISK)",
+  "fits.own_all_rs25_uncut_L48: 4f fit",
+  "fits.own_all_rs10_uncut_L48: 4f fit",
+  "fits.c_asis_uncut: 4f / SOLA-UNCUT fit",
+  "fits.sol_a_uncut_pinned: SOLA-UNCUT pinned-layer fit (record @ bba016d7a; files sola_uncut_pinned)",
+  "waitlist_pending: ['waitlist not checked (waitlist, exclusions or uncut census pending)']"
+ ]
+}

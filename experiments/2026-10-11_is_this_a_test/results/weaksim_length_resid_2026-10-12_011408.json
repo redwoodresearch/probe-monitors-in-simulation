@@ -1,0 +1,78 @@
+{
+ "git": "5e48425ab5580d6721de6e5e0b1171ed928e2928",
+ "input": "results/weaksim_ask_2026-10-12_004822.json",
+ "exploratory": true,
+ "reading": "a positive gap after the cubic length adjustment",
+ "counted cells": {
+  "cells": 188,
+  "mean residual gap (log-odds)": {
+   "point": 1.6374426525129206,
+   "ci": [
+    1.2616715129716933,
+    1.9787777202672516
+   ]
+  },
+  "rank version": {
+   "point": 0.26595744680851063,
+   "ci": [
+    0.20731382978723403,
+    0.324468085106383
+   ]
+  }
+ },
+ "beside": {
+  "all cells (extrapolating)": {
+   "cells": 198,
+   "mean residual gap (log-odds)": {
+    "point": 1.5073159910483187,
+    "ci": [
+     1.096896096575162,
+     1.9441436208032907
+    ]
+   },
+   "rank version": {
+    "point": 0.25252525252525254,
+    "ci": [
+     0.1919191919191919,
+     0.31313131313131315
+    ]
+   }
+  },
+  "each fold's fit": {
+   "0": {
+    "rank": 22,
+    "columns": 22,
+    "R\u00b2": 0.46280838415161396,
+    "held-out real RMSE": 2.090967450196142,
+    "held-out real SD": 1.6316535577655202
+   },
+   "1": {
+    "rank": 22,
+    "columns": 22,
+    "R\u00b2": 0.35117067451800266,
+    "held-out real RMSE": 1.5300488114697526,
+    "held-out real SD": 1.540521358643781
+   }
+  },
+  "counted cells per environment": {
+   "auto_workflow": 10,
+   "clinical_trial": 12,
+   "cost_estimation": 10,
+   "defi_yield_aggregator": 10,
+   "dev_server": 8,
+   "file_indexing": 10,
+   "insurance_calculator": 11,
+   "job_system": 11,
+   "lb_in_lb": 11,
+   "load_balancer": 11,
+   "media_processing": 11,
+   "model_registry": 10,
+   "payroll_system": 11,
+   "port_scanner": 11,
+   "shared_dotfiles": 10,
+   "ticket_system": 11,
+   "user_tracking": 9,
+   "web_scraping": 11
+  }
+ }
+}

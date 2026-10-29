@@ -1,0 +1,12 @@
+# Planted slips P3 (PINS.md): Qwen3-32B reads the 828 staged planted e2 runs (Aswin's matched-subset decision, 10-12),
+# as the P3 planted run read the e1 ones.
+run: 2026-10-12_q2_plantP3_planted-e2_qwen3-32b_v1
+inputs_from: 2026-10-12_q2_plantcmd_e1_inputs_v1
+transcripts: planted_transcripts_p3_e2.json         # the 828 changed e2 runs of planted_transcripts_p2.json, and the inputs' sha256s
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 12
+chunk_size: 25
+layers: [8, 16]

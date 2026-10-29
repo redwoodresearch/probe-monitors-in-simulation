@@ -1,0 +1,37 @@
+# The old-vs-new Qwen honest-success arm (10-08 design): Qwen3-32B as the real honest agent on the pilot's tasks,
+# under the same Phase 2 harness (config/run.yaml's limits, environments and September tree), no simulator. One run
+# per task, never rerun (honest_b's semantics: not a reference), so its success is comparable with Qwen3.5's A first
+# try plus B. Servers: launch_servers.py --server-config servers_qwen3_32b.yaml (YaRN x4 to 131,072 tokens, hermes).
+# From a frozen copy with results/ (mkdir -p results), on the devbox, both in tmux, the watcher beside the launcher:
+#   PATH=$PWD/fixed_digest_lookup:$PATH IMAGES_JSON=<the setup_devbox images.json whose sha256 the tag-form file
+#       records> run_pilot.py --pilot-config config/pilot_qwen3_32b.yaml --base-urls <qwen3-32b bases> \
+#       --commit <commit> --out <run dir>
+#   canary_watch.py <run dir> t17_slack_clone   # opens the canary gate; without it the launcher waits forever
+
+tasks: config/pilot_tasks_amendment9.json  # the pilot's own tasks (amendment 9's draw); no ~50-task Qwen3.5
+# honest set exists under this harness, so the comparison is with Qwen3.5's A first try plus B on these 20
+real_simulator: september
+simulators: []
+real_arms: [honest_b]
+policy: vllm/Qwen/Qwen3-32B
+# The newline check is about today's simulator's str_replace output reaching Qwen3.5 (its template trims every
+# message); there is no simulator here, and Qwen3's template differs, so only the limit checks run.
+server_checks: [tiny, repetition]
+
+# Load: Qwen3-32B's KV cache is about 4 runs at 60k tokens per H200 (servers_qwen3_32b.yaml's estimate; vLLM logs the
+# real size at startup), so 3 servers for the devbox's 10 environments.
+max_runs_per_server: 4
+max_real_runs: 10
+reference_tries: 1  # unused: no honest_a
+# As the strict-tools rerun (Aswin, 10-08/09): tag form with image downloads blocked, and the canary gate on t17's
+# real run (canary_watch.py opens it after a real str_replace carries new_str, and stops the launch on any without).
+# Tools go out strict false through run.yaml's policy_limits; the strict-off replay on this model's server passed
+# 12 of 12 str_replace (10-08 dry check).
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+canary: t17_slack_clone
+
+spend:  # no simulator: API spend is zero; the guard is inert but required by run_pilot.py
+  cap_usd: 0
+  worst_case_limit_usd: 1
+  worst_per_sim_run_usd: 0
+  prior_per_sim_run_usd: 0

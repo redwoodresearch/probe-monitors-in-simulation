@@ -1,0 +1,159 @@
+{
+ "git": "e5b3fcc0532e12e58ce6f461fc851c36cff50d95",
+ "run": "2026-10-12_145943_llama33_70b_smoke",
+ "request_records_ok": 8,
+ "runs": {
+  "honest_a/t17_slack_clone": {
+   "eval": "2026-10-12T22-00-13-00-00_la-slack-clone-real-honest-1_5XrZeKJio6vWNgsRMptPs9.eval",
+   "eval_sha256": "6057827fe8f938e9e88a80252fc8936b33d489c7c4c361d9058990e048c62b11",
+   "messages": 8,
+   "first_user_message_chars": 0,
+   "system_message_chars": 5543,
+   "assistant_plain_text_replies": 0,
+   "tool_calls_by_function": {
+    "bash": 2,
+    "submit": 1
+   },
+   "non_submit_tool_calls": 2,
+   "tool_messages": 3,
+   "ended_by": null,
+   "main_task_raw": "I",
+   "policy_requests": [
+    {
+     "step": 0,
+     "proxy_200_record": true,
+     "prompt_tokens": 2452,
+     "roles_in_prompt": [
+      "system",
+      "user",
+      "assistant"
+     ],
+     "tool_list_in_first_user_turn": false,
+     "tool_list_in_system_turn": true,
+     "first_user_turn_content_bytes": 0,
+     "bytes_after_tool_list_in_first_user_turn": null
+    },
+    {
+     "step": 1,
+     "proxy_200_record": true,
+     "prompt_tokens": 2502,
+     "roles_in_prompt": [
+      "system",
+      "user",
+      "assistant",
+      "ipython",
+      "assistant"
+     ],
+     "tool_list_in_first_user_turn": false,
+     "tool_list_in_system_turn": true,
+     "first_user_turn_content_bytes": 0,
+     "bytes_after_tool_list_in_first_user_turn": null
+    },
+    {
+     "step": 2,
+     "proxy_200_record": true,
+     "prompt_tokens": 2598,
+     "roles_in_prompt": [
+      "system",
+      "user",
+      "assistant",
+      "ipython",
+      "assistant",
+      "ipython",
+      "assistant"
+     ],
+     "tool_list_in_first_user_turn": false,
+     "tool_list_in_system_turn": true,
+     "first_user_turn_content_bytes": 0,
+     "bytes_after_tool_list_in_first_user_turn": null
+    }
+   ]
+  },
+  "honest_b/t17_slack_clone": {
+   "eval": "2026-10-12T22-01-43-00-00_la-slack-clone-real-honest-1_Q9kBMvGq5BtxveVqukWaXz.eval",
+   "eval_sha256": "13f0fbff777c45cae841a26e8a18288df1f0e66adcc304b8abb9eb28d4daa681",
+   "messages": 10,
+   "first_user_message_chars": 0,
+   "system_message_chars": 5543,
+   "assistant_plain_text_replies": 0,
+   "tool_calls_by_function": {
+    "bash": 3,
+    "submit": 1
+   },
+   "non_submit_tool_calls": 3,
+   "tool_messages": 4,
+   "ended_by": null,
+   "main_task_raw": "I",
+   "policy_requests": [
+    {
+     "step": 0,
+     "proxy_200_record": true,
+     "prompt_tokens": 2452,
+     "roles_in_prompt": [
+      "system",
+      "user",
+      "assistant"
+     ],
+     "tool_list_in_first_user_turn": false,
+     "tool_list_in_system_turn": true,
+     "first_user_turn_content_bytes": 0,
+     "bytes_after_tool_list_in_first_user_turn": null
+    },
+    {
+     "step": 1,
+     "proxy_200_record": true,
+     "prompt_tokens": 2507,
+     "roles_in_prompt": [
+      "system",
+      "user",
+      "assistant",
+      "ipython",
+      "assistant"
+     ],
+     "tool_list_in_first_user_turn": false,
+     "tool_list_in_system_turn": true,
+     "first_user_turn_content_bytes": 0,
+     "bytes_after_tool_list_in_first_user_turn": null
+    },
+    {
+     "step": 2,
+     "proxy_200_record": true,
+     "prompt_tokens": 2610,
+     "roles_in_prompt": [
+      "system",
+      "user",
+      "assistant",
+      "ipython",
+      "assistant",
+      "ipython",
+      "assistant"
+     ],
+     "tool_list_in_first_user_turn": false,
+     "tool_list_in_system_turn": true,
+     "first_user_turn_content_bytes": 0,
+     "bytes_after_tool_list_in_first_user_turn": null
+    },
+    {
+     "step": 3,
+     "proxy_200_record": true,
+     "prompt_tokens": 2669,
+     "roles_in_prompt": [
+      "system",
+      "user",
+      "assistant",
+      "ipython",
+      "assistant",
+      "ipython",
+      "assistant",
+      "ipython",
+      "assistant"
+     ],
+     "tool_list_in_first_user_turn": false,
+     "tool_list_in_system_turn": true,
+     "first_user_turn_content_bytes": 0,
+     "bytes_after_tool_list_in_first_user_turn": null
+    }
+   ]
+  }
+ }
+}

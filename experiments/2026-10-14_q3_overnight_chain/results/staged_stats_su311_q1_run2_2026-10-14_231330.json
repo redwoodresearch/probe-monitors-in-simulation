@@ -1,0 +1,15 @@
+{
+ "target": "su311_q1_run2",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "su311_q1_run2",
+   "arm": "attack",
+   "staged_file": "/ev/su311_q1_run2_v1/inputs/attack.jsonl",
+   "staged_sha": "6776f857f7f0c60704d198f7234cf6960b47ea57c144d775ea8ca093d6f73ff3",
+   "epochs": 76,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

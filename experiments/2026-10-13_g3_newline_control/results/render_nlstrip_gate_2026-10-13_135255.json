@@ -1,0 +1,56 @@
+{
+ "scope": "nlstrip",
+ "POST HOC": true,
+ "render files": {
+  "g3_render_nlstrip_2026-10-13_134930.json": {
+   "sha256": "6eff72dcd547b8eeba556711829ac2cde077be23192fab23785cd7d81e59b6b2",
+   "git (render)": "32cd8b2f4366ab0bf0f8049409737072d7a01014",
+   "which": "nlstrip",
+   "ids sha256": "7055908d1cfc96c7983dfaa69c2beae5896a88a6ed8f5c5722e1bb0556e64087"
+  }
+ },
+ "arms": {
+  "sim-attack-nlstrip": {
+   "runs": 939,
+   "render failures": 0,
+   "required rows (outputs Qwen3-32B kept)": 23279,
+   "eligible (own, before matching)": 23279,
+   "coverage (own)": 1.0,
+   "left out: no eligible token in the span": 0,
+   "left out: other reason (readout past the context, or no span)": 0,
+   "empty runs (own)": [],
+   "runs with no required row": 0,
+   "tool outputs with no Qwen3-32B position": 0,
+   "tool outputs quoting a special token's text": 0,
+   "kept outputs ending in a newline": 14241,
+   "kept outputs with a token crossing the span's end": 0,
+   "R2 differs from R0": 15332,
+   "forward tokens": 23789707,
+   "forward tokens squared, summed over runs": 668055010883,
+   "reader tokens": 25369788,
+   "R0 at C2: readouts, whitespace-only, contains a newline": [
+    23279,
+    15332,
+    14241
+   ],
+   "R2 at C2: readouts, whitespace-only, contains a newline": [
+    23279,
+    0,
+    0
+   ]
+  }
+ },
+ "edit": {
+  "edited outputs among the Qwen3-32B-kept (required) rows": 7708,
+  "edited outputs whose readout token text differs from the unedited rendering's": 0,
+  "edited outputs: create": 1038,
+  "edited outputs: insert": 1148,
+  "edited outputs: str_replace": 6239,
+  "runs with at least one edited output": 854
+ },
+ "frozen row drops (own)": {},
+ "runs with no eligible row": [],
+ "gate": "pass",
+ "failing": [],
+ "unevaluable": []
+}

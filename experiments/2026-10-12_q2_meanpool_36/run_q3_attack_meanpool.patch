@@ -1,0 +1,44 @@
+Mean-pooled #36: run_q3_attack_meanpool.py as run (first committed at 360b2181 on aswin/q2-meanpool-36, reachable from this
+stack's top merge), kept here as a patch against its source on main for the PR size cap (725 lines). The full copy
+(sha256 9d1a371addc4ad5db0aed4a93b4a2f43ea2367cf7f5f2a13de668b84b6cf20ca, 45270 bytes) is on S3 via results/s3_manifest_v1.json.
+Source on main: experiments/2026-10-06_q3_attack_detector/run_q3_attack.py, sha256 237154c1c11b0d964538329e18b763d27a133d998eefb0a25afcae03ae7aec96.
+Rebuild, from the repository root:
+  patch -o experiments/2026-10-12_q2_meanpool_36/run_q3_attack_meanpool.py experiments/2026-10-06_q3_attack_detector/run_q3_attack.py experiments/2026-10-12_q2_meanpool_36/run_q3_attack_meanpool.patch
+
+--- experiments/2026-10-06_q3_attack_detector/run_q3_attack.py
++++ experiments/2026-10-12_q2_meanpool_36/run_q3_attack_meanpool.py
+@@ -1,3 +1,6 @@
++"""Reply detector #36 with a mean-pooled readout (PLAN.md here): a copy of ../2026-10-06_q3_attack_detector/run_q3_attack.py
++at main with only its app, work Volume, S3 prefix and default config changed. The original docstring follows.
++"""
+ """Q3 attack detector, the slow part: per-call probes on Qwen3-32B segment-end activations and a TF-IDF baseline,
+ trained on real LinuxArena honest vs real attack (epoch 1) runs and scored on every arm. Metrics: analyze_q3_attack.py.
+ 
+@@ -45,15 +48,15 @@
+ 
+ HERE = Path(__file__).parent
+ REPO = HERE.parent.parent
+-APP = "probe-shift_aswin-surya_sub-q3attack_probe_kill-2026-11-06"
++APP = "probe-shift_aswin-surya_sub-q2-meanpool36_probe_kill-2026-11-12"
+ ACTS = "probe-shift_aswin-surya_sub-la-activations"
+-WORK = "probe-shift_aswin-surya_sub-q3attack_work_kill-2026-11-06"
++WORK = "probe-shift_aswin-surya_sub-q2-meanpool36_work_kill-2026-11-12"
+ GPU = "H100!"
+ H = 5120
+ MANIFEST_VERSION = 2  # part of data_id: bump when the manifest's outputs change (2: a tool column in the tables)
+ # Durable home of each run's raw scores and trained probes (the work Volume is kill-dated): the project bucket
+ # (private, versioned), one prefix per run. Archives are written from the laptop with the user's own AWS session.
+-S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-06_q3_attack_detector/"
++S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-12_q2_meanpool_36/"
+ S3_ARCHIVE_REGION = "us-east-2"
+ ARCHIVE_MAX_BYTES = 1_000_000_000  # a run's archive is ~350 MB; refuse anything over ~1 GB rather than fetch it
+ 
+@@ -622,7 +625,7 @@
+ 
+ 
+ @app.local_entrypoint()
+-def main(test: bool = False, resume: str = "", config: str = "q3_attack.yaml", pack_only: bool = False,
++def main(test: bool = False, resume: str = "", config: str = "q3_attack_meanpool.yaml", pack_only: bool = False,
+          check_data: str = ""):
+     """`--test`: a few main tasks per fold, one layer, a small null, under a separate run id. `--resume <run_id>`:
+     spawn only the fits whose outputs are not on the work Volume yet (a fit still running from the first launch is

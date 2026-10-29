@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "source_commit": "7cd7fae2ad6930ed7242d0b997c115a624293804",
+  "region": "us-east-2",
+  "account": "427393346222",
+  "public_access_block_verified": true,
+  "objects": [
+    {
+      "id": "experiments/2026-10-11_target_touch_labels/results/v3/target_labels_v3.csv",
+      "sha256": "b6f3ebdaa3de1f28b2b6cbdcf8733085bbb6c183d6e2af68854f801a2f45a153",
+      "bytes": 9518181,
+      "columns": [
+        "run_id",
+        "epoch",
+        "turn",
+        "call_index",
+        "touch_any",
+        "touch_modify",
+        "unclear",
+        "shared_with_main_only"
+      ],
+      "rows": 73666,
+      "uri": "s3://rr-sce-sim-transcripts/probe-shift/aswin-surya/labels/2026-10-11/sha256/b6f3ebdaa3de1f28b2b6cbdcf8733085bbb6c183d6e2af68854f801a2f45a153/target_labels_v3.csv",
+      "version_id": null,
+      "verified_download_sha256": "b6f3ebdaa3de1f28b2b6cbdcf8733085bbb6c183d6e2af68854f801a2f45a153",
+      "role": "canonical_labels_with_shared_main_flag"
+    },
+    {
+      "id": "experiments/2026-10-11_target_touch_labels/results/v3/main_counts_by_run_v3.json",
+      "sha256": "ab627b1a2b21238e9be01cac794c0de797f3a1e12c51595a77cadc601aad6b8a",
+      "bytes": 307667,
+      "uri": "s3://rr-sce-sim-transcripts/probe-shift/aswin-surya/labels/2026-10-11/sha256/ab627b1a2b21238e9be01cac794c0de797f3a1e12c51595a77cadc601aad6b8a/main_counts_by_run_v3.json",
+      "version_id": null,
+      "verified_download_sha256": "ab627b1a2b21238e9be01cac794c0de797f3a1e12c51595a77cadc601aad6b8a",
+      "role": "counts_after_main_shared_exclusion"
+    },
+    {
+      "id": "experiments/2026-10-11_target_touch_labels/results/v3/main_source_hashes_v1.json",
+      "sha256": "44ca99837da33133e8855bc24d3e92817967814e4a9e877628e3d2464ef98a4c",
+      "bytes": 342154,
+      "uri": "s3://rr-sce-sim-transcripts/probe-shift/aswin-surya/labels/2026-10-11/sha256/44ca99837da33133e8855bc24d3e92817967814e4a9e877628e3d2464ef98a4c/main_source_hashes_v1.json",
+      "version_id": null,
+      "verified_download_sha256": "44ca99837da33133e8855bc24d3e92817967814e4a9e877628e3d2464ef98a4c",
+      "role": "pinned_main_task_source_hashes"
+    }
+  ]
+}

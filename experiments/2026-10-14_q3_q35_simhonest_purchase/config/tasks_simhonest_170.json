@@ -1,0 +1,857 @@
+{
+  "built_from": "d9 stage_result_2026-10-14_011819.json @ ce2f68ca (runs by arm), task keys from bbf0729 config/pilot_tasks_amendment9_all196.json",
+  "rule": "real honest A and B, real attack run 1 and sim_attack@september present; no sim_honest@september. t88 and t169 excluded: the harness preflights both modes (run_pilot.py:383, --modes attack,honest) and their attack construction fails (tasks.py:48), which would mark the honest run not run.",
+  "n": 170,
+  "tasks": [
+    {
+      "task": "t10",
+      "key": "t10_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_000523_rerun_strict"
+    },
+    {
+      "task": "t21",
+      "key": "t21_media_processing",
+      "honest_a_launch": "2026-10-09_173815_scaleup_canary"
+    },
+    {
+      "task": "t22",
+      "key": "t22_clinical_trial",
+      "honest_a_launch": "2026-10-09_173815_scaleup_canary"
+    },
+    {
+      "task": "t23",
+      "key": "t23_auto_workflow",
+      "honest_a_launch": "2026-10-09_173815_scaleup_canary"
+    },
+    {
+      "task": "t24",
+      "key": "t24_tiktok",
+      "honest_a_launch": "2026-10-09_173815_scaleup_canary"
+    },
+    {
+      "task": "t25",
+      "key": "t25_user_tracking",
+      "honest_a_launch": "2026-10-09_173815_scaleup_canary"
+    },
+    {
+      "task": "t26",
+      "key": "t26_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t27",
+      "key": "t27_slack_clone",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t28",
+      "key": "t28_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t29",
+      "key": "t29_web_scraping",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t30",
+      "key": "t30_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t31",
+      "key": "t31_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t32",
+      "key": "t32_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t33",
+      "key": "t33_auto_workflow",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t34",
+      "key": "t34_tiktok",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t35",
+      "key": "t35_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t36",
+      "key": "t36_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t37",
+      "key": "t37_slack_clone",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t38",
+      "key": "t38_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t39",
+      "key": "t39_web_scraping",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t40",
+      "key": "t40_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t41",
+      "key": "t41_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t42",
+      "key": "t42_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t43",
+      "key": "t43_auto_workflow",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t44",
+      "key": "t44_tiktok",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t45",
+      "key": "t45_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t46",
+      "key": "t46_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t47",
+      "key": "t47_slack_clone",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t49",
+      "key": "t49_web_scraping",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t50",
+      "key": "t50_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t51",
+      "key": "t51_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t52",
+      "key": "t52_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t53",
+      "key": "t53_auto_workflow",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t54",
+      "key": "t54_tiktok",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t55",
+      "key": "t55_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t56",
+      "key": "t56_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t57",
+      "key": "t57_slack_clone",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t58",
+      "key": "t58_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t59",
+      "key": "t59_web_scraping",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t60",
+      "key": "t60_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t61",
+      "key": "t61_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t62",
+      "key": "t62_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t63",
+      "key": "t63_auto_workflow",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t64",
+      "key": "t64_tiktok",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t65",
+      "key": "t65_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t66",
+      "key": "t66_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t67",
+      "key": "t67_slack_clone",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t68",
+      "key": "t68_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t69",
+      "key": "t69_web_scraping",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t70",
+      "key": "t70_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t71",
+      "key": "t71_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t72",
+      "key": "t72_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t73",
+      "key": "t73_auto_workflow",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t74",
+      "key": "t74_tiktok",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t75",
+      "key": "t75_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t76",
+      "key": "t76_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t77",
+      "key": "t77_slack_clone",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t78",
+      "key": "t78_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t79",
+      "key": "t79_web_scraping",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t80",
+      "key": "t80_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t81",
+      "key": "t81_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t82",
+      "key": "t82_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t83",
+      "key": "t83_auto_workflow",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t84",
+      "key": "t84_tiktok",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t85",
+      "key": "t85_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t86",
+      "key": "t86_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t87",
+      "key": "t87_slack_clone",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t89",
+      "key": "t89_web_scraping",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t90",
+      "key": "t90_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t91",
+      "key": "t91_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t92",
+      "key": "t92_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t93",
+      "key": "t93_auto_workflow",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t94",
+      "key": "t94_tiktok",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t95",
+      "key": "t95_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t96",
+      "key": "t96_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t97",
+      "key": "t97_slack_clone",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t99",
+      "key": "t99_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t100",
+      "key": "t100_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t101",
+      "key": "t101_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t102",
+      "key": "t102_auto_workflow",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t103",
+      "key": "t103_tiktok",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t104",
+      "key": "t104_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t105",
+      "key": "t105_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t106",
+      "key": "t106_slack_clone",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t107",
+      "key": "t107_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t108",
+      "key": "t108_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t109",
+      "key": "t109_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t110",
+      "key": "t110_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t111",
+      "key": "t111_auto_workflow",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t112",
+      "key": "t112_tiktok",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t113",
+      "key": "t113_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t114",
+      "key": "t114_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t116",
+      "key": "t116_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t117",
+      "key": "t117_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t118",
+      "key": "t118_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t119",
+      "key": "t119_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t120",
+      "key": "t120_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t121",
+      "key": "t121_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t122",
+      "key": "t122_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t123",
+      "key": "t123_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t124",
+      "key": "t124_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t125",
+      "key": "t125_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t126",
+      "key": "t126_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t127",
+      "key": "t127_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t128",
+      "key": "t128_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t129",
+      "key": "t129_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t130",
+      "key": "t130_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t131",
+      "key": "t131_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t132",
+      "key": "t132_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t133",
+      "key": "t133_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t134",
+      "key": "t134_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t135",
+      "key": "t135_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t136",
+      "key": "t136_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t137",
+      "key": "t137_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t138",
+      "key": "t138_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t140",
+      "key": "t140_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t141",
+      "key": "t141_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t142",
+      "key": "t142_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t143",
+      "key": "t143_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t144",
+      "key": "t144_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t145",
+      "key": "t145_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t146",
+      "key": "t146_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t147",
+      "key": "t147_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t148",
+      "key": "t148_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t149",
+      "key": "t149_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t150",
+      "key": "t150_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t152",
+      "key": "t152_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t153",
+      "key": "t153_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t154",
+      "key": "t154_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t155",
+      "key": "t155_user_tracking",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t156",
+      "key": "t156_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t157",
+      "key": "t157_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t158",
+      "key": "t158_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t159",
+      "key": "t159_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t160",
+      "key": "t160_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t161",
+      "key": "t161_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t162",
+      "key": "t162_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t163",
+      "key": "t163_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t164",
+      "key": "t164_media_processing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t165",
+      "key": "t165_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t166",
+      "key": "t166_file_indexing",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t167",
+      "key": "t167_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t168",
+      "key": "t168_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t170",
+      "key": "t170_model_registry",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t171",
+      "key": "t171_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t172",
+      "key": "t172_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t173",
+      "key": "t173_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t174",
+      "key": "t174_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t175",
+      "key": "t175_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t176",
+      "key": "t176_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t177",
+      "key": "t177_shared_dotfiles",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t178",
+      "key": "t178_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t179",
+      "key": "t179_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t180",
+      "key": "t180_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t181",
+      "key": "t181_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t182",
+      "key": "t182_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t183",
+      "key": "t183_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t184",
+      "key": "t184_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t185",
+      "key": "t185_clinical_trial",
+      "honest_a_launch": "2026-10-09_182505_scaleup"
+    },
+    {
+      "task": "t186",
+      "key": "t186_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t187",
+      "key": "t187_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t188",
+      "key": "t188_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t189",
+      "key": "t189_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t190",
+      "key": "t190_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t191",
+      "key": "t191_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t192",
+      "key": "t192_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t193",
+      "key": "t193_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t194",
+      "key": "t194_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t195",
+      "key": "t195_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    },
+    {
+      "task": "t196",
+      "key": "t196_clinical_trial",
+      "honest_a_launch": "2026-10-10_001314_scaleup_topup"
+    }
+  ]
+}

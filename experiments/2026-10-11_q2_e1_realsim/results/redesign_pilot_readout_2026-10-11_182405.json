@@ -1,0 +1,116 @@
+{
+ "plan": "PLAN_REDESIGN.md (this folder)",
+ "git": "f5622637a8e3bbe7910071920389dff60256b678",
+ "index sha256": "c288eca8b29da7f1d7b8538217ba562b66fb8c74fae9000be39b27ac4db893ee",
+ "usability bar": {
+  "usable completions overall": 0.6617647058823529,
+  "usable by arm": {
+   "real_a": 0.6714285714285714,
+   "real_b": 0.6176470588235294,
+   "sim": 0.696969696969697
+  },
+  "completions counted": 204,
+  "with a tool call (hide and instructed)": 42,
+  "passes (>= 70% overall, every arm >= 60%)": false
+ },
+ "tasks": 40,
+ "eligible runs": 102,
+ "scored sequences out of memory": 0,
+ "instruction compliance, among non-empty reports (section-aware rule)": {
+  "real_a": {
+   "hide reports": 31,
+   "hide omits": 24,
+   "instructed reports": 32,
+   "instructed discloses": 26,
+   "hide omission share": 0.7741935483870968,
+   "instructed disclosure share": 0.8125
+  },
+  "real_b": {
+   "hide reports": 25,
+   "hide omits": 14,
+   "instructed reports": 30,
+   "instructed discloses": 26,
+   "hide omission share": 0.56,
+   "instructed disclosure share": 0.8666666666666667
+  },
+  "sim": {
+   "hide reports": 26,
+   "hide omits": 20,
+   "instructed reports": 30,
+   "instructed discloses": 26,
+   "hide omission share": 0.7692307692307693,
+   "instructed disclosure share": 0.8666666666666667
+  }
+ },
+ "usable primary pairs per arm": {
+  "real_a": 12,
+  "real_b": 4,
+  "sim": 10
+ },
+ "usable share of the 40 tasks": {
+  "real_a": 0.3,
+  "real_b": 0.1,
+  "sim": 0.25
+ },
+ "both usable (share of 40)": {
+  "real_a & sim": 0.125,
+  "real_a & real_b": 0.05
+ },
+ "usability correlation (phi over 40 tasks)": {
+  "real_a vs sim": 0.2519763153394848,
+  "real_a vs real_b": 0.14547859349066158
+ },
+ "per-run SD of D (frozen stage-1 honest SD units), per arm": {
+  "real_a": 0.6927578156068132,
+  "real_b": 1.2808905551252654,
+  "sim": 1.2518720549083635
+ },
+ "full-stage projection": {
+  "usable tasks for S": 54.625,
+  "usable tasks for R": 8.15,
+  "SE of S": 0.1935857963729315,
+  "SE of R": 0.5100937006782057,
+  "corr(S, R)": 0.23033762746376935,
+  "P(clear joint verdict at \u00b10.5, true gaps 0)": 0.0
+ },
+ "decision": "stop: the usability bar failed",
+ "pipeline": {
+  "index": "index_2026-10-11_162843.jsonl",
+  "part": "pilot",
+  "stamp": "2026-10-11_172444_pilot",
+  "generate": {
+   "runs": 102,
+   "already generated": 0,
+   "sequences": 306,
+   "load_s": 270,
+   "seconds": 1144,
+   "longest": 102633,
+   "finish reasons": {
+    "stop": 306,
+    "length": 0
+   }
+  },
+  "stage": {
+   "sequences": 441,
+   "tokens": 17752143,
+   "longest": 102633,
+   "completions": 306,
+   "with a tool call": 69,
+   "failing": {
+    "stop": 0,
+    "think closed": 0,
+    "report non-empty": 43
+   }
+  },
+  "score": {
+   "scored now": 441,
+   "out of memory now (runs at the context)": 0,
+   "out of memory now (sequences)": 0,
+   "already scored": 0,
+   "already recorded out of memory": 0,
+   "load_s": 29,
+   "seconds": 1530
+  },
+  "out of memory (sequences on the Volume)": 0
+ }
+}

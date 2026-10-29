@@ -1,0 +1,46 @@
+{
+ "shards": [
+  {
+   "shard": 0,
+   "transcripts": 4,
+   "chunks": [
+    {
+     "chunk": "shard000_chunk000",
+     "transcripts": 2,
+     "rows": 40,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk001",
+     "transcripts": 2,
+     "rows": 31,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 122,
+   "forward [tokens, seconds]": [
+    [
+     34239,
+     28.345
+    ],
+    [
+     35385,
+     29.624
+    ],
+    [
+     35003,
+     29.126
+    ],
+    [
+     35951,
+     30.577
+    ]
+   ]
+  }
+ ],
+ "n_ok": 1,
+ "n_crashed": 0,
+ "transcripts": 4,
+ "rows": 71,
+ "nonfinite": 0
+}

@@ -1,0 +1,80 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_q1 of 2026-10-14_154401_scaleup311_q1: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 3,
+  "by_arm": {
+   "sim_honest@september": 3
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_q1",
+   "rel": "sim_honest@september/t258_shared_dotfiles/2026-10-15T20-50-34-00-00_la-shared-dotfiles-sim-honest-1_UNaHCcgNyUvp6Q3aQ28h9w.eval",
+   "sha256": "289edda7dcaea59e9eeafcbe8b381cd92e7ee71fa9d24f17df9cac531822037e",
+   "bytes": 306302,
+   "arm_dir": "sim_honest@september",
+   "task": "t258_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q1/sim_honest@september/t258_shared_dotfiles/2026-10-15T20-50-34-00-00_la-shared-dotfiles-sim-honest-1_UNaHCcgNyUvp6Q3aQ28h9w.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q1",
+   "stratum": "simh_311",
+   "launch_task": "t258_shared_dotfiles",
+   "first_start": "2026-10-15T13:50:32-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q1",
+   "run1_launch": "2026-10-14_154401_scaleup311_q1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "7"
+  },
+  {
+   "launch": "2026-10-15_simh_q1",
+   "rel": "sim_honest@september/t320_auto_workflow/2026-10-15T20-50-34-00-00_la-auto-workflow-sim-honest-1_LBaeyrMvHApaVcs85t32G7.eval",
+   "sha256": "2ae4424b3ddf9229730b6260ef7e6da3b1063ad1ce2e783fbcacc0c0e56c9ec1",
+   "bytes": 128934,
+   "arm_dir": "sim_honest@september",
+   "task": "t320_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q1/sim_honest@september/t320_auto_workflow/2026-10-15T20-50-34-00-00_la-auto-workflow-sim-honest-1_LBaeyrMvHApaVcs85t32G7.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q1",
+   "stratum": "simh_311",
+   "launch_task": "t320_auto_workflow",
+   "first_start": "2026-10-15T13:50:32-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q1",
+   "run1_launch": "2026-10-14_154401_scaleup311_q1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "7"
+  },
+  {
+   "launch": "2026-10-15_simh_q1",
+   "rel": "sim_honest@september/t339_slack_clone/2026-10-15T20-50-34-00-00_la-slack-clone-sim-honest-1_JwLzuLnzquMVYBNVedeNfn.eval",
+   "sha256": "0680b1ad211f4cb8100a4472acc593094b464f3a3f96f480d24394dcbae521c6",
+   "bytes": 457295,
+   "arm_dir": "sim_honest@september",
+   "task": "t339_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q1/sim_honest@september/t339_slack_clone/2026-10-15T20-50-34-00-00_la-slack-clone-sim-honest-1_JwLzuLnzquMVYBNVedeNfn.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q1",
+   "stratum": "simh_311",
+   "launch_task": "t339_slack_clone",
+   "first_start": "2026-10-15T13:50:32-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q1",
+   "run1_launch": "2026-10-14_154401_scaleup311_q1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "7"
+  }
+ ]
+}

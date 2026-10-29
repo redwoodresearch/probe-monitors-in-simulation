@@ -1,0 +1,15 @@
+{
+ "git": "aa8180a10d3e894ab434ba8cce6b71f2bf8c365f",
+ "rule_sha": "604bc7c60",
+ "app": "probe-shift_aswin-surya_sub-q2-replay_sim_kill-2026-11-14",
+ "action": "live",
+ "label": "t196_v1",
+ "app_id": "ap-ksxFNh1pgs06w5wFDv9mcx",
+ "call_id": "fc-01M50Y13FXADNJ57N124WNAQF0",
+ "spawned_pt": "2026-10-15T16:23:17-07:00",
+ "concurrency": 20,
+ "timeout_s": 28800,
+ "hard_stop_usd": 3000.0,
+ "cap_margin_usd": 300.0,
+ "limits": {}
+}

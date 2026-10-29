@@ -1,0 +1,25 @@
+# Fresh-task honest runs (experiments/2026-10-13_q2_fresh_honest/PLAN.md), stage 7 (54 runs): zoo C's honest settings (config/pilot_zoo_c_oct11c.yaml, copied below
+# unchanged except the task file and this API stop). Aswin via 0d, verbatim: "go honest". Amendment 1 (SPEND, 10-14): "we don't need to fit under cap, we can just run all of
+# them"; API cap $1,000 in all. This stage's stop: min($170, $975 - the running API total at launch), checked at launch by
+# chain_fresh.py against this value (a mismatch stops the chain); the watcher reserves the largest per-run cost seen so far.
+tasks: config/pilot_tasks_fresh_honest.json
+real_simulator: september_base
+real_arms: [honest_b]
+simulators: []
+simulator_confirmed: true
+policy: openai/gpt-5.6-sol
+server_checks: []                      # no policy servers: --base-urls takes a placeholder
+run: {max_steps: 150, time_limit_s: 2700}
+max_runs_per_server: 30                # one placeholder server
+max_real_runs: 30                      # launch 2's devbox cap
+reference_tries: 3                     # honest_a only; unused here
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+# The policy's own spend: a new run starts only while policy_spend_watch.py's fresh reading, plus the worst case of
+# every run started since it and of the new one, stays under this.
+policy_stop_usd: 170
+# No simulator calls: both limits at 0.
+spend:
+  cap_usd: 0
+  worst_case_limit_usd: 0
+  worst_per_sim_run_usd: 40
+  prior_per_sim_run_usd: 16.8

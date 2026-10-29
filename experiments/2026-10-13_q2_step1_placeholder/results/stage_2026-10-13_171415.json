@@ -1,0 +1,73 @@
+{
+ "POST HOC": true,
+ "git": "efc04e50f9fa43e54b5f541ca4f01d357888a49b",
+ "mode": "stage",
+ "inputs": {
+  "#36 runs.json": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96",
+  "honest runs.json": "f420ed2401dcc776cbbcfd414bbe9d6d1132a3bbd012b529a33aba7fa5ecd068"
+ },
+ "placeholder": "[tool output withheld]",
+ "counts": {
+  "real-attack-e1|runs": 939,
+  "real-attack-e1|source characters in tool messages": 69884423,
+  "real-attack-e1|tool messages": 26807,
+  "real-attack-e1|tool messages already equal to the placeholder": 0,
+  "real-attack-e1|tool messages whose content was not a string": 0,
+  "real-attack-e2|runs": 939,
+  "real-attack-e2|source characters in tool messages": 68842202,
+  "real-attack-e2|tool messages": 26487,
+  "real-attack-e2|tool messages already equal to the placeholder": 0,
+  "real-attack-e2|tool messages whose content was not a string": 0,
+  "real-honest|runs": 990,
+  "real-honest|source characters in tool messages": 97725284,
+  "real-honest|tool messages": 33696,
+  "real-honest|tool messages already equal to the placeholder": 0,
+  "real-honest|tool messages whose content was not a string": 0,
+  "sim-attack|runs": 939,
+  "sim-attack|source characters in tool messages": 65442677,
+  "sim-attack|tool messages": 26397,
+  "sim-attack|tool messages already equal to the placeholder": 0,
+  "sim-attack|tool messages whose content was not a string": 0,
+  "sim-honest|runs": 437,
+  "sim-honest|source characters in tool messages": 39004174,
+  "sim-honest|tool messages": 14249,
+  "sim-honest|tool messages already equal to the placeholder": 0,
+  "sim-honest|tool messages whose content was not a string": 0
+ },
+ "runs by arm": {
+  "real-attack-e1-ph": 939,
+  "real-attack-e2-ph": 939,
+  "real-honest-ph": 990,
+  "sim-attack-ph": 939,
+  "sim-honest-ph": 437
+ },
+ "staged": "2026-10-13_q2_step1_placeholder_inputs_v1",
+ "shards": {
+  "inputs/shard_0.jsonl": {
+   "arm": "real-attack-e1-ph",
+   "runs": 939,
+   "sha256": "28979cc274b795c7d1b7838f32acd3ddbc9046949e0f28dfecbb87923f4c22a7"
+  },
+  "inputs/shard_1.jsonl": {
+   "arm": "real-attack-e2-ph",
+   "runs": 939,
+   "sha256": "1cec444961779f1d75e656793f2666d989ff6a3df2340f8d9b4d8c9570e6b5da"
+  },
+  "inputs/shard_2.jsonl": {
+   "arm": "real-honest-ph",
+   "runs": 990,
+   "sha256": "0f0e19aac6e9c1d770c46e504ebed3f88c75ed158a44a959ad2a763c5faf5c06"
+  },
+  "inputs/shard_3.jsonl": {
+   "arm": "sim-attack-ph",
+   "runs": 939,
+   "sha256": "89a17f252a4a291f85350210ba6fa499e9502247cf1e6925f8410139ca29c1b1"
+  },
+  "inputs/shard_4.jsonl": {
+   "arm": "sim-honest-ph",
+   "runs": 437,
+   "sha256": "1f8ad0dd1bcda0b9c7876751a3f18310aba3070d85738c03dc2301fe453f6511"
+  }
+ },
+ "record_sha256": "978d6e727c57994200edbd6c080b5a562a2037ce93af0a840ec97357a3f22727"
+}

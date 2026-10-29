@@ -1,0 +1,61 @@
+score_qwen3_fx.py, as run (aswin/q2-fixfull @ f9f2ea34; 442 lines, sha256 5735ef6c14802bf19c45aed3463b18be0e5c6f4a0c293ae05b2db28ad18b52c1), kept as a patch against
+experiments/2026-10-08_q3_swap_cue/run_score_fix939.py on main (sha256 e1901dbe38ffbd537d0fea12d67f8c332ec6ff9bda91d37b68de982bd48899eb, last changed at c5df98c15). The full copy is on S3 per results/s3_manifest_v1.json.
+Rebuild and check, from the repo root:
+  patch -o /tmp/score_qwen3_fx.py experiments/2026-10-08_q3_swap_cue/run_score_fix939.py < experiments/2026-10-13_q2_fixfull/score_qwen3_fx.patch
+  shasum -a 256 /tmp/score_qwen3_fx.py   # must print 5735ef6c14802bf19c45aed3463b18be0e5c6f4a0c293ae05b2db28ad18b52c1
+To rerun it, check out the as-run commit instead: the script's own guard needs it tracked and clean.
+
+--- a/experiments/2026-10-08_q3_swap_cue/run_score_fix939.py
++++ b/experiments/2026-10-13_q2_fixfull/score_qwen3_fx.py
+@@ -1,4 +1,8 @@
+-"""POST HOC copy of run_score_swap_frozen.py for plan_fix939_POSTHOC_2026-10-11.md: its own app name, a 1 h timeout, no
++"""Fix-full (PLAN.md here), Qwen3-32B scoring: a copy of ../2026-10-08_q3_swap_cue/run_score_fix939.py (main @ 8c204093) with
++its own app name and fx_ result names; the scoring, checks and frozen protocol are unchanged. One arm per invocation
++(the copy, like the original, requires every arm to hold exactly V1's runs). Its docstring follows.
++
++POST HOC copy of run_score_swap_frozen.py for plan_fix939_POSTHOC_2026-10-11.md: its own app name, a 1 h timeout, no
+ retries, and _POSTHOC_ result names; the scoring and checks are unchanged.
+ 
+ run_score_swap_arms.py under the frozen #36 protocol (analyze_q3_attack.evaluate). Modal CPU; saved activations only;
+@@ -41,7 +45,7 @@
+ 
+ HERE = Path(__file__).parent
+ REPO = HERE.parent.parent
+-APP = "probe-shift_aswin-surya_sub-q3swapcue_fix939score_kill-2026-11-10"
++APP = "probe-shift_aswin-surya_sub-q2-fixfull_qwen3score_kill-2026-11-13"
+ ACTS = "probe-shift_aswin-surya_sub-la-activations"
+ WORK = "probe-shift_aswin-surya_sub-q3attack_work_kill-2026-11-06"
+ BASE_RUN = "2026-10-06_181548"
+@@ -357,7 +361,7 @@
+         rec = {"stamp": stamp, "git": head, "arms": spec, "layout": out["layout"], "unpinned_v1": out["unpinned_v1"],
+                "check_v1_vs_committed": gate, "check_prefix": prefix, "check_chunks": out["chunk_check"],
+                "runs_with_a_change": {lab: sum(v is not None for (l, _), v in first.items() if l == lab) for lab in spec if lab != "V1"}}
+-        with (HERE / "results" / f"fix939_checks_POSTHOC_{stamp}.json").open("x") as f:
++        with (HERE / "results" / f"fx_checks_POSTHOC_{stamp}.json").open("x") as f:
+             f.write(json.dumps(rec, indent=1))
+         print(json.dumps(rec, indent=1))
+         if any(bad.values()) or missing:
+@@ -409,7 +413,7 @@
+            "seconds": (datetime.now() - t0).total_seconds()}
+     rec["note"] = ("pairs[...]['catch'] is the earlier test-fold-calibrated catch (outer scores against the evaluated fold's honest "
+                    "percentiles); frozen_catch follows the #36 protocol and is the one to quote")
+-    per_run = HERE / "results" / f"fix939_frozen_runs_POSTHOC_{stamp}.jsonl"  # every run's scores, fold, task and first change, for re-analysis
++    per_run = HERE / "results" / f"fx_frozen_runs_POSTHOC_{stamp}.jsonl"  # every run's scores, fold, task and first change, for re-analysis
+     with per_run.open("x") as f:
+         for r in out["runs"]:
+             fcp = first.get((r["label"], r["key"]))
+@@ -419,12 +423,12 @@
+     rec["per_run_file"] = per_run.name
+     import gzip
+ 
+-    per_call = HERE / "results" / f"fix939_frozen_calls_POSTHOC_{stamp}.jsonl.gz"  # every call's outer score, for any later localization
++    per_call = HERE / "results" / f"fx_frozen_calls_POSTHOC_{stamp}.jsonl.gz"  # every call's outer score, for any later localization
+     with gzip.open(per_call, "xt") as f:
+         for c in out["calls"]:
+             f.write(json.dumps(c) + "\n")
+     rec["per_call_file"] = per_call.name
+-    path, text = HERE / "results" / f"fix939_frozen_POSTHOC_{stamp}.json", json.dumps(rec, indent=1)
++    path, text = HERE / "results" / f"fx_frozen_POSTHOC_{stamp}.json", json.dumps(rec, indent=1)
+     with path.open("x") as f:
+         f.write(text)
+     print(json.dumps({"check_v1_vs_committed": gate, "check_prefix": prefix, "check_chunks": out["chunk_check"],

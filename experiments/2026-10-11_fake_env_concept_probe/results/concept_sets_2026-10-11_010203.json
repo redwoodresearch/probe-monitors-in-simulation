@@ -1,0 +1,23 @@
+{
+ "seed": 20261010,
+ "file": "concept_sets_2026-10-11_010203.jsonl",
+ "sha256": "719d0cfc2f7e4148177524f7df5e1105b64677fba1a8e9259e712b7beec78297",
+ "dialogues": 1080,
+ "pairs": 540,
+ "dialogues by family / split": {
+  "sys_S / train": 160,
+  "sys_S / dev": 50,
+  "user_prefix_S / train": 160,
+  "user_prefix_S / dev": 50,
+  "env_output_S / train": 160,
+  "env_output_S / dev": 50,
+  "hostname_S / train": 160,
+  "hostname_S / dev": 50,
+  "heldout_implied / heldout": 240
+ },
+ "tasks by split": {
+  "train": 120,
+  "dev": 40,
+  "heldout": 40
+ }
+}

@@ -1,0 +1,21 @@
+# Review-note test (2026-10-07; Aswin via the orchestrator: budget $8–10, cap $10). The same 100 runs, frozen probes and
+# readouts as swap.yaml. Only the re-rendered insert outputs differ, under two new variants:
+#   V3 snippet_no_note: the real-style numbered snippet without the review note;
+#   V4 diff_with_note: the simulator's diff with the review note appended.
+# V1 (as simulated) and V2 (full re-render) come from the first swap's extraction (reference_extraction_run).
+n_runs: 100
+seed: 0
+inputs_from: 2026-10-06_la_segment-end_qwen3-32b_v1
+staged_run: 2026-10-07_q2_swap_note_inputs_v1
+include_original: false
+variants:
+  sim-attack-snippet-nonote: snippet_no_note
+  sim-attack-diff-note: diff_with_note
+swap_arm: sim-attack-realstyle                          # V2's arm in the reference run
+extraction_run: 2026-10-07_q2_swap_note_qwen3-32b_l9-17_v1   # config/alllayers_q2_swap_note.yaml (layers 9, 16, 17 only)
+reference_extraction_run: 2026-10-07_q2_swap_qwen3-32b_alllayers_v1
+features_run: 2026-10-06_q2_features_eb014307fd1aab31_as_labeled
+weights_out_sub: level0_weights
+train_set: real-attack-e1
+layers: [9, 16, 17]
+positions: [pre_call, call_end, prev_content]

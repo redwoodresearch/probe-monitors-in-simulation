@@ -1,0 +1,11 @@
+# Overnight chain: sp493_g7_sim_y_s2 staged by stage_chain.py (record chain_stage_sp493_g7_sim_y_s2_2026-10-16_020637.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: sp493_g7_sim_y_s2_extract_v1
+inputs: sp493_g7_sim_y_s2_v1
+inputs_sha256:
+  repro-c.jsonl: 0298552fa9dea52b8bd4a118834cd2f5386e762e04863aac5c7b8e60f3e3f17f
+  sim_attack@september.jsonl: 09e4c574ac0cb8d2fcc61b6eca9bf5562e548b141c8f6b05d147a90f432add81
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 8
+pad_to: 4096

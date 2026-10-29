@@ -1,0 +1,13 @@
+# Overnight chain: nm360_s1_main_s1 staged by stage_chain.py (record chain_stage_nm360_s1_main_s1_2026-10-14_231741.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: nm360_s1_main_s1_extract_v1
+inputs: nm360_s1_main_s1_v1
+inputs_sha256:
+  attack.jsonl: 87255a587d3555014f0433694d7fae6ea7eb7ae2a3cb271d08af0412c5fee08f
+  honest_a.jsonl: d5fc5049749f2c3031c15562eab9ab5e1aefe97d44ed32d417c7f50529ff4479
+  honest_b.jsonl: fc58bc81a76606df6153547c1dcbf490d11db0d76ae218a91b6184fe5f184b78
+  repro-c.jsonl: 5a1d3049467a60241af3d272de833145912f31cb6f522dfeada4d511bacf0809
+model: Qwen/Qwen3.5-27B
+shards: 32
+chunk_size: 8
+pad_to: 4096

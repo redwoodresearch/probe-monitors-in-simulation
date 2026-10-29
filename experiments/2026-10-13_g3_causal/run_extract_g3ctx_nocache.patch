@@ -1,0 +1,184 @@
+The causal test's no-cache extractor, run_extract_g3ctx_nocache.py as run (first committed at 69d6df9a, byte-identical at
+b32c0c6e on aswin/q2-g3-causal). Kept here as a patch for the PR size cap (623 lines). The full copy (sha256 71d0daca3b77bc8e2f57ea9d525319603bbfb5f3b6d35a7f22705870330706c8,
+38440 bytes) is on S3 via results/s3_manifest_v1.json.
+Base: experiments/2026-10-13_g3_causal/run_extract_g3ctx.py, the cached extractor (sha256 b3697039674e333a17c7f02c4da0846d78086de4b93766a6096655483a6cfe89, first committed at eb14f0c2), on S3 only via
+the same manifest. Fetch it to that path, then rebuild from the repository root:
+  patch -o experiments/2026-10-13_g3_causal/run_extract_g3ctx_nocache.py experiments/2026-10-13_g3_causal/run_extract_g3ctx.py experiments/2026-10-13_g3_causal/run_extract_g3ctx_nocache.patch
+To rerun, check out the as-run branch aswin/q2-g3-causal instead: the extractor requires its own source committed.
+
+--- experiments/2026-10-13_g3_causal/run_extract_g3ctx.py
++++ experiments/2026-10-13_g3_causal/run_extract_g3ctx_nocache.py
+@@ -1,4 +1,10 @@
+-"""G3 causal test (PLAN.md here, POST HOC): every tool output G3's extraction kept is re-read by Seed-OSS-36B behind one fixed
++"""G3 causal test, NO-CACHE re-extraction (PLAN.md here, POST HOC; its Deviation section). This is run_extract_g3ctx.py
++(a2c54174) with the prefix KV cache removed. Each row is one full forward over its own minimal transcript, the same path as
++G3's in-history extraction, because the cached path failed the logit-level check (results/ctx_verify_cache_2026-10-13_142122.json:
++max |Δlogit| 0.81). Changed: a new app and run name; 48 shards; each shard renders the next run in a background thread
++while the GPU reads the current one; check has no cache counters. Everything else, render and score included, is unchanged.
++
++Original docstring: every tool output G3's extraction kept is re-read by Seed-OSS-36B behind one fixed
+ minimal context. The context is the run's messages before its first assistant turn (system prompt and task), an assistant
+ turn holding only that output's tool call (empty content), then the output. The arms are real honest, real e1, real e2
+ and as-is simulated, over the 939 cells.
+@@ -38,7 +44,7 @@
+ import modal
+ 
+ HERE = Path(__file__).parent
+-APP = "probe-shift_aswin-surya_sub-q2-g3ctx_extract_kill-2026-11-12"
++APP = "probe-shift_aswin-surya_sub-q2-g3ctxnc_extract_kill-2026-11-12"
+ ACTS = "probe-shift_aswin-surya_sub-la-activations"  # read-only: #36's staged inputs
+ G3OUT = "probe-shift_aswin-surya_sub-q2-g3_acts_kill-2026-11-12"  # read-only: G3's dumps (the kept rows)
+ G3WORK = "probe-shift_aswin-surya_sub-q2-g3_work_kill-2026-11-12"  # read-only: G3's fit (the frozen probes)
+@@ -47,14 +53,14 @@
+ DUMP = "2026-10-06_la_segment-end_qwen3-32b_v1"
+ G3RUN = {"real-honest": "2026-10-13_g3_real_seed-oss-36b_v1", "real-attack-e1": "2026-10-13_g3_real_seed-oss-36b_v1",
+          "real-attack-e2": "2026-10-13_g3_real_seed-oss-36b_v1", "sim-attack": "2026-10-13_g3_sim_seed-oss-36b_v1"}
+-RUN = "2026-10-13_g3_ctx_seed-oss-36b_v1"
++RUN = "2026-10-13_g3_ctxnc_seed-oss-36b_v1"
+ FIT_RUN = "2026-10-13_111525"
+ MODEL, REVISION, CTX, H, N_LAYERS = "ByteDance-Seed/Seed-OSS-36B-Instruct", "497f1dca95ebdec98e41d517b9f060ee753c902f", 65536, 5120, 64
+ LAYERS = [16, 24, 32, 40, 48, 56, 63]
+ CHOSEN = {0: 40, 1: 63, 2: 63, 3: 63, 4: 63}  # forecast.json's chosen layer by test fold
+ ARMS = ("real-honest", "real-attack-e1", "real-attack-e2", "sim-attack")
+ EXPECT = {"real-honest": 990, "real-attack-e1": 939, "real-attack-e2": 939, "sim-attack": 939}
+-GPU, CHUNK, TIMEOUT_S, SHARDS, VERIFY_ROWS, VERIFY_TOL = "H200", 25, 3 * 3600, 32, 2, 2e-2
++GPU, CHUNK, TIMEOUT_S, SHARDS = "H200", 25, 3 * 3600, 48
+ SENT = "G3SPAN{:06d}Q"
+ PIP_CPU = ["transformers==4.57.1", "jinja2==3.1.6", "huggingface_hub[hf_transfer]==0.35.3", "numpy"]
+ PIP_GPU = ["torch==2.8.0", "accelerate==1.10.1", *PIP_CPU]
+@@ -291,7 +297,7 @@
+ def extract_shard(cfg: dict, shard: int, cohort: list[dict]) -> list[dict]:
+     import numpy as np
+     import torch
+-    from transformers import AutoModelForCausalLM, AutoTokenizer, DynamicCache
++    from transformers import AutoModelForCausalLM, AutoTokenizer
+ 
+     items = work_items(cohort)
+     if ids_sha((arm, x["key"]) for arm, _, x in items) != cfg["ids sha256"]:
+@@ -323,7 +329,7 @@
+         idx.unlink(missing_ok=True)
+     out_vol.commit()
+     chunk = len(list((run_dir / "chunks").glob(f"shard{shard:03d}_chunk*.done")))
+-    buf, buf_meta, timing, verify = {l: [] for l in LAYERS}, [], [], []
++    buf, buf_meta, timing = {l: [] for l in LAYERS}, [], []
+     got, want = {}, [None]
+ 
+     def hook_for(layer):
+@@ -368,45 +374,34 @@
+         out_vol.commit()
+ 
+     t_all = time.time()
++    from concurrent.futures import ThreadPoolExecutor
++    todo = [(label, stem, it) for label, stem, it in mine if not (run_dir / "meta" / label / f"{stem}.json").exists()]
++    pool = ThreadPoolExecutor(1)  # renders the next run on the CPU while the GPU reads the current one
++    nxt = pool.submit(render_run, tok, special, special_text, todo[0][2], g3_kept(todo[0][0], todo[0][1])) if todo else None
+     try:
+-        for n, (label, stem, it) in enumerate(mine, 1):
+-            if (run_dir / "meta" / label / f"{stem}.json").exists():
+-                continue
+-            pre, rows, lost = render_run(tok, special, special_text, it, g3_kept(label, stem))
+-            P = len(pre); t0 = time.time(); rec = []; run_verify = []
++        for n, (label, stem, it) in enumerate(todo, 1):
++            pre, rows, lost = nxt.result()
++            if n < len(todo):
++                nxt = pool.submit(render_run, tok, special, special_text, todo[n][2], g3_kept(todo[n][0], todo[n][1]))
++            t0 = time.time(); rec = []
+             with torch.inference_mode():
+-                cache = DynamicCache() if P else None
+-                if P:
+-                    want[0] = None
+-                    base(input_ids=torch.tensor([pre], device="cuda"), past_key_values=cache, use_cache=True)
+-                for x in rows:
+-                    suf = x["ids"][P: x["readout"] + 1]
+-                    want[0] = x["readout"] - P; got.clear()
+-                    if P:
+-                        base(input_ids=torch.tensor([suf], device="cuda"), past_key_values=cache, use_cache=True)
+-                        cache.crop(P)
+-                    else:
+-                        base(input_ids=torch.tensor([suf], device="cuda"), use_cache=False)
+-                    vec = {l: got[l] for l in LAYERS}
+-                    if len(verify) < VERIFY_ROWS:  # the cached forward against a full one
+-                        want[0] = x["readout"]; got.clear()
+-                        base(input_ids=torch.tensor([x["ids"][: x["readout"] + 1]], device="cuda"), use_cache=False)
+-                        verify.append(max(float(np.abs(vec[l].astype(np.float32) - got[l].astype(np.float32)).max() / (np.abs(got[l].astype(np.float32)).max() + 1e-6)) for l in LAYERS))
+-                        run_verify.append(verify[-1])
++                for x in rows:  # one full forward per row: no cache (the cached path failed the logit check)
++                    want[0] = x["readout"]; got.clear()
++                    base(input_ids=torch.tensor([x["ids"][: x["readout"] + 1]], device="cuda"), use_cache=False)
+                     for l in LAYERS:
+-                        buf[l].append(vec[l])
++                        buf[l].append(got[l])
+                     rec.append({"step": x["step"], "action": x["action"], "tool": x["tool"], "row": len(rec), "readout": x["readout"],
+                                 "tokens": x["readout"] + 1, "sha256": x["sha256"]})
+                 want[0] = None
+-                del cache
+-            timing.append([P, sum(r["tokens"] - P for r in rec), round(time.time() - t0, 3)])
++            timing.append([0, sum(r["tokens"] for r in rec), round(time.time() - t0, 3)])
+             buf_meta.append({"key": it["key"], "arm": label, "filename": stem, **{k: it.get(k) for k in ("cohort", "main_task", "side_task", "cell")},
+-                             "prefix tokens": P, "lost": lost, "n_rows": len(rec), "rows": rec, "cache vs full forward": run_verify})
++                             "prefix tokens": 0, "lost": lost, "n_rows": len(rec), "rows": rec})
+             if len(buf_meta) == cfg["chunk_size"]:
+                 flush()
+-                print(f"shard {shard}: {n}/{len(mine)}", flush=True)
++                print(f"shard {shard}: {n}/{len(todo)}", flush=True)
+         flush()
+     finally:
++        pool.shutdown(wait=False)
+         for h_ in handles:
+             h_.remove()
+     stats = []
+@@ -414,7 +409,7 @@
+         c = json.loads(p.read_text())
+         stats.append({"chunk": p.stem, "transcripts": len(c["transcripts"]), "rows": c["rows"], "nonfinite": c["nonfinite"]})
+     summary = {"shard": shard, "transcripts": len(mine), "chunks": stats, "seconds": round(time.time() - t_all),
+-               "cache vs full forward: max relative difference": verify, "[prefix tokens, suffix tokens, seconds]": timing}
++               "[prefix tokens, suffix tokens, seconds]": timing}
+     (run_dir / "stats").mkdir(exist_ok=True)
+     (run_dir / "stats" / f"shard_{shard}.json").write_text(json.dumps(summary))
+     out_vol.commit()
+@@ -440,23 +435,17 @@
+             problems["layer file with the wrong shape"] += x.shape != (c["rows"], H)
+             nonfinite += int((~np.isfinite(x)).sum())
+         rows_total += c["rows"]
+-    verify, shard_rows, shard_verified = [], Counter(), Counter()
+     for arm_dir in sorted((d / "meta").iterdir()):
+         for f in arm_dir.glob("*.json"):
+             m = json.loads(f.read_text()); metas[arm_dir.name] += 1; rows_meta[arm_dir.name] += m["n_rows"]
+-            sh = m["chunk"].split("_")[0]; shard_rows[sh] += m["n_rows"]; shard_verified[sh] += len(m.get("cache vs full forward", []))
+-            verify += m.get("cache vs full forward", [])
+             problems["rows not 0..n-1"] += [r["row"] for r in m["rows"]] != list(range(m["n_rows"]))
+             problems["meta not in its chunk's index"] += index.pop((arm_dir.name, m["filename"], m["chunk"]), None) != (m["row_start"], m["n_rows"])
+     problems["index entries with no meta"] += len(index)
+     problems["transcripts by arm != expected"] += (sum(metas.values()) != expected["total"]) if "total" in expected else (dict(metas) != expected)
+     problems["rows by arm != the render record's"] += rows_expected is not None and dict(rows_meta) != rows_expected
+-    problems["cache vs full forward above tolerance or not finite"] += sum(not (v <= VERIFY_TOL) for v in verify)
+-    problems["shards with rows but no cache verification"] += sum(1 for sh, n in shard_rows.items() if n and not shard_verified[sh])
+     timing = [t for f in sorted((d / "stats").glob("shard_*.json")) for t in json.loads(f.read_text())["[prefix tokens, suffix tokens, seconds]"]]
+     return {"run": run, "meta files by arm": dict(metas), "rows by arm": dict(rows_meta), "rows (chunks)": rows_total,
+-            "non-finite values (every layer, recounted)": nonfinite, "problems": dict(problems),
+-            "cache vs full forward: max relative difference": verify, "prefix tokens": sum(t[0] for t in timing),
++            "non-finite values (every layer, recounted)": nonfinite, "problems": dict(problems), "prefix tokens": sum(t[0] for t in timing),
+             "suffix tokens": sum(t[1] for t in timing), "forward seconds": round(sum(t[2] for t in timing), 1)}
+ 
+ 
+@@ -559,7 +548,7 @@
+     if mode == "score":
+         ck = json.loads(Path(check_record).read_text()) if check_record else None
+         if test or not ck or ck.get("run") != run or ck.get("render record") != Path(render_record).name or any(ck["problems"].values()) \
+-                or ck["non-finite values (every layer, recounted)"] or ck["meta files by arm"] != by_arm or not ck["cache vs full forward: max relative difference"]:
++                or ck["non-finite values (every layer, recounted)"] or ck["meta files by arm"] != by_arm:
+             raise SystemExit("--check-record: score needs a clean full check of this run (no --test)")
+         if hashlib.sha256(Path(fit_runs).read_bytes()).hexdigest() != PIN["fit runs.json"]:
+             raise SystemExit("--fit-runs is not the G3 fit's runs.json")
+@@ -628,8 +617,7 @@
+             stats.append({"shard": shard, "unreachable": True})
+     ok = [x for x in stats if "chunks" in x]
+     summary = {"shards": stats, "n_ok": len(ok), "n_crashed": len(stats) - len(ok), "transcripts": sum(c["transcripts"] for x in ok for c in x["chunks"]),
+-               "rows": sum(c["rows"] for x in ok for c in x["chunks"]), "nonfinite": sum(c["nonfinite"] for x in ok for c in x["chunks"]),
+-               "cache vs full forward: max relative difference": [v for x in ok for v in x["cache vs full forward: max relative difference"]]}
++               "rows": sum(c["rows"] for x in ok for c in x["chunks"]), "nonfinite": sum(c["nonfinite"] for x in ok for c in x["chunks"])}
+     write(f"ctx_summary_{run}", summary)
+-    if summary["n_crashed"] or summary["nonfinite"] or any(not (v <= VERIFY_TOL) for v in summary["cache vs full forward: max relative difference"]):
+-        raise SystemExit("extraction failed: a crashed or unreachable shard, a non-finite value, or the cache check above tolerance")
++    if summary["n_crashed"] or summary["nonfinite"]:
++        raise SystemExit("extraction failed: a crashed or unreachable shard, or a non-finite value (relaunch resumes)")

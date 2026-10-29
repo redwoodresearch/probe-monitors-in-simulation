@@ -1,0 +1,15 @@
+{
+ "target": "ilnm_s2_run3_s3",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "ilnm_s2_run3_s3",
+   "arm": "attack",
+   "staged_file": "/ev/ilnm_s2_run3_s3_v1/inputs/attack.jsonl",
+   "staged_sha": "272cf50fe33251ee8874182cf9af5172a525e17aa20d7fe9cc7cbec97f8c29b4",
+   "epochs": 23,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

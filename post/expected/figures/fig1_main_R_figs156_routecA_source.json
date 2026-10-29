@@ -1,0 +1,1763 @@
+{
+ "figure": "fig1_main_R",
+ "git": "85204152c48c528ecf1b30dd2079cd60da51e5e7",
+ "inputs": {
+  "record": {
+   "file": "alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json",
+   "sha256": "54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a",
+   "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/routec_A_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json.gz@a936a5d9762763f9feed351aebdeeec2d8114f21 (decompressed)"
+  },
+  "pw": {
+   "file": "pw_shares_pooled_all_origins_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327_routeC_2026-10-20_003446.json",
+   "sha256": "32a6549f1a40319442f703b3fe694728bdcb62cb2de8781c634f1f888b436bae",
+   "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/pw_shares_routec/pw_shares_pooled_all_origins_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327_routeC_2026-10-20_003446.json@98222e0c5a4ee57c9aa213b9e37b110ba9ebe72e"
+  },
+  "group": {
+   "file": "group_catch_2026-10-20_003430.json",
+   "sha256": "f9dfda2349e2ead23b543eccd7a722aa125513e50e766e141eb61b30c3a7fae1",
+   "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430.json@65a6e44deaecee8e730214b4979e7aa9019a836e"
+  }
+ },
+ "values": [
+  {
+   "input": "pw",
+   "key": [
+    "pass"
+   ],
+   "value": true
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "own_all_rs_uncut_L48 R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "real_mean"
+   ],
+   "point": 0.9972608024691358,
+   "ci95": [
+    0.9948850240577386,
+    0.9991619394013489
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "own_all_rs_uncut_L48 R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "sim"
+   ],
+   "point": 0.9938271604938272,
+   "ci95": [
+    0.9885522469704657,
+    0.9979861910241657
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "own_all_rs_uncut_L48 R",
+    "S_old (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 190
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "own_all_rs_uncut_L48 R",
+    "S_new (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 303
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "own_all_rs_uncut_L48 R",
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 335
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "own_all_rs_uncut_L48 R",
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 485
+  },
+  {
+   "input": "pw",
+   "key": [
+    "shares",
+    "own_all_rs_uncut_L48 R",
+    "0.01",
+    "B",
+    "registered_with_no_unit_runs",
+    "run_weighted"
+   ],
+   "value": 0.3214472994231778
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "sol_a_uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "real_mean"
+   ],
+   "point": 0.9360821759259258,
+   "ci95": [
+    0.9184645688321733,
+    0.9536416074359436
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "sol_a_uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "sim"
+   ],
+   "point": 0.9468171296296296,
+   "ci95": [
+    0.9081309620390089,
+    0.9682410298706119
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "sol_a_uncut R",
+    "S_old (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 190
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "sol_a_uncut R",
+    "S_new (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 303
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "sol_a_uncut R",
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 335
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "sol_a_uncut R",
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 485
+  },
+  {
+   "input": "pw",
+   "key": [
+    "shares",
+    "sol_a_uncut R",
+    "0.01",
+    "B",
+    "registered_with_no_unit_runs",
+    "run_weighted"
+   ],
+   "value": 0.3319349764027268
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "FIBS|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "real_mean"
+   ],
+   "point": 0.608092895723104,
+   "ci95": [
+    0.5710179315117785,
+    0.6483142452572904
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "FIBS|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "sim"
+   ],
+   "point": 0.5834738756613757,
+   "ci95": [
+    0.526468779803596,
+    0.628175692142951
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "FIBS|uncut R",
+    "S_old (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 190
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "FIBS|uncut R",
+    "S_new (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 303
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "FIBS|uncut R",
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 335
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "FIBS|uncut R",
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 485
+  },
+  {
+   "input": "pw",
+   "key": [
+    "shares",
+    "FIBS|uncut R",
+    "0.01",
+    "B",
+    "registered_with_no_unit_runs",
+    "run_weighted"
+   ],
+   "value": 0.3198741478762454
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "harmfulness|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "real_mean"
+   ],
+   "point": 0.5899808476631394,
+   "ci95": [
+    0.5590337648452869,
+    0.6239954152563032
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "harmfulness|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "sim"
+   ],
+   "point": 0.5855213844797178,
+   "ci95": [
+    0.5472382278977483,
+    0.6314480068622678
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "harmfulness|uncut R",
+    "S_old (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 190
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "harmfulness|uncut R",
+    "S_new (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 303
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "harmfulness|uncut R",
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 335
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "harmfulness|uncut R",
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 485
+  },
+  {
+   "input": "pw",
+   "key": [
+    "shares",
+    "harmfulness|uncut R",
+    "0.01",
+    "B",
+    "registered_with_no_unit_runs",
+    "run_weighted"
+   ],
+   "value": 0.3046670162558993
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "refusal|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "real_mean"
+   ],
+   "point": 0.3289654982363316,
+   "ci95": [
+    0.28287892787929125,
+    0.3631837876338934
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "refusal|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "sim"
+   ],
+   "point": 0.29498732363315694,
+   "ci95": [
+    0.25023330277268435,
+    0.3465691516490989
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "refusal|uncut R",
+    "S_old (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 190
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "refusal|uncut R",
+    "S_new (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 303
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "refusal|uncut R",
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 335
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "refusal|uncut R",
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 485
+  },
+  {
+   "input": "pw",
+   "key": [
+    "shares",
+    "refusal|uncut R",
+    "0.01",
+    "B",
+    "registered_with_no_unit_runs",
+    "run_weighted"
+   ],
+   "value": 0.46775039328788676
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "high-stakes|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "real_mean"
+   ],
+   "point": 0.3846023478835979,
+   "ci95": [
+    0.35246480270164326,
+    0.4210280344917421
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "high-stakes|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "catch",
+    "sim"
+   ],
+   "point": 0.36522404100529104,
+   "ci95": [
+    0.2999114047519071,
+    0.4249472425544473
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "high-stakes|uncut R",
+    "S_old (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 190
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "high-stakes|uncut R",
+    "S_new (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 303
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "high-stakes|uncut R",
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 335
+  },
+  {
+   "input": "record",
+   "key": [
+    "coverage",
+    "high-stakes|uncut R",
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+    "coverage",
+    "cohort_cells"
+   ],
+   "value": 485
+  },
+  {
+   "input": "pw",
+   "key": [
+    "shares",
+    "high-stakes|uncut R",
+    "0.01",
+    "B",
+    "registered_with_no_unit_runs",
+    "run_weighted"
+   ],
+   "value": 0.3382275825904562
+  },
+  {
+   "input": "group",
+   "key": [
+    "gate",
+    "pass"
+   ],
+   "value": true
+  },
+  {
+   "input": "group",
+   "key": [
+    "groups",
+    "six|R",
+    "catch",
+    "real_mean"
+   ],
+   "point": 0.6408307613168723,
+   "ci95": [
+    0.6254531567909466,
+    0.6568688053989992
+   ]
+  },
+  {
+   "input": "group",
+   "key": [
+    "groups",
+    "six|R",
+    "catch",
+    "sim"
+   ],
+   "point": 0.6283084858171665,
+   "ci95": [
+    0.6055167634215661,
+    0.6508186731418094
+   ]
+  },
+  {
+   "input": "group",
+   "key": [
+    "groups",
+    "auroc_subset|R",
+    "catch",
+    "real_mean"
+   ],
+   "point": 0.7828541804453263,
+   "ci95": [
+    0.7677098649773239,
+    0.8000271760650828
+   ]
+  },
+  {
+   "input": "group",
+   "key": [
+    "groups",
+    "auroc_subset|R",
+    "catch",
+    "sim"
+   ],
+   "point": 0.7774098875661376,
+   "ci95": [
+    0.7564971011892498,
+    0.7972397256657361
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "own_all_rs_uncut_L48 R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.003433641975308599,
+   "ci95": [
+    -0.00797687861271668,
+    0.00028768699654779795
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "own_all_rs_uncut_L48 R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": -0.0010802469135802184,
+   "ci95": [
+    -0.005601088032589038,
+    0.0033257927300850837
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "sol_a_uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": 0.010734953703703809,
+   "ci95": [
+    -0.029162299439151416,
+    0.03736001860330074
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "sol_a_uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": -0.0014853395061728003,
+   "ci95": [
+    -0.020196330107305416,
+    0.019122411532670337
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "FIBS|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.024619020061728336,
+   "ci95": [
+    -0.0858126280490232,
+    0.023091647501650714
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "FIBS|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": -0.0032310956790123635,
+   "ci95": [
+    -0.03747631949573203,
+    0.03573142269871613
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "harmfulness|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.004459463183421608,
+   "ci95": [
+    -0.049598416482805475,
+    0.044689830757328526
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "harmfulness|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": 0.023739252645502584,
+   "ci95": [
+    -0.010080217259366527,
+    0.05733855944263551
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "refusal|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.03397817460317465,
+   "ci95": [
+    -0.08640622013801721,
+    0.029392142961200875
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "refusal|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": 0.019427910052910113,
+   "ci95": [
+    -0.020490601268470306,
+    0.05456500979887003
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "high-stakes|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.019378306878306828,
+   "ci95": [
+    -0.09065080894786749,
+    0.04255436718233903
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "high-stakes|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": 0.017352843915343974,
+   "ci95": [
+    -0.025666200448875277,
+    0.0502534710533491
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "headline_six_full|R",
+    "S"
+   ],
+   "point": -0.012522275499706035,
+   "ci95": [
+    -0.03775201494726958,
+    0.011352983287478254
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "headline_six_full|R",
+    "Y"
+   ],
+   "point": 0.009120554085831881,
+   "ci95": [
+    -0.006148241377834103,
+    0.023237604378025006
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "auroc06_subset|R",
+    "S"
+   ],
+   "point": -0.0054442928791886835,
+   "ci95": [
+    -0.028782179559593165,
+    0.014404592445202813
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "auroc06_subset|R",
+    "Y"
+   ],
+   "point": 0.0044856426366843005,
+   "ci95": [
+    -0.0093396473097551,
+    0.020056830736935097
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "own_all_rs_uncut_L48 C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.003501157407407529,
+   "ci95": [
+    -0.013076137104793101,
+    -0.00017240884437225165
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "own_all_rs_uncut_L48 C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": -0.0006365740740741366,
+   "ci95": [
+    -0.004305768106472246,
+    0.003092182030338342
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "sol_a_uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.0490410052910053,
+   "ci95": [
+    -0.10759092930712072,
+    0.011499365808895276
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "sol_a_uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": 0.006084656084656137,
+   "ci95": [
+    -0.025019887994446474,
+    0.04427562942530358
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "FIBS|uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": 0.021594604276895746,
+   "ci95": [
+    -0.02208167633364656,
+    0.06126024418354981
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "FIBS|uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": 0.012054949294532658,
+   "ci95": [
+    -0.027691647533140268,
+    0.0398417356683018
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "harmfulness|uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.02168554343033524,
+   "ci95": [
+    -0.06398154362998103,
+    0.022390973107509364
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "harmfulness|uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": 0.007764274691357764,
+   "ci95": [
+    -0.026342553274639868,
+    0.04772402767110418
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "refusal|uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": 0.010812803130511528,
+   "ci95": [
+    -0.0451740199026129,
+    0.07222018793115706
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "refusal|uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": -0.009414958112874738,
+   "ci95": [
+    -0.04718599571013679,
+    0.03140050898961314
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "high-stakes|uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.018490961199294498,
+   "ci95": [
+    -0.06870593492790693,
+    0.032881908309708364
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "high-stakes|uncut C",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": -0.027138447971781332,
+   "ci95": [
+    -0.06495767452110288,
+    0.013471269701715725
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "headline_six_full|C",
+    "S"
+   ],
+   "point": -0.010051876653439215,
+   "ci95": [
+    -0.0301915047848764,
+    0.010137020327444705
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "headline_six_full|C",
+    "Y"
+   ],
+   "point": -0.0018810166813639413,
+   "ci95": [
+    -0.015982937326423204,
+    0.013275829222298014
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "auroc06_subset|C",
+    "S"
+   ],
+   "point": -0.013158275462963082,
+   "ci95": [
+    -0.035137442129629694,
+    0.008926110551998176
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "auroc06_subset|C",
+    "Y"
+   ],
+   "point": 0.0063168264991181056,
+   "ci95": [
+    -0.009125418371131542,
+    0.02229968530266632
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "own_all_rs_uncut_L48 R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.003433641975308599,
+   "ci95": [
+    -0.00797687861271668,
+    0.00028768699654779795
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "own_all_rs_uncut_L48 R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": -0.0010802469135802184,
+   "ci95": [
+    -0.005601088032589038,
+    0.0033257927300850837
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "sol_a_uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": 0.010734953703703809,
+   "ci95": [
+    -0.029162299439151416,
+    0.03736001860330074
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "sol_a_uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": -0.0014853395061728003,
+   "ci95": [
+    -0.020196330107305416,
+    0.019122411532670337
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "FIBS|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.024619020061728336,
+   "ci95": [
+    -0.0858126280490232,
+    0.023091647501650714
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "FIBS|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": -0.0032310956790123635,
+   "ci95": [
+    -0.03747631949573203,
+    0.03573142269871613
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "harmfulness|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.004459463183421608,
+   "ci95": [
+    -0.049598416482805475,
+    0.044689830757328526
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "harmfulness|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": 0.023739252645502584,
+   "ci95": [
+    -0.010080217259366527,
+    0.05733855944263551
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "refusal|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.03397817460317465,
+   "ci95": [
+    -0.08640622013801721,
+    0.029392142961200875
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "refusal|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": 0.019427910052910113,
+   "ci95": [
+    -0.020490601268470306,
+    0.05456500979887003
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "high-stakes|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "delta_full"
+   ],
+   "point": -0.019378306878306828,
+   "ci95": [
+    -0.09065080894786749,
+    0.04255436718233903
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "pooled",
+    "high-stakes|uncut R",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "gap",
+    "run2_minus_run1_at_tauB"
+   ],
+   "point": 0.017352843915343974,
+   "ci95": [
+    -0.025666200448875277,
+    0.0502534710533491
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "headline_six_full|R",
+    "S"
+   ],
+   "point": -0.012522275499706035,
+   "ci95": [
+    -0.03775201494726958,
+    0.011352983287478254
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "headline_six_full|R",
+    "Y"
+   ],
+   "point": 0.009120554085831881,
+   "ci95": [
+    -0.006148241377834103,
+    0.023237604378025006
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "auroc06_subset|R",
+    "S"
+   ],
+   "point": -0.0054442928791886835,
+   "ci95": [
+    -0.028782179559593165,
+    0.014404592445202813
+   ]
+  },
+  {
+   "input": "record",
+   "key": [
+    "coheadline_signed",
+    "pooled_all_origins",
+    "joint",
+    "0.01",
+    "auroc06_subset|R",
+    "Y"
+   ],
+   "point": 0.0044856426366843005,
+   "ci95": [
+    -0.0093396473097551,
+    0.020056830736935097
+   ]
+  }
+ ],
+ "build_profile": {
+  "length_label": "Full length (no 32k cut)",
+  "probes": [
+   {
+    "key": "own_all_rs_uncut_L48",
+    "display": "own_all_rs",
+    "train": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "whole-transcript retrain (uncut) of own_all_rs_L48",
+    "note_short": "",
+    "on_policy": true,
+    "sens_label": "sensitivity: real run 1 shares the training launch on S_old, S_new and S_newmains (its training sets; S_paper493 is scored only; 09 RULE @ 13af1da9e)",
+    "train_short": "(i) trained on whole transcripts",
+    "train_by_readout": {
+     "C": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+     "R": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length"
+    }
+   },
+   {
+    "key": "own_all_rs_L48|uncut",
+    "display": "own_all_rs registered (scored uncut)",
+    "train": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "registered probe scored on full transcripts (OOD past 32k)",
+    "note_short": "",
+    "on_policy": true,
+    "sens_label": "sensitivity: real run 1 shares the training launch on S_old, S_new and S_newmains (its training sets; S_paper493 is scored only; 09 RULE @ 13af1da9e)",
+    "train_short": "(ii) trained within the 32k cut",
+    "train_by_readout": {
+     "C": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)",
+     "R": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)"
+    }
+   },
+   {
+    "key": "sol_a_uncut",
+    "display": "Sol (a)",
+    "train": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "whole-transcript retrain (uncut) of Sol (a)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(i) trained on whole transcripts",
+    "train_by_readout": {
+     "C": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+     "R": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length"
+    }
+   },
+   {
+    "key": "Sol (a)|uncut",
+    "display": "Sol (a) registered (scored uncut)",
+    "train": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "registered probe scored on full transcripts (OOD past 32k)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(ii) trained within the 32k cut",
+    "train_by_readout": {
+     "C": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)",
+     "R": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)"
+    }
+   },
+   {
+    "key": "FIBS|uncut",
+    "display": "FIBS",
+    "train": "training length unverified (external fit; no record states its training data's length or max position; 09's ruling via 2e 22:5x); same fit as R (sha 295523b254ebd0d5...)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "training length unverified (external fit; no record states its training data's length or max position; 09's ruling via 2e 22",
+    "train_by_readout": {
+     "C": "training length unverified (external fit; no record states its training data's length or max position; 09's ruling via 2e 22:5x); same fit as R (sha 295523b254ebd0d5...)",
+     "R": "training length unverified (external fit; no record states its training data's length or max position; 09's ruling via 2e 22:5x)"
+    }
+   },
+   {
+    "key": "harmfulness|uncut",
+    "display": "harmfulness",
+    "train": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0); same fit as R (sha c17b4533c0f4cc64...)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(iii) trained on short external data",
+    "train_by_readout": {
+     "C": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0); same fit as R (sha c17b4533c0f4cc64...)",
+     "R": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0)"
+    }
+   },
+   {
+    "key": "refusal|uncut",
+    "display": "refusal",
+    "train": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0); same fit as R (sha c17b4533c0f4cc64...)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(iii) trained on short external data",
+    "train_by_readout": {
+     "C": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0); same fit as R (sha c17b4533c0f4cc64...)",
+     "R": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0)"
+    }
+   },
+   {
+    "key": "high-stakes|uncut",
+    "display": "high-stakes",
+    "train": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded read length max 1835 tokens (all-read maximum over training and held-out rows; training-subset upper bound); same fit as R (sha 05d90ecbb5bd0ea8...)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(iii) trained on short external data",
+    "train_by_readout": {
+     "C": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded read length max 1835 tokens (all-read maximum over training and held-out rows; training-subset upper bound); same fit as R (sha 05d90ecbb5bd0ea8...)",
+     "R": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded read length max 1835 tokens (all-read maximum over training and held-out rows; training-subset upper bound)"
+    }
+   },
+   {
+    "key": "own_all_rs25_uncut_L48",
+    "display": "own_all_rs25",
+    "train": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "whole-transcript retrain (uncut) of own_all_rs25_L48",
+    "note_short": "",
+    "on_policy": true,
+    "sens_label": "sensitivity: real run 1 shares the training launch on S_old, S_new and S_newmains (its training sets; S_paper493 is scored only; 09 RULE @ 13af1da9e)",
+    "train_short": "(i) trained on whole transcripts",
+    "train_by_readout": {
+     "C": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+     "R": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length"
+    }
+   },
+   {
+    "key": "own_all_rs10_uncut_L48",
+    "display": "own_all_rs10",
+    "train": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "whole-transcript retrain (uncut) of own_all_rs10_L48",
+    "note_short": "",
+    "on_policy": true,
+    "sens_label": "sensitivity: real run 1 shares the training launch on S_old, S_new and S_newmains (its training sets; S_paper493 is scored only; 09 RULE @ 13af1da9e)",
+    "train_short": "(i) trained on whole transcripts",
+    "train_by_readout": {
+     "C": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+     "R": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length"
+    }
+   }
+  ],
+  "outside_family": [],
+  "not_headline": [
+   "c_asis_uncut",
+   "c_asis|uncut"
+  ],
+  "not_shown": {
+   "c_asis_uncut": "positive control on the shared-threshold rows only (09 @ 2d61af835)",
+   "c_asis|uncut": "positive control on the shared-threshold rows only (09 @ 2d61af835)"
+  },
+  "nm360_probes": [],
+  "sets": [
+   "S_old",
+   "S_new",
+   "S_newmains",
+   "S_paper493",
+   "S_newmains without S4"
+  ],
+  "pool": "pooled_all_origins",
+  "pool_no4": "pooled_all_origins_without_S4",
+  "set_tags": {
+   "S_new": " (+311)",
+   "S_newmains": " (nm360)",
+   "S_paper493": " (paper 493)"
+  },
+  "n_probe": "FIBS|uncut",
+  "perset_sets": [
+   [
+    "S_old",
+    "#0072b2",
+    "o",
+    "S_old (T196)"
+   ],
+   [
+    "S_new",
+    "#e69f00",
+    "o",
+    "S_new (+311)"
+   ],
+   [
+    "S_newmains",
+    "#7570b3",
+    "o",
+    "S_newmains (nm360)"
+   ],
+   [
+    "S_newmains without S4",
+    "#7570b3",
+    "white",
+    "S_newmains without S4"
+   ],
+   [
+    "S_paper493",
+    "#009e73",
+    "o",
+    "S_paper493"
+   ]
+  ],
+  "curve_series": [
+   [
+    "S_new",
+    "#e69f00",
+    "S_new (+311, {n})"
+   ],
+   [
+    "S_old",
+    "#0072b2",
+    "S_old (T196, {n})"
+   ],
+   [
+    "S_newmains",
+    "#7570b3",
+    "S_newmains (nm360, {n})"
+   ],
+   [
+    "S_paper493",
+    "#009e73",
+    "S_paper493 ({n})"
+   ]
+  ],
+  "fo_pin": "experiments/2026-10-15_fpr_sweep_507_prep/full_override.py@7b059dc6c (sha256 fe6bf1c9cd6d\u2026)"
+ },
+ "record_meta": {
+  "git": "f2d47f19fd873aa44b5267d88bf7cb3795f875b7",
+  "script_sha256": "dcd265d77088ccc517308680567158f9ad6ebbc497e3a8632c5de2ed2b1f12aa",
+  "inputs_full_sha256": "1e1868586fe8a786f6e1094b9d5b62e362ec0e2ce241e9b0103d6584af351126",
+  "checked": "by key, in the container"
+ },
+ "comparator": "run_mean",
+ "catch_keys": [
+  "real_mean",
+  "sim"
+ ],
+ "signed_key": "delta_full_A",
+ "rerun_key": "Y_tauB",
+ "readout": "R",
+ "right_source": "pooled_record",
+ "right_keys": {
+  "probe": "pooled[\"<p> R\"][\"pooled_all_origins\"][\"joint\"][\"0.01\"][\"gap\"][['delta_full', 'run2_minus_run1_at_tauB']] x100",
+  "averages": "coheadline_signed[\"pooled_all_origins\"][\"joint\"][\"0.01\"][<headline_six_full|auroc06_subset>|R][\"S\" | \"Y\"] x100"
+ },
+ "average_members": {
+  "six": [
+   "sol_a_uncut R",
+   "FIBS|uncut R",
+   "harmfulness|uncut R",
+   "refusal|uncut R",
+   "high-stakes|uncut R",
+   "own_all_rs_uncut_L48 R"
+  ],
+  "auroc_subset": [
+   "sol_a_uncut R",
+   "FIBS|uncut R",
+   "harmfulness|uncut R",
+   "own_all_rs_uncut_L48 R"
+  ]
+ },
+ "subset_by": "meta.auroc06_subset (rule 09 @ 002c1824b (d), pin 19ba8f563)",
+ "subset_label": "POST HOC, never the headline (AUROC >= 0.6 subset, membership fixed @ 19ba8f563)",
+ "left_average_rows": {
+  "six": "group catch record: groups['six|R']['catch'][['real_mean', 'sim']]",
+  "auroc_subset": "group catch record: groups['auroc_subset|R']['catch'][['real_mean', 'sim']]"
+ },
+ "right_x_scale": {
+  "readouts": [
+   "C",
+   "R"
+  ],
+  "xlim": [
+   -11.658148516903461,
+   10.818241137881262
+  ]
+ },
+ "legend_fontsize": 9,
+ "value_labels": "two decimals, signed, U+2212 minus; inside the right axes and off the zero line at 200 dpi",
+ "floor_key": "shares[\"<probe> R\"][\"0.01\"][\"B\"][\"registered_with_no_unit_runs\"][\"run_weighted\"] (draw 0, no interval)",
+ "floor_unavailable": {},
+ "n_by_probe": {
+  "own_all_rs_uncut_L48 R": 1313,
+  "sol_a_uncut R": 1313,
+  "FIBS|uncut R": 1313,
+  "harmfulness|uncut R": 1313,
+  "refusal|uncut R": 1313,
+  "high-stakes|uncut R": 1313
+ },
+ "train_readouts": [
+  "R"
+ ],
+ "title_banner": null,
+ "fig_number": "6",
+ "label": "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction | fig1_main_R (post_main, readout R) on route C pooled A @ 54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a",
+ "label_sidecar": {
+  "file": "routec_A_label_sidecar.json",
+  "sha256": "ffe923311b75313e9bd31b967326efe4c6e594da073f2c35a3ca72a07ad6e479",
+  "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json@095a9db4c0fedaa52fdcf103d167c8dff8675e3f",
+  "label_sha256": "6100557b57d8ca57699aa71619231eb6fdcbdf103199faa1298c3474cd4ab15c"
+ },
+ "input_labels": {
+  "group": "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction | run_group_catch on route C pooled A @ 54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a",
+  "pw": "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction | analyze_pw_shares on route C pooled A @ 54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a"
+ },
+ "input_sidecars": [
+  {
+   "role": "group",
+   "file": "routec_group_catch_label_sidecar.json",
+   "sha256": "9dc2bb20aff262bfe11ff3e2d8bdabd1915bd9de7df583c7253231c6b16b1f76",
+   "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430_LABEL.json@65a6e44deaecee8e730214b4979e7aa9019a836e",
+   "step": "run_group_catch"
+  },
+  {
+   "role": "pw",
+   "file": "routec_pw_shares_label_sidecar.json",
+   "sha256": "e7230bb30b0e9faf3ea31abd72a48f9dc7bb6d77f243265b186f9b45f81c96a3",
+   "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/pw_shares_routec/pw_shares_pooled_all_origins_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327_routeC_2026-10-20_003446_LABEL.json@98222e0c5a4ee57c9aa213b9e37b110ba9ebe72e",
+   "step": "analyze_pw_shares"
+  }
+ ],
+ "text_file": "fig1_main_R_figs156_routecA_text.md"
+}

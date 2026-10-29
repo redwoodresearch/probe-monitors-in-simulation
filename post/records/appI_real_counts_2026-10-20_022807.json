@@ -1,0 +1,293 @@
+{
+  "label": "App I real-side errored-run counts (honest pools and attack runs); keys and counts only",
+  "stamp_pt": "2026-10-20_022807",
+  "git_head": "b86d7b12ff034ff04f87de0e1357113f805ca863",
+  "script": {
+    "path": "experiments/2026-10-20_appI_counts/count_appI_real.zsh",
+    "sha256": "453bc6da9cf6b7b98b79a5abaf45cade189884e59480b830f303cfee6fa1b060",
+    "matches_git_head": true
+  },
+  "jq_version": "jq-1.7.1-apple",
+  "inputs": [
+    {
+      "name": "R",
+      "commit": "73cd0f2bee480b06ef7a0c0cbbad7f6ad8b30ea8",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/appendix_a_rates_2026-10-16_121443.json",
+      "sha256": "3c034ec9c74cc6989936a84e15ae07124cc93d94d0fe6fcb4bc6a4e958fd6e64"
+    },
+    {
+      "name": "A",
+      "commit": "48a90b1d285f590094f201bd13922331aae46f19",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/attack_sample_errors_2026-10-16_011901.json",
+      "sha256": "758c2fa7405135aaa190b65aa51a3261279065c11ee7d486dc04b20dbb1f610d"
+    },
+    {
+      "name": "X",
+      "commit": "6414c492b663ee128b07d8ec045735ca41f0635f",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/exclusions_2026-10-16_102159.json",
+      "sha256": "67a608c25a84e77cb6beb2c70d8c91177e2274d2c96e166469060462d4c9223d"
+    },
+    {
+      "name": "D",
+      "commit": "3c5b64b38c12d024d4bd60bdd51e2bb7ede9a9c8",
+      "path": "experiments/2026-10-15_q3_sp493/results/empty_epoch_summary_2026-10-16_100825.json",
+      "sha256": "e5612f3754aa5bc434cf951c30c1e7dc82c662e6ca4b0b989aab4a4b3e0ac853"
+    },
+    {
+      "name": "B",
+      "commit": "a6bde80a2f648477c9df5ab5d8d693671db7ac37",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/INPUTS_FINAL_V2_FROZEN_2026-10-16_044120.json",
+      "sha256": "0e065958b206dbceba8afeb3332ec68b898481da520fe3a3654ab2b6913eaadd"
+    },
+    {
+      "name": "P",
+      "commit": "5b19c08d8ccf461e7c5d5da4024cc7280e149084",
+      "path": "experiments/2026-10-15_epoch2_poolkeys/results/epoch2_poolkeys_2026-10-15_214512.json",
+      "sha256": "4c1ef89dd7fdf0a8b21153ede2901f595eb9aefc4879e810de1b1f522cc7eca1"
+    }
+  ],
+  "jq": {
+    "honest_real_R": "def env: split(\"/\")[2] | sub(\"^(t|nm)[0-9]+_\"; \"\") | sub(\"_redraw[0-9]+$\"; \"\");\ndef epce: \"EmptyPolicyCompletionError\";\ndef n(f): [.[] | select(f)] | length;\ndef envs: (\"model_registry\", \"slack_clone\", \"tiktok\");\ndef sets: (\"S_old\", \"S_new\", \"S_newmains\", \"S_paper493\", \"ep2\");\n[ (.real.failed_runs | to_entries[] | .key as $sa | .value[]\n    | {set: ($sa | split(\"|\")[0]), arm: ($sa | split(\"|\")[1]), class, category, key, env: (.key | env)}),\n  (.real.S_old_honest_a_apart.named_failures_by_pool_rule[] | .keys[]\n    | {set: \"S_old\", arm: \"honest_a_apart\", class: epce, category: null, key: ., env: (. | env)}) ] as $rows\n| ($rows | map(select(.class == epce))) as $e\n| ($e | map(select(.arm != \"honest_a_apart\"))) as $e_lead\n| ([.real.by_set_arm[].launched] | add) as $launched_arms\n| {\n  failed_runs_rows: ([.real.failed_runs[][]] | length),\n  failed_runs_rows_by_set_arm_sum: ([.real.by_set_arm[].failed] | add),\n  S_old_honest_a_apart_rows: ([.real.S_old_honest_a_apart.named_failures_by_pool_rule[].keys[]] | length),\n  failed_total: ($rows | length),\n  failed_unique_run_keys: ($rows | map(.key) | unique | length),\n  failed_env_agrees_with_basename: ($rows | n(. as $r | $r.key | split(\"/\") | last\n      | contains(\"la-\" + ($r.env | gsub(\"_\"; \"-\")) + \"-real-honest\"))),\n  failed_set_outside_named_sets: ($rows | n(.set as $s | [sets] | index($s) | not)),\n  launched_by_set_arm_sum: $launched_arms,\n  launched_S_old_honest_a_apart: .real.S_old_honest_a_apart.launched,\n  launched_total: ($launched_arms + .real.S_old_honest_a_apart.launched),\n  epce_total: ($e | length),\n  epce_by_env: ([envs as $v | {key: $v, value: ($e | n(.env == $v))}] | from_entries),\n  epce_env_outside_named_envs: ($e | n(.env as $v | [envs] | index($v) | not)),\n  epce_without_S_old_honest_a: ($e_lead | length),\n  epce_without_S_old_honest_a_by_env: ([envs as $v | {key: $v, value: ($e_lead | n(.env == $v))}] | from_entries),\n  epce_by_set: ([sets as $s | {key: $s, value: ($e | n(.set == $s))}] | from_entries),\n  epce_S_old_honest_a_apart: ($e | n(.arm == \"honest_a_apart\")),\n  epce_by_set_env: ([sets as $s | {key: $s, value: ([envs as $v | {key: $v, value: ($e | n(.set == $s and .env == $v))}] | from_entries)}] | from_entries),\n  epce_by_category_sum_failed_runs_arms: ([.real.by_set_arm[].by_category[\"mid-run model error (EmptyPolicyCompletionError)\"]] | add),\n  non_epce_total: ($rows | n(.class != epce)),\n  non_epce_setup_0_model_events: ($rows | n(.class != epce and .category == \"setup (0 model events)\")),\n  non_epce_unclassified_model_events_gt0: ($rows | n(.class != epce and .category == \"other error (unclassified, model events > 0)\")),\n  two_set_S_old_S_new_epce: ($e | n(.set == \"S_old\" or .set == \"S_new\")),\n  two_set_S_old_S_new_epce_by_env: ([envs as $v | {key: $v, value: ($e | n((.set == \"S_old\" or .set == \"S_new\") and .env == $v))}] | from_entries),\n  lower_bound_redraws_without_earlier_attempt: (.real_lower_bound.gap_keys | length),\n  lower_bound_unseen_attempts_at_least: .real_lower_bound.unseen_attempts_at_least\n}",
+    "attack_real_A": "def epce: \"EmptyPolicyCompletionError\";\ndef n(f): [.[] | select(f)] | length;\ndef runs($o; $w): .rows | map(select(.origin == $o and (.key | startswith($w + \"|\"))));\ndef tally: {runs: length, errored: n(.sample_error != null), epce: n(.sample_error == epce),\n            operation_error: n(.sample_error == \"OperationError\"), retry_error: n(.sample_error == \"RetryError\"),\n            other_error: n(.sample_error as $s | $s != null and ([epce, \"OperationError\", \"RetryError\"] | index($s) | not))};\n(.rows | map(select(.key | test(\"^(run1|run2)\\\\|\")))) as $real\n| {\n  real_run_rows: ($real | length),\n  has_error_disagrees_with_sample_error: (.rows | n((.has_error == true) != (.sample_error != null))),\n  by_set: ([(\"S_old\", \"S_new\", \"S_newmains\") as $o | {key: $o, value:\n             ([(\"run1\", \"run2\") as $w | {key: $w, value: (runs($o; $w) | tally)}] | from_entries)}] | from_entries),\n  three_sets: ($real | map(select(.origin as $o | [\"S_old\", \"S_new\", \"S_newmains\"] | index($o))) | tally),\n  two_set_S_old_S_new: ($real | map(select(.origin == \"S_old\" or .origin == \"S_new\")) | tally)\n}",
+    "attack_real_S_paper493_XDB": "def epce: \"EmptyPolicyCompletionError\";\ndef n(f): [.[] | select(f)] | length;\ndef tid: capture(\"(?<![0-9A-Za-z])(?<t>t[0-9]+)_\").t;\n$B[0].extensions.S_paper493.launched_universe as $U\n| [ $X[0].rows[] | select(.set == \"S_paper493\" and .stage != \"honest reference\") | . as $row\n    | (\"run1\", \"run2\") as $w | select($row.failed_arm | index($w))\n    | {arm: $w, tid: ($row.key | tid), errored: ($row.class | test(\"Error\")), epce: ($row.class | test(epce))} ] as $xr\n| [ $D[0].rows[] | select(.kind == \"target\" and .set == \"S_paper493\" and (.world == \"run1\" or .world == \"run2\"))\n    | {arm: .world, tid: (.task | tid), errored: (.sample_error != null), epce: (.sample_error == epce)} ] as $dr\n| ([$xr[], $dr[]] | map(select(.errored)) | unique_by([.arm, .tid])) as $err\n| def in_u: . as $r | [$U[$r.arm][] | select(startswith($r.tid + \"_\"))] | length == 1;\n{\n  launched: {run1: ($U.run1 | length), run2: ($U.run2 | length)},\n  x_rows: ($xr | length), x_rows_errored: ($xr | n(.errored)),\n  x_rows_not_in_launched_universe: ($xr | n(in_u | not)),\n  d_target_rows: ($dr | length), d_target_rows_errored: ($dr | n(.errored)),\n  d_target_rows_without_sample_error: ($dr | n(.errored | not)),\n  errored_x_d_overlap: ([$xr[] | select(.errored) | [.arm, .tid]] - ([$xr[] | select(.errored) | [.arm, .tid]] - [$dr[] | select(.errored) | [.arm, .tid]]) | length),\n  errored_in_launched_universe: ($err | n(in_u)),\n  run1: {runs: ($U.run1 | length), errored: ($err | n(.arm == \"run1\")), epce: ($err | n(.arm == \"run1\" and .epce))},\n  run2: {runs: ($U.run2 | length), errored: ($err | n(.arm == \"run2\")), epce: ($err | n(.arm == \"run2\" and .epce))},\n  errored: ($err | length), epce: ($err | n(.epce))\n}",
+    "honest_real_epoch2_usable0_P": "def n(f): [.[] | select(f)] | length;\ndef env: split(\"|\")[1] | sub(\"^(t|nm)[0-9]+_\"; \"\") | sub(\"_redraw[0-9]+$\"; \"\");\ndef envs: (\"model_registry\", \"slack_clone\", \"web_scraping\", \"shared_dotfiles\", \"media_processing\", \"tiktok\", \"auto_workflow\");\ndef launches: {ep2_311: \"ep2_311($|[^b])\", ep2_311b: \"ep2_311b\", ep2_nm: \"ep2_nm\", ep2_t196: \"ep2_t196\"};\n[ .epoch2_candidates | to_entries[] | .key as $g | .value.status_rows_removed[]\n  | select(.class | test(\"usable 0\")) | {group: $g, launch_id, key, eval_sha256, env: (.key | env)} ] as $u\n| ($R[0] | [(.real.failed_runs[][] | .key), (.real.S_old_honest_a_apart.named_failures_by_pool_rule[].keys[])]\n   | map(split(\"/\") | [.[0], .[2]])) as $r_launch_task\n| {\n  total: ($u | length),\n  unique_launch_key: ($u | map([.launch_id, .key]) | unique | length),\n  unique_eval_sha256: ($u | map(.eval_sha256) | unique | length),\n  by_group: ([.epoch2_candidates | keys[] as $g | {key: $g, value: ($u | n(.group == $g))}] | from_entries),\n  by_launch: (launches | map_values(. as $re | $u | n(.launch_id | test($re)))),\n  rows_matching_not_exactly_one_launch: ($u | n(.launch_id as $l | [launches[] | select(. as $re | $l | test($re))] | length != 1)),\n  by_arm: {honest_a: ($u | n(.key | startswith(\"honest_a|\"))), honest_b: ($u | n(.key | startswith(\"honest_b|\")))},\n  model_registry: ($u | n(.env == \"model_registry\")),\n  slack_clone: ($u | n(.env == \"slack_clone\")),\n  other_env: ($u | n(.env != \"model_registry\" and .env != \"slack_clone\")),\n  other_env_by_env: ([envs as $v | select($v != \"model_registry\" and $v != \"slack_clone\")\n                      | {key: $v, value: ($u | n(.env == $v))}] | from_entries),\n  env_outside_named_envs: ($u | n(.env as $v | [envs] | index($v) | not)),\n  overlap_with_R_failed_launch_task: ($u | n([.launch_id, (.key | split(\"|\")[1])] as $lt | $r_launch_task | index([$lt]) != null)),\n  overlap_control_launch_in_R_failed: ($u | n(.launch_id as $l | [$r_launch_task[][0]] | index($l) != null)),\n  overlap_control_task_in_R_failed: ($u | n((.key | split(\"|\")[1]) as $t | [$r_launch_task[][1]] | index($t) != null))\n}",
+    "combine": "($a.three_sets.runs + $p.run1.runs + $p.run2.runs) as $runs\n| {\n  honest_real: $h,\n  honest_real_epoch2_usable0: $u,\n  attack_real: {\n    S_old_S_new_S_newmains: $a,\n    S_paper493: $p,\n    total: {runs: $runs,\n            errored: ($a.three_sets.errored + $p.errored),\n            epce: ($a.three_sets.epce + $p.epce),\n            operation_error: $a.three_sets.operation_error,\n            retry_error: $a.three_sets.retry_error}\n  }\n}\n| . as $c\n| {counts: $c, checks: {\n    honest_run_keys_unique: ($h.failed_unique_run_keys == $h.failed_total),\n    honest_failed_runs_rows_match_by_set_arm: ($h.failed_runs_rows == $h.failed_runs_rows_by_set_arm_sum),\n    honest_sets_all_named: ($h.failed_set_outside_named_sets == 0),\n    honest_epce_envs_all_named: ($h.epce_env_outside_named_envs == 0),\n    honest_epce_matches_by_category: (($h.epce_total - $h.epce_S_old_honest_a_apart) == $h.epce_by_category_sum_failed_runs_arms),\n    attack_has_error_agrees: ($a.has_error_disagrees_with_sample_error == 0),\n    attack_real_rows_all_in_three_sets: ($a.real_run_rows == $a.three_sets.runs),\n    attack_p493_errored_in_universe: ($p.errored_in_launched_universe == $p.errored),\n    attack_p493_no_x_d_overlap: ($p.errored_x_d_overlap == 0),\n    ep2_usable0_unique: ($u.unique_launch_key == $u.total and $u.unique_eval_sha256 == $u.total),\n    ep2_usable0_groups_sum: (([$u.by_group[]] | add) == $u.total),\n    ep2_usable0_one_launch_per_row: ($u.rows_matching_not_exactly_one_launch == 0),\n    ep2_usable0_arms_sum: (($u.by_arm.honest_a + $u.by_arm.honest_b) == $u.total),\n    ep2_usable0_envs_all_named: ($u.env_outside_named_envs == 0),\n    ep2_usable0_no_overlap_with_R: ($u.overlap_with_R_failed_launch_task == 0)\n  }}"
+  },
+  "counts": {
+    "honest_real": {
+      "failed_runs_rows": 70,
+      "failed_runs_rows_by_set_arm_sum": 70,
+      "S_old_honest_a_apart_rows": 5,
+      "failed_total": 75,
+      "failed_unique_run_keys": 75,
+      "failed_env_agrees_with_basename": 75,
+      "failed_set_outside_named_sets": 0,
+      "launched_by_set_arm_sum": 3531,
+      "launched_S_old_honest_a_apart": 196,
+      "launched_total": 3727,
+      "epce_total": 39,
+      "epce_by_env": {
+        "model_registry": 26,
+        "slack_clone": 10,
+        "tiktok": 3
+      },
+      "epce_env_outside_named_envs": 0,
+      "epce_without_S_old_honest_a": 34,
+      "epce_without_S_old_honest_a_by_env": {
+        "model_registry": 21,
+        "slack_clone": 10,
+        "tiktok": 3
+      },
+      "epce_by_set": {
+        "S_old": 10,
+        "S_new": 8,
+        "S_newmains": 16,
+        "S_paper493": 5,
+        "ep2": 0
+      },
+      "epce_S_old_honest_a_apart": 5,
+      "epce_by_set_env": {
+        "S_old": {
+          "model_registry": 10,
+          "slack_clone": 0,
+          "tiktok": 0
+        },
+        "S_new": {
+          "model_registry": 4,
+          "slack_clone": 4,
+          "tiktok": 0
+        },
+        "S_newmains": {
+          "model_registry": 7,
+          "slack_clone": 6,
+          "tiktok": 3
+        },
+        "S_paper493": {
+          "model_registry": 5,
+          "slack_clone": 0,
+          "tiktok": 0
+        },
+        "ep2": {
+          "model_registry": 0,
+          "slack_clone": 0,
+          "tiktok": 0
+        }
+      },
+      "epce_by_category_sum_failed_runs_arms": 34,
+      "non_epce_total": 36,
+      "non_epce_setup_0_model_events": 30,
+      "non_epce_unclassified_model_events_gt0": 6,
+      "two_set_S_old_S_new_epce": 18,
+      "two_set_S_old_S_new_epce_by_env": {
+        "model_registry": 14,
+        "slack_clone": 4,
+        "tiktok": 0
+      },
+      "lower_bound_redraws_without_earlier_attempt": 30,
+      "lower_bound_unseen_attempts_at_least": 50
+    },
+    "honest_real_epoch2_usable0": {
+      "total": 34,
+      "unique_launch_key": 34,
+      "unique_eval_sha256": 34,
+      "by_group": {
+        "+311": 9,
+        "T196": 5,
+        "nm360": 20
+      },
+      "by_launch": {
+        "ep2_311": 8,
+        "ep2_311b": 1,
+        "ep2_nm": 20,
+        "ep2_t196": 5
+      },
+      "rows_matching_not_exactly_one_launch": 0,
+      "by_arm": {
+        "honest_a": 21,
+        "honest_b": 13
+      },
+      "model_registry": 18,
+      "slack_clone": 8,
+      "other_env": 8,
+      "other_env_by_env": {
+        "web_scraping": 2,
+        "shared_dotfiles": 2,
+        "media_processing": 2,
+        "tiktok": 1,
+        "auto_workflow": 1
+      },
+      "env_outside_named_envs": 0,
+      "overlap_with_R_failed_launch_task": 0,
+      "overlap_control_launch_in_R_failed": 28,
+      "overlap_control_task_in_R_failed": 21
+    },
+    "attack_real": {
+      "S_old_S_new_S_newmains": {
+        "real_run_rows": 1759,
+        "has_error_disagrees_with_sample_error": 0,
+        "by_set": {
+          "S_old": {
+            "run1": {
+              "runs": 194,
+              "errored": 0,
+              "epce": 0,
+              "operation_error": 0,
+              "retry_error": 0,
+              "other_error": 0
+            },
+            "run2": {
+              "runs": 194,
+              "errored": 1,
+              "epce": 1,
+              "operation_error": 0,
+              "retry_error": 0,
+              "other_error": 0
+            }
+          },
+          "S_new": {
+            "run1": {
+              "runs": 310,
+              "errored": 0,
+              "epce": 0,
+              "operation_error": 0,
+              "retry_error": 0,
+              "other_error": 0
+            },
+            "run2": {
+              "runs": 310,
+              "errored": 1,
+              "epce": 1,
+              "operation_error": 0,
+              "retry_error": 0,
+              "other_error": 0
+            }
+          },
+          "S_newmains": {
+            "run1": {
+              "runs": 380,
+              "errored": 15,
+              "epce": 3,
+              "operation_error": 10,
+              "retry_error": 2,
+              "other_error": 0
+            },
+            "run2": {
+              "runs": 371,
+              "errored": 20,
+              "epce": 3,
+              "operation_error": 10,
+              "retry_error": 7,
+              "other_error": 0
+            }
+          }
+        },
+        "three_sets": {
+          "runs": 1759,
+          "errored": 37,
+          "epce": 8,
+          "operation_error": 20,
+          "retry_error": 9,
+          "other_error": 0
+        },
+        "two_set_S_old_S_new": {
+          "runs": 1008,
+          "errored": 2,
+          "epce": 2,
+          "operation_error": 0,
+          "retry_error": 0,
+          "other_error": 0
+        }
+      },
+      "S_paper493": {
+        "launched": {
+          "run1": 493,
+          "run2": 492
+        },
+        "x_rows": 3,
+        "x_rows_errored": 1,
+        "x_rows_not_in_launched_universe": 1,
+        "d_target_rows": 3,
+        "d_target_rows_errored": 2,
+        "d_target_rows_without_sample_error": 1,
+        "errored_x_d_overlap": 0,
+        "errored_in_launched_universe": 3,
+        "run1": {
+          "runs": 493,
+          "errored": 2,
+          "epce": 2
+        },
+        "run2": {
+          "runs": 492,
+          "errored": 1,
+          "epce": 1
+        },
+        "errored": 3,
+        "epce": 3
+      },
+      "total": {
+        "runs": 2744,
+        "errored": 40,
+        "epce": 11,
+        "operation_error": 20,
+        "retry_error": 9
+      }
+    }
+  },
+  "checks": {
+    "honest_run_keys_unique": true,
+    "honest_failed_runs_rows_match_by_set_arm": true,
+    "honest_sets_all_named": true,
+    "honest_epce_envs_all_named": true,
+    "honest_epce_matches_by_category": true,
+    "attack_has_error_agrees": true,
+    "attack_real_rows_all_in_three_sets": true,
+    "attack_p493_errored_in_universe": true,
+    "attack_p493_no_x_d_overlap": true,
+    "ep2_usable0_unique": true,
+    "ep2_usable0_groups_sum": true,
+    "ep2_usable0_one_launch_per_row": true,
+    "ep2_usable0_arms_sum": true,
+    "ep2_usable0_envs_all_named": true,
+    "ep2_usable0_no_overlap_with_R": true
+  }
+}

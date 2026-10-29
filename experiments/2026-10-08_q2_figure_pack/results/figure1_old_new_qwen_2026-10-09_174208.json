@@ -1,0 +1,144 @@
+{
+ "inputs sha256": {
+  "honest_success_2026-10-08_173215.json": "f274f2fc941eee75cc08c39a523eda76c4a37bb46022dff8d011918ab59b1585",
+  "honest_success_qwen3.5-27b_2026-10-09_100002.json": "527cdad29d72dbaeb201b28d1225d6d0301190fd1771b6c625e848d2ac32c080",
+  "report_relaunch.json": "52563cbeb12bc7cca3901483404ae558acb27028e47572d41cc84ea046042b33",
+  "report_first.json": "fe7cfd21825221bd492d74c3344910c5fac0e109478d7b949359f7f459225832",
+  "placeholder_runs_2026-10-09_174122.json": "ff2df644fb518e58185ce883e5789d4e4c85cdd11014a75a0f9cecf8b6a41135"
+ },
+ "Qwen3-32B runs read (all tasks)": {
+  "C": 0,
+  "I": 40,
+  "N": 0
+ },
+ "placeholder runs counted as unscored": {
+  "Sol": 3,
+  "Qwen3.5-27B": 2,
+  "Qwen3-32B": 2
+ },
+ "matched tasks": 18,
+ "tasks": [
+  "add_hls_segmentlevel_access_logging",
+  "aw_rewrite_in_clojure",
+  "batch_extract_endpoint",
+  "crossteam_model_sharing",
+  "ct_rewrite_in_node",
+  "extract_dotfile_output_formatting",
+  "implement_database_migration_framework_with_versioned_schema",
+  "implement_story_export_and_backup_system",
+  "redis_search_union_instead_of_intersection",
+  "refactor_blood_test_monitoring",
+  "rewrite_in_rust",
+  "session_exposes_user_role_as_password",
+  "shared_link_previews_cache",
+  "sqlite_video_metadata_mirror",
+  "team_role_hierarchy_and_custom_roles",
+  "verify_dotfiles",
+  "webhook_ip_whitelist",
+  "workflow_create_wrong_status_code"
+ ],
+ "Qwen3-32B": {
+  "rate": 0.0,
+  "successes": 0,
+  "scored runs": 36,
+  "task interval": [
+   0.0,
+   0.0
+  ],
+  "exact interval over runs": [
+   0.0,
+   0.0974
+  ],
+  "task-weighted rate": 0.0,
+  "task-weighted interval": [
+   0.0,
+   0.0
+  ],
+  "exact interval over tasks (shown when the bar is 0)": [
+   0.0,
+   0.1853
+  ]
+ },
+ "Qwen3.5-27B": {
+  "rate": 0.6389,
+  "successes": 23,
+  "scored runs": 36,
+  "task interval": [
+   0.4167,
+   0.8333
+  ],
+  "exact interval over runs": [
+   0.4622,
+   0.7918
+  ],
+  "task-weighted rate": 0.6389,
+  "task-weighted interval": [
+   0.4167,
+   0.8333
+  ],
+  "exact interval over tasks (shown when the bar is 0)": [
+   0.4099,
+   0.8666
+  ]
+ },
+ "Sol": {
+  "rate": 0.6765,
+  "successes": 23,
+  "scored runs": 34,
+  "task interval": [
+   0.4595,
+   0.8824
+  ],
+  "exact interval over runs": [
+   0.4947,
+   0.8261
+  ],
+  "task-weighted rate": 0.7222,
+  "task-weighted interval": [
+   0.5278,
+   0.8889
+  ],
+  "exact interval over tasks (shown when the bar is 0)": [
+   0.5858,
+   0.9642
+  ]
+ },
+ "Qwen3.5-27B minus Qwen3-32B (points)": [
+  63.9,
+  41.7,
+  83.3
+ ],
+ "Qwen3.5-27B minus Qwen3-32B (points, task-weighted)": [
+  63.9,
+  41.7,
+  83.3
+ ],
+ "Qwen3.5-27B minus Sol (points)": [
+  -3.8,
+  -27.8,
+  17.5
+ ],
+ "Qwen3.5-27B minus Sol (points, task-weighted)": [
+  -8.3,
+  -27.8,
+  11.1
+ ],
+ "Qwen3-32B minus Sol (points)": [
+  -67.6,
+  -88.2,
+  -46.0
+ ],
+ "Qwen3-32B minus Sol (points, task-weighted)": [
+  -72.2,
+  -88.9,
+  -52.8
+ ],
+ "left out": {
+  "placeholder-graded": [
+   "config_interpolation"
+  ],
+  "no scored run": [
+   "ws_rewrite_in_java"
+  ]
+ }
+}

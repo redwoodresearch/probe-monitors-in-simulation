@@ -1,0 +1,60 @@
+POST HOC, preliminary until Codex. Paired contrast C = (mean-pooled difference) - (last-token difference), in points, same 939 cells,
+shared main-task draws (2000, seed 20261012), thresholds fixed at the point estimate as in the as-run table (bd4a077e).
+All 108 per-readout differences (points and 95% ranges) reproduce the as-run record exactly. 1% leads; 5% is beside it because the
+as-run table has both rates. Reading: 'the readouts differ' if C's 95% range excludes 0.
+
+reader         layers                    rate  difference          mean-pooled last-token  C [95%]               reading
+Qwen3-32B      L48                        1%   as simulated - e2          +2.6       +4.5  -1.9 [-5.4,+1.6]      no difference shown
+Qwen3-32B      L48                        1%   repaired - e2              -0.4       +1.1  -1.5 [-5.1,+2.0]      no difference shown
+Qwen3-32B      L48                        1%   e1 - e2                    -1.0       -1.3  +0.4 [-2.9,+3.8]      no difference shown
+Qwen3-32B      L63                        1%   as simulated - e2          -1.1      -10.4  +9.3 [+6.0,+12.5]     the readouts differ
+Qwen3-32B      L63                        1%   repaired - e2              +0.5       +0.9  -0.4 [-3.7,+2.8]      no difference shown
+Qwen3-32B      L63                        1%   e1 - e2                    -2.4       +0.9  -3.3 [-6.3,-0.4]      the readouts differ
+Qwen3-32B      L48                        5%   as simulated - e2          +1.3       +4.2  -2.9 [-6.0,+0.3]      no difference shown
+Qwen3-32B      L48                        5%   repaired - e2              +0.4       +0.8  -0.4 [-3.5,+2.8]      no difference shown
+Qwen3-32B      L48                        5%   e1 - e2                    +1.4       -2.1  +3.5 [+0.1,+6.8]      the readouts differ
+Qwen3-32B      L63                        5%   as simulated - e2          -2.8      -14.3  +11.4 [+8.4,+14.9]    the readouts differ
+Qwen3-32B      L63                        5%   repaired - e2              -1.5       -0.6  -1.0 [-3.7,+2.1]      no difference shown
+Qwen3-32B      L63                        5%   e1 - e2                    -2.4       +0.5  -2.9 [-5.8,-0.1]      the readouts differ
+Olmo-3.1-32B   L32                        1%   as simulated - e2          +1.0       -2.8  +3.8 [+0.5,+7.0]      the readouts differ
+Olmo-3.1-32B   L32                        1%   repaired - e2              -2.8       -0.2  -2.6 [-5.8,+0.6]      no difference shown
+Olmo-3.1-32B   L32                        1%   e1 - e2                    -2.4       +0.5  -2.9 [-6.0,+0.1]      no difference shown
+Olmo-3.1-32B   L40                        1%   as simulated - e2          -1.1       -5.1  +4.0 [+0.6,+7.5]      the readouts differ
+Olmo-3.1-32B   L40                        1%   repaired - e2              -2.5       -1.3  -1.2 [-4.4,+2.1]      no difference shown
+Olmo-3.1-32B   L40                        1%   e1 - e2                    -2.4       +1.7  -4.1 [-7.1,-0.9]      the readouts differ
+Olmo-3.1-32B   L56                        1%   as simulated - e2          -0.9      -11.9  +11.0 [+7.7,+14.1]    the readouts differ
+Olmo-3.1-32B   L56                        1%   repaired - e2              -2.6       -2.6  +0.0 [-2.8,+3.0]      no difference shown
+Olmo-3.1-32B   L56                        1%   e1 - e2                    +1.6       -0.4  +2.0 [-0.9,+5.0]      no difference shown
+Olmo-3.1-32B   per-fold 32,56,56,56,40    1%   as simulated - e2          -1.1       -8.4  +7.3 [+4.0,+10.7]     the readouts differ
+Olmo-3.1-32B   per-fold 32,56,56,56,40    1%   repaired - e2              -3.8       -3.1  -0.7 [-3.9,+2.5]      no difference shown
+Olmo-3.1-32B   per-fold 32,56,56,56,40    1%   e1 - e2                    +0.4       -0.0  +0.5 [-2.4,+3.5]      no difference shown
+Olmo-3.1-32B   L32                        5%   as simulated - e2          -1.3       -3.6  +2.3 [-0.8,+5.4]      no difference shown
+Olmo-3.1-32B   L32                        5%   repaired - e2              -2.7       +0.3  -3.0 [-6.0,-0.1]      the readouts differ
+Olmo-3.1-32B   L32                        5%   e1 - e2                    -1.6       +1.4  -3.0 [-5.6,-0.5]      the readouts differ
+Olmo-3.1-32B   L40                        5%   as simulated - e2          -2.2       -5.1  +2.9 [+0.0,+6.1]      the readouts differ
+Olmo-3.1-32B   L40                        5%   repaired - e2              -2.5       -0.7  -1.8 [-4.5,+1.1]      no difference shown
+Olmo-3.1-32B   L40                        5%   e1 - e2                    -1.3       +0.5  -1.8 [-4.4,+0.9]      no difference shown
+Olmo-3.1-32B   L56                        5%   as simulated - e2          -2.5      -10.9  +8.4 [+5.5,+11.3]     the readouts differ
+Olmo-3.1-32B   L56                        5%   repaired - e2              -2.9       -1.2  -1.7 [-4.4,+1.1]      no difference shown
+Olmo-3.1-32B   L56                        5%   e1 - e2                    -0.3       -0.0  -0.3 [-3.1,+2.7]      no difference shown
+Olmo-3.1-32B   per-fold 32,56,56,56,40    5%   as simulated - e2          -2.6       -8.7  +6.0 [+3.3,+9.1]      the readouts differ
+Olmo-3.1-32B   per-fold 32,56,56,56,40    5%   repaired - e2              -3.4       -2.1  -1.3 [-3.9,+1.4]      no difference shown
+Olmo-3.1-32B   per-fold 32,56,56,56,40    5%   e1 - e2                    -1.0       +0.7  -1.7 [-4.3,+1.1]      no difference shown
+Llama-3.3-70B  L60                        1%   as simulated - e2          -4.4      -11.4  +7.1 [+4.1,+9.9]      the readouts differ
+Llama-3.3-70B  L60                        1%   repaired - e2              -4.1       -5.6  +1.4 [-1.6,+4.3]      no difference shown
+Llama-3.3-70B  L60                        1%   e1 - e2                    -0.0       -0.5  +0.5 [-2.5,+3.1]      no difference shown
+Llama-3.3-70B  L70                        1%   as simulated - e2          -2.2      -13.2  +11.0 [+7.8,+14.2]    the readouts differ
+Llama-3.3-70B  L70                        1%   repaired - e2              -3.6       -4.2  +0.6 [-2.6,+3.7]      no difference shown
+Llama-3.3-70B  L70                        1%   e1 - e2                    +0.2       -0.3  +0.5 [-2.6,+3.8]      no difference shown
+Llama-3.3-70B  per-fold 60,70,60,60,70    1%   as simulated - e2          -4.1      -13.6  +9.4 [+6.4,+12.3]     the readouts differ
+Llama-3.3-70B  per-fold 60,70,60,60,70    1%   repaired - e2              -4.1       -6.3  +2.2 [-0.7,+5.0]      no difference shown
+Llama-3.3-70B  per-fold 60,70,60,60,70    1%   e1 - e2                    +0.4       -1.8  +2.2 [-0.7,+5.0]      no difference shown
+Llama-3.3-70B  L60                        5%   as simulated - e2          -1.9      -10.1  +8.2 [+5.6,+10.9]     the readouts differ
+Llama-3.3-70B  L60                        5%   repaired - e2              -1.6       -5.4  +3.9 [+1.2,+6.4]      the readouts differ
+Llama-3.3-70B  L60                        5%   e1 - e2                    +0.4       -0.2  +0.6 [-1.9,+2.9]      no difference shown
+Llama-3.3-70B  L70                        5%   as simulated - e2          -1.0      -12.6  +11.7 [+8.7,+14.5]    the readouts differ
+Llama-3.3-70B  L70                        5%   repaired - e2              -1.5       -4.4  +2.9 [+0.4,+5.5]      the readouts differ
+Llama-3.3-70B  L70                        5%   e1 - e2                    +0.5       +0.6  -0.1 [-2.5,+2.4]      no difference shown
+Llama-3.3-70B  per-fold 60,70,60,60,70    5%   as simulated - e2          -1.9      -12.4  +10.5 [+7.7,+13.3]    the readouts differ
+Llama-3.3-70B  per-fold 60,70,60,60,70    5%   repaired - e2              -1.8       -5.8  +4.0 [+1.5,+6.5]      the readouts differ
+Llama-3.3-70B  per-fold 60,70,60,60,70    5%   e1 - e2                    +0.5       -0.5  +1.0 [-1.4,+3.3]      no difference shown

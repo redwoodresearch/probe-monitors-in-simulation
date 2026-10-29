@@ -1,0 +1,10 @@
+{
+ "copied": [
+  "2026-10-09_000523_rerun_strict/sim_honest@september/t06_file_indexing/2026-10-09T08-25-44-00-00_la-file-indexing-sim-honest-1_4PwyiY5vW7UuBcmBSSfeQo.eval",
+  "2026-10-09_000523_rerun_strict/sim_honest@september/t19_web_scraping/2026-10-09T08-46-57-00-00_la-web-scraping-sim-honest-1_S57rJUXgrcwmmKsDBuqmg7.eval"
+ ],
+ "manifest": "manifest_simh_eval_upload_repro.json",
+ "step": "copy-repro",
+ "git": "3d9c9b16861f373d3f0e31c0c6ad11d5e1cfe1a0",
+ "stamp": "2026-10-14_153748"
+}

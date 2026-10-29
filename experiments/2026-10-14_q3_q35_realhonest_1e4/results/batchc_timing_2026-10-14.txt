@@ -1,0 +1,6 @@
+launch.json sha256 63ba7cfca31792dbd5ff08bb79b5db32000b730b8b03c2dab0d84de6e16fd193; 196 runs, 197 attempts, 3 servers, max_real_runs 30
+wall 2.44 h; run minutes mean 15.8, p50 12.1, p90 30.1, p99 67.3, max 86.8
+last start +111.6 min; last end +146.6 min
+server 0: 67 attempts; idle before the batch ended 0.1 min
+server 1: 75 attempts; idle before the batch ended 17.6 min
+server 2: 55 attempts; idle before the batch ended 8.6 min

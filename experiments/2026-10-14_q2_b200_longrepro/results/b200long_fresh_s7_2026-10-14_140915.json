@@ -1,0 +1,1012 @@
+{
+ "POST HOC": true,
+ "rule": "RULE.md (experiments/2026-10-14_q2_b200_longrepro)",
+ "git": "bd256708236344b335ac606ca331268d13828a80",
+ "stamp (PT)": "2026-10-14_140915",
+ "dump": "fresh_s7",
+ "stored run": "2026-10-13_q2_fresh_s7_seedcall_seed-oss-36b_v1",
+ "re-read run": "2026-10-14_q2_b200long_fresh_s7_seedcall_seed-oss-36b_v1",
+ "as-run extractor": [
+  "f8cc4598bafadb3ba2ab07f6bef0aedba5be90b0",
+  "experiments/2026-10-13_q2_fresh_honest/run_extract_seedcall_fresh.py",
+  "e19e13f53e0832c18a8bb9cfa85455f81c63b12b63722fb05af89e4c98630104"
+ ],
+ "bar": {
+  "cosine >=": 0.9999,
+  "max peak-relative diff <=": 0.015625
+ },
+ "re-read container": {
+  "device": "NVIDIA H200",
+  "seconds": 324
+ },
+ "re-read stats": [
+  {
+   "shard": 0,
+   "transcripts": 12,
+   "chunks": [
+    {
+     "chunk": "shard000_chunk000",
+     "transcripts": 1,
+     "rows": 96,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk001",
+     "transcripts": 1,
+     "rows": 66,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk002",
+     "transcripts": 1,
+     "rows": 116,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk003",
+     "transcripts": 1,
+     "rows": 108,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk004",
+     "transcripts": 1,
+     "rows": 158,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk005",
+     "transcripts": 1,
+     "rows": 178,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk006",
+     "transcripts": 1,
+     "rows": 148,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk007",
+     "transcripts": 1,
+     "rows": 116,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk008",
+     "transcripts": 1,
+     "rows": 104,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk009",
+     "transcripts": 1,
+     "rows": 88,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk010",
+     "transcripts": 1,
+     "rows": 72,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk011",
+     "transcripts": 1,
+     "rows": 82,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 287,
+   "forward [tokens, seconds]": [
+    [
+     34240,
+     28.17
+    ],
+    [
+     31502,
+     23.895
+    ],
+    [
+     34968,
+     28.705
+    ],
+    [
+     36019,
+     30.554
+    ],
+    [
+     35051,
+     29.055
+    ],
+    [
+     35614,
+     29.887
+    ],
+    [
+     33701,
+     27.034
+    ],
+    [
+     31954,
+     24.516
+    ],
+    [
+     22749,
+     13.337
+    ],
+    [
+     21666,
+     12.238
+    ],
+    [
+     21247,
+     11.801
+    ],
+    [
+     19608,
+     10.249
+    ]
+   ],
+   "gpu": "NVIDIA H200",
+   "load seconds (function start to weights on the GPU)": 35.4,
+   "function seconds": 323.1
+  }
+ ],
+ "selection": {
+  "dump": "fresh_s7",
+  "run": "2026-10-13_q2_fresh_s7_seedcall_seed-oss-36b_v1",
+  "gpu by shard": {
+   "0": "NVIDIA H200",
+   "1": "NVIDIA H200",
+   "2": "NVIDIA H200",
+   "3": "NVIDIA H200",
+   "4": "NVIDIA B200",
+   "5": "NVIDIA B200",
+   "6": "NVIDIA H200",
+   "7": "NVIDIA H200"
+  },
+  "B200 shards": [
+   4,
+   5
+  ],
+  "transcripts on B200 shards": {
+   "4": 6,
+   "5": 6
+  },
+  "longest tokens by B200 shard": {
+   "4": 36019,
+   "5": 35614
+  },
+  "layers": [
+   16,
+   24,
+   32,
+   40,
+   48,
+   56,
+   63
+  ],
+  "pick tokens": 358319,
+  "H200 forward tokens per second (stored stats)": 1366.8620676737612,
+  "estimated forward seconds on H200": 262.1,
+  "extractor items for the picks": 12,
+  "raw extract_shard callable": true
+ },
+ "per transcript": [
+  {
+   "shard": 4,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-02-06-00-00_la-auto-workflow-real-honest-1_WgqPpSNoamsWQgfL4Y9CXd__audit_event_streaming_via_rabbitmq:8c9ca7__1",
+   "tokens": 36019,
+   "n_tokens": 38054,
+   "shard longest": true,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    756,
+    756
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.0,
+   "max peak-relative diff": 0.0,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 108,
+     "bit-exact rows": 108,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 108,
+     "bit-exact rows": 108,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 108,
+     "bit-exact rows": 108,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 108,
+     "bit-exact rows": 108,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 108,
+     "bit-exact rows": 108,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 108,
+     "bit-exact rows": 108,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 108,
+     "bit-exact rows": 108,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "EXACT"
+  },
+  {
+   "shard": 4,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-09-37-00-00_la-model-registry-real-honest-1_LPH7C8N9ABiPaSvnumZdSp__model_artifact_quarantine_system:fd3e20__1",
+   "tokens": 34968,
+   "n_tokens": 41468,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    812,
+    812
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.0,
+   "max peak-relative diff": 0.0,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "EXACT"
+  },
+  {
+   "shard": 4,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-00-35-00-00_la-tiktok-real-honest-1_FWgToy8yX8KqgbJYqjTHGA__sqlite_video_cache:cafad3__1",
+   "tokens": 33701,
+   "n_tokens": 33702,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    1036,
+    1036
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.0,
+   "max peak-relative diff": 0.0,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 148,
+     "bit-exact rows": 148,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 148,
+     "bit-exact rows": 148,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 148,
+     "bit-exact rows": 148,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 148,
+     "bit-exact rows": 148,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 148,
+     "bit-exact rows": 148,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 148,
+     "bit-exact rows": 148,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 148,
+     "bit-exact rows": 148,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "EXACT"
+  },
+  {
+   "shard": 4,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-08-08-00-00_la-model-registry-real-honest-1_XE4dMajMqPdiR3aTbF84CP__mtg_model_registry_privilege_escalation_06_parameterized_query_refactor:391f30__1",
+   "tokens": 31954,
+   "n_tokens": 31955,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    812,
+    812
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.0,
+   "max peak-relative diff": 0.0,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 116,
+     "bit-exact rows": 116,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "EXACT"
+  },
+  {
+   "shard": 4,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-11-08-00-00_la-clinical-trial-real-honest-1_RgnRVfJ4DQ5Pw6SR5eh8kP__migrate_monitoring_log_to_etcd:c66593__1",
+   "tokens": 21666,
+   "n_tokens": 21667,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    616,
+    616
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.0,
+   "max peak-relative diff": 0.0,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 88,
+     "bit-exact rows": 88,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 88,
+     "bit-exact rows": 88,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 88,
+     "bit-exact rows": 88,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 88,
+     "bit-exact rows": 88,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 88,
+     "bit-exact rows": 88,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 88,
+     "bit-exact rows": 88,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 88,
+     "bit-exact rows": 88,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "EXACT"
+  },
+  {
+   "shard": 4,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-11-08-00-00_la-slack-clone-real-honest-1_2apNsSMGgdA6yT7z5yMUkf__total_alpha_search_result_objects:daef2a__1",
+   "tokens": 21247,
+   "n_tokens": 21248,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    504,
+    504
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.0,
+   "max peak-relative diff": 0.0,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 72,
+     "bit-exact rows": 72,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 72,
+     "bit-exact rows": 72,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 72,
+     "bit-exact rows": 72,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 72,
+     "bit-exact rows": 72,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 72,
+     "bit-exact rows": 72,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 72,
+     "bit-exact rows": 72,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 72,
+     "bit-exact rows": 72,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "EXACT"
+  },
+  {
+   "shard": 5,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-05-07-00-00_la-web-scraping-real-honest-1_ij28dmp9CXByMPpfLiC24a__redis_status_cache_to_filebased_cache:7849e8__1",
+   "tokens": 35614,
+   "n_tokens": 35615,
+   "shard longest": true,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    1246,
+    1246
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.0,
+   "max peak-relative diff": 0.0,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 178,
+     "bit-exact rows": 178,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 178,
+     "bit-exact rows": 178,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 178,
+     "bit-exact rows": 178,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 178,
+     "bit-exact rows": 178,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 178,
+     "bit-exact rows": 178,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 178,
+     "bit-exact rows": 178,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 178,
+     "bit-exact rows": 178,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "EXACT"
+  },
+  {
+   "shard": 5,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-00-36-00-00_la-shared-dotfiles-real-honest-1_ZzV5JKC7SKYYqsQ9boN2qy__postgresql_audit_trail_store:7571fe__1",
+   "tokens": 35051,
+   "n_tokens": 36868,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    1105,
+    1106
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.00390625,
+   "max peak-relative diff": 3.1871495593804866e-05,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 158,
+     "bit-exact rows": 158,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 158,
+     "bit-exact rows": 158,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 158,
+     "bit-exact rows": 158,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 158,
+     "bit-exact rows": 158,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 158,
+     "bit-exact rows": 157,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.00390625
+    },
+    "56": {
+     "rows": 158,
+     "bit-exact rows": 158,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 158,
+     "bit-exact rows": 158,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "PASS"
+  },
+  {
+   "shard": 5,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-09-37-00-00_la-tiktok-real-honest-1_XmtpmUG22kzCUhtyDmDmgB__video_url_format_validation:ebba17__1",
+   "tokens": 34240,
+   "n_tokens": 71086,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    671,
+    672
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.000244140625,
+   "max peak-relative diff": 2.311390517206746e-06,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 96,
+     "bit-exact rows": 95,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.000244140625
+    },
+    "24": {
+     "rows": 96,
+     "bit-exact rows": 96,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 96,
+     "bit-exact rows": 96,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 96,
+     "bit-exact rows": 96,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 96,
+     "bit-exact rows": 96,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 96,
+     "bit-exact rows": 96,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 96,
+     "bit-exact rows": 96,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "PASS"
+  },
+  {
+   "shard": 5,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-12-38-00-00_la-model-registry-real-honest-1_7jYZsJTCnGQ8o2agAssDms__version_checksum_response_field:89952e__1",
+   "tokens": 31502,
+   "n_tokens": 48254,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    461,
+    462
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.001953125,
+   "max peak-relative diff": 1.7939149984158576e-05,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 66,
+     "bit-exact rows": 66,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 66,
+     "bit-exact rows": 65,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.001953125
+    },
+    "32": {
+     "rows": 66,
+     "bit-exact rows": 66,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 66,
+     "bit-exact rows": 66,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 66,
+     "bit-exact rows": 66,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 66,
+     "bit-exact rows": 66,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 66,
+     "bit-exact rows": 66,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "PASS"
+  },
+  {
+   "shard": 5,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T13-59-05-00-00_la-clinical-trial-real-honest-1_nruYbCSRvvAWG6d9542wtA__migrate_monitoring_log_to_etcd:b0d445__1",
+   "tokens": 22749,
+   "n_tokens": 22750,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    727,
+    728
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.00390625,
+   "max peak-relative diff": 3.2417012789665023e-06,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 104,
+     "bit-exact rows": 104,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 104,
+     "bit-exact rows": 104,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 104,
+     "bit-exact rows": 104,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 104,
+     "bit-exact rows": 104,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 104,
+     "bit-exact rows": 104,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 104,
+     "bit-exact rows": 104,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 104,
+     "bit-exact rows": 103,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.00390625
+    }
+   },
+   "verdict": "PASS"
+  },
+  {
+   "shard": 5,
+   "arm": "real-honest-fresh",
+   "key": "2026-10-14T14-03-37-00-00_la-tiktok-real-honest-1_Wd8uqDLUtvmp2rkDctieQ8__redis_guess_cache:8f6002__1",
+   "tokens": 19608,
+   "n_tokens": 19609,
+   "shard longest": false,
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "gate P (positions identical)": true,
+   "bit-exact rows / rows compared": [
+    574,
+    574
+   ],
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.0,
+   "max peak-relative diff": 0.0,
+   "non-finite": 0,
+   "per layer": {
+    "16": {
+     "rows": 82,
+     "bit-exact rows": 82,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "24": {
+     "rows": 82,
+     "bit-exact rows": 82,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "32": {
+     "rows": 82,
+     "bit-exact rows": 82,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "40": {
+     "rows": 82,
+     "bit-exact rows": 82,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "48": {
+     "rows": 82,
+     "bit-exact rows": 82,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "56": {
+     "rows": 82,
+     "bit-exact rows": 82,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    },
+    "63": {
+     "rows": 82,
+     "bit-exact rows": 82,
+     "worst cosine": 0.9999998807907104,
+     "max abs diff": 0.0
+    }
+   },
+   "verdict": "EXACT"
+  }
+ ],
+ "per shard": {
+  "4": {
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "transcripts": 6,
+   "longest tokens (stored)": 36019,
+   "longest re-read": true,
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.0,
+   "bit-exact rows / rows": [
+    4536,
+    4536
+   ],
+   "verdict": "EXACT"
+  },
+  "5": {
+   "original gpu": "NVIDIA B200",
+   "re-read gpu": "NVIDIA H200",
+   "transcripts": 6,
+   "longest tokens (stored)": 35614,
+   "longest re-read": true,
+   "worst cosine": 0.9999998807907104,
+   "max abs diff": 0.00390625,
+   "bit-exact rows / rows": [
+    4784,
+    4788
+   ],
+   "verdict": "PASS"
+  }
+ },
+ "per dump": {
+  "shards by verdict": {
+   "EXACT": 1,
+   "PASS": 1,
+   "INCONCLUSIVE": 0,
+   "FAIL": 0
+  },
+  "transcripts by verdict": {
+   "EXACT": 8,
+   "PASS": 4,
+   "INCONCLUSIVE": 0,
+   "FAIL": 0
+  },
+  "verdict": "PASS"
+ },
+ "status": "preliminary"
+}

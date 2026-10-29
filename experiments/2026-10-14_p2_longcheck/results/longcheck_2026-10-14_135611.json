@@ -1,0 +1,278 @@
+{
+ "label": "RULE.md in this folder",
+ "git": "f984722dcc68104c264fdba91d35629cc7e6cb3f",
+ "app": "probe-shift_aswin-surya_sub-p2probes_longcheck_kill-2026-11-13",
+ "stamps": {
+  "highstakes": "2026-10-14_131233",
+  "cyber": "2026-10-14_134928"
+ },
+ "pass_cosine": 0.9999,
+ "gpu": "NVIDIA H200",
+ "results": {
+  "highstakes|shard0": [
+   {
+    "item": 10882,
+    "n_tokens": 1835,
+    "stored_part": "shard0_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 12564,
+    "n_tokens": 1657,
+    "stored_part": "shard0_part06",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 10748,
+    "n_tokens": 1558,
+    "stored_part": "shard0_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 12678,
+    "n_tokens": 1516,
+    "stored_part": "shard0_part06",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 10526,
+    "n_tokens": 1455,
+    "stored_part": "shard0_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 10704,
+    "n_tokens": 1389,
+    "stored_part": "shard0_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 10632,
+    "n_tokens": 1346,
+    "stored_part": "shard0_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 7946,
+    "n_tokens": 1318,
+    "stored_part": "shard0_part03",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   }
+  ],
+  "highstakes|shard1": [
+   {
+    "item": 12333,
+    "n_tokens": 1715,
+    "stored_part": "shard1_part06",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 10253,
+    "n_tokens": 1443,
+    "stored_part": "shard1_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 1395,
+    "n_tokens": 1129,
+    "stored_part": "shard1_part00",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 12909,
+    "n_tokens": 1032,
+    "stored_part": "shard1_part06",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 11221,
+    "n_tokens": 1002,
+    "stored_part": "shard1_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 10083,
+    "n_tokens": 974,
+    "stored_part": "shard1_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 10193,
+    "n_tokens": 965,
+    "stored_part": "shard1_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 11549,
+    "n_tokens": 944,
+    "stored_part": "shard1_part05",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   }
+  ],
+  "cyber|shard0": [
+   {
+    "item": 1406,
+    "n_tokens": 301,
+    "stored_part": "shard0_part00",
+    "min_cosine": 0.9997100622302781,
+    "max_abs_diff": 2.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1288,
+    "n_tokens": 184,
+    "stored_part": "shard0_part00",
+    "min_cosine": 0.9998533547396868,
+    "max_abs_diff": 1.5,
+    "bit_equal": false
+   },
+   {
+    "item": 1290,
+    "n_tokens": 157,
+    "stored_part": "shard0_part00",
+    "min_cosine": 0.9999093357550854,
+    "max_abs_diff": 2.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1514,
+    "n_tokens": 151,
+    "stored_part": "shard0_part00",
+    "min_cosine": 0.9998510166704152,
+    "max_abs_diff": 2.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1624,
+    "n_tokens": 143,
+    "stored_part": "shard0_part00",
+    "min_cosine": 0.9998815581463599,
+    "max_abs_diff": 2.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1146,
+    "n_tokens": 143,
+    "stored_part": "shard0_part00",
+    "min_cosine": 0.9998880036502873,
+    "max_abs_diff": 1.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1028,
+    "n_tokens": 136,
+    "stored_part": "shard0_part00",
+    "min_cosine": 0.9998229938510581,
+    "max_abs_diff": 1.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1242,
+    "n_tokens": 135,
+    "stored_part": "shard0_part00",
+    "min_cosine": 0.999852244837497,
+    "max_abs_diff": 1.0,
+    "bit_equal": false
+   }
+  ],
+  "cyber|shard1": [
+   {
+    "item": 1673,
+    "n_tokens": 194,
+    "stored_part": "shard1_part00",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 1381,
+    "n_tokens": 191,
+    "stored_part": "shard1_part00",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 1465,
+    "n_tokens": 168,
+    "stored_part": "shard1_part00",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 1339,
+    "n_tokens": 157,
+    "stored_part": "shard1_part00",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 1043,
+    "n_tokens": 153,
+    "stored_part": "shard1_part00",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 1531,
+    "n_tokens": 143,
+    "stored_part": "shard1_part00",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 1283,
+    "n_tokens": 142,
+    "stored_part": "shard1_part00",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   },
+   {
+    "item": 1173,
+    "n_tokens": 139,
+    "stored_part": "shard1_part00",
+    "min_cosine": 0.9999999999999998,
+    "max_abs_diff": 0.0,
+    "bit_equal": true
+   }
+  ]
+ },
+ "passes": false
+}

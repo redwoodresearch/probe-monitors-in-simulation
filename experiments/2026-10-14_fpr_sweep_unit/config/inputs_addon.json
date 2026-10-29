@@ -1,0 +1,69 @@
+{
+ "label": "Add-on (0d 01:4x) input manifest: part (b)'s B u C unit files plus the relaunch's per-row reply files (2e's record @ f874fb9c1)",
+ "local": {
+  "labels": {
+   "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/slip_pins/claimc_labels_reduced.json",
+   "sha256": "d00e88773fc2a71bef51e1ff0ccc2559932f5c3a306a8f5604c5248e797dc995"
+  },
+  "t196": {
+   "git": "HEAD:experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json",
+   "sha256": "55d9a8ec68f4685410d65c97bb84f470efb7cd8f05287384f92465ed5eadedbb"
+  },
+  "r36": {
+   "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/cb_inputs/r36_runs.json",
+   "sha256": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96"
+  },
+  "v6": {
+   "git": "0ed287c95:experiments/2026-10-14_xerr_prelim_09/results/xerr_v6_2026-10-14_161122.json",
+   "sha256": "e789144b62f71e0fb168dc3106656c2b5f29aadafe12df0f86dd1f74441d7645"
+  },
+  "relaunch_record": {
+   "git": "f874fb9c1:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_rh1e4_v1__honest_b_2026-10-14_235427.json",
+   "sha256": "afc52f7911536610f6a055a95b9b1303455b12e2be92e2627e7c6ef45f7f8eed"
+  }
+ },
+ "probes": [
+  {
+   "probe_id": "sol_a|avg_top2|corrected|none|tight",
+   "label": "Sol (a)",
+   "role": "main",
+   "bc_rows": {
+    "volume": "solavg",
+    "path": "xfer/correctedb_tight22g_2026-10-14_144709/perrow_asis_tight__a__averaged_reply_top2.npz",
+    "sha256": "aca93022c00ebb8394977be5013aaf53f4881e35b401c91ab8ffad846cd52d50",
+    "pin_from": "A24 list source.sha256 (the list's npz source); 22g record source.record_sha256 06293dc904d20dcb0f947f89df852876677071ce2a59594bce2924918d73a4f3"
+   },
+   "relaunch_rows": {
+    "volume": "convaudit",
+    "path": "ref/relaunch/sol/a_tight__avg_top2.npz",
+    "sha256": "5cce104b70f81a893e2fb09113ebeaec7bbf789cb060492ca0d00786e626db7d"
+   },
+   "relaunch_runs": {
+    "volume": "convaudit",
+    "path": "ref/relaunch/sol/a_tight__avg_top2.json",
+    "sha256": "440ef0d243f9a0ef20961387091581acb85ec763a62af80173ce2d98461058cf"
+   }
+  },
+  {
+   "probe_id": "c_asis|avg_top2|corrected|none",
+   "label": "c_asis (positive control)",
+   "role": "positive control",
+   "bc_rows": {
+    "volume": "solavg",
+    "path": "xfer/asis_2026-10-14_135701/rows_2026-10-14_142228/c_asis_tight__avg_top2.npz",
+    "sha256": "c028a5fb8719fab1bc3990abb467b42eb5e417b2a82ee19d6e6205de775f8c21",
+    "pin_from": "record rows_file.files.c_asis_tight__avg_top2"
+   },
+   "relaunch_rows": {
+    "volume": "convaudit",
+    "path": "ref/relaunch/sol/c_asis_tight__avg_top2.npz",
+    "sha256": "a5c23d61c38e653dd5b5fa1ec75b0e7f95e9887842dbc3ac32b4a7733dbd7605"
+   },
+   "relaunch_runs": {
+    "volume": "convaudit",
+    "path": "ref/relaunch/sol/c_asis_tight__avg_top2.json",
+    "sha256": "32fe0ccfe5aead2bb94b4824ead52774b80367d393a9ea3fa926d2531353a9f9"
+   }
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+# Every layer of Qwen3-32B, both readouts, Apollo's recipe. Same model settings as the 2026-10-05 Qwen run.
+run: 2026-10-06_apollo-sweep_qwen3-32b
+model: Qwen/Qwen3-32B
+tokenizer: Qwen/Qwen3-32B
+weights: qwen-cache          # Modal Volume probe-shift_aswin-surya_hf-cache, mounted read only
+dtype: bfloat16
+n_gpus: 1
+chat_template: {enable_thinking: false}   # no effect without add_generation_prompt: identical ids on all 983 dialogues
+readouts: [block_output, apollo]  # block_output: raw output of block L; apollo: final RMSNorm of the stream after L blocks
+layers: all                  # 0..63
+eval_sets: [roleplaying_llama-70b-3.3, roleplaying_qwen3-32b]   # Apollo's Llama-written responses; Qwen3-32B's own
+train_data: repe_honesty__plain   # instructed pairs: 306 true statements (Apollo asks for 512; the CSV has 306)
+detect: statement minus its last five words; statements of five words or fewer give no tokens (31 of 306)
+reg_coeff: 10                # sklearn C = 1 / reg_coeff
+max_iter: 2000
+val_fraction: 0.2            # held-out instructed pairs, split by pair; seed 0 holds out the same 61 pairs as before
+split_seed: 0
+aggregation: mean of per-token scores over the detected tokens
+fit_workers: 8               # probes fit in parallel threads inside the GPU container, after the forward passes
+blas_threads_per_fit: 2
+pilot: {pairs: 40, eval_every: 12}   # --pilot: first 40 statement pairs, every 12th eval dialogue

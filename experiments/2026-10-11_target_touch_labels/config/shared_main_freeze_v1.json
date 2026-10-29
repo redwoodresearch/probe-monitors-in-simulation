@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "frozen_at": "2026-10-11T13:17:50.386372-07:00",
+  "before_resource_classification": true,
+  "before_command_classification": true,
+  "rule_file": "shared_main_rule_v1.md",
+  "rule_sha256": "66ef62964a9d83a1d39049a6297109e14f1ad88d51169c2cb1fd1fa485107cd8",
+  "producer_files": {
+    "shared_main_targets.py": "be538e7dc236f299211f609102d90149ab60e6811f5126b3ac159adb6440b6e2",
+    "target_touch.py": "d2e4fda3f04c082ebbec1b4a554485fbd5dffc59521a9bba57cec0f7e6c797bf"
+  },
+  "inputs": {
+    "targets": "6eb0e53853642c196831bba809d51a533a918280f39a6928fa5019404a148111",
+    "target_sources": "217f0a603e40771c6d7205abb3435fd2656360d64f0552efa43fb02173eb976f",
+    "runs": "a56dbc133913b05eb57f6d3829fee7ee99ccee97171f6f484994dc0160d30900",
+    "join": "85ca19e8718e5604126c231e42f066d0524aa563c626aefb904bfd142723d9bc",
+    "calls": "90badcd02145c2130883471e3cbef22bcb000e70ed61754b5e4ea05ff13ca390",
+    "v2_blind": "748d00369995239aecba57473e5bf3a4956cb791fade748511de398d19206063",
+    "v2_labels": "9727f21cb71e50461cf9dab6cc229e6ae92efee073247e4cb3e59b98f0205884"
+  },
+  "primary_filter": "shared_with_main_only == 0",
+  "models_called": 0
+}

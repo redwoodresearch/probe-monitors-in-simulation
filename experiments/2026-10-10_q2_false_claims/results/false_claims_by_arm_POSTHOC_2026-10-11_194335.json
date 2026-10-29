@@ -1,0 +1,102 @@
+{
+ "label": "POST HOC (reference audit; no verdict)",
+ "git": "ba3fc5a2b69bb5887dcf36d776fb22504a277cb6",
+ "result sha256": "661560be983a9376e0ad56927577e0418ba98d667e95b7fa75ff4bba42479a33",
+ "simulated runs built from": "honest_a (Phase 2 launch.json references; reference_audit_2026-10-11_194008.json)",
+ "both arms (reproduces the committed v2)": {
+  "real vs qwen-sim@september": {
+   "claims (real / simulated)": [
+    32,
+    15
+   ],
+   "AUROC (simulated higher), all claims": 0.53125,
+   "shared tasks": 15,
+   "AUROC, shared tasks": 0.5435897435897435,
+   "within-task permutation p (two-sided)": 0.39016098390160986,
+   "null mean": 0.5048441025641026,
+   "mean score real / simulated": [
+    -5.000999346375465,
+    -4.891321961085001
+   ]
+  },
+  "real vs qwen-sim@today": {
+   "claims (real / simulated)": [
+    32,
+    12
+   ],
+   "AUROC (simulated higher), all claims": 0.515625,
+   "shared tasks": 12,
+   "AUROC, shared tasks": 0.5436507936507937,
+   "within-task permutation p (two-sided)": 0.5995400459954005,
+   "null mean": 0.520020634920635,
+   "mean score real / simulated": [
+    -5.000999346375465,
+    -4.917551974455516
+   ]
+  }
+ },
+ "honest_a only": {
+  "real vs qwen-sim@september": {
+   "claims (real / simulated)": [
+    15,
+    15
+   ],
+   "AUROC (simulated higher), all claims": 0.5822222222222222,
+   "shared tasks": 12,
+   "AUROC, shared tasks": 0.5833333333333334,
+   "within-task permutation p (two-sided)": 0.2505749425057494,
+   "null mean": 0.4997965277777777,
+   "mean score real / simulated": [
+    -5.032039388020833,
+    -4.891321961085001
+   ]
+  },
+  "real vs qwen-sim@today": {
+   "claims (real / simulated)": [
+    15,
+    12
+   ],
+   "AUROC (simulated higher), all claims": 0.5722222222222223,
+   "shared tasks": 10,
+   "AUROC, shared tasks": 0.5599999999999999,
+   "within-task permutation p (two-sided)": 0.23817618238176183,
+   "null mean": 0.50003,
+   "mean score real / simulated": [
+    -5.032039388020833,
+    -4.917551974455516
+   ]
+  }
+ },
+ "honest_b only (honest_a excluded)": {
+  "real vs qwen-sim@september": {
+   "claims (real / simulated)": [
+    17,
+    15
+   ],
+   "AUROC (simulated higher), all claims": 0.48627450980392156,
+   "shared tasks": 14,
+   "AUROC, shared tasks": 0.5204081632653061,
+   "within-task permutation p (two-sided)": 0.704929507049295,
+   "null mean": 0.4995301020408164,
+   "mean score real / simulated": [
+    -4.973611074335435,
+    -4.891321961085001
+   ]
+  },
+  "real vs qwen-sim@today": {
+   "claims (real / simulated)": [
+    17,
+    12
+   ],
+   "AUROC (simulated higher), all claims": 0.46568627450980393,
+   "shared tasks": 11,
+   "AUROC, shared tasks": 0.5041322314049587,
+   "within-task permutation p (two-sided)": 0.9993000699930007,
+   "null mean": 0.49981157024793393,
+   "mean score real / simulated": [
+    -4.973611074335435,
+    -4.917551974455516
+   ]
+  }
+ }
+}

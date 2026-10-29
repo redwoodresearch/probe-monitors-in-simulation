@@ -1,0 +1,23 @@
+{
+ "target": "nm360_s5_main",
+ "arm": "honest_b",
+ "staged_file": "/ev/nm360_s5_main_v1/inputs/honest_b.jsonl",
+ "staged_sha": "1cf1b6b3bb7d4109e4398172ff68af40d596bdb27a67f967b607bcd913b9f0e3",
+ "template": "fixed",
+ "seed": 20261014,
+ "n": 1,
+ "tasks": null,
+ "rows": [
+  {
+   "line": 0,
+   "assistant_turns": 0,
+   "prefix_mismatches": 0,
+   "think_blocks": 0,
+   "nonempty_think_blocks": 0,
+   "staged_len": 10,
+   "full_len": 10,
+   "cut_equal": true
+  }
+ ],
+ "passes": true
+}

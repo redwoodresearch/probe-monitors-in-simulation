@@ -1,0 +1,37 @@
+# Gate (a): TF-IDF on fixed-sim (PLAN.md "Gate (a)"; run_gate_a_modal.py). Resolved settings, defaults included.
+run: 2026-10-09_la_fixed-sim_v2          # the fixed run on the la-activations Volume (examples/ staged by the apply step)
+split_file: split.json                   # dev / test environments (seed 0)
+folds_file: folds_v3.json                # splits/: main-task folds for the secondary design
+comparisons:                             # name -> [negative arm, positive arm]
+  fixed_sim_vs_e1: [real-attack-e1, sim-attack]   # primary
+  e2_vs_e1: [real-attack-e1, real-attack-e2]      # required control row (Aswin's rule), same everything
+designs: [loeo, dev_to_test, main_task]  # loeo = leave one environment out over all 10, scored on the 5 test ones (pre-registered primary)
+variants:
+  all: {scrub: 0}                        # text as the probe reads it (readout_text, level 0); the primary
+  no_view_range: {scrub: 0, drop_outputs_matching: "Invalid `view_range`"}   # secondary: those outputs dropped from both arms
+  level1: {scrub: 1}                     # times and dates masked on both sides (diagnostic)
+  planted: {scrub: 0, plant: "INFO: cache warm"}   # one seeded kept output per simulated run gets this as an extra last line
+shuffle_null:                                 # per-main-task label shuffle (one flip, probability 1/2, swaps the arms of all its cells)
+  draws: 200
+  rows: [[fixed_sim_vs_e1, loeo, all], [e2_vs_e1, loeo, all], [fixed_sim_vs_e1, loeo, no_view_range],
+         [fixed_sim_vs_e1, dev_to_test, all], [e2_vs_e1, dev_to_test, all]]
+  draws_per_container: 6                # each container writes its draws to the Volume (gate_a_null/)
+bar: {auroc_max: 0.55, null_quantiles: [0.025, 0.975]}   # pass: run AUROC <= 0.55 AND inside the null's 2.5-97.5% range
+planted_min: 0.90                        # the planted check must reach this held out, or a near-chance result is not trusted
+env_bootstrap: 1000                      # resamples of whole test environments for the 95% interval
+top_features: 30                         # each way, mean coefficient over the 5 test-environment loeo models (fixed_sim_vs_e1, all)
+date_token_pattern: "(19|20)\\d\\d|(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)|\\d{1,2}:\\d\\d|(Mon|Tue|Wed|Thu|Fri|Sat|Sun)|\\d{4}-\\d\\d|\\d\\d:\\d"
+seed: 0
+plant_seed: 20261009
+# q1's TF-IDF settings (experiments/2026-10-06_q1_text_baselines/config/tfidf.yaml), unchanged
+text: readout_text
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]"
+char_ngrams: [2, 5]
+lowercase: false
+n_features: 1048576
+sublinear_tf: true
+C: 1.0
+solver: liblinear
+max_iter: 1000
+n_jobs: 8                                # 8 parallel fits per container (main: 16 cores; null: 8)

@@ -1,0 +1,13 @@
+{
+ "n_rows": 25203,
+ "nonstr_bash": 0,
+ "tool_messages": {
+  "bash": 25203,
+  "text_editor": 19249
+ },
+ "features_sha256": "a0cb831d49c50bd34622fcc82b40ed18845be1e3f411a5c1e70e23860851f22a",
+ "volume_path": "claimB/q11_features_v1/features.json",
+ "b_script_sha256": "0abee4a4d8730c0d3330e4702d179dfd8d3a11a228279e18e84fc4baa1d4cd06",
+ "b_deps_sha256": "33d539e9a646c5adfeb3b8069c708c3f696f1ac794e09c26a281448bf0c6a65d",
+ "features_local_copy_sha256": "a0cb831d49c50bd34622fcc82b40ed18845be1e3f411a5c1e70e23860851f22a"
+}

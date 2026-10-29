@@ -1,0 +1,342 @@
+{
+ "label": "scores-free count; PRELIMINARY until Codex",
+ "git": "5e14574fa8deef216139ae83b86fec288a3e90fa",
+ "stamp (PT)": "2026-10-14_190758",
+ "app": "probe-shift_aswin-surya_sub-p2probes_cmdcallend_kill-2026-11-13",
+ "inputs": {
+  "manifest": "bf847d425b80d95ebb75a9ed1d524fc68c9efcd014710ddc18e445ed9d373ebc",
+  "c_inputs": "513f621a9e71e91f8188cccc76cb222e9c9f4acb5a91fc90c45a283964729b31",
+  "tokenizer": "hub/models--Qwen--Qwen3.5-27B/snapshots/fc05daec18b0a78c049392ed2e771dde82bdf654/tokenizer.json"
+ },
+ "volume_copy": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13:2026-10-14_p2_cmd_vs_callend/2026-10-14_190758/cmd_vs_callend.json",
+ "epochs_seen": {
+  "run1": 193,
+  "honest_a": 191,
+  "honest_b": 195,
+  "sim": 191,
+  "run2": 192,
+  "honest_c": 192
+ },
+ "fails": [],
+ "fixed_ids": [
+  15,
+  77
+ ],
+ "by_world_tool": {
+  "honest_a": {
+   "bash": {
+    "calls": 14015,
+    "end-of-call dropped: fixed call token": 758,
+    "both": 4634,
+    "same token": 4634,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 8622,
+    "no end-of-call readout: beyond the cut or unmatched": 8623,
+    "no command readout: no command value": 1
+   },
+   "other tool": {
+    "calls": 6,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 5,
+    "no end-of-call readout: beyond the cut or unmatched": 5,
+    "both": 1,
+    "same token": 1
+   },
+   "text_editor:create": {
+    "calls": 338,
+    "both": 180,
+    "same token": 16,
+    "command-end before end-of-call": 164,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 158,
+    "no end-of-call readout: beyond the cut or unmatched": 158
+   },
+   "text_editor:str_replace|insert(new_str)": {
+    "calls": 1043,
+    "both": 495,
+    "same token": 53,
+    "command-end before end-of-call": 442,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 546,
+    "no end-of-call readout: beyond the cut or unmatched": 548
+   },
+   "text_editor:view|undo_edit": {
+    "calls": 1179,
+    "both": 970,
+    "same token": 776,
+    "command-end before end-of-call": 194,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 209,
+    "no end-of-call readout: beyond the cut or unmatched": 209
+   }
+  },
+  "honest_b": {
+   "bash": {
+    "calls": 14387,
+    "end-of-call dropped: fixed call token": 908,
+    "both": 4495,
+    "same token": 4494,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 8984,
+    "no end-of-call readout: beyond the cut or unmatched": 8984,
+    "command-end before end-of-call": 1
+   },
+   "other tool": {
+    "calls": 5,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 4,
+    "no end-of-call readout: beyond the cut or unmatched": 4,
+    "both": 1,
+    "same token": 1
+   },
+   "text_editor:create": {
+    "calls": 461,
+    "both": 185,
+    "same token": 10,
+    "command-end before end-of-call": 175,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 275,
+    "no end-of-call readout: beyond the cut or unmatched": 275,
+    "end-of-call dropped: fixed call token": 1
+   },
+   "text_editor:insert(insert_text)": {
+    "calls": 1,
+    "both": 1,
+    "same token": 0,
+    "command-end before end-of-call": 1
+   },
+   "text_editor:str_replace|insert(new_str)": {
+    "calls": 1052,
+    "both": 467,
+    "same token": 56,
+    "command-end before end-of-call": 411,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 574,
+    "no end-of-call readout: beyond the cut or unmatched": 584,
+    "end-of-call dropped: fixed call token": 1
+   },
+   "text_editor:view|undo_edit": {
+    "calls": 1252,
+    "both": 1055,
+    "same token": 873,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 197,
+    "no end-of-call readout: beyond the cut or unmatched": 197,
+    "command-end before end-of-call": 182
+   }
+  },
+  "honest_c": {
+   "bash": {
+    "calls": 13677,
+    "end-of-call dropped: fixed call token": 738,
+    "both": 4686,
+    "same token": 4686,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 8253,
+    "no end-of-call readout: beyond the cut or unmatched": 8253
+   },
+   "other tool": {
+    "calls": 15,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 14,
+    "no end-of-call readout: beyond the cut or unmatched": 14,
+    "both": 1,
+    "same token": 1
+   },
+   "text_editor:create": {
+    "calls": 410,
+    "end-of-call dropped: fixed call token": 3,
+    "both": 196,
+    "same token": 16,
+    "command-end before end-of-call": 180,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 211,
+    "no end-of-call readout: beyond the cut or unmatched": 211
+   },
+   "text_editor:insert(insert_text)": {
+    "calls": 3,
+    "both": 2,
+    "same token": 0,
+    "command-end before end-of-call": 2,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 1,
+    "no end-of-call readout: beyond the cut or unmatched": 1
+   },
+   "text_editor:str_replace|insert(new_str)": {
+    "calls": 1172,
+    "both": 502,
+    "same token": 36,
+    "command-end before end-of-call": 466,
+    "end-of-call dropped: fixed call token": 1,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 663,
+    "no end-of-call readout: beyond the cut or unmatched": 669
+   },
+   "text_editor:view|undo_edit": {
+    "calls": 1106,
+    "both": 945,
+    "same token": 781,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 160,
+    "no end-of-call readout: beyond the cut or unmatched": 161,
+    "command-end before end-of-call": 164
+   }
+  },
+  "run1": {
+   "bash": {
+    "calls": 10277,
+    "both": 5054,
+    "same token": 5040,
+    "end-of-call dropped: fixed call token": 811,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 4412,
+    "no end-of-call readout: beyond the cut or unmatched": 4412,
+    "command-end before end-of-call": 14
+   },
+   "other tool": {
+    "calls": 13,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 12,
+    "no end-of-call readout: beyond the cut or unmatched": 12,
+    "both": 1,
+    "same token": 1
+   },
+   "text_editor:create": {
+    "calls": 256,
+    "both": 231,
+    "same token": 22,
+    "command-end before end-of-call": 209,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 25,
+    "no end-of-call readout: beyond the cut or unmatched": 25
+   },
+   "text_editor:insert(insert_text)": {
+    "calls": 2,
+    "both": 2,
+    "same token": 0,
+    "command-end before end-of-call": 2
+   },
+   "text_editor:str_replace|insert(new_str)": {
+    "calls": 1303,
+    "both": 806,
+    "same token": 81,
+    "command-end before end-of-call": 725,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 488,
+    "no end-of-call readout: beyond the cut or unmatched": 496,
+    "end-of-call dropped: fixed call token": 1
+   },
+   "text_editor:view|undo_edit": {
+    "calls": 1326,
+    "both": 1151,
+    "same token": 865,
+    "command-end before end-of-call": 286,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 175,
+    "no end-of-call readout: beyond the cut or unmatched": 175
+   }
+  },
+  "run2": {
+   "bash": {
+    "calls": 9652,
+    "both": 4535,
+    "same token": 4528,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 4377,
+    "no end-of-call readout: beyond the cut or unmatched": 4377,
+    "end-of-call dropped: fixed call token": 739,
+    "no command readout: no command value": 1,
+    "command-end before end-of-call": 7
+   },
+   "other tool": {
+    "calls": 9,
+    "both": 6,
+    "same token": 6,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 3,
+    "no end-of-call readout: beyond the cut or unmatched": 3
+   },
+   "text_editor:create": {
+    "calls": 260,
+    "both": 242,
+    "same token": 13,
+    "command-end before end-of-call": 229,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 18,
+    "no end-of-call readout: beyond the cut or unmatched": 18
+   },
+   "text_editor:str_replace|insert(new_str)": {
+    "calls": 1237,
+    "both": 753,
+    "same token": 51,
+    "command-end before end-of-call": 702,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 476,
+    "no end-of-call readout: beyond the cut or unmatched": 484
+   },
+   "text_editor:view|undo_edit": {
+    "calls": 1257,
+    "both": 1139,
+    "same token": 840,
+    "command-end before end-of-call": 299,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 117,
+    "no end-of-call readout: beyond the cut or unmatched": 118
+   }
+  },
+  "sim": {
+   "bash": {
+    "calls": 10591,
+    "both": 5174,
+    "same token": 5164,
+    "end-of-call dropped: fixed call token": 999,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 4418,
+    "no end-of-call readout: beyond the cut or unmatched": 4418,
+    "command-end before end-of-call": 10
+   },
+   "other tool": {
+    "calls": 12,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 8,
+    "no end-of-call readout: beyond the cut or unmatched": 8,
+    "both": 4,
+    "same token": 4
+   },
+   "text_editor:create": {
+    "calls": 265,
+    "both": 230,
+    "same token": 16,
+    "command-end before end-of-call": 214,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 35,
+    "no end-of-call readout: beyond the cut or unmatched": 35
+   },
+   "text_editor:insert(insert_text)": {
+    "calls": 1,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 1,
+    "no end-of-call readout: beyond the cut or unmatched": 1
+   },
+   "text_editor:str_replace|insert(new_str)": {
+    "calls": 1246,
+    "both": 763,
+    "same token": 48,
+    "command-end before end-of-call": 715,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 472,
+    "no end-of-call readout: beyond the cut or unmatched": 482,
+    "end-of-call dropped: fixed call token": 1
+   },
+   "text_editor:view|undo_edit": {
+    "calls": 1266,
+    "both": 1087,
+    "same token": 810,
+    "command-end before end-of-call": 277,
+    "no command readout: beyond the cut, unmatched, or no whole token inside the value": 179,
+    "no end-of-call readout: beyond the cut or unmatched": 179
+   }
+  }
+ },
+ "overall": {
+  "honest_a": {
+   "both": 6280,
+   "same token": 5480,
+   "share same": 0.8726114649681529
+  },
+  "honest_b": {
+   "both": 6204,
+   "same token": 5434,
+   "share same": 0.875886524822695
+  },
+  "honest_c": {
+   "both": 6332,
+   "same token": 5520,
+   "share same": 0.8717624763108023
+  },
+  "run1": {
+   "both": 7245,
+   "same token": 6009,
+   "share same": 0.829399585921325
+  },
+  "run2": {
+   "both": 6675,
+   "same token": 5438,
+   "share same": 0.8146816479400749
+  },
+  "sim": {
+   "both": 7258,
+   "same token": 6042,
+   "share same": 0.8324607329842932
+  }
+ }
+}

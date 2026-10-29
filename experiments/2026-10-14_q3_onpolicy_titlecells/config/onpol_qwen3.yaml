@@ -1,0 +1,12 @@
+# On-policy title cells (RULE.md here): d9's mean-pool36 settings (fxavg_qwen3.yaml's: mean_final, the 32k cut, model and revision)
+# at ALL 64 layers (no `layers` key: every decoder block), on run_onpol_stage.py's staged Qwen3.5-27B runs (scrub level 0, #36's
+# reader format) plus its 16 reproduction runs (8 repro-real-honest from d9's mean-pool dump's inputs, 8 repro-xread-s1).
+run: 2026-10-14_q3onpol_q35own_qwen3-32b_all_v1
+inputs_from: 2026-10-14_q3onpol_q35own_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 24
+chunk_size: 10
+mean_final: true

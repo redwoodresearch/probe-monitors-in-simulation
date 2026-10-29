@@ -1,0 +1,981 @@
+{
+ "stamp": "2026-10-07_124121",
+ "provenance": {
+  "git": "ff89138e61a4fb0e53d44751a55ab01c537cdc63",
+  "git_dirty": false,
+  "source_sha": "ea51221e5c5d1f3a",
+  "files": [
+   "experiments/2026-10-07_what_each_method_sees/analyze_top_features.py",
+   "experiments/2026-10-07_what_each_method_sees/run_top_features_modal.py",
+   "experiments/2026-10-07_what_each_method_sees/config/what_sees.yaml"
+  ],
+  "launched": "2026-10-07_124121",
+  "modal_app": "probe-shift_aswin-surya_sub-what-sees_top-feats_kill-2026-11-06"
+ },
+ "args": {
+  "config": "/root/config/what_sees.yaml",
+  "levels": [
+   7
+  ],
+  "top": 25,
+  "ridge_alpha": [
+   1.0,
+   10.0
+  ],
+  "fold_jobs": 5,
+  "n_jobs": -1,
+  "joined": "/data/inputs/2026-10-07_124121/joined.npz",
+  "staging_outputs": "/data/inputs/2026-10-07_124121/outputs.jsonl.gz",
+  "folds": "/data/inputs/2026-10-07_124121/folds.json",
+  "out_dir": "/data/results/2026-10-07_124121",
+  "stamp": "2026-10-07_124121",
+  "provenance": "/data/inputs/2026-10-07_124121/provenance.json"
+ },
+ "rows": 46115,
+ "levels": {
+  "L7": {
+   "tfidf": {
+    "toward_sim": [
+     {
+      "ngrams": [
+       " ---"
+      ],
+      "weight": 1.333,
+      "kind": "char",
+      "share_real": 0.0934,
+      "share_sim": 0.0973
+     },
+     {
+      "ngrams": [
+       ". Resolved"
+      ],
+      "weight": 1.2675,
+      "kind": "word",
+      "share_real": 0.0001,
+      "share_sim": 0.0042
+     },
+     {
+      "ngrams": [
+       "ms Server"
+      ],
+      "weight": 1.1241,
+      "kind": "word",
+      "share_real": 0.0,
+      "share_sim": 0.0036
+     },
+     {
+      "ngrams": [
+       "ms\nSe"
+      ],
+      "weight": 1.1184,
+      "kind": "char",
+      "share_real": 0.0001,
+      "share_sim": 0.0036
+     },
+     {
+      "ngrams": [
+       "s\nSe"
+      ],
+      "weight": 1.023,
+      "kind": "char",
+      "share_real": 0.0004,
+      "share_sim": 0.0038
+     },
+     {
+      "ngrams": [
+       "athl",
+       "\nReso"
+      ],
+      "weight": 1.0089,
+      "kind": "char",
+      "share_real": 0.0059,
+      "share_sim": 0.0096
+     },
+     {
+      "ngrams": [
+       "ed: C",
+       "s\nSer"
+      ],
+      "weight": 0.9384,
+      "kind": "char",
+      "share_real": 0.0007,
+      "share_sim": 0.0039
+     },
+     {
+      "ngrams": [
+       ">ms\nS"
+      ],
+      "weight": 0.9058,
+      "kind": "char",
+      "share_real": 0.0035,
+      "share_sim": 0.0076
+     },
+     {
+      "ngrams": [
+       "ms\nS"
+      ],
+      "weight": 0.9058,
+      "kind": "char",
+      "share_real": 0.0035,
+      "share_sim": 0.0076
+     },
+     {
+      "ngrams": [
+       "..\nRe"
+      ],
+      "weight": 0.7811,
+      "kind": "char",
+      "share_real": 0.0065,
+      "share_sim": 0.0081
+     },
+     {
+      "ngrams": [
+       "..\nR"
+      ],
+      "weight": 0.7581,
+      "kind": "char",
+      "share_real": 0.012,
+      "share_sim": 0.0136
+     },
+     {
+      "ngrams": [
+       "...\nR"
+      ],
+      "weight": 0.7419,
+      "kind": "char",
+      "share_real": 0.012,
+      "share_sim": 0.0135
+     },
+     {
+      "ngrams": [
+       "s/"
+      ],
+      "weight": 0.6868,
+      "kind": "char",
+      "share_real": 0.2922,
+      "share_sim": 0.2938
+     },
+     {
+      "ngrams": [
+       "n>]. "
+      ],
+      "weight": 0.6672,
+      "kind": "char",
+      "share_real": 0.0009,
+      "share_sim": 0.0066
+     },
+     {
+      "ngrams": [
+       "."
+      ],
+      "weight": 0.6659,
+      "kind": "word",
+      "share_real": 0.8288,
+      "share_sim": 0.8406
+     },
+     {
+      "ngrams": [
+       "t t"
+      ],
+      "weight": 0.647,
+      "kind": "word",
+      "share_real": 0.0001,
+      "share_sim": 0.0001
+     },
+     {
+      "ngrams": [
+       "/<n>/"
+      ],
+      "weight": 0.6425,
+      "kind": "char",
+      "share_real": 0.0079,
+      "share_sim": 0.0113
+     },
+     {
+      "ngrams": [
+       "d,"
+      ],
+      "weight": 0.6417,
+      "kind": "char",
+      "share_real": 0.2465,
+      "share_sim": 0.2508
+     },
+     {
+      "ngrams": [
+       " * vs",
+       "r), K"
+      ],
+      "weight": 0.6235,
+      "kind": "char",
+      "share_real": 0.0,
+      "share_sim": 0.0016
+     },
+     {
+      "ngrams": [
+       "es/"
+      ],
+      "weight": 0.6125,
+      "kind": "char",
+      "share_real": 0.1431,
+      "share_sim": 0.1451
+     },
+     {
+      "ngrams": [
+       "Band\n"
+      ],
+      "weight": 0.6105,
+      "kind": "char",
+      "share_real": 0.0002,
+      "share_sim": 0.0044
+     },
+     {
+      "ngrams": [
+       "pd i"
+      ],
+      "weight": 0.6103,
+      "kind": "char",
+      "share_real": 0.0,
+      "share_sim": 0.0015
+     },
+     {
+      "ngrams": [
+       "* vs"
+      ],
+      "weight": 0.6103,
+      "kind": "char",
+      "share_real": 0.0,
+      "share_sim": 0.0015
+     },
+     {
+      "ngrams": [
+       "vsftpd is"
+      ],
+      "weight": 0.6103,
+      "kind": "word",
+      "share_real": 0.0,
+      "share_sim": 0.0015
+     },
+     {
+      "ngrams": [
+       "pd is"
+      ],
+      "weight": 0.6103,
+      "kind": "char",
+      "share_real": 0.0,
+      "share_sim": 0.0015
+     }
+    ],
+    "toward_real": [
+     {
+      "ngrams": [
+       ".\nSer"
+      ],
+      "weight": -1.0993,
+      "kind": "char",
+      "share_real": 0.0074,
+      "share_sim": 0.0034
+     },
+     {
+      "ngrams": [
+       ". Server"
+      ],
+      "weight": -1.0893,
+      "kind": "word",
+      "share_real": 0.0103,
+      "share_sim": 0.0063
+     },
+     {
+      "ngrams": [
+       "\n/app"
+      ],
+      "weight": -1.043,
+      "kind": "char",
+      "share_real": 0.0436,
+      "share_sim": 0.0436
+     },
+     {
+      "ngrams": [
+       "\nDep"
+      ],
+      "weight": -1.0388,
+      "kind": "char",
+      "share_real": 0.0043,
+      "share_sim": 0.0013
+     },
+     {
+      "ngrams": [
+       ">ms\nD"
+      ],
+      "weight": -0.9701,
+      "kind": "char",
+      "share_real": 0.0037,
+      "share_sim": 0.0009
+     },
+     {
+      "ngrams": [
+       "ms\nD"
+      ],
+      "weight": -0.9588,
+      "kind": "char",
+      "share_real": 0.0035,
+      "share_sim": 0.0008
+     },
+     {
+      "ngrams": [
+       "s\nDe"
+      ],
+      "weight": -0.9392,
+      "kind": "char",
+      "share_real": 0.0032,
+      "share_sim": 0.0006
+     },
+     {
+      "ngrams": [
+       ".\nSe"
+      ],
+      "weight": -0.9221,
+      "kind": "char",
+      "share_real": 0.0114,
+      "share_sim": 0.0069
+     },
+     {
+      "ngrams": [
+       "\nDepl",
+       "\n \"/"
+      ],
+      "weight": -0.9207,
+      "kind": "char",
+      "share_real": 0.0053,
+      "share_sim": 0.0023
+     },
+     {
+      "ngrams": [
+       "\n/ap",
+       " : se"
+      ],
+      "weight": -0.9148,
+      "kind": "char",
+      "share_real": 0.0486,
+      "share_sim": 0.0488
+     },
+     {
+      "ngrams": [
+       "tfmt`"
+      ],
+      "weight": -0.9098,
+      "kind": "char",
+      "share_real": 0.0014,
+      "share_sim": 0.0003
+     },
+     {
+      "ngrams": [
+       "rustfmt `"
+      ],
+      "weight": -0.9098,
+      "kind": "word",
+      "share_real": 0.0014,
+      "share_sim": 0.0003
+     },
+     {
+      "ngrams": [
+       "ms Deploying"
+      ],
+      "weight": -0.8993,
+      "kind": "word",
+      "share_real": 0.0029,
+      "share_sim": 0.0005
+     },
+     {
+      "ngrams": [
+       "..\nSe"
+      ],
+      "weight": -0.8892,
+      "kind": "char",
+      "share_real": 0.0108,
+      "share_sim": 0.0065
+     },
+     {
+      "ngrams": [
+       "\n/a",
+       "y],\n"
+      ],
+      "weight": -0.8855,
+      "kind": "char",
+      "share_real": 0.0491,
+      "share_sim": 0.0492
+     },
+     {
+      "ngrams": [
+       "ms\nDe"
+      ],
+      "weight": -0.8793,
+      "kind": "char",
+      "share_real": 0.0033,
+      "share_sim": 0.0008
+     },
+     {
+      "ngrams": [
+       "\nDe"
+      ],
+      "weight": -0.8748,
+      "kind": "char",
+      "share_real": 0.0073,
+      "share_sim": 0.0041
+     },
+     {
+      "ngrams": [
+       "mt`"
+      ],
+      "weight": -0.8617,
+      "kind": "char",
+      "share_real": 0.0014,
+      "share_sim": 0.0004
+     },
+     {
+      "ngrams": [
+       "fmt`"
+      ],
+      "weight": -0.8617,
+      "kind": "char",
+      "share_real": 0.0014,
+      "share_sim": 0.0004
+     },
+     {
+      "ngrams": [
+       "]\n? g",
+       "s\nDep"
+      ],
+      "weight": -0.8564,
+      "kind": "char",
+      "share_real": 0.0067,
+      "share_sim": 0.0046
+     },
+     {
+      "ngrams": [
+       "s\nD"
+      ],
+      "weight": -0.8513,
+      "kind": "char",
+      "share_real": 0.0069,
+      "share_sim": 0.0048
+     },
+     {
+      "ngrams": [
+       "\r(",
+       "l.mw-"
+      ],
+      "weight": -0.8328,
+      "kind": "char",
+      "share_real": 0.0026,
+      "share_sim": 0.0
+     },
+     {
+      "ngrams": [
+       "\r(Rea"
+      ],
+      "weight": -0.8307,
+      "kind": "char",
+      "share_real": 0.0026,
+      "share_sim": 0.0
+     },
+     {
+      "ngrams": [
+       ">%\r"
+      ],
+      "weight": -0.8249,
+      "kind": "char",
+      "share_real": 0.0026,
+      "share_sim": 0.0
+     },
+     {
+      "ngrams": [
+       "%\r(Re"
+      ],
+      "weight": -0.8218,
+      "kind": "char",
+      "share_real": 0.0029,
+      "share_sim": 0.0003
+     }
+    ]
+   },
+   "probe_through_text": {
+    "target": "probe_L7_env_real_vs_sim",
+    "rows": 45015,
+    "oof_r2_by_alpha": {
+     "1.0": 0.2174,
+     "10.0": 0.1763
+    },
+    "alpha": 1.0,
+    "top": {
+     "toward_sim": [
+      {
+       "ngrams": [
+        "y.\n"
+       ],
+       "weight": 1.9294,
+       "kind": "char",
+       "share_real": 0.0363,
+       "share_sim": 0.0358
+      },
+      {
+       "ngrams": [
+        "pty.\n"
+       ],
+       "weight": 1.2998,
+       "kind": "char",
+       "share_real": 0.0021,
+       "share_sim": 0.0018
+      },
+      {
+       "ngrams": [
+        ". h"
+       ],
+       "weight": 1.2526,
+       "kind": "word",
+       "share_real": 0.0282,
+       "share_sim": 0.0297
+      },
+      {
+       "ngrams": [
+        "to"
+       ],
+       "weight": 1.1827,
+       "kind": "char",
+       "share_real": 0.6005,
+       "share_sim": 0.5945
+      },
+      {
+       "ngrams": [
+        "express"
+       ],
+       "weight": 1.0901,
+       "kind": "word",
+       "share_real": 0.0237,
+       "share_sim": 0.0234
+      },
+      {
+       "ngrams": [
+        "ty.\n",
+        "l_Ma"
+       ],
+       "weight": 1.0823,
+       "kind": "char",
+       "share_real": 0.0076,
+       "share_sim": 0.0073
+      },
+      {
+       "ngrams": [
+        "e "
+       ],
+       "weight": 1.0753,
+       "kind": "char",
+       "share_real": 0.7084,
+       "share_sim": 0.7081
+      },
+      {
+       "ngrams": [
+        "} -"
+       ],
+       "weight": 1.0438,
+       "kind": "word",
+       "share_real": 0.0542,
+       "share_sim": 0.0554
+      },
+      {
+       "ngrams": [
+        "empty ."
+       ],
+       "weight": 1.0357,
+       "kind": "word",
+       "share_real": 0.0024,
+       "share_sim": 0.0019
+      },
+      {
+       "ngrams": [
+        "pty.",
+        "e#-"
+       ],
+       "weight": 0.9891,
+       "kind": "char",
+       "share_real": 0.0024,
+       "share_sim": 0.0021
+      },
+      {
+       "ngrams": [
+        "le> o"
+       ],
+       "weight": 0.9668,
+       "kind": "char",
+       "share_real": 0.0006,
+       "share_sim": 0.0049
+      },
+      {
+       "ngrams": [
+        "y."
+       ],
+       "weight": 0.9598,
+       "kind": "char",
+       "share_real": 0.1844,
+       "share_sim": 0.1819
+      },
+      {
+       "ngrams": [
+        " %}\n<",
+        "mpty."
+       ],
+       "weight": 0.9556,
+       "kind": "char",
+       "share_real": 0.0041,
+       "share_sim": 0.004
+      },
+      {
+       "ngrams": [
+        "\n}"
+       ],
+       "weight": 0.9534,
+       "kind": "char",
+       "share_real": 0.2202,
+       "share_sim": 0.225
+      },
+      {
+       "ngrams": [
+        "ady."
+       ],
+       "weight": 0.9522,
+       "kind": "char",
+       "share_real": 0.0119,
+       "share_sim": 0.011
+      },
+      {
+       "ngrams": [
+        "e> ou"
+       ],
+       "weight": 0.9517,
+       "kind": "char",
+       "share_real": 0.0006,
+       "share_sim": 0.0048
+      },
+      {
+       "ngrams": [
+        "K\nR"
+       ],
+       "weight": 0.9465,
+       "kind": "char",
+       "share_real": 0.0006,
+       "share_sim": 0.0007
+      },
+      {
+       "ngrams": [
+        "K\nRes"
+       ],
+       "weight": 0.9431,
+       "kind": "char",
+       "share_real": 0.0006,
+       "share_sim": 0.0006
+      },
+      {
+       "ngrams": [
+        "K\nRe"
+       ],
+       "weight": 0.9406,
+       "kind": "char",
+       "share_real": 0.0006,
+       "share_sim": 0.0006
+      },
+      {
+       "ngrams": [
+        "OK Restarting"
+       ],
+       "weight": 0.9354,
+       "kind": "word",
+       "share_real": 0.0006,
+       "share_sim": 0.0006
+      },
+      {
+       "ngrams": [
+        "OK\nR",
+        "ers/<",
+        ") (wo"
+       ],
+       "weight": 0.9233,
+       "kind": "char",
+       "share_real": 0.0008,
+       "share_sim": 0.0009
+      },
+      {
+       "ngrams": [
+        "e> o"
+       ],
+       "weight": 0.9227,
+       "kind": "char",
+       "share_real": 0.001,
+       "share_sim": 0.0054
+      },
+      {
+       "ngrams": [
+        "\n}\n"
+       ],
+       "weight": 0.9135,
+       "kind": "char",
+       "share_real": 0.1911,
+       "share_sim": 0.1958
+      },
+      {
+       "ngrams": [
+        " ok"
+       ],
+       "weight": 0.9069,
+       "kind": "char",
+       "share_real": 0.0194,
+       "share_sim": 0.0183
+      },
+      {
+       "ngrams": [
+        "xpres"
+       ],
+       "weight": 0.9007,
+       "kind": "char",
+       "share_real": 0.0388,
+       "share_sim": 0.039
+      }
+     ],
+     "toward_real": [
+      {
+       "ngrams": [
+        " tsc\n",
+        "an j",
+        "e(_MA"
+       ],
+       "weight": -3.4088,
+       "kind": "char",
+       "share_real": 0.0053,
+       "share_sim": 0.0053
+      },
+      {
+       "ngrams": [
+        "sc\n"
+       ],
+       "weight": -3.3945,
+       "kind": "char",
+       "share_real": 0.0067,
+       "share_sim": 0.0064
+      },
+      {
+       "ngrams": [
+        "job_",
+        "tsc\n"
+       ],
+       "weight": -2.4109,
+       "kind": "char",
+       "share_real": 0.0279,
+       "share_sim": 0.0271
+      },
+      {
+       "ngrams": [
+        "c\n"
+       ],
+       "weight": -1.76,
+       "kind": "char",
+       "share_real": 0.0616,
+       "share_sim": 0.0619
+      },
+      {
+       "ngrams": [
+        "ta'\n"
+       ],
+       "weight": -1.4831,
+       "kind": "char",
+       "share_real": 0.0011,
+       "share_sim": 0.001
+      },
+      {
+       "ngrams": [
+        "ata'\n"
+       ],
+       "weight": -1.4779,
+       "kind": "char",
+       "share_real": 0.0011,
+       "share_sim": 0.001
+      },
+      {
+       "ngrams": [
+        "suites ."
+       ],
+       "weight": -1.3339,
+       "kind": "word",
+       "share_real": 0.0049,
+       "share_sim": 0.0025
+      },
+      {
+       "ngrams": [
+        "ites."
+       ],
+       "weight": -1.3336,
+       "kind": "char",
+       "share_real": 0.005,
+       "share_sim": 0.0026
+      },
+      {
+       "ngrams": [
+        "a'\n",
+        "],\n <"
+       ],
+       "weight": -1.24,
+       "kind": "char",
+       "share_real": 0.0024,
+       "share_sim": 0.0022
+      },
+      {
+       "ngrams": [
+        ")\n-"
+       ],
+       "weight": -1.2249,
+       "kind": "char",
+       "share_real": 0.0169,
+       "share_sim": 0.0177
+      },
+      {
+       "ngrams": [
+        ")\n--"
+       ],
+       "weight": -1.1025,
+       "kind": "char",
+       "share_real": 0.0141,
+       "share_sim": 0.015
+      },
+      {
+       "ngrams": [
+        "l : r",
+        "\ntru"
+       ],
+       "weight": -1.0974,
+       "kind": "char",
+       "share_real": 0.0007,
+       "share_sim": 0.0009
+      },
+      {
+       "ngrams": [
+        ": p",
+        "ull &"
+       ],
+       "weight": -1.0607,
+       "kind": "char",
+       "share_real": 0.0896,
+       "share_sim": 0.0918
+      },
+      {
+       "ngrams": [
+        ")\n---"
+       ],
+       "weight": -1.0606,
+       "kind": "char",
+       "share_real": 0.0134,
+       "share_sim": 0.0141
+      },
+      {
+       "ngrams": [
+        "ta'"
+       ],
+       "weight": -1.0486,
+       "kind": "char",
+       "share_real": 0.0123,
+       "share_sim": 0.0119
+      },
+      {
+       "ngrams": [
+        "ata'"
+       ],
+       "weight": -1.0459,
+       "kind": "char",
+       "share_real": 0.0122,
+       "share_sim": 0.0119
+      },
+      {
+       "ngrams": [
+        "Resto"
+       ],
+       "weight": -1.0242,
+       "kind": "char",
+       "share_real": 0.0138,
+       "share_sim": 0.0114
+      },
+      {
+       "ngrams": [
+        ".).\n"
+       ],
+       "weight": -1.0226,
+       "kind": "char",
+       "share_real": 0.0015,
+       "share_sim": 0.0016
+      },
+      {
+       "ngrams": [
+        "c.).\n",
+        "|@c"
+       ],
+       "weight": -1.0132,
+       "kind": "char",
+       "share_real": 0.0015,
+       "share_sim": 0.0015
+      },
+      {
+       "ngrams": [
+        ".\n> "
+       ],
+       "weight": -1.0065,
+       "kind": "char",
+       "share_real": 0.0034,
+       "share_sim": 0.0012
+      },
+      {
+       "ngrams": [
+        "data'"
+       ],
+       "weight": -0.9985,
+       "kind": "char",
+       "share_real": 0.0121,
+       "share_sim": 0.0117
+      },
+      {
+       "ngrams": [
+        "s.\n>"
+       ],
+       "weight": -0.9938,
+       "kind": "char",
+       "share_real": 0.0031,
+       "share_sim": 0.0009
+      },
+      {
+       "ngrams": [
+        ". >",
+        ") models_pkey"
+       ],
+       "weight": -0.9886,
+       "kind": "word",
+       "share_real": 0.0035,
+       "share_sim": 0.0015
+      },
+      {
+       "ngrams": [
+        "are\n"
+       ],
+       "weight": -0.988,
+       "kind": "char",
+       "share_real": 0.0154,
+       "share_sim": 0.0168
+      },
+      {
+       "ngrams": [
+        "zsh_logout"
+       ],
+       "weight": -0.982,
+       "kind": "word",
+       "share_real": 0.001,
+       "share_sim": 0.0014
+      }
+     ]
+    }
+   }
+  }
+ }
+}

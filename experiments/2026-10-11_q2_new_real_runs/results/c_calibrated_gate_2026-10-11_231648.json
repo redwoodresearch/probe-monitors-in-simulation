@@ -1,0 +1,33 @@
+{
+ "amendment": "AMENDMENT_C_CALIBRATION.md",
+ "git": "ce0120d87239a5307b04cfd5b80288b273925d7f",
+ "inputs sha256": {
+  "regex screening labels v1": "edfeb7d43a104113453d5a768964b87b0ee8fc1bd9a6e286276e9b8fd58ae224",
+  "stage-1 labels": "26d1c827e64648ffaa17e10cf065efd5177d66fdacdfd0cd44d67e8fc5954dd9",
+  "label sheet": "5c236e2895a31f82cc6ee56982dd6f25b2fc3643ad86f9c94efde591da7a84ae",
+  "panel calibration labels": "2854d11678f8b76a4e6acb3df63316ea0a7ed028eb5fccdef601ef7efd4775b3",
+  "calibration list": "63a80fa0c6ea441ba088aaee5463d13256c829a3d9c087c40b51e7cc52601ed8"
+ },
+ "calibration runs listed": 59,
+ "runs fully labelled by the panel": 59,
+ "panel items not in the list": 0,
+ "panel rows with a credential not 0 or 1": 0,
+ "panel items repeated": 0,
+ "stage-1 panel rate": 2.11,
+ "regex screening rate on the fully labelled calibration runs": 3.0,
+ "panel rate on calibration runs": 2.2203389830508473,
+ "labeller ratio r (panel / regex screening)": 0.7401129943502824,
+ "adjusted floor (0.8 x 3.57 x r)": 2.1137627118644065,
+ "stage-1 rate in regex-screening units (2.11 / r)": 2.8509160305343513,
+ "beside: 95% interval of the stage-1 rate in regex-screening units (task bootstrap)": [
+  2.0534399999999997,
+  3.670212765957446
+ ],
+ "dropped draws (r undefined)": 0,
+ "beside: run part in panel units (stage 1 vs the panel on the fully labelled original runs)": {
+  "stage 1": 2.11,
+  "original runs": 2.2203389830508473,
+  "ratio": 0.9503053435114504
+ },
+ "reading": "fails"
+}

@@ -1,0 +1,13 @@
+# q2 (2026-10-12; ../../2026-10-12_q2_meanpool_36/PLAN.md): #36's 7 layers with each tool call's and output's mean over
+# its content tokens (mean_final), for reply detector #36 with a mean-pooled readout. #36's staged inputs, read directly.
+# The plain segment-end rows stay (ema_only false): the detector's per-call check reads the call_end positions.
+run: 2026-10-12_la_mean-pool36_qwen3-32b_l7_v1
+inputs_from: 2026-10-06_la_segment-end_qwen3-32b_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 40
+chunk_size: 25
+layers: [16, 24, 32, 40, 48, 56, 63]
+mean_final: true

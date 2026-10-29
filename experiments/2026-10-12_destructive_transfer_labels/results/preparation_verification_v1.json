@@ -1,0 +1,9 @@
+{
+  "rows_checked": 74873,
+  "packets_checked": 2060,
+  "join_complete_and_unique": true,
+  "payload_fields_checked": true,
+  "packet_hashes_match": true,
+  "packet_permissions": "0600",
+  "no_inference": true
+}

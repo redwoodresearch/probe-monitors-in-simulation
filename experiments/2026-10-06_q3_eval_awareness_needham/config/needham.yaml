@@ -1,0 +1,23 @@
+# Q3 (2026-10-06): an eval-awareness probe on Qwen3-32B trained on Needham et al. (2025) real evaluation and
+# deployment transcripts (arXiv 2505.23836), held out by source dataset, then read on LinuxArena call_end.
+volume: probe-shift_aswin-surya_sub-q3evalaw_data_kill-2026-11-06   # raw data, rendered inputs, activations, probes
+hf_cache: probe-shift_aswin-surya_hf-cache                          # shared weights cache, mounted read-only, offline
+hf_secret: huggingface-secret-aswin                                 # HF user TheNoob3131, who accepted the gate
+dataset:
+  repo: jjpn2/eval_awareness          # gated (auto-approved click-through); CC-BY-NC-SA-4.0, with per-row exceptions
+  revision: 5d724f12988284a652749c56ec7b2356b0d14408
+  file: dataset.json                  # inside the encrypted dataset.zip; scripts/decrypt.sh unpacks it
+model: Qwen/Qwen3-32B                 # revision pinned in probe_shift.models
+dtype: bfloat16
+attn_implementation: sdpa
+chat_template: {enable_thinking: false, tools: none}   # as the LinuxArena reader renders
+max_tokens: 32768                     # cut to the first 32k tokens, as the LinuxArena segment-end extraction
+layers: all                           # 0..63, residual stream after each decoder layer (block output)
+readouts:
+  mean: mean over the assistant content tokens within the cut (probe_shift.needham.assistant_tokens)
+  last: the last assistant content token within the cut (for a turn ending in a call, LinuxArena's call_end)
+time_fit: [1.51e-4, 1.55e-8]          # H100 seconds ~ a*T + b*T^2 (LinuxArena smoke test; an upper bound)
+gpu_dollars_per_hour: 3.95            # Modal H100
+load_seconds: 300                     # model load per container
+budget_dollars: 15
+shards: 4

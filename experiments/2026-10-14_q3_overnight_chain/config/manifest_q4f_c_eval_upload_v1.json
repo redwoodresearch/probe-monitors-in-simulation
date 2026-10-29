@@ -1,0 +1,3167 @@
+{
+ "note": "Q4 batch C: the .eval files behind launch 2026-10-11_112714_honest_c's counted runs (no redraws, no reruns), by make_q4b_upload_list.py's rules; sha256 and bytes from the launch's S3 manifest, checked again after the download and on the Volume",
+ "source": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/runs/2026-10-11_112714_honest_c",
+ "counts": {
+  "runs_in_launch": 196,
+  "tasks": 196,
+  "attempts": 197,
+  "counted_with_eval": 196,
+  "counted_without_eval": 0,
+  "uncounted_attempts": 1,
+  "bytes": 27231221
+ },
+ "uncounted_attempts": [
+  {
+   "task": "t67_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "rel_dir": "honest_b/t67_slack_clone",
+   "redrawn": true
+  }
+ ],
+ "counted_attempts_without_eval": {
+  "c": []
+ },
+ "worlds": {
+  "honest_c": [
+   {
+    "task": "t01_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t01_media_processing/2026-10-11T18-28-29-00-00_la-media-processing-real-honest-1_DTr3UvJoJzmfyB45iSE3Qw.eval"
+   },
+   {
+    "task": "t02_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t02_clinical_trial/2026-10-11T18-28-29-00-00_la-clinical-trial-real-honest-1_DEVUqPFcf7uv3PrR7iyBiN.eval"
+   },
+   {
+    "task": "t03_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t03_auto_workflow/2026-10-11T18-28-29-00-00_la-auto-workflow-real-honest-1_jbfV3aev9z6vrL957U35uk.eval"
+   },
+   {
+    "task": "t04_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t04_tiktok/2026-10-11T18-28-29-00-00_la-tiktok-real-honest-1_g98dB4ZsB6Lii4gAubbAUF.eval"
+   },
+   {
+    "task": "t05_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t05_user_tracking/2026-10-11T18-28-29-00-00_la-user-tracking-real-honest-1_B8HmifByxDAGWLHrX8unWS.eval"
+   },
+   {
+    "task": "t06_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t06_file_indexing/2026-10-11T18-28-29-00-00_la-file-indexing-real-honest-1_PXti7GHCu7EBMxGDRz3k9G.eval"
+   },
+   {
+    "task": "t07_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t07_slack_clone/2026-10-11T18-28-29-00-00_la-slack-clone-real-honest-1_AtCktfv5eQANqoMWoA6KyZ.eval"
+   },
+   {
+    "task": "t08_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t08_model_registry/2026-10-11T18-28-29-00-00_la-model-registry-real-honest-1_7pyeUH8qn3iHcb3nHAquKx.eval"
+   },
+   {
+    "task": "t09_web_scraping",
+    "path": "2026-10-11_112714_honest_c/honest_b/t09_web_scraping/2026-10-11T18-28-29-00-00_la-web-scraping-real-honest-1_AaRRGsPNvUjJN3SztdJtZN.eval"
+   },
+   {
+    "task": "t100_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t100_media_processing/2026-10-11T19-09-40-00-00_la-media-processing-real-honest-1_dw2SvV5puk3ehJUdkCebMz.eval"
+   },
+   {
+    "task": "t101_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t101_clinical_trial/2026-10-11T19-10-39-00-00_la-clinical-trial-real-honest-1_RDFmPASfyCTs6TTdYrxiwF.eval"
+   },
+   {
+    "task": "t102_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t102_auto_workflow/2026-10-11T19-11-11-00-00_la-auto-workflow-real-honest-1_i4SAfutWarLDrViK27TF9z.eval"
+   },
+   {
+    "task": "t103_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t103_tiktok/2026-10-11T19-11-11-00-00_la-tiktok-real-honest-1_FWcna4puXGeTRWvL4DTVzE.eval"
+   },
+   {
+    "task": "t104_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t104_user_tracking/2026-10-11T19-11-11-00-00_la-user-tracking-real-honest-1_mJJ4GLhXbg8nZh4dFUbG4q.eval"
+   },
+   {
+    "task": "t105_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t105_file_indexing/2026-10-11T19-12-41-00-00_la-file-indexing-real-honest-1_ReFQQUrXLQKXkXzA6KNYhx.eval"
+   },
+   {
+    "task": "t106_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t106_slack_clone/2026-10-11T19-12-41-00-00_la-slack-clone-real-honest-1_VPWTPhSqYmDnr2UQZ9Rier.eval"
+   },
+   {
+    "task": "t107_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t107_model_registry/2026-10-11T19-13-12-00-00_la-model-registry-real-honest-1_ca2mrXmHJmtqd6SmyfvT4F.eval"
+   },
+   {
+    "task": "t108_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t108_shared_dotfiles/2026-10-11T19-13-12-00-00_la-shared-dotfiles-real-honest-1_B55cF5KmqoVfazRTjPNk23.eval"
+   },
+   {
+    "task": "t109_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t109_media_processing/2026-10-11T19-13-12-00-00_la-media-processing-real-honest-1_XqNj63yrNtTE9jWDYamGya.eval"
+   },
+   {
+    "task": "t10_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t10_shared_dotfiles/2026-10-11T18-28-29-00-00_la-shared-dotfiles-real-honest-1_NGTdk85yTiaMc5hqM6hjnD.eval"
+   },
+   {
+    "task": "t110_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t110_clinical_trial/2026-10-11T19-14-41-00-00_la-clinical-trial-real-honest-1_UQMmF3aqygxfjiH4ogCiUT.eval"
+   },
+   {
+    "task": "t111_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t111_auto_workflow/2026-10-11T19-15-12-00-00_la-auto-workflow-real-honest-1_Ze4cUb7LVrVe4sj7yLXQ2Z.eval"
+   },
+   {
+    "task": "t112_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t112_tiktok/2026-10-11T19-15-41-00-00_la-tiktok-real-honest-1_g37dW5bU2bCAicASMZVn9w.eval"
+   },
+   {
+    "task": "t113_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t113_user_tracking/2026-10-11T19-16-42-00-00_la-user-tracking-real-honest-1_ZBzHR6c5KWCDhdURMTYbev.eval"
+   },
+   {
+    "task": "t114_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t114_file_indexing/2026-10-11T19-18-42-00-00_la-file-indexing-real-honest-1_h8zTcuZ7FF7Hi8MdyVBnXQ.eval"
+   },
+   {
+    "task": "t115_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t115_model_registry/2026-10-11T19-18-42-00-00_la-model-registry-real-honest-1_ZTmkUQ3aoDFk9msLaY44RA.eval"
+   },
+   {
+    "task": "t116_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t116_shared_dotfiles/2026-10-11T19-19-12-00-00_la-shared-dotfiles-real-honest-1_UooWCXveyrrxzRxzrdwMfw.eval"
+   },
+   {
+    "task": "t117_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t117_media_processing/2026-10-11T19-19-13-00-00_la-media-processing-real-honest-1_oFjAs88y5eYsyfwXVwdFYp.eval"
+   },
+   {
+    "task": "t118_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t118_clinical_trial/2026-10-11T19-20-13-00-00_la-clinical-trial-real-honest-1_85KxvKpDbFk9y3bPv4B9g6.eval"
+   },
+   {
+    "task": "t119_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t119_user_tracking/2026-10-11T19-20-13-00-00_la-user-tracking-real-honest-1_2oc75ffLgA7ZQDrnhekfk2.eval"
+   },
+   {
+    "task": "t11_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t11_media_processing/2026-10-11T18-29-59-00-00_la-media-processing-real-honest-1_YMSCTf58d2evD6S22BaXR6.eval"
+   },
+   {
+    "task": "t120_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t120_file_indexing/2026-10-11T19-21-13-00-00_la-file-indexing-real-honest-1_gNT9dn2dMg5dkDjMtD8jh5.eval"
+   },
+   {
+    "task": "t121_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t121_model_registry/2026-10-11T19-21-13-00-00_la-model-registry-real-honest-1_9hxxbrju39oLs5b4VkKBGB.eval"
+   },
+   {
+    "task": "t122_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t122_shared_dotfiles/2026-10-11T19-22-43-00-00_la-shared-dotfiles-real-honest-1_EouAPobXcDsyGWVSnvmcjr.eval"
+   },
+   {
+    "task": "t123_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t123_media_processing/2026-10-11T19-23-14-00-00_la-media-processing-real-honest-1_TQfqxKYrVc3cnd4nmtbAeq.eval"
+   },
+   {
+    "task": "t124_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t124_clinical_trial/2026-10-11T19-23-14-00-00_la-clinical-trial-real-honest-1_brx9kH98FopiFMrRuoR4QN.eval"
+   },
+   {
+    "task": "t125_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t125_user_tracking/2026-10-11T19-24-44-00-00_la-user-tracking-real-honest-1_juATQ9U8LVjL6TWxxVGALg.eval"
+   },
+   {
+    "task": "t126_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t126_file_indexing/2026-10-11T19-24-44-00-00_la-file-indexing-real-honest-1_Qc5RZ67rbmxMudFxx5kyVM.eval"
+   },
+   {
+    "task": "t127_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t127_model_registry/2026-10-11T19-25-16-00-00_la-model-registry-real-honest-1_jYEnAcAfchsjHt5wkCBR7C.eval"
+   },
+   {
+    "task": "t128_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t128_shared_dotfiles/2026-10-11T19-25-45-00-00_la-shared-dotfiles-real-honest-1_gcmM8xuQP3Zs9hubiAKLt4.eval"
+   },
+   {
+    "task": "t129_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t129_media_processing/2026-10-11T19-25-45-00-00_la-media-processing-real-honest-1_ZzfGzDe4nhUB2sWQrJ7e2R.eval"
+   },
+   {
+    "task": "t12_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t12_clinical_trial/2026-10-11T18-29-58-00-00_la-clinical-trial-real-honest-1_3jhnssaJpVPKEeBfNAmWT3.eval"
+   },
+   {
+    "task": "t130_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t130_clinical_trial/2026-10-11T19-26-15-00-00_la-clinical-trial-real-honest-1_e66AdRoxdDw694v8bXB25J.eval"
+   },
+   {
+    "task": "t131_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t131_user_tracking/2026-10-11T19-26-15-00-00_la-user-tracking-real-honest-1_gvGDrGd7rDRRtqfB5c4PFW.eval"
+   },
+   {
+    "task": "t132_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t132_file_indexing/2026-10-11T19-26-45-00-00_la-file-indexing-real-honest-1_dd59mFcFsR9oDj7QMfuamY.eval"
+   },
+   {
+    "task": "t133_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t133_model_registry/2026-10-11T19-26-45-00-00_la-model-registry-real-honest-1_hbPqobBBTtp8WdUmRf8kG3.eval"
+   },
+   {
+    "task": "t134_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t134_shared_dotfiles/2026-10-11T19-27-46-00-00_la-shared-dotfiles-real-honest-1_H5hBDKjjScwMkSuVvXhVXa.eval"
+   },
+   {
+    "task": "t135_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t135_media_processing/2026-10-11T19-27-46-00-00_la-media-processing-real-honest-1_nLk7zpqFdWh3u4XftyVuaS.eval"
+   },
+   {
+    "task": "t136_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t136_clinical_trial/2026-10-11T19-28-16-00-00_la-clinical-trial-real-honest-1_MXDFA48bmHRTfQMgYwGcqR.eval"
+   },
+   {
+    "task": "t137_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t137_user_tracking/2026-10-11T19-29-16-00-00_la-user-tracking-real-honest-1_aLV3ACrCUdeL3Rt3NtsKd5.eval"
+   },
+   {
+    "task": "t138_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t138_file_indexing/2026-10-11T19-30-16-00-00_la-file-indexing-real-honest-1_ibzfXzR7yYdAcWj7BtpAad.eval"
+   },
+   {
+    "task": "t139_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t139_model_registry/2026-10-11T19-30-17-00-00_la-model-registry-real-honest-1_CEQEGDFf6QVaVw5y4N2nwi.eval"
+   },
+   {
+    "task": "t13_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t13_auto_workflow/2026-10-11T18-29-58-00-00_la-auto-workflow-real-honest-1_Kw8SGYpniaaNve6FjVVUEx.eval"
+   },
+   {
+    "task": "t140_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t140_shared_dotfiles/2026-10-11T19-30-16-00-00_la-shared-dotfiles-real-honest-1_AUb4JZVLapYKFKNb3AJvYp.eval"
+   },
+   {
+    "task": "t141_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t141_media_processing/2026-10-11T19-31-18-00-00_la-media-processing-real-honest-1_5oWyzDWwrrwWexNnE4sZUe.eval"
+   },
+   {
+    "task": "t142_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t142_clinical_trial/2026-10-11T19-31-17-00-00_la-clinical-trial-real-honest-1_9b7tjUse2JKGbcJzs5cH8t.eval"
+   },
+   {
+    "task": "t143_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t143_user_tracking/2026-10-11T19-31-47-00-00_la-user-tracking-real-honest-1_7zLRp5ENDTmyeV3845Xn3M.eval"
+   },
+   {
+    "task": "t144_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t144_file_indexing/2026-10-11T19-32-17-00-00_la-file-indexing-real-honest-1_H82YpamSMMYHBNFscenib5.eval"
+   },
+   {
+    "task": "t145_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t145_model_registry/2026-10-11T19-33-48-00-00_la-model-registry-real-honest-1_ZJKXecwDEJci6QhemjzGaT.eval"
+   },
+   {
+    "task": "t146_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t146_shared_dotfiles/2026-10-11T19-34-47-00-00_la-shared-dotfiles-real-honest-1_SxE5XtaPq4GnLGgZHzuGJh.eval"
+   },
+   {
+    "task": "t147_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t147_media_processing/2026-10-11T19-35-18-00-00_la-media-processing-real-honest-1_PwQrbcBrSvdwguJsCeFtDQ.eval"
+   },
+   {
+    "task": "t148_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t148_clinical_trial/2026-10-11T19-35-48-00-00_la-clinical-trial-real-honest-1_8nCGfyWHgvZxQ4qKSzpbNp.eval"
+   },
+   {
+    "task": "t149_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t149_user_tracking/2026-10-11T19-35-48-00-00_la-user-tracking-real-honest-1_dxDSq5dBjM2oHa39zxM5kQ.eval"
+   },
+   {
+    "task": "t14_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t14_tiktok/2026-10-11T18-29-58-00-00_la-tiktok-real-honest-1_oVuQzsxN8NcihTHxwyZ6iV.eval"
+   },
+   {
+    "task": "t150_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t150_file_indexing/2026-10-11T19-36-18-00-00_la-file-indexing-real-honest-1_oM7zJk8jwPkZ8gLwK4j4BU.eval"
+   },
+   {
+    "task": "t151_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t151_model_registry/2026-10-11T19-36-49-00-00_la-model-registry-real-honest-1_CUBzHkpv7YahhtHkRG2LYR.eval"
+   },
+   {
+    "task": "t152_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t152_shared_dotfiles/2026-10-11T19-36-49-00-00_la-shared-dotfiles-real-honest-1_T22wUyzSJkrzs2pFAysk8m.eval"
+   },
+   {
+    "task": "t153_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t153_media_processing/2026-10-11T19-36-49-00-00_la-media-processing-real-honest-1_ZsC8URx4qQKKypSmmXxxGK.eval"
+   },
+   {
+    "task": "t154_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t154_clinical_trial/2026-10-11T19-37-19-00-00_la-clinical-trial-real-honest-1_mQFukQzPGZSmsx6Vi5QYv5.eval"
+   },
+   {
+    "task": "t155_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t155_user_tracking/2026-10-11T19-37-49-00-00_la-user-tracking-real-honest-1_QXqioT95C3bYBt5YNkvWHy.eval"
+   },
+   {
+    "task": "t156_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t156_file_indexing/2026-10-11T19-37-50-00-00_la-file-indexing-real-honest-1_FHEngVFfb4rupLxpy4sqh2.eval"
+   },
+   {
+    "task": "t157_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t157_model_registry/2026-10-11T19-38-19-00-00_la-model-registry-real-honest-1_ktcbtEEPU2G5Au9xLY63Px.eval"
+   },
+   {
+    "task": "t158_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t158_shared_dotfiles/2026-10-11T19-39-19-00-00_la-shared-dotfiles-real-honest-1_G4r8JvgvzDDmABEHWUKWaB.eval"
+   },
+   {
+    "task": "t159_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t159_media_processing/2026-10-11T19-39-20-00-00_la-media-processing-real-honest-1_Db4CJNoP6fNq9ssRZwezdH.eval"
+   },
+   {
+    "task": "t15_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t15_user_tracking/2026-10-11T18-29-58-00-00_la-user-tracking-real-honest-1_JGYaZUhAxL6NPW3WFLKcPt.eval"
+   },
+   {
+    "task": "t160_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t160_clinical_trial/2026-10-11T19-40-20-00-00_la-clinical-trial-real-honest-1_HHVNta76BWEnk8Vjj7AmUe.eval"
+   },
+   {
+    "task": "t161_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t161_file_indexing/2026-10-11T19-40-50-00-00_la-file-indexing-real-honest-1_F24hw5wDhU47YoszuD2J9y.eval"
+   },
+   {
+    "task": "t162_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t162_model_registry/2026-10-11T19-41-20-00-00_la-model-registry-real-honest-1_LDd9Dc8DiHL5LitStmTgUh.eval"
+   },
+   {
+    "task": "t163_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t163_shared_dotfiles/2026-10-11T19-43-20-00-00_la-shared-dotfiles-real-honest-1_Hixd7qdpjfE4HLcBdQrecw.eval"
+   },
+   {
+    "task": "t164_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t164_media_processing/2026-10-11T19-43-51-00-00_la-media-processing-real-honest-1_cNFBwjGvHru8JB3ZUM4jvw.eval"
+   },
+   {
+    "task": "t165_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t165_clinical_trial/2026-10-11T19-43-51-00-00_la-clinical-trial-real-honest-1_RwJx3MsAFwubLQNRoJd4Py.eval"
+   },
+   {
+    "task": "t166_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t166_file_indexing/2026-10-11T19-44-21-00-00_la-file-indexing-real-honest-1_esrGHbAkjZekqFK4m8kAUH.eval"
+   },
+   {
+    "task": "t167_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t167_model_registry/2026-10-11T19-44-21-00-00_la-model-registry-real-honest-1_4HiQqoXyWpjyvnmYcdKKHJ.eval"
+   },
+   {
+    "task": "t168_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t168_shared_dotfiles/2026-10-11T19-44-51-00-00_la-shared-dotfiles-real-honest-1_fVDcPvZLuKMyr4k5uBgVCY.eval"
+   },
+   {
+    "task": "t169_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t169_clinical_trial/2026-10-11T19-45-52-00-00_la-clinical-trial-real-honest-1_LrP29JjnEYSTrQ3hvj3gc6.eval"
+   },
+   {
+    "task": "t16_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t16_file_indexing/2026-10-11T18-29-58-00-00_la-file-indexing-real-honest-1_nWBCzFULEztBJf9963U473.eval"
+   },
+   {
+    "task": "t170_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t170_model_registry/2026-10-11T19-45-52-00-00_la-model-registry-real-honest-1_Wogsv2cKqtdecrhQfvPMMa.eval"
+   },
+   {
+    "task": "t171_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t171_shared_dotfiles/2026-10-11T19-46-22-00-00_la-shared-dotfiles-real-honest-1_5cjWYfsybPDfjBtTynUTE4.eval"
+   },
+   {
+    "task": "t172_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t172_clinical_trial/2026-10-11T19-47-22-00-00_la-clinical-trial-real-honest-1_HPvydx3wHE3eCeBLfBdSFp.eval"
+   },
+   {
+    "task": "t173_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t173_shared_dotfiles/2026-10-11T19-47-52-00-00_la-shared-dotfiles-real-honest-1_KWTrGLVHEQvhLjDXzgqhtu.eval"
+   },
+   {
+    "task": "t174_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t174_clinical_trial/2026-10-11T19-48-52-00-00_la-clinical-trial-real-honest-1_86awqk45nuMf8JEPfDqtHH.eval"
+   },
+   {
+    "task": "t175_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t175_shared_dotfiles/2026-10-11T19-49-23-00-00_la-shared-dotfiles-real-honest-1_knSjrFnHCGZaD6N2KN6644.eval"
+   },
+   {
+    "task": "t176_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t176_clinical_trial/2026-10-11T19-50-23-00-00_la-clinical-trial-real-honest-1_HPcEX8qbxJG4Vd9UDTDdmK.eval"
+   },
+   {
+    "task": "t177_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t177_shared_dotfiles/2026-10-11T19-50-53-00-00_la-shared-dotfiles-real-honest-1_ehLTePnoQ4VCAHXvKYfqz4.eval"
+   },
+   {
+    "task": "t178_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t178_clinical_trial/2026-10-11T19-51-53-00-00_la-clinical-trial-real-honest-1_7eQD5Nx2fiBJ3gzAH73Fsz.eval"
+   },
+   {
+    "task": "t179_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t179_clinical_trial/2026-10-11T19-53-24-00-00_la-clinical-trial-real-honest-1_fpsMVBeqasaEoWV9S7E4jV.eval"
+   },
+   {
+    "task": "t17_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t17_slack_clone/2026-10-11T18-29-58-00-00_la-slack-clone-real-honest-1_4izV2LbiuJRkVv6FGUpqaQ.eval"
+   },
+   {
+    "task": "t180_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t180_clinical_trial/2026-10-11T19-54-54-00-00_la-clinical-trial-real-honest-1_5nCM46oF6Xn7jzJCrXcJ9n.eval"
+   },
+   {
+    "task": "t181_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t181_clinical_trial/2026-10-11T19-56-24-00-00_la-clinical-trial-real-honest-1_HESPpVVwvmqEZdqBGv4RUT.eval"
+   },
+   {
+    "task": "t182_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t182_clinical_trial/2026-10-11T19-57-54-00-00_la-clinical-trial-real-honest-1_4qGCDFQhBbMSjkFyDkaafn.eval"
+   },
+   {
+    "task": "t183_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t183_clinical_trial/2026-10-11T19-59-25-00-00_la-clinical-trial-real-honest-1_LM5L3jXUPtRME6E8DQkgvL.eval"
+   },
+   {
+    "task": "t184_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t184_clinical_trial/2026-10-11T20-00-55-00-00_la-clinical-trial-real-honest-1_2TpNxZMf9HYkPGtv5JCCjF.eval"
+   },
+   {
+    "task": "t185_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t185_clinical_trial/2026-10-11T20-02-26-00-00_la-clinical-trial-real-honest-1_ckdh3gYBYuVe253bUc9qjT.eval"
+   },
+   {
+    "task": "t186_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t186_clinical_trial/2026-10-11T20-03-56-00-00_la-clinical-trial-real-honest-1_eM3FtCgjT7ai35f6oPaLWV.eval"
+   },
+   {
+    "task": "t187_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t187_clinical_trial/2026-10-11T20-05-28-00-00_la-clinical-trial-real-honest-1_D3RZRr5Y4wkZuKQ7Afb8Py.eval"
+   },
+   {
+    "task": "t188_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t188_clinical_trial/2026-10-11T20-06-57-00-00_la-clinical-trial-real-honest-1_ZoVBLV5oj7tKVu4ErL3a6r.eval"
+   },
+   {
+    "task": "t189_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t189_clinical_trial/2026-10-11T20-08-27-00-00_la-clinical-trial-real-honest-1_SUZA3Bi5WTvwo8W55f3Qga.eval"
+   },
+   {
+    "task": "t18_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t18_model_registry/2026-10-11T18-29-58-00-00_la-model-registry-real-honest-1_draoAVRbtapdDPSs5i5uJu.eval"
+   },
+   {
+    "task": "t190_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t190_clinical_trial/2026-10-11T20-09-57-00-00_la-clinical-trial-real-honest-1_dHgdXb4rV6Xctk3uqU7wFJ.eval"
+   },
+   {
+    "task": "t191_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t191_clinical_trial/2026-10-11T20-11-27-00-00_la-clinical-trial-real-honest-1_Dt2DErtHDLNug8chVyAHZr.eval"
+   },
+   {
+    "task": "t192_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t192_clinical_trial/2026-10-11T20-12-58-00-00_la-clinical-trial-real-honest-1_Q7FANCdKE8JsksyLLoF7HF.eval"
+   },
+   {
+    "task": "t193_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t193_clinical_trial/2026-10-11T20-14-28-00-00_la-clinical-trial-real-honest-1_Dw84mc5XXhAWPGMB5w4mCp.eval"
+   },
+   {
+    "task": "t194_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t194_clinical_trial/2026-10-11T20-15-58-00-00_la-clinical-trial-real-honest-1_9YUkx64Xb92AmsivEijdVe.eval"
+   },
+   {
+    "task": "t195_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t195_clinical_trial/2026-10-11T20-17-29-00-00_la-clinical-trial-real-honest-1_Pnf7gCo93bygpjyFhU874b.eval"
+   },
+   {
+    "task": "t196_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t196_clinical_trial/2026-10-11T20-18-59-00-00_la-clinical-trial-real-honest-1_652XFLB5GFkk76tBF4Qube.eval"
+   },
+   {
+    "task": "t19_web_scraping",
+    "path": "2026-10-11_112714_honest_c/honest_b/t19_web_scraping/2026-10-11T18-29-58-00-00_la-web-scraping-real-honest-1_XpuHaddCbE5x2M9vMARG7P.eval"
+   },
+   {
+    "task": "t20_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t20_shared_dotfiles/2026-10-11T18-29-58-00-00_la-shared-dotfiles-real-honest-1_EmCkYJbzTxYwtTAcK2kPqG.eval"
+   },
+   {
+    "task": "t21_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t21_media_processing/2026-10-11T18-31-29-00-00_la-media-processing-real-honest-1_BshYz66QagftmW6RHfF32r.eval"
+   },
+   {
+    "task": "t22_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t22_clinical_trial/2026-10-11T18-31-28-00-00_la-clinical-trial-real-honest-1_7onsBXegvTq5PaFxJSB4wb.eval"
+   },
+   {
+    "task": "t23_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t23_auto_workflow/2026-10-11T18-31-28-00-00_la-auto-workflow-real-honest-1_GEQhsChDGuHqv9EptMo7N8.eval"
+   },
+   {
+    "task": "t24_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t24_tiktok/2026-10-11T18-31-28-00-00_la-tiktok-real-honest-1_iv3Ft5XCnnpQQoaRp4EaQa.eval"
+   },
+   {
+    "task": "t25_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t25_user_tracking/2026-10-11T18-31-28-00-00_la-user-tracking-real-honest-1_eEbEYgYZTScGfSG2rkmEf6.eval"
+   },
+   {
+    "task": "t26_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t26_file_indexing/2026-10-11T18-31-29-00-00_la-file-indexing-real-honest-1_7PuDKf2N5D4gASDPj4A862.eval"
+   },
+   {
+    "task": "t27_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t27_slack_clone/2026-10-11T18-31-29-00-00_la-slack-clone-real-honest-1_RYSrRG6ae8mBpuJPiwimzf.eval"
+   },
+   {
+    "task": "t28_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t28_model_registry/2026-10-11T18-31-29-00-00_la-model-registry-real-honest-1_SVeJ93ECwdRV44Hm5kpwND.eval"
+   },
+   {
+    "task": "t29_web_scraping",
+    "path": "2026-10-11_112714_honest_c/honest_b/t29_web_scraping/2026-10-11T18-31-29-00-00_la-web-scraping-real-honest-1_NUMtbYZ3DXbtSp4CMLyUts.eval"
+   },
+   {
+    "task": "t30_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t30_shared_dotfiles/2026-10-11T18-31-29-00-00_la-shared-dotfiles-real-honest-1_b7hx6R2ug4aqHCSnpWnUP3.eval"
+   },
+   {
+    "task": "t31_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t31_media_processing/2026-10-11T18-33-00-00-00_la-media-processing-real-honest-1_a6gdGMP77YuZ8y42czdWQb.eval"
+   },
+   {
+    "task": "t32_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t32_clinical_trial/2026-10-11T18-33-00-00-00_la-clinical-trial-real-honest-1_dWCnV747GmBS4sy6phGJM2.eval"
+   },
+   {
+    "task": "t33_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t33_auto_workflow/2026-10-11T18-33-00-00-00_la-auto-workflow-real-honest-1_HFfezNpE2MRpJUKe6FxfeV.eval"
+   },
+   {
+    "task": "t34_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t34_tiktok/2026-10-11T18-33-30-00-00_la-tiktok-real-honest-1_Wqu86XSy9jC4K5gBHe7K5W.eval"
+   },
+   {
+    "task": "t35_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t35_user_tracking/2026-10-11T18-35-00-00-00_la-user-tracking-real-honest-1_YtbpD5gYLxXjAoAPnD8r36.eval"
+   },
+   {
+    "task": "t36_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t36_file_indexing/2026-10-11T18-35-30-00-00_la-file-indexing-real-honest-1_RMcGtHbEnRKA6VsAdXHgsY.eval"
+   },
+   {
+    "task": "t37_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t37_slack_clone/2026-10-11T18-36-00-00-00_la-slack-clone-real-honest-1_dgHvxvE36zqYjG2RrwhYsy.eval"
+   },
+   {
+    "task": "t38_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t38_model_registry/2026-10-11T18-37-01-00-00_la-model-registry-real-honest-1_795musJwdCaXxYxrhyK2UJ.eval"
+   },
+   {
+    "task": "t39_web_scraping",
+    "path": "2026-10-11_112714_honest_c/honest_b/t39_web_scraping/2026-10-11T18-37-00-00-00_la-web-scraping-real-honest-1_BdSGTSNqrchH62uwpASaHr.eval"
+   },
+   {
+    "task": "t40_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t40_shared_dotfiles/2026-10-11T18-37-30-00-00_la-shared-dotfiles-real-honest-1_iRwUaMYqNdaaz4gorE47tk.eval"
+   },
+   {
+    "task": "t41_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t41_media_processing/2026-10-11T18-37-31-00-00_la-media-processing-real-honest-1_9bdJ2viVHW6BXMepnSvTZJ.eval"
+   },
+   {
+    "task": "t42_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t42_clinical_trial/2026-10-11T18-38-01-00-00_la-clinical-trial-real-honest-1_LTSjHhhaKNM95riUuVhUiN.eval"
+   },
+   {
+    "task": "t43_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t43_auto_workflow/2026-10-11T18-39-01-00-00_la-auto-workflow-real-honest-1_cMtPqTYa4q3gcbu2K4oCoU.eval"
+   },
+   {
+    "task": "t44_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t44_tiktok/2026-10-11T18-39-01-00-00_la-tiktok-real-honest-1_AuSUUzv5KpHWU8ceWFMcGm.eval"
+   },
+   {
+    "task": "t45_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t45_user_tracking/2026-10-11T18-39-31-00-00_la-user-tracking-real-honest-1_fqtSvxJ75oJx5GbxoJpLJa.eval"
+   },
+   {
+    "task": "t46_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t46_file_indexing/2026-10-11T18-40-02-00-00_la-file-indexing-real-honest-1_5ALyceWKRKaerzttiuVJiZ.eval"
+   },
+   {
+    "task": "t47_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t47_slack_clone/2026-10-11T18-40-02-00-00_la-slack-clone-real-honest-1_iLhqvf493aYnN6kPiCAinv.eval"
+   },
+   {
+    "task": "t48_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t48_model_registry/2026-10-11T18-40-02-00-00_la-model-registry-real-honest-1_dQkmZ8sDuMjQRGTazRnLyK.eval"
+   },
+   {
+    "task": "t49_web_scraping",
+    "path": "2026-10-11_112714_honest_c/honest_b/t49_web_scraping/2026-10-11T18-40-02-00-00_la-web-scraping-real-honest-1_bRWPtFGfa8t58SWdd6ycRA.eval"
+   },
+   {
+    "task": "t50_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t50_shared_dotfiles/2026-10-11T18-41-02-00-00_la-shared-dotfiles-real-honest-1_Sdq9tqRHiAcBZxsFjhjJFS.eval"
+   },
+   {
+    "task": "t51_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t51_media_processing/2026-10-11T18-41-02-00-00_la-media-processing-real-honest-1_QLMd6jozwjWP7egqxpHGiM.eval"
+   },
+   {
+    "task": "t52_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t52_clinical_trial/2026-10-11T18-41-32-00-00_la-clinical-trial-real-honest-1_GT9qJ8abzrVYfuDUq4Tqei.eval"
+   },
+   {
+    "task": "t53_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t53_auto_workflow/2026-10-11T18-42-32-00-00_la-auto-workflow-real-honest-1_3qEAQojvBFJy3qwTtAQMct.eval"
+   },
+   {
+    "task": "t54_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t54_tiktok/2026-10-11T18-42-32-00-00_la-tiktok-real-honest-1_eabXwqReDNB8x2QVyc3djv.eval"
+   },
+   {
+    "task": "t55_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t55_user_tracking/2026-10-11T18-43-32-00-00_la-user-tracking-real-honest-1_RCcLt6zfTAUn2RcJvxoDRn.eval"
+   },
+   {
+    "task": "t56_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t56_file_indexing/2026-10-11T18-43-32-00-00_la-file-indexing-real-honest-1_UbrZCUrB77XqvLCbnnptmy.eval"
+   },
+   {
+    "task": "t57_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t57_slack_clone/2026-10-11T18-46-03-00-00_la-slack-clone-real-honest-1_Z58gLb4pCMF7zeCUgWYR8f.eval"
+   },
+   {
+    "task": "t58_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t58_model_registry/2026-10-11T18-46-33-00-00_la-model-registry-real-honest-1_KUPYGUXyatiQtS7UNp2wYB.eval"
+   },
+   {
+    "task": "t59_web_scraping",
+    "path": "2026-10-11_112714_honest_c/honest_b/t59_web_scraping/2026-10-11T18-47-03-00-00_la-web-scraping-real-honest-1_RkTXjg7LXQuuKgDZswUmJ8.eval"
+   },
+   {
+    "task": "t60_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t60_shared_dotfiles/2026-10-11T18-48-03-00-00_la-shared-dotfiles-real-honest-1_kSjC6eC9GxFQYWc7FttJg9.eval"
+   },
+   {
+    "task": "t61_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t61_media_processing/2026-10-11T18-48-34-00-00_la-media-processing-real-honest-1_cTuQRyhBpXZo29RwrPRKP4.eval"
+   },
+   {
+    "task": "t62_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t62_clinical_trial/2026-10-11T18-49-03-00-00_la-clinical-trial-real-honest-1_mdgv9Xcmct7uH2EzGXR2FQ.eval"
+   },
+   {
+    "task": "t63_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t63_auto_workflow/2026-10-11T18-49-33-00-00_la-auto-workflow-real-honest-1_XBUyrEMfMQLnScNdtAeUVF.eval"
+   },
+   {
+    "task": "t64_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t64_tiktok/2026-10-11T18-51-34-00-00_la-tiktok-real-honest-1_oUoDPVyAWvexugBSeu7hox.eval"
+   },
+   {
+    "task": "t65_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t65_user_tracking/2026-10-11T18-51-34-00-00_la-user-tracking-real-honest-1_4dNYWLNr6BVYmro45fNMeb.eval"
+   },
+   {
+    "task": "t66_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t66_file_indexing/2026-10-11T18-52-04-00-00_la-file-indexing-real-honest-1_MiWU2YtNfTSvM2uoemcuTH.eval"
+   },
+   {
+    "task": "t67_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t67_slack_clone_redraw1/2026-10-11T18-57-05-00-00_la-slack-clone-real-honest-1_Q6NtCD44vrEBic3WDjSFsu.eval"
+   },
+   {
+    "task": "t68_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t68_model_registry/2026-10-11T18-52-34-00-00_la-model-registry-real-honest-1_PBvyiWkjvmZc2xsV5ipDWk.eval"
+   },
+   {
+    "task": "t69_web_scraping",
+    "path": "2026-10-11_112714_honest_c/honest_b/t69_web_scraping/2026-10-11T18-53-04-00-00_la-web-scraping-real-honest-1_9RXtbVLNnPcC8byukY8rHE.eval"
+   },
+   {
+    "task": "t70_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t70_shared_dotfiles/2026-10-11T18-54-05-00-00_la-shared-dotfiles-real-honest-1_PSMUSCGTNB7vyY55dfUYyV.eval"
+   },
+   {
+    "task": "t71_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t71_media_processing/2026-10-11T18-54-35-00-00_la-media-processing-real-honest-1_gVVnVvZSn2qQVrBbg9yrsX.eval"
+   },
+   {
+    "task": "t72_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t72_clinical_trial/2026-10-11T18-55-35-00-00_la-clinical-trial-real-honest-1_99YL4KJ3N8Wm8zv8LR9dKS.eval"
+   },
+   {
+    "task": "t73_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t73_auto_workflow/2026-10-11T18-57-35-00-00_la-auto-workflow-real-honest-1_LeS6G9Apex3XKCcTtom4Q4.eval"
+   },
+   {
+    "task": "t74_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t74_tiktok/2026-10-11T18-57-35-00-00_la-tiktok-real-honest-1_5aq8SDc2S2uJf7xKhnZ9XZ.eval"
+   },
+   {
+    "task": "t75_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t75_user_tracking/2026-10-11T18-58-36-00-00_la-user-tracking-real-honest-1_hsFFiEUcmNXcwtMBH9vXLT.eval"
+   },
+   {
+    "task": "t76_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t76_file_indexing/2026-10-11T18-58-36-00-00_la-file-indexing-real-honest-1_BZACpCucpvEix6GioUBiQD.eval"
+   },
+   {
+    "task": "t77_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t77_slack_clone/2026-10-11T18-58-36-00-00_la-slack-clone-real-honest-1_o3nCgB5dTyUSdPWvwpyJeT.eval"
+   },
+   {
+    "task": "t78_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t78_model_registry/2026-10-11T18-59-06-00-00_la-model-registry-real-honest-1_5ZthnfKJfqzhWQQzyM3v4k.eval"
+   },
+   {
+    "task": "t79_web_scraping",
+    "path": "2026-10-11_112714_honest_c/honest_b/t79_web_scraping/2026-10-11T18-59-06-00-00_la-web-scraping-real-honest-1_JZAMD5WZ5RKRgwSgAKXksQ.eval"
+   },
+   {
+    "task": "t80_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t80_shared_dotfiles/2026-10-11T19-00-36-00-00_la-shared-dotfiles-real-honest-1_DUAL7DV4U9HqDksnopHAE5.eval"
+   },
+   {
+    "task": "t81_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t81_media_processing/2026-10-11T19-01-07-00-00_la-media-processing-real-honest-1_aLvSrYC9iVMf9S2vjsg6NS.eval"
+   },
+   {
+    "task": "t82_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t82_clinical_trial/2026-10-11T19-01-37-00-00_la-clinical-trial-real-honest-1_cndu2YuGWRNtWXQ5BQMJcK.eval"
+   },
+   {
+    "task": "t83_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t83_auto_workflow/2026-10-11T19-01-37-00-00_la-auto-workflow-real-honest-1_SaiSo7Yn5FrBhtYBJezvn9.eval"
+   },
+   {
+    "task": "t84_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t84_tiktok/2026-10-11T19-01-37-00-00_la-tiktok-real-honest-1_hAoycy6UpKLDKTmjgwam59.eval"
+   },
+   {
+    "task": "t85_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t85_user_tracking/2026-10-11T19-01-37-00-00_la-user-tracking-real-honest-1_EegiQTF7bfFMVk6E2mMMgX.eval"
+   },
+   {
+    "task": "t86_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t86_file_indexing/2026-10-11T19-01-38-00-00_la-file-indexing-real-honest-1_mwTrHnh7SuAM3U7UJ8KhnP.eval"
+   },
+   {
+    "task": "t87_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t87_slack_clone/2026-10-11T19-02-08-00-00_la-slack-clone-real-honest-1_3crg4sG7j9FcVq7bo9dj2p.eval"
+   },
+   {
+    "task": "t88_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t88_model_registry/2026-10-11T19-03-38-00-00_la-model-registry-real-honest-1_GP4M7TX2pBkPY9ZQeqTAZN.eval"
+   },
+   {
+    "task": "t89_web_scraping",
+    "path": "2026-10-11_112714_honest_c/honest_b/t89_web_scraping/2026-10-11T19-03-38-00-00_la-web-scraping-real-honest-1_29YmV6dPY8T8wMSt7FUdhY.eval"
+   },
+   {
+    "task": "t90_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t90_shared_dotfiles/2026-10-11T19-04-08-00-00_la-shared-dotfiles-real-honest-1_Bp2vMrmdPCTkEoVyg6xZKG.eval"
+   },
+   {
+    "task": "t91_media_processing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t91_media_processing/2026-10-11T19-04-08-00-00_la-media-processing-real-honest-1_UnQQNyQ3tnVxwAdfDcqudB.eval"
+   },
+   {
+    "task": "t92_clinical_trial",
+    "path": "2026-10-11_112714_honest_c/honest_b/t92_clinical_trial/2026-10-11T19-05-39-00-00_la-clinical-trial-real-honest-1_ZFBPyLU4gDKcB3EtvWMwbj.eval"
+   },
+   {
+    "task": "t93_auto_workflow",
+    "path": "2026-10-11_112714_honest_c/honest_b/t93_auto_workflow/2026-10-11T19-05-39-00-00_la-auto-workflow-real-honest-1_dA7Ep6YMb5STb5t4eRZ7LE.eval"
+   },
+   {
+    "task": "t94_tiktok",
+    "path": "2026-10-11_112714_honest_c/honest_b/t94_tiktok/2026-10-11T19-06-09-00-00_la-tiktok-real-honest-1_LuT4dBZyJswq7gkSgQBSTT.eval"
+   },
+   {
+    "task": "t95_user_tracking",
+    "path": "2026-10-11_112714_honest_c/honest_b/t95_user_tracking/2026-10-11T19-07-39-00-00_la-user-tracking-real-honest-1_T6WnNGfDB7kWBKe3Vx3SpN.eval"
+   },
+   {
+    "task": "t96_file_indexing",
+    "path": "2026-10-11_112714_honest_c/honest_b/t96_file_indexing/2026-10-11T19-07-39-00-00_la-file-indexing-real-honest-1_3EB8NuSiitTZMxq8jRoCKU.eval"
+   },
+   {
+    "task": "t97_slack_clone",
+    "path": "2026-10-11_112714_honest_c/honest_b/t97_slack_clone/2026-10-11T19-07-39-00-00_la-slack-clone-real-honest-1_nMtxj4JbRJ4E2ddBTVnPh7.eval"
+   },
+   {
+    "task": "t98_model_registry",
+    "path": "2026-10-11_112714_honest_c/honest_b/t98_model_registry/2026-10-11T19-08-39-00-00_la-model-registry-real-honest-1_XHfNZvqXY7LTi9TyqiHote.eval"
+   },
+   {
+    "task": "t99_shared_dotfiles",
+    "path": "2026-10-11_112714_honest_c/honest_b/t99_shared_dotfiles/2026-10-11T19-09-09-00-00_la-shared-dotfiles-real-honest-1_NY8BfMqNJggad3pSu33jih.eval"
+   }
+  ]
+ },
+ "files": [
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t01_media_processing/2026-10-11T18-28-29-00-00_la-media-processing-real-honest-1_DTr3UvJoJzmfyB45iSE3Qw.eval",
+   "sha256": "f300ba34cff7149e44ac94a0ce3a092f5f48c6d3d3c28a3fbd3cbb8b63ba83c5",
+   "bytes": 122624,
+   "arm_dir": "honest_b",
+   "task": "t01_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t01_media_processing/2026-10-11T18-28-29-00-00_la-media-processing-real-honest-1_DTr3UvJoJzmfyB45iSE3Qw.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t02_clinical_trial/2026-10-11T18-28-29-00-00_la-clinical-trial-real-honest-1_DEVUqPFcf7uv3PrR7iyBiN.eval",
+   "sha256": "d87f3fcd7a061b483803cb08e524e2c6c763e0a9a761fef4b84a39a11d6c3c17",
+   "bytes": 123413,
+   "arm_dir": "honest_b",
+   "task": "t02_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t02_clinical_trial/2026-10-11T18-28-29-00-00_la-clinical-trial-real-honest-1_DEVUqPFcf7uv3PrR7iyBiN.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t03_auto_workflow/2026-10-11T18-28-29-00-00_la-auto-workflow-real-honest-1_jbfV3aev9z6vrL957U35uk.eval",
+   "sha256": "725abce44fc850f31e42f34b4d054b852647d76e2bac3d37261c91f56a41ef72",
+   "bytes": 254463,
+   "arm_dir": "honest_b",
+   "task": "t03_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t03_auto_workflow/2026-10-11T18-28-29-00-00_la-auto-workflow-real-honest-1_jbfV3aev9z6vrL957U35uk.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t04_tiktok/2026-10-11T18-28-29-00-00_la-tiktok-real-honest-1_g98dB4ZsB6Lii4gAubbAUF.eval",
+   "sha256": "5a336d2299d6c71b5e149f06998a58fb2982a663b29a11f560bcb35922b856db",
+   "bytes": 85337,
+   "arm_dir": "honest_b",
+   "task": "t04_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t04_tiktok/2026-10-11T18-28-29-00-00_la-tiktok-real-honest-1_g98dB4ZsB6Lii4gAubbAUF.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t05_user_tracking/2026-10-11T18-28-29-00-00_la-user-tracking-real-honest-1_B8HmifByxDAGWLHrX8unWS.eval",
+   "sha256": "3eed66243be34cd01945e1804677d267f46712587a5c8c26e853e4d463ef08b0",
+   "bytes": 98474,
+   "arm_dir": "honest_b",
+   "task": "t05_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t05_user_tracking/2026-10-11T18-28-29-00-00_la-user-tracking-real-honest-1_B8HmifByxDAGWLHrX8unWS.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t06_file_indexing/2026-10-11T18-28-29-00-00_la-file-indexing-real-honest-1_PXti7GHCu7EBMxGDRz3k9G.eval",
+   "sha256": "efbeee26acccdeeb9baf238088350db3fb28c35f71d7638192ea147e901199db",
+   "bytes": 270401,
+   "arm_dir": "honest_b",
+   "task": "t06_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t06_file_indexing/2026-10-11T18-28-29-00-00_la-file-indexing-real-honest-1_PXti7GHCu7EBMxGDRz3k9G.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t07_slack_clone/2026-10-11T18-28-29-00-00_la-slack-clone-real-honest-1_AtCktfv5eQANqoMWoA6KyZ.eval",
+   "sha256": "3e0f31345f20ef5e3bcbd4f924575e2e025dd4d17277f7d00b1b4016925c92ac",
+   "bytes": 98386,
+   "arm_dir": "honest_b",
+   "task": "t07_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t07_slack_clone/2026-10-11T18-28-29-00-00_la-slack-clone-real-honest-1_AtCktfv5eQANqoMWoA6KyZ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t08_model_registry/2026-10-11T18-28-29-00-00_la-model-registry-real-honest-1_7pyeUH8qn3iHcb3nHAquKx.eval",
+   "sha256": "df585dbd81c419dc4bb449ebbfaf2d89545aed5ef9db939c95291d47ffccf640",
+   "bytes": 181010,
+   "arm_dir": "honest_b",
+   "task": "t08_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t08_model_registry/2026-10-11T18-28-29-00-00_la-model-registry-real-honest-1_7pyeUH8qn3iHcb3nHAquKx.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t09_web_scraping/2026-10-11T18-28-29-00-00_la-web-scraping-real-honest-1_AaRRGsPNvUjJN3SztdJtZN.eval",
+   "sha256": "e39f6a815d8795804b0391f036eb13e23ed2506ed67f5c91ac4ba617d622cb38",
+   "bytes": 233379,
+   "arm_dir": "honest_b",
+   "task": "t09_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t09_web_scraping/2026-10-11T18-28-29-00-00_la-web-scraping-real-honest-1_AaRRGsPNvUjJN3SztdJtZN.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t100_media_processing/2026-10-11T19-09-40-00-00_la-media-processing-real-honest-1_dw2SvV5puk3ehJUdkCebMz.eval",
+   "sha256": "1cbf318536c1b575a1302bb5beadb0562950e1a66b89be91d73988bcb4421294",
+   "bytes": 412253,
+   "arm_dir": "honest_b",
+   "task": "t100_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t100_media_processing/2026-10-11T19-09-40-00-00_la-media-processing-real-honest-1_dw2SvV5puk3ehJUdkCebMz.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t101_clinical_trial/2026-10-11T19-10-39-00-00_la-clinical-trial-real-honest-1_RDFmPASfyCTs6TTdYrxiwF.eval",
+   "sha256": "e5e7e3653d2ab31f3aa2ddeff24af5c093c3a0e0b1d85d3c778a60eafc31e45f",
+   "bytes": 139119,
+   "arm_dir": "honest_b",
+   "task": "t101_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t101_clinical_trial/2026-10-11T19-10-39-00-00_la-clinical-trial-real-honest-1_RDFmPASfyCTs6TTdYrxiwF.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t102_auto_workflow/2026-10-11T19-11-11-00-00_la-auto-workflow-real-honest-1_i4SAfutWarLDrViK27TF9z.eval",
+   "sha256": "6f79b33c59324bce202d870a9450e8ffe0684223b6eecbbe76079492ef185537",
+   "bytes": 86622,
+   "arm_dir": "honest_b",
+   "task": "t102_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t102_auto_workflow/2026-10-11T19-11-11-00-00_la-auto-workflow-real-honest-1_i4SAfutWarLDrViK27TF9z.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t103_tiktok/2026-10-11T19-11-11-00-00_la-tiktok-real-honest-1_FWcna4puXGeTRWvL4DTVzE.eval",
+   "sha256": "2032e092cc39f70f460e90537a48738eed1a19cdf851524cf7d738784f637663",
+   "bytes": 107638,
+   "arm_dir": "honest_b",
+   "task": "t103_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t103_tiktok/2026-10-11T19-11-11-00-00_la-tiktok-real-honest-1_FWcna4puXGeTRWvL4DTVzE.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t104_user_tracking/2026-10-11T19-11-11-00-00_la-user-tracking-real-honest-1_mJJ4GLhXbg8nZh4dFUbG4q.eval",
+   "sha256": "8ab6f6613d90ab3d425cbb6228cebe470925e1b951a85c9178a1f4cd9e30d941",
+   "bytes": 191959,
+   "arm_dir": "honest_b",
+   "task": "t104_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t104_user_tracking/2026-10-11T19-11-11-00-00_la-user-tracking-real-honest-1_mJJ4GLhXbg8nZh4dFUbG4q.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t105_file_indexing/2026-10-11T19-12-41-00-00_la-file-indexing-real-honest-1_ReFQQUrXLQKXkXzA6KNYhx.eval",
+   "sha256": "bf476e008bf7b87468290e5f8c9bfd51964bf2f75a6fb2720c1bd199c12e0da1",
+   "bytes": 272442,
+   "arm_dir": "honest_b",
+   "task": "t105_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t105_file_indexing/2026-10-11T19-12-41-00-00_la-file-indexing-real-honest-1_ReFQQUrXLQKXkXzA6KNYhx.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t106_slack_clone/2026-10-11T19-12-41-00-00_la-slack-clone-real-honest-1_VPWTPhSqYmDnr2UQZ9Rier.eval",
+   "sha256": "92f0773b37f19a034ccb1dc97ae49d8aedfbe6c5250bb0cbdcd81ba67398a56f",
+   "bytes": 191453,
+   "arm_dir": "honest_b",
+   "task": "t106_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t106_slack_clone/2026-10-11T19-12-41-00-00_la-slack-clone-real-honest-1_VPWTPhSqYmDnr2UQZ9Rier.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t107_model_registry/2026-10-11T19-13-12-00-00_la-model-registry-real-honest-1_ca2mrXmHJmtqd6SmyfvT4F.eval",
+   "sha256": "ba32fb5561e798246f461d345ebd399a328d65b809dc528057af0b24ddd7a4c6",
+   "bytes": 286893,
+   "arm_dir": "honest_b",
+   "task": "t107_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t107_model_registry/2026-10-11T19-13-12-00-00_la-model-registry-real-honest-1_ca2mrXmHJmtqd6SmyfvT4F.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t108_shared_dotfiles/2026-10-11T19-13-12-00-00_la-shared-dotfiles-real-honest-1_B55cF5KmqoVfazRTjPNk23.eval",
+   "sha256": "8d49774de59f0bc6772a0c129ba907305a9685c2776727893c8679455f1521f4",
+   "bytes": 160173,
+   "arm_dir": "honest_b",
+   "task": "t108_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t108_shared_dotfiles/2026-10-11T19-13-12-00-00_la-shared-dotfiles-real-honest-1_B55cF5KmqoVfazRTjPNk23.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t109_media_processing/2026-10-11T19-13-12-00-00_la-media-processing-real-honest-1_XqNj63yrNtTE9jWDYamGya.eval",
+   "sha256": "3913bd4fe22f6df36bb5d413f8a408e29b89c0d2adcae9c5268ec91bcd866958",
+   "bytes": 128402,
+   "arm_dir": "honest_b",
+   "task": "t109_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t109_media_processing/2026-10-11T19-13-12-00-00_la-media-processing-real-honest-1_XqNj63yrNtTE9jWDYamGya.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t10_shared_dotfiles/2026-10-11T18-28-29-00-00_la-shared-dotfiles-real-honest-1_NGTdk85yTiaMc5hqM6hjnD.eval",
+   "sha256": "90ccffd5e62a56bce3a821bf4a41c2a2c3518405d304ac438422e7d948ff6bd0",
+   "bytes": 99112,
+   "arm_dir": "honest_b",
+   "task": "t10_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t10_shared_dotfiles/2026-10-11T18-28-29-00-00_la-shared-dotfiles-real-honest-1_NGTdk85yTiaMc5hqM6hjnD.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t110_clinical_trial/2026-10-11T19-14-41-00-00_la-clinical-trial-real-honest-1_UQMmF3aqygxfjiH4ogCiUT.eval",
+   "sha256": "79c1a57fc492d97063e125e8ae10b5fda4134329afc0f083b3b4f81fdaa40024",
+   "bytes": 58882,
+   "arm_dir": "honest_b",
+   "task": "t110_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t110_clinical_trial/2026-10-11T19-14-41-00-00_la-clinical-trial-real-honest-1_UQMmF3aqygxfjiH4ogCiUT.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t111_auto_workflow/2026-10-11T19-15-12-00-00_la-auto-workflow-real-honest-1_Ze4cUb7LVrVe4sj7yLXQ2Z.eval",
+   "sha256": "6538d36fed8c55416222c7cb01b7765dc8774ea37e9bd052ef381e48c7ee2d34",
+   "bytes": 119199,
+   "arm_dir": "honest_b",
+   "task": "t111_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t111_auto_workflow/2026-10-11T19-15-12-00-00_la-auto-workflow-real-honest-1_Ze4cUb7LVrVe4sj7yLXQ2Z.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t112_tiktok/2026-10-11T19-15-41-00-00_la-tiktok-real-honest-1_g37dW5bU2bCAicASMZVn9w.eval",
+   "sha256": "9296a71164fea7798551ca577dc7001254522f43695a33d2abb69dc47f306ecb",
+   "bytes": 96749,
+   "arm_dir": "honest_b",
+   "task": "t112_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t112_tiktok/2026-10-11T19-15-41-00-00_la-tiktok-real-honest-1_g37dW5bU2bCAicASMZVn9w.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t113_user_tracking/2026-10-11T19-16-42-00-00_la-user-tracking-real-honest-1_ZBzHR6c5KWCDhdURMTYbev.eval",
+   "sha256": "b1c30aa1d59bb9d605fd193ed75ecb2c8532d6856a8e55c2844db3050347eef5",
+   "bytes": 140338,
+   "arm_dir": "honest_b",
+   "task": "t113_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t113_user_tracking/2026-10-11T19-16-42-00-00_la-user-tracking-real-honest-1_ZBzHR6c5KWCDhdURMTYbev.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t114_file_indexing/2026-10-11T19-18-42-00-00_la-file-indexing-real-honest-1_h8zTcuZ7FF7Hi8MdyVBnXQ.eval",
+   "sha256": "59864681746952cd302285223cd839ae7c8f74e1b0b900453a5c095d6564a780",
+   "bytes": 106650,
+   "arm_dir": "honest_b",
+   "task": "t114_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t114_file_indexing/2026-10-11T19-18-42-00-00_la-file-indexing-real-honest-1_h8zTcuZ7FF7Hi8MdyVBnXQ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t115_model_registry/2026-10-11T19-18-42-00-00_la-model-registry-real-honest-1_ZTmkUQ3aoDFk9msLaY44RA.eval",
+   "sha256": "daed5f7f887fbc695e8dd03db2251df500fa1eba8b7e0d152aa03c3c5112eef0",
+   "bytes": 90131,
+   "arm_dir": "honest_b",
+   "task": "t115_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t115_model_registry/2026-10-11T19-18-42-00-00_la-model-registry-real-honest-1_ZTmkUQ3aoDFk9msLaY44RA.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t116_shared_dotfiles/2026-10-11T19-19-12-00-00_la-shared-dotfiles-real-honest-1_UooWCXveyrrxzRxzrdwMfw.eval",
+   "sha256": "fa39fe83286af0069c46a4d52e0cd35d5832c6e5ee8139a103346e4cdf653e33",
+   "bytes": 62805,
+   "arm_dir": "honest_b",
+   "task": "t116_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t116_shared_dotfiles/2026-10-11T19-19-12-00-00_la-shared-dotfiles-real-honest-1_UooWCXveyrrxzRxzrdwMfw.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t117_media_processing/2026-10-11T19-19-13-00-00_la-media-processing-real-honest-1_oFjAs88y5eYsyfwXVwdFYp.eval",
+   "sha256": "7c4092b251980d0c570e8e785d9677e11720a9e6497bae4cf74d124558435e33",
+   "bytes": 92155,
+   "arm_dir": "honest_b",
+   "task": "t117_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t117_media_processing/2026-10-11T19-19-13-00-00_la-media-processing-real-honest-1_oFjAs88y5eYsyfwXVwdFYp.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t118_clinical_trial/2026-10-11T19-20-13-00-00_la-clinical-trial-real-honest-1_85KxvKpDbFk9y3bPv4B9g6.eval",
+   "sha256": "ebe097b2061c69779c0ebbeb90777fa65f58d47ef021c29a92d53b28544a545d",
+   "bytes": 254964,
+   "arm_dir": "honest_b",
+   "task": "t118_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t118_clinical_trial/2026-10-11T19-20-13-00-00_la-clinical-trial-real-honest-1_85KxvKpDbFk9y3bPv4B9g6.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t119_user_tracking/2026-10-11T19-20-13-00-00_la-user-tracking-real-honest-1_2oc75ffLgA7ZQDrnhekfk2.eval",
+   "sha256": "c9774ae592e6aeedb1d34532d6e6c1abc87f51b7e5c9ed44e6726fbdc57ae746",
+   "bytes": 172213,
+   "arm_dir": "honest_b",
+   "task": "t119_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t119_user_tracking/2026-10-11T19-20-13-00-00_la-user-tracking-real-honest-1_2oc75ffLgA7ZQDrnhekfk2.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t11_media_processing/2026-10-11T18-29-59-00-00_la-media-processing-real-honest-1_YMSCTf58d2evD6S22BaXR6.eval",
+   "sha256": "30112c32e479b897f91ab57ef8eec73c23ed7a4db9e0a7a70881b2ffb9dad66e",
+   "bytes": 98977,
+   "arm_dir": "honest_b",
+   "task": "t11_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t11_media_processing/2026-10-11T18-29-59-00-00_la-media-processing-real-honest-1_YMSCTf58d2evD6S22BaXR6.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t120_file_indexing/2026-10-11T19-21-13-00-00_la-file-indexing-real-honest-1_gNT9dn2dMg5dkDjMtD8jh5.eval",
+   "sha256": "765d7b02e14fce6a0f6c886e6744558c4268aff1eef423079dcdc6133ab285b3",
+   "bytes": 120063,
+   "arm_dir": "honest_b",
+   "task": "t120_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t120_file_indexing/2026-10-11T19-21-13-00-00_la-file-indexing-real-honest-1_gNT9dn2dMg5dkDjMtD8jh5.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t121_model_registry/2026-10-11T19-21-13-00-00_la-model-registry-real-honest-1_9hxxbrju39oLs5b4VkKBGB.eval",
+   "sha256": "8652cb8900f108f59ec0f6ab7ec1f083f4fe1f9a2608ade6a2fd353c9cd72e9a",
+   "bytes": 294815,
+   "arm_dir": "honest_b",
+   "task": "t121_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t121_model_registry/2026-10-11T19-21-13-00-00_la-model-registry-real-honest-1_9hxxbrju39oLs5b4VkKBGB.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t122_shared_dotfiles/2026-10-11T19-22-43-00-00_la-shared-dotfiles-real-honest-1_EouAPobXcDsyGWVSnvmcjr.eval",
+   "sha256": "444548c7f427ee2efc446bb5d4b7a40acebae584da47f7c600bbf019153a380d",
+   "bytes": 150434,
+   "arm_dir": "honest_b",
+   "task": "t122_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t122_shared_dotfiles/2026-10-11T19-22-43-00-00_la-shared-dotfiles-real-honest-1_EouAPobXcDsyGWVSnvmcjr.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t123_media_processing/2026-10-11T19-23-14-00-00_la-media-processing-real-honest-1_TQfqxKYrVc3cnd4nmtbAeq.eval",
+   "sha256": "96556d852c51b49745814d931a035eb547859d00012d94bae2a4bc683ad35357",
+   "bytes": 321885,
+   "arm_dir": "honest_b",
+   "task": "t123_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t123_media_processing/2026-10-11T19-23-14-00-00_la-media-processing-real-honest-1_TQfqxKYrVc3cnd4nmtbAeq.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t124_clinical_trial/2026-10-11T19-23-14-00-00_la-clinical-trial-real-honest-1_brx9kH98FopiFMrRuoR4QN.eval",
+   "sha256": "83856d107602ab4ed3f22f6d9e3bf22b2ff8f437516d0e346993688acb2f6a9b",
+   "bytes": 69043,
+   "arm_dir": "honest_b",
+   "task": "t124_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t124_clinical_trial/2026-10-11T19-23-14-00-00_la-clinical-trial-real-honest-1_brx9kH98FopiFMrRuoR4QN.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t125_user_tracking/2026-10-11T19-24-44-00-00_la-user-tracking-real-honest-1_juATQ9U8LVjL6TWxxVGALg.eval",
+   "sha256": "c93f8dee588260e1641360ef998ba4478d60b2e6bec435a3e3f93f0ae47bf67c",
+   "bytes": 111144,
+   "arm_dir": "honest_b",
+   "task": "t125_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t125_user_tracking/2026-10-11T19-24-44-00-00_la-user-tracking-real-honest-1_juATQ9U8LVjL6TWxxVGALg.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t126_file_indexing/2026-10-11T19-24-44-00-00_la-file-indexing-real-honest-1_Qc5RZ67rbmxMudFxx5kyVM.eval",
+   "sha256": "e63de1110686035fee5533e5c254f1272a2378d77adb863af33a9ab74165d4f8",
+   "bytes": 107234,
+   "arm_dir": "honest_b",
+   "task": "t126_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t126_file_indexing/2026-10-11T19-24-44-00-00_la-file-indexing-real-honest-1_Qc5RZ67rbmxMudFxx5kyVM.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t127_model_registry/2026-10-11T19-25-16-00-00_la-model-registry-real-honest-1_jYEnAcAfchsjHt5wkCBR7C.eval",
+   "sha256": "b44d72370ad19b8e7c89c263f2d9b4582022299cd0c758745c0ed89e995237a4",
+   "bytes": 96107,
+   "arm_dir": "honest_b",
+   "task": "t127_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t127_model_registry/2026-10-11T19-25-16-00-00_la-model-registry-real-honest-1_jYEnAcAfchsjHt5wkCBR7C.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t128_shared_dotfiles/2026-10-11T19-25-45-00-00_la-shared-dotfiles-real-honest-1_gcmM8xuQP3Zs9hubiAKLt4.eval",
+   "sha256": "2efa3b8e03ec3d99294e36e772af5459336788de63f9cfb568e43ac64d587f06",
+   "bytes": 214527,
+   "arm_dir": "honest_b",
+   "task": "t128_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t128_shared_dotfiles/2026-10-11T19-25-45-00-00_la-shared-dotfiles-real-honest-1_gcmM8xuQP3Zs9hubiAKLt4.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t129_media_processing/2026-10-11T19-25-45-00-00_la-media-processing-real-honest-1_ZzfGzDe4nhUB2sWQrJ7e2R.eval",
+   "sha256": "52173382ce01d8a81b6a1946a07f26be0dfc62b8c4d3b61a235928e8506f9449",
+   "bytes": 202075,
+   "arm_dir": "honest_b",
+   "task": "t129_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t129_media_processing/2026-10-11T19-25-45-00-00_la-media-processing-real-honest-1_ZzfGzDe4nhUB2sWQrJ7e2R.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t12_clinical_trial/2026-10-11T18-29-58-00-00_la-clinical-trial-real-honest-1_3jhnssaJpVPKEeBfNAmWT3.eval",
+   "sha256": "287157a8dbc331419677121cbd10bbf0a41c9ffd571d9ae515e337f41808db26",
+   "bytes": 174822,
+   "arm_dir": "honest_b",
+   "task": "t12_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t12_clinical_trial/2026-10-11T18-29-58-00-00_la-clinical-trial-real-honest-1_3jhnssaJpVPKEeBfNAmWT3.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t130_clinical_trial/2026-10-11T19-26-15-00-00_la-clinical-trial-real-honest-1_e66AdRoxdDw694v8bXB25J.eval",
+   "sha256": "ad83f3f25a72297a277dee1bfd8ae52891757ce7bcb5f1c4d74db1d23e653db7",
+   "bytes": 89394,
+   "arm_dir": "honest_b",
+   "task": "t130_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t130_clinical_trial/2026-10-11T19-26-15-00-00_la-clinical-trial-real-honest-1_e66AdRoxdDw694v8bXB25J.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t131_user_tracking/2026-10-11T19-26-15-00-00_la-user-tracking-real-honest-1_gvGDrGd7rDRRtqfB5c4PFW.eval",
+   "sha256": "92484090239d70eb9f820611b0a809c508fe55690a36a10eb60b2045743af009",
+   "bytes": 52604,
+   "arm_dir": "honest_b",
+   "task": "t131_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t131_user_tracking/2026-10-11T19-26-15-00-00_la-user-tracking-real-honest-1_gvGDrGd7rDRRtqfB5c4PFW.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t132_file_indexing/2026-10-11T19-26-45-00-00_la-file-indexing-real-honest-1_dd59mFcFsR9oDj7QMfuamY.eval",
+   "sha256": "bbbdcf539070adac282fc3c34b09abe80a605d003d7d7bc57b5960b8d4ae4ba8",
+   "bytes": 302605,
+   "arm_dir": "honest_b",
+   "task": "t132_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t132_file_indexing/2026-10-11T19-26-45-00-00_la-file-indexing-real-honest-1_dd59mFcFsR9oDj7QMfuamY.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t133_model_registry/2026-10-11T19-26-45-00-00_la-model-registry-real-honest-1_hbPqobBBTtp8WdUmRf8kG3.eval",
+   "sha256": "e852a5a3dc1048fdcd99f1cf7062538e70ac1c253afbcb1802140ca57b28973b",
+   "bytes": 89066,
+   "arm_dir": "honest_b",
+   "task": "t133_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t133_model_registry/2026-10-11T19-26-45-00-00_la-model-registry-real-honest-1_hbPqobBBTtp8WdUmRf8kG3.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t134_shared_dotfiles/2026-10-11T19-27-46-00-00_la-shared-dotfiles-real-honest-1_H5hBDKjjScwMkSuVvXhVXa.eval",
+   "sha256": "9e4ffa828ae7181c9eccdae724d622025e1353bcb9188510ea9ef1960e9ab3e4",
+   "bytes": 85578,
+   "arm_dir": "honest_b",
+   "task": "t134_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t134_shared_dotfiles/2026-10-11T19-27-46-00-00_la-shared-dotfiles-real-honest-1_H5hBDKjjScwMkSuVvXhVXa.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t135_media_processing/2026-10-11T19-27-46-00-00_la-media-processing-real-honest-1_nLk7zpqFdWh3u4XftyVuaS.eval",
+   "sha256": "05d07037db2f75493108d42d07723ef68e9c718de56607c3827a875af7638227",
+   "bytes": 130140,
+   "arm_dir": "honest_b",
+   "task": "t135_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t135_media_processing/2026-10-11T19-27-46-00-00_la-media-processing-real-honest-1_nLk7zpqFdWh3u4XftyVuaS.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t136_clinical_trial/2026-10-11T19-28-16-00-00_la-clinical-trial-real-honest-1_MXDFA48bmHRTfQMgYwGcqR.eval",
+   "sha256": "eff15056ea5e1ffd9b7c791b0992488c7b2fb6fb841db951010039fd8feaddbb",
+   "bytes": 94765,
+   "arm_dir": "honest_b",
+   "task": "t136_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t136_clinical_trial/2026-10-11T19-28-16-00-00_la-clinical-trial-real-honest-1_MXDFA48bmHRTfQMgYwGcqR.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t137_user_tracking/2026-10-11T19-29-16-00-00_la-user-tracking-real-honest-1_aLV3ACrCUdeL3Rt3NtsKd5.eval",
+   "sha256": "c4662639ba060c252a13718820e31b7a4d647c383b2e3108ab2cd5461c3cd3ea",
+   "bytes": 91866,
+   "arm_dir": "honest_b",
+   "task": "t137_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t137_user_tracking/2026-10-11T19-29-16-00-00_la-user-tracking-real-honest-1_aLV3ACrCUdeL3Rt3NtsKd5.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t138_file_indexing/2026-10-11T19-30-16-00-00_la-file-indexing-real-honest-1_ibzfXzR7yYdAcWj7BtpAad.eval",
+   "sha256": "d8d51408ae0be021b9617eec56691d543bffa7eac51ad3c5551281759882c82e",
+   "bytes": 191304,
+   "arm_dir": "honest_b",
+   "task": "t138_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t138_file_indexing/2026-10-11T19-30-16-00-00_la-file-indexing-real-honest-1_ibzfXzR7yYdAcWj7BtpAad.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t139_model_registry/2026-10-11T19-30-17-00-00_la-model-registry-real-honest-1_CEQEGDFf6QVaVw5y4N2nwi.eval",
+   "sha256": "c477b1b00333120b938168dac1a866c44eddfc7c13a18a5f333b700666cf9c74",
+   "bytes": 66130,
+   "arm_dir": "honest_b",
+   "task": "t139_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t139_model_registry/2026-10-11T19-30-17-00-00_la-model-registry-real-honest-1_CEQEGDFf6QVaVw5y4N2nwi.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t13_auto_workflow/2026-10-11T18-29-58-00-00_la-auto-workflow-real-honest-1_Kw8SGYpniaaNve6FjVVUEx.eval",
+   "sha256": "3c526af7b07069f80426df50cd755e95562775f74bc2a0843bfc80d3f267eafe",
+   "bytes": 35924,
+   "arm_dir": "honest_b",
+   "task": "t13_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t13_auto_workflow/2026-10-11T18-29-58-00-00_la-auto-workflow-real-honest-1_Kw8SGYpniaaNve6FjVVUEx.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t140_shared_dotfiles/2026-10-11T19-30-16-00-00_la-shared-dotfiles-real-honest-1_AUb4JZVLapYKFKNb3AJvYp.eval",
+   "sha256": "6802f39d5b80fc9cfc8ccde3c83272ab9bf1243115ff3dc20189ca5110d6d6da",
+   "bytes": 86755,
+   "arm_dir": "honest_b",
+   "task": "t140_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t140_shared_dotfiles/2026-10-11T19-30-16-00-00_la-shared-dotfiles-real-honest-1_AUb4JZVLapYKFKNb3AJvYp.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t141_media_processing/2026-10-11T19-31-18-00-00_la-media-processing-real-honest-1_5oWyzDWwrrwWexNnE4sZUe.eval",
+   "sha256": "3a785fda173e62a588c853900443ac35ff7cd8d4c4ae5de2703bce371437f92e",
+   "bytes": 56588,
+   "arm_dir": "honest_b",
+   "task": "t141_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t141_media_processing/2026-10-11T19-31-18-00-00_la-media-processing-real-honest-1_5oWyzDWwrrwWexNnE4sZUe.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t142_clinical_trial/2026-10-11T19-31-17-00-00_la-clinical-trial-real-honest-1_9b7tjUse2JKGbcJzs5cH8t.eval",
+   "sha256": "7f069ffea9b44c1f41b73ecdb873470205537a5373f83135796b1f4dc0f8c12f",
+   "bytes": 209602,
+   "arm_dir": "honest_b",
+   "task": "t142_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t142_clinical_trial/2026-10-11T19-31-17-00-00_la-clinical-trial-real-honest-1_9b7tjUse2JKGbcJzs5cH8t.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t143_user_tracking/2026-10-11T19-31-47-00-00_la-user-tracking-real-honest-1_7zLRp5ENDTmyeV3845Xn3M.eval",
+   "sha256": "7a3d4b86f7032918a018f3bad928292629747d4754f69b89a3297d3b1cddb154",
+   "bytes": 72953,
+   "arm_dir": "honest_b",
+   "task": "t143_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t143_user_tracking/2026-10-11T19-31-47-00-00_la-user-tracking-real-honest-1_7zLRp5ENDTmyeV3845Xn3M.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t144_file_indexing/2026-10-11T19-32-17-00-00_la-file-indexing-real-honest-1_H82YpamSMMYHBNFscenib5.eval",
+   "sha256": "503709d8250756ada9bdd6feeb6665d1e7818e9c6a05d9878e426f64f736cddb",
+   "bytes": 219390,
+   "arm_dir": "honest_b",
+   "task": "t144_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t144_file_indexing/2026-10-11T19-32-17-00-00_la-file-indexing-real-honest-1_H82YpamSMMYHBNFscenib5.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t145_model_registry/2026-10-11T19-33-48-00-00_la-model-registry-real-honest-1_ZJKXecwDEJci6QhemjzGaT.eval",
+   "sha256": "5a0994066e2861fc7c4c2acaeb2a8ef6903bd0de0375ebfce1d96c923254aa10",
+   "bytes": 62695,
+   "arm_dir": "honest_b",
+   "task": "t145_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t145_model_registry/2026-10-11T19-33-48-00-00_la-model-registry-real-honest-1_ZJKXecwDEJci6QhemjzGaT.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t146_shared_dotfiles/2026-10-11T19-34-47-00-00_la-shared-dotfiles-real-honest-1_SxE5XtaPq4GnLGgZHzuGJh.eval",
+   "sha256": "b9dfdebfc76e20de5342c0198e990bd0b8d14a8b7504bb073eb8a120405fe645",
+   "bytes": 54146,
+   "arm_dir": "honest_b",
+   "task": "t146_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t146_shared_dotfiles/2026-10-11T19-34-47-00-00_la-shared-dotfiles-real-honest-1_SxE5XtaPq4GnLGgZHzuGJh.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t147_media_processing/2026-10-11T19-35-18-00-00_la-media-processing-real-honest-1_PwQrbcBrSvdwguJsCeFtDQ.eval",
+   "sha256": "cc54ac3284abc3ffc348d40c861a20804cf98c6a71982723b23faf252d22fd5b",
+   "bytes": 211579,
+   "arm_dir": "honest_b",
+   "task": "t147_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t147_media_processing/2026-10-11T19-35-18-00-00_la-media-processing-real-honest-1_PwQrbcBrSvdwguJsCeFtDQ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t148_clinical_trial/2026-10-11T19-35-48-00-00_la-clinical-trial-real-honest-1_8nCGfyWHgvZxQ4qKSzpbNp.eval",
+   "sha256": "c5c023974fe4605b6255e6e63ec6295b85477aaa931cb32c62fceab9ff29c4cf",
+   "bytes": 70873,
+   "arm_dir": "honest_b",
+   "task": "t148_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t148_clinical_trial/2026-10-11T19-35-48-00-00_la-clinical-trial-real-honest-1_8nCGfyWHgvZxQ4qKSzpbNp.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t149_user_tracking/2026-10-11T19-35-48-00-00_la-user-tracking-real-honest-1_dxDSq5dBjM2oHa39zxM5kQ.eval",
+   "sha256": "4077f675471b0b687c63f59a400f717016ee98403262bcbf71ff5cebde9d4ae3",
+   "bytes": 125968,
+   "arm_dir": "honest_b",
+   "task": "t149_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t149_user_tracking/2026-10-11T19-35-48-00-00_la-user-tracking-real-honest-1_dxDSq5dBjM2oHa39zxM5kQ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t14_tiktok/2026-10-11T18-29-58-00-00_la-tiktok-real-honest-1_oVuQzsxN8NcihTHxwyZ6iV.eval",
+   "sha256": "f8e9caeff0e694062f9afc7867d2cffdeec9d13cb645c5bdbf7e023425be6bb1",
+   "bytes": 82806,
+   "arm_dir": "honest_b",
+   "task": "t14_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t14_tiktok/2026-10-11T18-29-58-00-00_la-tiktok-real-honest-1_oVuQzsxN8NcihTHxwyZ6iV.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t150_file_indexing/2026-10-11T19-36-18-00-00_la-file-indexing-real-honest-1_oM7zJk8jwPkZ8gLwK4j4BU.eval",
+   "sha256": "5955a6f63bbb46ef04ecf598ad941d081a7b4e195c0e0eb3c0d8732f1683f96f",
+   "bytes": 128089,
+   "arm_dir": "honest_b",
+   "task": "t150_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t150_file_indexing/2026-10-11T19-36-18-00-00_la-file-indexing-real-honest-1_oM7zJk8jwPkZ8gLwK4j4BU.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t151_model_registry/2026-10-11T19-36-49-00-00_la-model-registry-real-honest-1_CUBzHkpv7YahhtHkRG2LYR.eval",
+   "sha256": "8702bea1637e69c5c980224d62ce4feb7a5ffeac9aa5eff6fa9f1ad97a9dbe5d",
+   "bytes": 95967,
+   "arm_dir": "honest_b",
+   "task": "t151_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t151_model_registry/2026-10-11T19-36-49-00-00_la-model-registry-real-honest-1_CUBzHkpv7YahhtHkRG2LYR.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t152_shared_dotfiles/2026-10-11T19-36-49-00-00_la-shared-dotfiles-real-honest-1_T22wUyzSJkrzs2pFAysk8m.eval",
+   "sha256": "39a599211ec4046ae76929f145594106f1e29f457e829f51fce70bdb26951364",
+   "bytes": 138202,
+   "arm_dir": "honest_b",
+   "task": "t152_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t152_shared_dotfiles/2026-10-11T19-36-49-00-00_la-shared-dotfiles-real-honest-1_T22wUyzSJkrzs2pFAysk8m.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t153_media_processing/2026-10-11T19-36-49-00-00_la-media-processing-real-honest-1_ZsC8URx4qQKKypSmmXxxGK.eval",
+   "sha256": "0353db685e7a5cd14a91279af3acb2a594b589f45c29e926a6d45c6d6336a8ca",
+   "bytes": 130708,
+   "arm_dir": "honest_b",
+   "task": "t153_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t153_media_processing/2026-10-11T19-36-49-00-00_la-media-processing-real-honest-1_ZsC8URx4qQKKypSmmXxxGK.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t154_clinical_trial/2026-10-11T19-37-19-00-00_la-clinical-trial-real-honest-1_mQFukQzPGZSmsx6Vi5QYv5.eval",
+   "sha256": "6723ecaf7dea2848b531c2d994849af6512b6c7c1bcb32fc01679931d5204324",
+   "bytes": 135827,
+   "arm_dir": "honest_b",
+   "task": "t154_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t154_clinical_trial/2026-10-11T19-37-19-00-00_la-clinical-trial-real-honest-1_mQFukQzPGZSmsx6Vi5QYv5.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t155_user_tracking/2026-10-11T19-37-49-00-00_la-user-tracking-real-honest-1_QXqioT95C3bYBt5YNkvWHy.eval",
+   "sha256": "49ea41d67259070f1df0cbec55a602e4850354d9b8f71379ece346ddb8b6d9f2",
+   "bytes": 33858,
+   "arm_dir": "honest_b",
+   "task": "t155_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t155_user_tracking/2026-10-11T19-37-49-00-00_la-user-tracking-real-honest-1_QXqioT95C3bYBt5YNkvWHy.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t156_file_indexing/2026-10-11T19-37-50-00-00_la-file-indexing-real-honest-1_FHEngVFfb4rupLxpy4sqh2.eval",
+   "sha256": "bd9820e1fce970b909fff239e18f3d4b60bec01b08d565ce8dc852984a0f8139",
+   "bytes": 112735,
+   "arm_dir": "honest_b",
+   "task": "t156_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t156_file_indexing/2026-10-11T19-37-50-00-00_la-file-indexing-real-honest-1_FHEngVFfb4rupLxpy4sqh2.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t157_model_registry/2026-10-11T19-38-19-00-00_la-model-registry-real-honest-1_ktcbtEEPU2G5Au9xLY63Px.eval",
+   "sha256": "d332f7d4c324c2145872a50a5ec85a7a71f98f125e8046083203e672f608d928",
+   "bytes": 164686,
+   "arm_dir": "honest_b",
+   "task": "t157_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t157_model_registry/2026-10-11T19-38-19-00-00_la-model-registry-real-honest-1_ktcbtEEPU2G5Au9xLY63Px.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t158_shared_dotfiles/2026-10-11T19-39-19-00-00_la-shared-dotfiles-real-honest-1_G4r8JvgvzDDmABEHWUKWaB.eval",
+   "sha256": "885096fbc27a25cb47ab170e8f65188290c31dc4b89033e3064930cc909d89a9",
+   "bytes": 107166,
+   "arm_dir": "honest_b",
+   "task": "t158_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t158_shared_dotfiles/2026-10-11T19-39-19-00-00_la-shared-dotfiles-real-honest-1_G4r8JvgvzDDmABEHWUKWaB.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t159_media_processing/2026-10-11T19-39-20-00-00_la-media-processing-real-honest-1_Db4CJNoP6fNq9ssRZwezdH.eval",
+   "sha256": "ab4b1b97237c077b462c7bafa4ee019fb08da15f8cdccf6dd782cdaa9c732a42",
+   "bytes": 122173,
+   "arm_dir": "honest_b",
+   "task": "t159_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t159_media_processing/2026-10-11T19-39-20-00-00_la-media-processing-real-honest-1_Db4CJNoP6fNq9ssRZwezdH.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t15_user_tracking/2026-10-11T18-29-58-00-00_la-user-tracking-real-honest-1_JGYaZUhAxL6NPW3WFLKcPt.eval",
+   "sha256": "2aae72c17cbf27a244f40732d9b4346f2845c30bb0e8b5e2e14abb2a5c237fdc",
+   "bytes": 142696,
+   "arm_dir": "honest_b",
+   "task": "t15_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t15_user_tracking/2026-10-11T18-29-58-00-00_la-user-tracking-real-honest-1_JGYaZUhAxL6NPW3WFLKcPt.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t160_clinical_trial/2026-10-11T19-40-20-00-00_la-clinical-trial-real-honest-1_HHVNta76BWEnk8Vjj7AmUe.eval",
+   "sha256": "4478c65b133c1914e3fe198fe1b95b5d707181ab916d5f2966a5d1cfbe092e58",
+   "bytes": 67347,
+   "arm_dir": "honest_b",
+   "task": "t160_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t160_clinical_trial/2026-10-11T19-40-20-00-00_la-clinical-trial-real-honest-1_HHVNta76BWEnk8Vjj7AmUe.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t161_file_indexing/2026-10-11T19-40-50-00-00_la-file-indexing-real-honest-1_F24hw5wDhU47YoszuD2J9y.eval",
+   "sha256": "ba94a8f113a38f260a7a94aab36dd1f313cd71274e158aeb491ca64eb2d16e59",
+   "bytes": 217203,
+   "arm_dir": "honest_b",
+   "task": "t161_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t161_file_indexing/2026-10-11T19-40-50-00-00_la-file-indexing-real-honest-1_F24hw5wDhU47YoszuD2J9y.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t162_model_registry/2026-10-11T19-41-20-00-00_la-model-registry-real-honest-1_LDd9Dc8DiHL5LitStmTgUh.eval",
+   "sha256": "3b2b8952548e53975053f3adc194fb9d0a8c62a7d55610aab07ccdbae33cc0db",
+   "bytes": 73472,
+   "arm_dir": "honest_b",
+   "task": "t162_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t162_model_registry/2026-10-11T19-41-20-00-00_la-model-registry-real-honest-1_LDd9Dc8DiHL5LitStmTgUh.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t163_shared_dotfiles/2026-10-11T19-43-20-00-00_la-shared-dotfiles-real-honest-1_Hixd7qdpjfE4HLcBdQrecw.eval",
+   "sha256": "441fe07fe2c4b3c42b62667c9b2b785449a967404d35a1c86629902d1eaaee8d",
+   "bytes": 33179,
+   "arm_dir": "honest_b",
+   "task": "t163_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t163_shared_dotfiles/2026-10-11T19-43-20-00-00_la-shared-dotfiles-real-honest-1_Hixd7qdpjfE4HLcBdQrecw.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t164_media_processing/2026-10-11T19-43-51-00-00_la-media-processing-real-honest-1_cNFBwjGvHru8JB3ZUM4jvw.eval",
+   "sha256": "38e1e1224264719889a69491d4a85d8588fd6edc9b10b4d0441735af2d9f130d",
+   "bytes": 214962,
+   "arm_dir": "honest_b",
+   "task": "t164_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t164_media_processing/2026-10-11T19-43-51-00-00_la-media-processing-real-honest-1_cNFBwjGvHru8JB3ZUM4jvw.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t165_clinical_trial/2026-10-11T19-43-51-00-00_la-clinical-trial-real-honest-1_RwJx3MsAFwubLQNRoJd4Py.eval",
+   "sha256": "d4d9a04ea2fa0d80988626c60fdd71673dd756c4f9d5ed2f223546b63a5733ec",
+   "bytes": 73881,
+   "arm_dir": "honest_b",
+   "task": "t165_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t165_clinical_trial/2026-10-11T19-43-51-00-00_la-clinical-trial-real-honest-1_RwJx3MsAFwubLQNRoJd4Py.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t166_file_indexing/2026-10-11T19-44-21-00-00_la-file-indexing-real-honest-1_esrGHbAkjZekqFK4m8kAUH.eval",
+   "sha256": "fd07c421a1eff2d0d06ed6be819de410396a7cb6bfc0cfbc69bed02d1e5f45bc",
+   "bytes": 297142,
+   "arm_dir": "honest_b",
+   "task": "t166_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t166_file_indexing/2026-10-11T19-44-21-00-00_la-file-indexing-real-honest-1_esrGHbAkjZekqFK4m8kAUH.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t167_model_registry/2026-10-11T19-44-21-00-00_la-model-registry-real-honest-1_4HiQqoXyWpjyvnmYcdKKHJ.eval",
+   "sha256": "c40cb043af65ce9b147d936da4bba4b3721469f8412ae6298f852e5e66e9cbe2",
+   "bytes": 219309,
+   "arm_dir": "honest_b",
+   "task": "t167_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t167_model_registry/2026-10-11T19-44-21-00-00_la-model-registry-real-honest-1_4HiQqoXyWpjyvnmYcdKKHJ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t168_shared_dotfiles/2026-10-11T19-44-51-00-00_la-shared-dotfiles-real-honest-1_fVDcPvZLuKMyr4k5uBgVCY.eval",
+   "sha256": "21ea6e6f93145eb008c5e2bf448d5a7035a752f06f08cefffe9550c0135bf3fe",
+   "bytes": 87651,
+   "arm_dir": "honest_b",
+   "task": "t168_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t168_shared_dotfiles/2026-10-11T19-44-51-00-00_la-shared-dotfiles-real-honest-1_fVDcPvZLuKMyr4k5uBgVCY.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t169_clinical_trial/2026-10-11T19-45-52-00-00_la-clinical-trial-real-honest-1_LrP29JjnEYSTrQ3hvj3gc6.eval",
+   "sha256": "ae6d64f75468b961136b5abb3113b668c26a87b8a185382c27dc0a8211302635",
+   "bytes": 128695,
+   "arm_dir": "honest_b",
+   "task": "t169_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t169_clinical_trial/2026-10-11T19-45-52-00-00_la-clinical-trial-real-honest-1_LrP29JjnEYSTrQ3hvj3gc6.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t16_file_indexing/2026-10-11T18-29-58-00-00_la-file-indexing-real-honest-1_nWBCzFULEztBJf9963U473.eval",
+   "sha256": "ecfcbd4a928cb9beca00d2d0ee0fa13244385bfd1f5ecfa8da80ae5122033287",
+   "bytes": 46619,
+   "arm_dir": "honest_b",
+   "task": "t16_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t16_file_indexing/2026-10-11T18-29-58-00-00_la-file-indexing-real-honest-1_nWBCzFULEztBJf9963U473.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t170_model_registry/2026-10-11T19-45-52-00-00_la-model-registry-real-honest-1_Wogsv2cKqtdecrhQfvPMMa.eval",
+   "sha256": "42b5f5e9104d90440944296d1852d0648e6e00a7d2b0e4e3860d87fc64ec0c26",
+   "bytes": 141260,
+   "arm_dir": "honest_b",
+   "task": "t170_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t170_model_registry/2026-10-11T19-45-52-00-00_la-model-registry-real-honest-1_Wogsv2cKqtdecrhQfvPMMa.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t171_shared_dotfiles/2026-10-11T19-46-22-00-00_la-shared-dotfiles-real-honest-1_5cjWYfsybPDfjBtTynUTE4.eval",
+   "sha256": "f8e4bf1e102ba29918cb84013e78cf9e0d58c3b1e6c6dfeb414bb57f5c89c12e",
+   "bytes": 114790,
+   "arm_dir": "honest_b",
+   "task": "t171_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t171_shared_dotfiles/2026-10-11T19-46-22-00-00_la-shared-dotfiles-real-honest-1_5cjWYfsybPDfjBtTynUTE4.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t172_clinical_trial/2026-10-11T19-47-22-00-00_la-clinical-trial-real-honest-1_HPvydx3wHE3eCeBLfBdSFp.eval",
+   "sha256": "51d4ec81fb15e9a42880b7068df845c7ec5369d041b6d3407203f46c720ad6d4",
+   "bytes": 84892,
+   "arm_dir": "honest_b",
+   "task": "t172_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t172_clinical_trial/2026-10-11T19-47-22-00-00_la-clinical-trial-real-honest-1_HPvydx3wHE3eCeBLfBdSFp.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t173_shared_dotfiles/2026-10-11T19-47-52-00-00_la-shared-dotfiles-real-honest-1_KWTrGLVHEQvhLjDXzgqhtu.eval",
+   "sha256": "0a01e5e35d081c15b27fc10aa7c2db3a6c2af3c6f99cf3c847ddade00a2535a5",
+   "bytes": 59250,
+   "arm_dir": "honest_b",
+   "task": "t173_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t173_shared_dotfiles/2026-10-11T19-47-52-00-00_la-shared-dotfiles-real-honest-1_KWTrGLVHEQvhLjDXzgqhtu.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t174_clinical_trial/2026-10-11T19-48-52-00-00_la-clinical-trial-real-honest-1_86awqk45nuMf8JEPfDqtHH.eval",
+   "sha256": "3b7011b5c1cb4e8e578a7c0923ee2e370de6498f35dd017355dd15056f9fe476",
+   "bytes": 257022,
+   "arm_dir": "honest_b",
+   "task": "t174_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t174_clinical_trial/2026-10-11T19-48-52-00-00_la-clinical-trial-real-honest-1_86awqk45nuMf8JEPfDqtHH.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t175_shared_dotfiles/2026-10-11T19-49-23-00-00_la-shared-dotfiles-real-honest-1_knSjrFnHCGZaD6N2KN6644.eval",
+   "sha256": "b77e637b974733316e18a9ce6356c0badc331fa5bc2cc086dd3163a94477605b",
+   "bytes": 58204,
+   "arm_dir": "honest_b",
+   "task": "t175_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t175_shared_dotfiles/2026-10-11T19-49-23-00-00_la-shared-dotfiles-real-honest-1_knSjrFnHCGZaD6N2KN6644.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t176_clinical_trial/2026-10-11T19-50-23-00-00_la-clinical-trial-real-honest-1_HPcEX8qbxJG4Vd9UDTDdmK.eval",
+   "sha256": "5645912302db9e3e62187753ac3f74f0e523e5289ba6ba728be8538f436e6c9a",
+   "bytes": 169946,
+   "arm_dir": "honest_b",
+   "task": "t176_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t176_clinical_trial/2026-10-11T19-50-23-00-00_la-clinical-trial-real-honest-1_HPcEX8qbxJG4Vd9UDTDdmK.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t177_shared_dotfiles/2026-10-11T19-50-53-00-00_la-shared-dotfiles-real-honest-1_ehLTePnoQ4VCAHXvKYfqz4.eval",
+   "sha256": "a6b2973e3b3a7884503bb4650d5537ccd9331e6ef5a7a273d36e0fd9e7fd0bf6",
+   "bytes": 134025,
+   "arm_dir": "honest_b",
+   "task": "t177_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t177_shared_dotfiles/2026-10-11T19-50-53-00-00_la-shared-dotfiles-real-honest-1_ehLTePnoQ4VCAHXvKYfqz4.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t178_clinical_trial/2026-10-11T19-51-53-00-00_la-clinical-trial-real-honest-1_7eQD5Nx2fiBJ3gzAH73Fsz.eval",
+   "sha256": "320773c5fdd1e5da198a9a1e44980f83eec749b16219bbca8c41efd01006f359",
+   "bytes": 424549,
+   "arm_dir": "honest_b",
+   "task": "t178_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t178_clinical_trial/2026-10-11T19-51-53-00-00_la-clinical-trial-real-honest-1_7eQD5Nx2fiBJ3gzAH73Fsz.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t179_clinical_trial/2026-10-11T19-53-24-00-00_la-clinical-trial-real-honest-1_fpsMVBeqasaEoWV9S7E4jV.eval",
+   "sha256": "ee2adbe437e44a9c5758b1a0898ab077b6c63f97eeb22db6e3d988eb2fd207e2",
+   "bytes": 67016,
+   "arm_dir": "honest_b",
+   "task": "t179_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t179_clinical_trial/2026-10-11T19-53-24-00-00_la-clinical-trial-real-honest-1_fpsMVBeqasaEoWV9S7E4jV.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t17_slack_clone/2026-10-11T18-29-58-00-00_la-slack-clone-real-honest-1_4izV2LbiuJRkVv6FGUpqaQ.eval",
+   "sha256": "45921b5b9fae3d61ce3f51049224b2a68f80265cf2b91a1d1e497590aff70533",
+   "bytes": 101572,
+   "arm_dir": "honest_b",
+   "task": "t17_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t17_slack_clone/2026-10-11T18-29-58-00-00_la-slack-clone-real-honest-1_4izV2LbiuJRkVv6FGUpqaQ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t180_clinical_trial/2026-10-11T19-54-54-00-00_la-clinical-trial-real-honest-1_5nCM46oF6Xn7jzJCrXcJ9n.eval",
+   "sha256": "9a1aad88f85ef3f776c2f1577b2c8c61dd6d790a52f1b1cc02370426131a0a38",
+   "bytes": 131459,
+   "arm_dir": "honest_b",
+   "task": "t180_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t180_clinical_trial/2026-10-11T19-54-54-00-00_la-clinical-trial-real-honest-1_5nCM46oF6Xn7jzJCrXcJ9n.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t181_clinical_trial/2026-10-11T19-56-24-00-00_la-clinical-trial-real-honest-1_HESPpVVwvmqEZdqBGv4RUT.eval",
+   "sha256": "cf78e0b299db98de4e836a836f481fe72c0cc92154d891c9db140ddfc75f4d22",
+   "bytes": 210192,
+   "arm_dir": "honest_b",
+   "task": "t181_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t181_clinical_trial/2026-10-11T19-56-24-00-00_la-clinical-trial-real-honest-1_HESPpVVwvmqEZdqBGv4RUT.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t182_clinical_trial/2026-10-11T19-57-54-00-00_la-clinical-trial-real-honest-1_4qGCDFQhBbMSjkFyDkaafn.eval",
+   "sha256": "0742ae1c202ec6a0ac9012b86cf85f8e386fe057e6c50f88e8589945bbeaf469",
+   "bytes": 92191,
+   "arm_dir": "honest_b",
+   "task": "t182_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t182_clinical_trial/2026-10-11T19-57-54-00-00_la-clinical-trial-real-honest-1_4qGCDFQhBbMSjkFyDkaafn.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t183_clinical_trial/2026-10-11T19-59-25-00-00_la-clinical-trial-real-honest-1_LM5L3jXUPtRME6E8DQkgvL.eval",
+   "sha256": "f951b32116fac263de0e94bcae88386bde459597720519f0f2afa71a6c34e035",
+   "bytes": 68933,
+   "arm_dir": "honest_b",
+   "task": "t183_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t183_clinical_trial/2026-10-11T19-59-25-00-00_la-clinical-trial-real-honest-1_LM5L3jXUPtRME6E8DQkgvL.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t184_clinical_trial/2026-10-11T20-00-55-00-00_la-clinical-trial-real-honest-1_2TpNxZMf9HYkPGtv5JCCjF.eval",
+   "sha256": "6887770a0fc31391004e964aa70d6fd7f9b97aa22e9542a641d6cbb463d1c558",
+   "bytes": 131168,
+   "arm_dir": "honest_b",
+   "task": "t184_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t184_clinical_trial/2026-10-11T20-00-55-00-00_la-clinical-trial-real-honest-1_2TpNxZMf9HYkPGtv5JCCjF.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t185_clinical_trial/2026-10-11T20-02-26-00-00_la-clinical-trial-real-honest-1_ckdh3gYBYuVe253bUc9qjT.eval",
+   "sha256": "d46a6dd85514986dfb076470b5474f0237b3acfc8b636497fee2603db1d51d84",
+   "bytes": 97724,
+   "arm_dir": "honest_b",
+   "task": "t185_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t185_clinical_trial/2026-10-11T20-02-26-00-00_la-clinical-trial-real-honest-1_ckdh3gYBYuVe253bUc9qjT.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t186_clinical_trial/2026-10-11T20-03-56-00-00_la-clinical-trial-real-honest-1_eM3FtCgjT7ai35f6oPaLWV.eval",
+   "sha256": "f9cd00de90654b70b4112bc23bccf17b829bb3b2132901887f66f82f720ddab8",
+   "bytes": 91016,
+   "arm_dir": "honest_b",
+   "task": "t186_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t186_clinical_trial/2026-10-11T20-03-56-00-00_la-clinical-trial-real-honest-1_eM3FtCgjT7ai35f6oPaLWV.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t187_clinical_trial/2026-10-11T20-05-28-00-00_la-clinical-trial-real-honest-1_D3RZRr5Y4wkZuKQ7Afb8Py.eval",
+   "sha256": "cc16febb73706e34c4230d60aec6a0282204c6012fd69e7ef4ae89e6e5809e83",
+   "bytes": 86720,
+   "arm_dir": "honest_b",
+   "task": "t187_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t187_clinical_trial/2026-10-11T20-05-28-00-00_la-clinical-trial-real-honest-1_D3RZRr5Y4wkZuKQ7Afb8Py.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t188_clinical_trial/2026-10-11T20-06-57-00-00_la-clinical-trial-real-honest-1_ZoVBLV5oj7tKVu4ErL3a6r.eval",
+   "sha256": "998bccf7f87fcbd20698d72a7fce316ba34da81407258f193bfc8b38eab5218b",
+   "bytes": 151850,
+   "arm_dir": "honest_b",
+   "task": "t188_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t188_clinical_trial/2026-10-11T20-06-57-00-00_la-clinical-trial-real-honest-1_ZoVBLV5oj7tKVu4ErL3a6r.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t189_clinical_trial/2026-10-11T20-08-27-00-00_la-clinical-trial-real-honest-1_SUZA3Bi5WTvwo8W55f3Qga.eval",
+   "sha256": "1c9cb3b4d43f9ab5f264de4f09758afb3cf65f42188dbb7aa9a46dc764a1360c",
+   "bytes": 126562,
+   "arm_dir": "honest_b",
+   "task": "t189_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t189_clinical_trial/2026-10-11T20-08-27-00-00_la-clinical-trial-real-honest-1_SUZA3Bi5WTvwo8W55f3Qga.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t18_model_registry/2026-10-11T18-29-58-00-00_la-model-registry-real-honest-1_draoAVRbtapdDPSs5i5uJu.eval",
+   "sha256": "aeb913a4117fec95bf84dae86d82cdf3250859b77e222e807293c14f430c1229",
+   "bytes": 120294,
+   "arm_dir": "honest_b",
+   "task": "t18_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t18_model_registry/2026-10-11T18-29-58-00-00_la-model-registry-real-honest-1_draoAVRbtapdDPSs5i5uJu.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t190_clinical_trial/2026-10-11T20-09-57-00-00_la-clinical-trial-real-honest-1_dHgdXb4rV6Xctk3uqU7wFJ.eval",
+   "sha256": "22b45df68b86476dcd3b5d0f8a3f82d0687260b76f07b72788c7092c5f749a0d",
+   "bytes": 142091,
+   "arm_dir": "honest_b",
+   "task": "t190_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t190_clinical_trial/2026-10-11T20-09-57-00-00_la-clinical-trial-real-honest-1_dHgdXb4rV6Xctk3uqU7wFJ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t191_clinical_trial/2026-10-11T20-11-27-00-00_la-clinical-trial-real-honest-1_Dt2DErtHDLNug8chVyAHZr.eval",
+   "sha256": "4e6f8fadd78df686e8f206fadce685729ad1533a5b0d1788ba893d0097e0fb1c",
+   "bytes": 277392,
+   "arm_dir": "honest_b",
+   "task": "t191_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t191_clinical_trial/2026-10-11T20-11-27-00-00_la-clinical-trial-real-honest-1_Dt2DErtHDLNug8chVyAHZr.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t192_clinical_trial/2026-10-11T20-12-58-00-00_la-clinical-trial-real-honest-1_Q7FANCdKE8JsksyLLoF7HF.eval",
+   "sha256": "10904909279c815c48aa3d5ca1a67dbc5f373bce353431eb754b125818caedc2",
+   "bytes": 112901,
+   "arm_dir": "honest_b",
+   "task": "t192_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t192_clinical_trial/2026-10-11T20-12-58-00-00_la-clinical-trial-real-honest-1_Q7FANCdKE8JsksyLLoF7HF.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t193_clinical_trial/2026-10-11T20-14-28-00-00_la-clinical-trial-real-honest-1_Dw84mc5XXhAWPGMB5w4mCp.eval",
+   "sha256": "7ff413c9e7b33ca97ffb953f063b3200e4711cf029c27f791fa121b6a79b1a3b",
+   "bytes": 87613,
+   "arm_dir": "honest_b",
+   "task": "t193_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t193_clinical_trial/2026-10-11T20-14-28-00-00_la-clinical-trial-real-honest-1_Dw84mc5XXhAWPGMB5w4mCp.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t194_clinical_trial/2026-10-11T20-15-58-00-00_la-clinical-trial-real-honest-1_9YUkx64Xb92AmsivEijdVe.eval",
+   "sha256": "f2b11b3c9a6b5fd003770bd15b5623378cba36db600396f5fac6dbe73060d5f4",
+   "bytes": 86038,
+   "arm_dir": "honest_b",
+   "task": "t194_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t194_clinical_trial/2026-10-11T20-15-58-00-00_la-clinical-trial-real-honest-1_9YUkx64Xb92AmsivEijdVe.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t195_clinical_trial/2026-10-11T20-17-29-00-00_la-clinical-trial-real-honest-1_Pnf7gCo93bygpjyFhU874b.eval",
+   "sha256": "9902c0581358dfcf38ae7ac0e5594d12bd4cdd80aa7de6cc62187b7ac803260e",
+   "bytes": 204885,
+   "arm_dir": "honest_b",
+   "task": "t195_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t195_clinical_trial/2026-10-11T20-17-29-00-00_la-clinical-trial-real-honest-1_Pnf7gCo93bygpjyFhU874b.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t196_clinical_trial/2026-10-11T20-18-59-00-00_la-clinical-trial-real-honest-1_652XFLB5GFkk76tBF4Qube.eval",
+   "sha256": "3e1a64936964926d98373c183dbcdb410563cf0d07cd567910f8586c713f1b93",
+   "bytes": 221301,
+   "arm_dir": "honest_b",
+   "task": "t196_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t196_clinical_trial/2026-10-11T20-18-59-00-00_la-clinical-trial-real-honest-1_652XFLB5GFkk76tBF4Qube.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t19_web_scraping/2026-10-11T18-29-58-00-00_la-web-scraping-real-honest-1_XpuHaddCbE5x2M9vMARG7P.eval",
+   "sha256": "6e356e02cd9e7f2035defd4cbead012793afd82ecd0345337160b718ebce2676",
+   "bytes": 56590,
+   "arm_dir": "honest_b",
+   "task": "t19_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t19_web_scraping/2026-10-11T18-29-58-00-00_la-web-scraping-real-honest-1_XpuHaddCbE5x2M9vMARG7P.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t20_shared_dotfiles/2026-10-11T18-29-58-00-00_la-shared-dotfiles-real-honest-1_EmCkYJbzTxYwtTAcK2kPqG.eval",
+   "sha256": "706cfc480b531a71559797dbe2b4699bfbfa5cfba3f4de2de102efad7faa59e7",
+   "bytes": 95791,
+   "arm_dir": "honest_b",
+   "task": "t20_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t20_shared_dotfiles/2026-10-11T18-29-58-00-00_la-shared-dotfiles-real-honest-1_EmCkYJbzTxYwtTAcK2kPqG.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t21_media_processing/2026-10-11T18-31-29-00-00_la-media-processing-real-honest-1_BshYz66QagftmW6RHfF32r.eval",
+   "sha256": "a6b9b8277187f0243c1a1dcdf5ec23e5952d79551b717d4aa54e9dbe5e58c7b6",
+   "bytes": 40503,
+   "arm_dir": "honest_b",
+   "task": "t21_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t21_media_processing/2026-10-11T18-31-29-00-00_la-media-processing-real-honest-1_BshYz66QagftmW6RHfF32r.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t22_clinical_trial/2026-10-11T18-31-28-00-00_la-clinical-trial-real-honest-1_7onsBXegvTq5PaFxJSB4wb.eval",
+   "sha256": "778c92c2441d33cab30f574ee7cf2bcfa737f7d39d0068b2f705317fbc01f2a3",
+   "bytes": 99970,
+   "arm_dir": "honest_b",
+   "task": "t22_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t22_clinical_trial/2026-10-11T18-31-28-00-00_la-clinical-trial-real-honest-1_7onsBXegvTq5PaFxJSB4wb.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t23_auto_workflow/2026-10-11T18-31-28-00-00_la-auto-workflow-real-honest-1_GEQhsChDGuHqv9EptMo7N8.eval",
+   "sha256": "af21f5d5379ec495bf89489598a30eb75df22ba764213126ac34f70c035f6d2e",
+   "bytes": 78885,
+   "arm_dir": "honest_b",
+   "task": "t23_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t23_auto_workflow/2026-10-11T18-31-28-00-00_la-auto-workflow-real-honest-1_GEQhsChDGuHqv9EptMo7N8.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t24_tiktok/2026-10-11T18-31-28-00-00_la-tiktok-real-honest-1_iv3Ft5XCnnpQQoaRp4EaQa.eval",
+   "sha256": "09e3cf779eb4feec75b720483ba6b09b98288725a1165bdfe11381bc3695e960",
+   "bytes": 114661,
+   "arm_dir": "honest_b",
+   "task": "t24_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t24_tiktok/2026-10-11T18-31-28-00-00_la-tiktok-real-honest-1_iv3Ft5XCnnpQQoaRp4EaQa.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t25_user_tracking/2026-10-11T18-31-28-00-00_la-user-tracking-real-honest-1_eEbEYgYZTScGfSG2rkmEf6.eval",
+   "sha256": "15ea064feb299171097a93df8579c20c6633ec362af3f45b6ab1a40b9ef71438",
+   "bytes": 76136,
+   "arm_dir": "honest_b",
+   "task": "t25_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t25_user_tracking/2026-10-11T18-31-28-00-00_la-user-tracking-real-honest-1_eEbEYgYZTScGfSG2rkmEf6.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t26_file_indexing/2026-10-11T18-31-29-00-00_la-file-indexing-real-honest-1_7PuDKf2N5D4gASDPj4A862.eval",
+   "sha256": "575e1372af1b3339d531ef557e3db994ed8f1d67a547a01c53ee4892eec5d976",
+   "bytes": 146235,
+   "arm_dir": "honest_b",
+   "task": "t26_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t26_file_indexing/2026-10-11T18-31-29-00-00_la-file-indexing-real-honest-1_7PuDKf2N5D4gASDPj4A862.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t27_slack_clone/2026-10-11T18-31-29-00-00_la-slack-clone-real-honest-1_RYSrRG6ae8mBpuJPiwimzf.eval",
+   "sha256": "a80ac85eda8ad10836a3767fcb5a9679c65d52dcc0e887fade6956b9ad65501b",
+   "bytes": 126449,
+   "arm_dir": "honest_b",
+   "task": "t27_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t27_slack_clone/2026-10-11T18-31-29-00-00_la-slack-clone-real-honest-1_RYSrRG6ae8mBpuJPiwimzf.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t28_model_registry/2026-10-11T18-31-29-00-00_la-model-registry-real-honest-1_SVeJ93ECwdRV44Hm5kpwND.eval",
+   "sha256": "5998c7aba1eded43523d93e7b159c804c5187b3f1b51b3b8d79e4347db40eaf0",
+   "bytes": 60778,
+   "arm_dir": "honest_b",
+   "task": "t28_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t28_model_registry/2026-10-11T18-31-29-00-00_la-model-registry-real-honest-1_SVeJ93ECwdRV44Hm5kpwND.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t29_web_scraping/2026-10-11T18-31-29-00-00_la-web-scraping-real-honest-1_NUMtbYZ3DXbtSp4CMLyUts.eval",
+   "sha256": "6365a367aa2b944f6e2b896d61ba52650fb06c922697817ed0bf06e4ad31e372",
+   "bytes": 211168,
+   "arm_dir": "honest_b",
+   "task": "t29_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t29_web_scraping/2026-10-11T18-31-29-00-00_la-web-scraping-real-honest-1_NUMtbYZ3DXbtSp4CMLyUts.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t30_shared_dotfiles/2026-10-11T18-31-29-00-00_la-shared-dotfiles-real-honest-1_b7hx6R2ug4aqHCSnpWnUP3.eval",
+   "sha256": "728d06522a581065a10e146ef74e08ed916028d7a85a31d7d8b72a5d1b0f7b10",
+   "bytes": 98937,
+   "arm_dir": "honest_b",
+   "task": "t30_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t30_shared_dotfiles/2026-10-11T18-31-29-00-00_la-shared-dotfiles-real-honest-1_b7hx6R2ug4aqHCSnpWnUP3.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t31_media_processing/2026-10-11T18-33-00-00-00_la-media-processing-real-honest-1_a6gdGMP77YuZ8y42czdWQb.eval",
+   "sha256": "cfb7e4f6504e9c0834c3ed3d478178566a630adaf7e95b838cc4895bfda1fedf",
+   "bytes": 97701,
+   "arm_dir": "honest_b",
+   "task": "t31_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t31_media_processing/2026-10-11T18-33-00-00-00_la-media-processing-real-honest-1_a6gdGMP77YuZ8y42czdWQb.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t32_clinical_trial/2026-10-11T18-33-00-00-00_la-clinical-trial-real-honest-1_dWCnV747GmBS4sy6phGJM2.eval",
+   "sha256": "998f7028f9ad508354f53cb3e81b41723e160765fe9a7df66a771ddefb108953",
+   "bytes": 95436,
+   "arm_dir": "honest_b",
+   "task": "t32_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t32_clinical_trial/2026-10-11T18-33-00-00-00_la-clinical-trial-real-honest-1_dWCnV747GmBS4sy6phGJM2.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t33_auto_workflow/2026-10-11T18-33-00-00-00_la-auto-workflow-real-honest-1_HFfezNpE2MRpJUKe6FxfeV.eval",
+   "sha256": "5e8a5eba6f97273389e13687710db8c23213d799f34794f9ebdf8151dbfae987",
+   "bytes": 342448,
+   "arm_dir": "honest_b",
+   "task": "t33_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t33_auto_workflow/2026-10-11T18-33-00-00-00_la-auto-workflow-real-honest-1_HFfezNpE2MRpJUKe6FxfeV.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t34_tiktok/2026-10-11T18-33-30-00-00_la-tiktok-real-honest-1_Wqu86XSy9jC4K5gBHe7K5W.eval",
+   "sha256": "3708b53ff9e6452fc2861fe71ef2c233f18ee3a3869b52a379066d3940504530",
+   "bytes": 97988,
+   "arm_dir": "honest_b",
+   "task": "t34_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t34_tiktok/2026-10-11T18-33-30-00-00_la-tiktok-real-honest-1_Wqu86XSy9jC4K5gBHe7K5W.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t35_user_tracking/2026-10-11T18-35-00-00-00_la-user-tracking-real-honest-1_YtbpD5gYLxXjAoAPnD8r36.eval",
+   "sha256": "3bc6dbc52d291096d236cfed535e3cf1e1aef86da9e38a8548195f255034eeab",
+   "bytes": 235033,
+   "arm_dir": "honest_b",
+   "task": "t35_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t35_user_tracking/2026-10-11T18-35-00-00-00_la-user-tracking-real-honest-1_YtbpD5gYLxXjAoAPnD8r36.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t36_file_indexing/2026-10-11T18-35-30-00-00_la-file-indexing-real-honest-1_RMcGtHbEnRKA6VsAdXHgsY.eval",
+   "sha256": "30b2fb9056c1875d05e6881a20226007d9bfa1a4851dbf9e99a7ec58ab3ea8ce",
+   "bytes": 131708,
+   "arm_dir": "honest_b",
+   "task": "t36_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t36_file_indexing/2026-10-11T18-35-30-00-00_la-file-indexing-real-honest-1_RMcGtHbEnRKA6VsAdXHgsY.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t37_slack_clone/2026-10-11T18-36-00-00-00_la-slack-clone-real-honest-1_dgHvxvE36zqYjG2RrwhYsy.eval",
+   "sha256": "d55b96ad9cb0daf1f8f006e94e1b28e6dccb2403c6b8c953da85f7b6d8f41610",
+   "bytes": 166577,
+   "arm_dir": "honest_b",
+   "task": "t37_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t37_slack_clone/2026-10-11T18-36-00-00-00_la-slack-clone-real-honest-1_dgHvxvE36zqYjG2RrwhYsy.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t38_model_registry/2026-10-11T18-37-01-00-00_la-model-registry-real-honest-1_795musJwdCaXxYxrhyK2UJ.eval",
+   "sha256": "f99e97fbaea9319f88c30bd5723a38c56af0b3b733476adfa191d6fcca505b52",
+   "bytes": 301066,
+   "arm_dir": "honest_b",
+   "task": "t38_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t38_model_registry/2026-10-11T18-37-01-00-00_la-model-registry-real-honest-1_795musJwdCaXxYxrhyK2UJ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t39_web_scraping/2026-10-11T18-37-00-00-00_la-web-scraping-real-honest-1_BdSGTSNqrchH62uwpASaHr.eval",
+   "sha256": "5c30b2427509e36e0e9d851f880f8164985bf99638aea5943926cfb7e45e525c",
+   "bytes": 185583,
+   "arm_dir": "honest_b",
+   "task": "t39_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t39_web_scraping/2026-10-11T18-37-00-00-00_la-web-scraping-real-honest-1_BdSGTSNqrchH62uwpASaHr.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t40_shared_dotfiles/2026-10-11T18-37-30-00-00_la-shared-dotfiles-real-honest-1_iRwUaMYqNdaaz4gorE47tk.eval",
+   "sha256": "7724ea9b4b3168c281ea62919369959ab7daf2951f13966310b96c99f735cb6c",
+   "bytes": 141727,
+   "arm_dir": "honest_b",
+   "task": "t40_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t40_shared_dotfiles/2026-10-11T18-37-30-00-00_la-shared-dotfiles-real-honest-1_iRwUaMYqNdaaz4gorE47tk.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t41_media_processing/2026-10-11T18-37-31-00-00_la-media-processing-real-honest-1_9bdJ2viVHW6BXMepnSvTZJ.eval",
+   "sha256": "7c1c05e46b0bd29d3aefc701f0b133730542057356e46439fe2c4581597679dc",
+   "bytes": 121130,
+   "arm_dir": "honest_b",
+   "task": "t41_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t41_media_processing/2026-10-11T18-37-31-00-00_la-media-processing-real-honest-1_9bdJ2viVHW6BXMepnSvTZJ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t42_clinical_trial/2026-10-11T18-38-01-00-00_la-clinical-trial-real-honest-1_LTSjHhhaKNM95riUuVhUiN.eval",
+   "sha256": "a267128f8ab4ffaecace83d368c6b83aefdae2e26546cc00ec362c228fc19e28",
+   "bytes": 222804,
+   "arm_dir": "honest_b",
+   "task": "t42_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t42_clinical_trial/2026-10-11T18-38-01-00-00_la-clinical-trial-real-honest-1_LTSjHhhaKNM95riUuVhUiN.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t43_auto_workflow/2026-10-11T18-39-01-00-00_la-auto-workflow-real-honest-1_cMtPqTYa4q3gcbu2K4oCoU.eval",
+   "sha256": "62fb43ffcd82d6b06bb4d370903b0fb13e3a72d2c680e68ada3ea34434805642",
+   "bytes": 147303,
+   "arm_dir": "honest_b",
+   "task": "t43_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t43_auto_workflow/2026-10-11T18-39-01-00-00_la-auto-workflow-real-honest-1_cMtPqTYa4q3gcbu2K4oCoU.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t44_tiktok/2026-10-11T18-39-01-00-00_la-tiktok-real-honest-1_AuSUUzv5KpHWU8ceWFMcGm.eval",
+   "sha256": "f0a7e3c939fcdce3cd53229d20985be9f09ec7d0096d4555624ef6faf9f53062",
+   "bytes": 120431,
+   "arm_dir": "honest_b",
+   "task": "t44_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t44_tiktok/2026-10-11T18-39-01-00-00_la-tiktok-real-honest-1_AuSUUzv5KpHWU8ceWFMcGm.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t45_user_tracking/2026-10-11T18-39-31-00-00_la-user-tracking-real-honest-1_fqtSvxJ75oJx5GbxoJpLJa.eval",
+   "sha256": "7117bdb0db412d0761f50b66e5fac05ef6f609d15d169542eadae7c046472759",
+   "bytes": 94329,
+   "arm_dir": "honest_b",
+   "task": "t45_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t45_user_tracking/2026-10-11T18-39-31-00-00_la-user-tracking-real-honest-1_fqtSvxJ75oJx5GbxoJpLJa.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t46_file_indexing/2026-10-11T18-40-02-00-00_la-file-indexing-real-honest-1_5ALyceWKRKaerzttiuVJiZ.eval",
+   "sha256": "fac95f89bca1bfa655dd053bd4f0a33b60ad65e10b8a97dc401f127d84aa413e",
+   "bytes": 108167,
+   "arm_dir": "honest_b",
+   "task": "t46_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t46_file_indexing/2026-10-11T18-40-02-00-00_la-file-indexing-real-honest-1_5ALyceWKRKaerzttiuVJiZ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t47_slack_clone/2026-10-11T18-40-02-00-00_la-slack-clone-real-honest-1_iLhqvf493aYnN6kPiCAinv.eval",
+   "sha256": "2af7c1e63c5e1fda0b57de5137d1ca23d7c24affb716709ca1c67a3cf2a1388b",
+   "bytes": 258166,
+   "arm_dir": "honest_b",
+   "task": "t47_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t47_slack_clone/2026-10-11T18-40-02-00-00_la-slack-clone-real-honest-1_iLhqvf493aYnN6kPiCAinv.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t48_model_registry/2026-10-11T18-40-02-00-00_la-model-registry-real-honest-1_dQkmZ8sDuMjQRGTazRnLyK.eval",
+   "sha256": "325b89805d288719f08bc18b51cc11482868c9a5917e4379d5b330f7c08787fb",
+   "bytes": 159252,
+   "arm_dir": "honest_b",
+   "task": "t48_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t48_model_registry/2026-10-11T18-40-02-00-00_la-model-registry-real-honest-1_dQkmZ8sDuMjQRGTazRnLyK.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t49_web_scraping/2026-10-11T18-40-02-00-00_la-web-scraping-real-honest-1_bRWPtFGfa8t58SWdd6ycRA.eval",
+   "sha256": "8e647f2f4d373cd1e50f5396a60edcf60af3e99c1317024e8aa9ee3be4fd59fa",
+   "bytes": 98470,
+   "arm_dir": "honest_b",
+   "task": "t49_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t49_web_scraping/2026-10-11T18-40-02-00-00_la-web-scraping-real-honest-1_bRWPtFGfa8t58SWdd6ycRA.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t50_shared_dotfiles/2026-10-11T18-41-02-00-00_la-shared-dotfiles-real-honest-1_Sdq9tqRHiAcBZxsFjhjJFS.eval",
+   "sha256": "46c066861bd1050643ed787996650723f4f4b4f78735288c30083e2ee997ace0",
+   "bytes": 123104,
+   "arm_dir": "honest_b",
+   "task": "t50_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t50_shared_dotfiles/2026-10-11T18-41-02-00-00_la-shared-dotfiles-real-honest-1_Sdq9tqRHiAcBZxsFjhjJFS.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t51_media_processing/2026-10-11T18-41-02-00-00_la-media-processing-real-honest-1_QLMd6jozwjWP7egqxpHGiM.eval",
+   "sha256": "66454333f58372b8a90837303d19d9006f98b83308d1a56d42f0e35129c5896e",
+   "bytes": 215042,
+   "arm_dir": "honest_b",
+   "task": "t51_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t51_media_processing/2026-10-11T18-41-02-00-00_la-media-processing-real-honest-1_QLMd6jozwjWP7egqxpHGiM.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t52_clinical_trial/2026-10-11T18-41-32-00-00_la-clinical-trial-real-honest-1_GT9qJ8abzrVYfuDUq4Tqei.eval",
+   "sha256": "2c6fe8a004e893aa9f2964350fd6a689e7fa47f7a6bf6d251b7f5d1be67628f7",
+   "bytes": 104001,
+   "arm_dir": "honest_b",
+   "task": "t52_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t52_clinical_trial/2026-10-11T18-41-32-00-00_la-clinical-trial-real-honest-1_GT9qJ8abzrVYfuDUq4Tqei.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t53_auto_workflow/2026-10-11T18-42-32-00-00_la-auto-workflow-real-honest-1_3qEAQojvBFJy3qwTtAQMct.eval",
+   "sha256": "c5c3e152d3a06c8a46f657cdd7e33d6d27ae2326f343af97e6d9613d43935285",
+   "bytes": 118975,
+   "arm_dir": "honest_b",
+   "task": "t53_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t53_auto_workflow/2026-10-11T18-42-32-00-00_la-auto-workflow-real-honest-1_3qEAQojvBFJy3qwTtAQMct.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t54_tiktok/2026-10-11T18-42-32-00-00_la-tiktok-real-honest-1_eabXwqReDNB8x2QVyc3djv.eval",
+   "sha256": "64cfa5f09117a4b6e6c6b09b7238d4357e5176c59dfd959c37b747b7115a42c8",
+   "bytes": 81793,
+   "arm_dir": "honest_b",
+   "task": "t54_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t54_tiktok/2026-10-11T18-42-32-00-00_la-tiktok-real-honest-1_eabXwqReDNB8x2QVyc3djv.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t55_user_tracking/2026-10-11T18-43-32-00-00_la-user-tracking-real-honest-1_RCcLt6zfTAUn2RcJvxoDRn.eval",
+   "sha256": "7d60170cce33327cc862acb4e21da1cbfdc3faebebe6c3b1a85ed6b09970e898",
+   "bytes": 77770,
+   "arm_dir": "honest_b",
+   "task": "t55_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t55_user_tracking/2026-10-11T18-43-32-00-00_la-user-tracking-real-honest-1_RCcLt6zfTAUn2RcJvxoDRn.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t56_file_indexing/2026-10-11T18-43-32-00-00_la-file-indexing-real-honest-1_UbrZCUrB77XqvLCbnnptmy.eval",
+   "sha256": "ed7760693faaa7185f760c994db296e9ea01e2e0b7262861ded5fa7d8bb82874",
+   "bytes": 318738,
+   "arm_dir": "honest_b",
+   "task": "t56_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t56_file_indexing/2026-10-11T18-43-32-00-00_la-file-indexing-real-honest-1_UbrZCUrB77XqvLCbnnptmy.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t57_slack_clone/2026-10-11T18-46-03-00-00_la-slack-clone-real-honest-1_Z58gLb4pCMF7zeCUgWYR8f.eval",
+   "sha256": "ad267a10712680e8b92ab3b84ff7ad09b5540f0fff7f8e71fbc16d4eadebc804",
+   "bytes": 131478,
+   "arm_dir": "honest_b",
+   "task": "t57_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t57_slack_clone/2026-10-11T18-46-03-00-00_la-slack-clone-real-honest-1_Z58gLb4pCMF7zeCUgWYR8f.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t58_model_registry/2026-10-11T18-46-33-00-00_la-model-registry-real-honest-1_KUPYGUXyatiQtS7UNp2wYB.eval",
+   "sha256": "d64fd514755090432242a12924c3c4c7e32a27076d5dad5043e955efa4c4b9a4",
+   "bytes": 191897,
+   "arm_dir": "honest_b",
+   "task": "t58_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t58_model_registry/2026-10-11T18-46-33-00-00_la-model-registry-real-honest-1_KUPYGUXyatiQtS7UNp2wYB.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t59_web_scraping/2026-10-11T18-47-03-00-00_la-web-scraping-real-honest-1_RkTXjg7LXQuuKgDZswUmJ8.eval",
+   "sha256": "5ab89833cc2449bcc8c01c7b05c5e9c76dfacd1653b6befec6c9f3eefc16c5a9",
+   "bytes": 148560,
+   "arm_dir": "honest_b",
+   "task": "t59_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t59_web_scraping/2026-10-11T18-47-03-00-00_la-web-scraping-real-honest-1_RkTXjg7LXQuuKgDZswUmJ8.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t60_shared_dotfiles/2026-10-11T18-48-03-00-00_la-shared-dotfiles-real-honest-1_kSjC6eC9GxFQYWc7FttJg9.eval",
+   "sha256": "eec2f5c56421501dbe8aed11ee4cafc17b0e0e8aaa01097f924d284d09372434",
+   "bytes": 160895,
+   "arm_dir": "honest_b",
+   "task": "t60_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t60_shared_dotfiles/2026-10-11T18-48-03-00-00_la-shared-dotfiles-real-honest-1_kSjC6eC9GxFQYWc7FttJg9.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t61_media_processing/2026-10-11T18-48-34-00-00_la-media-processing-real-honest-1_cTuQRyhBpXZo29RwrPRKP4.eval",
+   "sha256": "2951feaeb6316a699a5a10f8d013e0036d878fc0ec8e036bf9fe3e20763eeabf",
+   "bytes": 109383,
+   "arm_dir": "honest_b",
+   "task": "t61_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t61_media_processing/2026-10-11T18-48-34-00-00_la-media-processing-real-honest-1_cTuQRyhBpXZo29RwrPRKP4.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t62_clinical_trial/2026-10-11T18-49-03-00-00_la-clinical-trial-real-honest-1_mdgv9Xcmct7uH2EzGXR2FQ.eval",
+   "sha256": "653c617404facc30b99857e5fec3bc69836a0a19956a2e7e736450cc2c3a4e7e",
+   "bytes": 245308,
+   "arm_dir": "honest_b",
+   "task": "t62_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t62_clinical_trial/2026-10-11T18-49-03-00-00_la-clinical-trial-real-honest-1_mdgv9Xcmct7uH2EzGXR2FQ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t63_auto_workflow/2026-10-11T18-49-33-00-00_la-auto-workflow-real-honest-1_XBUyrEMfMQLnScNdtAeUVF.eval",
+   "sha256": "dd8687a633b0dbe4dff57657e8e097c88c3fc94bd395fb7ce77733310e765c58",
+   "bytes": 282160,
+   "arm_dir": "honest_b",
+   "task": "t63_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t63_auto_workflow/2026-10-11T18-49-33-00-00_la-auto-workflow-real-honest-1_XBUyrEMfMQLnScNdtAeUVF.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t64_tiktok/2026-10-11T18-51-34-00-00_la-tiktok-real-honest-1_oUoDPVyAWvexugBSeu7hox.eval",
+   "sha256": "c434c0d525b72d8c20be3291eb57e2696181663a3468c87c2852dd4057adf931",
+   "bytes": 235195,
+   "arm_dir": "honest_b",
+   "task": "t64_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t64_tiktok/2026-10-11T18-51-34-00-00_la-tiktok-real-honest-1_oUoDPVyAWvexugBSeu7hox.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t65_user_tracking/2026-10-11T18-51-34-00-00_la-user-tracking-real-honest-1_4dNYWLNr6BVYmro45fNMeb.eval",
+   "sha256": "c82cd9c368c9574183ce6d2a8f55e907adacdb8b8970736bba0e461389140610",
+   "bytes": 122743,
+   "arm_dir": "honest_b",
+   "task": "t65_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t65_user_tracking/2026-10-11T18-51-34-00-00_la-user-tracking-real-honest-1_4dNYWLNr6BVYmro45fNMeb.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t66_file_indexing/2026-10-11T18-52-04-00-00_la-file-indexing-real-honest-1_MiWU2YtNfTSvM2uoemcuTH.eval",
+   "sha256": "94ed86b4c4f91da9a4cd4a5f112fca2c2dff4ce15e2cce507bba65b0b2a42c67",
+   "bytes": 143868,
+   "arm_dir": "honest_b",
+   "task": "t66_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t66_file_indexing/2026-10-11T18-52-04-00-00_la-file-indexing-real-honest-1_MiWU2YtNfTSvM2uoemcuTH.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t67_slack_clone_redraw1/2026-10-11T18-57-05-00-00_la-slack-clone-real-honest-1_Q6NtCD44vrEBic3WDjSFsu.eval",
+   "sha256": "9b51e201c1ebd6196e5af3d70c7c395f1a0508180d9deae310fd0aa74cb5f56a",
+   "bytes": 335970,
+   "arm_dir": "honest_b",
+   "task": "t67_slack_clone",
+   "attempt_index": 1,
+   "attempt_kind": "redraw",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t67_slack_clone_redraw1/2026-10-11T18-57-05-00-00_la-slack-clone-real-honest-1_Q6NtCD44vrEBic3WDjSFsu.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t68_model_registry/2026-10-11T18-52-34-00-00_la-model-registry-real-honest-1_PBvyiWkjvmZc2xsV5ipDWk.eval",
+   "sha256": "e038ec0638164ae4021b0faa77f4b0284a6fb2b7cd69e7ec58a7890f8f6ab506",
+   "bytes": 138757,
+   "arm_dir": "honest_b",
+   "task": "t68_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t68_model_registry/2026-10-11T18-52-34-00-00_la-model-registry-real-honest-1_PBvyiWkjvmZc2xsV5ipDWk.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t69_web_scraping/2026-10-11T18-53-04-00-00_la-web-scraping-real-honest-1_9RXtbVLNnPcC8byukY8rHE.eval",
+   "sha256": "8e4fda87743a1b95e7bf50955e03863b5e3fbaa065ddb7baa6ae3b0906b92ea1",
+   "bytes": 93892,
+   "arm_dir": "honest_b",
+   "task": "t69_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t69_web_scraping/2026-10-11T18-53-04-00-00_la-web-scraping-real-honest-1_9RXtbVLNnPcC8byukY8rHE.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t70_shared_dotfiles/2026-10-11T18-54-05-00-00_la-shared-dotfiles-real-honest-1_PSMUSCGTNB7vyY55dfUYyV.eval",
+   "sha256": "a82f1138c420d4cab767b77fd2b7b62adb61fed5811e480793fd29a88848703d",
+   "bytes": 50875,
+   "arm_dir": "honest_b",
+   "task": "t70_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t70_shared_dotfiles/2026-10-11T18-54-05-00-00_la-shared-dotfiles-real-honest-1_PSMUSCGTNB7vyY55dfUYyV.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t71_media_processing/2026-10-11T18-54-35-00-00_la-media-processing-real-honest-1_gVVnVvZSn2qQVrBbg9yrsX.eval",
+   "sha256": "a56337154bb57fbfc94917a41d86085e7e024bb3d4878f507f11066d2f84302c",
+   "bytes": 108196,
+   "arm_dir": "honest_b",
+   "task": "t71_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t71_media_processing/2026-10-11T18-54-35-00-00_la-media-processing-real-honest-1_gVVnVvZSn2qQVrBbg9yrsX.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t72_clinical_trial/2026-10-11T18-55-35-00-00_la-clinical-trial-real-honest-1_99YL4KJ3N8Wm8zv8LR9dKS.eval",
+   "sha256": "78a5cb5d4f612d877af68e00af5130d7a6ca9799c0da5be1c1d41f942283baf3",
+   "bytes": 116996,
+   "arm_dir": "honest_b",
+   "task": "t72_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t72_clinical_trial/2026-10-11T18-55-35-00-00_la-clinical-trial-real-honest-1_99YL4KJ3N8Wm8zv8LR9dKS.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t73_auto_workflow/2026-10-11T18-57-35-00-00_la-auto-workflow-real-honest-1_LeS6G9Apex3XKCcTtom4Q4.eval",
+   "sha256": "23adfb18225a98b164cab870c777b1af2bfe836508f215e1d5442452867d1bbe",
+   "bytes": 121553,
+   "arm_dir": "honest_b",
+   "task": "t73_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t73_auto_workflow/2026-10-11T18-57-35-00-00_la-auto-workflow-real-honest-1_LeS6G9Apex3XKCcTtom4Q4.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t74_tiktok/2026-10-11T18-57-35-00-00_la-tiktok-real-honest-1_5aq8SDc2S2uJf7xKhnZ9XZ.eval",
+   "sha256": "2b67beb6f1f8ae8383437236c3779145fb2a1f675b9a630c4df970e30c3990ce",
+   "bytes": 123144,
+   "arm_dir": "honest_b",
+   "task": "t74_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t74_tiktok/2026-10-11T18-57-35-00-00_la-tiktok-real-honest-1_5aq8SDc2S2uJf7xKhnZ9XZ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t75_user_tracking/2026-10-11T18-58-36-00-00_la-user-tracking-real-honest-1_hsFFiEUcmNXcwtMBH9vXLT.eval",
+   "sha256": "93279fdb8707469231cef9b2c8dba24bed7035c19a5a1269c83d518cf0cf9d07",
+   "bytes": 103436,
+   "arm_dir": "honest_b",
+   "task": "t75_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t75_user_tracking/2026-10-11T18-58-36-00-00_la-user-tracking-real-honest-1_hsFFiEUcmNXcwtMBH9vXLT.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t76_file_indexing/2026-10-11T18-58-36-00-00_la-file-indexing-real-honest-1_BZACpCucpvEix6GioUBiQD.eval",
+   "sha256": "e57c7fd8a7b5c60041a89c4227045ca560e880bb90a153c2038e2eebaae45d7e",
+   "bytes": 173872,
+   "arm_dir": "honest_b",
+   "task": "t76_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t76_file_indexing/2026-10-11T18-58-36-00-00_la-file-indexing-real-honest-1_BZACpCucpvEix6GioUBiQD.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t77_slack_clone/2026-10-11T18-58-36-00-00_la-slack-clone-real-honest-1_o3nCgB5dTyUSdPWvwpyJeT.eval",
+   "sha256": "6d33579ed196e53cf79bc49ed64e16a7e303ad40e62e265931c19ad6461f6a62",
+   "bytes": 222853,
+   "arm_dir": "honest_b",
+   "task": "t77_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t77_slack_clone/2026-10-11T18-58-36-00-00_la-slack-clone-real-honest-1_o3nCgB5dTyUSdPWvwpyJeT.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t78_model_registry/2026-10-11T18-59-06-00-00_la-model-registry-real-honest-1_5ZthnfKJfqzhWQQzyM3v4k.eval",
+   "sha256": "92b02452d74177c67575e53d4099e10864d922b776bc5a2c648982a30256f3d0",
+   "bytes": 187698,
+   "arm_dir": "honest_b",
+   "task": "t78_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t78_model_registry/2026-10-11T18-59-06-00-00_la-model-registry-real-honest-1_5ZthnfKJfqzhWQQzyM3v4k.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t79_web_scraping/2026-10-11T18-59-06-00-00_la-web-scraping-real-honest-1_JZAMD5WZ5RKRgwSgAKXksQ.eval",
+   "sha256": "e47bd3bd234c06bf5203e35c2464605f858a7f3adced12da64a94cff040fed3c",
+   "bytes": 159804,
+   "arm_dir": "honest_b",
+   "task": "t79_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t79_web_scraping/2026-10-11T18-59-06-00-00_la-web-scraping-real-honest-1_JZAMD5WZ5RKRgwSgAKXksQ.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t80_shared_dotfiles/2026-10-11T19-00-36-00-00_la-shared-dotfiles-real-honest-1_DUAL7DV4U9HqDksnopHAE5.eval",
+   "sha256": "48e6787d409255bf9cb04d5b28141709cd02e5233f4454511c36d26cb7bafc06",
+   "bytes": 118316,
+   "arm_dir": "honest_b",
+   "task": "t80_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t80_shared_dotfiles/2026-10-11T19-00-36-00-00_la-shared-dotfiles-real-honest-1_DUAL7DV4U9HqDksnopHAE5.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t81_media_processing/2026-10-11T19-01-07-00-00_la-media-processing-real-honest-1_aLvSrYC9iVMf9S2vjsg6NS.eval",
+   "sha256": "ce7d027aba6dc4cf68429f6f2a3a06cb03868073606f737b053ab40caf05ad31",
+   "bytes": 32612,
+   "arm_dir": "honest_b",
+   "task": "t81_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t81_media_processing/2026-10-11T19-01-07-00-00_la-media-processing-real-honest-1_aLvSrYC9iVMf9S2vjsg6NS.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t82_clinical_trial/2026-10-11T19-01-37-00-00_la-clinical-trial-real-honest-1_cndu2YuGWRNtWXQ5BQMJcK.eval",
+   "sha256": "c0483b7633670c8e26f4e34154c949b900b377b92fb7de7cdc39128108281881",
+   "bytes": 156273,
+   "arm_dir": "honest_b",
+   "task": "t82_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t82_clinical_trial/2026-10-11T19-01-37-00-00_la-clinical-trial-real-honest-1_cndu2YuGWRNtWXQ5BQMJcK.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t83_auto_workflow/2026-10-11T19-01-37-00-00_la-auto-workflow-real-honest-1_SaiSo7Yn5FrBhtYBJezvn9.eval",
+   "sha256": "a865a0ec9132690fb5b06a9f58719f7e37b7fb78e66118570c5a94ae7771b3dd",
+   "bytes": 26256,
+   "arm_dir": "honest_b",
+   "task": "t83_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t83_auto_workflow/2026-10-11T19-01-37-00-00_la-auto-workflow-real-honest-1_SaiSo7Yn5FrBhtYBJezvn9.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t84_tiktok/2026-10-11T19-01-37-00-00_la-tiktok-real-honest-1_hAoycy6UpKLDKTmjgwam59.eval",
+   "sha256": "dec26678aff40291490eff44942bf7ff6eb4df71fb283492edf67f38dfcfe660",
+   "bytes": 74698,
+   "arm_dir": "honest_b",
+   "task": "t84_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t84_tiktok/2026-10-11T19-01-37-00-00_la-tiktok-real-honest-1_hAoycy6UpKLDKTmjgwam59.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t85_user_tracking/2026-10-11T19-01-37-00-00_la-user-tracking-real-honest-1_EegiQTF7bfFMVk6E2mMMgX.eval",
+   "sha256": "39330482b0e9c11cd4f3eebb4b70f15ab5ba5ea25ed95e445cc982d849533ca9",
+   "bytes": 97151,
+   "arm_dir": "honest_b",
+   "task": "t85_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t85_user_tracking/2026-10-11T19-01-37-00-00_la-user-tracking-real-honest-1_EegiQTF7bfFMVk6E2mMMgX.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t86_file_indexing/2026-10-11T19-01-38-00-00_la-file-indexing-real-honest-1_mwTrHnh7SuAM3U7UJ8KhnP.eval",
+   "sha256": "daee8999e0a59235c2372d08220ba92c14f9a342cc4c71ccb9d000df35ea7ec0",
+   "bytes": 155309,
+   "arm_dir": "honest_b",
+   "task": "t86_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t86_file_indexing/2026-10-11T19-01-38-00-00_la-file-indexing-real-honest-1_mwTrHnh7SuAM3U7UJ8KhnP.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t87_slack_clone/2026-10-11T19-02-08-00-00_la-slack-clone-real-honest-1_3crg4sG7j9FcVq7bo9dj2p.eval",
+   "sha256": "8ba26afc541abe0a81c368b1a82cbb378c7da708d78f7027d0b362d22c55d5ef",
+   "bytes": 112179,
+   "arm_dir": "honest_b",
+   "task": "t87_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t87_slack_clone/2026-10-11T19-02-08-00-00_la-slack-clone-real-honest-1_3crg4sG7j9FcVq7bo9dj2p.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t88_model_registry/2026-10-11T19-03-38-00-00_la-model-registry-real-honest-1_GP4M7TX2pBkPY9ZQeqTAZN.eval",
+   "sha256": "519685df910eb0251d125e6b580a58a1d7c37044c851ce20893f9315ef99f2f5",
+   "bytes": 67696,
+   "arm_dir": "honest_b",
+   "task": "t88_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t88_model_registry/2026-10-11T19-03-38-00-00_la-model-registry-real-honest-1_GP4M7TX2pBkPY9ZQeqTAZN.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t89_web_scraping/2026-10-11T19-03-38-00-00_la-web-scraping-real-honest-1_29YmV6dPY8T8wMSt7FUdhY.eval",
+   "sha256": "4c14bc3e9361a21c4e9788a9844712b0d075797c214320c9053a996374d40ef0",
+   "bytes": 23877,
+   "arm_dir": "honest_b",
+   "task": "t89_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t89_web_scraping/2026-10-11T19-03-38-00-00_la-web-scraping-real-honest-1_29YmV6dPY8T8wMSt7FUdhY.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t90_shared_dotfiles/2026-10-11T19-04-08-00-00_la-shared-dotfiles-real-honest-1_Bp2vMrmdPCTkEoVyg6xZKG.eval",
+   "sha256": "d6e1fabfd7c57c4964467bdaa0b5d9747efaffa581c8a691a4c3dda9bc63d672",
+   "bytes": 113797,
+   "arm_dir": "honest_b",
+   "task": "t90_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t90_shared_dotfiles/2026-10-11T19-04-08-00-00_la-shared-dotfiles-real-honest-1_Bp2vMrmdPCTkEoVyg6xZKG.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t91_media_processing/2026-10-11T19-04-08-00-00_la-media-processing-real-honest-1_UnQQNyQ3tnVxwAdfDcqudB.eval",
+   "sha256": "e57f289bc9012ba1eadb087c054c95deaa71831eec175f2c06221c516171d5a1",
+   "bytes": 148413,
+   "arm_dir": "honest_b",
+   "task": "t91_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t91_media_processing/2026-10-11T19-04-08-00-00_la-media-processing-real-honest-1_UnQQNyQ3tnVxwAdfDcqudB.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t92_clinical_trial/2026-10-11T19-05-39-00-00_la-clinical-trial-real-honest-1_ZFBPyLU4gDKcB3EtvWMwbj.eval",
+   "sha256": "07f32392318139e918aa386301eb8120fd2a2fe6385a7b90c65e3df8633d4604",
+   "bytes": 116819,
+   "arm_dir": "honest_b",
+   "task": "t92_clinical_trial",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t92_clinical_trial/2026-10-11T19-05-39-00-00_la-clinical-trial-real-honest-1_ZFBPyLU4gDKcB3EtvWMwbj.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t93_auto_workflow/2026-10-11T19-05-39-00-00_la-auto-workflow-real-honest-1_dA7Ep6YMb5STb5t4eRZ7LE.eval",
+   "sha256": "4aaf8c26d3b2a2eddc378fd8b30bc6a572edb3f27bcff44a2b6045b65803a883",
+   "bytes": 98341,
+   "arm_dir": "honest_b",
+   "task": "t93_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t93_auto_workflow/2026-10-11T19-05-39-00-00_la-auto-workflow-real-honest-1_dA7Ep6YMb5STb5t4eRZ7LE.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t94_tiktok/2026-10-11T19-06-09-00-00_la-tiktok-real-honest-1_LuT4dBZyJswq7gkSgQBSTT.eval",
+   "sha256": "556aaeaff27fa88643dba49f4baf9333dfeb09c7e9bd0b5af9944b67a02a813a",
+   "bytes": 132693,
+   "arm_dir": "honest_b",
+   "task": "t94_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t94_tiktok/2026-10-11T19-06-09-00-00_la-tiktok-real-honest-1_LuT4dBZyJswq7gkSgQBSTT.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t95_user_tracking/2026-10-11T19-07-39-00-00_la-user-tracking-real-honest-1_T6WnNGfDB7kWBKe3Vx3SpN.eval",
+   "sha256": "cfe04a76e7bdd0c3683b663c44cccabf0b55b621d5048b24ed7530099c9972bf",
+   "bytes": 167960,
+   "arm_dir": "honest_b",
+   "task": "t95_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t95_user_tracking/2026-10-11T19-07-39-00-00_la-user-tracking-real-honest-1_T6WnNGfDB7kWBKe3Vx3SpN.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t96_file_indexing/2026-10-11T19-07-39-00-00_la-file-indexing-real-honest-1_3EB8NuSiitTZMxq8jRoCKU.eval",
+   "sha256": "c6412508c94ff609d74ea480dd779fa56561694961a5e23bd57d55b26b2c8010",
+   "bytes": 168141,
+   "arm_dir": "honest_b",
+   "task": "t96_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t96_file_indexing/2026-10-11T19-07-39-00-00_la-file-indexing-real-honest-1_3EB8NuSiitTZMxq8jRoCKU.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t97_slack_clone/2026-10-11T19-07-39-00-00_la-slack-clone-real-honest-1_nMtxj4JbRJ4E2ddBTVnPh7.eval",
+   "sha256": "e59cee40bdf22ffb18d9e9f29973960382707be4a57f134040db988316539576",
+   "bytes": 141337,
+   "arm_dir": "honest_b",
+   "task": "t97_slack_clone",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t97_slack_clone/2026-10-11T19-07-39-00-00_la-slack-clone-real-honest-1_nMtxj4JbRJ4E2ddBTVnPh7.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t98_model_registry/2026-10-11T19-08-39-00-00_la-model-registry-real-honest-1_XHfNZvqXY7LTi9TyqiHote.eval",
+   "sha256": "c2efbc0b2a080b70c4a1114fc96e84a14a3568bd50a4bbaa9187d3130db732c9",
+   "bytes": 78370,
+   "arm_dir": "honest_b",
+   "task": "t98_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t98_model_registry/2026-10-11T19-08-39-00-00_la-model-registry-real-honest-1_XHfNZvqXY7LTi9TyqiHote.eval"
+  },
+  {
+   "launch": "2026-10-11_112714_honest_c",
+   "rel": "honest_b/t99_shared_dotfiles/2026-10-11T19-09-09-00-00_la-shared-dotfiles-real-honest-1_NY8BfMqNJggad3pSu33jih.eval",
+   "sha256": "76a1e43c1565890fcf1098e1b0b36f7c612eeb734e52c05cb5bf04fff05c0a99",
+   "bytes": 115686,
+   "arm_dir": "honest_b",
+   "task": "t99_shared_dotfiles",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-11_112714_honest_c/honest_b/t99_shared_dotfiles/2026-10-11T19-09-09-00-00_la-shared-dotfiles-real-honest-1_NY8BfMqNJggad3pSu33jih.eval"
+  }
+ ]
+}

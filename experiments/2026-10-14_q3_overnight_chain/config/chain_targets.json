@@ -1,0 +1,4163 @@
+{
+ "su311_q1_main": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1"
+  ],
+  "manifest": "manifest_su311_q1_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q1_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "su311_q1_run2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1"
+  ],
+  "run2": "2026-10-14_154401_scaleup311_q1",
+  "manifest": "manifest_su311_q1_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "su311_q1_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "su311_q1_sim": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-14_173012_scaleup311_q1_fu"
+  ],
+  "manifest": "manifest_su311_q1_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q1_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "su311_q2_main": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2"
+  ],
+  "manifest": "manifest_su311_q2_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q2_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "su311_q2_run2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2"
+  ],
+  "run2": "2026-10-14_154401_scaleup311_q2",
+  "manifest": "manifest_su311_q2_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "su311_q2_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "su311_q2_sim": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-14_173012_scaleup311_q2_fu"
+  ],
+  "manifest": "manifest_su311_q2_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q2_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "su311_q3_main": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3"
+  ],
+  "manifest": "manifest_su311_q3_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q3_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "su311_q3_run2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3"
+  ],
+  "run2": "2026-10-14_155838_scaleup311_q3",
+  "manifest": "manifest_su311_q3_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "su311_q3_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "su311_q3_sim": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_173012_scaleup311_q3_fu"
+  ],
+  "manifest": "manifest_su311_q3_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q3_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "su311_q4_main": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4"
+  ],
+  "manifest": "manifest_su311_q4_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q4_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "su311_q4_run2": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4"
+  ],
+  "run2": "2026-10-14_160246_scaleup311_q4",
+  "manifest": "manifest_su311_q4_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "su311_q4_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "su311_q4_sim": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-14_173012_scaleup311_q4_fu"
+  ],
+  "manifest": "manifest_su311_q4_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q4_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "su311_q1_sim_s1": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-14_173012_scaleup311_q1_fu"
+  ],
+  "manifest": "manifest_su311_q1_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q1_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "su311_q3_sim_s1": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_173012_scaleup311_q3_fu"
+  ],
+  "manifest": "manifest_su311_q3_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q3_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "su311_q4_sim_s1": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-14_173012_scaleup311_q4_fu"
+  ],
+  "manifest": "manifest_su311_q4_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q4_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s3_main": {
+  "launch": [
+   "2026-10-14_newmains_s3"
+  ],
+  "manifest": "manifest_nm360_s3_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s3_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s3_run2": {
+  "launch": [
+   "2026-10-14_newmains_s3"
+  ],
+  "run2": "2026-10-14_newmains_s3",
+  "manifest": "manifest_nm360_s3_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s3_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "su311_q1_sim_s2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-14_173012_scaleup311_q1_fu"
+  ],
+  "manifest": "manifest_su311_q1_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q1_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "su311_q4_sim_s2": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-14_173012_scaleup311_q4_fu"
+  ],
+  "manifest": "manifest_su311_q4_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q4_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "su311_q3_sim_s2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_173012_scaleup311_q3_fu"
+  ],
+  "manifest": "manifest_su311_q3_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q3_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s1_main_s1": {
+  "launch": [
+   "2026-10-14_newmains_s1"
+  ],
+  "manifest": "manifest_nm360_s1_main_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s1_main_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s1_run2_s1": {
+  "launch": [
+   "2026-10-14_newmains_s1"
+  ],
+  "run2": "2026-10-14_newmains_s1",
+  "manifest": "manifest_nm360_s1_run2_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s1_run2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "nm360_s4_main_s1": {
+  "launch": [
+   "2026-10-14_newmains_s4"
+  ],
+  "manifest": "manifest_nm360_s4_main_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s4_main_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s4_run2_s1": {
+  "launch": [
+   "2026-10-14_newmains_s4"
+  ],
+  "run2": "2026-10-14_newmains_s4",
+  "manifest": "manifest_nm360_s4_run2_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s4_run2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "nm360_s3_sim_s1": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-14_newmains_s3_fu"
+  ],
+  "manifest": "manifest_nm360_s3_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s3_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s2_main_s1": {
+  "launch": [
+   "2026-10-14_newmains_s2"
+  ],
+  "manifest": "manifest_nm360_s2_main_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s2_main_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s2_run2_s1": {
+  "launch": [
+   "2026-10-14_newmains_s2"
+  ],
+  "run2": "2026-10-14_newmains_s2",
+  "manifest": "manifest_nm360_s2_run2_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s2_run2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "nm360_s5_main_s1": {
+  "launch": [
+   "2026-10-14_newmains_s5"
+  ],
+  "manifest": "manifest_nm360_s5_main_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s5_main_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s5_run2_s1": {
+  "launch": [
+   "2026-10-14_newmains_s5"
+  ],
+  "run2": "2026-10-14_newmains_s5",
+  "manifest": "manifest_nm360_s5_run2_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s5_run2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "nm360_s3_sim": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-14_newmains_s3_fu"
+  ],
+  "manifest": "manifest_nm360_s3_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s3_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s1_sim": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-14_newmains_s1_fu"
+  ],
+  "manifest": "manifest_nm360_s1_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s1_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s2_sim": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-14_newmains_s2_fu"
+  ],
+  "manifest": "manifest_nm360_s2_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s2_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s2_main": {
+  "launch": [
+   "2026-10-14_newmains_s2"
+  ],
+  "manifest": "manifest_nm360_s2_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s2_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s2_run2": {
+  "launch": [
+   "2026-10-14_newmains_s2"
+  ],
+  "run2": "2026-10-14_newmains_s2",
+  "manifest": "manifest_nm360_s2_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s2_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "nm360_s1_main": {
+  "launch": [
+   "2026-10-14_newmains_s1"
+  ],
+  "manifest": "manifest_nm360_s1_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s1_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s1_run2": {
+  "launch": [
+   "2026-10-14_newmains_s1"
+  ],
+  "run2": "2026-10-14_newmains_s1",
+  "manifest": "manifest_nm360_s1_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s1_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "nm360_s4_main": {
+  "launch": [
+   "2026-10-14_newmains_s4"
+  ],
+  "manifest": "manifest_nm360_s4_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s4_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s4_run2": {
+  "launch": [
+   "2026-10-14_newmains_s4"
+  ],
+  "run2": "2026-10-14_newmains_s4",
+  "manifest": "manifest_nm360_s4_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s4_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "su311_q2r_sim": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-14_202853_scaleup311_q2r_fu"
+  ],
+  "manifest": "manifest_su311_q2r_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "su311_q2r_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s5_main_s2": {
+  "launch": [
+   "2026-10-14_newmains_s5"
+  ],
+  "manifest": "manifest_nm360_s5_main_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s5_main_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s5_run2_s2": {
+  "launch": [
+   "2026-10-14_newmains_s5"
+  ],
+  "run2": "2026-10-14_newmains_s5",
+  "manifest": "manifest_nm360_s5_run2_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s5_run2_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "nm360_s5_main": {
+  "launch": [
+   "2026-10-14_newmains_s5"
+  ],
+  "manifest": "manifest_nm360_s5_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s5_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s5_run2": {
+  "launch": [
+   "2026-10-14_newmains_s5"
+  ],
+  "run2": "2026-10-14_newmains_s5",
+  "manifest": "manifest_nm360_s5_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s5_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s2_run3_s1": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-14_il_s2"
+  ],
+  "manifest": "manifest_ilnm_s2_run3_s1.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2_run3_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s2_sim2_s1": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-14_il_s2"
+  ],
+  "manifest": "manifest_ilnm_s2_sim2_s1.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2_sim2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q2_run3_s1": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-14_il_q2"
+  ],
+  "manifest": "manifest_il311_q2_run3_s1.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2_run3_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q2_sim2_s1": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-14_il_q2"
+  ],
+  "manifest": "manifest_il311_q2_sim2_s1.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2_sim2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s1_run3_s1": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-14_il_s1"
+  ],
+  "manifest": "manifest_ilnm_s1_run3_s1.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1_run3_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s1_sim2_s1": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-14_il_s1"
+  ],
+  "manifest": "manifest_ilnm_s1_sim2_s1.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1_sim2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q3_run3_s1": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_il_q3"
+  ],
+  "manifest": "manifest_il311_q3_run3_s1.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3_run3_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q3_sim2_s1": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_il_q3"
+  ],
+  "manifest": "manifest_il311_q3_sim2_s1.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3_sim2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q4_run3_s1": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-14_il_q4"
+  ],
+  "manifest": "manifest_il311_q4_run3_s1.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4_run3_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q4_sim2_s1": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-14_il_q4"
+  ],
+  "manifest": "manifest_il311_q4_sim2_s1.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4_sim2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q1_run3_s1": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-14_il_q1"
+  ],
+  "manifest": "manifest_il311_q1_run3_s1.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1_run3_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q1_sim2_s1": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-14_il_q1"
+  ],
+  "manifest": "manifest_il311_q1_sim2_s1.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1_sim2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilold_old_run3_s1": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_il_old"
+  ],
+  "manifest": "manifest_ilold_old_run3_s1.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_old_run3_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilold_old_sim2_s1": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_il_old"
+  ],
+  "manifest": "manifest_ilold_old_sim2_s1.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_old_sim2_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s5_sim_s1": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-14_newmains_s5_fu"
+  ],
+  "manifest": "manifest_nm360_s5_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s5_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q4_run3_s2": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-14_il_q4"
+  ],
+  "manifest": "manifest_il311_q4_run3_s2.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4_run3_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q4_sim2_s2": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-14_il_q4"
+  ],
+  "manifest": "manifest_il311_q4_sim2_s2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4_sim2_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q2_run3_s2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-14_il_q2"
+  ],
+  "manifest": "manifest_il311_q2_run3_s2.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2_run3_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q2_sim2_s2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-14_il_q2"
+  ],
+  "manifest": "manifest_il311_q2_sim2_s2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2_sim2_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q1_run3_s2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-14_il_q1"
+  ],
+  "manifest": "manifest_il311_q1_run3_s2.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1_run3_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q1_sim2_s2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-14_il_q1"
+  ],
+  "manifest": "manifest_il311_q1_sim2_s2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1_sim2_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s1_run3_s2": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-14_il_s1"
+  ],
+  "manifest": "manifest_ilnm_s1_run3_s2.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1_run3_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s1_sim2_s2": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-14_il_s1"
+  ],
+  "manifest": "manifest_ilnm_s1_sim2_s2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1_sim2_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q3_run3_s2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_il_q3"
+  ],
+  "manifest": "manifest_il311_q3_run3_s2.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3_run3_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q3_sim2_s2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_il_q3"
+  ],
+  "manifest": "manifest_il311_q3_sim2_s2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3_sim2_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s2_run3_s2": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-14_il_s2"
+  ],
+  "manifest": "manifest_ilnm_s2_run3_s2.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2_run3_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s2_sim2_s2": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-14_il_s2"
+  ],
+  "manifest": "manifest_ilnm_s2_sim2_s2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2_sim2_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s5_sim": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-14_newmains_s5_fu"
+  ],
+  "manifest": "manifest_nm360_s5_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s5_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilold_old_run3_s2": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_il_old"
+  ],
+  "manifest": "manifest_ilold_old_run3_s2.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_old_run3_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilold_old_sim2_s2": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_il_old"
+  ],
+  "manifest": "manifest_ilold_old_sim2_s2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_old_sim2_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q3_run3_s3": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_il_q3"
+  ],
+  "manifest": "manifest_il311_q3_run3_s3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3_run3_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q3_sim2_s3": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_il_q3"
+  ],
+  "manifest": "manifest_il311_q3_sim2_s3.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3_sim2_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s1_run3_s3": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-14_il_s1"
+  ],
+  "manifest": "manifest_ilnm_s1_run3_s3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1_run3_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s1_sim2_s3": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-14_il_s1"
+  ],
+  "manifest": "manifest_ilnm_s1_sim2_s3.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1_sim2_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s2_run3_s3": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-14_il_s2"
+  ],
+  "manifest": "manifest_ilnm_s2_run3_s3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2_run3_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s2_sim2_s3": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-14_il_s2"
+  ],
+  "manifest": "manifest_ilnm_s2_sim2_s3.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2_sim2_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q2_run3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-14_il_q2"
+  ],
+  "manifest": "manifest_il311_q2_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q2_sim2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-14_il_q2"
+  ],
+  "manifest": "manifest_il311_q2_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q3_run3": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_il_q3"
+  ],
+  "manifest": "manifest_il311_q3_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q3_sim2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-14_il_q3"
+  ],
+  "manifest": "manifest_il311_q3_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q1_run3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-14_il_q1"
+  ],
+  "manifest": "manifest_il311_q1_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q1_sim2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-14_il_q1"
+  ],
+  "manifest": "manifest_il311_q1_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s2_run3": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-14_il_s2"
+  ],
+  "manifest": "manifest_ilnm_s2_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s2_sim2": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-14_il_s2"
+  ],
+  "manifest": "manifest_ilnm_s2_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q4_run3": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-14_il_q4"
+  ],
+  "manifest": "manifest_il311_q4_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q4_sim2": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-14_il_q4"
+  ],
+  "manifest": "manifest_il311_q4_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilold_old_run3": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_il_old"
+  ],
+  "manifest": "manifest_ilold_old_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_old_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilold_old_sim2": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_il_old"
+  ],
+  "manifest": "manifest_ilold_old_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_old_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s1_run3": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-14_il_s1"
+  ],
+  "manifest": "manifest_ilnm_s1_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s1_sim2": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-14_il_s1"
+  ],
+  "manifest": "manifest_ilnm_s1_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s5r_sim": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-14_newmains_s5r_fu"
+  ],
+  "manifest": "manifest_nm360_s5r_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s5r_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s4d_sim": {
+  "launch": [
+   "2026-10-14_newmains_s4",
+   "2026-10-14_newmains_s4d_fu"
+  ],
+  "manifest": "manifest_nm360_s4d_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s4d_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s2r_run3": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-15_il_s2_rlr"
+  ],
+  "manifest": "manifest_ilnm_s2r_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2r_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s2r_sim2": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-15_il_s2_rlr"
+  ],
+  "manifest": "manifest_ilnm_s2r_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2r_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s2r2_run3": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-15_il_s2_rlr2"
+  ],
+  "manifest": "manifest_ilnm_s2r2_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2r2_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s2r2_sim2": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-15_il_s2_rlr2"
+  ],
+  "manifest": "manifest_ilnm_s2r2_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s2r2_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilold_oldr_run3": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-15_il_old_rlr"
+  ],
+  "manifest": "manifest_ilold_oldr_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_oldr_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilold_oldr_sim2": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-15_il_old_rlr"
+  ],
+  "manifest": "manifest_ilold_oldr_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_oldr_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q2r_run3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_il_q2_rlr"
+  ],
+  "manifest": "manifest_il311_q2r_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2r_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q2r_sim2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_il_q2_rlr"
+  ],
+  "manifest": "manifest_il311_q2r_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2r_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q1r_run3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_il_q1_rlr"
+  ],
+  "manifest": "manifest_il311_q1r_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1r_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q1r_sim2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_il_q1_rlr"
+  ],
+  "manifest": "manifest_il311_q1r_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1r_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q3r_run3": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_il_q3_rlr"
+  ],
+  "manifest": "manifest_il311_q3r_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3r_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q3r_sim2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_il_q3_rlr"
+  ],
+  "manifest": "manifest_il311_q3r_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3r_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s4d_run3": {
+  "launch": [
+   "2026-10-14_newmains_s4",
+   "2026-10-14_il_s4d"
+  ],
+  "manifest": "manifest_ilnm_s4d_run3_v2.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s4d_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s4d_sim2": {
+  "launch": [
+   "2026-10-14_newmains_s4",
+   "2026-10-14_il_s4d"
+  ],
+  "manifest": "manifest_ilnm_s4d_sim2_v2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s4d_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s5_run3": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-14_il_s5"
+  ],
+  "manifest": "manifest_ilnm_s5_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s5_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s5_sim2": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-14_il_s5"
+  ],
+  "manifest": "manifest_ilnm_s5_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s5_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilold_oldr3_run3": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-15_il_old_rlr3"
+  ],
+  "manifest": "manifest_ilold_oldr3_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_oldr3_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilold_oldr3_sim2": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-15_il_old_rlr3"
+  ],
+  "manifest": "manifest_ilold_oldr3_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_oldr3_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q3c_run3": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_il_q3c"
+  ],
+  "manifest": "manifest_il311_q3c_run3_v2.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3c_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q3c_sim2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_il_q3c"
+  ],
+  "manifest": "manifest_il311_q3c_sim2_v2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3c_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q2r3_run3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_il_q2_rlr3"
+  ],
+  "manifest": "manifest_il311_q2r3_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2r3_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q2r3_sim2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_il_q2_rlr3"
+  ],
+  "manifest": "manifest_il311_q2r3_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2r3_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s1r2_run3": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_il_s1_rlr2"
+  ],
+  "manifest": "manifest_ilnm_s1r2_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1r2_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s1r2_sim2": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_il_s1_rlr2"
+  ],
+  "manifest": "manifest_ilnm_s1r2_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s1r2_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q3r3_run3": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_il_q3_rlr3"
+  ],
+  "manifest": "manifest_il311_q3r3_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3r3_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q3r3_sim2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_il_q3_rlr3"
+  ],
+  "manifest": "manifest_il311_q3r3_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q3r3_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q4r2_run3": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-15_il_q4_rlr2"
+  ],
+  "manifest": "manifest_il311_q4r2_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4r2_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q4r2_sim2": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-15_il_q4_rlr2"
+  ],
+  "manifest": "manifest_il311_q4r2_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4r2_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilold_oldc_run3": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-15_il_oldc"
+  ],
+  "manifest": "manifest_ilold_oldc_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_oldc_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilold_oldc_sim2": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-15_il_oldc"
+  ],
+  "manifest": "manifest_ilold_oldc_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_oldc_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s3_run3_s3": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-14_il_s3"
+  ],
+  "manifest": "manifest_ilnm_s3_run3_s3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s3_run3_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s3_sim2_s3": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-14_il_s3"
+  ],
+  "manifest": "manifest_ilnm_s3_sim2_s3.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s3_sim2_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q1r3_run3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_il_q1_rlr3"
+  ],
+  "manifest": "manifest_il311_q1r3_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1r3_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q1r3_sim2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_il_q1_rlr3"
+  ],
+  "manifest": "manifest_il311_q1r3_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1r3_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q1c_run3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_il_q1c"
+  ],
+  "manifest": "manifest_il311_q1c_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1c_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q1c_sim2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_il_q1c"
+  ],
+  "manifest": "manifest_il311_q1c_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q1c_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q2c_run3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_il_q2c"
+  ],
+  "manifest": "manifest_il311_q2c_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2c_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q2c_sim2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_il_q2c"
+  ],
+  "manifest": "manifest_il311_q2c_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q2c_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s3_run3_s4": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-14_il_s3"
+  ],
+  "manifest": "manifest_ilnm_s3_run3_s4.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s3_run3_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s3_sim2_s4": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-14_il_s3"
+  ],
+  "manifest": "manifest_ilnm_s3_sim2_s4.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s3_sim2_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "nm360_s4r_main": {
+  "launch": [
+   "2026-10-14_newmains_s4r"
+  ],
+  "manifest": "manifest_nm360_s4r_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s4r_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ]
+ },
+ "nm360_s4r_run2": {
+  "launch": [
+   "2026-10-14_newmains_s4r"
+  ],
+  "run2": "2026-10-14_newmains_s4r",
+  "manifest": "manifest_nm360_s4r_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "nm360_s4r_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "nm360_s4r_sim": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-14_newmains_s4r_fu"
+  ],
+  "manifest": "manifest_nm360_s4r_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "nm360_s4r_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "ilnm_s3_run3": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-14_il_s3"
+  ],
+  "manifest": "manifest_ilnm_s3_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s3_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilnm_s3_sim2": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-14_il_s3"
+  ],
+  "manifest": "manifest_ilnm_s3_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s3_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "il311_q4c_run3": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-15_il_q4c"
+  ],
+  "manifest": "manifest_il311_q4c_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4c_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "il311_q4c_sim2": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-15_il_q4c"
+  ],
+  "manifest": "manifest_il311_q4c_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "il311_q4c_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "simh311_q1_sim_s1": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1"
+  ],
+  "manifest": "manifest_simh311_q1_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q4_sim_s1": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-15_simh_q4"
+  ],
+  "manifest": "manifest_simh311_q4_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q4_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q3_sim_s1": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_simh_q3"
+  ],
+  "manifest": "manifest_simh311_q3_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q3_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4d_sim_s1": {
+  "launch": [
+   "2026-10-14_newmains_s4",
+   "2026-10-15_simh_nm_s4d"
+  ],
+  "manifest": "manifest_simh_nm360_s4d_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4d_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s1_sim_s1": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_simh_nm_s1"
+  ],
+  "manifest": "manifest_simh_nm360_s1_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s1_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q3_sim_s2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_simh_q3"
+  ],
+  "manifest": "manifest_simh311_q3_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q3_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s1_sim_s2": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_simh_nm_s1"
+  ],
+  "manifest": "manifest_simh_nm360_s1_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s1_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4d_sim_s2": {
+  "launch": [
+   "2026-10-14_newmains_s4",
+   "2026-10-15_simh_nm_s4d"
+  ],
+  "manifest": "manifest_simh_nm360_s4d_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4d_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q4_sim_s2": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-15_simh_q4"
+  ],
+  "manifest": "manifest_simh311_q4_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q4_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q1_sim_s2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1"
+  ],
+  "manifest": "manifest_simh311_q1_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4d_sim": {
+  "launch": [
+   "2026-10-14_newmains_s4",
+   "2026-10-15_simh_nm_s4d"
+  ],
+  "manifest": "manifest_simh_nm360_s4d_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4d_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q4_sim_s3": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-15_simh_q4"
+  ],
+  "manifest": "manifest_simh311_q4_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q4_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q1_sim_s3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1"
+  ],
+  "manifest": "manifest_simh311_q1_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q3_sim_s3": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_simh_q3"
+  ],
+  "manifest": "manifest_simh311_q3_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q3_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s1_sim_s3": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_simh_nm_s1"
+  ],
+  "manifest": "manifest_simh_nm360_s1_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s1_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s3_sim_s2": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-15_simh_nm_s3"
+  ],
+  "manifest": "manifest_simh_nm360_s3_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s3_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q4_sim": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-15_simh_q4"
+  ],
+  "manifest": "manifest_simh311_q4_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q4_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q3_sim_s4": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_simh_q3"
+  ],
+  "manifest": "manifest_simh311_q3_sim_s4.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q3_sim_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s1_sim_s4": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_simh_nm_s1"
+  ],
+  "manifest": "manifest_simh_nm360_s1_sim_s4.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s1_sim_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q1_sim_s4": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1"
+  ],
+  "manifest": "manifest_simh311_q1_sim_s4.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s3_sim_s3": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-15_simh_nm_s3"
+  ],
+  "manifest": "manifest_simh_nm360_s3_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s3_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q2_sim_s1": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_simh_q2"
+  ],
+  "manifest": "manifest_simh311_q2_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q2_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s2_sim_s1": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-15_simh_nm_s2"
+  ],
+  "manifest": "manifest_simh_nm360_s2_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s2_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s3_sim": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-15_simh_nm_s3"
+  ],
+  "manifest": "manifest_simh_nm360_s3_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s3_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q3_sim_s5": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_simh_q3"
+  ],
+  "manifest": "manifest_simh311_q3_sim_s5.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q3_sim_s5_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q1_sim_s5": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1"
+  ],
+  "manifest": "manifest_simh311_q1_sim_s5.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_s5_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s1_sim_s5": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_simh_nm_s1"
+  ],
+  "manifest": "manifest_simh_nm360_s1_sim_s5.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s1_sim_s5_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q2_sim_s2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_simh_q2"
+  ],
+  "manifest": "manifest_simh311_q2_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q2_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s2_sim_s2": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-15_simh_nm_s2"
+  ],
+  "manifest": "manifest_simh_nm360_s2_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s2_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q3_sim_s6": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_simh_q3"
+  ],
+  "manifest": "manifest_simh311_q3_sim_s6.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q3_sim_s6_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q1_sim_s6": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1"
+  ],
+  "manifest": "manifest_simh311_q1_sim_s6.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_s6_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "ug_sim": {
+  "launch": [
+   "refs_ug/q1",
+   "refs_ug/q2",
+   "refs_ug/q3",
+   "refs_ug/q4",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "runs/2026-10-15_ug"
+  ],
+  "manifest": "manifest_ug_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ug_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september_ungrounded"
+  ]
+ },
+ "simh_nm360_s1_sim_s6": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_simh_nm_s1"
+  ],
+  "manifest": "manifest_simh_nm360_s1_sim_s6.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s1_sim_s6_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q2_sim_s3": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_simh_q2"
+  ],
+  "manifest": "manifest_simh311_q2_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q2_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s2_sim_s3": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-15_simh_nm_s2"
+  ],
+  "manifest": "manifest_simh_nm360_s2_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s2_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q3_sim": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_simh_q3"
+  ],
+  "manifest": "manifest_simh311_q3_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q3_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q1_sim_s7": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1"
+  ],
+  "manifest": "manifest_simh311_q1_sim_s7.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_s7_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s1_sim_s7": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_simh_nm_s1"
+  ],
+  "manifest": "manifest_simh_nm360_s1_sim_s7.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s1_sim_s7_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s5_sim_s1": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-15_simh_nm_s5"
+  ],
+  "manifest": "manifest_simh_nm360_s5_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s5_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4r_sim_s1": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-15_simh_nm_s4r"
+  ],
+  "manifest": "manifest_simh_nm360_s4r_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4r_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s2_sim": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-15_simh_nm_s2"
+  ],
+  "manifest": "manifest_simh_nm360_s2_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s2_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q1_sim": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1"
+  ],
+  "manifest": "manifest_simh311_q1_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s1_sim": {
+  "launch": [
+   "2026-10-14_newmains_s1",
+   "2026-10-15_simh_nm_s1"
+  ],
+  "manifest": "manifest_simh_nm360_s1_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s1_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q2_sim_s4": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_simh_q2"
+  ],
+  "manifest": "manifest_simh311_q2_sim_s4.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q2_sim_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s5_sim_s2": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-15_simh_nm_s5"
+  ],
+  "manifest": "manifest_simh_nm360_s5_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s5_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4r_sim_s2": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-15_simh_nm_s4r"
+  ],
+  "manifest": "manifest_simh_nm360_s4r_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4r_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q2_sim_s5": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_simh_q2"
+  ],
+  "manifest": "manifest_simh311_q2_sim_s5.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q2_sim_s5_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s3_sim_rlr": {
+  "launch": [
+   "2026-10-14_newmains_s3",
+   "2026-10-15_simh_nm_s3_rlr"
+  ],
+  "manifest": "manifest_simh_nm360_s3_sim_rlr.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s3_sim_rlr_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s5_sim_s3": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-15_simh_nm_s5"
+  ],
+  "manifest": "manifest_simh_nm360_s5_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s5_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4r_sim_s3": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-15_simh_nm_s4r"
+  ],
+  "manifest": "manifest_simh_nm360_s4r_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4r_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q2_sim_s6": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_simh_q2"
+  ],
+  "manifest": "manifest_simh311_q2_sim_s6.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q2_sim_s6_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q2_sim": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_simh_q2"
+  ],
+  "manifest": "manifest_simh311_q2_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q2_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4r_sim_s4": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-15_simh_nm_s4r"
+  ],
+  "manifest": "manifest_simh_nm360_s4r_sim_s4.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4r_sim_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s5_sim_s4": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-15_simh_nm_s5"
+  ],
+  "manifest": "manifest_simh_nm360_s5_sim_s4.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s5_sim_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4r_sim_s5": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-15_simh_nm_s4r"
+  ],
+  "manifest": "manifest_simh_nm360_s4r_sim_s5.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4r_sim_s5_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s5_sim_s5": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-15_simh_nm_s5"
+  ],
+  "manifest": "manifest_simh_nm360_s5_sim_s5.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s5_sim_s5_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4r_sim": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-15_simh_nm_s4r"
+  ],
+  "manifest": "manifest_simh_nm360_s4r_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4r_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s5_sim": {
+  "launch": [
+   "2026-10-14_newmains_s5",
+   "2026-10-15_simh_nm_s5"
+  ],
+  "manifest": "manifest_simh_nm360_s5_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s5_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q1_sim_rlr": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1_rlr"
+  ],
+  "manifest": "manifest_simh311_q1_sim_rlr.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_rlr_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s2_sim_rlr": {
+  "launch": [
+   "2026-10-14_newmains_s2",
+   "2026-10-15_simh_nm_s2_rlr"
+  ],
+  "manifest": "manifest_simh_nm360_s2_sim_rlr.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s2_sim_rlr_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4d_sim_rlr": {
+  "launch": [
+   "2026-10-14_newmains_s4",
+   "2026-10-15_simh_nm_s4d_rlr"
+  ],
+  "manifest": "manifest_simh_nm360_s4d_sim_rlr.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4d_sim_rlr_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh_nm360_s4d_sim_rlr2": {
+  "launch": [
+   "2026-10-14_newmains_s4",
+   "2026-10-15_simh_nm_s4d_rlr2"
+  ],
+  "manifest": "manifest_simh_nm360_s4d_sim_rlr2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4d_sim_rlr2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q4_sim_rlr": {
+  "launch": [
+   "2026-10-14_160246_scaleup311_q4",
+   "2026-10-15_simh_q4_rlr"
+  ],
+  "manifest": "manifest_simh311_q4_sim_rlr.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q4_sim_rlr_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q2_sim_rlr": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_simh_q2_rlr"
+  ],
+  "manifest": "manifest_simh311_q2_sim_rlr.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q2_sim_rlr_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "ep2_311_l2": {
+  "launch": [
+   "2026-10-15_144034_ep2_311b"
+  ],
+  "manifest": "manifest_ep2_311_l2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ep2_311_l2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b"
+  ]
+ },
+ "ep2_t196": {
+  "launch": [
+   "2026-10-15_115153_ep2_t196"
+  ],
+  "manifest": "manifest_ep2_t196.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ep2_t196_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b"
+  ]
+ },
+ "ep2_nm": {
+  "launch": [
+   "2026-10-15_123630_ep2_nm"
+  ],
+  "manifest": "manifest_ep2_nm.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ep2_nm_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b"
+  ]
+ },
+ "simh311_q2_sim_rlr2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q2",
+   "2026-10-15_simh_q2_rlr2"
+  ],
+  "manifest": "manifest_simh311_q2_sim_rlr2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q2_sim_rlr2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "ep2_311_l1": {
+  "launch": [
+   "2026-10-15_122516_ep2_311"
+  ],
+  "manifest": "manifest_ep2_311_l1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ep2_311_l1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b"
+  ]
+ },
+ "ilold_oldsel_run3": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-15_il_sel97_addon"
+  ],
+  "manifest": "manifest_ilold_oldsel_run3.json",
+  "manifest_set": "run3",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_oldsel_run3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ]
+ },
+ "ilold_oldsel_sim2": {
+  "launch": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-15_il_sel97_addon"
+  ],
+  "manifest": "manifest_ilold_oldsel_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilold_oldsel_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "simh_nm360_s4r_sim_rlr": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-15_simh_nm_s4r_rlr"
+  ],
+  "manifest": "manifest_simh_nm360_s4r_sim_rlr.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_nm360_s4r_sim_rlr_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q3_sim_rlr2": {
+  "launch": [
+   "2026-10-14_155838_scaleup311_q3",
+   "2026-10-15_simh_q3_rlr2"
+  ],
+  "manifest": "manifest_simh311_q3_sim_rlr2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q3_sim_rlr2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "simh311_q1_sim_rlr2": {
+  "launch": [
+   "2026-10-14_154401_scaleup311_q1",
+   "2026-10-15_simh_q1_rlr2"
+  ],
+  "manifest": "manifest_simh311_q1_sim_rlr2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh311_q1_sim_rlr2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "ilnm_s4rgap_sim2": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-15_sim2gap_s4r"
+  ],
+  "manifest": "manifest_ilnm_s4rgap_sim2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s4rgap_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "simh_t196fill": {
+  "launch": [
+   "runs/2026-10-15_simh_t196fill"
+  ],
+  "manifest": "manifest_simh_t196fill.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "simh_t196fill_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "sp493_g1_sim_s1": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L1"
+  ],
+  "manifest": "manifest_sp493_g1_sim_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g1_sim_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g1_sim_s3": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L1"
+  ],
+  "manifest": "manifest_sp493_g1_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g1_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_a_main": {
+  "launch": [
+   "2026-10-15_181326_sp493_real_A"
+  ],
+  "manifest": "manifest_sp493_a_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_a_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_a_run2": {
+  "launch": [
+   "2026-10-15_181326_sp493_real_A"
+  ],
+  "run2": "2026-10-15_181326_sp493_real_A",
+  "manifest": "manifest_sp493_a_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "sp493_a_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g4_simh": {
+  "launch": [
+   "runs/2026-10-15_simh_sp493_t196"
+  ],
+  "manifest": "manifest_sp493_g4_simh.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g4_simh_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "sp493_b_main": {
+  "launch": [
+   "2026-10-15_181403_sp493_real_B"
+  ],
+  "manifest": "manifest_sp493_b_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_b_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_b_run2": {
+  "launch": [
+   "2026-10-15_181403_sp493_real_B"
+  ],
+  "run2": "2026-10-15_181403_sp493_real_B",
+  "manifest": "manifest_sp493_b_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "sp493_b_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g2_sim_s2": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L2"
+  ],
+  "manifest": "manifest_sp493_g2_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g2_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g2_sim_s3": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L2"
+  ],
+  "manifest": "manifest_sp493_g2_sim_s3.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g2_sim_s3_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g1_sim_s4": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L1"
+  ],
+  "manifest": "manifest_sp493_g1_sim_s4.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g1_sim_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g2_sim_s4": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L2"
+  ],
+  "manifest": "manifest_sp493_g2_sim_s4.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g2_sim_s4_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g1_sim_s5": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L1"
+  ],
+  "manifest": "manifest_sp493_g1_sim_s5.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g1_sim_s5_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g2_sim_s5": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L2"
+  ],
+  "manifest": "manifest_sp493_g2_sim_s5.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g2_sim_s5_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_c_main": {
+  "launch": [
+   "2026-10-15_181249_sp493_real_C"
+  ],
+  "manifest": "manifest_sp493_c_main.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_c_main_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ],
+  "donor_launches": [
+   "2026-10-15_181403_sp493_real_B",
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4",
+   "runs_sp493/2026-10-15_181249_sp493_real_C"
+  ]
+ },
+ "sp493_c_run2": {
+  "launch": [
+   "2026-10-15_181249_sp493_real_C"
+  ],
+  "run2": "2026-10-15_181249_sp493_real_C",
+  "manifest": "manifest_sp493_c_run2.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "sp493_c_run2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ],
+  "donor_launches": [
+   "2026-10-15_181403_sp493_real_B",
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4",
+   "runs_sp493/2026-10-15_181249_sp493_real_C"
+  ]
+ },
+ "sp493_g1_sim_s2": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L1"
+  ],
+  "manifest": "manifest_sp493_g1_sim_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g1_sim_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g5_simh": {
+  "launch": [
+   "runs/2026-10-15_simh_sp493_new"
+  ],
+  "manifest": "manifest_sp493_g5_simh.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g5_simh_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_honest@september"
+  ]
+ },
+ "sp493_a_main_dry": {
+  "launch": [
+   "2026-10-15_181326_sp493_real_A"
+  ],
+  "manifest": "manifest_sp493_a_main_dry.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_a_main_v1_dry",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_a_run2_dry": {
+  "launch": [
+   "2026-10-15_181326_sp493_real_A"
+  ],
+  "run2": "2026-10-15_181326_sp493_real_A",
+  "manifest": "manifest_sp493_a_run2_dry.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "sp493_a_run2_v1_dry",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_b_main_dry": {
+  "launch": [
+   "2026-10-15_181403_sp493_real_B"
+  ],
+  "manifest": "manifest_sp493_b_main_dry.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_b_main_v1_dry",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_b_run2_dry": {
+  "launch": [
+   "2026-10-15_181403_sp493_real_B"
+  ],
+  "run2": "2026-10-15_181403_sp493_real_B",
+  "manifest": "manifest_sp493_b_run2_dry.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "sp493_b_run2_v1_dry",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_c_main_dry": {
+  "launch": [
+   "2026-10-15_181249_sp493_real_C"
+  ],
+  "manifest": "manifest_sp493_c_main_dry.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_c_main_v1_dry",
+  "expect_sha256": null,
+  "stage_arms": [
+   "honest_a",
+   "honest_b",
+   "attack"
+  ],
+  "donor_launches": [
+   "2026-10-15_181403_sp493_real_B",
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_c_run2_dry": {
+  "launch": [
+   "2026-10-15_181249_sp493_real_C"
+  ],
+  "run2": "2026-10-15_181249_sp493_real_C",
+  "manifest": "manifest_sp493_c_run2_dry.json",
+  "cache": "/ev/evals_v1",
+  "set": "run2",
+  "out": "sp493_c_run2_v1_dry",
+  "expect_sha256": null,
+  "stage_arms": [
+   "attack"
+  ],
+  "donor_launches": [
+   "2026-10-15_181403_sp493_real_B",
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g1_sim_dry": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L1"
+  ],
+  "manifest": "manifest_sp493_g1_sim_dry.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g1_sim_v1_dry",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g2_sim_dry": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L2"
+  ],
+  "manifest": "manifest_sp493_g2_sim_dry.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g2_sim_v1_dry",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "ilnm_s4rgap_sim2_try2": {
+  "launch": [
+   "2026-10-14_newmains_s4r",
+   "2026-10-15_sim2gap_s4r"
+  ],
+  "manifest": "manifest_ilnm_s4rgap_sim2_try2.json",
+  "manifest_set": "sim2",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "ilnm_s4rgap_sim2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ]
+ },
+ "sp493_g1_sim": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L1"
+  ],
+  "manifest": "manifest_sp493_g1_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g1_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g2_sim": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_L2"
+  ],
+  "manifest": "manifest_sp493_g2_sim.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g2_sim_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "refs_old/2026-10-10_001314_scaleup_topup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g3_sim_x_s1": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_X"
+  ],
+  "manifest": "manifest_sp493_g3_sim_x_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g3_sim_x_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "runs_sp493/2026-10-15_181249_sp493_real_C",
+   "runs_sp493/2026-10-15_181326_sp493_real_A",
+   "runs_sp493/2026-10-15_181403_sp493_real_B"
+  ]
+ },
+ "sp493_g7_sim_x_s1": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_X"
+  ],
+  "manifest": "manifest_sp493_g7_sim_x_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g7_sim_x_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g3_sim_y_s1": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_Y"
+  ],
+  "manifest": "manifest_sp493_g3_sim_y_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g3_sim_y_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "runs_sp493/2026-10-15_181249_sp493_real_C",
+   "runs_sp493/2026-10-15_181326_sp493_real_A",
+   "runs_sp493/2026-10-15_181403_sp493_real_B"
+  ]
+ },
+ "sp493_g7_sim_y_s1": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_Y"
+  ],
+  "manifest": "manifest_sp493_g7_sim_y_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g7_sim_y_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g6_sim_x_s1": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_X"
+  ],
+  "manifest": "manifest_sp493_g6_sim_x_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g6_sim_x_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g6_sim_y_s1": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_Y"
+  ],
+  "manifest": "manifest_sp493_g6_sim_y_s1.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g6_sim_y_s1_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g3_sim_y_s2": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_Y"
+  ],
+  "manifest": "manifest_sp493_g3_sim_y_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g3_sim_y_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "runs_sp493/2026-10-15_181249_sp493_real_C",
+   "runs_sp493/2026-10-15_181326_sp493_real_A",
+   "runs_sp493/2026-10-15_181403_sp493_real_B"
+  ]
+ },
+ "sp493_g7_sim_x_s2": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_X"
+  ],
+  "manifest": "manifest_sp493_g7_sim_x_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g7_sim_x_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g3_sim_x_s2": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_X"
+  ],
+  "manifest": "manifest_sp493_g3_sim_x_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g3_sim_x_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "runs_sp493/2026-10-15_181249_sp493_real_C",
+   "runs_sp493/2026-10-15_181326_sp493_real_A",
+   "runs_sp493/2026-10-15_181403_sp493_real_B"
+  ]
+ },
+ "sp493_g6_sim_y_s2": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_Y"
+  ],
+  "manifest": "manifest_sp493_g6_sim_y_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g6_sim_y_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g7_sim_y_s2": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_Y"
+  ],
+  "manifest": "manifest_sp493_g7_sim_y_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g7_sim_y_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g6_sim_x_s2": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_X"
+  ],
+  "manifest": "manifest_sp493_g6_sim_x_s2.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g6_sim_x_s2_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g6_sim_y": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_Y"
+  ],
+  "manifest": "manifest_sp493_g6_sim_y.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g6_sim_y_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g7_sim_y": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_Y"
+  ],
+  "manifest": "manifest_sp493_g7_sim_y.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g7_sim_y_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ },
+ "sp493_g3_sim_y": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_Y"
+  ],
+  "manifest": "manifest_sp493_g3_sim_y.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g3_sim_y_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "runs_sp493/2026-10-15_181249_sp493_real_C",
+   "runs_sp493/2026-10-15_181326_sp493_real_A",
+   "runs_sp493/2026-10-15_181403_sp493_real_B"
+  ]
+ },
+ "sp493_g6_sim_x": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_X"
+  ],
+  "manifest": "manifest_sp493_g6_sim_x.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g6_sim_x_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q2",
+   "runs/2026-10-14_155838_scaleup311_q3"
+  ]
+ },
+ "sp493_g3_sim_x": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_X"
+  ],
+  "manifest": "manifest_sp493_g3_sim_x.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g3_sim_x_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "runs_sp493/2026-10-15_181249_sp493_real_C",
+   "runs_sp493/2026-10-15_181326_sp493_real_A",
+   "runs_sp493/2026-10-15_181403_sp493_real_B"
+  ]
+ },
+ "sp493_g7_sim_x": {
+  "launch": [
+   "runs/2026-10-15_sp493_sim_X"
+  ],
+  "manifest": "manifest_sp493_g7_sim_x.json",
+  "cache": "/ev/evals_v1",
+  "set": "main",
+  "out": "sp493_g7_sim_x_v1",
+  "expect_sha256": null,
+  "stage_arms": [
+   "sim_attack@september"
+  ],
+  "donor_launches": [
+   "refs_old/2026-10-09_000523_rerun_strict",
+   "refs_old/2026-10-09_173815_scaleup_canary",
+   "refs_old/2026-10-09_182505_scaleup",
+   "runs/2026-10-14_154401_scaleup311_q1",
+   "runs/2026-10-14_160246_scaleup311_q4"
+  ]
+ }
+}

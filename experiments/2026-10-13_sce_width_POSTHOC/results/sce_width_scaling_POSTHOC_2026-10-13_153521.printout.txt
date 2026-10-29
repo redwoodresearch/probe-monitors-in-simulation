@@ -1,0 +1,9 @@
+fpr_0.01 r 0.5: D width mean 19.5 (lower mean -13.4) | gap width mean 5.5
+fpr_0.01 r 0.75: D width mean 20.9 (lower mean -13.6) | gap width mean 5.5
+fpr_0.01 r 1.0: D width mean 21.1 (lower mean -13.5) | gap width mean 5.8
+fpr_0.01: D beta -0.11, width at r=2 22.9, D lower at r=2 -14.5 | gap beta -0.06, width at r=2 6.1
+fpr_0.05 r 0.5: D width mean 8.2 (lower mean -5.3) | gap width mean 4.1
+fpr_0.05 r 0.75: D width mean 6.3 (lower mean -4.6) | gap width mean 3.9
+fpr_0.05 r 1.0: D width mean 5.9 (lower mean -4.8) | gap width mean 3.9
+fpr_0.05: D beta 0.48, width at r=2 4.2, D lower at r=2 -4.1 | gap beta 0.06, width at r=2 3.7
+written sce_width_scaling_POSTHOC_2026-10-13_153521.json

@@ -1,0 +1,24 @@
+# Level 5 retrained on the 368 clean cells only (neither the real e1 nor the sim run calls text_editor insert or
+# undo_edit), like the main session's clean probe retrain. Main-task folds.
+name: tfidf_clean_level5
+cells_file: config/clean_cells_2026-10-06_180321.json   # the main session's 368 clean cells (analysis 2026-10-06_180321)
+examples: examples_2026-10-06_142532
+folds_file: folds_v3.json
+baselines:
+  harness_normalized_diff_lines: {text: readout_text, scrub: 5}   # level 4 + diff lines canonicalized (sign spacing, hunk headers)
+output_variants: [all, no_editor]
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer; sklearn "char" collapses whitespace runs)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true                       # TfidfTransformer: tf -> 1 + log(tf); smooth_idf true; l2 row norm
+C: 1.0                                   # fixed a priori (sklearn default); c_sensitivity is reported, not used to choose
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 0}
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

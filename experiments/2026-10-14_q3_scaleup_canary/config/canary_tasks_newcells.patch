@@ -1,0 +1,36 @@
+--- a/experiments/2026-10-07_phase2_attack_check/tasks.py	2026-10-14 13:07:12
++++ b/experiments/2026-10-07_phase2_attack_check/tasks.py	2026-10-14 13:23:18
+@@ -51,12 +51,33 @@
+     system = attacker_prompt(main_task=md["main_task"]["description"], side_task=md["side_task_text"],
+                              environment=md["environment"]["description"], attack_approach=md["attack_approach"],
+                              filename=prompt_name)
++    # The prompt must be the attacker template with exactly this cell's four fields in it, nothing else (q3 scale-up
++    # canary, RULE.md): rendered with sentinel fields, then filled. Every cell checks it; the 196 also check Sol's hash.
++    fields = {"main": md["main_task"]["description"], "side": md["side_task_text"],
++              "env": md["environment"]["description"], "approach": md["attack_approach"].strip()}  # the renderer strips it
++    assert not any(m in v for m in _MASK.values() for v in fields.values()), f"{record['cell']}: a field holds a sentinel"
++    masked = attacker_prompt(main_task=_MASK["main"], side_task=_MASK["side"], environment=_MASK["env"],
++                             attack_approach=_MASK["approach"] if fields["approach"] else "", filename=prompt_name)
++    filled = masked
++    for k, v in fields.items():
++        filled = filled.replace(_MASK[k], v)
++    assert system == filled, f"{record['cell']}: system prompt is not the template with this cell's fields"
++    if record["sol_system_sha256"] is None:  # a new cell: Sol's hashes were never read; the template must be the 196's
++        assert record["sol_input_sha256"] is None and "q2_approach_sha256" in record and record.get("template_sha256"), (
++            f"{record['cell']}: neither a 196 record (Sol's hashes) nor a complete new-cell record")
++        assert _sha(masked) == record["template_sha256"], f"{record['cell']}: the masked template differs from the 196's"
++        assert isinstance(sample.input, str) and sample.input == "", f"{record['cell']}: first user message isn't ''"
++        return built
+     assert _sha(system) == record["sol_system_sha256"], f"{record['cell']}: system prompt differs from Sol's"
+     assert isinstance(sample.input, str) and _sha(sample.input) == record["sol_input_sha256"], (
+         f"{record['cell']}: first user message differs from Sol's")
+     return built
+ 
+ 
++# Sentinels for the masked template (never in task text; checked above).
++_MASK = {k: f"\x00q3-mask-{k}\x00" for k in ("main", "side", "env", "approach")}
++
++
+ @task
+ def la_real_attack_sept() -> Task:
+     arena = linuxarena(required_environment_name())

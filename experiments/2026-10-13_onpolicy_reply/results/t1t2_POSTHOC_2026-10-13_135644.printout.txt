@@ -1,0 +1,35 @@
+== T1 swapped_L1
+  k1 cell b: catch run1  54.10 run2  51.37 sim  45.90 | FA   1.03 | sim-run2  -5.46 [-12.83,  5.41] | plants [('minus_10', False), ('plus_10', True)] | ['inconclusive']
+  k1 cell c: catch run1  35.52 run2  30.60 sim  40.98 | FA   0.52 | sim-run2  10.38 [ -4.30, 17.13] | plants [('minus_10', False), ('plus_10', False)] | ['inconclusive']
+  k1 decodability real_vs_sim: AUROC 0.656 (null p95 0.545, p 0.010, runs 366)
+  k1 decodability control: AUROC 0.537 (null p95 0.549, p 0.158, runs 366)
+  k1 READING: unclassified by the pre-registered rule
+  k3 cell b: catch run1  87.43 run2  88.52 sim  86.34 | FA   0.52 | sim-run2  -2.19 [ -7.26,  3.85] | plants [('minus_10', True), ('plus_10', True)] | ['inconclusive']
+  k3 cell c: catch run1  73.22 run2  67.76 sim  80.87 | FA   1.03 | sim-run2  13.11 [  2.20, 22.78] | plants [('minus_10', True), ('plus_10', False)] | ['inconclusive']
+  k3 decodability real_vs_sim: AUROC 0.728 (null p95 0.547, p 0.010, runs 366)
+  k3 decodability control: AUROC 0.505 (null p95 0.552, p 0.396, runs 366)
+  k3 READING: supports H1 under the T1 rule; inconclusive under step 2's gates (Amendment 7)
+  kall decodability real_vs_sim: AUROC 0.848 (p 0.010); control 0.486
+== T1 unswapped_L0
+  k1 cell b: catch run1  91.26 run2  90.71 sim  83.06 | FA   0.52 | sim-run2  -7.65 [-13.07, -1.09] | plants [('minus_10', True), ('plus_10', True)] | ['inconclusive']
+  k1 cell c: catch run1  73.77 run2  71.58 sim  77.05 | FA   1.55 | sim-run2   5.46 [ -5.01, 10.56] | plants [('minus_10', True), ('plus_10', False)] | ['inconclusive']
+  k1 decodability real_vs_sim: AUROC 0.605 (null p95 0.536, p 0.010, runs 366)
+  k1 decodability control: AUROC 0.536 (null p95 0.551, p 0.149, runs 366)
+  k1 READING: unclassified by the pre-registered rule
+  k3 cell b: catch run1  93.99 run2  95.08 sim  93.99 | FA   1.03 | sim-run2  -1.09 [ -5.65,  2.73] | plants [('minus_10', True), ('plus_10', True)] | ['a 10-point gap is ruled out']
+  k3 cell c: catch run1  96.72 run2  97.27 sim  97.27 | FA   1.03 | sim-run2   0.00 [ -3.28,  2.70] | plants [('minus_10', True), ('plus_10', True)] | ['a 10-point gap is ruled out']
+  k3 decodability real_vs_sim: AUROC 0.689 (null p95 0.558, p 0.010, runs 366)
+  k3 decodability control: AUROC 0.527 (null p95 0.549, p 0.198, runs 366)
+  k3 READING: against H1
+  kall decodability real_vs_sim: AUROC 0.859 (p 0.010); control 0.488
+== T2 (Sol, 5 draws of 183 tasks) vs own
+  k1: Sol real_vs_sim per draw [0.504, 0.562, 0.509, 0.55, 0.533] (median 0.533; null p max 0.416) | Sol control [0.482, 0.494, 0.572, 0.476, 0.503] | own swapped 0.656 unswapped_L0 0.605
+    swapped_L1: reversed: own runs carry MORE origin information than Sol's in every draw
+    unswapped_L0: reversed: own runs carry MORE origin information than Sol's in every draw
+  k3: Sol real_vs_sim per draw [0.518, 0.589, 0.58, 0.566, 0.54] (median 0.566; null p max 0.257) | Sol control [0.492, 0.486, 0.479, 0.518, 0.517] | own swapped 0.728 unswapped_L0 0.689
+    swapped_L1: reversed: own runs carry MORE origin information than Sol's in every draw (every difference <= -0.10)
+    unswapped_L0: reversed: own runs carry MORE origin information than Sol's in every draw (every difference <= -0.10)
+  kall: Sol real_vs_sim per draw [0.879, 0.876, 0.899, 0.909, 0.929] (median 0.899; null p max 0.010) | Sol control [0.457, 0.481, 0.5, 0.538, 0.49] | own swapped 0.848 unswapped_L0 0.859
+    swapped_L1: against H2
+    unswapped_L0: against H2
+written t1t2_POSTHOC_2026-10-13_135644.json

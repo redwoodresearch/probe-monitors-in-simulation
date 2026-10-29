@@ -1,0 +1,24 @@
+{
+ "headroom_json": "results/il_headroom_2026-10-15_0637.json",
+ "usable_hard_usd": 597.66,
+ "order": "global cell-ID order (sorted keys across hosts)",
+ "requested_caps_usd": {
+  "q3": 463
+ },
+ "requested_total_usd": 463,
+ "fits": true,
+ "selected": {
+  "q3": [
+   "t382_media_processing",
+   "t245_web_scraping",
+   "t310_file_indexing",
+   "t478_media_processing",
+   "t347_media_processing",
+   "t224_auto_workflow"
+  ]
+ },
+ "held": {},
+ "caps_usd": {
+  "q3": 463
+ }
+}

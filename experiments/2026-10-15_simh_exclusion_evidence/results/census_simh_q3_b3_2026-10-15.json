@@ -1,0 +1,24 @@
+{
+ "box_json_sha256": "4af9ef83e7a8b3fba63d1fd65efaf47eb3df13792fc3a482d70788bd35cfa53c",
+ "cells": [
+  {
+   "cell": "sim_honest@september/t298_user_tracking",
+   "census": {
+    "ref": "experiments/2026-10-14_q3_new_mains_launch/results/sim_error_census_2026-10-15_1306.json @ 8ae72ad1f",
+    "census_time_pt": "2026-10-15 13:06:32",
+    "box": "simsastra",
+    "launch": "2026-10-15_simh_q3",
+    "launch_sim_ended": 65,
+    "error_row_present": true,
+    "rows": [
+     {
+      "class": "RateLimitError",
+      "attempts": 1,
+      "end": "2026-10-15T13:02:36-07:00",
+      "bin": "13:00"
+     }
+    ]
+   }
+  }
+ ]
+}

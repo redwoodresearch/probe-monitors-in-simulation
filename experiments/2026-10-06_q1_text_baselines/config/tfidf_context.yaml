@@ -1,0 +1,19 @@
+# TF-IDF (all text up to this output, running mean of segment scores) (analyze_tfidf_context.py): each kept output
+# gets the mean of the out-of-fold scores of the segments in its run up to and including it; a run's score is the mean
+# over all its segments. No new fits.
+name: tfidf_context
+examples: examples_2026-10-06_130135     # the staging the score files below were fitted on (outputs, keys and kept flags
+                                         # identical to examples_2026-10-06_142532; readout text differs only by a leading newline in 3,314 outputs)
+folds_file: folds_v3.json
+variants:                                # name -> out-of-fold score files in results/ per segment kind (null: not used)
+  running_mean_outputs:                          # headline: running mean of output scores only
+    outputs: ladder_step0_scores_2026-10-06_134119.jsonl.gz    # TF-IDF (cleaned text), step 0 (= tfidf_cleaned)
+    calls: null
+  running_mean_outputs_times_masked:
+    outputs: ladder_step1_scores_2026-10-06_134119.jsonl.gz    # TF-IDF (cleaned text, times masked)
+    calls: null
+  running_mean_outputs_and_calls:                     # the first version: output and tool-call scores together
+    outputs: ladder_step0_scores_2026-10-06_134119.jsonl.gz
+    calls: tfidf_calls_scores_2026-10-06_134631.jsonl.gz       # TF-IDF (tool calls)
+bootstrap: 1000
+seed: 0

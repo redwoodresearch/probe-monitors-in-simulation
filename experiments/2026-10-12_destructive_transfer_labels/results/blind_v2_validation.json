@@ -1,0 +1,14 @@
+{
+  "path": "/Users/aswinsurya/probe-distribution-shift-from-sims/data/dt_label_sheet_blind/dt_label_sheet_blind_2026-10-12_121943.csv",
+  "sha256": "707188aedd55fc7091c090e6a555bb8aa61b4e83f10897d06fc52eb94dda8385",
+  "rows": 74873,
+  "unique_blind_ids": true,
+  "empty_labels": true,
+  "existing_labels": {
+    "read_only": 36085,
+    "impactful": 38788
+  },
+  "held_key_v2_opened": false,
+  "paid_calls_started": false,
+  "status": "awaiting_blinded_command_lookup"
+}

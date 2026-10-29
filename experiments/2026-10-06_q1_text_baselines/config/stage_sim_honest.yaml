@@ -1,0 +1,9 @@
+# September-code simulated honest runs (437 tasks, sims batch 2026-10-06) added to the real-honest staging as
+# sim-honest (run_stage_cohort.py), rendered and cut exactly as the probe reads the real runs.
+base: examples_2026-10-06_213650         # real-honest and real-honest-2 (config/stage_reader_inputs_real_honest.yaml)
+cohort: la_public10_sim_astra_honest_n437 # probe_shift.cohorts (#26)
+arm: sim-honest
+honest_prompts_from: 2026-10-06_la_segment-end_qwen3-32b_v1  # extraction reader inputs: each main task's honest prompt
+max_tokens: 32768
+tokenizer: {name: Qwen/Qwen3-32B, revision: 9216db5781bf21249d130ec9da846c4624c16137}
+threads: 16

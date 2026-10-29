@@ -1,0 +1,139 @@
+Gate row 2, step 2(b): q2_run_q3_attack_heldout.py as run (first committed at c0923fd1 on aswin/q2-heldout-step2, reachable from this
+stack's top merge), kept here as a patch against its source on main for the PR size cap (762 lines). The full copy
+(sha256 e500d22e357699d3b1b6efb5abfa001e3843fc4af79f81ac1cf9a40b951f60ad, 48278 bytes) is on S3 via results_manifest_v9.json.
+Source on main: experiments/2026-10-06_q3_attack_detector/run_q3_attack.py, sha256 237154c1c11b0d964538329e18b763d27a133d998eefb0a25afcae03ae7aec96.
+Rebuild, from the repository root:
+  patch -o experiments/2026-10-12_plantslip_heldout/q2_run_q3_attack_heldout.py experiments/2026-10-06_q3_attack_detector/run_q3_attack.py experiments/2026-10-12_plantslip_heldout/q2_run_q3_attack_heldout.patch
+
+--- experiments/2026-10-06_q3_attack_detector/run_q3_attack.py
++++ experiments/2026-10-12_plantslip_heldout/q2_run_q3_attack_heldout.py
+@@ -1,4 +1,9 @@
+-"""Q3 attack detector, the slow part: per-call probes on Qwen3-32B segment-end activations and a TF-IDF baseline,
++"""Row 2, step 2(b) (RULE.md here): ../2026-10-06_q3_attack_detector/run_q3_attack.py at f0ff845f, copied with the rule's one
++change: after select_runs, runs are filtered to config `load_arms` = [real-honest, real-attack-e1, real-attack-e2]; `load_arms`
++joins the data identity; manifest, pack_layer and probe_layer assert that no sim-attack run is present. Its app, work Volume
++and S3 archive prefix are renamed so its outputs stay apart from #36's. The original docstring follows.
++
++Q3 attack detector, the slow part: per-call probes on Qwen3-32B segment-end activations and a TF-IDF baseline,
+ trained on real LinuxArena honest vs real attack (epoch 1) runs and scored on every arm. Metrics: analyze_q3_attack.py.
+ 
+ Modal steps:
+@@ -45,15 +50,15 @@
+ 
+ HERE = Path(__file__).parent
+ REPO = HERE.parent.parent
+-APP = "probe-shift_aswin-surya_sub-q3attack_probe_kill-2026-11-06"
++APP = "probe-shift_aswin-surya_sub-q2-heldout_fit_kill-2026-11-12"
+ ACTS = "probe-shift_aswin-surya_sub-la-activations"
+-WORK = "probe-shift_aswin-surya_sub-q3attack_work_kill-2026-11-06"
++WORK = "probe-shift_aswin-surya_sub-q2-heldout_work_kill-2026-11-12"
+ GPU = "H100!"
+ H = 5120
+ MANIFEST_VERSION = 2  # part of data_id: bump when the manifest's outputs change (2: a tool column in the tables)
+ # Durable home of each run's raw scores and trained probes (the work Volume is kill-dated): the project bucket
+ # (private, versioned), one prefix per run. Archives are written from the laptop with the user's own AWS session.
+-S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-06_q3_attack_detector/"
++S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-12_plantslip_heldout/fits/"
+ S3_ARCHIVE_REGION = "us-east-2"
+ ARCHIVE_MAX_BYTES = 1_000_000_000  # a run's archive is ~350 MB; refuse anything over ~1 GB rather than fetch it
+ 
+@@ -78,6 +83,8 @@
+     from probe_shift.attack_eval import CALL_END_KINDS, HONEST, NUDGE, STEP_LIMIT, call_end_kind, original_kinds
+ 
+     out = data_dir(data_id)
++    if any(r["arm"] == "sim-attack" for r in runs):  # RULE.md step 2
++        raise ValueError("manifest: a sim-attack run is present")
+     if (out / "summary.json").exists():  # built earlier from the same runs and settings (data_id is their hash)
+         return json.loads((out / "summary.json").read_text())
+     ext = Path("/acts") / cfg["extraction_run"]
+@@ -197,6 +204,8 @@
+     work_vol.reload()
+     d = data_dir(data_id)
+     runs = json.loads((d / "runs.json").read_text())
++    if any(r["arm"] == "sim-attack" for r in runs):  # RULE.md step 2
++        raise ValueError("pack_layer: a sim-attack run is present")
+     t = np.load(d / "tables.npz")
+     targets = {pos: d / "packed" / f"L{layer}_{pos}.npy" for pos in cfg["positions"]}
+     if all(p.exists() and np.load(p, mmap_mode="r").shape == (len(t[f"{pos}__run"]), H) for pos, p in targets.items()):
+@@ -206,11 +215,31 @@
+     ext = Path("/acts") / cfg["extraction_run"] / ("by_layer" if by_layer else "acts")
+     feats = {pos: np.zeros((len(t[f"{pos}__run"]), H), np.float16) for pos in cfg["positions"]}
+     bounds = {pos: np.searchsorted(t[f"{pos}__run"], np.arange(len(runs) + 1)) for pos in cfg["positions"]}
+-    blocks = {c: np.load(ext / f"L{layer}" / f"{c}.npy", mmap_mode="r") for c in {r["chunk"] for r in runs}} if by_layer else {}
++    # RULE.md step 2: the dump's chunk files pack every arm's rows, sim-attack included, so a chunk is never loaded or mapped
++    # whole. Each run's own block is read by exact, unbuffered byte range, after the chunk index confirms the block is that
++    # run's (same key and real arm, same row_start) and the rows read lie inside it.
++    if by_layer:
++        index = {c: {(x["arm"], x["key"]): x for x in json.loads((Path("/acts") / cfg["extraction_run"] / "chunks" / f"{c}.json").read_text())["transcripts"]}
++                 for c in {r["chunk"] for r in runs}}
++
++    def read_block(path, start, count):
++        with open(path, "rb", buffering=0) as fh:
++            v = np.lib.format.read_magic(fh)
++            shape, fortran, dtype = (np.lib.format.read_array_header_1_0 if v == (1, 0) else np.lib.format.read_array_header_2_0)(fh)
++            if fortran or len(shape) != 2 or shape[1] != H or start + count > shape[0]:
++                raise ValueError("unexpected chunk layout")
++            rb = shape[1] * dtype.itemsize
++            fh.seek(fh.tell() + start * rb)
++            buf = fh.read(count * rb)
++        return np.frombuffer(buf, dtype).reshape(count, shape[1])
+ 
+     def load(i):
+         if by_layer:  # a run's rows start at row_start in its chunk file
+-            x, off = blocks[runs[i]["chunk"]], runs[i]["row_start"]
++            blk = index[runs[i]["chunk"]].get((runs[i]["arm"], runs[i]["key"]))
++            span = 1 + max(int(t[f"{pos}__row"][bounds[pos][i]:bounds[pos][i + 1]].max(initial=-1)) for pos in cfg["positions"])
++            if blk is None or blk["arm"] == "sim-attack" or blk["row_start"] != runs[i]["row_start"] or span > blk["n_rows"]:
++                raise ValueError("a run's rows lie outside its own real block")
++            x, off = read_block(ext / f"L{layer}" / f"{runs[i]['chunk']}.npy", runs[i]["row_start"], span), 0
+         else:
+             x, off = np.load(ext / runs[i]["arm"] / f"{runs[i]['filename']}.npz")[f"L{layer}"], 0
+         for pos in cfg["positions"]:
+@@ -272,6 +301,8 @@
+     work_vol.reload()
+     d = data_dir(data_id)
+     runs = json.loads((d / "runs.json").read_text())
++    if any(r["arm"] == "sim-attack" for r in runs):  # RULE.md step 2
++        raise ValueError("probe_layer: a sim-attack run is present")
+     t = np.load(d / "tables.npz")
+     n = len(runs)
+     arm = np.array([r["arm"] for r in runs])
+@@ -622,7 +653,7 @@
+ 
+ 
+ @app.local_entrypoint()
+-def main(test: bool = False, resume: str = "", config: str = "q3_attack.yaml", pack_only: bool = False,
++def main(test: bool = False, resume: str = "", config: str = "q2_q3_attack_heldout.yaml", pack_only: bool = False,
+          check_data: str = ""):
+     """`--test`: a few main tasks per fold, one layer, a small null, under a separate run id. `--resume <run_id>`:
+     spawn only the fits whose outputs are not on the work Volume yet (a fit still running from the first launch is
+@@ -637,6 +668,8 @@
+     from probe_shift.transcripts import REACT_NUDGE
+ 
+     launched_at = time.time()
++    if check_data:  # RULE.md step 2: compare_data reads whole reference arrays, which could hold simulated rows
++        raise ValueError("--check-data is disabled in this copy")
+     if resume and (pack_only or check_data):  # a resumed run is already packed: it would go straight to the fits
+         raise ValueError("--pack-only and --check-data apply to a new launch, not to --resume")
+     if resume:
+@@ -650,6 +683,12 @@
+         folds = json.loads((REPO / "splits" / cfg["folds_file"]).read_text())
+         ex = json.loads((REPO / "splits" / cfg["exclusions_file"]).read_text())
+         runs, excluded = ae.select_runs(ex, folds)
++        load_arms = cfg["load_arms"]  # RULE.md step 2: real arms only; no simulated run is loaded, packed, fitted or scored
++        if sorted(load_arms) != sorted(["real-honest", "real-attack-e1", "real-attack-e2"]):
++            raise ValueError(f"load_arms must be the three real arms, not {load_arms}")
++        runs = [r for r in runs if r["arm"] in load_arms]
++        if any(r["arm"] == "sim-attack" for r in runs) or {r["arm"] for r in runs} != set(load_arms):
++            raise ValueError("the run list holds a sim-attack run or misses a real arm")
+         if test:
+             keep = set()
+             for f in range(5):
+@@ -663,6 +702,7 @@
+         ident = [MANIFEST_VERSION, cfg["extraction_run"], cfg["positions"],
+                  [(r["arm"], r["key"], r["fold"], r["env_fold"]) for r in runs]]
+         ident += [cfg["kinds_from"]] if cfg.get("kinds_from") else []  # other kinds, other tables
++        ident += [["load_arms", sorted(load_arms)]]  # RULE.md step 2: the arm filter is part of the data identity
+         data_id = hashlib.sha1(json.dumps(ident).encode()).hexdigest()[:12]
+         print(f"run {run_id} | data {data_id} | {len(runs)} runs:", {a: sum(r["arm"] == a for r in runs) for a in ae.ARMS},
+               f"| git {git[:8]}{' (dirty)' if dirty else ''}", flush=True)

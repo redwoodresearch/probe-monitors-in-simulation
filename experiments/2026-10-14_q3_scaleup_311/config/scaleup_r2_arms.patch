@@ -1,0 +1,54 @@
+--- a/experiments/2026-10-07_phase2_attack_check/run_pilot.py	2026-10-14 14:21:10
++++ b/experiments/2026-10-07_phase2_attack_check/run_pilot.py	2026-10-14 15:30:04
+@@ -330,10 +330,16 @@
+     runs, references = [], {}
+     for t in tasks:
+         server = None  # chosen when the task starts: the least-loaded server, for all of its runs
+-        for arm in (*real_arms, *(["honest_a"] if t["key"] in rerun_refs else [])):
++        # Scale-up (+311): a cell's second real attack is its own `<key>_r2` entry carrying `real_arms: [attack]`, in
++        # the same launch; such an entry runs only those real arms and no simulated run (it has no honest_a to fork).
++        own = "real_arms" in t
++        t_arms = tuple(t["real_arms"]) if own else real_arms
++        assert set(t_arms) <= set(real_arms) and (not own or ("honest_a" not in t_arms and t["key"] not in rerun_refs
++                                                               and t["key"] not in tc_tasks)), (t["key"], t_arms)
++        for arm in (*t_arms, *(["honest_a"] if t["key"] in rerun_refs else [])):
+             runs.append({"key": f"{arm}/{t['key']}", "arm": arm, "simulator": pilot["real_simulator"], "task": t,
+                          "server": server, "state": "ready", "attempts": [], "real": True})
+-        for name in sims_for(t["key"]):
++        for name in ([] if own else sims_for(t["key"])):
+             for arm in sim_arms:
+                 runs.append({"key": f"{arm}@{name}/{t['key']}", "arm": arm, "simulator": name, "task": t,
+                              "server": server, "state": "waiting", "attempts": [], "real": False,
+@@ -582,8 +588,10 @@
+             if not any(r["attempts"] or r["state"] in ("ready", "waiting") for r in mine):
+                 continue  # nothing of it will ever run (e.g. a reused reference missing or failing its preflight)
+             new = not any(r["attempts"] for r in mine)
+-            if new and (projected + per_task > pilot["spend"]["cap_usd"]
+-                        or worst_case + worst_task > pilot["spend"]["worst_case_limit_usd"]):
++            sims_t = any(not r["real"] for r in mine)  # an attack-only `<key>_r2` entry reserves no simulator spend
++            pt, wt = (per_task, worst_task) if sims_t else (0.0, 0.0)
++            if new and (projected + pt > pilot["spend"]["cap_usd"]
++                        or worst_case + wt > pilot["spend"]["worst_case_limit_usd"]):
+                 break  # the guard: no new task from here on
+             if new:  # the least-loaded server takes the whole task
+                 server = min(servers, key=lambda x: busy[x])
+@@ -594,6 +602,8 @@
+                     continue
+                 if gate_closed and not r["real"]:
+                     continue  # the canary task's simulated runs wait for the gate too
++                if not r["real"] and ((out / "PAUSE_SIMS").exists() or (HERE / "results" / "PAUSE_SIMS").exists()):
++                    continue  # scale-up pause (written before launch in results/, or by a gate in the run): no NEW simulated run
+                 if time.time() - last_launch.get(t["env"], float("-inf")) < run["stagger_s"]:
+                     continue  # one environment's launches are stagger_s apart, simulated ones included
+                 if r["real"] and real_busy >= pilot["max_real_runs"]:
+@@ -606,8 +616,8 @@
+                     for r in mine:
+                         r["server"] = None
+                     break  # it couldn't start yet (capacity or stagger): no later task may start before it
+-                projected += per_task
+-                worst_case += worst_task
++                projected += pt
++                worst_case += wt
+ 
+     for sig in rac.TERMINATING:
+         signal.signal(sig, rac._note_signal)

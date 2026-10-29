@@ -1,0 +1,299 @@
+{
+  "what": "PLAN for the final 32k vs full-length appendix record (09 RULE @ 129b7c4f1 lead §3 (ii), item 33 @ ddadd5f15). Pre-filled 10-16 ~10:5x PT with every known pin; the <TO_FILL ...> entries are the full-length pins (the generator refuses to run while any remains).",
+  "f": "0.01",
+  "mode": "joint",
+  "combo": "pooled_all_origins",
+  "readouts": [
+    "C",
+    "R"
+  ],
+  "lead_readout": "C",
+  "records": {
+    "cut32k": {
+      "file": "alltasks_CRD_r2_allorigins_2026-10-16_044756.json",
+      "sha256": "6e02b62314963cd96288ea117c8eab2a9d1f7758857bf229f078dbefc68441cd",
+      "commit": "5473efdb8",
+      "source": "sol:xfer/fpr507prep/records/results/alltasks_CRD_r2_allorigins_2026-10-16_044756.json",
+      "note": "2e 10-16 ~10:3x: the only 32k record; 09 first read logged at READ_LOG @ b024422e0:1240; npz xfer/fpr507prep/alltasks_CRD_r2_allorigins_2026-10-16_044756_perdraw.npz (c242e059...)"
+    },
+    "full": {
+      "file": "<TO_FILL: full-length Stage A record basename>",
+      "sha256": "<TO_FILL: sha256>",
+      "commit": "<TO_FILL: commit>",
+      "source": "<TO_FILL: sol:path on the solavg Volume>"
+    }
+  },
+  "build_labels": {
+    "cut32k": {
+      "build": "32k final (cut 32768)",
+      "calibration": "registered epoch-1 calibration",
+      "probe_set": "registered probes: Sol (a), FIBS, harmfulness, refusal, high-stakes, own_all_rs_L48"
+    },
+    "full": {
+      "build": "full-length lead (no 32k cut)",
+      "probe_set": "the lead's probes: sol_a_uncut, FIBS, harmfulness, refusal, high-stakes (as is, uncut), own_all_rs_uncut_L48"
+    }
+  },
+  "full_calibration_label_path": [
+    "meta",
+    "<TO_FILL: key of the pinned label starting full length (lead)>"
+  ],
+  "estimator_selection": {
+    "file": "<TO_FILL: estimator_selection_STAMP.json>",
+    "sha256": "<TO_FILL: sha256>",
+    "commit": "<TO_FILL: commit>",
+    "source": "<TO_FILL: git:commit:experiments/2026-10-15_fpr_sweep_507_prep/results/estimator_selection_STAMP.json>",
+    "lead_path": [
+      "lead"
+    ]
+  },
+  "excess_authority": {
+    "cut32k": {
+      "file": "panel_FINAL_32k_r2_2026-10-16_101540.json",
+      "sha256": "26186614d501081c9e608991c9609f6fccd6434a97b7d31b1a68f5c20f3c3761",
+      "commit": "37628d0fa680",
+      "source": "git:37628d0fa680:experiments/2026-10-15_panel_noise_matched/results/panel_FINAL_32k_r2_2026-10-16_101540.json",
+      "code": "ed5be042e",
+      "note": "2e 10-16 ~10:2x: passed 0d's fresh recheck (72/72 by exact string; combo pooled_all_origins); aswin/panel-noise-matched-2e; its npz source is alltasks_CRD_r2_allorigins_2026-10-16_044756.json @ 5473efdb8 (sha256 6e02b623...), which the binding gate requires as the 32k record"
+    },
+    "full": {
+      "file": "<TO_FILL: PANEL full-length FINAL record (drop this entry if none; required if the lead is (B))>",
+      "sha256": "<TO_FILL: sha256>",
+      "commit": "<TO_FILL: commit>",
+      "source": "<TO_FILL: git:commit:path>",
+      "code": "<TO_FILL: its meta.git prefix>"
+    }
+  },
+  "lengths": {
+    "file": "training_lengths_2026-10-16_043740.json",
+    "sha256": "b81c1ed4e51eaa959111abc2ca086100b7cc14feb2338603d8f8b6ded6c2899f",
+    "commit": "c4bc93da2"
+  },
+  "draws_attestation": {
+    "file": "<TO_FILL: draws_attestation_STAMP.json>",
+    "sha256": "<TO_FILL: sha256>",
+    "commit": "<TO_FILL: commit>",
+    "source": "<TO_FILL: git:commit:path or sol:path>",
+    "pass_path": [
+      "pass"
+    ]
+  },
+  "window_markers": {
+    "cut32k": {
+      "path": [
+        "meta",
+        "window"
+      ],
+      "equals": "cut32768"
+    },
+    "full": {
+      "path": [
+        "meta",
+        "window"
+      ],
+      "equals": "full"
+    }
+  },
+  "same_in_both": [
+    [
+      "meta",
+      "cohort_list",
+      "ref"
+    ],
+    [
+      "meta",
+      "cohort_list",
+      "headline_cells"
+    ]
+  ],
+  "probes": [
+    {
+      "probe": "Sol (a)",
+      "bars": [
+        {
+          "window": "cut32k",
+          "label": "Sol (a)",
+          "length": "sol_a_registered",
+          "role": "registered probe"
+        },
+        {
+          "window": "full",
+          "label": "sol_a_uncut",
+          "length": "sol_a_uncut",
+          "role": "new probe trained on full transcripts (OOD class (i)); not the registered probe"
+        },
+        {
+          "window": "full",
+          "label": "Sol (a)|uncut",
+          "length": "sol_a_registered",
+          "role": "registered probe scored on full transcripts (OOD past 32k)"
+        }
+      ]
+    },
+    {
+      "probe": "FIBS",
+      "bars": [
+        {
+          "window": "cut32k",
+          "label": "FIBS",
+          "length": "fibs",
+          "role": "external probe, scored as is"
+        },
+        {
+          "window": "full",
+          "label": "FIBS|uncut",
+          "length": "fibs",
+          "role": "external probe, scored as is"
+        }
+      ]
+    },
+    {
+      "probe": "harmfulness",
+      "bars": [
+        {
+          "window": "cut32k",
+          "label": "harmfulness",
+          "length": "harmfulness",
+          "role": "external probe, scored as is"
+        },
+        {
+          "window": "full",
+          "label": "harmfulness|uncut",
+          "length": "harmfulness",
+          "role": "external probe, scored as is"
+        }
+      ]
+    },
+    {
+      "probe": "refusal",
+      "bars": [
+        {
+          "window": "cut32k",
+          "label": "refusal",
+          "length": "refusal",
+          "role": "external probe, scored as is"
+        },
+        {
+          "window": "full",
+          "label": "refusal|uncut",
+          "length": "refusal",
+          "role": "external probe, scored as is"
+        }
+      ]
+    },
+    {
+      "probe": "high-stakes",
+      "bars": [
+        {
+          "window": "cut32k",
+          "label": "high-stakes",
+          "length": "high-stakes",
+          "role": "external probe, scored as is"
+        },
+        {
+          "window": "full",
+          "label": "high-stakes|uncut",
+          "length": "high-stakes",
+          "role": "external probe, scored as is"
+        }
+      ]
+    },
+    {
+      "probe": "own_all_rs",
+      "bars": [
+        {
+          "window": "cut32k",
+          "label": "own_all_rs_L48",
+          "length": "own_all_rs_registered",
+          "role": "registered probe (on-policy)"
+        },
+        {
+          "window": "full",
+          "label": "own_all_rs_uncut_L48",
+          "length": "own_all_rs_uncut",
+          "role": "new probe trained on full transcripts (OOD class (i)); not the registered probe"
+        },
+        {
+          "window": "full",
+          "label": "own_all_rs_L48|uncut",
+          "length": "own_all_rs_registered",
+          "role": "registered probe scored on full transcripts (OOD past 32k)"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "stat": "S",
+      "what": "six-probe signed mean of the run-mean Δ_full (co-headline (a)), joint 95%",
+      "key": {
+        "cut32k": "headline_six",
+        "full": "headline_six_full"
+      },
+      "expect_members": {
+        "cut32k": [
+          "Sol (a)",
+          "FIBS",
+          "harmfulness",
+          "refusal",
+          "high-stakes",
+          "own_all_rs_L48"
+        ],
+        "full": [
+          "sol_a_uncut",
+          "FIBS|uncut",
+          "harmfulness|uncut",
+          "refusal|uncut",
+          "high-stakes|uncut",
+          "own_all_rs_uncut_L48"
+        ]
+      }
+    },
+    {
+      "stat": "Y",
+      "what": "six-probe signed rerun yardstick: mean over the six of run2(τ_B) − run1(τ_B), joint 95%; printed beside S (S − Y is never printed)",
+      "key": {
+        "cut32k": "headline_six",
+        "full": "headline_six_full"
+      },
+      "expect_members": {
+        "cut32k": [
+          "Sol (a)",
+          "FIBS",
+          "harmfulness",
+          "refusal",
+          "high-stakes",
+          "own_all_rs_L48"
+        ],
+        "full": [
+          "sol_a_uncut",
+          "FIBS|uncut",
+          "harmfulness|uncut",
+          "refusal|uncut",
+          "high-stakes|uncut",
+          "own_all_rs_uncut_L48"
+        ]
+      }
+    },
+    {
+      "stat": "excess",
+      "what": "noise-matched excess, the registered PANEL definition over the OFF-POLICY FIVE (never the run1-trained on-policy probe), on comparator (A); secondary check (09 @ 2d61af835 §2); key by each record's meta.window: cut32768 -> off_policy, full -> off_policy_five_full",
+      "expect_members": {
+        "cut32k": [
+          "Sol (a)",
+          "FIBS",
+          "harmfulness",
+          "refusal",
+          "high-stakes"
+        ],
+        "full": [
+          "sol_a_uncut",
+          "FIBS|uncut",
+          "harmfulness|uncut",
+          "refusal|uncut",
+          "high-stakes|uncut"
+        ]
+      }
+    }
+  ]
+}

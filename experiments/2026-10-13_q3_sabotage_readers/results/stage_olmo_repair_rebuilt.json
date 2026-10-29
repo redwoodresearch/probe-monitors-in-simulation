@@ -1,0 +1,20 @@
+{
+ "reader": "olmo",
+ "rebuilt_from_volume": true,
+ "counters": "missing (the staging client lost its connection)",
+ "gate": 0,
+ "limit": 0,
+ "repair": "B2 fix-full minus F7 (repair_b2.py)",
+ "staged_dir": "/v/sabreaders_olmo_repair_v1",
+ "staged_inputs_sha256": {
+  "sim.jsonl": "26bff43348ef7be9e27429094b592bc30ca9898c8934764092986ba656f1ff08"
+ },
+ "summary": {
+  "sim": {
+   "runs staged": 156,
+   "rows": 10541,
+   "rows read": 7449,
+   "forward tokens": 4404327
+  }
+ }
+}

@@ -1,0 +1,219 @@
+{
+ "seed": "q3-interleaved-run3-sim2-2026-10-14",
+ "pilot_n": 150,
+ "lists": {
+  "estimation_keys": "experiments/2026-10-15_q3_interleaved_run3_sim2/config/il_keys_estimation.json",
+  "selection_keys": "experiments/2026-10-15_q3_interleaved_run3_sim2/config/il_keys_selection.json",
+  "headline_keys": "experiments/2026-10-15_q3_interleaved_run3_sim2/config/il_keys_headline.json"
+ },
+ "stages": {
+  "q1_pilot": {
+   "file": "tasks_il_q1_pilot.json",
+   "sha256": "96f2638fa4e913434ac4b4e0629de423b5fdb5d2455c3748b0acbc98b0ebab30",
+   "cells": 31,
+   "by_env": {
+    "media_processing": 5,
+    "shared_dotfiles": 4,
+    "model_registry": 3,
+    "tiktok": 3,
+    "auto_workflow": 4,
+    "user_tracking": 3,
+    "slack_clone": 4,
+    "file_indexing": 1,
+    "web_scraping": 3,
+    "clinical_trial": 1
+   }
+  },
+  "q1_est": {
+   "file": "tasks_il_q1_est.json",
+   "sha256": "41e21f3cafc8a52d6bc4b7251953a2d3628f3b652f2bb691d666ffb7a1a0df09",
+   "cells": 46,
+   "by_env": {
+    "slack_clone": 4,
+    "tiktok": 3,
+    "media_processing": 6,
+    "shared_dotfiles": 4,
+    "auto_workflow": 8,
+    "user_tracking": 6,
+    "file_indexing": 4,
+    "model_registry": 3,
+    "clinical_trial": 2,
+    "web_scraping": 6
+   }
+  },
+  "q1_sel": {
+   "file": "tasks_il_q1_sel.json",
+   "sha256": "181beb60f1a9eb85cfae3c67dbc4da9d51a77d67c1dc242c68ed076b7b170ef6",
+   "cells": 0,
+   "by_env": {}
+  },
+  "q2_pilot": {
+   "file": "tasks_il_q2_pilot.json",
+   "sha256": "0f6f83c09c91fbd90cfaaa475883de29e0b8741a60f70466551625bcaa948370",
+   "cells": 28,
+   "by_env": {
+    "slack_clone": 5,
+    "web_scraping": 3,
+    "auto_workflow": 4,
+    "file_indexing": 5,
+    "media_processing": 2,
+    "clinical_trial": 1,
+    "model_registry": 2,
+    "user_tracking": 2,
+    "tiktok": 4
+   }
+  },
+  "q2_est": {
+   "file": "tasks_il_q2_est.json",
+   "sha256": "9bd4c0d6af9fa0eea6925e1c3e5a98c7a7839f05af6dd686248b78b38c4c0719",
+   "cells": 47,
+   "by_env": {
+    "web_scraping": 7,
+    "media_processing": 3,
+    "slack_clone": 9,
+    "tiktok": 5,
+    "auto_workflow": 3,
+    "clinical_trial": 2,
+    "user_tracking": 6,
+    "file_indexing": 4,
+    "model_registry": 4,
+    "shared_dotfiles": 4
+   }
+  },
+  "q2_sel": {
+   "file": "tasks_il_q2_sel.json",
+   "sha256": "83430b4fbd51fe3b93d793aa54379fcec8d67296201669139af161df3e30e53c",
+   "cells": 0,
+   "by_env": {}
+  },
+  "q3_pilot": {
+   "file": "tasks_il_q3_pilot.json",
+   "sha256": "fe7c75ff25ee8873dd53407a8d3975c240833392e1de02022831d6ed7e5fa1d9",
+   "cells": 30,
+   "by_env": {
+    "auto_workflow": 3,
+    "tiktok": 3,
+    "user_tracking": 2,
+    "shared_dotfiles": 4,
+    "slack_clone": 3,
+    "web_scraping": 5,
+    "media_processing": 4,
+    "file_indexing": 3,
+    "model_registry": 3
+   }
+  },
+  "q3_est": {
+   "file": "tasks_il_q3_est.json",
+   "sha256": "d682a039f6146fd01b8f2054693357d25f014d886848758f2b002b0070bb4733",
+   "cells": 43,
+   "by_env": {
+    "tiktok": 6,
+    "model_registry": 3,
+    "web_scraping": 5,
+    "slack_clone": 4,
+    "media_processing": 6,
+    "auto_workflow": 8,
+    "shared_dotfiles": 4,
+    "user_tracking": 4,
+    "file_indexing": 3
+   }
+  },
+  "q3_sel": {
+   "file": "tasks_il_q3_sel.json",
+   "sha256": "cb06fd7d5f2a8e33f31b1a2ad753e01be29255d7371e108529eb2d8a965e4f3c",
+   "cells": 0,
+   "by_env": {}
+  },
+  "q4_pilot": {
+   "file": "tasks_il_q4_pilot.json",
+   "sha256": "98aca7d7ddf87ab5b34410ccf385cb018ed987d688ac181b49e1ab8d658e9feb",
+   "cells": 26,
+   "by_env": {
+    "clinical_trial": 2,
+    "user_tracking": 6,
+    "file_indexing": 2,
+    "web_scraping": 4,
+    "slack_clone": 1,
+    "auto_workflow": 3,
+    "tiktok": 4,
+    "model_registry": 2,
+    "media_processing": 1,
+    "shared_dotfiles": 1
+   }
+  },
+  "q4_est": {
+   "file": "tasks_il_q4_est.json",
+   "sha256": "1efd0e2f2423abc05c2c81e50389d016ad9a7b49956ab0dfac1fbe4f84e662f6",
+   "cells": 59,
+   "by_env": {
+    "clinical_trial": 2,
+    "model_registry": 6,
+    "tiktok": 11,
+    "user_tracking": 6,
+    "web_scraping": 7,
+    "auto_workflow": 6,
+    "media_processing": 5,
+    "file_indexing": 8,
+    "slack_clone": 5,
+    "shared_dotfiles": 3
+   }
+  },
+  "q4_sel": {
+   "file": "tasks_il_q4_sel.json",
+   "sha256": "958c4b0616f00f473c865f93aebb45cc720d59ac9355beef8dd3fb8dae10b40a",
+   "cells": 0,
+   "by_env": {}
+  },
+  "old_pilot": {
+   "file": "tasks_il_old_pilot.json",
+   "sha256": "4914d1fca71aa4c884ca2a9a1160e747a044c6fd52bbf5ce8547f8d47b7413cb",
+   "cells": 35,
+   "by_env": {
+    "tiktok": 3,
+    "model_registry": 3,
+    "user_tracking": 3,
+    "slack_clone": 2,
+    "clinical_trial": 10,
+    "web_scraping": 1,
+    "media_processing": 5,
+    "shared_dotfiles": 2,
+    "auto_workflow": 3,
+    "file_indexing": 3
+   }
+  },
+  "old_est": {
+   "file": "tasks_il_old_est.json",
+   "sha256": "d9ced8d4582684b6d28274101d571560f8f2db8736f6af05886116eff361d149",
+   "cells": 64,
+   "by_env": {
+    "file_indexing": 6,
+    "clinical_trial": 18,
+    "user_tracking": 6,
+    "media_processing": 9,
+    "tiktok": 5,
+    "model_registry": 6,
+    "auto_workflow": 5,
+    "shared_dotfiles": 4,
+    "slack_clone": 3,
+    "web_scraping": 2
+   }
+  },
+  "old_sel": {
+   "file": "tasks_il_old_sel.json",
+   "sha256": "ea32cd46f08e6f942614536966db52093aa7ac83c7ccc4a9ee483322be67247e",
+   "cells": 97,
+   "by_env": {
+    "clinical_trial": 16,
+    "slack_clone": 6,
+    "model_registry": 13,
+    "shared_dotfiles": 19,
+    "web_scraping": 6,
+    "auto_workflow": 4,
+    "file_indexing": 12,
+    "tiktok": 4,
+    "media_processing": 7,
+    "user_tracking": 10
+   }
+  }
+ }
+}

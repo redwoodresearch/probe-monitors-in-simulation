@@ -1,0 +1,23 @@
+# Row 2, step 2(a) (../RULE.md, Amendment 1): Qwen3-32B controls (staged by ../../2026-10-12_plantslip_transfer/q2_reply_stage.py,
+# results/q2_reply_stage_2026-10-12_135318.json, first copy at b0a3b620), at the six midpoint layers; the 32k cut and the
+# reader of #36's dump. Arm real-attack-e2-control only (20 runs). One orchestrator (--remote --detach); shard retries off.
+run: 2026-10-12_q2_heldout_controls-e2_qwen3-32b_l20-60_v1
+inputs_from: 2026-10-12_q2_plantslip_reply_controls_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 25
+layers: [20, 28, 36, 44, 52, 60]
+arms: [real-attack-e2-control]
+expect: 20
+inputs_sha256:
+  2026-10-12_q2_plantslip_reply_controls_inputs_v1/inputs/shard_0.jsonl: 0bee27db84743b320c5d59a1b86c83c867f86629037f17e3b2ff90ca26df6753
+  2026-10-12_q2_plantslip_reply_controls_inputs_v1/inputs/shard_1.jsonl: 462a4ec2fa634832ba2bb5f5d0e078b8c9346e4a0d52b9e2f8b3106d550dcd0c
+  2026-10-12_q2_plantslip_reply_controls_inputs_v1/inputs/shard_2.jsonl: 7638936e05334fdd6f9ab7d1ca5dc1325c6ec5067dbc7cb14918d29e8704bfb0
+  2026-10-12_q2_plantslip_reply_controls_inputs_v1/inputs/shard_3.jsonl: ebdd011d896c7be99e5b409781689d1505518a70501e0febb871a650901eaa98
+  2026-10-12_q2_plantslip_reply_controls_inputs_v1/inputs/shard_4.jsonl: a67fa31b19fe4d253405a643c44e48a3d206283d298793cbf9bfc518e5cfd256
+  2026-10-12_q2_plantslip_reply_controls_inputs_v1/inputs/shard_5.jsonl: a99cacfdaa708ecab4c1b06b194ab715bfdd7f98f6ec2a27a7d0f3c26c9d35c8
+  2026-10-12_q2_plantslip_reply_controls_inputs_v1/inputs/shard_6.jsonl: 6ab6d0f2cc4939d3a80efbab23c61460ba8bdf60feebb06463c63809a0d4033d
+  2026-10-12_q2_plantslip_reply_controls_inputs_v1/inputs/shard_7.jsonl: e3d52ef980d1884151e721201bc3156162ecc17a587b1723f50a65c1b78e44e4

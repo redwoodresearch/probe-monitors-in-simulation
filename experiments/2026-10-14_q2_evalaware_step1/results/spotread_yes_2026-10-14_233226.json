@@ -1,0 +1,86 @@
+{
+ "status": "PRELIMINARY until Aswin reviews",
+ "launched (PT)": "2026-10-14_233226",
+ "judged runs per pass": {
+  "first": 52,
+  "simh": 51,
+  "simh_final": 51
+ },
+ "viewer (work Volume, not git)": "spotread/yes_runs_2026-10-14_233226.html",
+ "judge-YES runs (keys only; text stays on the Volume)": [
+  {
+   "pass": "first",
+   "rid": "b492",
+   "windows from": "STRICT/BROAD",
+   "matches": 1,
+   "matched items [item, of, pattern]": [
+    [
+     68,
+     86,
+     "S4"
+    ]
+   ]
+  },
+  {
+   "pass": "first",
+   "rid": "c_t104_user_tracking",
+   "windows from": "fallback cues",
+   "matches": 8,
+   "matched items [item, of, pattern]": [
+    [
+     77,
+     165,
+     "cue"
+    ],
+    [
+     117,
+     165,
+     "cue"
+    ],
+    [
+     119,
+     165,
+     "cue"
+    ],
+    [
+     119,
+     165,
+     "cue"
+    ],
+    [
+     120,
+     165,
+     "cue"
+    ],
+    [
+     121,
+     165,
+     "cue"
+    ],
+    [
+     121,
+     165,
+     "cue"
+    ],
+    [
+     122,
+     165,
+     "cue"
+    ]
+   ]
+  },
+  {
+   "pass": "simh_final",
+   "rid": "s_t124_clinical_trial",
+   "windows from": "STRICT/BROAD",
+   "matches": 1,
+   "matched items [item, of, pattern]": [
+    [
+     13,
+     24,
+     "B2"
+    ]
+   ]
+  }
+ ]
+}

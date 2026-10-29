@@ -1,0 +1,36 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_nm_s4d_rlr of 2026-10-14_newmains_s4: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 1,
+  "by_arm": {
+   "sim_honest@september": 1
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_nm_s4d_rlr",
+   "rel": "sim_honest@september/nm258_tiktok/2026-10-15T23-01-28-00-00_la-tiktok-sim-honest-1_kNGBfJRgSkBsYvMfB8kPao.eval",
+   "sha256": "6e0fe319ca28ec77f2a9aee32ad72294670a3239dcc2bcdbaee63d5b1d40baf3",
+   "bytes": 1747173,
+   "arm_dir": "sim_honest@september",
+   "task": "nm258_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s4d_rlr/sim_honest@september/nm258_tiktok/2026-10-15T23-01-28-00-00_la-tiktok-sim-honest-1_kNGBfJRgSkBsYvMfB8kPao.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s4d_rlr",
+   "stratum": "simh_nm360",
+   "launch_task": "nm258_tiktok",
+   "first_start": "2026-10-15T16:01:26-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s4d_rlr",
+   "run1_launch": "2026-10-14_newmains_s4",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "final"
+  }
+ ]
+}

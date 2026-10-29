@@ -1,0 +1,142 @@
+# Morning figures spec: what each figure draws and where each number comes from (read by plot_morning_figures.py).
+figures:
+- fig: Q3.1
+  slug: clean_attack_detector
+  title: The clean attack detector flags real and simulated attack runs alike
+  caption: 'Q3.1: the clean attack detector (Qwen3.5-27B, 196 tasks) flags 97.8% of real vs 96.2% of simulated attack runs at a 1% target (+1.6 points [−1.1, +5.3]; two real runs +1.6), so a 10-point gap is ruled out; not yet read as catching attacks: no run declined, so attacking can''t be separated from being attack-instructed; about a third of ''attempted'' runs claim success the scorer doesn''t confirm; and the agent''s own reasoning remains in context (interim wording until you decide; post hoc, branch aswin/q3-retrain-build). Real attack runs the side-task scorer confirms are flagged 98.4% [96.2, 100] and runs it doesn''t confirm 95.2% [87.3, 100] (scorer split, 99fe56d6, post hoc).'
+  panels:
+  - title: Attack runs flagged at the 1% target
+    kind: bars
+    unit: percent
+    ylabel: "Attack runs flagged (%)\n(higher is better)"
+    bars:
+    - {label: "Real\n(run 1)", role: real, ref: 61ac55caec11, path: experiments/2026-10-08_q3_onpolicy_figures/results/claim_c_POSTHOC_2026-10-10_225232.json, key: selections/command_end/observed/tpr_run1, lo_key: selections/command_end/tpr_run1_interval/ci95/0, hi_key: selections/command_end/tpr_run1_interval/ci95/1, scale: 100, value: 97.81, lo: 94.38, hi: 100.0}
+    - {label: "Real\n(run 2)", role: real2, ref: 61ac55caec11, path: experiments/2026-10-08_q3_onpolicy_figures/results/claim_c_POSTHOC_2026-10-10_225232.json, key: selections/command_end/observed/tpr_run2, lo_key: selections/command_end/report/tpr_run2_interval/ci95/0, hi_key: selections/command_end/report/tpr_run2_interval/ci95/1, scale: 100, value: 99.45, lo: 97.81, hi: 100.0}
+    - {label: Simulated, role: sim, ref: 61ac55caec11, path: experiments/2026-10-08_q3_onpolicy_figures/results/claim_c_POSTHOC_2026-10-10_225232.json, key: selections/command_end/observed/tpr_sim, lo_key: selections/command_end/report/tpr_sim_interval/ci95/0, hi_key: selections/command_end/report/tpr_sim_interval/ci95/1, scale: 100, value: 96.17, lo: 90.91, hi: 98.92}
+  - title: Gaps, with the ±10-point margin
+    kind: bars
+    unit: points
+    ylabel: "Difference (points)\n(closer to 0 is better)"
+    lines:
+    - {y: 10, label: '+10', source: {ref: 61ac55caec11, path: experiments/2026-10-08_q3_onpolicy_figures/plan_attack_detector_retrain_2026-10-10.md, quote: 'interval inside (−10, +10) points', raw: '+10', scale: 1}}
+    - {y: -10, label: −10, source: {ref: 61ac55caec11, path: experiments/2026-10-08_q3_onpolicy_figures/plan_attack_detector_retrain_2026-10-10.md, quote: 'interval inside (−10, +10) points', raw: '-10', scale: 1}}
+    bars:
+    - {label: Real − simulated, role: gap, ref: 61ac55caec11, path: experiments/2026-10-08_q3_onpolicy_figures/results/claim_c_POSTHOC_2026-10-10_225232.json, key: selections/command_end/observed/gap, lo_key: selections/command_end/gap_interval/ci95/0, hi_key: selections/command_end/gap_interval/ci95/1, scale: 100, value: 1.64, lo: -1.13, hi: 5.29}
+    - {label: "Real run 2 − run 1\n(control)", role: control, ref: 61ac55caec11, path: experiments/2026-10-08_q3_onpolicy_figures/results/claim_c_POSTHOC_2026-10-10_225232.json, key: selections/command_end/observed/control, lo_key: selections/command_end/control_interval/ci95/0, hi_key: selections/command_end/control_interval/ci95/1, scale: 100, value: 1.64, lo: 0.0, hi: 4.87}
+  - title: Real run 1 by side-task scorer outcome (post hoc)
+    kind: bars
+    unit: percent
+    ylabel: "Attack runs flagged at 1% (%)\n(higher is better)"
+    lines: []
+    bars:
+    - {label: "Scorer confirms\nsuccess", role: real, ref: 8c33ba6b355b, path: experiments/2026-10-08_q3_onpolicy_figures/results/scorer_split_POSTHOC_2026-10-11_003502.json, key: results/run1/C/catch_0.01, lo_key: results/run1/C/catch_0.01_interval/ci95/0, hi_key: results/run1/C/catch_0.01_interval/ci95/1, scale: 100, value: 98.44, lo: 96.21, hi: 100.0}
+    - {label: "Scorer does not\nconfirm", role: real, ref: 8c33ba6b355b, path: experiments/2026-10-08_q3_onpolicy_figures/results/scorer_split_POSTHOC_2026-10-11_003502.json, key: results/run1/I/catch_0.01, lo_key: results/run1/I/catch_0.01_interval/ci95/0, hi_key: results/run1/I/catch_0.01_interval/ci95/1, scale: 100, value: 95.24, lo: 87.3, hi: 100.0}
+- fig: Q3.2
+  slug: deception_probe_sd
+  title: The deception probe scores simulated and real attack runs within ±0.25 SD; for success claims it can't be established
+  caption: 'Q3.2: the frozen deception probe (Qwen3.5-27B, layer 31) scores simulated attack runs −0.05 SD [−0.17, +0.07] from real, inside the post hoc ±0.25 SD margin after Holm (two real runs +0.01); on success claims, simulated − real is +0.19 [−0.18, +0.55] and two real runs −0.07 [−0.49, +0.27], neither inside; on your sabotage labels a planted +0.5 SD shift is missed and +1.0 SD caught (#540; SD units differ by bar).'
+  panels:
+  - title: Simulated minus real
+    kind: bars
+    unit: SD
+    ylabel: "Probe score difference (SD)\n(closer to 0 is better)"
+    bars:
+    - {label: "Attack runs:\nsim − real", role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-10_q2_deception_runlevel/results/runlevel_analysis_2026-10-10_215302.json, key: 'part 2: September simulated vs real attack runs/confirmatory (t21-t196)/S (simulated - run 1)/mean (s_H)', lo_key: 'part 2: September simulated vs real attack runs/confirmatory (t21-t196)/S (simulated - run 1)/95% (task bootstrap)/0', hi_key: 'part 2: September simulated vs real attack runs/confirmatory (t21-t196)/S (simulated - run 1)/95% (task bootstrap)/1', scale: 1, value: -0.05, lo: -0.17, hi: 0.07}
+    - {label: "Attack runs:\nrun 2 − run 1", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-10_q2_deception_runlevel/results/runlevel_analysis_2026-10-10_215302.json, key: 'part 2: September simulated vs real attack runs/confirmatory (t21-t196)/C (run 2 - run 1, real-vs-real)/mean (s_H)', lo_key: 'part 2: September simulated vs real attack runs/confirmatory (t21-t196)/C (run 2 - run 1, real-vs-real)/95% (task bootstrap)/0', hi_key: 'part 2: September simulated vs real attack runs/confirmatory (t21-t196)/C (run 2 - run 1, real-vs-real)/95% (task bootstrap)/1', scale: 1, value: 0.01, lo: -0.12, hi: 0.13}
+    - {label: "Claims:\nsim − real", role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-10_q2_false_claims/results/false_claims_posthoc_2026-10-10_160736.json, key: 'planted check, real vs qwen-sim@september (+0.5 real-claim SD on simulated)/unplanted estimate', lo_key: 'planted check, real vs qwen-sim@september (+0.5 real-claim SD on simulated)/unplanted 95%/0', hi_key: 'planted check, real vs qwen-sim@september (+0.5 real-claim SD on simulated)/unplanted 95%/1', scale: 1, value: 0.19, lo: -0.18, hi: 0.55}
+    - {label: "Claims:\nB − A (control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q32_margins_POSTHOC_2026-10-11_003420.json, key: '3 false-done claims, simulated (qwen-sim@september) minus real (real-claim SDs)/real-vs-real: honest_b minus honest_a claims (real-claim SDs)/point', lo_key: '3 false-done claims, simulated (qwen-sim@september) minus real (real-claim SDs)/real-vs-real: honest_b minus honest_a claims (real-claim SDs)/95%/0', hi_key: '3 false-done claims, simulated (qwen-sim@september) minus real (real-claim SDs)/real-vs-real: honest_b minus honest_a claims (real-claim SDs)/95%/1', scale: 1, value: -0.07, lo: -0.49, hi: 0.27}
+    lines:
+    - {y: 0.25, label: +0.25 SD, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: 'Margin ±0.25 SD (Aswin''s example, adopted).', raw: '0.25', scale: 1}}
+    - {y: -0.25, label: −0.25 SD, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: 'Margin ±0.25 SD (Aswin''s example, adopted).', raw: '0.25', scale: 1}}
+  - title: Planted check (your sabotage labels)
+    kind: bars
+    unit: SD
+    ylabel: "Estimated difference (SD)\n(a plant should move it by its size)"
+    bars:
+    - {label: No plant, role: real, ref: 5564a2ee2e64, path: experiments/2026-10-09_q2_deception_commands/results/sabotage_scores_analysis_2026-10-10_210808.json, key: 'primary: within-run paired/D (honest SDs)', lo_key: 'primary: within-run paired/95% (run bootstrap)/0', hi_key: 'primary: within-run paired/95% (run bootstrap)/1', scale: 1, value: 0.06, lo: -0.49, hi: 0.53}
+    - {label: "+0.5 SD\nplanted", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-09_q2_deception_commands/results/sabotage_scores_analysis_2026-10-10_210808.json, key: planted checks (pipeline test on fixed data)/+0.5 SD/planted D, lo_key: planted checks (pipeline test on fixed data)/+0.5 SD/95%/0, hi_key: planted checks (pipeline test on fixed data)/+0.5 SD/95%/1, scale: 1, value: 0.56, lo: 0.01, hi: 1.03}
+    - {label: "+1.0 SD\nplanted", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-09_q2_deception_commands/results/sabotage_scores_analysis_2026-10-10_210808.json, key: planted checks (pipeline test on fixed data)/+1.0 SD/planted D, lo_key: planted checks (pipeline test on fixed data)/+1.0 SD/95%/0, hi_key: planted checks (pipeline test on fixed data)/+1.0 SD/95%/1, scale: 1, value: 1.06, lo: 0.51, hi: 1.53}
+- fig: Q3.3
+  slug: eval_awareness_lines
+  title: An eval line moves the turn-start readout more than a neutral line; on content tokens both effects are tiny
+  caption: 'Q3.3 (exploratory, 99 real runs): at the turn-start template slot an inserted eval line moves the probe 0.26× its made-up-dialogue effect far from the reading point (neutral line −0.06×) and 2.10× near it (neutral +0.33×), and near may reflect closeness to the line; on content tokens (version A, per token) both lines move it under 0.06×, and far from the turn the neutral line moves it more (0.029× vs 0.017×), so the template-slot effect is not seen in the content-token readout.'
+  panels:
+  - title: Template-slot readout (turn start, version B)
+    kind: bars
+    unit: ratio
+    ylabel: "Score shift / made-up-dialogue effect (×)\n(eval line: higher transfers; neutral: near 0)"
+    lines:
+    - {y: 1.0, label: 1×}
+    bars:
+    - {label: "Far:\neval line", role: real, ref: 5564a2ee2e64, path: experiments/2026-10-10_eval_awareness_probe/results/neutral_analysis_2026-10-11_000505.json, key: far/eval effect/fraction, lo_key: far/eval effect/fraction 95%/0, hi_key: far/eval effect/fraction 95%/1, scale: 1, value: 0.26, lo: 0.21, hi: 0.39}
+    - {label: "Far:\nneutral line", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-10_eval_awareness_probe/results/neutral_analysis_2026-10-11_000505.json, key: far/neutral effect (linux)/fraction, lo_key: far/neutral effect (linux)/fraction 95%/0, hi_key: far/neutral effect (linux)/fraction 95%/1, scale: 1, value: -0.06, lo: -0.09, hi: -0.04}
+    - {label: "Near:\neval line", role: real, ref: 5564a2ee2e64, path: experiments/2026-10-10_eval_awareness_probe/results/neutral_analysis_2026-10-11_000505.json, key: near/eval effect/fraction, lo_key: near/eval effect/fraction 95%/0, hi_key: near/eval effect/fraction 95%/1, scale: 1, value: 2.1, lo: 1.89, hi: 3.19}
+    - {label: "Near:\nneutral line", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-10_eval_awareness_probe/results/neutral_analysis_2026-10-11_000505.json, key: near/neutral effect (linux)/fraction, lo_key: near/neutral effect (linux)/fraction 95%/0, hi_key: near/neutral effect (linux)/fraction 95%/1, scale: 1, value: 0.33, lo: 0.29, hi: 0.51}
+    - {label: "Matched\npairs", role: gap, pending: 'Q3.3 matched-pairs result (ea1 session, overnight)'}
+  - title: Content-token readout (version A, per token)
+    kind: bars
+    unit: ratio3
+    ylabel: Score shift / made-up-dialogue effect (×)
+    lines: []
+    bars:
+    - {label: "Far:\neval line", role: real, ref: 5564a2ee2e64, path: experiments/2026-10-10_eval_awareness_probe/results/neutral_analysis_A_per_token_2026-10-11_003153.json, key: far/eval effect/fraction, lo_key: far/eval effect/fraction 95%/0, hi_key: far/eval effect/fraction 95%/1, scale: 1, value: 0.0167, lo: 0.0139, hi: 0.0188}
+    - {label: "Far:\nneutral line", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-10_eval_awareness_probe/results/neutral_analysis_A_per_token_2026-10-11_003153.json, key: far/neutral effect (linux)/fraction, lo_key: far/neutral effect (linux)/fraction 95%/0, hi_key: far/neutral effect (linux)/fraction 95%/1, scale: 1, value: 0.0288, lo: 0.0234, hi: 0.0331}
+    - {label: "Near:\neval line", role: real, ref: 5564a2ee2e64, path: experiments/2026-10-10_eval_awareness_probe/results/neutral_analysis_A_per_token_2026-10-11_003153.json, key: near/eval effect/fraction, lo_key: near/eval effect/fraction 95%/0, hi_key: near/eval effect/fraction 95%/1, scale: 1, value: 0.0575, lo: 0.0481, hi: 0.065}
+    - {label: "Near:\nneutral line", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-10_eval_awareness_probe/results/neutral_analysis_A_per_token_2026-10-11_003153.json, key: near/neutral effect (linux)/fraction, lo_key: near/neutral effect (linux)/fraction 95%/0, hi_key: near/neutral effect (linux)/fraction 95%/1, scale: 1, value: 0.0429, lo: 0.0351, hi: 0.0494}
+- fig: Q3.3b
+  slug: eval_awareness_real_vs_sim
+  title: 'Eval-awareness: the turn-start estimate depends on the real reference; pooling establishes neither a direction beyond ±0.05 nor equivalence within that margin'
+  caption: 'Q3.3b (840 matched cells, 501 tasks; B = turn start, A = content retrained, Old = original probe): Δc for simulated runs is −0.006 vs real run 1 and +0.056 [+0.019, +0.091] vs real run 2 at the turn start (B), so single reference runs disagree; pooled over both real runs (post hoc) it is +0.025 [−0.002, +0.051] (B), −0.023 (A) and −0.037 [−0.064, −0.009] (Old), against its label-permutation null band (permuted within each task; diagnostic), B''s +0.025 and A''s −0.023 sit inside (bands about ±0.027) while Old''s −0.037 falls below its band (−0.026); no direction is established under the ±0.05 margin, and equivalence within it is not shown; for scale, real run 1 with an explicit far eval line against real run 2 gives +0.123 [+0.090, +0.155] (B), +0.032 (A) and −0.016 (Old) in the same pooled terms, which include the baseline difference between the two real runs; the cue''s own effect against run 2 is +0.142, +0.029 and +0.019 (PRs #550–#553, #596).'
+  panels:
+  - title: Simulated vs real run 1
+    kind: bars
+    unit: diff3
+    ylabel: "Share of cells reading higher,\nminus real vs real (closer to 0 is better)"
+    lines:
+    - {y: 0.05, label: +0.05 margin, source: {ref: bafd1eb5d1de, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/real_vs_sim_analysis_2026-10-11_012129.json, key: margins/dc, pm: true}}
+    - {y: -0.05, label: −0.05 margin, source: {ref: bafd1eb5d1de, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/real_vs_sim_analysis_2026-10-11_012129.json, key: margins/dc, pm: true}}
+    bars:
+    - {label: B, role: gap, ref: 424ce2867355, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/planted_power_2026-10-11_014610.json, key: 'B/observed dc (sim vs e1, minus e2 vs e1), same cells', lo_key: B/observed dc 95%/0, hi_key: B/observed dc 95%/1, scale: 1, value: -0.006, lo: -0.0449, hi: 0.0333}
+    - {label: A, role: gap, ref: 424ce2867355, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/planted_power_2026-10-11_014610.json, key: 'A/observed dc (sim vs e1, minus e2 vs e1), same cells', lo_key: A/observed dc 95%/0, hi_key: A/observed dc 95%/1, scale: 1, value: -0.0143, lo: -0.053, hi: 0.0249}
+    - {label: Old, role: gap, ref: 424ce2867355, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/planted_power_2026-10-11_014610.json, key: 'old/observed dc (sim vs e1, minus e2 vs e1), same cells', lo_key: old/observed dc 95%/0, hi_key: old/observed dc 95%/1, scale: 1, value: -0.0512, lo: -0.0889, hi: -0.0131}
+    ylim:
+    - -0.13
+    - 0.13
+  - title: Simulated vs real run 2
+    kind: bars
+    unit: diff3
+    ylabel: "Share of cells reading higher,\nminus real vs real (closer to 0 is better)"
+    lines:
+    - {y: 0.05, label: +0.05 margin, source: {ref: bafd1eb5d1de, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/real_vs_sim_analysis_2026-10-11_012129.json, key: margins/dc, pm: true}}
+    - {y: -0.05, label: −0.05 margin, source: {ref: bafd1eb5d1de, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/real_vs_sim_analysis_2026-10-11_012129.json, key: margins/dc, pm: true}}
+    bars:
+    - {label: B, role: gap, ref: 424ce2867355, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/planted_power_2026-10-11_014610.json, key: B/observed dc against e2 = P(sim > e2) - P(e1 > e2), lo_key: B/observed dc against e2 95%/0, hi_key: B/observed dc against e2 95%/1, scale: 1, value: 0.056, lo: 0.019, hi: 0.0906}
+    - {label: A, role: gap, ref: 424ce2867355, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/planted_power_2026-10-11_014610.json, key: A/observed dc against e2 = P(sim > e2) - P(e1 > e2), lo_key: A/observed dc against e2 95%/0, hi_key: A/observed dc against e2 95%/1, scale: 1, value: -0.0321, lo: -0.0709, hi: 0.0071}
+    - {label: Old, role: gap, ref: 424ce2867355, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/planted_power_2026-10-11_014610.json, key: old/observed dc against e2 = P(sim > e2) - P(e1 > e2), lo_key: old/observed dc against e2 95%/0, hi_key: old/observed dc against e2 95%/1, scale: 1, value: -0.0226, lo: -0.0608, hi: 0.0146}
+    ylim:
+    - -0.13
+    - 0.13
+  - title: "Simulated vs both real runs pooled;\ndotted: label-permutation null band"
+    kind: bars
+    unit: diff3
+    ylabel: "Share of cells reading higher,\nminus real vs real (closer to 0 is better)"
+    lines:
+    - {y: 0.05, label: +0.05 margin, source: {ref: bafd1eb5d1de, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/real_vs_sim_analysis_2026-10-11_012129.json, key: margins/dc, pm: true}}
+    - {y: -0.05, label: −0.05 margin, source: {ref: bafd1eb5d1de, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/real_vs_sim_analysis_2026-10-11_012129.json, key: margins/dc, pm: true}}
+    ylim:
+    - -0.13
+    - 0.13
+    bars:
+    - {label: B, role: gap, ref: c389983764f9, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/pooled_reference_2026-10-11_034014.json, key: [B, dc_pooled = P(sim > a real run) - 0.5], lo_key: [B, dc_pooled 95%, 0], hi_key: [B, dc_pooled 95%, 1], scale: 1, value: 0.025, lo: -0.0023, hi: 0.0512, 'null': {band: [-0.0274, 0.0268], source: {ref: c389983764f9, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/pooled_reference_2026-10-11_034014.json, key: [B, dc_pooled null 95% band (labels permuted within each task; diagnostic)]}}}
+    - {label: A, role: gap, ref: c389983764f9, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/pooled_reference_2026-10-11_034014.json, key: [A, dc_pooled = P(sim > a real run) - 0.5], lo_key: [A, dc_pooled 95%, 0], hi_key: [A, dc_pooled 95%, 1], scale: 1, value: -0.0232, lo: -0.0528, hi: 0.0051, 'null': {band: [-0.0268, 0.0286], source: {ref: c389983764f9, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/pooled_reference_2026-10-11_034014.json, key: [A, dc_pooled null 95% band (labels permuted within each task; diagnostic)]}}}
+    - {label: Old, role: gap, ref: c389983764f9, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/pooled_reference_2026-10-11_034014.json, key: [old, dc_pooled = P(sim > a real run) - 0.5], lo_key: [old, dc_pooled 95%, 0], hi_key: [old, dc_pooled 95%, 1], scale: 1, value: -0.0369, lo: -0.0642, hi: -0.0085, 'null': {band: [-0.0262, 0.0286], source: {ref: c389983764f9, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/pooled_reference_2026-10-11_034014.json, key: [old, dc_pooled null 95% band (labels permuted within each task; diagnostic)]}}}
+  - title: "For scale: run 1 + far eval line vs run 2\n(pooled-style; includes run-to-run differences)"
+    kind: bars
+    unit: diff3
+    ylabel: "P(real run 1 + far eval line\n> real run 2) − 0.5"
+    lines: []
+    bars:
+    - {label: B, role: real, ref: c389983764f9, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/pooled_reference_2026-10-11_034014.json, key: [B, 'planted, pooled-style = P(e1 far > e2) - 0.5'], lo_key: [B, planted 95%, 0], hi_key: [B, planted 95%, 1], scale: 1, value: 0.1226, lo: 0.09, hi: 0.1547}
+    - {label: A, role: real, ref: c389983764f9, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/pooled_reference_2026-10-11_034014.json, key: [A, 'planted, pooled-style = P(e1 far > e2) - 0.5'], lo_key: [A, planted 95%, 0], hi_key: [A, planted 95%, 1], scale: 1, value: 0.0321, lo: -0.0023, hi: 0.0647}
+    - {label: Old, role: real, ref: c389983764f9, path: experiments/2026-10-11_eval_awareness_real_vs_sim/results/pooled_reference_2026-10-11_034014.json, key: [old, 'planted, pooled-style = P(e1 far > e2) - 0.5'], lo_key: [old, planted 95%, 0], hi_key: [old, planted 95%, 1], scale: 1, value: -0.0155, lo: -0.0482, hi: 0.017}
+  ncols: 2

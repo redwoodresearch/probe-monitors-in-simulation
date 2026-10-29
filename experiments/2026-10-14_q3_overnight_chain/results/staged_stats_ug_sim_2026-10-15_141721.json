@@ -1,0 +1,15 @@
+{
+ "target": "ug_sim",
+ "suffix": "_try2",
+ "sets": [
+  {
+   "target": "ug_sim",
+   "arm": "sim_attack@september_ungrounded",
+   "staged_file": "/ev/ug_sim_v1_try2/inputs/sim_attack@september_ungrounded.jsonl",
+   "staged_sha": "014e2de927ecf435f25c94ef4620e4b05d8ae2e9694c4129ae12f49795b05dc7",
+   "epochs": 143,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "model": "qwen3-8b",
+ "original": "results/sweep_qwen3-8b_2026-10-06_140747.json",
+ "rerun": "results/sweep_qwen3-8b_rerun_2026-10-07_103656.json",
+ "original_commit": "87ce721ac2ca9f3997c7a41e6d792b0b6fcd06e3",
+ "rerun_commit": "887c348dd3164382c47ad92ecbb1d3ecc9cf669d",
+ "max_abs_roleplaying_auroc_diff": 0.0,
+ "max_abs_instructed_val_auroc_diff": 0.0,
+ "max_abs_score_diff": {
+  "instructed_val": 0.0,
+  "roleplaying_llama-70b-3.3": 0.0,
+  "roleplaying_qwen3-32b": 0.0
+ },
+ "missing_score_mismatches": {
+  "instructed_val": 0,
+  "roleplaying_llama-70b-3.3": 0,
+  "roleplaying_qwen3-32b": 0
+ },
+ "same_detected_token_counts": true,
+ "identical_aurocs": true,
+ "best_final_norm": {
+  "layer": 20,
+  "original": 0.947278911564626,
+  "rerun": 0.947278911564626
+ }
+}

@@ -1,0 +1,27 @@
+# Qwen3.5-27B reader (qwen35 track, 2026-10-06): the settings of q1_alllayers_callend_scrub6.yaml (amendment 3's call_end rerun) on the
+# Qwen3.5 extraction of the same text, whole transcripts. Run with PROBE_SHIFT_ACTS_VOLUME=probe-shift_aswin-surya_sub-qwen35_acts_kill-2026-11-06.
+# Matched rows: only the positions the Qwen3-32B extraction read inside its 32k cut.
+extraction_run: 2026-10-06_la_segment-end-scrub6_qwen35-27b_alllayers_v1   # Qwen3.5-27B, every layer, whole transcripts
+activations_volume: probe-shift_aswin-surya_sub-qwen35_acts_kill-2026-11-06
+match_cut_file: 2026-10-06_la_segment-end-scrub6_qwen35-27b_alllayers_v1/qwen3_cut/2026-10-06_la_segment-end-scrub6_qwen3-32b_alllayers_v1.json   # run_qwen3_cut_index.py (qwen35 track)
+folds_file: folds_v2.json          # main-task folds, shared by every track (folds_v3.json is identical)
+exclusions_file: exclusions_v3.json  # paired cells: valid in all three attack arms; sim_reference; under-32k pairing
+layers: all                        # 0-63
+positions: [call_end]              # call_end rerun: the `<n>` placeholder's `>` is a fixed slot too (protocol amendment 3)
+sensitivity_positions: []          # markers were read in the full run
+C: 0.01                            # L2 logistic regression on standardized features, as in the pooled pilot
+max_iter: 2000
+bootstrap: 1000                    # resamples of main tasks for 95% intervals
+shuffle_null: 100                  # refits; per main task, real and sim labels swap with probability 1/2
+random_directions: 1000            # baseline: best of this many random unit directions, picked on the training folds
+position_bands: [[0, 8192], [8192, 16384], [16384, 32768]]
+seed: 0
+n_jobs: 32
+headline_tolerance: 0.01               # headline layer: earliest within this of the best inner-CV AUROC (training folds only)
+meta_dir: meta                     # all-layers runs keep transcript metadata under meta/
+by_layer: true                     # and activations in by_layer/L<l>/ chunk files
+# The level-7 protocol's settings, at this text level (full mode, every layer): for the curves and the ladder.
+lite: false                        # inner CV for the headline layer, random directions, marker sensitivity
+inner_cv_environment: true         # headline for held-out environments (primary split): inner CV over training environments
+call_content_only: true            # call_end: drop calls whose read token is a fixed slot (timeout's final 0, escaped n)
+variants: [all_outputs, no_editor_outputs]   # primary: all outputs; no editor alongside

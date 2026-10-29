@@ -1,0 +1,1482 @@
+{
+ "label": "POST HOC; synthetic fixtures only",
+ "readers": {
+  "Qwen3-32B": [
+   "Qwen/Qwen3-32B",
+   "9216db5781bf21249d130ec9da846c4624c16137",
+   "qwen"
+  ],
+  "Qwen3.5-27B": [
+   "Qwen/Qwen3.5-27B",
+   "fc05daec18b0a78c049392ed2e771dde82bdf654",
+   "qwen"
+  ],
+  "Olmo-3.1-32B": [
+   "allenai/Olmo-3.1-32B-Instruct",
+   "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+   "r2"
+  ],
+  "Llama-3.3-70B": [
+   "meta-llama/Llama-3.3-70B-Instruct",
+   "6f6073b423013f6a7d4d9f39144961bfbfbc386b",
+   "r2j"
+  ],
+  "Seed-OSS-36B": [
+   "ByteDance-Seed/Seed-OSS-36B-Instruct",
+   "497f1dca95ebdec98e41d517b9f060ee753c902f",
+   "r2s"
+  ]
+ },
+ "results": {
+  "Qwen3-32B|bash_trailing_newline": {
+   "rule": "qwen",
+   "newline_reaches_reader": true,
+   "output_ends_in_newline": true,
+   "readout": 74,
+   "window": [
+    {
+     "i": 66,
+     "token": "0",
+     "readout": false
+    },
+    {
+     "i": 67,
+     "token": ":",
+     "readout": false
+    },
+    {
+     "i": 68,
+     "token": "5",
+     "readout": false
+    },
+    {
+     "i": 69,
+     "token": "8",
+     "readout": false
+    },
+    {
+     "i": 70,
+     "token": "\u0120g",
+     "readout": false
+    },
+    {
+     "i": 71,
+     "token": "3",
+     "readout": false
+    },
+    {
+     "i": 72,
+     "token": "_fixture",
+     "readout": false
+    },
+    {
+     "i": 73,
+     "token": "_notes",
+     "readout": false
+    },
+    {
+     "i": 74,
+     "token": ".txt",
+     "readout": true
+    },
+    {
+     "i": 75,
+     "token": "\u010a\u010a",
+     "readout": false
+    },
+    {
+     "i": 76,
+     "token": "</tool_response>",
+     "readout": false
+    },
+    {
+     "i": 77,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 78,
+     "token": "\u010a",
+     "readout": false
+    }
+   ]
+  },
+  "Qwen3-32B|str_replace_real_gutter": {
+   "rule": "qwen",
+   "output_ends_in_newline": false,
+   "readout": 131,
+   "window": [
+    {
+     "i": 123,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 124,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 125,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 126,
+     "token": "|",
+     "readout": false
+    },
+    {
+     "i": 127,
+     "token": "+",
+     "readout": false
+    },
+    {
+     "i": 128,
+     "token": "\u0120y",
+     "readout": false
+    },
+    {
+     "i": 129,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 130,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 131,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 132,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 133,
+     "token": "</tool_response>",
+     "readout": false
+    },
+    {
+     "i": 134,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 135,
+     "token": "\u010a",
+     "readout": false
+    }
+   ]
+  },
+  "Qwen3-32B|str_replace_sim_plain_newline": {
+   "rule": "qwen",
+   "newline_reaches_reader": true,
+   "output_ends_in_newline": true,
+   "readout": 123,
+   "window": [
+    {
+     "i": 115,
+     "token": "-y",
+     "readout": false
+    },
+    {
+     "i": 116,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 117,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 118,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 119,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 120,
+     "token": "+y",
+     "readout": false
+    },
+    {
+     "i": 121,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 122,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 123,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 124,
+     "token": "\u010a\u010a",
+     "readout": false
+    },
+    {
+     "i": 125,
+     "token": "</tool_response>",
+     "readout": false
+    },
+    {
+     "i": 126,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 127,
+     "token": "\u010a",
+     "readout": false
+    }
+   ]
+  },
+  "Qwen3-32B|insert_with_review_note": {
+   "rule": "qwen",
+   "output_ends_in_newline": false,
+   "readout": 152,
+   "window": [
+    {
+     "i": 144,
+     "token": ",",
+     "readout": false
+    },
+    {
+     "i": 145,
+     "token": "\u0120etc",
+     "readout": false
+    },
+    {
+     "i": 146,
+     "token": ").",
+     "readout": false
+    },
+    {
+     "i": 147,
+     "token": "\u0120Edit",
+     "readout": false
+    },
+    {
+     "i": 148,
+     "token": "\u0120the",
+     "readout": false
+    },
+    {
+     "i": 149,
+     "token": "\u0120file",
+     "readout": false
+    },
+    {
+     "i": 150,
+     "token": "\u0120again",
+     "readout": false
+    },
+    {
+     "i": 151,
+     "token": "\u0120if",
+     "readout": false
+    },
+    {
+     "i": 152,
+     "token": "\u0120necessary",
+     "readout": true
+    },
+    {
+     "i": 153,
+     "token": ".\u010a",
+     "readout": false
+    },
+    {
+     "i": 154,
+     "token": "</tool_response>",
+     "readout": false
+    },
+    {
+     "i": 155,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 156,
+     "token": "\u010a",
+     "readout": false
+    }
+   ]
+  },
+  "Qwen3.5-27B|bash_trailing_newline": {
+   "rule": "qwen",
+   "newline_reaches_reader": false,
+   "output_ends_in_newline": true,
+   "readout": 85,
+   "window": [
+    {
+     "i": 77,
+     "token": "0",
+     "readout": false
+    },
+    {
+     "i": 78,
+     "token": ":",
+     "readout": false
+    },
+    {
+     "i": 79,
+     "token": "5",
+     "readout": false
+    },
+    {
+     "i": 80,
+     "token": "8",
+     "readout": false
+    },
+    {
+     "i": 81,
+     "token": "\u0120g",
+     "readout": false
+    },
+    {
+     "i": 82,
+     "token": "3",
+     "readout": false
+    },
+    {
+     "i": 83,
+     "token": "_fixture",
+     "readout": false
+    },
+    {
+     "i": 84,
+     "token": "_notes",
+     "readout": false
+    },
+    {
+     "i": 85,
+     "token": ".txt",
+     "readout": true
+    },
+    {
+     "i": 86,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 87,
+     "token": "</tool_response>",
+     "readout": false
+    },
+    {
+     "i": 88,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 89,
+     "token": "\u010a",
+     "readout": false
+    }
+   ]
+  },
+  "Qwen3.5-27B|str_replace_real_gutter": {
+   "rule": "qwen",
+   "output_ends_in_newline": false,
+   "readout": 159,
+   "window": [
+    {
+     "i": 151,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 152,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 153,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 154,
+     "token": "|",
+     "readout": false
+    },
+    {
+     "i": 155,
+     "token": "+",
+     "readout": false
+    },
+    {
+     "i": 156,
+     "token": "\u0120y",
+     "readout": false
+    },
+    {
+     "i": 157,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 158,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 159,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 160,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 161,
+     "token": "</tool_response>",
+     "readout": false
+    },
+    {
+     "i": 162,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 163,
+     "token": "\u010a",
+     "readout": false
+    }
+   ]
+  },
+  "Qwen3.5-27B|str_replace_sim_plain_newline": {
+   "rule": "qwen",
+   "newline_reaches_reader": false,
+   "output_ends_in_newline": true,
+   "readout": 151,
+   "window": [
+    {
+     "i": 143,
+     "token": "-y",
+     "readout": false
+    },
+    {
+     "i": 144,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 145,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 146,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 147,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 148,
+     "token": "+y",
+     "readout": false
+    },
+    {
+     "i": 149,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 150,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 151,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 152,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 153,
+     "token": "</tool_response>",
+     "readout": false
+    },
+    {
+     "i": 154,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 155,
+     "token": "\u010a",
+     "readout": false
+    }
+   ]
+  },
+  "Qwen3.5-27B|insert_with_review_note": {
+   "rule": "qwen",
+   "output_ends_in_newline": false,
+   "readout": 180,
+   "window": [
+    {
+     "i": 172,
+     "token": "\u0120etc",
+     "readout": false
+    },
+    {
+     "i": 173,
+     "token": ").",
+     "readout": false
+    },
+    {
+     "i": 174,
+     "token": "\u0120Edit",
+     "readout": false
+    },
+    {
+     "i": 175,
+     "token": "\u0120the",
+     "readout": false
+    },
+    {
+     "i": 176,
+     "token": "\u0120file",
+     "readout": false
+    },
+    {
+     "i": 177,
+     "token": "\u0120again",
+     "readout": false
+    },
+    {
+     "i": 178,
+     "token": "\u0120if",
+     "readout": false
+    },
+    {
+     "i": 179,
+     "token": "\u0120necessary",
+     "readout": false
+    },
+    {
+     "i": 180,
+     "token": ".",
+     "readout": true
+    },
+    {
+     "i": 181,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 182,
+     "token": "</tool_response>",
+     "readout": false
+    },
+    {
+     "i": 183,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 184,
+     "token": "\u010a",
+     "readout": false
+    }
+   ]
+  },
+  "Olmo-3.1-32B|bash_trailing_newline": {
+   "rule": "r2",
+   "newline_reaches_reader": true,
+   "output_ends_in_newline": true,
+   "readout": 115,
+   "window": [
+    {
+     "i": 107,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 108,
+     "token": "00",
+     "readout": false
+    },
+    {
+     "i": 109,
+     "token": ":",
+     "readout": false
+    },
+    {
+     "i": 110,
+     "token": "58",
+     "readout": false
+    },
+    {
+     "i": 111,
+     "token": "\u0120g",
+     "readout": false
+    },
+    {
+     "i": 112,
+     "token": "3",
+     "readout": false
+    },
+    {
+     "i": 113,
+     "token": "_fixture",
+     "readout": false
+    },
+    {
+     "i": 114,
+     "token": "_notes",
+     "readout": false
+    },
+    {
+     "i": 115,
+     "token": ".txt",
+     "readout": true
+    },
+    {
+     "i": 116,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 117,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 118,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 119,
+     "token": "<|im_start|>",
+     "readout": false
+    }
+   ]
+  },
+  "Olmo-3.1-32B|str_replace_real_gutter": {
+   "rule": "r2",
+   "output_ends_in_newline": false,
+   "readout": 170,
+   "window": [
+    {
+     "i": 162,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 163,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 164,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 165,
+     "token": "|",
+     "readout": false
+    },
+    {
+     "i": 166,
+     "token": "+",
+     "readout": false
+    },
+    {
+     "i": 167,
+     "token": "\u0120y",
+     "readout": false
+    },
+    {
+     "i": 168,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 169,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 170,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 171,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 172,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 173,
+     "token": "<|im_start|>",
+     "readout": false
+    },
+    {
+     "i": 174,
+     "token": "assistant",
+     "readout": false
+    }
+   ]
+  },
+  "Olmo-3.1-32B|str_replace_sim_plain_newline": {
+   "rule": "r2",
+   "newline_reaches_reader": true,
+   "output_ends_in_newline": true,
+   "readout": 162,
+   "window": [
+    {
+     "i": 154,
+     "token": "-y",
+     "readout": false
+    },
+    {
+     "i": 155,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 156,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 157,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 158,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 159,
+     "token": "+y",
+     "readout": false
+    },
+    {
+     "i": 160,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 161,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 162,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 163,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 164,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 165,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 166,
+     "token": "<|im_start|>",
+     "readout": false
+    }
+   ]
+  },
+  "Olmo-3.1-32B|insert_with_review_note": {
+   "rule": "r2",
+   "output_ends_in_newline": false,
+   "readout": 192,
+   "window": [
+    {
+     "i": 184,
+     "token": "\u0120etc",
+     "readout": false
+    },
+    {
+     "i": 185,
+     "token": ").",
+     "readout": false
+    },
+    {
+     "i": 186,
+     "token": "\u0120Edit",
+     "readout": false
+    },
+    {
+     "i": 187,
+     "token": "\u0120the",
+     "readout": false
+    },
+    {
+     "i": 188,
+     "token": "\u0120file",
+     "readout": false
+    },
+    {
+     "i": 189,
+     "token": "\u0120again",
+     "readout": false
+    },
+    {
+     "i": 190,
+     "token": "\u0120if",
+     "readout": false
+    },
+    {
+     "i": 191,
+     "token": "\u0120necessary",
+     "readout": false
+    },
+    {
+     "i": 192,
+     "token": ".",
+     "readout": true
+    },
+    {
+     "i": 193,
+     "token": "<|im_end|>",
+     "readout": false
+    },
+    {
+     "i": 194,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 195,
+     "token": "<|im_start|>",
+     "readout": false
+    },
+    {
+     "i": 196,
+     "token": "assistant",
+     "readout": false
+    }
+   ]
+  },
+  "Llama-3.3-70B|bash_trailing_newline": {
+   "rule": "r2j",
+   "newline_reaches_reader": true,
+   "output_ends_in_newline": true,
+   "readout": 94,
+   "window": [
+    {
+     "i": 86,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 87,
+     "token": "00",
+     "readout": false
+    },
+    {
+     "i": 88,
+     "token": ":",
+     "readout": false
+    },
+    {
+     "i": 89,
+     "token": "58",
+     "readout": false
+    },
+    {
+     "i": 90,
+     "token": "\u0120g",
+     "readout": false
+    },
+    {
+     "i": 91,
+     "token": "3",
+     "readout": false
+    },
+    {
+     "i": 92,
+     "token": "_fixture",
+     "readout": false
+    },
+    {
+     "i": 93,
+     "token": "_notes",
+     "readout": false
+    },
+    {
+     "i": 94,
+     "token": ".txt",
+     "readout": true
+    },
+    {
+     "i": 95,
+     "token": "\\n",
+     "readout": false
+    },
+    {
+     "i": 96,
+     "token": "\"",
+     "readout": false
+    },
+    {
+     "i": 97,
+     "token": "<|eot_id|>",
+     "readout": false
+    },
+    {
+     "i": 98,
+     "token": "<|start_header_id|>",
+     "readout": false
+    }
+   ]
+  },
+  "Llama-3.3-70B|str_replace_real_gutter": {
+   "rule": "r2j",
+   "output_ends_in_newline": false,
+   "readout": 157,
+   "window": [
+    {
+     "i": 149,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 150,
+     "token": "\\n",
+     "readout": false
+    },
+    {
+     "i": 151,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 152,
+     "token": "|",
+     "readout": false
+    },
+    {
+     "i": 153,
+     "token": "+",
+     "readout": false
+    },
+    {
+     "i": 154,
+     "token": "\u0120y",
+     "readout": false
+    },
+    {
+     "i": 155,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 156,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 157,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 158,
+     "token": "\"",
+     "readout": false
+    },
+    {
+     "i": 159,
+     "token": "<|eot_id|>",
+     "readout": false
+    },
+    {
+     "i": 160,
+     "token": "<|start_header_id|>",
+     "readout": false
+    },
+    {
+     "i": 161,
+     "token": "assistant",
+     "readout": false
+    }
+   ]
+  },
+  "Llama-3.3-70B|str_replace_sim_plain_newline": {
+   "rule": "r2j",
+   "newline_reaches_reader": true,
+   "output_ends_in_newline": true,
+   "readout": 149,
+   "window": [
+    {
+     "i": 141,
+     "token": "-y",
+     "readout": false
+    },
+    {
+     "i": 142,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 143,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 144,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 145,
+     "token": "\\n",
+     "readout": false
+    },
+    {
+     "i": 146,
+     "token": "+y",
+     "readout": false
+    },
+    {
+     "i": 147,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 148,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 149,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 150,
+     "token": "\\n",
+     "readout": false
+    },
+    {
+     "i": 151,
+     "token": "\"",
+     "readout": false
+    },
+    {
+     "i": 152,
+     "token": "<|eot_id|>",
+     "readout": false
+    },
+    {
+     "i": 153,
+     "token": "<|start_header_id|>",
+     "readout": false
+    }
+   ]
+  },
+  "Llama-3.3-70B|insert_with_review_note": {
+   "rule": "r2j",
+   "output_ends_in_newline": false,
+   "readout": 179,
+   "window": [
+    {
+     "i": 171,
+     "token": ",",
+     "readout": false
+    },
+    {
+     "i": 172,
+     "token": "\u0120etc",
+     "readout": false
+    },
+    {
+     "i": 173,
+     "token": ").",
+     "readout": false
+    },
+    {
+     "i": 174,
+     "token": "\u0120Edit",
+     "readout": false
+    },
+    {
+     "i": 175,
+     "token": "\u0120the",
+     "readout": false
+    },
+    {
+     "i": 176,
+     "token": "\u0120file",
+     "readout": false
+    },
+    {
+     "i": 177,
+     "token": "\u0120again",
+     "readout": false
+    },
+    {
+     "i": 178,
+     "token": "\u0120if",
+     "readout": false
+    },
+    {
+     "i": 179,
+     "token": "\u0120necessary",
+     "readout": true
+    },
+    {
+     "i": 180,
+     "token": ".\"",
+     "readout": false
+    },
+    {
+     "i": 181,
+     "token": "<|eot_id|>",
+     "readout": false
+    },
+    {
+     "i": 182,
+     "token": "<|start_header_id|>",
+     "readout": false
+    },
+    {
+     "i": 183,
+     "token": "assistant",
+     "readout": false
+    }
+   ]
+  },
+  "Seed-OSS-36B|bash_trailing_newline": {
+   "rule": "r2s",
+   "newline_reaches_reader": true,
+   "output_ends_in_newline": true,
+   "readout": 79,
+   "window": [
+    {
+     "i": 71,
+     "token": "8",
+     "readout": false
+    },
+    {
+     "i": 72,
+     "token": "\u0120g",
+     "readout": false
+    },
+    {
+     "i": 73,
+     "token": "3",
+     "readout": false
+    },
+    {
+     "i": 74,
+     "token": "_f",
+     "readout": false
+    },
+    {
+     "i": 75,
+     "token": "i",
+     "readout": false
+    },
+    {
+     "i": 76,
+     "token": "xture",
+     "readout": false
+    },
+    {
+     "i": 77,
+     "token": "_not",
+     "readout": false
+    },
+    {
+     "i": 78,
+     "token": "es",
+     "readout": false
+    },
+    {
+     "i": 79,
+     "token": ".txt",
+     "readout": true
+    },
+    {
+     "i": 80,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 81,
+     "token": "<seed:eos>",
+     "readout": false
+    },
+    {
+     "i": 82,
+     "token": "<seed:bos>",
+     "readout": false
+    },
+    {
+     "i": 83,
+     "token": "ass",
+     "readout": false
+    }
+   ]
+  },
+  "Seed-OSS-36B|str_replace_real_gutter": {
+   "rule": "r2s",
+   "output_ends_in_newline": false,
+   "readout": 151,
+   "window": [
+    {
+     "i": 143,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 144,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 145,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 146,
+     "token": "|",
+     "readout": false
+    },
+    {
+     "i": 147,
+     "token": "+",
+     "readout": false
+    },
+    {
+     "i": 148,
+     "token": "\u0120y",
+     "readout": false
+    },
+    {
+     "i": 149,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 150,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 151,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 152,
+     "token": "<seed:eos>",
+     "readout": false
+    },
+    {
+     "i": 153,
+     "token": "<seed:bos>",
+     "readout": false
+    },
+    {
+     "i": 154,
+     "token": "ass",
+     "readout": false
+    },
+    {
+     "i": 155,
+     "token": "istant",
+     "readout": false
+    }
+   ]
+  },
+  "Seed-OSS-36B|str_replace_sim_plain_newline": {
+   "rule": "r2s",
+   "newline_reaches_reader": true,
+   "output_ends_in_newline": true,
+   "readout": 143,
+   "window": [
+    {
+     "i": 135,
+     "token": "-y",
+     "readout": false
+    },
+    {
+     "i": 136,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 137,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 138,
+     "token": "2",
+     "readout": false
+    },
+    {
+     "i": 139,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 140,
+     "token": "+y",
+     "readout": false
+    },
+    {
+     "i": 141,
+     "token": "\u0120=",
+     "readout": false
+    },
+    {
+     "i": 142,
+     "token": "\u0120",
+     "readout": false
+    },
+    {
+     "i": 143,
+     "token": "3",
+     "readout": true
+    },
+    {
+     "i": 144,
+     "token": "\u010a",
+     "readout": false
+    },
+    {
+     "i": 145,
+     "token": "<seed:eos>",
+     "readout": false
+    },
+    {
+     "i": 146,
+     "token": "<seed:bos>",
+     "readout": false
+    },
+    {
+     "i": 147,
+     "token": "ass",
+     "readout": false
+    }
+   ]
+  },
+  "Seed-OSS-36B|insert_with_review_note": {
+   "rule": "r2s",
+   "output_ends_in_newline": false,
+   "readout": 172,
+   "window": [
+    {
+     "i": 164,
+     "token": "\u0120etc",
+     "readout": false
+    },
+    {
+     "i": 165,
+     "token": ").",
+     "readout": false
+    },
+    {
+     "i": 166,
+     "token": "\u0120Edit",
+     "readout": false
+    },
+    {
+     "i": 167,
+     "token": "\u0120the",
+     "readout": false
+    },
+    {
+     "i": 168,
+     "token": "\u0120file",
+     "readout": false
+    },
+    {
+     "i": 169,
+     "token": "\u0120again",
+     "readout": false
+    },
+    {
+     "i": 170,
+     "token": "\u0120if",
+     "readout": false
+    },
+    {
+     "i": 171,
+     "token": "\u0120necessary",
+     "readout": false
+    },
+    {
+     "i": 172,
+     "token": ".",
+     "readout": true
+    },
+    {
+     "i": 173,
+     "token": "<seed:eos>",
+     "readout": false
+    },
+    {
+     "i": 174,
+     "token": "<seed:bos>",
+     "readout": false
+    },
+    {
+     "i": 175,
+     "token": "ass",
+     "readout": false
+    },
+    {
+     "i": 176,
+     "token": "istant",
+     "readout": false
+    }
+   ]
+  }
+ }
+}

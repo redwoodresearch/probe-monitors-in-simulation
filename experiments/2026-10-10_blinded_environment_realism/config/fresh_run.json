@@ -1,0 +1,27 @@
+{
+  "models": [
+    "google/gemini-3.1-pro-preview",
+    "x-ai/grok-4.7",
+    "deepseek/deepseek-v4-pro"
+  ],
+  "budget_usd": 5.0,
+  "concurrency": 24,
+  "max_tokens": 2048,
+  "reasoning_effort": "low",
+  "temperature": 0,
+  "request_timeout_seconds": 180,
+  "expected_output_tokens_per_call": 400,
+  "expected_sha256_prefix": "243a7cc435f6adee",
+  "expected_items": 124,
+  "env_file": ".env",
+  "api_base": "https://openrouter.ai/api/v1",
+  "provider": {
+    "ignore": [
+      "Fireworks"
+    ],
+    "data_collection": "deny",
+    "require_parameters": true
+  },
+  "automatic_retries": 0,
+  "prior_spend_usd": 0
+}

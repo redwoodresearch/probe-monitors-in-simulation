@@ -1,0 +1,11 @@
+# Pilot control only (2026-10-06): qwen35_alllayers.yaml without the right-padding, to check that padding leaves the
+# readout rows unchanged. Run with --test only.
+run: 2026-10-06_la_segment-end_qwen35-27b_alllayers_nopad
+inputs_from: 2026-10-06_la_segment-end_qwen3-32b_v1   # the staged reader messages (the template trims them itself)
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null                                        # whole transcripts
+pad_to: 1                                               # no padding
+shards: 40                                              # same deal as the padded config, so --test reads the same transcripts
+chunk_size: 25

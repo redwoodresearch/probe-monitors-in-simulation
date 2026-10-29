@@ -1,0 +1,105 @@
+{
+ "failures_source": {
+  "commit": "36a2047fa643a37921b2e2ae59740c0f54523a0b",
+  "path": "experiments/2026-10-14_q3_new_mains_launch/results/sim_ratelimit_failures_2026-10-15.json",
+  "sha256": "e9a8832f99656d7110b277581896022eb7ae6a588f2624ed1db0f01388b75346"
+ },
+ "rate_usd_per_cell": 20.5,
+ "skipped": [
+  [
+   "/home/aswin/phase2/nm/runs/2026-10-14_newmains_s5_fu",
+   "nm085_file_indexing",
+   "not an IL host prepared here"
+  ],
+  [
+   "/home/aswin/phase2/nm/runs/2026-10-14_newmains_s5_fu",
+   "nm331_web_scraping",
+   "not an IL host prepared here"
+  ],
+  [
+   "/home/aswin/phase2/nm/runs/2026-10-14_newmains_s5_fu",
+   "nm117_media_processing",
+   "not an IL host prepared here"
+  ],
+  [
+   "/home/aswin/phase2/nm/runs/2026-10-14_newmains_s5_fu",
+   "nm148_model_registry",
+   "not an IL host prepared here"
+  ],
+  [
+   "/home/aswin/phase2/nm/runs/2026-10-14_newmains_s5_fu",
+   "nm128_media_processing",
+   "not an IL host prepared here"
+  ],
+  [
+   "/home/aswin/phase2/nm/runs/2026-10-14_newmains_s5_fu",
+   "nm325_web_scraping",
+   "not an IL host prepared here"
+  ]
+ ],
+ "hosts": {
+  "old": {
+   "cells": 14,
+   "cap_usd": 287,
+   "tasks_sha256": "a5f6ee1544bb030130419064049d2fe5a68ee95d200819275ad9f7db16954465",
+   "config_sha256": "aed35db439ddf26bdc6187174783ef9666218fc7484c504a83ba8e86b2778fd5",
+   "rerun_of_sha256": "ae86461c2f5c40559f551ddfffd7316fb751323fa25b2816480ff2d3f3d341e8",
+   "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "references_from": "/home/aswin/phase2/il_refindex_old"
+  },
+  "q1": {
+   "cells": 8,
+   "cap_usd": 164,
+   "tasks_sha256": "a67013caacd5be75411c642732504fa95e85ada07cece854501fe5fa3b93769a",
+   "config_sha256": "457d0298b4fbc71d9eb8c3abfc45baa4bf9cf20cad37236845e2233023b983da",
+   "rerun_of_sha256": "0a1ddfa681423424dd35fba875390dbd57e9551c14e9114b3467f7826b3c6c04",
+   "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_q1",
+   "references_from": "/home/aswin/phase2/runs/2026-10-14_154401_scaleup311_q1"
+  },
+  "q2": {
+   "cells": 13,
+   "cap_usd": 266,
+   "tasks_sha256": "afd93655f1052fd55dc934353663c3a3ec874acde8f29248ac579706ca659f56",
+   "config_sha256": "5b5e6606344dd860edc0eac6d4925acb058cd5cdaeb7f9dc84c70e3bf785eef3",
+   "rerun_of_sha256": "a5e4ad3e7fd3b10bbbc644cd2198453e7bae9121e741f87a3a81492de23bf257",
+   "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "references_from": "/home/aswin/phase2/runs/2026-10-14_154401_scaleup311_q2"
+  },
+  "q3": {
+   "cells": 19,
+   "cap_usd": 389,
+   "tasks_sha256": "83c7be416db4f26c438f4b77a44934013b601f35ed8aa310e2afc4fd1a276030",
+   "config_sha256": "c7bfaeafa4358f3d3850b7683cf35343ccfd2fdcc9fc605cc50a0ccae05934dd",
+   "rerun_of_sha256": "b2cdd16391899ed895e0ade477df5169b2b7d8d284e9001557fdb02d0b61e326",
+   "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "references_from": "/home/aswin/phase2/runs/2026-10-14_155838_scaleup311_q3"
+  },
+  "q4": {
+   "cells": 11,
+   "cap_usd": 225,
+   "tasks_sha256": "b33739bde3510d2d80c4727196117a80ef1b1e8376fe7f4166f24c05007780ae",
+   "config_sha256": "950c3f4129c74b51969964ab9209bab08f66ddfbd2cc7a3cc0f28823d35dcded",
+   "rerun_of_sha256": "61f54ab6f4f1bd1eb0ed81f6525759630dbdfa9d0d2d508ab8da28d2d2f00cdf",
+   "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_q4",
+   "references_from": "/home/aswin/phase2/runs/2026-10-14_160246_scaleup311_q4"
+  },
+  "s1": {
+   "cells": 3,
+   "cap_usd": 61,
+   "tasks_sha256": "7b03f29dec3883650930e62946df94970f6c65563f7a3841b6afa968b407cef9",
+   "config_sha256": "8eb71b9909a14c1d9db4c0f448b0cafe9b5abbc0e97fd816fb51eb02dd072b64",
+   "rerun_of_sha256": "12f54ee5421502b20584a24fcbe82eb370fcb25238287cbbb9f78ad239ce51a2",
+   "original_launch": "/home/aswin/phase2/nm/runs/2026-10-14_il_s1",
+   "references_from": "/home/aswin/phase2/nm/runs/2026-10-14_newmains_s1"
+  },
+  "s2": {
+   "cells": 2,
+   "cap_usd": 41,
+   "tasks_sha256": "277356aca98f879516eecb3f6a95489b4541c35b42d6b2725f9a62ac2bb4f857",
+   "config_sha256": "c974ef9db5c80edcd12d37eafe6c6a5cce40ac6ca13cffbc85149e6c0287f424",
+   "rerun_of_sha256": "f452a3d0d9fa4356b34cd13b58820f5829e63a4b4bb609baab3db108e9acc224",
+   "original_launch": "/home/aswin/phase2/nm/runs/2026-10-14_il_s2",
+   "references_from": "/home/aswin/phase2/nm/runs/2026-10-14_newmains_s2"
+  }
+ }
+}

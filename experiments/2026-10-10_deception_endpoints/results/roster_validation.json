@@ -1,0 +1,8 @@
+{
+  "first_attack_endpoint_runs_matched_to_counted_launch": 194,
+  "second_attack_endpoint_runs_matched_to_counted_launch": 194,
+  "honest_a_endpoint_runs_matched_to_counted_launch": 195,
+  "honest_b_endpoint_runs_matched_to_counted_launch": 195,
+  "attack_eval_file_contents_opened": false,
+  "mismatches": []
+}

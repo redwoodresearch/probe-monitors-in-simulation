@@ -1,0 +1,11 @@
+# Real honest runs from the attack extraction's reader inputs (which hold all 1,000 real-honest runs, rendered as the
+# probe reads them), split by key into each main task's first run (real-honest) and second (real-honest-2, the
+# real-vs-real control). Simulated honest is added from S3 with run_stage_cohort.py (config/stage_sim_honest.yaml).
+volume: probe-shift_aswin-surya_sub-la-activations
+inputs: [2026-10-06_la_segment-end_qwen3-32b_v1]
+arms: [real-honest]
+split_by_key: {real-honest: [real-honest, real-honest-2]}
+paired_arms: [real-honest]
+max_tokens: 32768
+tokenizer: {name: Qwen/Qwen3-32B, revision: 9216db5781bf21249d130ec9da846c4624c16137}
+workers: 8

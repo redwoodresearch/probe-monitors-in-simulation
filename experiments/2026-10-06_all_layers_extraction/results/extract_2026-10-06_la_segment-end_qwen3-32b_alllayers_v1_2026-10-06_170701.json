@@ -1,0 +1,1267 @@
+{
+ "wall_seconds": 1553,
+ "config": {
+  "run": "2026-10-06_la_segment-end_qwen3-32b_alllayers_v1",
+  "inputs_from": "2026-10-06_la_segment-end_qwen3-32b_v1",
+  "model": "Qwen/Qwen3-32B",
+  "dtype": "bfloat16",
+  "attn_implementation": "sdpa",
+  "max_tokens": 32768,
+  "shards": 40,
+  "chunk_size": 25,
+  "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+  "modal": {
+   "app": "probe-shift_aswin-surya_sub-la-activations_alllayers",
+   "gpu": "H100!",
+   "pip": [
+    "torch==2.8.0",
+    "transformers==4.56.2",
+    "accelerate==1.10.1",
+    "numpy",
+    "huggingface_hub[hf_transfer]"
+   ]
+  }
+ },
+ "shards": [
+  {
+   "shard": 0,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard000_chunk000",
+     "transcripts": 25,
+     "rows": 3025,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk001",
+     "transcripts": 25,
+     "rows": 4127,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk002",
+     "transcripts": 25,
+     "rows": 3243,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk003",
+     "transcripts": 24,
+     "rows": 1907,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1453
+  },
+  {
+   "shard": 1,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard001_chunk000",
+     "transcripts": 25,
+     "rows": 3107,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard001_chunk001",
+     "transcripts": 25,
+     "rows": 4125,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard001_chunk002",
+     "transcripts": 25,
+     "rows": 3094,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard001_chunk003",
+     "transcripts": 24,
+     "rows": 1932,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1439
+  },
+  {
+   "shard": 2,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard002_chunk000",
+     "transcripts": 25,
+     "rows": 3074,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard002_chunk001",
+     "transcripts": 25,
+     "rows": 3853,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard002_chunk002",
+     "transcripts": 25,
+     "rows": 3194,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard002_chunk003",
+     "transcripts": 24,
+     "rows": 1746,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1455
+  },
+  {
+   "shard": 3,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard003_chunk000",
+     "transcripts": 25,
+     "rows": 3137,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard003_chunk001",
+     "transcripts": 25,
+     "rows": 4272,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard003_chunk002",
+     "transcripts": 25,
+     "rows": 2945,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard003_chunk003",
+     "transcripts": 24,
+     "rows": 2052,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1460
+  },
+  {
+   "shard": 4,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard004_chunk000",
+     "transcripts": 25,
+     "rows": 3324,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard004_chunk001",
+     "transcripts": 25,
+     "rows": 4042,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard004_chunk002",
+     "transcripts": 25,
+     "rows": 3163,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard004_chunk003",
+     "transcripts": 24,
+     "rows": 1969,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1447
+  },
+  {
+   "shard": 5,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard005_chunk000",
+     "transcripts": 25,
+     "rows": 2962,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard005_chunk001",
+     "transcripts": 25,
+     "rows": 4387,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard005_chunk002",
+     "transcripts": 25,
+     "rows": 3350,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard005_chunk003",
+     "transcripts": 24,
+     "rows": 1883,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1458
+  },
+  {
+   "shard": 6,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard006_chunk000",
+     "transcripts": 25,
+     "rows": 2890,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard006_chunk001",
+     "transcripts": 25,
+     "rows": 4490,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard006_chunk002",
+     "transcripts": 25,
+     "rows": 3471,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard006_chunk003",
+     "transcripts": 24,
+     "rows": 1897,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1444
+  },
+  {
+   "shard": 7,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard007_chunk000",
+     "transcripts": 25,
+     "rows": 3028,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard007_chunk001",
+     "transcripts": 25,
+     "rows": 3877,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard007_chunk002",
+     "transcripts": 25,
+     "rows": 3231,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard007_chunk003",
+     "transcripts": 24,
+     "rows": 1884,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1445
+  },
+  {
+   "shard": 8,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard008_chunk000",
+     "transcripts": 25,
+     "rows": 3101,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard008_chunk001",
+     "transcripts": 25,
+     "rows": 4223,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard008_chunk002",
+     "transcripts": 25,
+     "rows": 3263,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard008_chunk003",
+     "transcripts": 24,
+     "rows": 1638,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1455
+  },
+  {
+   "shard": 9,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard009_chunk000",
+     "transcripts": 25,
+     "rows": 3284,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard009_chunk001",
+     "transcripts": 25,
+     "rows": 4036,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard009_chunk002",
+     "transcripts": 25,
+     "rows": 3143,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard009_chunk003",
+     "transcripts": 24,
+     "rows": 2198,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1446
+  },
+  {
+   "shard": 10,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard010_chunk000",
+     "transcripts": 25,
+     "rows": 3271,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard010_chunk001",
+     "transcripts": 25,
+     "rows": 3790,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard010_chunk002",
+     "transcripts": 25,
+     "rows": 3224,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard010_chunk003",
+     "transcripts": 24,
+     "rows": 2282,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1440
+  },
+  {
+   "shard": 11,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard011_chunk000",
+     "transcripts": 25,
+     "rows": 3483,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard011_chunk001",
+     "transcripts": 25,
+     "rows": 4006,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard011_chunk002",
+     "transcripts": 25,
+     "rows": 3283,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard011_chunk003",
+     "transcripts": 24,
+     "rows": 1867,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1465
+  },
+  {
+   "shard": 12,
+   "transcripts": 99,
+   "chunks": [
+    {
+     "chunk": "shard012_chunk000",
+     "transcripts": 25,
+     "rows": 3146,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard012_chunk001",
+     "transcripts": 25,
+     "rows": 3731,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard012_chunk002",
+     "transcripts": 25,
+     "rows": 3015,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard012_chunk003",
+     "transcripts": 24,
+     "rows": 2077,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1432
+  },
+  {
+   "shard": 13,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard013_chunk000",
+     "transcripts": 25,
+     "rows": 3196,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard013_chunk001",
+     "transcripts": 25,
+     "rows": 4128,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard013_chunk002",
+     "transcripts": 25,
+     "rows": 3210,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard013_chunk003",
+     "transcripts": 23,
+     "rows": 1842,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1441
+  },
+  {
+   "shard": 14,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard014_chunk000",
+     "transcripts": 25,
+     "rows": 3434,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard014_chunk001",
+     "transcripts": 25,
+     "rows": 4158,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard014_chunk002",
+     "transcripts": 25,
+     "rows": 3325,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard014_chunk003",
+     "transcripts": 23,
+     "rows": 1853,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1445
+  },
+  {
+   "shard": 15,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard015_chunk000",
+     "transcripts": 25,
+     "rows": 2994,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard015_chunk001",
+     "transcripts": 25,
+     "rows": 3842,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard015_chunk002",
+     "transcripts": 25,
+     "rows": 3060,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard015_chunk003",
+     "transcripts": 23,
+     "rows": 2001,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1446
+  },
+  {
+   "shard": 16,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard016_chunk000",
+     "transcripts": 25,
+     "rows": 3121,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard016_chunk001",
+     "transcripts": 25,
+     "rows": 3946,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard016_chunk002",
+     "transcripts": 25,
+     "rows": 3070,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard016_chunk003",
+     "transcripts": 23,
+     "rows": 1970,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1449
+  },
+  {
+   "shard": 17,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard017_chunk000",
+     "transcripts": 25,
+     "rows": 3470,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard017_chunk001",
+     "transcripts": 25,
+     "rows": 4350,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard017_chunk002",
+     "transcripts": 25,
+     "rows": 3045,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard017_chunk003",
+     "transcripts": 23,
+     "rows": 1834,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1442
+  },
+  {
+   "shard": 18,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard018_chunk000",
+     "transcripts": 25,
+     "rows": 3029,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard018_chunk001",
+     "transcripts": 25,
+     "rows": 4205,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard018_chunk002",
+     "transcripts": 25,
+     "rows": 2956,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard018_chunk003",
+     "transcripts": 23,
+     "rows": 1847,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1449
+  },
+  {
+   "shard": 19,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard019_chunk000",
+     "transcripts": 25,
+     "rows": 2947,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard019_chunk001",
+     "transcripts": 25,
+     "rows": 3802,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard019_chunk002",
+     "transcripts": 25,
+     "rows": 3040,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard019_chunk003",
+     "transcripts": 23,
+     "rows": 1901,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1440
+  },
+  {
+   "shard": 20,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard020_chunk000",
+     "transcripts": 25,
+     "rows": 2847,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard020_chunk001",
+     "transcripts": 25,
+     "rows": 4149,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard020_chunk002",
+     "transcripts": 25,
+     "rows": 3270,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard020_chunk003",
+     "transcripts": 23,
+     "rows": 1974,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1436
+  },
+  {
+   "shard": 21,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard021_chunk000",
+     "transcripts": 25,
+     "rows": 3033,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard021_chunk001",
+     "transcripts": 25,
+     "rows": 4177,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard021_chunk002",
+     "transcripts": 25,
+     "rows": 3236,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard021_chunk003",
+     "transcripts": 23,
+     "rows": 2065,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1455
+  },
+  {
+   "shard": 22,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard022_chunk000",
+     "transcripts": 25,
+     "rows": 3006,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard022_chunk001",
+     "transcripts": 25,
+     "rows": 4245,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard022_chunk002",
+     "transcripts": 25,
+     "rows": 3272,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard022_chunk003",
+     "transcripts": 23,
+     "rows": 1891,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1439
+  },
+  {
+   "shard": 23,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard023_chunk000",
+     "transcripts": 25,
+     "rows": 2957,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard023_chunk001",
+     "transcripts": 25,
+     "rows": 3943,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard023_chunk002",
+     "transcripts": 25,
+     "rows": 3254,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard023_chunk003",
+     "transcripts": 23,
+     "rows": 1973,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1427
+  },
+  {
+   "shard": 24,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard024_chunk000",
+     "transcripts": 25,
+     "rows": 3819,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard024_chunk001",
+     "transcripts": 25,
+     "rows": 3595,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard024_chunk002",
+     "transcripts": 25,
+     "rows": 3336,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard024_chunk003",
+     "transcripts": 23,
+     "rows": 1884,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1460
+  },
+  {
+   "shard": 25,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard025_chunk000",
+     "transcripts": 25,
+     "rows": 3315,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard025_chunk001",
+     "transcripts": 25,
+     "rows": 4088,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard025_chunk002",
+     "transcripts": 25,
+     "rows": 3298,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard025_chunk003",
+     "transcripts": 23,
+     "rows": 1814,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1450
+  },
+  {
+   "shard": 26,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard026_chunk000",
+     "transcripts": 25,
+     "rows": 3499,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard026_chunk001",
+     "transcripts": 25,
+     "rows": 3932,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard026_chunk002",
+     "transcripts": 25,
+     "rows": 2987,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard026_chunk003",
+     "transcripts": 23,
+     "rows": 2053,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1462
+  },
+  {
+   "shard": 27,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard027_chunk000",
+     "transcripts": 25,
+     "rows": 2864,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard027_chunk001",
+     "transcripts": 25,
+     "rows": 4018,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard027_chunk002",
+     "transcripts": 25,
+     "rows": 2896,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard027_chunk003",
+     "transcripts": 23,
+     "rows": 2040,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1454
+  },
+  {
+   "shard": 28,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard028_chunk000",
+     "transcripts": 25,
+     "rows": 2939,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard028_chunk001",
+     "transcripts": 25,
+     "rows": 3915,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard028_chunk002",
+     "transcripts": 25,
+     "rows": 2988,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard028_chunk003",
+     "transcripts": 23,
+     "rows": 2190,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1443
+  },
+  {
+   "shard": 29,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard029_chunk000",
+     "transcripts": 25,
+     "rows": 2965,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard029_chunk001",
+     "transcripts": 25,
+     "rows": 4067,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard029_chunk002",
+     "transcripts": 25,
+     "rows": 3040,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard029_chunk003",
+     "transcripts": 23,
+     "rows": 1726,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1450
+  },
+  {
+   "shard": 30,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard030_chunk000",
+     "transcripts": 25,
+     "rows": 3128,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard030_chunk001",
+     "transcripts": 25,
+     "rows": 4027,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard030_chunk002",
+     "transcripts": 25,
+     "rows": 3326,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard030_chunk003",
+     "transcripts": 23,
+     "rows": 1819,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1467
+  },
+  {
+   "shard": 31,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard031_chunk000",
+     "transcripts": 25,
+     "rows": 3176,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard031_chunk001",
+     "transcripts": 25,
+     "rows": 4005,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard031_chunk002",
+     "transcripts": 25,
+     "rows": 3127,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard031_chunk003",
+     "transcripts": 23,
+     "rows": 1956,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1442
+  },
+  {
+   "shard": 32,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard032_chunk000",
+     "transcripts": 25,
+     "rows": 3053,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard032_chunk001",
+     "transcripts": 25,
+     "rows": 4222,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard032_chunk002",
+     "transcripts": 25,
+     "rows": 2951,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard032_chunk003",
+     "transcripts": 23,
+     "rows": 1761,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1461
+  },
+  {
+   "shard": 33,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard033_chunk000",
+     "transcripts": 25,
+     "rows": 3116,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard033_chunk001",
+     "transcripts": 25,
+     "rows": 4301,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard033_chunk002",
+     "transcripts": 25,
+     "rows": 3344,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard033_chunk003",
+     "transcripts": 23,
+     "rows": 1880,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1445
+  },
+  {
+   "shard": 34,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard034_chunk000",
+     "transcripts": 25,
+     "rows": 3171,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard034_chunk001",
+     "transcripts": 25,
+     "rows": 4294,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard034_chunk002",
+     "transcripts": 25,
+     "rows": 3427,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard034_chunk003",
+     "transcripts": 23,
+     "rows": 1757,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1434
+  },
+  {
+   "shard": 35,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard035_chunk000",
+     "transcripts": 25,
+     "rows": 2827,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard035_chunk001",
+     "transcripts": 25,
+     "rows": 3913,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard035_chunk002",
+     "transcripts": 25,
+     "rows": 3304,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard035_chunk003",
+     "transcripts": 23,
+     "rows": 1896,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1457
+  },
+  {
+   "shard": 36,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard036_chunk000",
+     "transcripts": 25,
+     "rows": 3190,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard036_chunk001",
+     "transcripts": 25,
+     "rows": 3935,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard036_chunk002",
+     "transcripts": 25,
+     "rows": 3011,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard036_chunk003",
+     "transcripts": 23,
+     "rows": 1642,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1441
+  },
+  {
+   "shard": 37,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard037_chunk000",
+     "transcripts": 25,
+     "rows": 3377,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard037_chunk001",
+     "transcripts": 25,
+     "rows": 4018,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard037_chunk002",
+     "transcripts": 25,
+     "rows": 3019,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard037_chunk003",
+     "transcripts": 23,
+     "rows": 1910,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1467
+  },
+  {
+   "shard": 38,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard038_chunk000",
+     "transcripts": 25,
+     "rows": 3334,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard038_chunk001",
+     "transcripts": 25,
+     "rows": 4100,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard038_chunk002",
+     "transcripts": 25,
+     "rows": 3136,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard038_chunk003",
+     "transcripts": 23,
+     "rows": 1779,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1468
+  },
+  {
+   "shard": 39,
+   "transcripts": 98,
+   "chunks": [
+    {
+     "chunk": "shard039_chunk000",
+     "transcripts": 25,
+     "rows": 3503,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard039_chunk001",
+     "transcripts": 25,
+     "rows": 3777,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard039_chunk002",
+     "transcripts": 25,
+     "rows": 2832,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard039_chunk003",
+     "transcripts": 23,
+     "rows": 1833,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 1465
+  }
+ ]
+}

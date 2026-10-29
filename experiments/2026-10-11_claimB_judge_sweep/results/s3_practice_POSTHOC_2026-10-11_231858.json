@@ -1,0 +1,16 @@
+{
+ "label": "POST HOC exploratory: S3 on practice (numbers only)",
+ "statuses": {
+  "ok": 100
+ },
+ "pairs_both_orders": 50,
+ "accuracy_sim_first": 0.7,
+ "accuracy_e1_first": 0.72,
+ "position_balanced_accuracy": 0.71,
+ "first_position_real_rate": 0.51,
+ "inputs": {
+  "sol_b_calls.jsonl": "ec6ee0613c740521a3caba4d71746abb9d847e6ca78acf5c5874ccd98d2c2ec2"
+ },
+ "git": "e9e0f1fe3be490fcb680a1f76386fe8d64068bd7",
+ "script_sha256": "b1507bb6d4001318f30062e32f1318820d3288b790f4931490755fff509d589c"
+}

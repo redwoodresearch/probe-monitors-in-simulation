@@ -1,0 +1,44 @@
+# The pilot's today's-simulator arm, rerun (10-08). In run 2026-10-08_124444_pilot every sim_*@today run failed before
+# its first call: today's sims code leaves control-tower's simulated-sandbox model at its default (Opus 4.8), and
+# Inspect creates that model's Anthropic client at sandbox start, with no ANTHROPIC_API_KEY on the devbox (the model is
+# never called: 0 Opus calls in the 10-06 run of today's code). The fix is chosen below (anthropic_placeholder, or the today_sandbox_model tree). This rerun
+# forks from that run's pinned honest_a references, so the pairing with its September arm is kept:
+#   run_pilot.py --pilot-config config/pilot_today_rerun.yaml \
+#       --references-from ~/phase2/runs/2026-10-08_124444_pilot --base-urls <bases> --commit <commit> --approaches ...
+# Run it from its own copy on the devbox (not ~/phase2/attack_check, which a running pilot reads), and only after the
+# pilot's launcher has ended (two launchers would race on each environment's compose file).
+
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september   # the trees' code for the server checks; no real arm runs
+simulators: [today]
+# Tasks given a fresh reference (--rerun-reference) lost both simulators' runs in the pilot, so they get both again.
+rerun_simulators: [september, today]
+# The fix for today's sandbox-start failure: option (i), Aswin's choice for this follow-up (#82 amendment 32), the
+# placeholder ANTHROPIC_API_KEY in run.yaml's simulators.today.env, on the pinned e561f936 tree. Option (ii), a tree
+# with the simulator_model passthrough (today_sandbox_model, or Jeff's merged commit once pinned), is for later
+# batches. run_pilot refuses `today` unless that env carries the key.
+# The time control (Aswin, 10-08 ~13:45): 3 tasks whose September preflight passed in the pilot, chosen before any
+# follow-up run by sha256("phase2-time-control-v1:" + key), first 3 in distinct environments. Each also gets one
+# sim_honest@september and one sim_attack@september, interleaved with today's runs, outside the primary cohort.
+time_control:
+  simulator: september
+  tasks: [t07_slack_clone, t04_tiktok, t09_web_scraping]
+simulator_confirmed: true   # the same pinned tree as the pilot (config/run.yaml, src caf76e76...)
+real_arms: []
+
+max_runs_per_server: 10  # 3 servers, as in the pilot (amendment 21; Aswin, 10-08 ~14:35 PT)
+# Replayed lookups, option (P) (#82 amendment 32): each task's recorded lookup set (check_mixed_forms.py, run once the
+# pilot has ended), with fixed_digest_lookup/ first on the launch's PATH and IMAGES_JSON set. Two launches, one per
+# phase, each environment holding one form at a time: --tasks t01..t10 (their mixes), then t11..t20 (tag form).
+digest_sets: config/digest_sets_2026-10-08.json
+max_real_runs: 10
+reference_tries: 3          # A' (--rerun-reference) only: 3 starts in all, redraws included
+
+# Aswin's $2.5k cap covers the pilot and this rerun together: at each launch set cap_usd to $2,500, and
+# worst_case_limit_usd to $2,750, minus the actual simulator spend of every earlier launch (the pilot's, and phase 1's
+# for phase 2: each launch.json's last spend entry).
+spend:
+  cap_usd: 0
+  worst_case_limit_usd: 0
+  worst_per_sim_run_usd: 60
+  prior_per_sim_run_usd: 25

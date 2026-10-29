@@ -1,0 +1,13 @@
+# d9's CUT fork (Append 41): nm360_s5_main_s1_cutfull staged by stage_chain.py (record chain_stage_nm360_s5_main_s1_cutfull_2026-10-15_193803.json); every layer, last-token rows and
+# output_end span means, as the chain's extractions (chunk 8, pad 4096), H200; no cut, no repro-c arm.
+run: nm360_s5_main_s1_cutfull_extract_v1
+inputs: nm360_s5_main_s1_cutfull_v1
+inputs_sha256:
+  attack.jsonl: b847597f9c4b67a335d9ef7dda92e74a32bab9c845e45e9f78d6f780c80abf67
+  honest_a.jsonl: 5d35310e872a3b748de9fee8faadd41e968ccf044ec9edfb4acf2b91612855cf
+  honest_b.jsonl: b9d5ba6a66dccaf9a244b0a25adf17bf3a34bd193bb35fc085d2aa01a84a52dc
+model: Qwen/Qwen3.5-27B
+shards: 6
+chunk_size: 8
+pad_to: 4096
+cut: full

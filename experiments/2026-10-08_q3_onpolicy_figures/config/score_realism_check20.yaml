@@ -1,0 +1,14 @@
+# The realism probe's check run (RULE_POSTHOC_realism_196.md): the 196-task monitor's t01-t20 rows only (the 20-task
+# rerun's segment-end extraction for real run 1 and simulated, the second attack batch for run 2), read from the
+# extractions (no cache), with the 196-task fold map so the monitor's saved models can be checked on them.
+label: realism_check20
+extractions: [2026-10-09_rerun_strict_segends_v1, 2026-10-10_second_attack_segends_v1]
+worlds: {real: attack, sim: sim_attack@september, run2: attack@2026-10-10_second_attack_segends_v1}
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json
+n_layers: 64
+hidden: 5120
+seed: 0
+fitter: primal
+warm_start: false
+amendments:
+  realism_probe: "RULE_POSTHOC_realism_196.md (POST HOC)"

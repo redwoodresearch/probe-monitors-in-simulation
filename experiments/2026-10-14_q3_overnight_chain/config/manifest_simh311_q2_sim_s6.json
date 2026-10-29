@@ -1,0 +1,58 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_q2 of 2026-10-14_154401_scaleup311_q2: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 2,
+  "by_arm": {
+   "sim_honest@september": 2
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_q2",
+   "rel": "sim_honest@september/t212_model_registry/2026-10-15T20-48-27-00-00_la-model-registry-sim-honest-1_GcF7dRaheWs4SqMysc9CQJ.eval",
+   "sha256": "e13282d3cd798955f86906211a0dda6e0505bd14dece2d3f8dacdfacd63cf67b",
+   "bytes": 1846065,
+   "arm_dir": "sim_honest@september",
+   "task": "t212_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q2/sim_honest@september/t212_model_registry/2026-10-15T20-48-27-00-00_la-model-registry-sim-honest-1_GcF7dRaheWs4SqMysc9CQJ.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q2",
+   "stratum": "simh_311",
+   "launch_task": "t212_model_registry",
+   "first_start": "2026-10-15T13:48:24-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q2",
+   "run1_launch": "2026-10-14_154401_scaleup311_q2",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "6"
+  },
+  {
+   "launch": "2026-10-15_simh_q2",
+   "rel": "sim_honest@september/t269_tiktok/2026-10-15T20-54-17-00-00_la-tiktok-sim-honest-1_7WdWCCaLQ2qnfNc4ZaWgkD.eval",
+   "sha256": "9939a1c620153e578034615f042de3393a67d4876d26ac7b18933776ab1a6741",
+   "bytes": 2170528,
+   "arm_dir": "sim_honest@september",
+   "task": "t269_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q2/sim_honest@september/t269_tiktok/2026-10-15T20-54-17-00-00_la-tiktok-sim-honest-1_7WdWCCaLQ2qnfNc4ZaWgkD.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q2",
+   "stratum": "simh_311",
+   "launch_task": "t269_tiktok",
+   "first_start": "2026-10-15T13:54:15-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q2",
+   "run1_launch": "2026-10-14_154401_scaleup311_q2",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "6"
+  }
+ ]
+}

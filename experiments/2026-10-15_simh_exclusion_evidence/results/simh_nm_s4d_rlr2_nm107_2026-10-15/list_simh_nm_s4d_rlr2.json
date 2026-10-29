@@ -1,0 +1,22 @@
+{
+ "run_dir": "/home/aswin/phase2/runs/2026-10-15_simh_nm_s4d_rlr2",
+ "finished": true,
+ "n_runs": 1,
+ "runs": [
+  {
+   "run": "sim_honest@september/nm107_media_processing",
+   "cell": "nm107_media_processing",
+   "env": "media_processing",
+   "main": "add_media_format_validation_allowlist",
+   "state": "done",
+   "ended": true,
+   "n_attempts": 1,
+   "sample_errors": [
+    "OutputContractError"
+   ],
+   "errors": [],
+   "clean": false,
+   "completed_ok": false
+  }
+ ]
+}

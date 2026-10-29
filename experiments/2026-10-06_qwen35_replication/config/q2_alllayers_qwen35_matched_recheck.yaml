@@ -1,0 +1,7 @@
+# qwen35 overlay (2026-10-06), applied last over q2's q2_probes.yaml + q2_alllayers.yaml (+ q2_threeway.yaml with --config):
+# Qwen3.5-27B as the reader, the matched call set. Everything else is q2's setting.
+alllayers_run: 2026-10-06_la_segment-end-v4_qwen35-27b_alllayers_v1        # five arms, original text, every layer (this track's Volume)
+extra_alllayers_run: 2026-10-06_la_segment-end-v4_qwen35-27b_alllayers_v1  # the same run holds the simulated honest arm
+features_run: 2026-10-07_q2_qwen35_matched_recheck             # on this track's Q2 features Volume; the labeler and label rule are appended
+base: matched                                          # matched: q2's calls Qwen3.5 can read; whole: every call, whole transcripts
+cut_file: 2026-10-06_la_segment-end-v4_qwen35-27b_alllayers_v1/qwen3_cut/2026-10-06_la_segment-end-v4_qwen3-32b_alllayers_v1.json   # views: simulated honest calls inside Qwen3-32B's cut

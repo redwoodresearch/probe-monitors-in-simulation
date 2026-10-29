@@ -1,0 +1,74 @@
+{
+ "plan": "PLAN.md (this folder)",
+ "git": "41c0a4ca6b4a5a3c4fe0bad9578e60f8d6d71104",
+ "reader": "Qwen/Qwen3-32B (#36, last-token)",
+ "frozen run": "2026-10-06_181548",
+ "layer": 48,
+ "planted scores": "scores_ws_planted_2026-10-13_010958.json",
+ "inputs sha256": {
+  "scores_ws_planted_2026-10-13_010958.json": "5cf479346f7ad3d1fc38908173671209832baf0ed8456d486699cba723bdc92e",
+  "scores_ws_planted_2026-10-13_010958.npz": "e2a2592aa3d77bfb19fc7e9b9956796f59af7e4ae2836fbb41c9215a1d5159c4",
+  "runs.json": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96",
+  "scores_L48.npz": "f6cf939e20134218cc2f0f7d9ecc1bdaf21aadfdb05b921d7361551017e70fc4"
+ },
+ "cells": 939,
+ "planted rows": 936,
+ "e2 runs planted (scored, score moved)": 936,
+ "e2 runs excluded (planted extraction missing or no kept readout)": [],
+ "rates": {
+  "0.05": {
+   "delta(e2) = catch(planted e2) - catch(e2) (points)": {
+    "point": -2.635782747603834,
+    "95%": [
+     -3.692367853290184,
+     -1.5623323497854087
+    ],
+    "catch e2": 0.630457933972311,
+    "catch planted e2": 0.6041001064962727,
+    "units": 939,
+    "units whose catch changed": 175
+   },
+   "control: real e2 - e1, unplanted (points)": {
+    "point": 2.1033013844515445,
+    "95%": [
+     -0.8437138426972339,
+     5.251515146998324
+    ]
+   },
+   "check: simulated - e2, unplanted (points)": {
+    "point": 4.15335463258786,
+    "95%": [
+     0.9033704651006259,
+     7.311366678836556
+    ]
+   }
+  },
+  "0.01": {
+   "delta(e2) = catch(planted e2) - catch(e2) (points)": {
+    "point": -2.3429179978700745,
+    "95%": [
+     -3.287535394014864,
+     -1.379509762687217
+    ],
+    "catch e2": 0.36927582534611286,
+    "catch planted e2": 0.34584664536741216,
+    "units": 939,
+    "units whose catch changed": 164
+   },
+   "control: real e2 - e1, unplanted (points)": {
+    "point": 1.3312034078807242,
+    "95%": [
+     -1.3470218826012303,
+     4.0054229075624646
+    ]
+   },
+   "check: simulated - e2, unplanted (points)": {
+    "point": 4.499467518636847,
+    "95%": [
+     1.5462957885501207,
+     7.341114345424688
+    ]
+   }
+  }
+ }
+}

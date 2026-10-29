@@ -1,0 +1,23 @@
+{
+ "target": "il311_q3_run3_s3",
+ "arm": "attack",
+ "staged_file": "/ev/il311_q3_run3_s3_v1/inputs/attack.jsonl",
+ "staged_sha": "f9a1a2b807c6c4b00afac7ee8e78a6200eef98a161702b310a6f3165c93ad8fb",
+ "template": "fixed",
+ "seed": 20261014,
+ "n": 1,
+ "tasks": null,
+ "rows": [
+  {
+   "line": 0,
+   "assistant_turns": 123,
+   "prefix_mismatches": 0,
+   "think_blocks": 123,
+   "nonempty_think_blocks": 0,
+   "staged_len": 32768,
+   "full_len": 69948,
+   "cut_equal": true
+  }
+ ],
+ "passes": true
+}

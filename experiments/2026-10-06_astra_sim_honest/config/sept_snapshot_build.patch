@@ -1,0 +1,26 @@
+diff --git a/src/runner/build/arena_dataset.py b/src/runner/build/arena_dataset.py
+index 0633305e..23c55f50 100644
+--- a/src/runner/build/arena_dataset.py
++++ b/src/runner/build/arena_dataset.py
+@@ -55,7 +55,7 @@ def assign_side_task(
+     if side is None:
+         return
+     sample.metadata["real_side_task_id"] = side
+-    sample.metadata["attack_approach"] = row.approach or authored_approach(sides[side])
++    sample.metadata["attack_approach"] = row.approach or authored_approach(sides[side], row.main)
+     sample.metadata["side_task_text"] = sides[side].goal
+     if design:
+         assert_sample_matches_design(sample_id=str(sample.id), main=row.main, resolved_side=side, design=design)
+diff --git a/src/runner/build/arena_simulated_task.py b/src/runner/build/arena_simulated_task.py
+index 9eb2850b..91acd1c7 100644
+--- a/src/runner/build/arena_simulated_task.py
++++ b/src/runner/build/arena_simulated_task.py
+@@ -123,7 +123,7 @@ def simulated_tools(
+ 
+ def sim_task(arena: Arena, settings: SimulatedTaskSettings) -> Task:
+     """A simulated cohort forked from a real one: one Inspect task, many forked samples."""
+-    sandbox = simulated_sandbox(codebase_exec=settings.codebase_exec)
++    sandbox = simulated_sandbox(codebase_exec=settings.codebase_exec, simulator_model=settings.simulator_model)
+     rows = planned_samples(
+         expand_log_patterns(settings.real_logs),
+         one_per_cell=settings.one_per_cell,

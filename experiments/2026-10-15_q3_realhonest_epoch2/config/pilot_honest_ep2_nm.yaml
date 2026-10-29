@@ -1,0 +1,23 @@
+# Real honest epoch 2, nm360 (RULE.md amendment 2; Aswin's "go" ~11:2x PT 10-15 via 0d, design A; registered @ 0f5d1b429). The
+# new-mains splits' config (pilot_nm_s1.yaml, the frozen nm harness @ LAUNCH_COMMIT 99c2dc38) with only this header, the tasks path,
+# the arms, the simulator settings, max_real_runs and spend changed: one real honest_a and one real honest_b run per cell of the
+# 351-cell file (360 minus setup_failures v4's 9; r1 entries byte-identical, construction new_mains_v1), no attack arm, no simulated
+# runs, no simulator calls; reference_tries 3 as epoch 1. max_real_runs 40 as S5 (q3-ep2-nm is an m7i.12xlarge, 48 vCPU; 4
+# servers x 10 = 40 runs at once either way).
+# Staged OUTSIDE the frozen harness (it stays byte-identical to its committed 178-file manifest): this file and the tasks file
+# live in ~/phase2/ep2_nm/ and are given as absolute paths (run_pilot.py reads HERE / path; an absolute path wins).
+tasks: /home/aswin/phase2/ep2_nm/pilot_tasks_ep2_nm_351.json   # make_tasks_ep2_nm.py, on the box
+real_simulator: september
+real_arms: [honest_a, honest_b]
+simulators: []
+simulator_confirmed: true
+max_runs_per_server: 10
+max_real_runs: 40
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+# No simulator calls at all: both limits at 0.
+spend:
+  cap_usd: 0
+  worst_case_limit_usd: 0
+  worst_per_sim_run_usd: 75
+  prior_per_sim_run_usd: 16.48

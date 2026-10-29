@@ -1,0 +1,13 @@
+# Pipeline test and one-draw timing on the INVALID pilot (strict-tools bug); no number from it is a result.
+# Approved by Aswin in session (10-08, about 23:40 PT): up to $3 of the extraction and scoring caps.
+label: pilot_INVALID
+extractions: [2026-10-08_pilot_INVALID_replay_v1]
+worlds: {real: attack, sim: sim_attack@september}   # one simulator per scoring run; September is primary (A46)
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9.json
+n_layers: 64
+hidden: 5120
+seed: 0
+amendments:
+  primary_simulator: A46 32666df (PR #258)
+  margin_and_primary_result: A47 3d2805e, freeze update at PR #259 head 8810192
+  layer_selection: A27 (adopted in A42)

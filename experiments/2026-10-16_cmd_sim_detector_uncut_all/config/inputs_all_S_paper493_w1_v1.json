@@ -1,0 +1,148 @@
+{
+ "label": "detAll uncut inputs, S_paper493_w1 (attack worlds): 2e's inventory + d9 cutfull routing records",
+ "task_set": "S_paper493",
+ "inventory_status": "COMPLETE",
+ "inventory": {
+  "commit": "85447113f648435c8bce85c8f3df6ac8edcf75bb",
+  "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w1_v1_2026-10-16_025411.json",
+  "sha256": "3dc8a91a52d694c8959db640b1de5688d2a6a657641d8ee7f79d4cff8aa2d067"
+ },
+ "extraction_records": {
+  "sp493_a_main_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_a_main_cutfull_extract_v1_a1_2026-10-16_015334.json",
+   "sha256": "d5f2a1a7ce7c8d049a8cdf12087d3e9545822e478a8bdc80a173fae04b78ca0e"
+  },
+  "sp493_a_run2_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_a_run2_cutfull_extract_v1_a1_2026-10-16_015334.json",
+   "sha256": "7d478d24a07ae16621d238256efec325d42b33ce2ccd9c558c44680f10084b53"
+  },
+  "sp493_g1_sim_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_cutfull_extract_v1_a1_2026-10-16_015333.json",
+   "sha256": "f80ac77fe828d78fd8dc77df062b607743924c149a5f6cee7e7a06f191f2957c"
+  },
+  "sp493_g1_sim_s1_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s1_cutfull_extract_v1_a1_2026-10-16_015333.json",
+   "sha256": "98b6ecea88f9f69e2c8bc15c15d122349471b777f57aeab32b83a2dc5b9bd579"
+  },
+  "sp493_g1_sim_s2_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s2_cutfull_extract_v1_a1_2026-10-16_015333.json",
+   "sha256": "0e584ca7763e213107ef98f66aa59599f7d16ded2d1555225d6ec327e640f6cd"
+  },
+  "sp493_g1_sim_s3_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s3_cutfull_extract_v1_a1_2026-10-16_015334.json",
+   "sha256": "9bb66526e638b2a24ebbdd92385f580fa1d026a98bfa784c2ad425fd921ce590"
+  },
+  "sp493_g1_sim_s4_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s4_cutfull_extract_v1_a1_2026-10-16_015335.json",
+   "sha256": "8e692d778280c06329e0d6b53f4bfee8dba113b4b61c4d281c3f6a85c2e4417e"
+  },
+  "sp493_g1_sim_s5_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s5_cutfull_extract_v1_a1_2026-10-16_015334.json",
+   "sha256": "a2c221075a041aa4aaddb381104b8c40e8dca5e3fc0bbe6aca78e6de438a288d"
+  },
+  "sp493_g2_sim_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_cutfull_extract_v1_a1_2026-10-16_015333.json",
+   "sha256": "1989b4d3349fb130f1e752f3c0184fbc8231cf02b979243736506bd639e76430"
+  },
+  "sp493_g2_sim_s2_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_s2_cutfull_extract_v1_a1_2026-10-16_015333.json",
+   "sha256": "6c0dbc7a636289e3bd5364ccf925058259612855bc0c8cced5cc92d57739c961"
+  },
+  "sp493_g2_sim_s3_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_s3_cutfull_extract_v1_a1_2026-10-16_015333.json",
+   "sha256": "07f3e38cf5874b30adc41959f699115a4a33356285739efd22d96c621c0ab436"
+  },
+  "sp493_g2_sim_s4_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_s4_cutfull_extract_v1_a1_2026-10-16_015333.json",
+   "sha256": "53cfd22b145801d3a4b921c52cb365f01f1569f6d24a80a2ad4e7e2c72bf3508"
+  },
+  "sp493_g2_sim_s5_cutfull_extract_v1": {
+   "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_s5_cutfull_extract_v1_a1_2026-10-16_015334.json",
+   "sha256": "712b559463c5379744760e9982c9213e0d399d1ab7e273ab3524f0fb300d927a"
+  }
+ },
+ "routing": {
+  "mode": "routing",
+  "records": [
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-a__sp493_a_main_cutfull_r2.json",
+    "sha256": "ec5335da02b9b9d83763001066934b5a9f2c0170fcfdc8d59ea32eb35178892c"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-a__sp493_a_run2_cutfull_r2.json",
+    "sha256": "1d86a9c51303584bf1da0f44cd7b8c2c6640047066d6967bad8c36992eab2e1c"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1__sp493_g1_sim_cutfull_r2.json",
+    "sha256": "af939934872c6f0e9d7d3127567158fccb4c595e863636b5115df231df5c4384"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s1__sp493_g1_sim_s1_cutfull_r2.json",
+    "sha256": "5f67b57aee0b40d71a6ff22a409242941e560b4f1ce743e6d74c8576037f0dc1"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s2__sp493_g1_sim_s2_cutfull_r2.json",
+    "sha256": "e9adbb8bad11d5fe62163aac6e2941844c38c01866bf6b8b0cfc6f30f1aa5ae6"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s3__sp493_g1_sim_s3_cutfull_r2.json",
+    "sha256": "191ccf14a55737dc29be8ea3db7e38116824ae03217c866c7f5d3b3bf960aca9"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s4__sp493_g1_sim_s4_cutfull_r2.json",
+    "sha256": "7337ebe2094648ec080cba7c48195638ab5a3ca838d9c130f6dc624698dcc6bf"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s5__sp493_g1_sim_s5_cutfull_r2.json",
+    "sha256": "041b78eeb57e70902caf7d088004fd8e2fb97f4a01e5ddb3bba3f38b1b9d2a38"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2__sp493_g2_sim_cutfull_r2.json",
+    "sha256": "f3534dfe704752c2413455b15aab681842f01cb9424bc4cdfb673ec269c5856e"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2_s2__sp493_g2_sim_s2_cutfull_r2.json",
+    "sha256": "85bae0c53590c3c5401afd79187b77637aed036ffb675b47c52cb2ca8ef46d49"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2_s3__sp493_g2_sim_s3_cutfull_r2.json",
+    "sha256": "8b6621c9d8f50ec68abf9b12b5b0a85131b142655cf7fcd5ba171640cf7ac848"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2_s4__sp493_g2_sim_s4_cutfull_r2.json",
+    "sha256": "e979c6080100b3923a0665bee695872f102bb8708f58935f51773968ad604831"
+   },
+   {
+    "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2_s5__sp493_g2_sim_s5_cutfull_r2.json",
+    "sha256": "cbc17716f11c0cbe04a6f206ff9bb72972b0951a1599e157cd8d7c24cf065437"
+   }
+  ]
+ },
+ "routing_ref": "920911cdaba189b6321e78c0164f88bb77ea3a4b"
+}

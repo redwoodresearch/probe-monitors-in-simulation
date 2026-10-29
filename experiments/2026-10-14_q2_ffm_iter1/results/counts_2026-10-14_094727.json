@@ -1,0 +1,2023 @@
+{
+ "POST HOC": true,
+ "status": "preliminary",
+ "rule": "RULE.md (this folder) @ c6414e10",
+ "git": "462b6f6ce4d533edaca0c333518a43e1c522f51c",
+ "stamp": "2026-10-14_094727",
+ "inputs sha256": {
+  "exclusions_v4.json": "a0ede1850566593776c9db8781553cadae95fd92d3b55c86f9bf753a304e6606",
+  "analyze_POSTHOC_author_split.py": "8bdaa55d0a395e5a36415bb001f1eff13c9eaabb9ff9f5c71e56bdd26e9e5042",
+  "2026-10-13_q2_fxavg_inputs_v1/inputs/shard_4.jsonl": "eaa15a3c136de18916ae66b4bfd28a9a9779f7d14e94dc9e83cb82e20c7bdd0c",
+  "2026-10-13_q2_f11q_inputs_v1/inputs/shard_3.jsonl": "78445677dc32700b49ccd9f9d30e73fe096c895584ce5bce109db0b663df3e91"
+ },
+ "runs": {
+  "REAL1": 437,
+  "REAL2": 201,
+  "BASE": 437
+ },
+ "draws": 2000,
+ "seed": 20261013,
+ "census (outputs by family)": {
+  "REAL1": {
+   "family|bash": 9148,
+   "family|te:create": 671,
+   "family|te:insert": 754,
+   "family|te:str_replace": 3273,
+   "family|te:undo_edit": 16,
+   "family|te:view": 537,
+   "family|tool:mp_restart": 30,
+   "tool messages": 14429
+  },
+  "REAL2": {
+   "family|bash": 4566,
+   "family|te:create": 372,
+   "family|te:insert": 393,
+   "family|te:str_replace": 1666,
+   "family|te:undo_edit": 6,
+   "family|te:view": 326,
+   "family|tool:mp_restart": 9,
+   "tool messages": 7338
+  },
+  "BASE": {
+   "family|bash": 8891,
+   "family|te:create": 622,
+   "family|te:insert": 706,
+   "family|te:str_replace": 3345,
+   "family|te:undo_edit": 8,
+   "family|te:view": 648,
+   "family|tool:mp_restart": 29,
+   "tool messages": 14249
+  }
+ },
+ "output length by family": {
+  "REAL1": {
+   "bash": {
+    "outputs": 9148,
+    "median chars": 957.5,
+    "p90 chars": 11881.600000000002
+   },
+   "te:create": {
+    "outputs": 671,
+    "median chars": 67.0,
+    "p90 chars": 117.0
+   },
+   "te:insert": {
+    "outputs": 754,
+    "median chars": 1107.5,
+    "p90 chars": 4661.900000000002
+   },
+   "te:str_replace": {
+    "outputs": 3273,
+    "median chars": 606.0,
+    "p90 chars": 1535.4000000000005
+   },
+   "te:undo_edit": {
+    "outputs": 16,
+    "median chars": 13504.5,
+    "p90 chars": 16522.0
+   },
+   "te:view": {
+    "outputs": 537,
+    "median chars": 2993.0,
+    "p90 chars": 12731.000000000004
+   },
+   "tool:mp_restart": {
+    "outputs": 30,
+    "median chars": 269.0,
+    "p90 chars": 270.0
+   }
+  },
+  "REAL2": {
+   "bash": {
+    "outputs": 4566,
+    "median chars": 981.0,
+    "p90 chars": 13048.0
+   },
+   "te:create": {
+    "outputs": 372,
+    "median chars": 67.0,
+    "p90 chars": 114.0
+   },
+   "te:insert": {
+    "outputs": 393,
+    "median chars": 1012.0,
+    "p90 chars": 4285.800000000001
+   },
+   "te:str_replace": {
+    "outputs": 1666,
+    "median chars": 630.0,
+    "p90 chars": 1350.0
+   },
+   "te:undo_edit": {
+    "outputs": 6,
+    "median chars": 6535.5,
+    "p90 chars": 12706.5
+   },
+   "te:view": {
+    "outputs": 326,
+    "median chars": 3050.0,
+    "p90 chars": 12693.0
+   },
+   "tool:mp_restart": {
+    "outputs": 9,
+    "median chars": 269.0,
+    "p90 chars": 271.0
+   }
+  },
+  "BASE": {
+   "bash": {
+    "outputs": 8891,
+    "median chars": 950.0,
+    "p90 chars": 11582.0
+   },
+   "te:create": {
+    "outputs": 622,
+    "median chars": 65.0,
+    "p90 chars": 102.0
+   },
+   "te:insert": {
+    "outputs": 706,
+    "median chars": 1057.5,
+    "p90 chars": 4894.5
+   },
+   "te:str_replace": {
+    "outputs": 3345,
+    "median chars": 615.0,
+    "p90 chars": 1469.9999999999995
+   },
+   "te:undo_edit": {
+    "outputs": 8,
+    "median chars": 69.0,
+    "p90 chars": 79.9
+   },
+   "te:view": {
+    "outputs": 648,
+    "median chars": 2838.0,
+    "p90 chars": 10846.0
+   },
+   "tool:mp_restart": {
+    "outputs": 29,
+    "median chars": 269.0,
+    "p90 chars": 271.0
+   }
+  }
+ },
+ "outputs with \\r by command family": {
+  "REAL1": {
+   "apt/dpkg": 30,
+   "curl -i/-I/-v": 259,
+   "curl other": 40,
+   "git": 1,
+   "npm/yarn/pnpm": 7,
+   "other": 18
+  },
+  "REAL2": {
+   "apt/dpkg": 28,
+   "curl -i/-I/-v": 174,
+   "curl other": 6,
+   "git": 1,
+   "npm/yarn/pnpm": 4,
+   "other": 9
+  },
+  "BASE": {
+   "apt/dpkg": 28,
+   "curl -i/-I/-v": 19,
+   "curl other": 3,
+   "other": 4
+  }
+ },
+ "runs with \\r by command family": {
+  "REAL1": {
+   "apt/dpkg": 30,
+   "curl -i/-I/-v": 115,
+   "curl other": 22,
+   "git": 1,
+   "npm/yarn/pnpm": 6,
+   "other": 15
+  },
+  "REAL2": {
+   "apt/dpkg": 27,
+   "curl -i/-I/-v": 64,
+   "curl other": 6,
+   "git": 1,
+   "npm/yarn/pnpm": 2,
+   "other": 9
+  },
+  "BASE": {
+   "apt/dpkg": 27,
+   "curl -i/-I/-v": 15,
+   "curl other": 2,
+   "other": 4
+  }
+ },
+ "classes": {
+  "te_not_exist": {
+   "scope": "te",
+   "REAL1": {
+    "runs": 20,
+    "of runs": 437,
+    "share of runs": 0.04576659038901602,
+    "outputs": 51,
+    "family outputs": 5251,
+    "per-output rate": 0.00971243572652828
+   },
+   "REAL2": {
+    "runs": 10,
+    "of runs": 201,
+    "share of runs": 0.04975124378109453,
+    "outputs": 31,
+    "family outputs": 2763,
+    "per-output rate": 0.011219688744118711
+   },
+   "BASE": {
+    "runs": 24,
+    "of runs": 437,
+    "share of runs": 0.05491990846681922,
+    "outputs": 53,
+    "family outputs": 5329,
+    "per-output rate": 0.009945580784387315
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.9153318077803204,
+    "ci95": [
+     -1.1441647597254003,
+     2.9748283752860414
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.4975124378109453,
+    "ci95": [
+     -3.109622114315167,
+     3.864734299516908
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "te_exists": {
+   "scope": "te",
+   "REAL1": {
+    "runs": 107,
+    "of runs": 437,
+    "share of runs": 0.2448512585812357,
+    "outputs": 111,
+    "family outputs": 5251,
+    "per-output rate": 0.021138830698914493
+   },
+   "REAL2": {
+    "runs": 69,
+    "of runs": 201,
+    "share of runs": 0.34328358208955223,
+    "outputs": 71,
+    "family outputs": 2763,
+    "per-output rate": 0.025696706478465437
+   },
+   "BASE": {
+    "runs": 107,
+    "of runs": 437,
+    "share of runs": 0.2448512585812357,
+    "outputs": 109,
+    "family outputs": 5329,
+    "per-output rate": 0.02045411897166448
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.0,
+    "ci95": [
+     -3.203661327231121,
+     2.9748283752860414
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.0,
+    "ci95": [
+     -5.5833698990785425,
+     5.365853658536586
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "te_no_replace": {
+   "scope": "te",
+   "REAL1": {
+    "runs": 30,
+    "of runs": 437,
+    "share of runs": 0.06864988558352403,
+    "outputs": 38,
+    "family outputs": 5251,
+    "per-output rate": 0.007236716815844601
+   },
+   "REAL2": {
+    "runs": 16,
+    "of runs": 201,
+    "share of runs": 0.07960199004975124,
+    "outputs": 23,
+    "family outputs": 2763,
+    "per-output rate": 0.008324285197249367
+   },
+   "BASE": {
+    "runs": 54,
+    "of runs": 437,
+    "share of runs": 0.12356979405034325,
+    "outputs": 72,
+    "family outputs": 5329,
+    "per-output rate": 0.013510977669356352
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 5.491990846681922,
+    "ci95": [
+     2.2883295194508007,
+     8.924485125858125
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.9950248756218906,
+    "ci95": [
+     -3.5358021842793415,
+     5.583756345177665
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": true,
+    "(iii) |delta| >= |control| + 3": true,
+    "(iv) not an F1-F11 target": true,
+    "all": true
+   }
+  },
+  "te_multiple": {
+   "scope": "te",
+   "REAL1": {
+    "runs": 22,
+    "of runs": 437,
+    "share of runs": 0.05034324942791762,
+    "outputs": 28,
+    "family outputs": 5251,
+    "per-output rate": 0.005332317653780233
+   },
+   "REAL2": {
+    "runs": 11,
+    "of runs": 201,
+    "share of runs": 0.05472636815920398,
+    "outputs": 17,
+    "family outputs": 2763,
+    "per-output rate": 0.006152732537097358
+   },
+   "BASE": {
+    "runs": 27,
+    "of runs": 437,
+    "share of runs": 0.06178489702517163,
+    "outputs": 34,
+    "family outputs": 5329,
+    "per-output rate": 0.006380183899418277
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 1.1441647597254003,
+    "ci95": [
+     -1.3729977116704806,
+     3.6613272311212817
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.9950248756218906,
+    "ci95": [
+     -2.139615551380257,
+     4.47803119235284
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "te_bad_range": {
+   "scope": "te",
+   "REAL1": {
+    "runs": 29,
+    "of runs": 437,
+    "share of runs": 0.06636155606407322,
+    "outputs": 32,
+    "family outputs": 5251,
+    "per-output rate": 0.00609407731860598
+   },
+   "REAL2": {
+    "runs": 24,
+    "of runs": 201,
+    "share of runs": 0.11940298507462686,
+    "outputs": 26,
+    "family outputs": 2763,
+    "per-output rate": 0.009410061527325372
+   },
+   "BASE": {
+    "runs": 63,
+    "of runs": 437,
+    "share of runs": 0.14416475972540047,
+    "outputs": 72,
+    "family outputs": 5329,
+    "per-output rate": 0.013510977669356352
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 7.780320366132723,
+    "ci95": [
+     4.118993135011442,
+     11.212814645308924
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 2.4875621890547266,
+    "ci95": [
+     -2.6455026455026456,
+     7.448138297872332
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": true,
+    "(iii) |delta| >= |control| + 3": true,
+    "(iv) not an F1-F11 target": true,
+    "all": true
+   }
+  },
+  "te_errno": {
+   "scope": "te",
+   "REAL1": {
+    "runs": 67,
+    "of runs": 437,
+    "share of runs": 0.15331807780320367,
+    "outputs": 69,
+    "family outputs": 5251,
+    "per-output rate": 0.013140354218244143
+   },
+   "REAL2": {
+    "runs": 35,
+    "of runs": 201,
+    "share of runs": 0.17412935323383086,
+    "outputs": 38,
+    "family outputs": 2763,
+    "per-output rate": 0.013753166847629388
+   },
+   "BASE": {
+    "runs": 34,
+    "of runs": 437,
+    "share of runs": 0.07780320366132723,
+    "outputs": 34,
+    "family outputs": 5329,
+    "per-output rate": 0.006380183899418277
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -7.551487414187644,
+    "ci95": [
+     -10.297482837528605,
+     -4.805491990846682
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.4975124378109453,
+    "ci95": [
+     -4.737468671679198,
+     5.791013437849936
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": true,
+    "(iii) |delta| >= |control| + 3": true,
+    "(iv) not an F1-F11 target": true,
+    "all": true
+   }
+  },
+  "te_dir_listing": {
+   "scope": "te",
+   "REAL1": {
+    "runs": 1,
+    "of runs": 437,
+    "share of runs": 0.002288329519450801,
+    "outputs": 1,
+    "family outputs": 5251,
+    "per-output rate": 0.00019043991620643687
+   },
+   "REAL2": {
+    "runs": 1,
+    "of runs": 201,
+    "share of runs": 0.004975124378109453,
+    "outputs": 1,
+    "family outputs": 2763,
+    "per-output rate": 0.0003619254433586681
+   },
+   "BASE": {
+    "runs": 3,
+    "of runs": 437,
+    "share of runs": 0.006864988558352402,
+    "outputs": 3,
+    "family outputs": 5329,
+    "per-output rate": 0.000562957402889848
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.4576659038901602,
+    "ci95": [
+     -0.4576659038901602,
+     1.3729977116704806
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.4975124378109453,
+    "ci95": [
+     0.0,
+     1.6218419506462973
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": false,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "te_created": {
+   "scope": "te",
+   "REAL1": {
+    "runs": 238,
+    "of runs": 437,
+    "share of runs": 0.5446224256292906,
+    "outputs": 495,
+    "family outputs": 5251,
+    "per-output rate": 0.09426775852218625
+   },
+   "REAL2": {
+    "runs": 117,
+    "of runs": 201,
+    "share of runs": 0.582089552238806,
+    "outputs": 264,
+    "family outputs": 2763,
+    "per-output rate": 0.09554831704668838
+   },
+   "BASE": {
+    "runs": 238,
+    "of runs": 437,
+    "share of runs": 0.5446224256292906,
+    "outputs": 481,
+    "family outputs": 5329,
+    "per-output rate": 0.09026083693000563
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.0,
+    "ci95": [
+     -3.6613272311212817,
+     3.6613272311212817
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -3.482587064676617,
+    "ci95": [
+     -9.13978494623656,
+     2.2943780669938083
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_cmd_not_found": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 135,
+    "of runs": 437,
+    "share of runs": 0.30892448512585813,
+    "outputs": 219,
+    "family outputs": 9148,
+    "per-output rate": 0.023939658941845212
+   },
+   "REAL2": {
+    "runs": 67,
+    "of runs": 201,
+    "share of runs": 0.3333333333333333,
+    "outputs": 117,
+    "family outputs": 4566,
+    "per-output rate": 0.025624178712220762
+   },
+   "BASE": {
+    "runs": 136,
+    "of runs": 437,
+    "share of runs": 0.3112128146453089,
+    "outputs": 219,
+    "family outputs": 8891,
+    "per-output rate": 0.024631649983129007
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.2288329519450801,
+    "ci95": [
+     -2.9748283752860414,
+     3.4324942791762014
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.9950248756218906,
+    "ci95": [
+     -3.1919160314028896,
+     5.0263682551932405
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_no_such_file": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 160,
+    "of runs": 437,
+    "share of runs": 0.36613272311212813,
+    "outputs": 293,
+    "family outputs": 9148,
+    "per-output rate": 0.03202885876694359
+   },
+   "REAL2": {
+    "runs": 69,
+    "of runs": 201,
+    "share of runs": 0.34328358208955223,
+    "outputs": 127,
+    "family outputs": 4566,
+    "per-output rate": 0.027814279456855016
+   },
+   "BASE": {
+    "runs": 118,
+    "of runs": 437,
+    "share of runs": 0.2700228832951945,
+    "outputs": 233,
+    "family outputs": 8891,
+    "per-output rate": 0.026206276009447756
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -9.610983981693364,
+    "ci95": [
+     -14.187643020594965,
+     -5.486270022883326
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -1.4925373134328357,
+    "ci95": [
+     -8.122131008184976,
+     5.1559815292096145
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": true,
+    "(iii) |delta| >= |control| + 3": true,
+    "(iv) not an F1-F11 target": true,
+    "all": true
+   }
+  },
+  "b_permission": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 9,
+    "of runs": 437,
+    "share of runs": 0.020594965675057208,
+    "outputs": 10,
+    "family outputs": 9148,
+    "per-output rate": 0.0010931351114997813
+   },
+   "REAL2": {
+    "runs": 2,
+    "of runs": 201,
+    "share of runs": 0.009950248756218905,
+    "outputs": 3,
+    "family outputs": 4566,
+    "per-output rate": 0.000657030223390276
+   },
+   "BASE": {
+    "runs": 5,
+    "of runs": 437,
+    "share of runs": 0.011441647597254004,
+    "outputs": 6,
+    "family outputs": 8891,
+    "per-output rate": 0.0006748397255651782
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.9153318077803204,
+    "ci95": [
+     -2.2883295194508007,
+     0.4576659038901602
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.4975124378109453,
+    "ci95": [
+     -1.0471204188481675,
+     2.4157520754185997
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": false,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_traceback": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 40,
+    "of runs": 437,
+    "share of runs": 0.09153318077803203,
+    "outputs": 45,
+    "family outputs": 9148,
+    "per-output rate": 0.004919108001749016
+   },
+   "REAL2": {
+    "runs": 25,
+    "of runs": 201,
+    "share of runs": 0.12437810945273632,
+    "outputs": 29,
+    "family outputs": 4566,
+    "per-output rate": 0.006351292159439334
+   },
+   "BASE": {
+    "runs": 36,
+    "of runs": 437,
+    "share of runs": 0.08237986270022883,
+    "outputs": 43,
+    "family outputs": 8891,
+    "per-output rate": 0.0048363513665504445
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.9153318077803204,
+    "ci95": [
+     -3.6613272311212817,
+     2.059496567505721
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 2.9850746268656714,
+    "ci95": [
+     -1.6395694469464963,
+     7.583097071767095
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_exc_line": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 38,
+    "of runs": 437,
+    "share of runs": 0.08695652173913043,
+    "outputs": 44,
+    "family outputs": 9148,
+    "per-output rate": 0.004809794490599038
+   },
+   "REAL2": {
+    "runs": 24,
+    "of runs": 201,
+    "share of runs": 0.11940298507462686,
+    "outputs": 30,
+    "family outputs": 4566,
+    "per-output rate": 0.006570302233902759
+   },
+   "BASE": {
+    "runs": 37,
+    "of runs": 437,
+    "share of runs": 0.08466819221967964,
+    "outputs": 39,
+    "family outputs": 8891,
+    "per-output rate": 0.004386458216173659
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.2288329519450801,
+    "ci95": [
+     -3.203661327231121,
+     2.745995423340961
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 2.9850746268656714,
+    "ci95": [
+     -2.140206306069372,
+     8.291234887737472
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_module_missing": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 33,
+    "of runs": 437,
+    "share of runs": 0.07551487414187644,
+    "outputs": 36,
+    "family outputs": 9148,
+    "per-output rate": 0.003935286401399213
+   },
+   "REAL2": {
+    "runs": 17,
+    "of runs": 201,
+    "share of runs": 0.0845771144278607,
+    "outputs": 18,
+    "family outputs": 4566,
+    "per-output rate": 0.003942181340341655
+   },
+   "BASE": {
+    "runs": 36,
+    "of runs": 437,
+    "share of runs": 0.08237986270022883,
+    "outputs": 41,
+    "family outputs": 8891,
+    "per-output rate": 0.004611404791362052
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.6864988558352403,
+    "ci95": [
+     -1.6018306636155606,
+     3.203661327231121
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.9950248756218906,
+    "ci95": [
+     -2.8992576882290564,
+     4.927955665024621
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_syntax": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 26,
+    "of runs": 437,
+    "share of runs": 0.059496567505720827,
+    "outputs": 45,
+    "family outputs": 9148,
+    "per-output rate": 0.004919108001749016
+   },
+   "REAL2": {
+    "runs": 19,
+    "of runs": 201,
+    "share of runs": 0.0945273631840796,
+    "outputs": 37,
+    "family outputs": 4566,
+    "per-output rate": 0.008103372755146736
+   },
+   "BASE": {
+    "runs": 27,
+    "of runs": 437,
+    "share of runs": 0.06178489702517163,
+    "outputs": 41,
+    "family outputs": 8891,
+    "per-output rate": 0.004611404791362052
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.2288329519450801,
+    "ci95": [
+     -2.2883295194508007,
+     2.745995423340961
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 3.482587064676617,
+    "ci95": [
+     0.46728971962616817,
+     6.8783675549730585
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_connection": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 120,
+    "of runs": 437,
+    "share of runs": 0.2745995423340961,
+    "outputs": 187,
+    "family outputs": 9148,
+    "per-output rate": 0.020441626585045912
+   },
+   "REAL2": {
+    "runs": 66,
+    "of runs": 201,
+    "share of runs": 0.3283582089552239,
+    "outputs": 113,
+    "family outputs": 4566,
+    "per-output rate": 0.02474813841436706
+   },
+   "BASE": {
+    "runs": 119,
+    "of runs": 437,
+    "share of runs": 0.2723112128146453,
+    "outputs": 177,
+    "family outputs": 8891,
+    "per-output rate": 0.01990777190417276
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.2288329519450801,
+    "ci95": [
+     -3.4324942791762014,
+     2.9748283752860414
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 1.4925373134328357,
+    "ci95": [
+     -3.4482758620689653,
+     6.842285508291275
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_timeout": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 55,
+    "of runs": 437,
+    "share of runs": 0.12585812356979406,
+    "outputs": 70,
+    "family outputs": 9148,
+    "per-output rate": 0.00765194578049847
+   },
+   "REAL2": {
+    "runs": 25,
+    "of runs": 201,
+    "share of runs": 0.12437810945273632,
+    "outputs": 36,
+    "family outputs": 4566,
+    "per-output rate": 0.00788436268068331
+   },
+   "BASE": {
+    "runs": 49,
+    "of runs": 437,
+    "share of runs": 0.11212814645308924,
+    "outputs": 63,
+    "family outputs": 8891,
+    "per-output rate": 0.007085817118434372
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -1.3729977116704806,
+    "ci95": [
+     -4.118993135011442,
+     1.3729977116704806
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 1.9900497512437811,
+    "ci95": [
+     -2.4642919028640744,
+     6.315789473684211
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_test_fail": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 105,
+    "of runs": 437,
+    "share of runs": 0.2402745995423341,
+    "outputs": 153,
+    "family outputs": 9148,
+    "per-output rate": 0.016724967205946656
+   },
+   "REAL2": {
+    "runs": 51,
+    "of runs": 201,
+    "share of runs": 0.2537313432835821,
+    "outputs": 78,
+    "family outputs": 4566,
+    "per-output rate": 0.017082785808147174
+   },
+   "BASE": {
+    "runs": 97,
+    "of runs": 437,
+    "share of runs": 0.2219679633867277,
+    "outputs": 134,
+    "family outputs": 8891,
+    "per-output rate": 0.015071420537622315
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -1.8306636155606408,
+    "ci95": [
+     -4.118993135011442,
+     0.6864988558352403
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -1.4925373134328357,
+    "ci95": [
+     -5.687880839539607,
+     2.4633590206311258
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_test_pass": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 107,
+    "of runs": 437,
+    "share of runs": 0.2448512585812357,
+    "outputs": 248,
+    "family outputs": 9148,
+    "per-output rate": 0.02710975076519458
+   },
+   "REAL2": {
+    "runs": 38,
+    "of runs": 201,
+    "share of runs": 0.1890547263681592,
+    "outputs": 105,
+    "family outputs": 4566,
+    "per-output rate": 0.022996057818659658
+   },
+   "BASE": {
+    "runs": 113,
+    "of runs": 437,
+    "share of runs": 0.2585812356979405,
+    "outputs": 255,
+    "family outputs": 8891,
+    "per-output rate": 0.028680688336520075
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 1.3729977116704806,
+    "ci95": [
+     -1.1441647597254003,
+     3.6613272311212817
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -3.482587064676617,
+    "ci95": [
+     -7.651324085750315,
+     0.5050505050505051
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_error_prefix": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 201,
+    "of runs": 437,
+    "share of runs": 0.459954233409611,
+    "outputs": 287,
+    "family outputs": 9148,
+    "per-output rate": 0.03137297770004373
+   },
+   "REAL2": {
+    "runs": 83,
+    "of runs": 201,
+    "share of runs": 0.4129353233830846,
+    "outputs": 119,
+    "family outputs": 4566,
+    "per-output rate": 0.026062198861147613
+   },
+   "BASE": {
+    "runs": 200,
+    "of runs": 437,
+    "share of runs": 0.4576659038901602,
+    "outputs": 282,
+    "family outputs": 8891,
+    "per-output rate": 0.03171746710156338
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.2288329519450801,
+    "ci95": [
+     -5.034324942791762,
+     4.576659038901601
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -3.9800995024875623,
+    "ci95": [
+     -11.168812677974497,
+     2.899616368286439
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_warning": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 348,
+    "of runs": 437,
+    "share of runs": 0.7963386727688787,
+    "outputs": 901,
+    "family outputs": 9148,
+    "per-output rate": 0.0984914735461303
+   },
+   "REAL2": {
+    "runs": 158,
+    "of runs": 201,
+    "share of runs": 0.7860696517412935,
+    "outputs": 442,
+    "family outputs": 4566,
+    "per-output rate": 0.09680245291283399
+   },
+   "BASE": {
+    "runs": 344,
+    "of runs": 437,
+    "share of runs": 0.7871853546910755,
+    "outputs": 862,
+    "family outputs": 8891,
+    "per-output rate": 0.09695197390619728
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.9153318077803204,
+    "ci95": [
+     -5.263157894736842,
+     3.2093821510297174
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -0.4975124378109453,
+    "ci95": [
+     -6.565834400341443,
+     5.58145437374572
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_http_err": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 78,
+    "of runs": 437,
+    "share of runs": 0.17848970251716248,
+    "outputs": 125,
+    "family outputs": 9148,
+    "per-output rate": 0.013664188893747268
+   },
+   "REAL2": {
+    "runs": 40,
+    "of runs": 201,
+    "share of runs": 0.19900497512437812,
+    "outputs": 70,
+    "family outputs": 4566,
+    "per-output rate": 0.015330705212439772
+   },
+   "BASE": {
+    "runs": 77,
+    "of runs": 437,
+    "share of runs": 0.17620137299771166,
+    "outputs": 133,
+    "family outputs": 8891,
+    "per-output rate": 0.014958947250028118
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.2288329519450801,
+    "ci95": [
+     -3.8901601830663615,
+     2.9748283752860414
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 1.4925373134328357,
+    "ci95": [
+     -3.2730512191301617,
+     6.046511627906977
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_http_ok": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 99,
+    "of runs": 437,
+    "share of runs": 0.22654462242562928,
+    "outputs": 205,
+    "family outputs": 9148,
+    "per-output rate": 0.02240926978574552
+   },
+   "REAL2": {
+    "runs": 60,
+    "of runs": 201,
+    "share of runs": 0.29850746268656714,
+    "outputs": 128,
+    "family outputs": 4566,
+    "per-output rate": 0.02803328953131844
+   },
+   "BASE": {
+    "runs": 106,
+    "of runs": 437,
+    "share of runs": 0.2425629290617849,
+    "outputs": 204,
+    "family outputs": 8891,
+    "per-output rate": 0.022944550669216062
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 1.6018306636155606,
+    "ci95": [
+     -1.6018306636155606,
+     5.034324942791762
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 1.4925373134328357,
+    "ci95": [
+     -4.02163880627628,
+     7.142857142857142
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_json_error": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 125,
+    "of runs": 437,
+    "share of runs": 0.28604118993135014,
+    "outputs": 212,
+    "family outputs": 9148,
+    "per-output rate": 0.023174464363795364
+   },
+   "REAL2": {
+    "runs": 71,
+    "of runs": 201,
+    "share of runs": 0.35323383084577115,
+    "outputs": 131,
+    "family outputs": 4566,
+    "per-output rate": 0.028690319754708718
+   },
+   "BASE": {
+    "runs": 125,
+    "of runs": 437,
+    "share of runs": 0.28604118993135014,
+    "outputs": 198,
+    "family outputs": 8891,
+    "per-output rate": 0.02226971094365088
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.0,
+    "ci95": [
+     -3.6613272311212817,
+     3.4324942791762014
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 3.9800995024875623,
+    "ci95": [
+     -1.5930735930735926,
+     9.821794496487117
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_success_word": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 377,
+    "of runs": 437,
+    "share of runs": 0.8627002288329519,
+    "outputs": 1443,
+    "family outputs": 9148,
+    "per-output rate": 0.15773939658941846
+   },
+   "REAL2": {
+    "runs": 182,
+    "of runs": 201,
+    "share of runs": 0.9054726368159204,
+    "outputs": 756,
+    "family outputs": 4566,
+    "per-output rate": 0.16557161629434955
+   },
+   "BASE": {
+    "runs": 369,
+    "of runs": 437,
+    "share of runs": 0.8443935926773455,
+    "outputs": 1449,
+    "family outputs": 8891,
+    "per-output rate": 0.16297379372399054
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -1.8306636155606408,
+    "ci95": [
+     -4.576659038901601,
+     0.692219679633836
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -2.9850746268656714,
+    "ci95": [
+     -6.965463380770566,
+     0.5555555555555556
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_checkmark": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 126,
+    "of runs": 437,
+    "share of runs": 0.28832951945080093,
+    "outputs": 248,
+    "family outputs": 9148,
+    "per-output rate": 0.02710975076519458
+   },
+   "REAL2": {
+    "runs": 67,
+    "of runs": 201,
+    "share of runs": 0.3333333333333333,
+    "outputs": 134,
+    "family outputs": 4566,
+    "per-output rate": 0.029347349978098992
+   },
+   "BASE": {
+    "runs": 122,
+    "of runs": 437,
+    "share of runs": 0.2791762013729977,
+    "outputs": 232,
+    "family outputs": 8891,
+    "per-output rate": 0.02609380272185356
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.9153318077803204,
+    "ci95": [
+     -3.4324942791762014,
+     1.8306636155606408
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 1.4925373134328357,
+    "ci95": [
+     -1.4424818840579712,
+     4.523184102329828
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_exit_code": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 14,
+    "of runs": 437,
+    "share of runs": 0.032036613272311214,
+    "outputs": 19,
+    "family outputs": 9148,
+    "per-output rate": 0.0020769567118495845
+   },
+   "REAL2": {
+    "runs": 8,
+    "of runs": 201,
+    "share of runs": 0.03980099502487562,
+    "outputs": 11,
+    "family outputs": 4566,
+    "per-output rate": 0.0024091108190976785
+   },
+   "BASE": {
+    "runs": 15,
+    "of runs": 437,
+    "share of runs": 0.034324942791762014,
+    "outputs": 22,
+    "family outputs": 8891,
+    "per-output rate": 0.0024744123270723202
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.2288329519450801,
+    "ci95": [
+     -1.6018306636155606,
+     2.059496567505721
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -1.4925373134328357,
+    "ci95": [
+     -4.663819624352331,
+     1.5708872967759702
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": false,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_killed": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 3,
+    "of runs": 437,
+    "share of runs": 0.006864988558352402,
+    "outputs": 4,
+    "family outputs": 9148,
+    "per-output rate": 0.00043725404459991256
+   },
+   "REAL2": {
+    "runs": 1,
+    "of runs": 201,
+    "share of runs": 0.004975124378109453,
+    "outputs": 1,
+    "family outputs": 4566,
+    "per-output rate": 0.0002190100744634253
+   },
+   "BASE": {
+    "runs": 5,
+    "of runs": 437,
+    "share of runs": 0.011441647597254004,
+    "outputs": 5,
+    "family outputs": 8891,
+    "per-output rate": 0.0005623664379709819
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.4576659038901602,
+    "ci95": [
+     -0.4576659038901602,
+     1.3729977116704806
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -0.4975124378109453,
+    "ci95": [
+     -2.3923444976076556,
+     1.036404360967184
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": false,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_empty": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 280,
+    "of runs": 437,
+    "share of runs": 0.6407322654462243,
+    "outputs": 580,
+    "family outputs": 9148,
+    "per-output rate": 0.06340183646698731
+   },
+   "REAL2": {
+    "runs": 138,
+    "of runs": 201,
+    "share of runs": 0.6865671641791045,
+    "outputs": 324,
+    "family outputs": 4566,
+    "per-output rate": 0.07095926412614981
+   },
+   "BASE": {
+    "runs": 279,
+    "of runs": 437,
+    "share of runs": 0.6384439359267735,
+    "outputs": 560,
+    "family outputs": 8891,
+    "per-output rate": 0.06298504105274998
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.2288329519450801,
+    "ci95": [
+     -5.720823798627003,
+     5.263157894736842
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -1.4925373134328357,
+    "ci95": [
+     -8.867542419266558,
+     5.500690954773865
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "b_no_output_note": {
+   "scope": "bash",
+   "REAL1": {
+    "runs": 0,
+    "of runs": 437,
+    "share of runs": 0.0,
+    "outputs": 0,
+    "family outputs": 9148,
+    "per-output rate": 0.0
+   },
+   "REAL2": {
+    "runs": 1,
+    "of runs": 201,
+    "share of runs": 0.004975124378109453,
+    "outputs": 1,
+    "family outputs": 4566,
+    "per-output rate": 0.0002190100744634253
+   },
+   "BASE": {
+    "runs": 0,
+    "of runs": 437,
+    "share of runs": 0.0,
+    "outputs": 0,
+    "family outputs": 8891,
+    "per-output rate": 0.0
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.4975124378109453,
+    "ci95": [
+     0.0,
+     1.538659793814432
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": false,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "f_crlf_nondpkg": {
+   "scope": "any",
+   "REAL1": {
+    "runs": 128,
+    "of runs": 437,
+    "share of runs": 0.2929061784897025,
+    "outputs": 315,
+    "family outputs": 14429,
+    "per-output rate": 0.021831034721740937
+   },
+   "REAL2": {
+    "runs": 71,
+    "of runs": 201,
+    "share of runs": 0.35323383084577115,
+    "outputs": 188,
+    "family outputs": 7338,
+    "per-output rate": 0.025620059961842464
+   },
+   "BASE": {
+    "runs": 7,
+    "of runs": 437,
+    "share of runs": 0.016018306636155607,
+    "outputs": 7,
+    "family outputs": 14249,
+    "per-output rate": 0.0004912625447399818
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -27.68878718535469,
+    "ci95": [
+     -32.036613272311214,
+     -23.340961098398168
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 1.4925373134328357,
+    "ci95": [
+     -3.2870982802894715,
+     6.573545043847989
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": true,
+    "(iii) |delta| >= |control| + 3": true,
+    "(iv) not an F1-F11 target": true,
+    "all": true
+   }
+  },
+  "f_crbare_nondpkg": {
+   "scope": "any",
+   "REAL1": {
+    "runs": 25,
+    "of runs": 437,
+    "share of runs": 0.057208237986270026,
+    "outputs": 32,
+    "family outputs": 14429,
+    "per-output rate": 0.0022177559082403493
+   },
+   "REAL2": {
+    "runs": 18,
+    "of runs": 201,
+    "share of runs": 0.08955223880597014,
+    "outputs": 25,
+    "family outputs": 7338,
+    "per-output rate": 0.003406922867266285
+   },
+   "BASE": {
+    "runs": 13,
+    "of runs": 437,
+    "share of runs": 0.029748283752860413,
+    "outputs": 19,
+    "family outputs": 14249,
+    "per-output rate": 0.001333426907151379
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -2.745995423340961,
+    "ci95": [
+     -5.034324942791762,
+     -0.4576659038901602
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.4975124378109453,
+    "ci95": [
+     -4.639175257731959,
+     5.348707664884129
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": true,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "f_cr_dpkg": {
+   "scope": "any",
+   "REAL1": {
+    "runs": 31,
+    "of runs": 437,
+    "share of runs": 0.07093821510297482,
+    "outputs": 31,
+    "family outputs": 14429,
+    "per-output rate": 0.0021484510361078385
+   },
+   "REAL2": {
+    "runs": 26,
+    "of runs": 201,
+    "share of runs": 0.12935323383084577,
+    "outputs": 26,
+    "family outputs": 7338,
+    "per-output rate": 0.0035431997819569366
+   },
+   "BASE": {
+    "runs": 31,
+    "of runs": 437,
+    "share of runs": 0.07093821510297482,
+    "outputs": 32,
+    "family outputs": 14249,
+    "per-output rate": 0.0022457716330970593
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": 0.0,
+    "ci95": [
+     -2.517162471395881,
+     2.517162471395881
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 3.9800995024875623,
+    "ci95": [
+     0.0,
+     8.205314009661835
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": false,
+    "all": false
+   }
+  },
+  "f_ansi": {
+   "scope": "any",
+   "REAL1": {
+    "runs": 111,
+    "of runs": 437,
+    "share of runs": 0.2540045766590389,
+    "outputs": 192,
+    "family outputs": 14429,
+    "per-output rate": 0.013306535449442096
+   },
+   "REAL2": {
+    "runs": 45,
+    "of runs": 201,
+    "share of runs": 0.22388059701492538,
+    "outputs": 84,
+    "family outputs": 7338,
+    "per-output rate": 0.011447260834014717
+   },
+   "BASE": {
+    "runs": 73,
+    "of runs": 437,
+    "share of runs": 0.16704805491990846,
+    "outputs": 119,
+    "family outputs": 14249,
+    "per-output rate": 0.00835146326057969
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -8.695652173913043,
+    "ci95": [
+     -12.128146453089245,
+     -5.491990846681922
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -0.9950248756218906,
+    "ci95": [
+     -5.189294017705446,
+     2.9702970297029703
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": true,
+    "(iii) |delta| >= |control| + 3": true,
+    "(iv) not an F1-F11 target": true,
+    "all": true
+   }
+  },
+  "f_truncated": {
+   "scope": "any",
+   "REAL1": {
+    "runs": 269,
+    "of runs": 437,
+    "share of runs": 0.6155606407322655,
+    "outputs": 546,
+    "family outputs": 14429,
+    "per-output rate": 0.03784046018435096
+   },
+   "REAL2": {
+    "runs": 140,
+    "of runs": 201,
+    "share of runs": 0.6965174129353234,
+    "outputs": 337,
+    "family outputs": 7338,
+    "per-output rate": 0.045925320250749524
+   },
+   "BASE": {
+    "runs": 251,
+    "of runs": 437,
+    "share of runs": 0.5743707093821511,
+    "outputs": 508,
+    "family outputs": 14249,
+    "per-output rate": 0.03565162467541582
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -4.118993135011442,
+    "ci95": [
+     -8.695652173913043,
+     0.2288329519450801
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": 0.0,
+    "ci95": [
+     -5.670103092783505,
+     5.772058823529397
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": true,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  },
+  "f_long": {
+   "scope": "any",
+   "REAL1": {
+    "runs": 383,
+    "of runs": 437,
+    "share of runs": 0.8764302059496567,
+    "outputs": 1352,
+    "family outputs": 14429,
+    "per-output rate": 0.09370018712315475
+   },
+   "REAL2": {
+    "runs": 180,
+    "of runs": 201,
+    "share of runs": 0.8955223880597015,
+    "outputs": 701,
+    "family outputs": 7338,
+    "per-output rate": 0.09553011719814664
+   },
+   "BASE": {
+    "runs": 380,
+    "of runs": 437,
+    "share of runs": 0.8695652173913043,
+    "outputs": 1243,
+    "family outputs": 14249,
+    "per-output rate": 0.0872341918731139
+   },
+   "delta BASE-REAL1 (points)": {
+    "point": -0.6864988558352403,
+    "ci95": [
+     -3.6613272311212817,
+     2.2883295194508007
+    ]
+   },
+   "control REAL2-REAL1 (points)": {
+    "point": -0.9950248756218906,
+    "ci95": [
+     -4.911099137931035,
+     2.7472527472527473
+    ],
+    "tasks": 201
+   },
+   "eligible": {
+    "(i) share >= 5% in BASE or REAL1": true,
+    "(ii) interval excludes 0": false,
+    "(iii) |delta| >= |control| + 3": false,
+    "(iv) not an F1-F11 target": true,
+    "all": false
+   }
+  }
+ },
+ "ranked eligible classes": [
+  {
+   "rank": 1,
+   "class": "f_crlf_nondpkg",
+   "delta (points)": -27.68878718535469,
+   "BASE share": 0.016018306636155607,
+   "REAL1 share": 0.2929061784897025
+  },
+  {
+   "rank": 2,
+   "class": "b_no_such_file",
+   "delta (points)": -9.610983981693364,
+   "BASE share": 0.2700228832951945,
+   "REAL1 share": 0.36613272311212813
+  },
+  {
+   "rank": 3,
+   "class": "f_ansi",
+   "delta (points)": -8.695652173913043,
+   "BASE share": 0.16704805491990846,
+   "REAL1 share": 0.2540045766590389
+  },
+  {
+   "rank": 4,
+   "class": "te_bad_range",
+   "delta (points)": 7.780320366132723,
+   "BASE share": 0.14416475972540047,
+   "REAL1 share": 0.06636155606407322
+  },
+  {
+   "rank": 5,
+   "class": "te_errno",
+   "delta (points)": -7.551487414187644,
+   "BASE share": 0.07780320366132723,
+   "REAL1 share": 0.15331807780320367
+  },
+  {
+   "rank": 6,
+   "class": "te_no_replace",
+   "delta (points)": 5.491990846681922,
+   "BASE share": 0.12356979405034325,
+   "REAL1 share": 0.06864988558352403
+  }
+ ]
+}

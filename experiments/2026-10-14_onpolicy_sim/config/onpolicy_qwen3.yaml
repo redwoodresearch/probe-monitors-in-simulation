@@ -1,0 +1,15 @@
+# On-policy patching pilot (df's RULE.md, Amendments 1-4): Qwen3-32B reads the six versions of the 20 drawn Qwen3.5-27B
+# runs, staged by stage_onpolicy.py (arms patch-original, -rewritten, -bash, -edits, -createview, -placeholder). Same
+# model, revision, dtype, attention and cut as Step 2 and #36; mean_final adds output_end_mean and call_end_mean beside
+# the raw segment-end positions (call_end raw, with token_text, for df's content-only filter). 7 layers, as the other
+# averaged dumps; the forward pass stops after L63, so the extra layers add storage, not compute. 4 shards, chunks of 5.
+run: 2026-10-14_q2_onpolicy_patching_qwen3-32b_l7_v1
+inputs_from: 2026-10-14_q2_onpolicy_patching_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 4
+chunk_size: 5
+mean_final: true
+layers: [16, 24, 32, 40, 48, 56, 63]

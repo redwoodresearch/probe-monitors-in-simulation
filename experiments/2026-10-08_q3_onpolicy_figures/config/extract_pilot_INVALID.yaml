@@ -1,0 +1,12 @@
+# Pipeline test on the INVALID pilot (strict-tools bug): its attack arms' context epochs, staged by
+# run_replay_readouts.py --stage pilot_INVALID_stage_v2 (v1 lacked redrawn_because and policy_called).
+# Approved by Aswin in session (10-08, about 23:40 PT): up to $3 of the extraction and scoring caps; outputs are INVALID.
+run: 2026-10-08_pilot_INVALID_replay_v1
+inputs: pilot_INVALID_stage_v2
+inputs_sha256:
+  attack.jsonl: b46fd097ef6392fb53b58ffbcce18ab9a2e3d4e316cf17acdeb28a269c9e208b
+  sim_attack@september.jsonl: 25aabfdb340988dc9a704615a0e6bcd217cce805ab87d3d0de3263c8053c22bc
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 10
+pad_to: 4096

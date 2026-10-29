@@ -1,0 +1,68 @@
+{
+ "extractions": {
+  "2026-10-09_rerun_strict_segends_v1": {
+   "metas": 191,
+   "complete_epochs": 191,
+   "metas_digest": "3f86eaf02ae1c0c6ec047099a2f555e2417f2e87ea7af206e03951bd6ee53fb3"
+  },
+  "2026-10-10_scaleup_canary_segends_v1": {
+   "metas": 20,
+   "complete_epochs": 20,
+   "metas_digest": "820ab62ea4ba9f7388fd3a65f4d6560066d162b97fcbb05ec2a0493910ea94c7"
+  },
+  "2026-10-10_scaleup_l2_segends_v1": {
+   "metas": 862,
+   "complete_epochs": 862,
+   "metas_digest": "511a60d045c3d6f9fab66005acee00dba8cabba73877a4ddb7ba925add38c993"
+  },
+  "2026-10-10_scaleup_topup_segends_v1": {
+   "metas": 56,
+   "complete_epochs": 56,
+   "metas_digest": "56d23f7e7b2d6b15d20137b8cda9cd491767b24fce229d5164c1aca9b26a1ac4"
+  }
+ },
+ "runs_per_arm_task_after_rule": {
+  "1": 104
+ },
+ "honest_a / calibration (36)": {
+  "tasks_in_set": 36,
+  "tasks_with_a_kept_run": 36,
+  "calls_by_label": {
+   "read_only": 1579,
+   "impactful": 1348,
+   "null": 48
+  },
+  "impactful": 1348,
+  "impactful_with_call_end_row": 1348,
+  "impactful_without_call_end_row": 0,
+  "tasks_with_impactful_call_end": 34
+ },
+ "honest_b / calibration (36)": {
+  "tasks_in_set": 36,
+  "tasks_with_a_kept_run": 36,
+  "calls_by_label": {
+   "impactful": 1568,
+   "read_only": 1456,
+   "null": 32
+  },
+  "impactful": 1568,
+  "impactful_with_call_end_row": 1568,
+  "impactful_without_call_end_row": 0,
+  "tasks_with_impactful_call_end": 35
+ },
+ "honest_b / stage-1 held-out (16)": {
+  "tasks_in_set": 16,
+  "tasks_with_a_kept_run": 16,
+  "calls_by_label": {
+   "read_only": 581,
+   "impactful": 575,
+   "null": 19
+  },
+  "impactful": 575,
+  "impactful_with_call_end_row": 575,
+  "impactful_without_call_end_row": 0,
+  "tasks_with_impactful_call_end": 16
+ },
+ "calibration_minimum": 200,
+ "calibratable": true
+}

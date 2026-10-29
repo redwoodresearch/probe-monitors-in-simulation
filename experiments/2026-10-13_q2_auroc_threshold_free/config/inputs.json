@@ -1,0 +1,59 @@
+{
+ "note": "Local copies of stored scores (on S3 or a Modal Volume as well). Each file is checked against the sha256 that a committed record pins, read with git show <commit>:<path>. No new scores are made.",
+ "fix939_runs": {
+  "path": "/Users/aswinsurya/probe-shift-q2-fix939/fix939_frozen_runs_POSTHOC_2026-10-11_020458.jsonl",
+  "sha256": "5f6ecbc42b1c6bb9586cb58e474d74c5c1d914bedb95d80a5a07dd078b0e5ebd",
+  "pinned by": "dd1efadf:experiments/2026-10-12_q2_meanpool_36/analyze_meanpool.py (PIN) and every fixed-scores record's inputs sha256"
+ },
+ "readers": {
+  "Qwen3-32B #36 (last-token)": {
+   "dir": "/Users/aswinsurya/probe-shift-q2-qwen35-reply/gate36",
+   "key": "output_end",
+   "layers": [16, 24, 32, 40, 48, 56, 63],
+   "dir pins": {"commit": "dd1efadf", "path": "experiments/2026-10-06_q3_attack_detector/results/null_selection_2026-10-07_102220.json", "how": "selection.saved_scores.files_sha256 (all seven layers); runs.json from fix939_POSTHOC's inputs.scores_dir.runs_json_sha256"},
+   "repaired": "fix939_runs (FIX rows, output_end nested scores, layer 63)",
+   "reference": {"commit": "fac44780", "path": "experiments/2026-10-12_q2_meanpool_36/results/meanpool_reading_2026-10-12_160554.json", "sha256": "709e3ad6683543b211ebb1a487b47e48ee5f869969d6b20d3eeaa5ea396050a0", "readout": "last-token (#36)"}
+  },
+  "Qwen3-32B #36 (mean-pooled)": {
+   "dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-shift-q2/802b982d-f788-49b8-9390-11c29e3725f3/scratchpad/wt_mp/experiments/2026-10-12_q2_meanpool_36/results/run_scores_2026-10-12_154817",
+   "key": "output_end_mean",
+   "layers": [16, 24, 32, 40, 48, 56, 63],
+   "record": {"commit": "dd1efadf", "path": "experiments/2026-10-12_q2_meanpool_36/results/fix_scores_meanpool_2026-10-12_160432.json"},
+   "repaired npz dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-shift-q2/802b982d-f788-49b8-9390-11c29e3725f3/scratchpad/wt_mp/experiments/2026-10-12_q2_meanpool_36/results",
+   "reference": {"commit": "fac44780", "path": "experiments/2026-10-12_q2_meanpool_36/results/meanpool_reading_2026-10-12_160554.json", "sha256": "709e3ad6683543b211ebb1a487b47e48ee5f869969d6b20d3eeaa5ea396050a0", "readout": "mean-pooled"}
+  },
+  "Olmo-3.1-32B": {
+   "dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-shift-q2/802b982d-f788-49b8-9390-11c29e3725f3/scratchpad/wt_olmo/experiments/2026-10-12_q2_olmo_reader/results/run_scores_2026-10-12_110549",
+   "key": "output_end",
+   "layers": [16, 24, 32, 40, 48, 56, 63],
+   "record": {"commit": "03af438b", "path": "experiments/2026-10-12_q2_olmo_reader/results/fix_scores_olmo_2026-10-12_114920.json"},
+   "repaired npz dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-shift-q2/802b982d-f788-49b8-9390-11c29e3725f3/scratchpad/wt_olmo/experiments/2026-10-12_q2_olmo_reader/results",
+   "reference": {"commit": "03af438b", "path": "experiments/2026-10-12_q2_olmo_reader/results/edit_effect_olmo_2026-10-12_115023.json"}
+  },
+  "Llama-3.3-70B": {
+   "dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-shift-q2/802b982d-f788-49b8-9390-11c29e3725f3/scratchpad/wt_llama/experiments/2026-10-12_q2_llama_reader/results/run_scores_2026-10-12_143129",
+   "key": "output_end",
+   "layers": [20, 30, 40, 50, 60, 70, 79],
+   "record": {"commit": "dddc8324", "path": "experiments/2026-10-12_q2_llama_reader/results/fix_scores_olmo_2026-10-12_153542.json"},
+   "repaired npz dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-shift-q2/802b982d-f788-49b8-9390-11c29e3725f3/scratchpad/wt_llama/experiments/2026-10-12_q2_llama_reader/results",
+   "reference": {"commit": "dddc8324", "path": "experiments/2026-10-12_q2_llama_reader/results/edit_effect_llama_2026-10-12_153720.json"}
+  },
+  "Qwen3.5-27B": {
+   "dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-shift-q2/802b982d-f788-49b8-9390-11c29e3725f3/scratchpad/wt_q35/experiments/2026-10-12_q2_qwen35_reply_readout/results/run_scores_2026-10-12_011944",
+   "key": "output_end",
+   "layers": [16, 24, 32, 40, 48, 56, 63],
+   "record": {"commit": "d0ab80ff", "path": "experiments/2026-10-12_q2_qwen35_repaired/results/q35fix_scores_repaired_2026-10-13_003323.json"},
+   "repaired npz dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-shift-q2/802b982d-f788-49b8-9390-11c29e3725f3/scratchpad/wt_q35fix/experiments/2026-10-12_q2_qwen35_repaired/results",
+   "reference": {"commit": "d0ab80ff", "path": "experiments/2026-10-12_q2_qwen35_repaired/results/edit_effect_q35_2026-10-13_003512.json"}
+  }
+ },
+ "simulated honest (#36 only)": {
+  "scores": "/Users/aswinsurya/probe-distribution-shift-from-sims/.claude/worktrees/agent-a41654b9677ba3292/experiments/2026-10-06_q3_attack_detector/results/sim_honest_scores_2026-10-07_124717/scores.npz",
+  "sha256": "2e9cbf66f7b849e97d22ea4f45403bf1f4ccb0f620de79e3b8a2190f370929a0",
+  "runs": "experiments/2026-10-06_q3_attack_detector/results/sim_honest_scores_2026-10-07_124717/runs.json",
+  "record": "experiments/2026-10-06_q3_attack_detector/results/sim_honest_scoring_2026-10-07_124717.json",
+  "key": "output_end__nested",
+  "layer": 63,
+  "pin": "none committed: authenticated by the reproduction gate (every run shared with #36 scores within 1e-3 of #36's stored layer-63 nested scores)"
+ }
+}

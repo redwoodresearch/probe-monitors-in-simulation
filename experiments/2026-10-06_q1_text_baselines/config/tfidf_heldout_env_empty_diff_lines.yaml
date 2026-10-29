@@ -1,0 +1,26 @@
+# Level 6 = level 5 plus empty added/removed lines dropped from editor diffs (see results/diff_pattern_2026-10-06_145927.md).
+# Held-out environment for the level-5 variant (harness format + diff lines canonicalized).
+# Held-out environment (leave one environment out, splits/folds_v3.json environment_folds): every TF-IDF variant is fit
+# on nine environments and scored on the tenth. Does the separation transfer to an unseen environment?
+name: tfidf_heldout_env_empty_diff_lines
+examples: examples_2026-10-06_142532     # staging with the leading-content fix (readout text keeps the output's first characters)
+folds_file: folds_v3.json
+fold_scheme: environment
+baselines:
+  harness_normalized_empty_diff_lines: {text: readout_text, scrub: 6}   # level 5 + empty added/removed diff lines dropped
+output_variants: [all]                   # level 6 only changes editor diffs; no_editor equals level 5
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer; sklearn "char" collapses whitespace runs)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true                       # TfidfTransformer: tf -> 1 + log(tf); smooth_idf true; l2 row norm
+C: 1.0                                   # fixed a priori (sklearn default); c_sensitivity is reported, not used to choose
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 0}
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

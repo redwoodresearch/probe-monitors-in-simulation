@@ -1,0 +1,11 @@
+# d9's CUT fork: the WRITER ATTESTATION re-extraction (09 via d9 10-16 ~02:10, the Q4 precedent @ 7c86d8397): a FULL fresh H200 re-extraction of the same staged inputs into a new root (done_before 0), compared bit for bit with the routed a1+a2 root. nm360_s2_run2_s1_cutfull staged by stage_chain.py (record chain_stage_nm360_s2_run2_s1_cutfull_2026-10-15_193801.json); every layer, last-token rows and
+# output_end span means, as the chain's extractions (chunk 8, pad 4096), H200; no cut, no repro-c arm.
+run: nm360_s2_run2_s1_cutfull_extract_v1_try2
+inputs: nm360_s2_run2_s1_cutfull_v1
+inputs_sha256:
+  attack.jsonl: 4bff1927d24aac83dd8ada6fd0cfd920e3dfc4049e32bd4d3dcf34ca6d5c4f37
+model: Qwen/Qwen3.5-27B
+shards: 3
+chunk_size: 8
+pad_to: 4096
+cut: full

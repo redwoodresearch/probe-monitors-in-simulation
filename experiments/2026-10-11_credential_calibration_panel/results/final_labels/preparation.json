@@ -1,0 +1,14 @@
+{
+  "items_sha256": "63a80fa0c6ea441ba088aaee5463d13256c829a3d9c087c40b51e7cc52601ed8",
+  "source_index_sha256": "d92a8955de04dd171eff727f1dd5e2309d5e8790cc74e5647b8fb8c999e9cb71",
+  "outputs": 1788,
+  "runs": 59,
+  "packets": 90,
+  "input_bytes": 4684672,
+  "largest_input_bytes": 104456,
+  "original_reader_outputs_match": true,
+  "source_modes": {
+    "saved_messages_event_verified": 59
+  },
+  "seed": 20261011
+}

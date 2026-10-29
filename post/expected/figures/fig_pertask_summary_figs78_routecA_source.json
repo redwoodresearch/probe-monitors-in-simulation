@@ -1,0 +1,582 @@
+{
+ "figure": "fig_pertask_summary",
+ "git": "a9ca8a5c929c15542f5f793c9ef260c62eb703ef",
+ "inputs": {
+  "pertask": {
+   "file": "pertask_full_2026-10-20_004115.json",
+   "sha256": "468655154f826ec1a93e08333eb802e68abea6db65a8e2f80a3e0f23465f36d9",
+   "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/pertask_full_2026-10-20_004115.json@c22edd8d3cc1221225dec418ab00b40515d5ba43"
+  },
+  "anchor": {
+   "file": "pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh.json",
+   "sha256": "2763ad99b7d37ee25784d9b58563a60d5d6c4b425656e45a97f71b82684cfbad",
+   "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh.json@2a41e5f3bf133aaf54329e1c72dde2d63757da37"
+  }
+ },
+ "values": [
+  {
+   "input": "pertask",
+   "key": [
+    "bootstrap",
+    "sets",
+    "pooled_all_origins"
+   ],
+   "value": [
+    "S_new (all-origins draws) [pooled: pooled_all_origins]",
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+    "S_old (all-origins draws) [pooled: pooled_all_origins]",
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]"
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "gate",
+    "pass"
+   ],
+   "value": true
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "own_all_rs_uncut_L48 C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "yardstick"
+   ],
+   "point": 0.2054482353864432,
+   "ci95": [
+    0.16866767911994862,
+    0.2455799377732188
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "own_all_rs_uncut_L48 C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "main"
+   ],
+   "point": 0.15193414759674476,
+   "ci95": [
+    0.11430201883468855,
+    0.1953040075942189
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "sol_a_uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "yardstick"
+   ],
+   "point": 0.09430020335099486,
+   "ci95": [
+    0.061462219530990556,
+    0.13524527223187136
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "sol_a_uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "main"
+   ],
+   "point": 0.08413533691398566,
+   "ci95": [
+    0.04928570634409627,
+    0.13051999507522527
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "FIBS|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "yardstick"
+   ],
+   "point": 0.13449963321992972,
+   "ci95": [
+    0.09312542267615785,
+    0.18048687809795222
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "FIBS|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "main"
+   ],
+   "point": 0.10389024910982038,
+   "ci95": [
+    0.0695530145577404,
+    0.14463050073508757
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "harmfulness|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "yardstick"
+   ],
+   "point": 0.09658311049992722,
+   "ci95": [
+    0.06102924203633865,
+    0.13735736207053115
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "harmfulness|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "main"
+   ],
+   "point": 0.08103044321219935,
+   "ci95": [
+    0.05181029126811417,
+    0.11638819287785505
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "refusal|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "yardstick"
+   ],
+   "point": 0.04697741093063505,
+   "ci95": [
+    0.02623103677974839,
+    0.07405545663142855
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "refusal|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "main"
+   ],
+   "point": 0.05246342538522871,
+   "ci95": [
+    0.03084183787786544,
+    0.08249234628659918
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "high-stakes|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "yardstick"
+   ],
+   "point": 0.061053674782160186,
+   "ci95": [
+    0.03419274662470755,
+    0.09585269415557442
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "high-stakes|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "r2",
+    "main"
+   ],
+   "point": 0.0621352144562095,
+   "ci95": [
+    0.03500824099298585,
+    0.09465586404203476
+   ]
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "own_all_rs_uncut_L48 C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "n_cells"
+   ],
+   "value": 1308
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "sol_a_uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "n_cells"
+   ],
+   "value": 1308
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "FIBS|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "n_cells"
+   ],
+   "value": 1308
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "harmfulness|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "n_cells"
+   ],
+   "value": 1308
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "refusal|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "n_cells"
+   ],
+   "value": 1308
+  },
+  {
+   "input": "anchor",
+   "key": [
+    "union_stream",
+    "lead",
+    "high-stakes|uncut C",
+    "sets",
+    "pooled_all_origins (union stream)",
+    "n_cells"
+   ],
+   "value": 1308
+  }
+ ],
+ "build_profile": {
+  "length_label": "Full length (no 32k cut)",
+  "probes": [
+   {
+    "key": "own_all_rs_uncut_L48",
+    "display": "own_all_rs",
+    "train": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "whole-transcript retrain (uncut) of own_all_rs_L48",
+    "note_short": "",
+    "on_policy": true,
+    "sens_label": "sensitivity: real run 1 shares the training launch on S_old, S_new and S_newmains (its training sets; S_paper493 is scored only; 09 RULE @ 13af1da9e)",
+    "train_short": "(i) trained on whole transcripts",
+    "train_by_readout": {
+     "C": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+     "R": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length"
+    }
+   },
+   {
+    "key": "own_all_rs_L48|uncut",
+    "display": "own_all_rs registered (scored uncut)",
+    "train": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "registered probe scored on full transcripts (OOD past 32k)",
+    "note_short": "",
+    "on_policy": true,
+    "sens_label": "sensitivity: real run 1 shares the training launch on S_old, S_new and S_newmains (its training sets; S_paper493 is scored only; 09 RULE @ 13af1da9e)",
+    "train_short": "(ii) trained within the 32k cut",
+    "train_by_readout": {
+     "C": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)",
+     "R": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)"
+    }
+   },
+   {
+    "key": "sol_a_uncut",
+    "display": "Sol (a)",
+    "train": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "whole-transcript retrain (uncut) of Sol (a)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(i) trained on whole transcripts",
+    "train_by_readout": {
+     "C": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+     "R": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length"
+    }
+   },
+   {
+    "key": "Sol (a)|uncut",
+    "display": "Sol (a) registered (scored uncut)",
+    "train": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "registered probe scored on full transcripts (OOD past 32k)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(ii) trained within the 32k cut",
+    "train_by_readout": {
+     "C": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)",
+     "R": "(ii) trained within the 32k cut: units past 32k are outside the training window (OOD by position)"
+    }
+   },
+   {
+    "key": "FIBS|uncut",
+    "display": "FIBS",
+    "train": "training length unverified (external fit; no record states its training data's length or max position; 09's ruling via 2e 22:5x); same fit as R (sha 295523b254ebd0d5...)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "training length unverified (external fit; no record states its training data's length or max position; 09's ruling via 2e 22",
+    "train_by_readout": {
+     "C": "training length unverified (external fit; no record states its training data's length or max position; 09's ruling via 2e 22:5x); same fit as R (sha 295523b254ebd0d5...)",
+     "R": "training length unverified (external fit; no record states its training data's length or max position; 09's ruling via 2e 22:5x)"
+    }
+   },
+   {
+    "key": "harmfulness|uncut",
+    "display": "harmfulness",
+    "train": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0); same fit as R (sha c17b4533c0f4cc64...)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(iii) trained on short external data",
+    "train_by_readout": {
+     "C": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0); same fit as R (sha c17b4533c0f4cc64...)",
+     "R": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0)"
+    }
+   },
+   {
+    "key": "refusal|uncut",
+    "display": "refusal",
+    "train": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0); same fit as R (sha c17b4533c0f4cc64...)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(iii) trained on short external data",
+    "train_by_readout": {
+     "C": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0); same fit as R (sha c17b4533c0f4cc64...)",
+     "R": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded prompt length max 73 tokens (all-read prompt maximum; training-subset upper bound; median 22.0)"
+    }
+   },
+   {
+    "key": "high-stakes|uncut",
+    "display": "high-stakes",
+    "train": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded read length max 1835 tokens (all-read maximum over training and held-out rows; training-subset upper bound); same fit as R (sha 05d90ecbb5bd0ea8...)",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+    "note_short": "",
+    "on_policy": false,
+    "train_short": "(iii) trained on short external data",
+    "train_by_readout": {
+     "C": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded read length max 1835 tokens (all-read maximum over training and held-out rows; training-subset upper bound); same fit as R (sha 05d90ecbb5bd0ea8...)",
+     "R": "(iii) trained on short external data: both cut and uncut scoring exceed the training length; uncut extends further; recorded read length max 1835 tokens (all-read maximum over training and held-out rows; training-subset upper bound)"
+    }
+   },
+   {
+    "key": "own_all_rs25_uncut_L48",
+    "display": "own_all_rs25",
+    "train": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "whole-transcript retrain (uncut) of own_all_rs25_L48",
+    "note_short": "",
+    "on_policy": true,
+    "sens_label": "sensitivity: real run 1 shares the training launch on S_old, S_new and S_newmains (its training sets; S_paper493 is scored only; 09 RULE @ 13af1da9e)",
+    "train_short": "(i) trained on whole transcripts",
+    "train_by_readout": {
+     "C": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+     "R": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length"
+    }
+   },
+   {
+    "key": "own_all_rs10_uncut_L48",
+    "display": "own_all_rs10",
+    "train": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+    "train_source": "from the 09-signed r8 training-length table (experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json@321adc55f), resolved by key in experiments/2026-10-16_fl_vs_32k_appendix/results/training_lengths_2026-10-16_113641.json@bdd447de7",
+    "note": "whole-transcript retrain (uncut) of own_all_rs10_L48",
+    "note_short": "",
+    "on_policy": true,
+    "sens_label": "sensitivity: real run 1 shares the training launch on S_old, S_new and S_newmains (its training sets; S_paper493 is scored only; 09 RULE @ 13af1da9e)",
+    "train_short": "(i) trained on whole transcripts",
+    "train_by_readout": {
+     "C": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length",
+     "R": "(i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length"
+    }
+   }
+  ],
+  "outside_family": [],
+  "not_headline": [
+   "c_asis_uncut",
+   "c_asis|uncut"
+  ],
+  "not_shown": {
+   "c_asis_uncut": "positive control on the shared-threshold rows only (09 @ 2d61af835)",
+   "c_asis|uncut": "positive control on the shared-threshold rows only (09 @ 2d61af835)"
+  },
+  "nm360_probes": [],
+  "sets": [
+   "S_old",
+   "S_new",
+   "S_newmains",
+   "S_paper493",
+   "S_newmains without S4"
+  ],
+  "pool": "pooled_all_origins",
+  "pool_no4": "pooled_all_origins_without_S4",
+  "set_tags": {
+   "S_new": " (+311)",
+   "S_newmains": " (nm360)",
+   "S_paper493": " (paper 493)"
+  },
+  "n_probe": "FIBS|uncut",
+  "perset_sets": [
+   [
+    "S_old",
+    "#0072b2",
+    "o",
+    "S_old (T196)"
+   ],
+   [
+    "S_new",
+    "#e69f00",
+    "o",
+    "S_new (+311)"
+   ],
+   [
+    "S_newmains",
+    "#7570b3",
+    "o",
+    "S_newmains (nm360)"
+   ],
+   [
+    "S_newmains without S4",
+    "#7570b3",
+    "white",
+    "S_newmains without S4"
+   ],
+   [
+    "S_paper493",
+    "#009e73",
+    "o",
+    "S_paper493"
+   ]
+  ],
+  "curve_series": [
+   [
+    "S_new",
+    "#e69f00",
+    "S_new (+311, {n})"
+   ],
+   [
+    "S_old",
+    "#0072b2",
+    "S_old (T196, {n})"
+   ],
+   [
+    "S_newmains",
+    "#7570b3",
+    "S_newmains (nm360, {n})"
+   ],
+   [
+    "S_paper493",
+    "#009e73",
+    "S_paper493 ({n})"
+   ]
+  ],
+  "fo_pin": "experiments/2026-10-15_fpr_sweep_507_prep/full_override.py@7b059dc6c (sha256 fe6bf1c9cd6d\u2026)"
+ },
+ "label_sidecar": {
+  "file": "pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh_LABEL.json",
+  "sha256": "2595ac7e2a01505fa65c3bf939b0dfbe45360cd760731e85d0a059ea478b6d35",
+  "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh_LABEL.json@2a41e5f3bf133aaf54329e1c72dde2d63757da37",
+  "label": "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction; D1 read from route C pooled A @ a936a5d9762763f9feed351aebdeeec2d8114f21 via Stage D @ c22edd8d3cc1221225dec418ab00b40515d5ba43 (read, never recomputed; identity-guarded on the bytes read)",
+  "cited_a": "a936a5d9762763f9feed351aebdeeec2d8114f21",
+  "rule": "09 @ READ_LOG 8a4e2bf84 L2213, keyed on the cited A (post_pertask.pooled_label)"
+ },
+ "a_label_sidecar": {
+  "file": "routec_A_label_sidecar_2026-10-19_181355.json",
+  "sha256": "ffe923311b75313e9bd31b967326efe4c6e594da073f2c35a3ca72a07ad6e479",
+  "source": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json@095a9db4c0fedaa52fdcf103d167c8dff8675e3f"
+ },
+ "origin_keys": {
+  "from": "bootstrap.sets[\"pooled_all_origins\"] (per-task record, by key; base origin = first word)",
+  "map": {
+   "S_new": "S_new (all-origins draws) [pooled: pooled_all_origins]",
+   "S_newmains": "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+   "S_old": "S_old (all-origins draws) [pooled: pooled_all_origins]",
+   "S_paper493": "S_paper493 (all-origins draws) [pooled: pooled_all_origins]"
+  }
+ },
+ "interval_stream": "Intervals (pooled_all_origins, union stream; 09's caption, verbatim): interval: bootstrap over main tasks (one draw per main across sets); thresholds fixed at the point estimate (threshold uncertainty not included, so the interval is likely somewhat narrow). ",
+ "r2_axis": {
+  "fixed": [
+   0.0,
+   0.3
+  ],
+  "rule": "every plotted point and interval end inside (STOP otherwise); bars from 0"
+ },
+ "value_labels": "two decimals, U+2212 minus; inside the axes (R\u00b2 axis fixed at 0 to 0.3) at 200 dpi",
+ "train_readouts": [
+  "C"
+ ],
+ "title_banner": null,
+ "fig_number": "8",
+ "text_file": "fig_pertask_summary_figs78_routecA_text.md"
+}

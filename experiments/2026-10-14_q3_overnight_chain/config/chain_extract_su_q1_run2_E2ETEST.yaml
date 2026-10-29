@@ -1,0 +1,11 @@
+# Overnight chain: su_q1_run2_E2ETEST staged by stage_chain.py (record chain_stage_su_q1_run2_E2ETEST_2026-10-14_175419.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: su311_q1_run2_E2ETEST_extract_v1
+inputs: su311_q1_run2_E2ETEST_v1
+inputs_sha256:
+  attack.jsonl: d37d90757cfe7d7550f0d55e401e0d5b448389ff592c7611c89a03eaf47603f7
+  repro-c.jsonl: 0298552fa9dea52b8bd4a118834cd2f5386e762e04863aac5c7b8e60f3e3f17f
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 8
+pad_to: 4096

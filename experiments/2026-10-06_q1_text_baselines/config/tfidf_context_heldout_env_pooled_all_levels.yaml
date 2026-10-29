@@ -1,0 +1,30 @@
+# Pooled design, levels 0-7 (tfidf_heldout_env_pooled_all_levels, held-out environments): each output's own score and the running mean of output scores up
+# to each output, all outputs and no editor outputs. Real (attack e1 + first real honest run) vs simulated (attack + honest).
+name: tfidf_context_heldout_env_pooled_all_levels
+cells_file: config/pooled_cells_2026-10-06.json
+examples: examples_2026-10-06_215752
+folds_file: folds_v3.json
+arms: {real: [real-attack-e1, real-honest], sim: [sim-attack, sim-honest], also_scored: [real-attack-e2, real-honest-2]}
+slices:
+  attack_cells: {cells_file: config/paired_cells_v3.json}
+  honest_cells: {cells_file: config/paired_honest_cells_2026-10-06_213745.json}
+output_variants: [all, no_editor]
+variants:
+  level0_own_output: {outputs: level0_scores_2026-10-06_215927.jsonl.gz, calls: null, running: false}
+  level0_running_mean: {outputs: level0_scores_2026-10-06_215927.jsonl.gz, calls: null}
+  level1_own_output: {outputs: level1_scores_2026-10-06_215927.jsonl.gz, calls: null, running: false}
+  level1_running_mean: {outputs: level1_scores_2026-10-06_215927.jsonl.gz, calls: null}
+  level2_own_output: {outputs: level2_scores_2026-10-06_215927.jsonl.gz, calls: null, running: false}
+  level2_running_mean: {outputs: level2_scores_2026-10-06_215927.jsonl.gz, calls: null}
+  level3_own_output: {outputs: level3_scores_2026-10-06_215927.jsonl.gz, calls: null, running: false}
+  level3_running_mean: {outputs: level3_scores_2026-10-06_215927.jsonl.gz, calls: null}
+  level4_own_output: {outputs: level4_scores_2026-10-06_215927.jsonl.gz, calls: null, running: false}
+  level4_running_mean: {outputs: level4_scores_2026-10-06_215927.jsonl.gz, calls: null}
+  level5_own_output: {outputs: level5_scores_2026-10-06_215927.jsonl.gz, calls: null, running: false}
+  level5_running_mean: {outputs: level5_scores_2026-10-06_215927.jsonl.gz, calls: null}
+  level6_own_output: {outputs: level6_scores_2026-10-06_215927.jsonl.gz, calls: null, running: false}
+  level6_running_mean: {outputs: level6_scores_2026-10-06_215927.jsonl.gz, calls: null}
+  level7_own_output: {outputs: level7_scores_2026-10-06_215927.jsonl.gz, calls: null, running: false}
+  level7_running_mean: {outputs: level7_scores_2026-10-06_215927.jsonl.gz, calls: null}
+bootstrap: 1000
+seed: 0

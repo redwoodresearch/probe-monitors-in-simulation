@@ -1,0 +1,11 @@
+# Overnight chain: nm360_s4r_sim staged by stage_chain.py (record chain_stage_nm360_s4r_sim_2026-10-15_101419.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: nm360_s4r_sim_extract_v1
+inputs: nm360_s4r_sim_v1
+inputs_sha256:
+  repro-c.jsonl: 16621001f759ecf36c20f8b7e9eca29c4dfdadaffc33e0fa2d6d993faaf3aee8
+  sim_attack@september.jsonl: 63de057a26ea596bed66d17618595bbc50c63ecaf57be8465daf7b31ffc47097
+model: Qwen/Qwen3.5-27B
+shards: 10
+chunk_size: 8
+pad_to: 4096

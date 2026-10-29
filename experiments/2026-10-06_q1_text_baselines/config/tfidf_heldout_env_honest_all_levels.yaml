@@ -1,0 +1,38 @@
+# Honest arms (real honest vs September simulated honest): every text level 0-7, held-out environments, all outputs and no editor outputs,
+# one consistent set of per-output scores for the probe's paired comparison at every level (running mean:
+# config/tfidf_context_heldout_env_honest_all_levels.yaml).
+name: tfidf_heldout_env_honest_all_levels
+examples: examples_2026-10-06_213745     # real honest (first and second run per task) + September simulated honest
+cells_file: config/paired_honest_cells_2026-10-06_213745.json   # 437 main tasks with a real and a simulated honest run
+folds_file: folds_v3.json
+arms: {real: real-honest, real2: real-honest-2, sim: sim-honest}   # real-honest-2: real-vs-real control where a task has 2 real runs
+fold_scheme: environment
+slices:                                  # from the simulated-honest manifest (sims batch 2026-10-06, 437 tasks)
+  stamped_locally: {cells_file: config/sim_honest_stamped_locally_cells.json}               # 91 media_processing / model_registry tasks
+  not_stamped_locally: {cells_file: config/sim_honest_stamped_locally_cells.json, exclude: true}
+  without_redrawn: {cells_file: config/sim_honest_redrawn_cells.json, exclude: true}       # sensitivity: drop the 3 redrawn tasks
+baselines:
+  level0: {text: readout_text, scrub: 0}   # cleaned text as the probe reads it
+  level1: {text: readout_text, scrub: 1}   # + clock times and dates masked
+  level2: {text: readout_text, scrub: 2}   # + numbers, hex IDs, UUIDs, IPs masked
+  level3: {text: readout_text, scrub: 3}   # + whitespace normalized
+  level4: {text: readout_text, scrub: 4}   # + harness format (editor gutter, stderr lines, weekday/month names, blank lines)
+  level5: {text: readout_text, scrub: 5}   # + diff lines canonicalized
+  level6: {text: readout_text, scrub: 6}   # + empty diff lines dropped
+  level7: {text: readout_text, scrub: 7}   # + editor output format canonicalized
+output_variants: [all, no_editor]
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true
+C: 1.0
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 0}
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

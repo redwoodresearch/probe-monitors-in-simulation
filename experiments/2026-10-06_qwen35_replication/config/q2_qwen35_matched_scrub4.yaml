@@ -1,0 +1,17 @@
+# Q2 cleaned-text test on Qwen3.5 (2026-10-07; q2's #62 design, approved by Aswin via the orchestrator): does the real->sim
+# pre_call gap survive text level 4? Overlay over q2_probes.yaml + q2_alllayers.yaml like q2_alllayers_qwen35_matched.yaml:
+# the matched calls, labels eb014307, folds, C grid and 1% threshold rule; only the reader's input text changes. Real labels
+# only (launch without --draws), no null. Level 0 at the same layers is in the matched features run's alllayers/fits.
+alllayers_run: 2026-10-06_la_segment-end-v4-scrub4_qwen35-27b_alllayers_v1     # five arms, text level 4, every layer
+extra_alllayers_run: 2026-10-06_la_segment-end-v4-scrub4_qwen35-27b_alllayers_v1
+reference_alllayers_run: 2026-10-06_la_segment-end-v4_qwen35-27b_alllayers_v1  # level 0: only calls whose three readouts sit
+                                                                            # where they do there are fit; kept calls go to scrub4/manifest.json
+features_run: 2026-10-06_q2_qwen35_matched             # the committed matched features run: its base calls, filtered by index
+out_sub: scrub4
+base: matched
+layers: [29, 30, 31, 32, 33, 35, 39, 40, 41]           # Qwen3.5 level-0 pre_call headline layers, per outer fold, trained on
+                                                       # real-attack-e1 or sim-attack (matched attack-only, 64 layers); call_end
+                                                       # and prev_content are fit at the same layers, as controls
+train_sets:                                            # the two probes the comparison uses (q2 left real-attack-e1+real-honest out)
+  real-attack-e1: [real-attack-e1]
+  sim-attack: [sim-attack]

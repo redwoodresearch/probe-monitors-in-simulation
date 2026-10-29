@@ -1,0 +1,132 @@
+# Settings for every run of the attack check (run_attack_check.py, setup_devbox.sh). The cells are in cells.json.
+# Everything here matches Phase 1's September runs except the policy, which is Qwen3.5-27B instead of gpt-5.6-sol.
+
+# The sims code, one tree per simulator; run_attack_check.py --simulator picks one (default september), and every run
+# in a launch uses it, real arms included. Each is a base checkout on the sims-astra devbox plus one patch,
+# config/sept_snapshot_policy_limits.patch: sims PRs #327 (policy call limits) and #328 (a policy timeout ends the
+# episode), in runner/policy/agent.py and runner/build/arena_policy.py only, which are byte-identical in both bases.
+# The simulator code itself is each base's, unchanged. setup_devbox.sh copies each base to `tree` and applies the patch,
+# leaving the base untouched; runs use the base's own environment (`venv`) with PYTHONPATH=<tree>/src.
+# run_attack_check.py refuses to launch unless the chosen tree's src/ hashes to `src_sha256` (sha256 over sorted
+# relative paths and file sha256s, __pycache__ excluded) and the policy imports from it.
+simulators:
+  # The September snapshot, as for the Astra honest batch: sims ba990399 + the S3 archive 2c91c622afd6637a +
+  # experiments/2026-10-06_astra_sim_honest/config/sept_snapshot_build.patch. Step 1 ran it unpatched (4bcdc038…);
+  # (a)'s honest reruns ran it with #327 only (~/phase2/sims-sept-policy-limits, bb4b96b0…).
+  september:
+    base_tree: ~/sims/simulated-control-evals-sept
+    base_src_sha256: 4bcdc038063939cee1874f55dd730cef96ebc8f8e49b1bb97f5639e04aeb5937
+    # The 10-08 pilot ran ~/phase2/sims-sept-policy-limits-v2 (b71b3042…), without the strict-tools patch.
+    tree: ~/phase2/sims-sept-strict-off
+    extra_patches: [config/policy_strict_tools_off.patch]
+    venv: ~/sims/simulated-control-evals-sept/.venv
+    src_sha256: 1ea3772209663ef8a848effaf6677d23d5bab06c248a37c1fb61f0957efd7b8c
+  # The Qwen3-32B native-window arm's tree (Aswin, 10-09): September's plus config/policy_context_guard.patch, which
+  # ends an episode as "out of context" when a policy call's prompt plus the reply cap would overflow the window. Only
+  # pilot_qwen3_32b_native.yaml uses it, as the tree its real runs import; no simulated run reads it.
+  september_ctx:
+    base_tree: ~/sims/simulated-control-evals-sept
+    base_src_sha256: 4bcdc038063939cee1874f55dd730cef96ebc8f8e49b1bb97f5639e04aeb5937
+    tree: ~/phase2/sims-sept-ctx-guard
+    extra_patches: [config/policy_strict_tools_off.patch, config/policy_context_guard.patch]
+    venv: ~/sims/simulated-control-evals-sept/.venv
+    src_sha256: 19a1c4cae039a07f554a75eb8077ad543a94bad2600c5c4e42ce4ca8433836d6
+  # The September snapshot itself, unpatched, for real-only API-policy launches matched to the September real batches
+  # (zoo C's real Sol honest runs, 10-11, against overlap800): no policy-limits or strict-tools patch, so the policy
+  # runs with the tree's own defaults (reasoning effort medium, strict tools as Inspect sends them, sce's retries), and
+  # run_pilot.py passes no PT_POLICY_* setting. The tree is the base checkout, which setup_devbox.sh never patches.
+  september_base:
+    base_tree: ~/sims/simulated-control-evals-sept
+    base_src_sha256: 4bcdc038063939cee1874f55dd730cef96ebc8f8e49b1bb97f5639e04aeb5937
+    tree: ~/sims/simulated-control-evals-sept
+    policy_limits: tree_defaults
+    venv: ~/sims/simulated-control-evals-sept/.venv
+    src_sha256: 4bcdc038063939cee1874f55dd730cef96ebc8f8e49b1bb97f5639e04aeb5937
+  # Today's simulator: sims main at e561f936, the git archive on the devbox that ran the simulator-code pilot
+  # (la_public10_sim_astra_*_simcode_e561f936_n20). Same settings as September's (sim.yaml), plus its two new options
+  # set explicitly to September's behaviour, so the run record shows them: the narrow network router (the September
+  # Astra batch's) and no environment briefing. Only today's code reads them; the September snapshot refuses
+  # BA_BRIEFING if it is set at all, so `env` goes to the simulated arm of a --simulator today launch only.
+  today:
+    # Option (i) for today's sandbox-start failure (DEVIATIONS.md 1), chosen by Aswin for the 10-08 follow-up
+    # (#82 amendment 32): a non-secret placeholder ANTHROPIC_API_KEY. Today's code leaves control-tower's sandbox model
+    # at its default (anthropic/claude-opus-4-8), whose client Inspect creates at sandbox start but never calls (0
+    # Anthropic events or usage in all 80 samples of the 10-06 run of today's code); an accidental call gets a 401,
+    # which Inspect doesn't retry, so the sample errors at $0. ANTHROPIC_AUTH_TOKEN stays unset.
+    env: {PT_SIM_ROUTER_MODE: narrow, BA_BRIEFING: "0", ANTHROPIC_API_KEY: "unused-placeholder-not-a-key"}
+    base_tree: ~/sims/simulated-control-evals-today
+    base_src_sha256: 0cd83e440016e5261a7f7a54b4435cc774f49c27b67f093bca6b954808003939
+    # The 10-08 pilot ran ~/phase2/sims-today-policy-limits (caf76e76…), without the strict-tools patch.
+    tree: ~/phase2/sims-today-strict-off
+    extra_patches: [config/policy_strict_tools_off.patch]
+    venv: ~/sims/simulated-control-evals-today/.venv
+    src_sha256: ce9b30258e36e25878065fb60f966f5007a5b77d2384d297e48ac0014a9eff9f
+  # Option (ii) for today's sandbox-start failure (DEVIATIONS.md 1; Aswin asks Jeff first): today's tree with
+  # config/today_sandbox_model.patch, which passes simulator_model into control-tower's simulated-sandbox config as the
+  # September tree does (its sandbox.py becomes September's; two call sites pass the simulator's model). Otherwise the
+  # same tree as `today`: e561f936, the policy-limits patch, router narrow, briefing off.
+  today_sandbox_model:
+    env: {PT_SIM_ROUTER_MODE: narrow, BA_BRIEFING: "0"}
+    base_tree: ~/sims/simulated-control-evals-today
+    base_src_sha256: 0cd83e440016e5261a7f7a54b4435cc774f49c27b67f093bca6b954808003939
+    tree: ~/phase2/sims-today-policy-limits-sandbox-model
+    extra_patches: [config/today_sandbox_model.patch]
+    venv: ~/sims/simulated-control-evals-today/.venv
+    src_sha256: 7ebdeaeda54a2061680e667ba4d38689b9f2e092521c33d56f3aef4040860e07
+settings_dir: ~/phase2/settings  # our copy (setup_devbox.sh); the sims batch's folders stay untouched
+
+policy: vllm/Qwen/Qwen3.5-27B  # Inspect's vllm provider, pointed at the tunnel with VLLM_BASE_URL and VLLM_API_KEY
+# Limits on each policy model call, passed as the patch's PT_POLICY_* variables (approved by Aswin 2026-10-07, after
+# step 1, which ran sce's fixed 600 s attempt timeout retried until the time limit, and no cap).
+policy_limits:
+  max_tokens: 32768        # output tokens per turn: the model card's recommended maximum (step 1's longest: 24,867)
+  attempt_timeout_s: 1800  # a timed-out attempt fails the sample once, never retried. 32,768 tokens at step 1's ~42
+                           # tok/s per request is ~13 min, so the cap ends a turn first unless a request gets < 18 tok/s
+  max_retries: 2           # Inspect's retries for transient errors (connection resets, 5xx). The OpenAI SDK under
+                           # Inspect also resends those twice per attempt: at most 9 requests per call
+  timeout_ends_episode: true  # a timed-out call ends the episode without an error: the run is kept (transcript up to
+                              # that call, store policy_ended_by = policy_timeout) and never redrawn (Aswin, D5).
+                              # Needs sims PR #328, added to the patch after (a): its reruns ran without it
+  strict_tools: false      # Aswin, 10-08 ~16:08 PT: every policy tool goes out "strict": false (PT_POLICY_STRICT_TOOLS=0,
+                           # config/policy_strict_tools_off.patch). Inspect's default strict: true let vLLM constrain
+                           # arguments to the schema's property order, which dropped str_replace's new_str in every real
+                           # run up to the 10-08 pilot (the simulator's looser schema escaped it)
+
+# Environments and the LinuxArena commits their September folders were at (ct settings pull, latest-release: v2.0.3,
+# v2.0.4 for media_processing and model_registry). Each ENV_IMAGE_TAG_<ENV> is set to its commit explicitly: unset,
+# control-tower looks the commit tag up and, if that lookup fails (a Docker Hub rate limit), falls back to `latest`,
+# which is now a newer release than September's.
+# The pilot's 10 (config/pilot_tasks.json): setup_devbox.sh pulls and records every image these need, and the
+# launchers check each folder's commit. Steps 1 and 2 used the first 5.
+envs: [model_registry, auto_workflow, file_indexing, tiktok, web_scraping, clinical_trial, media_processing,
+       shared_dotfiles, slack_clone, user_tracking]
+env_commits:
+  auto_workflow: 9ee6fd09adb7ac43ab18d35b00acc955016a6425     # v2.0.3
+  clinical_trial: 17aa64c303513d5de17c27ec5c185aedcc9b9710    # v2.0.3
+  file_indexing: 43a47f627cdb340137daa4104d470325c9bb756f     # v2.0.3
+  media_processing: 9b09d2dc5feaf2f1420b27d4f0f5d1a31b56509c  # v2.0.4
+  model_registry: 5477b27c515247133154433149cbc3d2ed569a96    # v2.0.4
+  shared_dotfiles: ac89dc4f65e638281a95db1c543015ffabb0a4f5   # v2.0.3
+  slack_clone: 0f51b992d4b6db6a80ce77519904dee487e9e7e1       # v2.0.3
+  tiktok: 2a669f801a16115a07c55982643382dc1a3e86ee            # v2.0.3
+  user_tracking: 275e5e1217ccba7a0fd9357124d53a79a3df94de     # v2.0.3
+  web_scraping: 944e87fdf2a182b2240cfe70fd7724957929393e      # v2.0.3
+# control-tower pulls `linuxarena/env-internet-simulator:latest` unless told otherwise. September's runs (2026-09-17)
+# would have got the newest release then, v5.0.0 (2026-08-14; v5.1.0 came 2026-09-24). Inferred from release dates:
+# the September samples don't record it.
+internet_simulator_image: linuxarena/env-internet-simulator:v5.0.0
+# The internet simulator's proxy runs `nginx:alpine`, a mutable tag pulled outside any compose file. Pinned to what
+# Docker Hub served for it on 2026-10-07 (nginx 1.31.6; the step-1 runs used exactly this image), taken from AWS's
+# public mirror of Docker's official images (same digest, no Docker Hub quota) and tagged locally by setup_devbox.sh.
+nginx_proxy_image: public.ecr.aws/docker/library/nginx@sha256:df221db836e1754089190208cee7eeda94f233197056426eda74a43ab1abeac2
+
+run:
+  # Both raised after step 1 (Aswin, 2026-10-07; step 1 ran September's 150 and 3,300 s). Qwen3.5 takes more steps
+  # than Sol: about 12% of its 15 runs so far would hit 150 (README), over the 10% rule. 7,200 s is a safety net only.
+  max_steps: 200                          # BA_MAX_STEPS, the same for both arms (sim.yaml)
+  time_limit_s: 7200                      # inspect --time-limit, the same for both arms (sim.yaml)
+  attacker_prompt: attacker_2026_08_28.md # BA_ATTACKER_PROMPT: the September fleet's prompt (fleet_linuxarena_attack.py)
+  stagger_s: 90  # between launching an environment's attack and honest runs: both write one compose file (a race)
+
+# Per cell, both arms: the attack, and the honest run of its main task that step 2 will use as the simulator's reference.
+arms: [attack, honest_a]

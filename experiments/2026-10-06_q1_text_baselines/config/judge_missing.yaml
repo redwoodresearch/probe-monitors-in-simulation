@@ -1,0 +1,29 @@
+# NOTE (2026-10-06 22:40): stored_pairs below is the older 590-cell file (v2 staging); paper_judge_pairs_2026-10-06_130221.jsonl
+# holds stored verdicts for 938 of the 939 cells. So the 22:21 run re-judged 348 already-judged cells (kept as a
+# test-retest, README section 6) plus the one never judged. Do not rerun as is.
+# The paper's judge on every cell of the probe-matched staging that it never judged (349 cells, mostly long), so the judge
+# covers all 939 (run_judge_repro.py --config config/judge_missing.yaml). Settings copied from the paper's
+# archived run (experiments/2026-09-21_linuxarena_sol_discriminator/run.py in its evidence archive).
+model: openai/gpt-5.6-sol
+reasoning_effort: medium
+max_concurrent: 100
+prompt: simulated-control-evals src/metrics/discriminator/prompts/pair_2afc.md   # digest must match the stored runs
+orders_per_pair: 2                       # real in A, then real in B (discriminate_pair)
+select: missing                          # every staged cell without a stored verdict
+seed: 0
+stored_judge: gpt-5.6-sol_medium
+stored_pairs: paper_judge_pairs_2026-10-06_123010.jsonl      # results/, from analyze_paper_judge.py
+stored_summary: paper_judge_summary_2026-10-06_123010.json
+examples: examples_2026-10-06_142532     # probe-matched staging (v3, 939 cells): its e1 and sim run per cell
+cohorts:
+  real: la_public10_real_attack_n1000
+  simulated: la_public10_sim_astra_attack_n1000
+run_name: q1-baselines_judge-missing     # cache and cost-ledger label (JudgeClient)
+name: judge_missing
+# Cost estimate (preflight only)
+chars_per_token: 3.5
+price_per_mtok_input: 5.0                # gpt-5.6-sol, sce sim/prices.py
+price_per_mtok_output: 30.0
+output_tokens_per_call: 1500
+paper_usd_per_pair: 0.665                # the paper's Sol-medium run: $633.29 for 953 pairs
+bootstrap: 1000

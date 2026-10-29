@@ -1,0 +1,14 @@
+# James's checks (c) tell and (d) dates on the old Q1 ladder, level 7 (experiments/2026-10-10_q1_planted_checks/PLAN.md):
+# the planted copies and the 10-run reproduction gate for joining the existing level-7 extractions,
+# staged by run_stage_plants.py. The 8 C-search layers; plain segment-end rows plus the moving-average final values, as
+# the old ladder (alllayers_scrub7.yaml + alllayers_scrub7_ema.yaml) with the same model revision, dtype, attention and cut.
+run: 2026-10-10_q1plants_l7_qwen3-32b_l8_v1
+inputs_from: 2026-10-10_q1plants_l7_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 6
+chunk_size: 25
+layers: [19, 32, 41, 44, 47, 52, 58, 63]
+ema_final_decays: [0.95, 0.8]

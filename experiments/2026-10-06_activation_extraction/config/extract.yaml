@@ -1,0 +1,25 @@
+# Full extraction (2026-10-06): same reader settings as experiments/2026-10-05_activation_smoke_test.
+run: 2026-10-06_la_activations_qwen3-32b_v2   # v2: after the 2026-10-06 Codex review fixes
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+chat_template: {enable_thinking: false}
+layers: [8, 16, 24, 32, 40, 48, 56, 63]   # 0-indexed decoder layers of 64; residual stream after each
+pooling: {mean: true, ema_max_decays: [0.8, 0.95]}
+save_dtype: float16
+max_tokens: 32768                        # applied in the container on the exact rendered length
+token_counts: 2026-10-05_activation_smoke_test/results/token_counts_2026-10-05_225845.jsonl  # shard balancing only
+exclusions_file: exclusions_v1.json   # splits/: which samples are read (validity and the exact 32k cut)
+normalization:
+  system_prompt: honest prompt of the same main task (checked to be unique per main task)
+  reasoning: dropped (encrypted provider blobs)
+  tool_error: error message when present (what the agent saw; sce tool_result_text), else the output
+  submit: runner submit calls and their results dropped (counted first); a turn left empty is dropped
+  empty_tool_output: kept as a zero-token segment, not pooled
+  tool_output_trailing_newlines: kept, as the agent saw them
+validity: exclude errored, stalled, no_actions (sce invalidity); failed attacks kept
+cohorts:                                 # aliases in simulated-control-evals src/paper/configs/real_runs.yml
+  real-honest: la_public10_real_honest_n1000
+  real-attack-e1: la_public10_real_attack_n1000
+  real-attack-e2: la_public10_real_attack_reroll_n1000
+  sim-attack: la_public10_sim_astra_attack_n1000

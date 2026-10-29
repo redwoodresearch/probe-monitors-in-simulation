@@ -1,0 +1,52 @@
+{
+ "host": "q2",
+ "rerun_reason": "infra: RateLimitError",
+ "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+ "failures_source": {
+  "commit": "36a2047fa643a37921b2e2ae59740c0f54523a0b",
+  "path": "experiments/2026-10-14_q3_new_mains_launch/results/sim_ratelimit_failures_2026-10-15.json",
+  "sha256": "e9a8832f99656d7110b277581896022eb7ae6a588f2624ed1db0f01388b75346"
+ },
+ "rerun_of": [
+  {
+   "cell": "t271_slack_clone",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t271_slack_clone",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t271_slack_clone/2026-10-15T07-38-58-00-00_la-slack-clone-sim-attack-1_nhQWtjHP9GFk7tLnPZUhBQ.eval",
+   "eval_sha256": "7f5687d30abad8c6b8133ad089fe638830cf05c0cae77ad7fc87eeb247076fb7",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t385_clinical_trial",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t385_clinical_trial",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t385_clinical_trial/2026-10-15T07-16-58-00-00_la-clinical-trial-sim-attack-1_97nWg8EwudjiHezEzxSQBz.eval",
+   "eval_sha256": "7ef889cf8e9db93cfc03ed82510fb917f960cf0fcf31793a9cbc53885d886b08",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t410_file_indexing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t410_file_indexing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t410_file_indexing/2026-10-15T07-19-59-00-00_la-file-indexing-sim-attack-1_fNe82NaNhcQnsKuMWagUPF.eval",
+   "eval_sha256": "4db7cdb5d84df7e715bf41d8b4f01f3a90af9eddc3bd6dd900a6fadc14415a59",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t417_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t417_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t417_tiktok/2026-10-15T07-29-09-00-00_la-tiktok-sim-attack-1_VARYGw6GFGYEwAwaPoiCrh.eval",
+   "eval_sha256": "a1dde407da1f23681a14943a02462230d6ebe734b19829caf1bc164dd2f75ce0",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t507_web_scraping",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q2",
+   "run_key": "sim_attack@september/t507_web_scraping",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q2/sim_attack@september/t507_web_scraping/2026-10-15T07-13-57-00-00_la-web-scraping-sim-attack-1_jRgmF2e2sP52ZA7YEUSDMi.eval",
+   "eval_sha256": "8a32f8b2c8deeda62560348df2d45803054c437a3bad89bdc36d77d411adf562",
+   "pure_rate_limit": true
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+# S_PAPER493 SIM-HONEST launch simh_sp493_t196 (09 Append 39; rulings via d9 ~17:30), from config/pilot_simh_q1.yaml:
+# SIMULATED-HONEST launch simh_q1 (experiments/2026-10-15_q3_simhonest_311/RULE.md): per cell one
+# sim_honest@september forked at 0 from the main's honest_a. From experiments/2026-10-14_q3_scaleup_311/config/pilot_311_fu_q1_iii.yaml @ d46f2df7be84.
+# FOLLOW-UP (simulated-only) launch, variant (iii), RULE.md Amendment 7. Derived from pilot_311_q1.yaml.
+# Scale-up +311, quarter Q1 (experiments/2026-10-14_q3_scaleup_311/RULE.md; Aswin via 0d: "i approve scale up, just run things
+# and get me results quickly, ensure correctness and speed"). The canary's launch A config (pilot_canary_a.yaml) on this
+# box's cells: per cell honest_a (real; the fork source), attack and honest_b (real) and sim_attack@september; plus each
+# cell's `<key>_r2` entry (real_arms [attack]): its second real attack, in this same launch (scaleup_r2_arms.patch).
+tasks: config/tasks_simh_sp493_t196.json   # make_sp493.py: S_paper493 Phase A (g4), 14 T196 mains (origin-key cells of tasks_il_old_all.json)
+real_simulator: september
+real_arms: []   # follow-up: no real arm; references from the main launch (--references-from)
+simulators: [september]
+sim_arms: [sim_honest]   # simulated honest only (was [sim_attack])
+simulator_confirmed: true
+max_runs_per_server: 10   # 8 servers (servers_september_scaleup.yaml): 80 runs at once (6 servers: 60)
+max_real_runs: 60         # the 64-vCPU box's cap, as the canary and the real-honest launch
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json   # tag form for every task, as launch 2 and the canary
+spend:
+  cap_usd: 1546   # 14 cells: expected $274 + K 12 x $106 (admission at start: cap // 106 = 14 running at once)
+  worst_case_limit_usd: 1546   # = cap: the box-side admission bound
+  worst_per_sim_run_usd: 106   # the simulated-honest continuation's value
+  prior_per_sim_run_usd: 21.13   # tonight's continuation mean

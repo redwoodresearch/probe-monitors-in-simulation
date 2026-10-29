@@ -1,0 +1,11 @@
+# RULE.md amendments 11-16: Qwen3.5-27B extraction of the continuation's batch 1 (the 145 usable runs done at the 20:38 PT
+# snapshot), CORRECTED staged (results/simh_stage_c_full_b1_2026-10-14_204959.json; shared cut-think patch ef3e9f7f); counts
+# only after format_check_simh passes on all 145
+run: simh_full_b1
+inputs: simh_q4f_v1_full_b1
+inputs_sha256:
+  sim_honest@september.jsonl: 98ff13e826804e350e2050e82c9a31618dd1eb54b9a10f1f824ea76b2baea819
+model: Qwen/Qwen3.5-27B
+shards: 19
+chunk_size: 8
+pad_to: 4096

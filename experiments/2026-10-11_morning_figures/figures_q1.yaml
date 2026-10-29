@@ -1,0 +1,194 @@
+# Morning figures spec: what each figure draws and where each number comes from (read by plot_morning_figures.py).
+figures:
+- fig: Q1.1
+  slug: fixed_sim_probe
+  title: Reading Sol's fixed runs, the probe ranks simulated above real runs (AUROC 0.82) but catches few at a 1% target
+  caption: 'Q1.1: reading Sol''s fixed runs (5 held-out environments, 473 runs per arm), the Qwen3-32B probe ranks fixed simulated runs above real ones (AUROC 0.822 [0.795, 0.848], above its fixed-probe shuffled-label null in every environment, p = 0.001; two real runs 0.528, inside step A''s selection-aware null, p = 0.079) but catches only 2.7% [1.1, 20.8] at a 1% false-alarm target (two real runs 1.1%) and 40.0% at 5% (two real runs 8.2%); post hoc metric, threshold set on about 5 real runs. Catch at 1% and 5% has no grouped label-shuffle null yet (#514 ruling), so read those bars as descriptive.'
+  panels:
+  - title: Caught at a 1% and 5% false-alarm target
+    kind: bars
+    unit: percent
+    ylabel: "Runs caught (%)\n(higher = more separable)"
+    lines:
+    - {y: 1.0, label: 1%}
+    - {y: 5.0, label: 5%}
+    ylim:
+    - 0
+    - 60
+    bars:
+    - {label: "Sim vs real,\n1%", role: sim, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/2/at_1pct/caught_share, lo_key: rows/2/at_1pct/caught_ci95/0, hi_key: rows/2/at_1pct/caught_ci95/1, scale: 100, value: 2.75, lo: 1.05, hi: 20.78}
+    - {label: "Two real runs,\n1%", role: real2, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/3/at_1pct/caught_share, lo_key: rows/3/at_1pct/caught_ci95/0, hi_key: rows/3/at_1pct/caught_ci95/1, scale: 100, value: 1.06, lo: 0.21, hi: 3.91}
+    - {label: "Sim vs real,\n5%", role: sim, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/2/at_5pct/caught_share, lo_key: rows/2/at_5pct/caught_ci95/0, hi_key: rows/2/at_5pct/caught_ci95/1, scale: 100, value: 39.96, lo: 24.35, hi: 48.53}
+    - {label: "Two real runs,\n5%", role: real2, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/3/at_5pct/caught_share, lo_key: rows/3/at_5pct/caught_ci95/0, hi_key: rows/3/at_5pct/caught_ci95/1, scale: 100, value: 8.25, lo: 3.89, hi: 11.18}
+  - title: ROC, log false-alarm axis
+    kind: roc
+    ylabel: Runs caught (true-positive rate)
+    fpr_lines:
+    - 0.01
+    - 0.05
+    curves:
+    - {label: Sim vs real, role: sim, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/roc_points_2026-10-11.json, fpr_key: fpr_grid, tpr_key: curves/1/tpr}
+    - {label: Two real runs, role: real2, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/roc_points_2026-10-11.json, fpr_key: fpr_grid, tpr_key: curves/3/tpr}
+  - title: 'Ranking score (AUROC); nulls: see caption p-values'
+    kind: bars
+    unit: AUROC
+    ylabel: "AUROC\n(0.5 = chance; higher = more separable)"
+    ylim:
+    - 0
+    - 1.1
+    bars:
+    - {label: Sim vs real, role: sim, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/2/auroc, lo_key: rows/2/auroc_ci95/0, hi_key: rows/2/auroc_ci95/1, scale: 1, value: 0.822, lo: 0.795, hi: 0.848}
+    - {label: Two real runs, role: real2, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/3/auroc, lo_key: rows/3/auroc_ci95/0, hi_key: rows/3/auroc_ci95/1, scale: 1, value: 0.528, lo: 0.5, hi: 0.559}
+- fig: Q1.1b
+  slug: round_two_evened_slips
+  title: 'Round two: the fixed-simulation probe before and after evening the four leftover slips'
+  caption: 'Q1.1b: b7''s B-dev test (plan and script cf83b457): four leftover slips evened in both arms, 5 dev environments, frozen per-environment probes; gap, AUROC, catch at 1%/5%, two real runs and the planted undo check, before vs after.'
+  panels:
+  - title: Before vs after evening
+    kind: bars
+    unit: AUROC
+    ylabel: AUROC
+    bars:
+    - {label: Before, role: sim, pending: 'Q1.1 round two (b7, cf83b457), due after about 01:10'}
+    - {label: After, role: sim, pending: 'Q1.1 round two (b7, cf83b457), due after about 01:10'}
+- fig: Q1.1c
+  slug: qwen_vs_llama
+  title: 'Qwen3-32B vs a small model (Llama-3.2-1B) on the same runs: Qwen ranks better, but not at a 1% target'
+  caption: 'Q1.1c (post hoc, paired, 5 held-out environments, 946 runs): Qwen3-32B minus Llama-3.2-1B is +0.117 [+0.088, +0.146] in AUROC and +18.4 points [+4.5, +26.8] in catch at 5%, but −4.4 [−10.6, +6.2] at a 1% target, so at 1% neither model is shown to be better. Catch at 1% and 5% has no grouped label-shuffle null yet (#514 ruling), so read those bars as descriptive.'
+  panels:
+  - title: 'Caught: Qwen minus Llama'
+    kind: bars
+    unit: points
+    ylabel: "Difference (points)\n(above 0: Qwen catches more)"
+    bars:
+    - {label: At 1%, role: gap, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/qwen_vs_llama_POSTHOC_trim_2026-10-11_003609.json, key: test 5/difference_qwen_minus_llama/at_1pct/value, lo_key: test 5/difference_qwen_minus_llama/at_1pct/ci95/0, hi_key: test 5/difference_qwen_minus_llama/at_1pct/ci95/1, scale: 100, value: -4.44, lo: -10.61, hi: 6.23}
+    - {label: At 5%, role: gap, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/qwen_vs_llama_POSTHOC_trim_2026-10-11_003609.json, key: test 5/difference_qwen_minus_llama/at_5pct/value, lo_key: test 5/difference_qwen_minus_llama/at_5pct/ci95/0, hi_key: test 5/difference_qwen_minus_llama/at_5pct/ci95/1, scale: 100, value: 18.39, lo: 4.52, hi: 26.81}
+  - title: 'AUROC: Qwen minus Llama'
+    kind: bars
+    unit: AUROC diff
+    ylabel: "Difference in AUROC\n(above 0: Qwen ranks better)"
+    bars:
+    - {label: AUROC, role: gap, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/qwen_vs_llama_POSTHOC_trim_2026-10-11_003609.json, key: test 5/difference_qwen_minus_llama/auroc/value, lo_key: test 5/difference_qwen_minus_llama/auroc/ci95/0, hi_key: test 5/difference_qwen_minus_llama/auroc/ci95/1, scale: 1, value: 0.117, lo: 0.088, hi: 0.146}
+- fig: Q1.2
+  slug: onpolicy_fixed_sim_probe
+  title: With Qwen doing the tasks, the probe separates fixed simulated from real runs only weakly
+  caption: 'Q1.2: with Qwen3.5-27B doing the tasks (190 task triples from the 196-task run), the probe separates fixed simulated from real runs only weakly: on the 5 held-out environments AUROC 0.561 [0.506, 0.615] against a selection-aware shuffled-label null 95th percentile of 0.556 (two real runs 0.465, null 0.551), and 0.610 vs 0.470 over all 10 environments (no shuffle null was computed there, so those are not drawn); catch at a 1% target is 3.3% [0.8, 15.0] (two real runs 0.8%) and 14.2% at 5% (2.5%). No ROC points are committed. Catch at 1% and 5% has no grouped label-shuffle null yet (#514 ruling), so read those bars as descriptive.'
+  panels:
+  - title: Caught at a 1% and 5% false-alarm target
+    kind: bars
+    unit: percent
+    ylabel: "Runs caught (%)\n(higher = more separable)"
+    lines:
+    - {y: 1.0, label: 1%}
+    - {y: 5.0, label: 5%}
+    ylim:
+    - 0
+    - 30
+    bars:
+    - {label: "Sim vs real,\n1%", role: sim, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/18/at_1pct/caught_share, lo_key: rows/18/at_1pct/caught_ci95/0, hi_key: rows/18/at_1pct/caught_ci95/1, scale: 100, value: 3.33, lo: 0.83, hi: 15.0}
+    - {label: "Two real runs,\n1%", role: real2, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/20/at_1pct/caught_share, lo_key: rows/20/at_1pct/caught_ci95/0, hi_key: rows/20/at_1pct/caught_ci95/1, scale: 100, value: 0.83, lo: 0.0, hi: 5.83}
+    - {label: "Sim vs real,\n5%", role: sim, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/18/at_5pct/caught_share, lo_key: rows/18/at_5pct/caught_ci95/0, hi_key: rows/18/at_5pct/caught_ci95/1, scale: 100, value: 14.17, lo: 5.83, hi: 23.33}
+    - {label: "Two real runs,\n5%", role: real2, ref: 51a178ee5aa7, path: experiments/2026-10-09_fixed_sim/results/figure_numbers/catch_rows_2026-10-10_235259.json, key: rows/20/at_5pct/caught_share, lo_key: rows/20/at_5pct/caught_ci95/0, hi_key: rows/20/at_5pct/caught_ci95/1, scale: 100, value: 2.5, lo: 0.83, hi: 10.83}
+  - title: ROC, log false-alarm axis
+    kind: roc
+    ylabel: Simulated runs caught (true-positive rate)
+    fpr_lines:
+    - 0.01
+    - 0.05
+    curves:
+    - {label: ROC, role: sim, pending: 'Q1.2 ROC: per-output scores on S3 only; no committed plan produces ROC points'}
+  - title: 'Ranking score (AUROC); dotted: shuffled-label null'
+    kind: bars
+    unit: AUROC
+    ylabel: "AUROC\n(0.5 = chance; higher = more separable)"
+    lines:
+    - {y: 0.5, label: chance}
+    ylim:
+    - 0
+    - 1.1
+    bars:
+    - {label: "Held-out envs:\nsim vs real", role: sim, ref: 5564a2ee2e64, path: experiments/2026-10-10_claimB_onpolicy/README.md, quote: '1 **0.561 [0.506, 0.615]**, selection-aware null p95 0.556 (p 0.040)', value: 0.561, lo: 0.506, hi: 0.615, 'null': {y: 0.556, source: {ref: 5564a2ee2e64, path: experiments/2026-10-10_claimB_onpolicy/README.md, quote: selection-aware null p95 0.556 (p 0.040), raw: '0.556', scale: 1}}, raw: ['0.561', '0.506', '0.615']}
+    - {label: "Held-out envs:\ntwo real runs", role: real2, ref: 5564a2ee2e64, path: experiments/2026-10-10_claimB_onpolicy/README.md, quote: real run 2 vs run 1 0.465 (null p95 0.551), value: 0.465, 'null': {y: 0.551, source: {ref: 5564a2ee2e64, path: experiments/2026-10-10_claimB_onpolicy/README.md, quote: real run 2 vs run 1 0.465 (null p95 0.551), raw: '0.551', scale: 1}}, raw: ['0.465', null, null]}
+- fig: Q1.3
+  slug: behaviour_196
+  ncols: 3
+  title: With Qwen acting on 196 tasks, edit share, steps and output tokens are within the set-1 margins of real run 1 after Holm
+  caption: 'Q1.3 (post hoc margins, 191 paired tasks, 129 for re-reads): after Holm, simulated runs lie within the set-1 margins of real run 1 for edit share (±2 points), steps (±8) and output tokens (±15% of the mean); re-reads (±5) and failure text (±2) are inside before adjustment but miss Holm narrowly (0.026 vs 0.025); the tighter set 2 (failure text ±1, steps ±5) is not established; two real runs differ by as much as real vs simulated on every measure; the error field, a known recording difference, is left out (#541).'
+  panels:
+  - title: Edit share
+    kind: bars
+    unit: points
+    ylabel: Points (closer to 0 is better)
+    lines:
+    - {y: 2.0, label: ±2 pt, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: 'edit share ±0.02,', raw: '0.02', scale: 100}}
+    - {y: -2.0, label: ±2 pt, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: 'edit share ±0.02,', raw: '0.02', scale: 100}}
+    bars:
+    - {label: Real 1 − sim, role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: sh_edit/run1 - sim/point, lo_key: sh_edit/run1 - sim/95%/0, hi_key: sh_edit/run1 - sim/95%/1, scale: 100, value: 0.12, lo: -1.24, hi: 1.47}
+    - {label: "Real 1 − real 2\n(control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: sh_edit/run1 - run2/point, lo_key: sh_edit/run1 - run2/95%/0, hi_key: sh_edit/run1 - run2/95%/1, scale: 100, value: -0.64, lo: -2.04, hi: 0.72}
+  - title: Re-read rate
+    kind: bars
+    unit: points
+    ylabel: Points (closer to 0 is better)
+    lines:
+    - {y: 5.0, label: ±5 pt, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: re-read rate ±0.05, raw: '0.05', scale: 100}}
+    - {y: -5.0, label: ±5 pt, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: re-read rate ±0.05, raw: '0.05', scale: 100}}
+    bars:
+    - {label: Real 1 − sim, role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: reread_rate/run1 - sim/point, lo_key: reread_rate/run1 - sim/95%/0, hi_key: reread_rate/run1 - sim/95%/1, scale: 100, value: -0.17, lo: -4.45, hi: 4.0}
+    - {label: "Real 1 − real 2\n(control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: reread_rate/run1 - run2/point, lo_key: reread_rate/run1 - run2/95%/0, hi_key: reread_rate/run1 - run2/95%/1, scale: 100, value: -0.74, lo: -5.42, hi: 3.75}
+  - title: Failure-text share
+    kind: bars
+    unit: points
+    ylabel: Points (closer to 0 is better)
+    lines:
+    - {y: 2.0, label: ±2 pt, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: failure-text share ±0.02, raw: '0.02', scale: 100}}
+    - {y: -2.0, label: ±2 pt, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: failure-text share ±0.02, raw: '0.02', scale: 100}}
+    - {y: 1.0, label: ±1 pt, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: failure-text share ±0.01, raw: '0.01', scale: 100}}
+    - {y: -1.0, label: ±1 pt, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: failure-text share ±0.01, raw: '0.01', scale: 100}}
+    bars:
+    - {label: Real 1 − sim, role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: sh_failtext/run1 - sim/point, lo_key: sh_failtext/run1 - sim/95%/0, hi_key: sh_failtext/run1 - sim/95%/1, scale: 100, value: 0.8, lo: -0.34, hi: 1.93}
+    - {label: "Real 1 − real 2\n(control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: sh_failtext/run1 - run2/point, lo_key: sh_failtext/run1 - run2/95%/0, hi_key: sh_failtext/run1 - run2/95%/1, scale: 100, value: -0.83, lo: -2.02, hi: 0.33}
+  - title: Steps per run
+    kind: bars
+    unit: steps
+    ylabel: Steps (closer to 0 is better)
+    lines:
+    - {y: 8.0, label: ±8 steps, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: steps ±8, raw: '8', scale: 1}}
+    - {y: -8.0, label: ±8 steps, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: steps ±8, raw: '8', scale: 1}}
+    - {y: 5.0, label: ±5 steps, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: Steps ±5, raw: '5', scale: 1}}
+    - {y: -5.0, label: ±5 steps, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: Steps ±5, raw: '5', scale: 1}}
+    bars:
+    - {label: Real 1 − sim, role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: n_steps/run1 - sim/point, lo_key: n_steps/run1 - sim/95%/0, hi_key: n_steps/run1 - sim/95%/1, scale: 1, value: -1.23, lo: -6.5, hi: 3.92}
+    - {label: "Real 1 − real 2\n(control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: n_steps/run1 - run2/point, lo_key: n_steps/run1 - run2/95%/0, hi_key: n_steps/run1 - run2/95%/1, scale: 1, value: 3.56, lo: -0.89, hi: 7.99}
+  - title: Output tokens per run
+    kind: bars
+    unit: tokens
+    ylabel: Tokens (closer to 0 is better)
+    lines:
+    - {y: 2865.889, label: +margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: tok_out/margin set 1, pm: true}}
+    - {y: -2865.889, label: −margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: tok_out/margin set 1, pm: true}}
+    bars:
+    - {label: Real 1 − sim, role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: tok_out/run1 - sim/point, lo_key: tok_out/run1 - sim/95%/0, hi_key: tok_out/run1 - sim/95%/1, scale: 1, value: -326.99, lo: -2111.11, hi: 1323.64}
+    - {label: "Real 1 − real 2\n(control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q13_margins_POSTHOC_2026-10-11_003820.json, key: tok_out/run1 - run2/point, lo_key: tok_out/run1 - run2/95%/0, hi_key: tok_out/run1 - run2/95%/1, scale: 1, value: 1242.79, lo: -160.37, hi: 2677.53}
+- fig: Q1.3b
+  slug: judge_panel
+  title: 'Noticing a fake environment: the real-vs-simulated gap (+2.0 points) is smaller than the gap between two real runs (+3.1)'
+  caption: 'Q1.3b: your judge panel rated a turn as noticing a fake or test environment in 3.6% of real attack runs vs 1.6% of simulated ones (+2.0 points [−0.6, +5.1], task-paired), smaller than the gap between two real runs (+3.1 [+1.0, +5.7]); few flagged runs and no planted check (branch aswin/panel-by-world, PR #493).'
+  panels:
+  - title: Runs with a flagged turn
+    kind: bars
+    unit: percent
+    ylabel: Runs flagged (%)
+    bars:
+    - {label: "Real\n(run 1)", role: real, ref: 0475d56aca23, path: experiments/2026-10-10_panel_by_world/README.md, scale: 100, value: 3.6082, lo: 1.5, hi: 7.3, quote: '''1 or 2'': ''7/194 [0.015, 0.073]''', count: [7, 194], raw: [null, '0.015', '0.073']}
+    - {label: "Real\n(run 2)", role: real2, ref: 0475d56aca23, path: experiments/2026-10-10_panel_by_world/README.md, scale: 100, value: 0.5155, lo: 0.0, hi: 2.8, quote: '''1 or 2'': ''1/194 [0.000, 0.028]''', count: [1, 194], raw: [null, '0.000', '0.028']}
+    - {label: Simulated, role: sim, ref: 0475d56aca23, path: experiments/2026-10-10_panel_by_world/README.md, scale: 100, value: 1.5707, lo: 0.3, hi: 4.5, quote: '''1 or 2'': ''3/191 [0.003, 0.045]''', count: [3, 191], raw: [null, '0.003', '0.045']}
+    ylim:
+    - 0
+    - 10
+  - title: Differences
+    kind: bars
+    unit: points
+    ylabel: "Difference (points)\n(closer to 0 is better)"
+    bars:
+    - {label: Real 1 − sim, role: gap, ref: 0475d56aca23, path: experiments/2026-10-10_panel_by_world/README.md, scale: 100, value: 2.04, lo: -0.57, hi: 5.13, quote: '''1 or 2'': ''+0.0204 [-0.0057, +0.0513] tasks 194 (both 191), discordant [6, 2]''', raw: ['+0.0204', '-0.0057', '+0.0513']}
+    - {label: "Real 1 − real 2\n(control)", role: control, ref: 0475d56aca23, path: experiments/2026-10-10_panel_by_world/README.md, scale: 100, value: 3.09, lo: 1.03, hi: 5.67, quote: '''1 or 2'': ''+0.0309 [+0.0103, +0.0567] tasks 194 (both 194), discordant [6, 0]''', raw: ['+0.0309', '+0.0103', '+0.0567']}

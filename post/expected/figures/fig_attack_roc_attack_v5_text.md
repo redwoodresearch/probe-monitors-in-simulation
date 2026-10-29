@@ -1,0 +1,5 @@
+# Telling simulated from real attack runs with the attack detector
+
+data check open (nm172, nm305 score files). Run-level AUROC of the certified attack detector (held-out scores from cross-validation: 5 folds, grouped by main task (864 mains); a run's score is the mean of its rows' held-out logits), telling simulated attack runs from real run 1, beside the real-vs-real control (real run 2 against real run 1); layers: tool outputs 48, commands 48 (the record's registered primary layer for commands is 63; layer 48 was chosen for one-layer consistency (Aswin, 10-16)). Curves from the record's per-run held-out scores; each AUC equals the record's run-level AUROC. Runs: Tool outputs simulated vs run 1: 1,309 vs 1,311 runs; Tool outputs run 2 vs run 1: 1,313 vs 1,311 runs; Commands simulated vs run 1: 1,309 vs 1,311 runs; Commands run 2 vs run 1: 1,313 vs 1,311 runs. Values from the certified record (refit3, its repaired fits in place). Post hoc.
+
+Source: fig_attack_roc_attack_v5_source.json (inputs by path@sha; every plotted value with its key).

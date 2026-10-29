@@ -1,0 +1,9 @@
+# Smoke (RULE.md gate 3): the 4 longest run-1 runs of xread_main_v1/inputs/attack.jsonl (tokens: 32768, 32768, 32768, 32768), one shard.
+run: 2026-10-13_xread_smoke_v1
+inputs: xread_smoke_v1
+inputs_sha256:
+  attack.jsonl: d4c046905e20a6792df5ede1242330730ebc1b3142d55ae40921a50afa9c4a0c
+model: Qwen/Qwen3-32B
+shards: 1
+chunk_size: 10
+pad_to: 1024

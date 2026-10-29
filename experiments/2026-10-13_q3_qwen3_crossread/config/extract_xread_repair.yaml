@@ -1,0 +1,10 @@
+# Qwen3-32B cross-read (RULE.md), set repair: staged by stage_crossread.py (stage_repair_2026-10-13_013608.json), uploaded to the job's Volume as
+# xread_repair_v2/inputs/ (v2: the edited arm named repair; v1 superseded, never extracted). Epochs: {'repair': 138}.
+run: 2026-10-13_xread_repair_v2
+inputs: xread_repair_v2
+inputs_sha256:
+  repair.jsonl: 3674145829acb69611c6891f9c4cfc59d15ce8f221df520d1c4a5b668a8296ac
+model: Qwen/Qwen3-32B
+shards: 2
+chunk_size: 10
+pad_to: 1024

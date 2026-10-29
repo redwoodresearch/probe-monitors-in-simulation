@@ -1,0 +1,305 @@
+{
+ "label": "POST HOC, descriptive, preliminary until reviewed",
+ "rule": "RULE.md Amendment 1 @ 266ecf07, item 4",
+ "git": "9ce21cb86389fbbbe32befa06cd2eeecdc40fc46",
+ "input_digest": {
+  "sites.jsonl": "484c1d426da6d2cd52a49daa56afc444292476704bcee81e006cf0fcaf6a598a",
+  "sim_new.jsonl": "5a5c56277f9038db3584ab8727f1d235b661391a1baaf25a22d1d74719be2a48"
+ },
+ "runs_read": 216,
+ "worlds": {
+  "first_real": {
+   "sites": 91,
+   "stamp_kinds": {
+    "LS": 638,
+    "ISO": 5
+   },
+   "iso_forms": {
+    "sep_space": 5,
+    "seconds_True": 5,
+    "fraction_True": 5,
+    "zone_none": 5
+   },
+   "level1_placeholders": {
+    "<date>": 734,
+    "<time>": 643,
+    "<epoch>": 0
+   },
+   "years": {
+    "2026": 5
+   },
+   "zones": {
+    "none": 5
+   },
+   "offset_buckets": {
+    "internal": {
+     "gt_48h": 5
+    },
+    "external": {
+     "gt_48h": 5
+    },
+    "internal_ls": {
+     "le_10min": 156,
+     "2h_48h": 91,
+     "10min_2h": 5,
+     "gt_48h": 298
+    },
+    "external_ls": {
+     "le_10min": 174,
+     "2h_48h": 123,
+     "10min_2h": 2,
+     "gt_48h": 339
+    }
+   },
+   "offset_signed_median_hours": {
+    "internal_ls": -652.69,
+    "external_ls": -652.64,
+    "internal": -144.0,
+    "external": -144.0
+   },
+   "repeats": {
+    "identities_with_stamp": 1,
+    "distinct_minute_values": 3,
+    "values_held_by_2plus_identities": 0,
+    "max_identities_sharing_one_value": 1
+   },
+   "seconds_shown": 5,
+   "seconds_zero": 0,
+   "per_site": {
+    "replies": 91,
+    "with_full_dated_stamp": 1,
+    "with_internal_reference": 70,
+    "eligible": 1,
+    "all_within_10min_of_internal": 0
+   }
+  },
+  "second_real": {
+   "sites": 91,
+   "stamp_kinds": {
+    "LS": 638,
+    "ISO": 5
+   },
+   "iso_forms": {
+    "sep_space": 5,
+    "seconds_True": 5,
+    "fraction_True": 5,
+    "zone_none": 5
+   },
+   "level1_placeholders": {
+    "<date>": 734,
+    "<time>": 643,
+    "<epoch>": 0
+   },
+   "years": {
+    "2026": 5
+   },
+   "zones": {
+    "none": 5
+   },
+   "offset_buckets": {
+    "internal": {},
+    "external": {
+     "gt_48h": 5
+    },
+    "internal_ls": {
+     "le_10min": 123,
+     "gt_48h": 382,
+     "10min_2h": 10,
+     "2h_48h": 4
+    },
+    "external_ls": {
+     "le_10min": 155,
+     "gt_48h": 475,
+     "2h_48h": 8
+    }
+   },
+   "offset_signed_median_hours": {
+    "internal_ls": -2362.74,
+    "external_ls": -2362.68,
+    "external": -144.0
+   },
+   "repeats": {
+    "identities_with_stamp": 1,
+    "distinct_minute_values": 3,
+    "values_held_by_2plus_identities": 0,
+    "max_identities_sharing_one_value": 1
+   },
+   "seconds_shown": 5,
+   "seconds_zero": 0,
+   "per_site": {
+    "replies": 91,
+    "with_full_dated_stamp": 1,
+    "with_internal_reference": 66,
+    "eligible": 0,
+    "all_within_10min_of_internal": 0
+   }
+  },
+  "fake_natural": {
+   "sites": 33,
+   "stamp_kinds": {
+    "LS": 266
+   },
+   "iso_forms": {},
+   "level1_placeholders": {
+    "<date>": 290,
+    "<time>": 266,
+    "<epoch>": 0
+   },
+   "years": {},
+   "zones": {},
+   "offset_buckets": {
+    "internal": {},
+    "external": {},
+    "internal_ls": {
+     "le_10min": 41,
+     "gt_48h": 170
+    },
+    "external_ls": {
+     "gt_48h": 266
+    }
+   },
+   "offset_signed_median_hours": {
+    "internal_ls": -2365.44,
+    "external_ls": -2812.4
+   },
+   "repeats": {
+    "identities_with_stamp": 0,
+    "distinct_minute_values": 0,
+    "values_held_by_2plus_identities": 0,
+    "max_identities_sharing_one_value": 0
+   },
+   "seconds_shown": 0,
+   "seconds_zero": 0,
+   "per_site": {
+    "replies": 33,
+    "with_full_dated_stamp": 0,
+    "with_internal_reference": 22,
+    "eligible": 0,
+    "all_within_10min_of_internal": 0
+   }
+  },
+  "fake_new": {
+   "sites": 58,
+   "stamp_kinds": {
+    "LS": 372
+   },
+   "iso_forms": {},
+   "level1_placeholders": {
+    "<date>": 428,
+    "<time>": 372,
+    "<epoch>": 0
+   },
+   "years": {},
+   "zones": {},
+   "offset_buckets": {
+    "internal": {},
+    "external": {},
+    "internal_ls": {},
+    "external_ls": {
+     "2h_48h": 107,
+     "gt_48h": 265
+    }
+   },
+   "offset_signed_median_hours": {
+    "external_ls": -3095.02
+   },
+   "repeats": {
+    "identities_with_stamp": 0,
+    "distinct_minute_values": 0,
+    "values_held_by_2plus_identities": 0,
+    "max_identities_sharing_one_value": 0
+   },
+   "seconds_shown": 0,
+   "seconds_zero": 0,
+   "per_site": {
+    "replies": 58,
+    "with_full_dated_stamp": 0,
+    "with_internal_reference": 10,
+    "eligible": 0,
+    "all_within_10min_of_internal": 0
+   }
+  }
+ },
+ "advance": {
+  "first_real": {
+   "clock_readings": {
+    "runs": 72,
+    "runs_with_2plus": 0,
+    "never_step_back": 0,
+    "backward_step_over_60s": 0,
+    "all_identical": 0,
+    "median_span_min": null,
+    "too_few": true
+   },
+   "output_timestamps": {
+    "runs": 72,
+    "runs_with_2plus": 35,
+    "never_step_back": 27,
+    "backward_step_over_60s": 5,
+    "all_identical": 1,
+    "median_span_min": 0.9,
+    "too_few": false
+   }
+  },
+  "second_real": {
+   "clock_readings": {
+    "runs": 72,
+    "runs_with_2plus": 0,
+    "never_step_back": 0,
+    "backward_step_over_60s": 0,
+    "all_identical": 0,
+    "median_span_min": null,
+    "too_few": true
+   },
+   "output_timestamps": {
+    "runs": 72,
+    "runs_with_2plus": 37,
+    "never_step_back": 29,
+    "backward_step_over_60s": 5,
+    "all_identical": 1,
+    "median_span_min": 1.0,
+    "too_few": false
+   }
+  },
+  "n437_natural_sites": {
+   "clock_readings": {
+    "runs": 31,
+    "runs_with_2plus": 0,
+    "never_step_back": 0,
+    "backward_step_over_60s": 0,
+    "all_identical": 0,
+    "median_span_min": null,
+    "too_few": true
+   },
+   "output_timestamps": {
+    "runs": 31,
+    "runs_with_2plus": 12,
+    "never_step_back": 11,
+    "backward_step_over_60s": 1,
+    "all_identical": 0,
+    "median_span_min": 1.4,
+    "too_few": false
+   }
+  },
+  "n437_all_sites": {
+   "clock_readings": {
+    "runs": 72,
+    "runs_with_2plus": 0,
+    "never_step_back": 0,
+    "backward_step_over_60s": 0,
+    "all_identical": 0,
+    "median_span_min": null,
+    "too_few": true
+   },
+   "output_timestamps": {
+    "runs": 72,
+    "runs_with_2plus": 31,
+    "never_step_back": 26,
+    "backward_step_over_60s": 4,
+    "all_identical": 1,
+    "median_span_min": 1.7,
+    "too_few": false
+   }
+  }
+ }
+}

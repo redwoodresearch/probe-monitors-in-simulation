@@ -1,0 +1,30 @@
+{
+ "label": "POST HOC (Bugbot on #903); counts only",
+ "git": "cbf03a41d78ac185366228786a74ed8d612ff444",
+ "index": {
+  "index_2026-10-11_162843.jsonl": "c288eca8b29da7f1d7b8538217ba562b66fb8c74fae9000be39b27ac4db893ee"
+ },
+ "by arm": {
+  "real_a": {
+   "errored tool turns replayed as empty": 36,
+   "runs": 35,
+   "tool turns": 1346,
+   "tool turns with an error": 37,
+   "runs with an errored tool turn": 23
+  },
+  "real_b": {
+   "errored tool turns replayed as empty": 39,
+   "runs": 34,
+   "tool turns": 1297,
+   "tool turns with an error": 39,
+   "runs with an errored tool turn": 20
+  },
+  "sim": {
+   "errored tool turns replayed as empty": 0,
+   "runs": 33,
+   "tool turns": 1312,
+   "tool turns with an error": 0,
+   "runs with an errored tool turn": 0
+  }
+ }
+}

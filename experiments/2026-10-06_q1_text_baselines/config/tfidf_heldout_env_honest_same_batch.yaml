@@ -1,0 +1,28 @@
+# Same-batch refit (2026-10-07) of tfidf_heldout_env_honest_all_levels.yaml: the honest real-vs-real control fit and scored only on the 163 tasks whose
+# two real honest runs are both from the overlap800 batch; levels 0, 5 and 7. Closes the caveat in PR #75.
+name: tfidf_heldout_env_honest_same_batch
+examples: examples_2026-10-06_213745     # real honest (first and second run per task) + September simulated honest
+cells_file: config/same_batch_honest_cells_2026-10-07.json   # 163 tasks whose two real honest runs are both overlap800
+folds_file: folds_v3.json
+arms: {real: real-honest, real2: real-honest-2, sim: sim-honest}   # real-honest-2: real-vs-real control where a task has 2 real runs
+fold_scheme: environment
+baselines:
+  level0: {text: readout_text, scrub: 0}   # cleaned text as the probe reads it
+  level5: {text: readout_text, scrub: 5}   # + diff lines canonicalized
+  level7: {text: readout_text, scrub: 7}   # + editor output format canonicalized
+output_variants: [all, no_editor]
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true
+C: 1.0
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 0}
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

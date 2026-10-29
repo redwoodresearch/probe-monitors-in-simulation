@@ -1,0 +1,37 @@
+# Pooled design, every level 0-7, held-out environments: real (attack e1 + first real honest run) vs simulated
+# (attack + honest), one model trained on both cell types; attack e2 and the second real honest run are scored by the
+# same model, never trained on. Rows keep their own arm labels. Slices attack_cells and honest_cells.
+name: tfidf_heldout_env_pooled_all_levels
+examples: examples_2026-10-06_215752     # attack (examples_2026-10-06_142532) + honest (examples_2026-10-06_213745), merged
+cells_file: config/pooled_cells_2026-10-06.json   # 939 attack cells + 437 honest cells
+folds_file: folds_v3.json
+fold_scheme: environment
+arms: {real: [real-attack-e1, real-honest], sim: [sim-attack, sim-honest], also_scored: [real-attack-e2, real-honest-2]}
+slices:
+  attack_cells: {cells_file: config/paired_cells_v3.json}
+  honest_cells: {cells_file: config/paired_honest_cells_2026-10-06_213745.json}
+baselines:
+  level0: {text: readout_text, scrub: 0}   # cleaned text as the probe reads it
+  level1: {text: readout_text, scrub: 1}   # + clock times and dates masked
+  level2: {text: readout_text, scrub: 2}   # + numbers, hex IDs, UUIDs, IPs masked
+  level3: {text: readout_text, scrub: 3}   # + whitespace normalized
+  level4: {text: readout_text, scrub: 4}   # + harness format (editor gutter, stderr lines, weekday/month names, blank lines)
+  level5: {text: readout_text, scrub: 5}   # + diff lines canonicalized
+  level6: {text: readout_text, scrub: 6}   # + empty diff lines dropped
+  level7: {text: readout_text, scrub: 7}   # + editor output format canonicalized
+output_variants: [all, no_editor]
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true
+C: 1.0
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 0}
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

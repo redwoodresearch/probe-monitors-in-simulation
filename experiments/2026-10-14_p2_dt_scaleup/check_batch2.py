@@ -1,0 +1,57 @@
+"""For each sp493 root of the 14-root batch whose job wrote its local result record, run check_sp493_records.py once (keys, folds, counts).
+Usage: python3 -I check_batch.py"""
+import json, subprocess, sys
+from pathlib import Path
+from datetime import datetime
+from zoneinfo import ZoneInfo
+P2 = Path("/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/823cc0a0-23fc-47f8-b84f-0087b7bffcbd/scratchpad/p2")
+WT, RT = P2 / "dt4f/wt_simh", Path("/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/1faf3281-1269-46cf-883f-277091c9aa65/scratchpad/chain_run_state/routing")
+X = WT / "experiments/2026-10-14_p2_dt_scaleup"
+M, V = "/Users/aswinsurya/.local/bin/modal", "probe-shift_aswin-surya_sub-convaudit_work_kill-2026-11-14"
+ROOTS = ["sp493-b__sp493_b_main", "sp493-b__sp493_b_run2", "sp493-c__sp493_c_main", "sp493-c__sp493_c_run2",
+         *[f"sp493-g{k}{l}_s{j}__sp493_g{k}_sim_{l}_s{j}" for j in (1, 2) for k in (3, 6, 7) for l in "xy"]]
+REL = {**{r: "r4" for r in ("sp493-b__sp493_b_main", "sp493-b__sp493_b_run2", "sp493-c__sp493_c_main", "sp493-c__sp493_c_run2")}}
+OUTD = P2 / "dt4f/sp493/rec2_out"  # 4f: no writes to wt_simh while batch 2 runs; copied into results/ after its last root returns
+OUTD.mkdir(parents=True, exist_ok=True)
+done = {p.name.split("_check_")[1].rsplit("_2026", 1)[0] for p in OUTD.glob("dt_sp493_record_check_*.json")}
+out = []
+for rt in ROOTS:
+    r = json.loads((RT / f"{rt}.json").read_bytes())
+    st = r["staged_set"]
+    res = sorted((X / "results").glob(f"dt_q4b_arm_{st}_2026-10-16_*.json"))  # batch 2: staged sets are new names (re-stages, tails)
+    lab = st  # batch 2: label by staged set (re-stages share their root names with batch 1)
+    if not res:
+        out.append((rt, "not landed"))
+        continue
+    if lab in done:
+        out.append((rt, "checked"))
+        continue
+    D = P2 / "dt4f/sp493/rec2" / lab
+    D.mkdir(parents=True, exist_ok=True)
+    args = []
+    for a in r["arms"]:
+        fo = f"{st}__{a['meta_arm'].split('@')[0]}"
+        base = f"scaleup/{fo}"
+        mf, ls = D / f"{fo}.manifest_dt.json", D / f"{fo}.listing.txt"
+        subprocess.run([M, "volume", "get", "--force", V, f"{base}/manifest_dt.json", str(mf)], check=True, capture_output=True)
+        lst = subprocess.run([M, "volume", "ls", V, base], check=True, capture_output=True, text=True).stdout
+        if True:
+            lst += subprocess.run([M, "volume", "ls", V, f"{base}/dt"], check=True, capture_output=True, text=True).stdout
+        ls.write_text(lst)
+        args.append(f"{fo}={mf}={ls}")
+    rel = P2 / f"sp493_release_2026-10-16_{REL.get(rt, 'r3' if '_s1__' in rt else 'r5')}.json"
+    stamp = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d_%H%M%S")
+    pr = subprocess.run(["python3", "-I", str(X / "check_sp493_records.py"), str(WT), str(P2 / "dt4f/fitcheck"), str(res[-1]), str(RT / f"{rt}.json"), str(rel),
+                         str(OUTD / f"dt_sp493_record_check_{lab}_{stamp}.json"), *args], capture_output=True, text=True)
+    if pr.returncode:
+        out.append((rt, "CHECK ERROR " + pr.stderr.strip().splitlines()[-1][:200]))
+        continue
+    d = json.loads(pr.stdout)
+    cen = []
+    for fo, a in zip(d["folders"], args):
+        m = json.loads(Path(a.split("=")[1]).read_text())["sp493"]["census"]
+        cen.append(f"{m['runs_mapped']}/{m['runs_fold_minus_1']}")
+    out.append((rt, f"PASS={d['pass']} staged={d['staged_joins']} scored={d['scored_runs']} mapped/-1={','.join(cen)} " +
+                ";".join(f"{k.split('__')[1]}:{v['world']}/{v['runs']}/{v['strata']}/foldsbad{len(v['folds_vs_gate_bad'])}" for k, v in d["folders"].items())))
+for rt, s in out:
+    print(f"{rt:36s} {s}")

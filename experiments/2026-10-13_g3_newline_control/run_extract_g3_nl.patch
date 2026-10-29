@@ -1,0 +1,282 @@
+G3 newline-only controls' extractor, run_extract_g3_nl.py as run (render, extract and check for both arms), first committed
+at c0a9b236 and byte-identical at every later as-run commit to 9d0c1a2c on aswin/q2-g3-nlctl. Kept here as a patch for the
+PR size cap (784 lines). The full copy (sha256 e47df3211b1b8cc4b21c92daca97c95c0e5b1cdb8b2cfe58f03325ea46bdb46b, 52329 bytes) is on S3 via results/s3_manifest_v1.json.
+Base: experiments/2026-10-13_g3_new_reader/run_extract_g3.py, G3's extractor (sha256 e48933c2cccb3e3b744bc6b14836321173ddc48270e9d7bfe30692a6d5ee2043), on S3 only via
+experiments/2026-10-13_g3_new_reader/results/s3_manifest_v2.json. Fetch it to that path, then rebuild from the repository root:
+  patch -o experiments/2026-10-13_g3_newline_control/run_extract_g3_nl.py experiments/2026-10-13_g3_new_reader/run_extract_g3.py experiments/2026-10-13_g3_newline_control/run_extract_g3_nl.patch
+To rerun, check out the as-run branch aswin/q2-g3-nlctl instead: the extractor requires its own source committed.
+
+--- experiments/2026-10-13_g3_new_reader/run_extract_g3.py
++++ experiments/2026-10-13_g3_newline_control/run_extract_g3_nl.py
+@@ -1,4 +1,20 @@
+-"""G3 steps 2 and 7 (RULE.md here): ByteDance-Seed/Seed-OSS-36B-Instruct, the screen's pick
++"""G3 newline-only controls, POST HOC (PLAN.md here; Aswin's "do a and b", 13:37 PT 10-13, via 0d). A copy of
++../2026-10-13_g3_followups/run_extract_g3_rep.py (aswin/q2-g3-followups @ 1a531192, itself a copy of
++../2026-10-13_g3_new_reader/run_extract_g3.py, sha256 e48933c2..., frozen in G3's forecast.json) with two arms in place of
++"rep", each over the 939 cells of #36's cohort, read from #36's staged inputs with one edit applied in the worker:
++  - nlstrip ("sim-attack-nlstrip"): #36's as-simulated runs, with every trailing newline character ("\n", "\r") removed
++    from each create, str_replace and insert tool output (families from categories(), copied from the Llama run_rows.py
++    @ a887ae1c and AST-checked against it);
++  - nladd ("real-attack-e2-nladd"): #36's second real runs, with one "\n" appended to each create, str_replace and insert
++    tool output that does not already end in a newline character.
++Every other byte is unchanged. Qwen3-32B keep flags (the rows) are the original run's, from #36's meta. A run's key and
++file stem are its #36 run's, unchanged. Render counts the edits per family, a sha256 of each edited transcript, and, for
++each edited output, whether its Amendment 1 readout token's text differs from the unedited rendering's (the readout sits
++before the output's own trailing newline, so it should not). Changed lines: the docstring head, the app and constants,
++edit() and categories(), work_items' nl branch, count_one's edit counts, the render gate's scope, the launch lock (by run,
++not by app: the two arms launch in parallel under one app name), and main's inputs. G3's docstring follows.
++
++G3 steps 2 and 7 (RULE.md here): ByteDance-Seed/Seed-OSS-36B-Instruct, the screen's pick
+ (results/screen_2026-10-13_012449.json @ c2785c4d), reads #36's real runs, the planted e2 runs and P4-P6's 20 controls
+ (step 2); step 7's as-simulated runs only past the barrier. A copy of ../2026-10-12_q2_olmo_reader/run_extract_olmo.py (at
+ 726c953e) with the staged-run inputs of ../2026-10-12_plantslip_transfer/q2_reply_extract_olmo.py (at a4fdf613). Changed:
+@@ -57,7 +73,7 @@
+ import modal
+ 
+ HERE = Path(__file__).parent
+-APP = "probe-shift_aswin-surya_sub-q2-g3_extract_kill-2026-11-12"
++APP = "probe-shift_aswin-surya_sub-q2-g3nl_extract_kill-2026-11-12"
+ ACTS = "probe-shift_aswin-surya_sub-la-activations"  # read-only: #36's dump (staged inputs, Qwen3-32B meta) and the staged plants
+ OUT = "probe-shift_aswin-surya_sub-q2-g3_acts_kill-2026-11-12"
+ HF_CACHE = "probe-shift_aswin-surya_hf-cache"
+@@ -68,10 +84,16 @@
+ LAYERS = sorted({int(N_LAYERS * k / 8 + 0.5) for k in range(2, 8)} | {N_LAYERS - 1})  # round_half_up(n k / 8), k = 2..7, plus n - 1
+ assert LAYERS == [16, 24, 32, 40, 48, 56, 63]
+ REAL_ARMS = ("real-honest", "real-attack-e1", "real-attack-e2")
+-ARMS = {"real": REAL_ARMS, "planted": ("real-attack-e2-planted",), "controls": ("real-attack-e2-control",), "sim": ("sim-attack",)}
+-EXPECT = {"real-honest": 990, "real-attack-e1": 939, "real-attack-e2": 939, "real-attack-e2-planted": 845, "real-attack-e2-control": 20, "sim-attack": 939}
++NL = {"nlstrip": ("sim-attack-nlstrip", "sim-attack", "strip"), "nladd": ("real-attack-e2-nladd", "real-attack-e2", "add")}  # label, #36 arm, edit
++EDITORS, CMDS, LENGTH = ("text_editor", "str_replace_based_edit_tool"), ("view", "create", "str_replace", "insert"), (100, 1000, 5000)
++EDIT_FAMS = (2, 3, 4)  # categories()' family codes for create, str_replace, insert
++FAMILY = ("bash", "view", "create", "str_replace", "insert", "editor-other", "other")
++ARMS = {"real": REAL_ARMS, "planted": ("real-attack-e2-planted",), "controls": ("real-attack-e2-control",), "sim": ("sim-attack",),
++        "nlstrip": (NL["nlstrip"][0],), "nladd": (NL["nladd"][0],)}
++EXPECT = {"real-honest": 990, "real-attack-e1": 939, "real-attack-e2": 939, "real-attack-e2-planted": 845, "real-attack-e2-control": 20, "sim-attack": 939,
++          NL["nlstrip"][0]: 939, NL["nladd"][0]: 939}
+ GPU, CHUNK, TIMEOUT_S = "H200", 25, 3 * 3600
+-SHARDS = {"real": 24, "planted": 8, "controls": 1, "sim": 8}
++SHARDS = {"real": 24, "planted": 8, "controls": 1, "sim": 8, "nlstrip": 24, "nladd": 24}  # nl: 24 shards each, for wall-clock (Aswin 13:42: speed first)
+ SENT = "G3SPAN{:06d}Q"
+ PIP_CPU = ["transformers==4.57.1", "jinja2==3.1.6", "huggingface_hub[hf_transfer]==0.35.3", "numpy"]
+ PIP_GPU = ["torch==2.8.0", "accelerate==1.10.1", *PIP_CPU]
+@@ -206,6 +228,10 @@
+     if which in ("real", "sim"):
+         base = staged(DUMP, False)
+         items = [(r["arm"], r["filename"], base[(r["arm"], r["key"])], Path("/acts") / DUMP / "acts" / r["arm"] / f"{r['filename']}.json") for r in cohort]
++    elif which in NL:  # #36's staged runs of the cohort, one edit applied here; Qwen3-32B keep flags from #36's meta
++        label, orig, how = NL[which]
++        base = staged(DUMP, False)
++        items = [(label, r["filename"], edit(base[(orig, r["key"])], how), Path("/acts") / DUMP / "acts" / orig / f"{r['filename']}.json") for r in cohort]
+     else:
+         d = Path("/acts") / STAGED.format(which=which) / "inputs"
+         files = sorted(d.glob("shard_*.jsonl"))
+@@ -217,13 +243,66 @@
+         it = staged(STAGED.format(which=which), False)
+         items = [(arm, filename(k), x, Path("/acts") / DUMP / "acts" / x["orig_arm"] / f"{filename(k)}.json")
+                  for (arm, k), x in sorted(it.items()) if arm in ARMS[which]]
+-    if any(arm not in ARMS[which] for arm, *_ in items) or (which != "sim" and any("sim" in arm for arm, *_ in items)):
++    if any(arm not in ARMS[which] for arm, *_ in items) or (which not in ("sim", "nlstrip") and any("sim" in arm for arm, *_ in items)):
+         raise Fail("an item outside this job's arms")
+     if len({(arm, x["key"]) for arm, _, x, _ in items}) != len(items):
+         raise Fail("duplicate run ids")
+     return items
+ 
+ 
++# ---------- copied unchanged from ../2026-10-13_q2_llama_gap_where/run_rows.py @ a887ae1c (main checks it) ----------
++def categories(msgs):
++    """Per tool output, by (step, action) as positions() numbers them: [family, length bin, ending, position, tool name];
++    and how many calls' arguments weren't a JSON object (their family is editor-other or other)."""
++    outs, step, action, calls, bad = [], -1, 0, [], 0
++    for m in msgs:
++        if m["role"] == "assistant":
++            step, action, calls = step + 1, 0, m.get("tool_calls") or []
++        elif m["role"] == "tool":
++            fn = (calls[action].get("function") or {}) if action < len(calls) else {}
++            name, args = fn.get("name"), fn.get("arguments")
++            if isinstance(args, str):
++                try:
++                    args = json.loads(args)
++                except ValueError:
++                    args = None
++            if not isinstance(args, dict):
++                bad += 1; args = {}
++            cmd = args.get("command")
++            fam = 0 if name == "bash" else (1 + CMDS.index(cmd) if isinstance(cmd, str) and cmd in CMDS else 5) if name in EDITORS else 6
++            c = m.get("content")
++            text = "".join(p.get("text", "") for p in c if p.get("type") == "text") if isinstance(c, list) else (c or "")
++            ch = text[-1] if text else ""
++            end = 0 if not text else 1 if ch in "\n\r" else 2 if ch.isspace() else 3 if ch.isalnum() else 4
++            outs.append([step, action, fam, sum(len(text) >= t for t in LENGTH), end, name]); action += 1
++    n = len(outs)
++    return {(o[0], o[1]): [o[2], o[3], o[4], 0 if 3 * k < n else 1 if 3 * k < 2 * n else 2, o[5]] for k, o in enumerate(outs)}, n, bad
++# ---------- end of the copy ----------
++
++
++def edit(it, how):
++    """A copy of staged item `it` with the newline edit applied to its create, str_replace and insert tool outputs (the
++    content joined to one string, as prep() does; nothing else changes), plus "nl edits": the edited outputs' [step,
++    action, family], and "nl sha256": a sha256 of the edited messages."""
++    cats, _, _ = categories(it["messages"])
++    msgs, step, action, done = [], -1, 0, []
++    for m in it["messages"]:
++        m = dict(m)
++        if m["role"] == "assistant":
++            step, action = step + 1, 0
++        elif m["role"] == "tool":
++            fam = cats[(step, action)][0]
++            c = m.get("content")
++            text = "".join(p.get("text", "") for p in c if p.get("type") == "text") if isinstance(c, list) else (c or "")
++            new = text.rstrip("\n\r") if how == "strip" else text if text.endswith(("\n", "\r")) else text + "\n"
++            if fam in EDIT_FAMS and new != text:
++                m["content"] = new; done.append([step, action, fam])
++            action += 1
++        msgs.append(m)
++    return dict(it) | {"messages": msgs, "nl edits": done, "nl original messages": it["messages"],
++                       "nl sha256": hashlib.sha256(json.dumps(msgs, sort_keys=True, ensure_ascii=False).encode()).hexdigest()}
++
++
+ def ids_sha(pairs) -> str:
+     return hashlib.sha256(json.dumps(sorted([list(p) for p in pairs])).encode()).hexdigest()
+ 
+@@ -281,7 +360,26 @@
+             c[(label, f"{rule} readouts at C2")] += t is not None
+             c[(label, f"{rule} readouts at C2: whitespace-only")] += t is not None and t.strip() == ""
+             c[(label, f"{rule} readouts at C2: contains a newline")] += t is not None and "\n" in t
+-    return c, {"arm": label, "key": it["key"], "required": r["required"], "left out": r["left_out"], "left out, other reason": r["left_out_other"]}
++    run = {"arm": label, "key": it["key"], "required": r["required"], "left out": r["left_out"], "left out, other reason": r["left_out_other"]}
++    if "nl edits" in it:  # the edit's counts, and each edited output's readout against the unedited rendering's
++        q = qsum(json.loads(qpath.read_text()))
++        try:
++            r0 = positions(TOK, it["nl original messages"], q, SPECIAL, SPECIAL_TEXT)
++        except Exception as e:
++            c[(label, f"render failure (unedited): {getattr(e, 'stage', 'render')} ({type(e).__name__})")] += 1
++            return c, run | {"render failure": True}
++        def readouts(res):
++            oe = [p for p in res["positions"] if p["kind"] == "output_end"]
++            return {(p["step"], p["action"]): o[1][1][1] for p, o in zip(oe, res["outputs"])}
++        new, old = readouts(r), readouts(r0)
++        kept_q = {k_ for k_, v in q.items() if v[0]}
++        for st, ac, fam in it["nl edits"]:
++            c[(label, f"edited outputs: {FAMILY[fam]}")] += 1
++            c[(label, "edited outputs whose readout token text differs from the unedited rendering's")] += new.get((st, ac)) != old.get((st, ac))
++            c[(label, "edited outputs among the Qwen3-32B-kept (required) rows")] += f"{st},{ac}" in kept_q
++        c[(label, "runs with at least one edited output")] += bool(it["nl edits"])
++        run |= {"nl edits": len(it["nl edits"]), "nl first edit": it["nl edits"][0][:2] if it["nl edits"] else None, "nl sha256": it["nl sha256"]}
++    return c, run
+ 
+ 
+ @app.function(image=cpu_image, volumes={"/acts": acts}, cpu=32, memory=65536, timeout=3600, retries=0)
+@@ -327,6 +425,14 @@
+     from transformers import AutoModelForCausalLM, AutoTokenizer
+ 
+     sim_gate(cfg)
++    import threading
++
++    def gpu_log():  # GPU utilization and memory every 60 s, to the shard's log (counts only)
++        while True:
++            r = subprocess.run(["nvidia-smi", "--query-gpu=utilization.gpu,memory.used", "--format=csv,noheader"], capture_output=True, text=True)
++            print(f"shard {shard}: gpu {r.stdout.strip()}", flush=True)
++            time.sleep(60)
++    threading.Thread(target=gpu_log, daemon=True).start()
+     items = work_items(cfg["which"], cohort, shas)
+     if ids_sha((arm, x["key"]) for arm, _, x, _ in items) != cfg["ids sha256"]:
+         raise Fail("the items differ from the manifest's run ids")
+@@ -533,7 +639,7 @@
+     if not path:
+         raise SystemExit("--gate <render_g3_gate record>: extraction needs a passing render gate")
+     g = json.loads(Path(path).read_text())
+-    if g.get("gate") != "pass" or g.get("scope") != ("sim" if which == "sim" else "step 2"):
++    if g.get("gate") != "pass" or g.get("scope") != (which if which in ("sim", *NL) else "step 2"):
+         raise SystemExit("the render gate did not pass, or covers other arms")
+     name, meta = next(((n, m) for n, m in g["render files"].items() if m["which"] == which), (None, None))
+     if name is None:
+@@ -551,9 +657,15 @@
+ 
+ @app.local_entrypoint()
+ def main(mode: str, which: str, runs: str, stage: str, test: bool = False, forecast_commit: str = "", forecast_sha256: str = "", gate: str = ""):
+-    if mode not in ("render", "download", "extract", "check") or which not in ARMS:
+-        raise SystemExit("--mode render|download|extract|check --which real|planted|controls|sim")
+-    for f in (Path(__file__).resolve(), HERE / "RULE.md"):
++    if mode not in ("render", "extract", "check") or which not in NL:
++        raise SystemExit("this copy runs only --which nlstrip|nladd (--mode render|extract|check)")
++    import ast
++    def defs(src):
++        return next((ast.get_source_segment(src, n) for n in ast.parse(src).body if isinstance(n, ast.FunctionDef) and n.name == "categories"), None)
++    llama = subprocess.run(["git", "show", "a887ae1c:experiments/2026-10-13_q2_llama_gap_where/run_rows.py"], cwd=HERE, capture_output=True, text=True, check=True).stdout
++    if not defs(llama) or defs(Path(__file__).read_text()) != defs(llama):
++        raise SystemExit("categories() differs from the Llama run_rows.py's")
++    for f in (Path(__file__).resolve(), HERE / "PLAN.md"):
+         if git("ls-files", "--error-unmatch", str(f), check=False).returncode or git("diff", "--quiet", "HEAD", "--", str(f), check=False).returncode:
+             raise SystemExit(f"{f.name} differs from HEAD: commit it before running")
+     bar = barrier(forecast_commit, forecast_sha256) if which == "sim" else None  # before anything else for the simulated arm
+@@ -568,23 +680,26 @@
+         if hashlib.sha256(p_.read_bytes()).hexdigest() != PIN[role]:
+             raise SystemExit(f"{p_.name} is not the pinned {role}")
+     rs, st = json.loads(Path(runs).read_text()), json.loads(Path(stage).read_text())
+-    cohort = [{"arm": r["arm"], "key": r["key"], "filename": r["filename"]} for r in rs if r["arm"] in ARMS[which]] if which in ("real", "sim") else []
+-    shas = {k: v for k, v in st["inputs_sha256"].items() if k.startswith(STAGED.format(which=which) + "/")} if which in ("planted", "controls") else {}
+-    ids = [(r["arm"], r["key"]) for r in cohort] if cohort else \
+-        [(x["arm"], x["key"]) for x in st["controls" if which == "controls" else "planted"] if x["arm"] in ARMS[which]]
++    label, orig, how = NL[which]
++    base_runs = sorted((r for r in rs if r["arm"] == orig), key=lambda r: r["key"])
++    cohort = [{"arm": label, "key": r["key"], "filename": r["filename"]} for r in base_runs]  # key and stem unchanged
++    shas = {}
++    ids = [(r["arm"], r["key"]) for r in cohort]
+     by_arm = {a: sum(i[0] == a for i in ids) for a in ARMS[which]}
+-    if by_arm != {a: EXPECT[a] for a in ARMS[which]} or (which in ("planted", "controls") and not shas):
+-        raise SystemExit(f"inputs {by_arm} differ from the plan's")
+-    if which != "sim" and any("sim" in a for a, _ in ids):
+-        raise SystemExit("an as-simulated run is in a real-arm job")
++    if by_arm != {a: EXPECT[a] for a in ARMS[which]} or len({r["cell"] for r in base_runs}) != 939:
++        raise SystemExit(f"inputs {by_arm} differ from the plan's (939 runs, one per cell)")
+     manifest = {"made": stamp, "git": head, "which": which, "runs": [{"arm": a, "key": k} for a, k in ids], "by arm": by_arm,
+-                "no as-simulated run": which != "sim" and not any("sim" in a for a, _ in ids), "barrier": bar,
++                "POST HOC": "newline-only control (PLAN.md); after G3's verdict", "barrier": bar,
++                "edit": {"strip": "every trailing newline character removed from each create, str_replace and insert tool output",
++                         "add": "one newline appended to each create, str_replace and insert tool output not already ending in one"}[how],
++                "source arm (#36)": orig,
++                "key mapping": f"a run's key and file stem are its #36 {orig} run's, unchanged",
+                 "inputs sha256": {"#36 runs.json": PIN["runs.json"], "staging record": PIN["stage"]}}
+     with open(HERE / "results" / f"g3_manifest_{which}_{stamp}.json", "x") as fh:
+         fh.write(json.dumps(manifest, indent=1) + "\n")
+     src = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+     run = RUN.format(which=which) + (f"_test_{src[:8]}" if test else "")
+-    common = {"plan": "RULE.md (this folder)", "git": head, "which": which, "reader": {"model": MODEL, "revision": REVISION, "context": CTX, "layers": LAYERS},
++    common = {"plan": "PLAN.md (this folder), POST HOC", "git": head, "which": which, "reader": {"model": MODEL, "revision": REVISION, "context": CTX, "layers": LAYERS},
+               "inputs sha256": manifest["inputs sha256"], "barrier": bar, "ids sha256": ids_sha(ids),
+               "forecast.json": (HERE / "forecast.json").read_text() if which == "sim" else None}
+ 
+@@ -597,7 +712,7 @@
+         write(f"g3_render_{which}", out)
+         if bad_ := [r for r in out["rows"] if "render failure" in r["count"] and r["n"]]:
+             raise SystemExit(f"render failures: {bad_}")
+-        print("the GPU gate: analyze_render_g3.py on the step's render records")
++        print("the GPU gate: analyze_render_nl.py on this render record")
+         return
+     if mode == "check":
+         gated = render_gate(gate, which, ids, src)
+@@ -613,8 +728,22 @@
+     gated = render_gate(gate, which, ids, src)
+     rows_ = json.loads(subprocess.run(["uv", "run", "--no-project", "--with", "modal==1.6.1", "modal", "app", "list", "--json"],
+                                       capture_output=True, text=True, check=True, timeout=180).stdout)
+-    if live := [r["app_id"] for r in rows_ if r["description"] == APP and r["app_id"] != app.app_id and r["state"] != "stopped"]:
+-        raise SystemExit(f"another launch of {APP} is live ({live}): stop it first (no second writer)")
++    live = {r["app_id"] for r in rows_ if r["description"] == APP and r["app_id"] != app.app_id and r["state"] != "stopped"}
++    import io
++    # The two arms launch in parallel under one app name, so the no-second-writer lock is per run, not per app, and it is
++    # claimed atomically: an upload without force fails if the lock exists. A lock left by a launch no longer live is removed
++    # and the claim retried once (two racing launches can't both create it).
++    lock_path = f"{run}/launch_lock.json"
++    for attempt in (0, 1):
++        try:
++            with out_vol.batch_upload(force=False) as batch:
++                batch.put_file(io.BytesIO(json.dumps({"app": app.app_id, "launched": stamp}).encode()), lock_path)
++            break
++        except FileExistsError:
++            lock = json.loads(b"".join(out_vol.read_file(lock_path)))
++            if attempt or lock.get("app") in live or lock.get("app") == app.app_id:
++                raise SystemExit(f"another launch of {run} holds the lock ({lock.get('app')}): stop it first (no second writer)")
++            out_vol.remove_file(lock_path)
+     cfg = {"run": run, "shards": 1 if test else SHARDS[which], "chunk_size": 2 if test else CHUNK,
+            "limit_items": 4 if test else None, "source sha256": src, "modal": {"app": APP, "gpu": GPU, "pip": PIP_GPU}, "render gate": gated} | common
+     try:

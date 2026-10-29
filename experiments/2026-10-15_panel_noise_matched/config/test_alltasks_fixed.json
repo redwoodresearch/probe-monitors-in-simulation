@@ -1,0 +1,156 @@
+{
+ "pooled_label": "TEST of the N-origin + combos consumer on 507-prep's all-tasks record (alltasks_CRD @ 8d1338faa): NOT a PANEL result and not for any figure or post; it checks this script's independent recompute against Stage A's own panel_groups (09's answer 2). POST HOC; PRELIMINARY",
+ "label_note": "TEST (gate against Stage A's panel_groups, fixed-threshold mode); no headline is read from it",
+ "npz": [
+  {
+   "path": "xfer/fpr507prep/alltasks_CRD_2026-10-15_230525_perdraw.npz",
+   "sha256": "fa193bdfb686b373347074722412db28c1ea85c8c1945136ea518faacc1e4cf8",
+   "record": {
+    "git": "8d1338faa:experiments/2026-10-15_fpr_sweep_507_prep/results/alltasks_CRD_2026-10-15_230525.json",
+    "sha256": "499dcc9c9374a22dbb2253e7c4cbd0865b362131854030fca300adb529610df5"
+   },
+   "labels": [
+    "Sol (a) C",
+    "FIBS C",
+    "harmfulness C",
+    "refusal C",
+    "high-stakes C",
+    "c_asis C",
+    "own_a C",
+    "own_frac100_L48 C",
+    "own_frac25_L48 C",
+    "own_frac10_L48 C",
+    "own_all_L48 C",
+    "own_all25_L48 C",
+    "own_all10_L48 C",
+    "Sol (a) R",
+    "FIBS R",
+    "harmfulness R",
+    "refusal R",
+    "high-stakes R",
+    "c_asis R",
+    "own_a R",
+    "own_frac100_L48 R",
+    "own_frac25_L48 R",
+    "own_frac10_L48 R",
+    "own_all_L48 R",
+    "own_all25_L48 R",
+    "own_all10_L48 R",
+    "DT_destructive_primary C",
+    "DT_destructive_secondary C",
+    "DT_transfer_primary C",
+    "DT_transfer_secondary C"
+   ],
+   "key_format": "v2c"
+  }
+ ],
+ "origins": [
+  "S_old",
+  "S_new",
+  "S_newmains",
+  "S_newmains without S4"
+ ],
+ "combos": {
+  "pooled_all": [
+   "S_old",
+   "S_new",
+   "S_newmains"
+  ],
+  "pooled_all_without_S4": [
+   "S_old",
+   "S_new",
+   "S_newmains without S4"
+  ],
+  "pooled_455": [
+   "S_old",
+   "S_new"
+  ]
+ },
+ "headline_combo": "pooled_all",
+ "mode": "fixed",
+ "pooled_recompute_tol_abs": 1e-12,
+ "panel_groups_gate": {
+  "tol_abs": 1e-12,
+  "record_index": 0,
+  "stated": "before the run: |this run - Stage A| <= 1e-12 in rate units (1e-10 points) for every point and interval end; member rows, n, draws, finite draws, degenerate flags exact"
+ },
+ "paths": {
+  "origin_catch": [
+   "rows",
+   "{label}",
+   "{origin}",
+   "points",
+   "{mode}",
+   "{f}",
+   "catch",
+   "{key}",
+   "point"
+  ],
+  "origin_readable": [
+   "rows",
+   "{label}",
+   "{origin}",
+   "readable",
+   "{f}"
+  ],
+  "pooled_gap": [
+   "pooled",
+   "{label}",
+   "{combo}",
+   "{mode}",
+   "{f}",
+   "gap",
+   "{key}",
+   "point"
+  ]
+ },
+ "f_keys": [
+  "0.01",
+  "0.05"
+ ],
+ "points": [
+  "0.01",
+  "0.05"
+ ],
+ "point_values": [
+  0.01,
+  0.05
+ ],
+ "saturation": 0.99,
+ "g_onpolicy_run2_only": false,
+ "headline_excludes_onpolicy": true,
+ "headline_group": "off_policy",
+ "extra_groups": {
+  "DT": [
+   "DT_destructive_primary",
+   "DT_destructive_secondary",
+   "DT_transfer_primary",
+   "DT_transfer_secondary"
+  ]
+ },
+ "pooled_title": "TEST: pooled all tasks (S_old 183 + S_new 272 + S_newmains 312)",
+ "mains_name": "all tasks (S_old 183 + S_new 272 + S_newmains 312)",
+ "mix_name": "all-tasks",
+ "inputs_final": {
+  "git": "32abe4120:experiments/2026-10-15_fpr_sweep_507_prep/config/INPUTS_FINAL_2026-10-15_203213.json",
+  "sha256": "d8be69e672acaca11be3f76807929660c61db30a3cf50b083f8fef8c4d6dee9a"
+ },
+ "cohort_keys": {
+  "files": {
+   "final": {
+    "git": "3ce6ea55e:experiments/2026-10-14_xerr_scaleup_09/results/xerr_scaleup_final_2026-10-15_013255.json",
+    "sha256": "7dceb8bb25752aa3619cfde64add702fd4f7d13a1309a56dbc8880a6b27af9f5",
+    "stageA_name": "final"
+   },
+   "t196": {
+    "git": "4d1eec572:experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json",
+    "sha256": "55d9a8ec68f4685410d65c97bb84f470efb7cd8f05287384f92465ed5eadedbb",
+    "stageA_name": "t196"
+   }
+  },
+  "membership710": {
+   "git": "32abe4120:experiments/2026-10-15_fpr_sweep_507_prep/config/membership710.json",
+   "sha256": "6516d15fab77d7f344497e72db10b60c5f709b35c3a1859a2c9e016d2fc6e4ad"
+  }
+ }
+}

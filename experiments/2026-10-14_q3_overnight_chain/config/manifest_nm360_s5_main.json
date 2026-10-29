@@ -1,0 +1,70 @@
+{
+ "note": "scale-up main launch 2026-10-14_newmains_s5: honest_a, honest_b, attack r1",
+ "counts": {
+  "files": 3,
+  "by_arm": {
+   "attack": 1,
+   "honest_a": 1,
+   "honest_b": 1
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-14_newmains_s5",
+   "rel": "attack/nm203_slack_clone_redraw2/2026-10-15T04-34-59-00-00_la-slack-clone-real-attack-1_bThWY5DCbmH9uNGfFpuPtP.eval",
+   "sha256": "d08128bf75f1864d4dc003d27d4334fbc90f1ae477d71e2d91b1cd9bab6563e1",
+   "bytes": 17504,
+   "arm_dir": "attack",
+   "task": "nm203_slack_clone",
+   "attempt_index": 2,
+   "attempt_kind": "redraw",
+   "policy_called": false,
+   "path": "2026-10-14_newmains_s5/attack/nm203_slack_clone_redraw2/2026-10-15T04-34-59-00-00_la-slack-clone-real-attack-1_bThWY5DCbmH9uNGfFpuPtP.eval",
+   "state": "no policy call",
+   "launch_id": "2026-10-14_newmains_s5",
+   "stratum": "S_newmains",
+   "launch_task": "nm203_slack_clone",
+   "world": "run1",
+   "snapshot_id": "final"
+  },
+  {
+   "launch": "2026-10-14_newmains_s5",
+   "rel": "honest_a/nm203_slack_clone_redraw2/2026-10-15T04-30-20-00-00_la-slack-clone-real-honest-1_RX9M5djTnF7wxhDEAzANUz.eval",
+   "sha256": "849a742ca6460f3a0694e5ff4e15fbda7b36236a1ef5df17c6972604517072f8",
+   "bytes": 16458,
+   "arm_dir": "honest_a",
+   "task": "nm203_slack_clone",
+   "attempt_index": 2,
+   "attempt_kind": "redraw",
+   "policy_called": false,
+   "path": "2026-10-14_newmains_s5/honest_a/nm203_slack_clone_redraw2/2026-10-15T04-30-20-00-00_la-slack-clone-real-honest-1_RX9M5djTnF7wxhDEAzANUz.eval",
+   "state": "no policy call",
+   "launch_id": "2026-10-14_newmains_s5",
+   "stratum": "S_newmains",
+   "launch_task": "nm203_slack_clone",
+   "world": "honest_a",
+   "snapshot_id": "final"
+  },
+  {
+   "launch": "2026-10-14_newmains_s5",
+   "rel": "honest_b/nm203_slack_clone_redraw2/2026-10-15T04-39-38-00-00_la-slack-clone-real-honest-1_WszDamqVXkQbBDDJMFxnbE.eval",
+   "sha256": "aa66ab7771582d31bcd95b96dfa7bb0003c4312ec5bccf0dec30463db3efe094",
+   "bytes": 16460,
+   "arm_dir": "honest_b",
+   "task": "nm203_slack_clone",
+   "attempt_index": 2,
+   "attempt_kind": "redraw",
+   "policy_called": false,
+   "path": "2026-10-14_newmains_s5/honest_b/nm203_slack_clone_redraw2/2026-10-15T04-39-38-00-00_la-slack-clone-real-honest-1_WszDamqVXkQbBDDJMFxnbE.eval",
+   "state": "no policy call",
+   "launch_id": "2026-10-14_newmains_s5",
+   "stratum": "S_newmains",
+   "launch_task": "nm203_slack_clone",
+   "world": "honest_b",
+   "snapshot_id": "final"
+  }
+ ]
+}

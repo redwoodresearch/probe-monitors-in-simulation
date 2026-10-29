@@ -1,0 +1,13 @@
+# The second real attack run per task (2026-10-10_001314_second_attack; run 2 of PLAN_second_attack.md, 35654ab3), attack
+# only, staged apart from run 1 by run_replay_readouts.py --segment-ends --stage second_attack_segends_v1
+# (results/replay_readouts_second_attack_segends_2026-10-10_024517.json): 223 context epochs, 12,064,156 tokens.
+# Estimate about $4.90 at launch 2's billed rate ($0.40 per 1M tokens); stop at $5.90.
+# The strict rerun's extraction settings. Approved under the scale-up (SPEND_scaleup.md).
+run: 2026-10-10_second_attack_segends_v1
+inputs: second_attack_segends_v1
+inputs_sha256:
+  attack.jsonl: 672edb0dded2e739acb999f3a7a084905d75ab79b3b2b023dcaaefa55be69a1a
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 10
+pad_to: 4096

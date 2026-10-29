@@ -1,0 +1,57 @@
+{
+ "label": "POST HOC (Codex on #718)",
+ "git": "1d1996d36063ad9eb22566fe7b0c18a0568af6a6",
+ "input": {
+  "transfer_rvr_2026-10-11_133901.json": "d9e4775caf1a480da95ec9359a7695feb14e4ced60d389b12ea48d62b371c027"
+ },
+ "rates": {
+  "1%": {
+   "point (points)": 1.8115942028985477,
+   "below / above the point (points)": [
+    8.652184983516054,
+    10.62459341083307
+   ],
+   "pairs now": 163,
+   "half the width (as committed: total width 10)": {
+    "half-width used (points)": 9.638389197174563,
+    "pairs needed": 606,
+    "more pairs": 443,
+    "more runs (2 per pair)": 886,
+    "cost raw ($)": 886.0,
+    "cost with 30% ($)": 1151.8
+   },
+   "farther endpoint (\u00b15 on both sides)": {
+    "half-width used (points)": 10.62459341083307,
+    "pairs needed": 736,
+    "more pairs": 573,
+    "more runs (2 per pair)": 1146,
+    "cost raw ($)": 1146.0,
+    "cost with 30% ($)": 1489.8
+   }
+  },
+  "5%": {
+   "point (points)": 1.7457180500658698,
+   "below / above the point (points)": [
+    9.464028408822207,
+    7.6663469425399855
+   ],
+   "pairs now": 163,
+   "half the width (as committed: total width 10)": {
+    "half-width used (points)": 8.565187675681097,
+    "pairs needed": 479,
+    "more pairs": 316,
+    "more runs (2 per pair)": 632,
+    "cost raw ($)": 632.0,
+    "cost with 30% ($)": 821.6
+   },
+   "farther endpoint (\u00b15 on both sides)": {
+    "half-width used (points)": 9.464028408822207,
+    "pairs needed": 584,
+    "more pairs": 421,
+    "more runs (2 per pair)": 842,
+    "cost raw ($)": 842.0,
+    "cost with 30% ($)": 1094.6
+   }
+  }
+ }
+}

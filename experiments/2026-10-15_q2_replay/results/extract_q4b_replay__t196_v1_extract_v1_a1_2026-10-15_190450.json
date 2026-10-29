@@ -1,0 +1,226 @@
+{
+ "git": {
+  "commit": "b0a7177c6dd55bf83ae9333dbef6fee19fd13068",
+  "dirty": false
+ },
+ "config": {
+  "run": "replay/t196_v1_extract_v1",
+  "inputs": "replay/t196_v1/staged_v1",
+  "inputs_sha256": {
+   "replay_attack.jsonl": "f45968a5ec5cf7bef37db2ec559cd91645e43ca5b4114629478cbc754c689863",
+   "replay_honest_b.jsonl": "4d04f04a61f7723f74ba5ca016f3dc5a8548d314ae7ac563c253406b5913df28",
+   "replay_control_run1.jsonl": "b8992033f4b945307727eb6913a24e7adc0dddff83f5e9805e71f9128513d6a2"
+  },
+  "model": "Qwen/Qwen3.5-27B",
+  "shards": 8,
+  "chunk_size": 8,
+  "pad_to": 4096,
+  "attempt": 1,
+  "test": false,
+  "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654"
+ },
+ "app": "probe-shift_aswin-surya_sub-q2-replay_extract_kill-2026-11-14",
+ "volume": "probe-shift_aswin-surya_sub-q2-onpolicysim_data_kill-2026-11-14",
+ "shards": [
+  {
+   "shard": 0,
+   "epochs": 19,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard000_a1_chunk000",
+     "epochs": 8,
+     "rows": 1490
+    },
+    {
+     "chunk": "shard000_a1_chunk001",
+     "epochs": 8,
+     "rows": 1544
+    },
+    {
+     "chunk": "shard000_a1_chunk002",
+     "epochs": 3,
+     "rows": 444
+    }
+   ],
+   "load_s": 32,
+   "seconds": 215,
+   "max_peak_gib": 56.4
+  },
+  {
+   "shard": 1,
+   "epochs": 18,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard001_a1_chunk000",
+     "epochs": 8,
+     "rows": 1186
+    },
+    {
+     "chunk": "shard001_a1_chunk001",
+     "epochs": 8,
+     "rows": 1286
+    },
+    {
+     "chunk": "shard001_a1_chunk002",
+     "epochs": 2,
+     "rows": 316
+    }
+   ],
+   "load_s": 49,
+   "seconds": 231,
+   "max_peak_gib": 56.4
+  },
+  {
+   "shard": 2,
+   "epochs": 18,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard002_a1_chunk000",
+     "epochs": 8,
+     "rows": 1242
+    },
+    {
+     "chunk": "shard002_a1_chunk001",
+     "epochs": 8,
+     "rows": 1130
+    },
+    {
+     "chunk": "shard002_a1_chunk002",
+     "epochs": 2,
+     "rows": 236
+    }
+   ],
+   "load_s": 28,
+   "seconds": 194,
+   "max_peak_gib": 56.4
+  },
+  {
+   "shard": 3,
+   "epochs": 18,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard003_a1_chunk000",
+     "epochs": 8,
+     "rows": 1084
+    },
+    {
+     "chunk": "shard003_a1_chunk001",
+     "epochs": 8,
+     "rows": 1394
+    },
+    {
+     "chunk": "shard003_a1_chunk002",
+     "epochs": 2,
+     "rows": 252
+    }
+   ],
+   "load_s": 30,
+   "seconds": 200,
+   "max_peak_gib": 56.4
+  },
+  {
+   "shard": 4,
+   "epochs": 18,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard004_a1_chunk000",
+     "epochs": 8,
+     "rows": 1590
+    },
+    {
+     "chunk": "shard004_a1_chunk001",
+     "epochs": 8,
+     "rows": 1042
+    },
+    {
+     "chunk": "shard004_a1_chunk002",
+     "epochs": 2,
+     "rows": 240
+    }
+   ],
+   "load_s": 29,
+   "seconds": 200,
+   "max_peak_gib": 56.4
+  },
+  {
+   "shard": 5,
+   "epochs": 18,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard005_a1_chunk000",
+     "epochs": 8,
+     "rows": 1358
+    },
+    {
+     "chunk": "shard005_a1_chunk001",
+     "epochs": 8,
+     "rows": 1134
+    },
+    {
+     "chunk": "shard005_a1_chunk002",
+     "epochs": 2,
+     "rows": 444
+    }
+   ],
+   "load_s": 28,
+   "seconds": 205,
+   "max_peak_gib": 56.4
+  },
+  {
+   "shard": 6,
+   "epochs": 18,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard006_a1_chunk000",
+     "epochs": 8,
+     "rows": 940
+    },
+    {
+     "chunk": "shard006_a1_chunk001",
+     "epochs": 8,
+     "rows": 1224
+    },
+    {
+     "chunk": "shard006_a1_chunk002",
+     "epochs": 2,
+     "rows": 190
+    }
+   ],
+   "load_s": 38,
+   "seconds": 207,
+   "max_peak_gib": 56.4
+  },
+  {
+   "shard": 7,
+   "epochs": 18,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard007_a1_chunk000",
+     "epochs": 8,
+     "rows": 1222
+    },
+    {
+     "chunk": "shard007_a1_chunk001",
+     "epochs": 8,
+     "rows": 1308
+    },
+    {
+     "chunk": "shard007_a1_chunk002",
+     "epochs": 2,
+     "rows": 290
+    }
+   ],
+   "load_s": 33,
+   "seconds": 212,
+   "max_peak_gib": 56.4
+  }
+ ]
+}

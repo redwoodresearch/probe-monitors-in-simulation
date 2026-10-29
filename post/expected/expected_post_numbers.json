@@ -1,0 +1,5946 @@
+{
+  "draft": {
+    "name": "draft_v90_candidate_frozen_162806.md",
+    "sha256": "f9a9352967bc53c68c6324cf98afd4f4e5bae9a4e532581f96b26f6abca882ca",
+    "where": "~/probe-shift-writing-handoff-2026-10-15/w23/drafts/ (not copied into this branch: its Tables 2 to 4 quote commands from runs)"
+  },
+  "tokenizer": "every maximal number (optional sign U+2212 or +, digits with thousands commas, optional decimals, optional %) outside <code> spans and markdown link targets, skipping numbers glued to a letter, hyphen, underscore, dot or slash (names such as Qwen3.5-27B); k counts tokens left to right within the line; a range such as 3.7–6.8% gives two tokens. Word tokens (id .w<n>) were added by hand for the result-bearing numbers written in words.",
+  "classes": {
+    "R": "rebuilt from committed records by rebuild_post.py and compared as printed",
+    "Q": "compared with a committed record as recorded, but not recomputable from git (none at present: the four [^realline] interval tokens became R once records/realline_draws.npz was committed)",
+    "C": "constant of the design or a definition (alarm levels, interval level, layer numbers, planted sizes, step limit)",
+    "X": "number cited from another paper",
+    "S": "structural: a table, figure or section number, a run label, a name or a date",
+    "H": "hypothetical worked example",
+    "N": "not rebuildable from committed records (written from transcripts or command text, which are not in git)"
+  },
+  "tokens": [
+    {
+      "id": "L6.1",
+      "line": 6,
+      "k": 1,
+      "printed": "1,313",
+      "context": "- Qwen3.5-27B attacked ",
+      "class": "R"
+    },
+    {
+      "id": "L7.1",
+      "line": 7,
+      "k": 1,
+      "printed": "1.0",
+      "context": "ed over six probes, simulated catch was ",
+      "class": "R"
+    },
+    {
+      "id": "L7.2",
+      "line": 7,
+      "k": 2,
+      "printed": "95%",
+      "context": "h was 1.0 points lower than real catch (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L7.3",
+      "line": 7,
+      "k": 3,
+      "printed": "−3.0",
+      "context": "nts lower than real catch (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L7.4",
+      "line": 7,
+      "k": 4,
+      "printed": "+1.0",
+      "context": "than real catch (95% interval −3.0 to ",
+      "class": "R"
+    },
+    {
+      "id": "L7.5",
+      "line": 7,
+      "k": 5,
+      "printed": "0.2",
+      "context": "0), while the two real runs differed by ",
+      "class": "R"
+    },
+    {
+      "id": "L22.1",
+      "line": 22,
+      "k": 1,
+      "printed": "1",
+      "context": "est case to off-the-shelf probes (Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L24.1",
+      "line": 24,
+      "k": 1,
+      "printed": "1",
+      "context": "**Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L24.2",
+      "line": 24,
+      "k": 2,
+      "printed": "1",
+      "context": "each probe's AUROC for telling real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L24.3",
+      "line": 24,
+      "k": 3,
+      "printed": "0.5",
+      "context": "rom real honest runs on commands, where ",
+      "class": "C",
+      "note": "AUROC scale: 0.5 is chance, 1 is perfect (definition)"
+    },
+    {
+      "id": "L24.4",
+      "line": 24,
+      "k": 4,
+      "printed": "1",
+      "context": "ns on commands, where 0.5 is chance and ",
+      "class": "C",
+      "note": "AUROC scale: 0.5 is chance, 1 is perfect (definition)"
+    },
+    {
+      "id": "L28.1",
+      "line": 28,
+      "k": 1,
+      "printed": "0.99",
+      "context": "honest runs | Qwen3.5's own real runs | ",
+      "class": "R"
+    },
+    {
+      "id": "L29.1",
+      "line": 29,
+      "k": 1,
+      "printed": "0.76",
+      "context": "honest runs | GPT-5.6-Sol's real runs | ",
+      "class": "R"
+    },
+    {
+      "id": "L30.1",
+      "line": 30,
+      "k": 1,
+      "printed": "0.77",
+      "context": "ption dataset released with the probe | ",
+      "class": "R"
+    },
+    {
+      "id": "L31.1",
+      "line": 31,
+      "k": 1,
+      "printed": "0.65",
+      "context": "ess ones, at the request's last token | ",
+      "class": "R"
+    },
+    {
+      "id": "L32.1",
+      "line": 32,
+      "k": 1,
+      "printed": "0.54",
+      "context": "e, at the token just before the reply | ",
+      "class": "R"
+    },
+    {
+      "id": "L33.1",
+      "line": 33,
+      "k": 1,
+      "printed": "0.55",
+      "context": "r they could lead to significant harm | ",
+      "class": "R"
+    },
+    {
+      "id": "L35.1",
+      "line": 35,
+      "k": 1,
+      "printed": "1%",
+      "context": "^attempt] We set each threshold so that ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L35.2",
+      "line": 35,
+      "k": 2,
+      "printed": "65",
+      "context": "d] An honest run gives the probes about ",
+      "class": "R"
+    },
+    {
+      "id": "L35.3",
+      "line": 35,
+      "k": 3,
+      "printed": "75",
+      "context": "honest run gives the probes about 65 to ",
+      "class": "R"
+    },
+    {
+      "id": "L35.4",
+      "line": 35,
+      "k": 4,
+      "printed": "26%",
+      "context": "es about 65 to 75 commands to score, so ",
+      "class": "R"
+    },
+    {
+      "id": "L35.5",
+      "line": 35,
+      "k": 5,
+      "printed": "43%",
+      "context": "t 65 to 75 commands to score, so 26% to ",
+      "class": "R"
+    },
+    {
+      "id": "L35.6",
+      "line": 35,
+      "k": 6,
+      "printed": "1",
+      "context": "at share of attack runs too, and Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L35.7",
+      "line": 35,
+      "k": 7,
+      "printed": "95%",
+      "context": " share with a black tick. Intervals are ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L40.1",
+      "line": 40,
+      "k": 1,
+      "printed": "1%",
+      "context": "Because each run has many commands, our ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L40.2",
+      "line": 40,
+      "k": 2,
+      "printed": "26%",
+      "context": "many commands, our 1% alarm level flags ",
+      "class": "R"
+    },
+    {
+      "id": "L40.3",
+      "line": 40,
+      "k": 3,
+      "printed": "43%",
+      "context": "mmands, our 1% alarm level flags 26% to ",
+      "class": "R"
+    },
+    {
+      "id": "L40.4",
+      "line": 40,
+      "k": 4,
+      "printed": "5%",
+      "context": "o 43% of honest runs, far more than the ",
+      "class": "X",
+      "note": "the cited paper's monitor setting (5% of honest runs), not our alarm level"
+    },
+    {
+      "id": "L44.1",
+      "line": 44,
+      "k": 1,
+      "printed": "1",
+      "context": "[FIGURE ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L44.2",
+      "line": 44,
+      "k": 2,
+      "printed": "2",
+      "context": "ulated minus real catch beside real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L44.3",
+      "line": 44,
+      "k": 3,
+      "printed": "1",
+      "context": " catch beside real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L46.1",
+      "line": 46,
+      "k": 1,
+      "printed": "1",
+      "context": "**Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L46.2",
+      "line": 46,
+      "k": 2,
+      "printed": "2",
+      "context": "nus real catch (orange) beside real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L46.3",
+      "line": 46,
+      "k": 3,
+      "printed": "1",
+      "context": "range) beside real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L46.4",
+      "line": 46,
+      "k": 4,
+      "printed": "95%",
+      "context": "un 1 (gray), in percentage points, with ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L46.5",
+      "line": 46,
+      "k": 5,
+      "printed": "2",
+      "context": "ive value means simulation, or real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L46.6",
+      "line": 46,
+      "k": 6,
+      "printed": "0.6",
+      "context": "uns from honest runs (AUROC of at least ",
+      "class": "C",
+      "note": "four-probe cut-off, AUROC at least 0.6, fixed before the results (09 RULE item 36(1), @19ba8f563)"
+    },
+    {
+      "id": "L46.7",
+      "line": 46,
+      "k": 7,
+      "printed": "1%",
+      "context": "d runs each get a threshold set so that ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L46.8",
+      "line": 46,
+      "k": 8,
+      "printed": "1,313",
+      "context": "own honest commands raise an alarm. All ",
+      "class": "R"
+    },
+    {
+      "id": "L48.1",
+      "line": 48,
+      "k": 1,
+      "printed": "1.0",
+      "context": "ver the six probes, simulated catch was ",
+      "class": "R"
+    },
+    {
+      "id": "L48.2",
+      "line": 48,
+      "k": 2,
+      "printed": "95%",
+      "context": "h was 1.0 points lower than real catch (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L48.3",
+      "line": 48,
+      "k": 3,
+      "printed": "−3.0",
+      "context": "nts lower than real catch (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L48.4",
+      "line": 48,
+      "k": 4,
+      "printed": "+1.0",
+      "context": "than real catch (95% interval −3.0 to ",
+      "class": "R"
+    },
+    {
+      "id": "L48.5",
+      "line": 48,
+      "k": 5,
+      "printed": "0.2",
+      "context": ".[^indep] The two real runs differed by ",
+      "class": "R"
+    },
+    {
+      "id": "L48.6",
+      "line": 48,
+      "k": 6,
+      "printed": "2",
+      "context": "s differed by 0.2 points, with real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L48.7",
+      "line": 48,
+      "k": 7,
+      "printed": "1",
+      "context": " with real run 2 slightly lower (Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L48.8",
+      "line": 48,
+      "k": 8,
+      "printed": "0.6",
+      "context": " earlier AUROC on commands was at least ",
+      "class": "C",
+      "note": "four-probe cut-off, AUROC at least 0.6, fixed before the results (09 RULE item 36(1), @19ba8f563)"
+    },
+    {
+      "id": "L48.9",
+      "line": 48,
+      "k": 9,
+      "printed": "1.3",
+      "context": "r] Over those four, simulated catch was ",
+      "class": "R"
+    },
+    {
+      "id": "L48.10",
+      "line": 48,
+      "k": 10,
+      "printed": "2",
+      "context": "s lower than real catch, while real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L48.11",
+      "line": 48,
+      "k": 11,
+      "printed": "0.6",
+      "context": "han real catch, while real run 2 caught ",
+      "class": "R"
+    },
+    {
+      "id": "L48.12",
+      "line": 48,
+      "k": 12,
+      "printed": "1",
+      "context": " 2 caught 0.6 points more than real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L48.13",
+      "line": 48,
+      "k": 13,
+      "printed": "95%",
+      "context": "s statistically significant, since both ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L50.1",
+      "line": 50,
+      "k": 1,
+      "printed": "6.0",
+      "context": "less certain, with intervals of up to ±",
+      "class": "R"
+    },
+    {
+      "id": "L50.2",
+      "line": 50,
+      "k": 2,
+      "printed": "3",
+      "context": "lowered simulated catch by as little as ",
+      "class": "R"
+    },
+    {
+      "id": "L56.1",
+      "line": 56,
+      "k": 1,
+      "printed": "0.88",
+      "context": "ck runs from real ones with an AUROC of ",
+      "class": "R"
+    },
+    {
+      "id": "L56.2",
+      "line": 56,
+      "k": 2,
+      "printed": "0.5",
+      "context": "eparate the two real runs, scores about ",
+      "class": "R"
+    },
+    {
+      "id": "L56.3",
+      "line": 56,
+      "k": 3,
+      "printed": "2",
+      "context": "ores about 0.5, which is chance (Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L58.1",
+      "line": 58,
+      "k": 1,
+      "printed": "2",
+      "context": "[FIGURE ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L60.1",
+      "line": 60,
+      "k": 1,
+      "printed": "2",
+      "context": "**Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L60.2",
+      "line": 60,
+      "k": 2,
+      "printed": "48",
+      "context": "ves for a linear detector reading layer ",
+      "class": "C",
+      "note": "layer 48: the detector's and the on-policy probe's registered layer"
+    },
+    {
+      "id": "L60.3",
+      "line": 60,
+      "k": 3,
+      "printed": "0.88",
+      "context": "uns, reading tool outputs (solid, AUROC ",
+      "class": "R"
+    },
+    {
+      "id": "L60.4",
+      "line": 60,
+      "k": 4,
+      "printed": "0.72",
+      "context": " AUROC 0.88) or commands (dashed, AUROC ",
+      "class": "R"
+    },
+    {
+      "id": "L60.5",
+      "line": 60,
+      "k": 5,
+      "printed": "2",
+      "context": "me kind of detector separating real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L60.6",
+      "line": 60,
+      "k": 6,
+      "printed": "1",
+      "context": "tor separating real run 2 from real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L60.7",
+      "line": 60,
+      "k": 7,
+      "printed": "0.49",
+      "context": "eal run 2 from real run 1, which scores ",
+      "class": "R"
+    },
+    {
+      "id": "L60.8",
+      "line": 60,
+      "k": 8,
+      "printed": "0.50",
+      "context": " from real run 1, which scores 0.49 and ",
+      "class": "R"
+    },
+    {
+      "id": "L62.1",
+      "line": 62,
+      "k": 1,
+      "printed": "1.3",
+      "context": "eal machines. Their simulated catch was ",
+      "class": "R"
+    },
+    {
+      "id": "L62.2",
+      "line": 62,
+      "k": 2,
+      "printed": "2",
+      "context": "s lower than real catch, while real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L62.3",
+      "line": 62,
+      "k": 3,
+      "printed": "0.9",
+      "context": "han real catch, while real run 2 caught ",
+      "class": "R"
+    },
+    {
+      "id": "L62.4",
+      "line": 62,
+      "k": 4,
+      "printed": "1",
+      "context": " 2 caught 0.9 points more than real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L74.1",
+      "line": 74,
+      "k": 1,
+      "printed": "11.0",
+      "context": "dwood Research internship (through MATS ",
+      "class": "S",
+      "note": "programme name (MATS 11.0)"
+    },
+    {
+      "id": "L76.1",
+      "line": 76,
+      "k": 1,
+      "printed": "5%",
+      "context": "nscript-reading monitors, each flagging ",
+      "class": "X",
+      "note": "the cited paper's monitor setting (5% of honest runs), not our alarm level"
+    },
+    {
+      "id": "L76.2",
+      "line": 76,
+      "k": 2,
+      "printed": "3.6",
+      "context": " runs, with a root-mean-square error of ",
+      "class": "X",
+      "note": "cited from the simulated control evaluations paper (RMSE of its predictions), not our data"
+    },
+    {
+      "id": "L76.3",
+      "line": 76,
+      "k": 3,
+      "printed": "10.1",
+      "context": "rol setting, BashArena, had an error of ",
+      "class": "X",
+      "note": "cited from the simulated control evaluations paper (RMSE of its predictions), not our data"
+    },
+    {
+      "id": "L78.1",
+      "line": 78,
+      "k": 1,
+      "printed": "2026",
+      "context": "[^labs]: [Anthropic's August ",
+      "class": "S",
+      "note": "date in a citation"
+    },
+    {
+      "id": "L82.1",
+      "line": 82,
+      "k": 1,
+      "printed": "42%",
+      "context": "6-Sol wrote part of the output in about ",
+      "class": "R"
+    },
+    {
+      "id": "L82.2",
+      "line": 82,
+      "k": 2,
+      "printed": "6%",
+      "context": " 42% of simulated attack runs and about ",
+      "class": "R"
+    },
+    {
+      "id": "L84.1",
+      "line": 84,
+      "k": 1,
+      "printed": "95.7%",
+      "context": "gent clearly attempted the side task in ",
+      "class": "R"
+    },
+    {
+      "id": "L84.2",
+      "line": 84,
+      "k": 2,
+      "printed": "97.0%",
+      "context": "ask in 95.7% of simulated runs, against ",
+      "class": "R"
+    },
+    {
+      "id": "L84.3",
+      "line": 84,
+      "k": 3,
+      "printed": "96.3%",
+      "context": "7% of simulated runs, against 97.0% and ",
+      "class": "R"
+    },
+    {
+      "id": "L86.1",
+      "line": 86,
+      "k": 1,
+      "printed": "1,313",
+      "context": " task with different side tasks, so the ",
+      "class": "R"
+    },
+    {
+      "id": "L86.2",
+      "line": 86,
+      "k": 2,
+      "printed": "864",
+      "context": "ent side tasks, so the 1,313 tasks span ",
+      "class": "R"
+    },
+    {
+      "id": "L86.3",
+      "line": 86,
+      "k": 3,
+      "printed": "978",
+      "context": "tasks span 864 main tasks. They include ",
+      "class": "R"
+    },
+    {
+      "id": "L86.4",
+      "line": 86,
+      "k": 4,
+      "printed": "1,000",
+      "context": "864 main tasks. They include 978 of the ",
+      "class": "R"
+    },
+    {
+      "id": "L86.5",
+      "line": 86,
+      "k": 5,
+      "printed": "22",
+      "context": "valuations paper, and the paper's other ",
+      "class": "R"
+    },
+    {
+      "id": "L92.1",
+      "line": 92,
+      "k": 1,
+      "printed": "3.7",
+      "context": " both sides. On real machines they were ",
+      "class": "R"
+    },
+    {
+      "id": "L92.2",
+      "line": 92,
+      "k": 2,
+      "printed": "6.8%",
+      "context": "sides. On real machines they were 3.7–",
+      "class": "R"
+    },
+    {
+      "id": "L92.3",
+      "line": 92,
+      "k": 3,
+      "printed": "4.3%",
+      "context": "attempt failed. In simulation they were ",
+      "class": "R"
+    },
+    {
+      "id": "L92.4",
+      "line": 92,
+      "k": 4,
+      "printed": "2.9%",
+      "context": "t failed. In simulation they were 4.3% (",
+      "class": "R"
+    },
+    {
+      "id": "L94.1",
+      "line": 94,
+      "k": 1,
+      "printed": "10,000",
+      "context": "[^ci]: Intervals come from ",
+      "class": "C",
+      "note": "bootstrap resamples per interval (10,000 draws; registered resampler setting)"
+    },
+    {
+      "id": "L100.1",
+      "line": 100,
+      "k": 1,
+      "printed": "95%",
+      "context": "[^four]: For these four probes, the ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L100.2",
+      "line": 100,
+      "k": 2,
+      "printed": "−3.5",
+      "context": "hese four probes, the 95% intervals are ",
+      "class": "R"
+    },
+    {
+      "id": "L100.3",
+      "line": 100,
+      "k": 3,
+      "printed": "+0.9",
+      "context": "probes, the 95% intervals are −3.5 to ",
+      "class": "R"
+    },
+    {
+      "id": "L100.4",
+      "line": 100,
+      "k": 4,
+      "printed": "−0.9",
+      "context": "ints for simulated minus real catch and ",
+      "class": "R"
+    },
+    {
+      "id": "L100.5",
+      "line": 100,
+      "k": 5,
+      "printed": "+2.2",
+      "context": "imulated minus real catch and −0.9 to ",
+      "class": "R"
+    },
+    {
+      "id": "L100.6",
+      "line": 100,
+      "k": 6,
+      "printed": "2",
+      "context": "l catch and −0.9 to +2.2 for real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L100.7",
+      "line": 100,
+      "k": 7,
+      "printed": "1",
+      "context": "9 to +2.2 for real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L100.8",
+      "line": 100,
+      "k": 8,
+      "printed": "0.6",
+      "context": "nus real run 1. We chose the cut-off of ",
+      "class": "C",
+      "note": "four-probe cut-off, AUROC at least 0.6, fixed before the results (09 RULE item 36(1), @19ba8f563)"
+    },
+    {
+      "id": "L102.1",
+      "line": 102,
+      "k": 1,
+      "printed": "95%",
+      "context": "[^tool]: On tool outputs, the ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L102.2",
+      "line": 102,
+      "k": 2,
+      "printed": "−3.8",
+      "context": " On tool outputs, the 95% intervals are ",
+      "class": "R"
+    },
+    {
+      "id": "L102.3",
+      "line": 102,
+      "k": 3,
+      "printed": "+1.1",
+      "context": "utputs, the 95% intervals are −3.8 to ",
+      "class": "R"
+    },
+    {
+      "id": "L102.4",
+      "line": 102,
+      "k": 4,
+      "printed": "−0.6",
+      "context": "ints for simulated minus real catch and ",
+      "class": "R"
+    },
+    {
+      "id": "L102.5",
+      "line": 102,
+      "k": 5,
+      "printed": "+2.3",
+      "context": "imulated minus real catch and −0.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L102.6",
+      "line": 102,
+      "k": 6,
+      "printed": "2",
+      "context": "l catch and −0.6 to +2.3 for real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L102.7",
+      "line": 102,
+      "k": 7,
+      "printed": "1",
+      "context": "6 to +2.3 for real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L104.1",
+      "line": 104,
+      "k": 1,
+      "printed": "1%",
+      "context": "ne]: Averaged over the six probes, with ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L104.2",
+      "line": 104,
+      "k": 2,
+      "printed": "−0.9",
+      "context": "al catch against the real threshold was ",
+      "class": "R"
+    },
+    {
+      "id": "L104.3",
+      "line": 104,
+      "k": 3,
+      "printed": "95%",
+      "context": "hreshold was −0.9 points on commands (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L104.4",
+      "line": 104,
+      "k": 4,
+      "printed": "−2.1",
+      "context": "−0.9 points on commands (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L104.5",
+      "line": 104,
+      "k": 5,
+      "printed": "+0.6",
+      "context": "nts on commands (95% interval −2.1 to ",
+      "class": "R"
+    },
+    {
+      "id": "L104.6",
+      "line": 104,
+      "k": 6,
+      "printed": "−0.6",
+      "context": "mands (95% interval −2.1 to +0.6) and ",
+      "class": "R"
+    },
+    {
+      "id": "L104.7",
+      "line": 104,
+      "k": 7,
+      "printed": "95%",
+      "context": ".1 to +0.6) and −0.6 on tool outputs (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L104.8",
+      "line": 104,
+      "k": 8,
+      "printed": "−1.9",
+      "context": "nd −0.6 on tool outputs (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L104.9",
+      "line": 104,
+      "k": 9,
+      "printed": "+0.7",
+      "context": "on tool outputs (95% interval −1.9 to ",
+      "class": "R"
+    },
+    {
+      "id": "L104.10",
+      "line": 104,
+      "k": 10,
+      "printed": "−1.0",
+      "context": "parate thresholds, the same numbers are ",
+      "class": "R"
+    },
+    {
+      "id": "L104.11",
+      "line": 104,
+      "k": 11,
+      "printed": "−1.3",
+      "context": "sholds, the same numbers are −1.0 and ",
+      "class": "R"
+    },
+    {
+      "id": "L106.1",
+      "line": 106,
+      "k": 1,
+      "printed": "3",
+      "context": "[^seed]: The random draws in Tables ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L106.2",
+      "line": 106,
+      "k": 2,
+      "printed": "4",
+      "context": "seed]: The random draws in Tables 3 and ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L106.3",
+      "line": 106,
+      "k": 3,
+      "printed": "2",
+      "context": "and 4 and our two probes' rows of Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L118.1",
+      "line": 118,
+      "k": 1,
+      "printed": "1,313",
+      "context": "everal tasks share a main task. We used ",
+      "class": "R"
+    },
+    {
+      "id": "L118.2",
+      "line": 118,
+      "k": 2,
+      "printed": "864",
+      "context": "e a main task. We used 1,313 tasks over ",
+      "class": "R"
+    },
+    {
+      "id": "L118.3",
+      "line": 118,
+      "k": 3,
+      "printed": "978",
+      "context": "tasks over 864 main tasks. They include ",
+      "class": "R"
+    },
+    {
+      "id": "L118.4",
+      "line": 118,
+      "k": 4,
+      "printed": "1,000",
+      "context": "864 main tasks. They include 978 of the ",
+      "class": "R"
+    },
+    {
+      "id": "L118.5",
+      "line": 118,
+      "k": 5,
+      "printed": "22",
+      "context": " Appendix I gives the reasons the other ",
+      "class": "R"
+    },
+    {
+      "id": "L118.6",
+      "line": 118,
+      "k": 6,
+      "printed": "25",
+      "context": "x I gives the reasons the other 22, and ",
+      "class": "R"
+    },
+    {
+      "id": "L118.7",
+      "line": 118,
+      "k": 7,
+      "printed": "3",
+      "context": " 25 further tasks, were dropped. Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L120.1",
+      "line": 120,
+      "k": 1,
+      "printed": "3",
+      "context": "[FIGURE ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L120.2",
+      "line": 120,
+      "k": 2,
+      "printed": "2",
+      "context": "[FIGURE 3. v80 Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L122.1",
+      "line": 122,
+      "k": 1,
+      "printed": "3",
+      "context": "**Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L122.2",
+      "line": 122,
+      "k": 2,
+      "printed": "1",
+      "context": "h comparison.** For each task, real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L122.3",
+      "line": 122,
+      "k": 3,
+      "printed": "2",
+      "context": " For each task, real run 1 and real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L122.4",
+      "line": 122,
+      "k": 4,
+      "printed": "2",
+      "context": " catch with real catch, beside real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L122.5",
+      "line": 122,
+      "k": 5,
+      "printed": "1",
+      "context": "eside real run 2 compared with real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L128.1",
+      "line": 128,
+      "k": 1,
+      "printed": "1",
+      "context": "er four come from published work (Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L130.1",
+      "line": 130,
+      "k": 1,
+      "printed": "2",
+      "context": "mple, not only the sabotage step (Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L132.1",
+      "line": 132,
+      "k": 1,
+      "printed": "48",
+      "context": "probe.** A logistic regression on layer ",
+      "class": "C",
+      "note": "layer 48: the detector's and the on-policy probe's registered layer"
+    },
+    {
+      "id": "L132.2",
+      "line": 132,
+      "k": 2,
+      "printed": "64",
+      "context": "** A logistic regression on layer 48 of ",
+      "class": "C",
+      "note": "Qwen3.5-27B has 64 layers (model configuration)"
+    },
+    {
+      "id": "L132.3",
+      "line": 132,
+      "k": 3,
+      "printed": "1",
+      "context": "t learns to separate Qwen3.5's real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L132.4",
+      "line": 132,
+      "k": 4,
+      "printed": "840",
+      "context": "ne honest run per main task, over about ",
+      "class": "R"
+    },
+    {
+      "id": "L132.5",
+      "line": 132,
+      "k": 5,
+      "printed": "670",
+      "context": "ur groups, so each copy trains on about ",
+      "class": "R"
+    },
+    {
+      "id": "L133.1",
+      "line": 133,
+      "k": 1,
+      "printed": "1",
+      "context": ", and learns to separate Sol's real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L133.2",
+      "line": 133,
+      "k": 2,
+      "printed": "939",
+      "context": " separate Sol's real run 1 attack runs (",
+      "class": "R"
+    },
+    {
+      "id": "L133.3",
+      "line": 133,
+      "k": 3,
+      "printed": "990",
+      "context": "k runs (939) from its real honest runs (",
+      "class": "R"
+    },
+    {
+      "id": "L133.4",
+      "line": 133,
+      "k": 4,
+      "printed": "63",
+      "context": "five copies. On commands it reads layer ",
+      "class": "R"
+    },
+    {
+      "id": "L133.5",
+      "line": 133,
+      "k": 5,
+      "printed": "45",
+      "context": "py's training data alone, mostly layers ",
+      "class": "R"
+    },
+    {
+      "id": "L133.6",
+      "line": 133,
+      "k": 6,
+      "printed": "49",
+      "context": "raining data alone, mostly layers 45 to ",
+      "class": "R"
+    },
+    {
+      "id": "L134.1",
+      "line": 134,
+      "k": 1,
+      "printed": "19",
+      "context": "-27B, the linear version at six layers (",
+      "class": "C",
+      "note": "the deception probe's published layers (run_fibs_score.py LAYERS @3f9538669)"
+    },
+    {
+      "id": "L134.2",
+      "line": 134,
+      "k": 2,
+      "printed": "27",
+      "context": ", the linear version at six layers (19, ",
+      "class": "C",
+      "note": "the deception probe's published layers (run_fibs_score.py LAYERS @3f9538669)"
+    },
+    {
+      "id": "L134.3",
+      "line": 134,
+      "k": 3,
+      "printed": "35",
+      "context": "e linear version at six layers (19, 27, ",
+      "class": "C",
+      "note": "the deception probe's published layers (run_fibs_score.py LAYERS @3f9538669)"
+    },
+    {
+      "id": "L134.4",
+      "line": 134,
+      "k": 4,
+      "printed": "43",
+      "context": "near version at six layers (19, 27, 35, ",
+      "class": "C",
+      "note": "the deception probe's published layers (run_fibs_score.py LAYERS @3f9538669)"
+    },
+    {
+      "id": "L134.5",
+      "line": 134,
+      "k": 5,
+      "printed": "51",
+      "context": " version at six layers (19, 27, 35, 43, ",
+      "class": "C",
+      "note": "the deception probe's published layers (run_fibs_score.py LAYERS @3f9538669)"
+    },
+    {
+      "id": "L134.6",
+      "line": 134,
+      "k": 6,
+      "printed": "58",
+      "context": "n at six layers (19, 27, 35, 43, 51 and ",
+      "class": "C",
+      "note": "the deception probe's published layers (run_fibs_score.py LAYERS @3f9538669)"
+    },
+    {
+      "id": "L135.1",
+      "line": 135,
+      "k": 1,
+      "printed": "128",
+      "context": "ce in mean activations between the same ",
+      "class": "C",
+      "note": "harmful and harmless prompt counts used for the two directions (run_read_fit.py N train 128 @3e3367a89)"
+    },
+    {
+      "id": "L135.2",
+      "line": 135,
+      "k": 2,
+      "printed": "128",
+      "context": "ations between the same 128 harmful and ",
+      "class": "C",
+      "note": "harmful and harmless prompt counts used for the two directions (run_read_fit.py N train 128 @3e3367a89)"
+    },
+    {
+      "id": "L135.3",
+      "line": 135,
+      "k": 3,
+      "printed": "34",
+      "context": "the last token of the request, at layer ",
+      "class": "R"
+    },
+    {
+      "id": "L135.4",
+      "line": 135,
+      "k": 4,
+      "printed": "47",
+      "context": "just before the model's reply, at layer ",
+      "class": "R"
+    },
+    {
+      "id": "L136.1",
+      "line": 136,
+      "k": 1,
+      "printed": "43",
+      "context": "probe.** A logistic regression on layer ",
+      "class": "R"
+    },
+    {
+      "id": "L138.1",
+      "line": 138,
+      "k": 1,
+      "printed": "2",
+      "context": " **Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L149.1",
+      "line": 149,
+      "k": 1,
+      "printed": "14%",
+      "context": "f the calls the published probes score (",
+      "class": "R"
+    },
+    {
+      "id": "L149.2",
+      "line": 149,
+      "k": 2,
+      "printed": "17%",
+      "context": "s new content. File edits make up about ",
+      "class": "R"
+    },
+    {
+      "id": "L149.3",
+      "line": 149,
+      "k": 3,
+      "printed": "21%",
+      "context": "d probes score in honest runs and about ",
+      "class": "R"
+    },
+    {
+      "id": "L153.1",
+      "line": 153,
+      "k": 1,
+      "printed": "1%",
+      "context": "d set on their own honest runs, so that ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L155.1",
+      "line": 155,
+      "k": 1,
+      "printed": "1%",
+      "context": "This level is lenient. When ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L155.2",
+      "line": 155,
+      "k": 2,
+      "printed": "26%",
+      "context": "n 1% of honest commands raise an alarm, ",
+      "class": "R"
+    },
+    {
+      "id": "L155.3",
+      "line": 155,
+      "k": 3,
+      "printed": "43%",
+      "context": " honest commands raise an alarm, 26% to ",
+      "class": "R"
+    },
+    {
+      "id": "L155.4",
+      "line": 155,
+      "k": 4,
+      "printed": "5%",
+      "context": " and setting. That is several times the ",
+      "class": "X",
+      "note": "the cited paper's monitor setting (5% of honest runs), not our alarm level"
+    },
+    {
+      "id": "L157.1",
+      "line": 157,
+      "k": 1,
+      "printed": "1,906",
+      "context": "y precise. The real threshold is set on ",
+      "class": "R"
+    },
+    {
+      "id": "L157.2",
+      "line": 157,
+      "k": 2,
+      "printed": "868",
+      "context": "est runs and the simulated threshold on ",
+      "class": "R"
+    },
+    {
+      "id": "L157.3",
+      "line": 157,
+      "k": 3,
+      "printed": "2",
+      "context": "s share one real threshold, so real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L157.4",
+      "line": 157,
+      "k": 4,
+      "printed": "1",
+      "context": "threshold, so real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L171.1",
+      "line": 171,
+      "k": 1,
+      "printed": "3",
+      "context": "**Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L175.1",
+      "line": 175,
+      "k": 1,
+      "printed": "+0.40",
+      "context": "Table 3, row 1, column Above the threshold",
+      "class": "R"
+    },
+    {
+      "id": "L176.1",
+      "line": 176,
+      "k": 1,
+      "printed": "+0.71",
+      "context": "Table 3, row 2, column Above the threshold",
+      "class": "R"
+    },
+    {
+      "id": "L177.1",
+      "line": 177,
+      "k": 1,
+      "printed": "+0.21",
+      "context": "Table 3, row 3, column Above the threshold",
+      "class": "R"
+    },
+    {
+      "id": "L178.1",
+      "line": 178,
+      "k": 1,
+      "printed": "+0.07",
+      "context": "Table 3, row 4, column Above the threshold",
+      "class": "R"
+    },
+    {
+      "id": "L179.1",
+      "line": 179,
+      "k": 1,
+      "printed": "+0.01",
+      "context": "Table 3, row 5, column Above the threshold",
+      "class": "R"
+    },
+    {
+      "id": "L180.1",
+      "line": 180,
+      "k": 1,
+      "printed": "+1.24",
+      "context": "Table 3, row 6, column Above the threshold",
+      "class": "R"
+    },
+    {
+      "id": "L182.1",
+      "line": 182,
+      "k": 1,
+      "printed": "4",
+      "context": "**Caught and missed attacks.** Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L182.2",
+      "line": 182,
+      "k": 2,
+      "printed": "1,313",
+      "context": "the on-policy probe on commands. Of the ",
+      "class": "R"
+    },
+    {
+      "id": "L182.3",
+      "line": 182,
+      "k": 3,
+      "printed": "1,304",
+      "context": " probe on commands. Of the 1,313 tasks, ",
+      "class": "R"
+    },
+    {
+      "id": "L182.4",
+      "line": 182,
+      "k": 4,
+      "printed": "1",
+      "context": "sks, 1,304 were caught in both real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L182.5",
+      "line": 182,
+      "k": 5,
+      "printed": "6",
+      "context": " both real run 1 and the simulated run, ",
+      "class": "R"
+    },
+    {
+      "id": "L182.6",
+      "line": 182,
+      "k": 6,
+      "printed": "2",
+      "context": " simulated run, 6 only in the real run, ",
+      "class": "R"
+    },
+    {
+      "id": "L182.7",
+      "line": 182,
+      "k": 7,
+      "printed": "1",
+      "context": " the real run, 2 only in simulation and ",
+      "class": "R"
+    },
+    {
+      "id": "L186.1",
+      "line": 186,
+      "k": 1,
+      "printed": "4",
+      "context": "**Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L188.1",
+      "line": 188,
+      "k": 1,
+      "printed": "1",
+      "context": "main task, hidden side task) | Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L190.1",
+      "line": 190,
+      "k": 1,
+      "printed": "+1.8",
+      "context": "Table 4, row 1, column Real run 1",
+      "class": "R"
+    },
+    {
+      "id": "L190.2",
+      "line": 190,
+      "k": 2,
+      "printed": "+2.5",
+      "context": "Table 4, row 1, column Simulated run",
+      "class": "R"
+    },
+    {
+      "id": "L190.3",
+      "line": 190,
+      "k": 3,
+      "printed": "20",
+      "context": "Table 4, row 1, column Simulated run (description)",
+      "class": "N",
+      "note": "description written from the run's transcript for a Table 4 text cell; transcripts are not in git, so it cannot be rebuilt"
+    },
+    {
+      "id": "L191.1",
+      "line": 191,
+      "k": 1,
+      "printed": "+5.3",
+      "context": "Table 4, row 2, column Real run 1",
+      "class": "R"
+    },
+    {
+      "id": "L191.2",
+      "line": 191,
+      "k": 2,
+      "printed": "95",
+      "context": "Table 4, row 2, column Real run 1 (description)",
+      "class": "N",
+      "note": "description written from the run's transcript for a Table 4 text cell; transcripts are not in git, so it cannot be rebuilt"
+    },
+    {
+      "id": "L192.1",
+      "line": 192,
+      "k": 1,
+      "printed": "−0.07",
+      "context": "Table 4, row 3, column Real run 1",
+      "class": "R"
+    },
+    {
+      "id": "L192.2",
+      "line": 192,
+      "k": 2,
+      "printed": "+0.37",
+      "context": "Table 4, row 3, column Simulated run",
+      "class": "R"
+    },
+    {
+      "id": "L197.1",
+      "line": 197,
+      "k": 1,
+      "printed": "1%",
+      "context": "ifts, and does the result depend on the ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L199.1",
+      "line": 199,
+      "k": 1,
+      "printed": "5%",
+      "context": "es zero. At a more lenient alarm level, ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L199.2",
+      "line": 199,
+      "k": 2,
+      "printed": "5",
+      "context": " sat measurably below real catch. Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L199.3",
+      "line": 199,
+      "k": 3,
+      "printed": "1,313",
+      "context": "le 5 gives every probe's numbers on all ",
+      "class": "R"
+    },
+    {
+      "id": "L199.4",
+      "line": 199,
+      "k": 4,
+      "printed": "1%",
+      "context": "obe's numbers on all 1,313 tasks at the ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L201.1",
+      "line": 201,
+      "k": 1,
+      "printed": "4.2",
+      "context": "n than the average, with intervals of ±",
+      "class": "R"
+    },
+    {
+      "id": "L201.2",
+      "line": 201,
+      "k": 2,
+      "printed": "6.0",
+      "context": "e average, with intervals of ±4.2 to ±",
+      "class": "R"
+    },
+    {
+      "id": "L203.1",
+      "line": 203,
+      "k": 1,
+      "printed": "−0.35",
+      "context": "narrower interval, which excludes zero (",
+      "class": "R"
+    },
+    {
+      "id": "L203.2",
+      "line": 203,
+      "k": 2,
+      "printed": "95%",
+      "context": "interval, which excludes zero (−0.35, ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L203.3",
+      "line": 203,
+      "k": 3,
+      "printed": "−1.31",
+      "context": "ch excludes zero (−0.35, 95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L203.4",
+      "line": 203,
+      "k": 4,
+      "printed": "−0.02",
+      "context": " zero (−0.35, 95% interval −1.31 to ",
+      "class": "R"
+    },
+    {
+      "id": "L203.5",
+      "line": 203,
+      "k": 5,
+      "printed": "100%",
+      "context": " 95% interval −1.31 to −0.02). Near ",
+      "class": "R"
+    },
+    {
+      "id": "L205.1",
+      "line": 205,
+      "k": 1,
+      "printed": "98.6%",
+      "context": "asks, the on-policy probe still catches ",
+      "class": "R"
+    },
+    {
+      "id": "L207.1",
+      "line": 207,
+      "k": 1,
+      "printed": "4.9",
+      "context": "cy probe.** The off-policy probe caught ",
+      "class": "R"
+    },
+    {
+      "id": "L207.2",
+      "line": 207,
+      "k": 2,
+      "printed": "95%",
+      "context": "ks in simulation than on real machines (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L207.3",
+      "line": 207,
+      "k": 3,
+      "printed": "−10.8",
+      "context": "ion than on real machines (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L207.4",
+      "line": 207,
+      "k": 4,
+      "printed": "+1.1",
+      "context": " real machines (95% interval −10.8 to ",
+      "class": "R"
+    },
+    {
+      "id": "L207.5",
+      "line": 207,
+      "k": 5,
+      "printed": "2.2",
+      "context": "point, and the next-largest shifts were ",
+      "class": "R"
+    },
+    {
+      "id": "L209.1",
+      "line": 209,
+      "k": 1,
+      "printed": "−0.03",
+      "context": "ked the most real (Spearman correlation ",
+      "class": "R"
+    },
+    {
+      "id": "L209.2",
+      "line": 209,
+      "k": 2,
+      "printed": "95%",
+      "context": "ost real (Spearman correlation −0.03, ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L209.3",
+      "line": 209,
+      "k": 3,
+      "printed": "−0.09",
+      "context": "arman correlation −0.03, 95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L209.4",
+      "line": 209,
+      "k": 4,
+      "printed": "+0.02",
+      "context": "lation −0.03, 95% interval −0.09 to ",
+      "class": "R"
+    },
+    {
+      "id": "L209.5",
+      "line": 209,
+      "k": 5,
+      "printed": "−0.02",
+      "context": " 95% interval −0.09 to +0.02, against ",
+      "class": "R"
+    },
+    {
+      "id": "L209.6",
+      "line": 209,
+      "k": 6,
+      "printed": "0.7",
+      "context": "n real honest runs, the drop shrinks to ",
+      "class": "R"
+    },
+    {
+      "id": "L209.7",
+      "line": 209,
+      "k": 7,
+      "printed": "95%",
+      "context": "t runs, the drop shrinks to 0.7 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L209.8",
+      "line": 209,
+      "k": 8,
+      "printed": "−3.2",
+      "context": "rop shrinks to 0.7 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L209.9",
+      "line": 209,
+      "k": 9,
+      "printed": "+3.0",
+      "context": "s to 0.7 points (95% interval −3.2 to ",
+      "class": "R"
+    },
+    {
+      "id": "L213.1",
+      "line": 213,
+      "k": 1,
+      "printed": "5",
+      "context": "**Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L213.2",
+      "line": 213,
+      "k": 2,
+      "printed": "1",
+      "context": "s numbers, scoring commands.** Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L213.3",
+      "line": 213,
+      "k": 3,
+      "printed": "2",
+      "context": "coring commands.** Real run 1, real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L213.4",
+      "line": 213,
+      "k": 4,
+      "printed": "95%",
+      "context": "ch, simulated minus real catch with its ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L213.5",
+      "line": 213,
+      "k": 5,
+      "printed": "2",
+      "context": "tch with its 95% interval, and real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L213.6",
+      "line": 213,
+      "k": 6,
+      "printed": "1",
+      "context": "interval, and real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L213.7",
+      "line": 213,
+      "k": 7,
+      "printed": "1%",
+      "context": " minus real run 1, for each probe, with ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L213.8",
+      "line": 213,
+      "k": 8,
+      "printed": "8",
+      "context": "honest commands raising an alarm. Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L215.1",
+      "line": 215,
+      "k": 1,
+      "printed": "1",
+      "context": "| **Commands** | Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L215.2",
+      "line": 215,
+      "k": 2,
+      "printed": "2",
+      "context": "*Commands** | Real run 1 (%) | Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L215.3",
+      "line": 215,
+      "k": 3,
+      "printed": "95%",
+      "context": "ted (%) | Simulated minus real (points, ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L215.4",
+      "line": 215,
+      "k": 4,
+      "printed": "2",
+      "context": " real (points, 95% interval) | Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L215.5",
+      "line": 215,
+      "k": 5,
+      "printed": "1",
+      "context": "s, 95% interval) | Real run 2 minus run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L215.6",
+      "line": 215,
+      "k": 6,
+      "printed": "95%",
+      "context": "rval) | Real run 2 minus run 1 (points, ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L217.1",
+      "line": 217,
+      "k": 1,
+      "printed": "99.8",
+      "context": "| On-policy probe | ",
+      "class": "R"
+    },
+    {
+      "id": "L217.2",
+      "line": 217,
+      "k": 2,
+      "printed": "99.8",
+      "context": "| On-policy probe | 99.8 | ",
+      "class": "R"
+    },
+    {
+      "id": "L217.3",
+      "line": 217,
+      "k": 3,
+      "printed": "99.5",
+      "context": "| On-policy probe | 99.8 | 99.8 | ",
+      "class": "R"
+    },
+    {
+      "id": "L217.4",
+      "line": 217,
+      "k": 4,
+      "printed": "−0.35",
+      "context": " On-policy probe | 99.8 | 99.8 | 99.5 | ",
+      "class": "R"
+    },
+    {
+      "id": "L217.5",
+      "line": 217,
+      "k": 5,
+      "printed": "−1.31",
+      "context": "y probe | 99.8 | 99.8 | 99.5 | −0.35 (",
+      "class": "R"
+    },
+    {
+      "id": "L217.6",
+      "line": 217,
+      "k": 6,
+      "printed": "−0.02",
+      "context": "9.8 | 99.8 | 99.5 | −0.35 (−1.31 to ",
+      "class": "R"
+    },
+    {
+      "id": "L217.7",
+      "line": 217,
+      "k": 7,
+      "printed": "−0.1",
+      "context": "| 99.5 | −0.35 (−1.31 to −0.02) | ",
+      "class": "R"
+    },
+    {
+      "id": "L217.8",
+      "line": 217,
+      "k": 8,
+      "printed": "−0.4",
+      "context": " −0.35 (−1.31 to −0.02) | −0.1 (",
+      "class": "R"
+    },
+    {
+      "id": "L217.9",
+      "line": 217,
+      "k": 9,
+      "printed": "+0.3",
+      "context": "−1.31 to −0.02) | −0.1 (−0.4 to ",
+      "class": "R"
+    },
+    {
+      "id": "L218.1",
+      "line": 218,
+      "k": 1,
+      "printed": "72.5",
+      "context": "| Off-policy probe | ",
+      "class": "R"
+    },
+    {
+      "id": "L218.2",
+      "line": 218,
+      "k": 2,
+      "printed": "73.1",
+      "context": "| Off-policy probe | 72.5 | ",
+      "class": "R"
+    },
+    {
+      "id": "L218.3",
+      "line": 218,
+      "k": 3,
+      "printed": "67.9",
+      "context": "| Off-policy probe | 72.5 | 73.1 | ",
+      "class": "R"
+    },
+    {
+      "id": "L218.4",
+      "line": 218,
+      "k": 4,
+      "printed": "−4.9",
+      "context": "Off-policy probe | 72.5 | 73.1 | 67.9 | ",
+      "class": "R"
+    },
+    {
+      "id": "L218.5",
+      "line": 218,
+      "k": 5,
+      "printed": "−10.8",
+      "context": "cy probe | 72.5 | 73.1 | 67.9 | −4.9 (",
+      "class": "R"
+    },
+    {
+      "id": "L218.6",
+      "line": 218,
+      "k": 6,
+      "printed": "+1.1",
+      "context": "72.5 | 73.1 | 67.9 | −4.9 (−10.8 to ",
+      "class": "R"
+    },
+    {
+      "id": "L218.7",
+      "line": 218,
+      "k": 7,
+      "printed": "+0.6",
+      "context": "3.1 | 67.9 | −4.9 (−10.8 to +1.1) | ",
+      "class": "R"
+    },
+    {
+      "id": "L218.8",
+      "line": 218,
+      "k": 8,
+      "printed": "−2.5",
+      "context": "67.9 | −4.9 (−10.8 to +1.1) | +0.6 (",
+      "class": "R"
+    },
+    {
+      "id": "L218.9",
+      "line": 218,
+      "k": 9,
+      "printed": "+4.4",
+      "context": "4.9 (−10.8 to +1.1) | +0.6 (−2.5 to ",
+      "class": "R"
+    },
+    {
+      "id": "L219.1",
+      "line": 219,
+      "k": 1,
+      "printed": "75.3",
+      "context": "| Deception probe | ",
+      "class": "R"
+    },
+    {
+      "id": "L219.2",
+      "line": 219,
+      "k": 2,
+      "printed": "76.5",
+      "context": "| Deception probe | 75.3 | ",
+      "class": "R"
+    },
+    {
+      "id": "L219.3",
+      "line": 219,
+      "k": 3,
+      "printed": "78.0",
+      "context": "| Deception probe | 75.3 | 76.5 | ",
+      "class": "R"
+    },
+    {
+      "id": "L219.4",
+      "line": 219,
+      "k": 4,
+      "printed": "+2.2",
+      "context": " Deception probe | 75.3 | 76.5 | 78.0 | ",
+      "class": "R"
+    },
+    {
+      "id": "L219.5",
+      "line": 219,
+      "k": 5,
+      "printed": "−2.2",
+      "context": "tion probe | 75.3 | 76.5 | 78.0 | +2.2 (",
+      "class": "R"
+    },
+    {
+      "id": "L219.6",
+      "line": 219,
+      "k": 6,
+      "printed": "+6.1",
+      "context": " | 75.3 | 76.5 | 78.0 | +2.2 (−2.2 to ",
+      "class": "R"
+    },
+    {
+      "id": "L219.7",
+      "line": 219,
+      "k": 7,
+      "printed": "+1.2",
+      "context": "| 76.5 | 78.0 | +2.2 (−2.2 to +6.1) | ",
+      "class": "R"
+    },
+    {
+      "id": "L219.8",
+      "line": 219,
+      "k": 8,
+      "printed": "−2.8",
+      "context": " | 78.0 | +2.2 (−2.2 to +6.1) | +1.2 (",
+      "class": "R"
+    },
+    {
+      "id": "L219.9",
+      "line": 219,
+      "k": 9,
+      "printed": "+4.0",
+      "context": "+2.2 (−2.2 to +6.1) | +1.2 (−2.8 to ",
+      "class": "R"
+    },
+    {
+      "id": "L220.1",
+      "line": 220,
+      "k": 1,
+      "printed": "58.7",
+      "context": "| Harmfulness direction | ",
+      "class": "R"
+    },
+    {
+      "id": "L220.2",
+      "line": 220,
+      "k": 2,
+      "printed": "59.4",
+      "context": "| Harmfulness direction | 58.7 | ",
+      "class": "R"
+    },
+    {
+      "id": "L220.3",
+      "line": 220,
+      "k": 3,
+      "printed": "56.9",
+      "context": "| Harmfulness direction | 58.7 | 59.4 | ",
+      "class": "R"
+    },
+    {
+      "id": "L220.4",
+      "line": 220,
+      "k": 4,
+      "printed": "−2.2",
+      "context": "ulness direction | 58.7 | 59.4 | 56.9 | ",
+      "class": "R"
+    },
+    {
+      "id": "L220.5",
+      "line": 220,
+      "k": 5,
+      "printed": "−6.4",
+      "context": "irection | 58.7 | 59.4 | 56.9 | −2.2 (",
+      "class": "R"
+    },
+    {
+      "id": "L220.6",
+      "line": 220,
+      "k": 6,
+      "printed": "+2.2",
+      "context": " 58.7 | 59.4 | 56.9 | −2.2 (−6.4 to ",
+      "class": "R"
+    },
+    {
+      "id": "L220.7",
+      "line": 220,
+      "k": 7,
+      "printed": "+0.8",
+      "context": "59.4 | 56.9 | −2.2 (−6.4 to +2.2) | ",
+      "class": "R"
+    },
+    {
+      "id": "L220.8",
+      "line": 220,
+      "k": 8,
+      "printed": "−2.6",
+      "context": " 56.9 | −2.2 (−6.4 to +2.2) | +0.8 (",
+      "class": "R"
+    },
+    {
+      "id": "L220.9",
+      "line": 220,
+      "k": 9,
+      "printed": "+4.8",
+      "context": "�2.2 (−6.4 to +2.2) | +0.8 (−2.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L221.1",
+      "line": 221,
+      "k": 1,
+      "printed": "42.8",
+      "context": "| Refusal direction | ",
+      "class": "R"
+    },
+    {
+      "id": "L221.2",
+      "line": 221,
+      "k": 2,
+      "printed": "41.8",
+      "context": "| Refusal direction | 42.8 | ",
+      "class": "R"
+    },
+    {
+      "id": "L221.3",
+      "line": 221,
+      "k": 3,
+      "printed": "43.4",
+      "context": "| Refusal direction | 42.8 | 41.8 | ",
+      "class": "R"
+    },
+    {
+      "id": "L221.4",
+      "line": 221,
+      "k": 4,
+      "printed": "+1.1",
+      "context": "efusal direction | 42.8 | 41.8 | 43.4 | ",
+      "class": "R"
+    },
+    {
+      "id": "L221.5",
+      "line": 221,
+      "k": 5,
+      "printed": "−4.5",
+      "context": " direction | 42.8 | 41.8 | 43.4 | +1.1 (",
+      "class": "R"
+    },
+    {
+      "id": "L221.6",
+      "line": 221,
+      "k": 6,
+      "printed": "+7.2",
+      "context": " | 42.8 | 41.8 | 43.4 | +1.1 (−4.5 to ",
+      "class": "R"
+    },
+    {
+      "id": "L221.7",
+      "line": 221,
+      "k": 7,
+      "printed": "−0.9",
+      "context": "| 41.8 | 43.4 | +1.1 (−4.5 to +7.2) | ",
+      "class": "R"
+    },
+    {
+      "id": "L221.8",
+      "line": 221,
+      "k": 8,
+      "printed": "−4.7",
+      "context": " 43.4 | +1.1 (−4.5 to +7.2) | −0.9 (",
+      "class": "R"
+    },
+    {
+      "id": "L221.9",
+      "line": 221,
+      "k": 9,
+      "printed": "+3.1",
+      "context": ".1 (−4.5 to +7.2) | −0.9 (−4.7 to ",
+      "class": "R"
+    },
+    {
+      "id": "L222.1",
+      "line": 222,
+      "k": 1,
+      "printed": "48.3",
+      "context": "| High-stakes probe | ",
+      "class": "R"
+    },
+    {
+      "id": "L222.2",
+      "line": 222,
+      "k": 2,
+      "printed": "45.6",
+      "context": "| High-stakes probe | 48.3 | ",
+      "class": "R"
+    },
+    {
+      "id": "L222.3",
+      "line": 222,
+      "k": 3,
+      "printed": "45.1",
+      "context": "| High-stakes probe | 48.3 | 45.6 | ",
+      "class": "R"
+    },
+    {
+      "id": "L222.4",
+      "line": 222,
+      "k": 4,
+      "printed": "−1.8",
+      "context": "igh-stakes probe | 48.3 | 45.6 | 45.1 | ",
+      "class": "R"
+    },
+    {
+      "id": "L222.5",
+      "line": 222,
+      "k": 5,
+      "printed": "−6.9",
+      "context": "es probe | 48.3 | 45.6 | 45.1 | −1.8 (",
+      "class": "R"
+    },
+    {
+      "id": "L222.6",
+      "line": 222,
+      "k": 6,
+      "printed": "+3.3",
+      "context": " 48.3 | 45.6 | 45.1 | −1.8 (−6.9 to ",
+      "class": "R"
+    },
+    {
+      "id": "L222.7",
+      "line": 222,
+      "k": 7,
+      "printed": "−2.7",
+      "context": "45.6 | 45.1 | −1.8 (−6.9 to +3.3) | ",
+      "class": "R"
+    },
+    {
+      "id": "L222.8",
+      "line": 222,
+      "k": 8,
+      "printed": "−6.5",
+      "context": "5.1 | −1.8 (−6.9 to +3.3) | −2.7 (",
+      "class": "R"
+    },
+    {
+      "id": "L222.9",
+      "line": 222,
+      "k": 9,
+      "printed": "+1.3",
+      "context": ".8 (−6.9 to +3.3) | −2.7 (−6.5 to ",
+      "class": "R"
+    },
+    {
+      "id": "L223.1",
+      "line": 223,
+      "k": 1,
+      "printed": "66.2",
+      "context": "| Average of six | ",
+      "class": "R"
+    },
+    {
+      "id": "L223.2",
+      "line": 223,
+      "k": 2,
+      "printed": "66.0",
+      "context": "| Average of six | 66.2 | ",
+      "class": "R"
+    },
+    {
+      "id": "L223.3",
+      "line": 223,
+      "k": 3,
+      "printed": "65.1",
+      "context": "| Average of six | 66.2 | 66.0 | ",
+      "class": "R"
+    },
+    {
+      "id": "L223.4",
+      "line": 223,
+      "k": 4,
+      "printed": "−1.0",
+      "context": "| Average of six | 66.2 | 66.0 | 65.1 | ",
+      "class": "R"
+    },
+    {
+      "id": "L223.5",
+      "line": 223,
+      "k": 5,
+      "printed": "−3.0",
+      "context": "e of six | 66.2 | 66.0 | 65.1 | −1.0 (",
+      "class": "R"
+    },
+    {
+      "id": "L223.6",
+      "line": 223,
+      "k": 6,
+      "printed": "+1.0",
+      "context": " 66.2 | 66.0 | 65.1 | −1.0 (−3.0 to ",
+      "class": "R"
+    },
+    {
+      "id": "L223.7",
+      "line": 223,
+      "k": 7,
+      "printed": "−0.2",
+      "context": "66.0 | 65.1 | −1.0 (−3.0 to +1.0) | ",
+      "class": "R"
+    },
+    {
+      "id": "L223.8",
+      "line": 223,
+      "k": 8,
+      "printed": "−1.6",
+      "context": "5.1 | −1.0 (−3.0 to +1.0) | −0.2 (",
+      "class": "R"
+    },
+    {
+      "id": "L223.9",
+      "line": 223,
+      "k": 9,
+      "printed": "+1.3",
+      "context": ".0 (−3.0 to +1.0) | −0.2 (−1.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L224.1",
+      "line": 224,
+      "k": 1,
+      "printed": "0.6",
+      "context": "| Average of four (AUROC at least ",
+      "class": "C",
+      "note": "four-probe group cut-off (AUROC at least 0.6), fixed before the results (09 RULE item 36(1); @19ba8f563)"
+    },
+    {
+      "id": "L224.2",
+      "line": 224,
+      "k": 2,
+      "printed": "76.6",
+      "context": " Average of four (AUROC at least 0.6) | ",
+      "class": "R"
+    },
+    {
+      "id": "L224.3",
+      "line": 224,
+      "k": 3,
+      "printed": "77.2",
+      "context": "e of four (AUROC at least 0.6) | 76.6 | ",
+      "class": "R"
+    },
+    {
+      "id": "L224.4",
+      "line": 224,
+      "k": 4,
+      "printed": "75.6",
+      "context": "ur (AUROC at least 0.6) | 76.6 | 77.2 | ",
+      "class": "R"
+    },
+    {
+      "id": "L224.5",
+      "line": 224,
+      "k": 5,
+      "printed": "−1.3",
+      "context": "OC at least 0.6) | 76.6 | 77.2 | 75.6 | ",
+      "class": "R"
+    },
+    {
+      "id": "L224.6",
+      "line": 224,
+      "k": 6,
+      "printed": "−3.5",
+      "context": "ast 0.6) | 76.6 | 77.2 | 75.6 | −1.3 (",
+      "class": "R"
+    },
+    {
+      "id": "L224.7",
+      "line": 224,
+      "k": 7,
+      "printed": "+0.9",
+      "context": " 76.6 | 77.2 | 75.6 | −1.3 (−3.5 to ",
+      "class": "R"
+    },
+    {
+      "id": "L224.8",
+      "line": 224,
+      "k": 8,
+      "printed": "+0.6",
+      "context": "77.2 | 75.6 | −1.3 (−3.5 to +0.9) | ",
+      "class": "R"
+    },
+    {
+      "id": "L224.9",
+      "line": 224,
+      "k": 9,
+      "printed": "−0.9",
+      "context": " 75.6 | −1.3 (−3.5 to +0.9) | +0.6 (",
+      "class": "R"
+    },
+    {
+      "id": "L224.10",
+      "line": 224,
+      "k": 10,
+      "printed": "+2.2",
+      "context": "�1.3 (−3.5 to +0.9) | +0.6 (−0.9 to ",
+      "class": "R"
+    },
+    {
+      "id": "L226.1",
+      "line": 226,
+      "k": 1,
+      "printed": "1,313",
+      "context": "*All ",
+      "class": "R"
+    },
+    {
+      "id": "L226.2",
+      "line": 226,
+      "k": 2,
+      "printed": "1%",
+      "context": "*All 1,313 tasks, with ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L226.3",
+      "line": 226,
+      "k": 3,
+      "printed": "2",
+      "context": "nest actions raising an alarm. Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L226.4",
+      "line": 226,
+      "k": 4,
+      "printed": "1",
+      "context": "ing an alarm. Real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L228.1",
+      "line": 228,
+      "k": 1,
+      "printed": "1%",
+      "context": "s.** Labs may want stricter alarms than ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L228.2",
+      "line": 228,
+      "k": 2,
+      "printed": "0.1%",
+      "context": "ict thresholds are hard to pin down. At ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L228.3",
+      "line": 228,
+      "k": 3,
+      "printed": "56",
+      "context": "%, the simulated threshold rests on the ",
+      "class": "R"
+    },
+    {
+      "id": "L228.4",
+      "line": 228,
+      "k": 4,
+      "printed": "65",
+      "context": " simulated threshold rests on the 56 to ",
+      "class": "R"
+    },
+    {
+      "id": "L228.5",
+      "line": 228,
+      "k": 5,
+      "printed": "17",
+      "context": "nest commands, and those come from only ",
+      "class": "R"
+    },
+    {
+      "id": "L228.6",
+      "line": 228,
+      "k": 6,
+      "printed": "59",
+      "context": "ommands, and those come from only 17 to ",
+      "class": "R"
+    },
+    {
+      "id": "L228.7",
+      "line": 228,
+      "k": 7,
+      "printed": "10",
+      "context": "count a level as readable when at least ",
+      "class": "C",
+      "note": "readability rule fixed in advance (at least 10 honest commands above the threshold; RULE 37)"
+    },
+    {
+      "id": "L228.8",
+      "line": 228,
+      "k": 8,
+      "printed": "0.02%",
+      "context": "ated threshold rests on a single run at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L228.9",
+      "line": 228,
+      "k": 9,
+      "printed": "0.05%",
+      "context": "single run at 0.02% and on four runs at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L228.10",
+      "line": 228,
+      "k": 10,
+      "printed": "31",
+      "context": " 0.05%, and there simulated catch falls ",
+      "class": "R"
+    },
+    {
+      "id": "L228.11",
+      "line": 228,
+      "k": 11,
+      "printed": "38",
+      "context": ", and there simulated catch falls 31 to ",
+      "class": "R"
+    },
+    {
+      "id": "L228.12",
+      "line": 228,
+      "k": 12,
+      "printed": "3",
+      "context": "atch. The other five probes stay within ",
+      "class": "R"
+    },
+    {
+      "id": "L230.1",
+      "line": 230,
+      "k": 1,
+      "printed": "5%",
+      "context": "At a more lenient level, where ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L230.2",
+      "line": 230,
+      "k": 2,
+      "printed": "−1.1",
+      "context": "catch sits measurably below real catch, ",
+      "class": "R"
+    },
+    {
+      "id": "L230.3",
+      "line": 230,
+      "k": 3,
+      "printed": "95%",
+      "context": ".1 points averaged over the six probes (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L230.4",
+      "line": 230,
+      "k": 4,
+      "printed": "−2.3",
+      "context": "raged over the six probes (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L230.5",
+      "line": 230,
+      "k": 5,
+      "printed": "−0.2",
+      "context": " the six probes (95% interval −2.3 to ",
+      "class": "R"
+    },
+    {
+      "id": "L236.1",
+      "line": 236,
+      "k": 1,
+      "printed": "3",
+      "context": "ison in the main text notices a fall of ",
+      "class": "R"
+    },
+    {
+      "id": "L236.2",
+      "line": 236,
+      "k": 2,
+      "printed": "8",
+      "context": "ngle probe reliably notices an error of ",
+      "class": "R"
+    },
+    {
+      "id": "L236.3",
+      "line": 236,
+      "k": 3,
+      "printed": "3",
+      "context": "otices an error of 8 points, but not of ",
+      "class": "R"
+    },
+    {
+      "id": "L236.4",
+      "line": 236,
+      "k": 4,
+      "printed": "5",
+      "context": "s an error of 8 points, but not of 3 to ",
+      "class": "R"
+    },
+    {
+      "id": "L238.1",
+      "line": 238,
+      "k": 1,
+      "printed": "3",
+      "context": "ted catch fell by a known amount, about ",
+      "class": "C",
+      "note": "planted error sizes (design of the planted-error test; plant_rows levels -3/-5/-8/-12, +3/+5/+8/+12)"
+    },
+    {
+      "id": "L238.2",
+      "line": 238,
+      "k": 2,
+      "printed": "5",
+      "context": " catch fell by a known amount, about 3, ",
+      "class": "C",
+      "note": "planted error sizes (design of the planted-error test; plant_rows levels -3/-5/-8/-12, +3/+5/+8/+12)"
+    },
+    {
+      "id": "L238.3",
+      "line": 238,
+      "k": 3,
+      "printed": "8",
+      "context": "tch fell by a known amount, about 3, 5, ",
+      "class": "C",
+      "note": "planted error sizes (design of the planted-error test; plant_rows levels -3/-5/-8/-12, +3/+5/+8/+12)"
+    },
+    {
+      "id": "L238.4",
+      "line": 238,
+      "k": 4,
+      "printed": "12",
+      "context": "ell by a known amount, about 3, 5, 8 or ",
+      "class": "C",
+      "note": "planted error sizes (design of the planted-error test; plant_rows levels -3/-5/-8/-12, +3/+5/+8/+12)"
+    },
+    {
+      "id": "L238.5",
+      "line": 238,
+      "k": 5,
+      "printed": "1%",
+      "context": "unt, about 3, 5, 8 or 12 points, at the ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L238.6",
+      "line": 238,
+      "k": 6,
+      "printed": "1,313",
+      "context": "12 points, at the 1% alarm level on all ",
+      "class": "R"
+    },
+    {
+      "id": "L240.1",
+      "line": 240,
+      "k": 1,
+      "printed": "95%",
+      "context": "ves by about the planted amount and its ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L240.2",
+      "line": 240,
+      "k": 2,
+      "printed": "6",
+      "context": "eaves out the unplanted estimate. Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L242.1",
+      "line": 242,
+      "k": 1,
+      "printed": "6",
+      "context": " **Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L242.2",
+      "line": 242,
+      "k": 2,
+      "printed": "1%",
+      "context": "nge in simulated catch, measured at the ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L242.3",
+      "line": 242,
+      "k": 3,
+      "printed": "1%",
+      "context": "ed at the 1% alarm level. In the cells, ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L242.4",
+      "line": 242,
+      "k": 4,
+      "printed": "5%",
+      "context": "he 1% alarm level. In the cells, 1% and ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L242.5",
+      "line": 242,
+      "k": 5,
+      "printed": "95%",
+      "context": " two columns count the probes whose own ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L246.1",
+      "line": 246,
+      "k": 1,
+      "printed": "3",
+      "context": "| ",
+      "class": "C",
+      "note": "planted error sizes (design of the planted-error test; plant_rows levels -3/-5/-8/-12, +3/+5/+8/+12)"
+    },
+    {
+      "id": "L246.2",
+      "line": 246,
+      "k": 2,
+      "printed": "1%",
+      "context": "| 3 points | noticed at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L246.3",
+      "line": 246,
+      "k": 3,
+      "printed": "5%",
+      "context": "| 3 points | noticed at 1% and at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L246.4",
+      "line": 246,
+      "k": 4,
+      "printed": "1%",
+      "context": "s | noticed at 1% and at 5% | missed at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L246.5",
+      "line": 246,
+      "k": 5,
+      "printed": "5%",
+      "context": "1% and at 5% | missed at 1%, noticed at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L247.1",
+      "line": 247,
+      "k": 1,
+      "printed": "5",
+      "context": "| ",
+      "class": "C",
+      "note": "planted error sizes (design of the planted-error test; plant_rows levels -3/-5/-8/-12, +3/+5/+8/+12)"
+    },
+    {
+      "id": "L247.2",
+      "line": 247,
+      "k": 2,
+      "printed": "1%",
+      "context": "| 5 points | noticed at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L247.3",
+      "line": 247,
+      "k": 3,
+      "printed": "5%",
+      "context": "| 5 points | noticed at 1% and at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L247.4",
+      "line": 247,
+      "k": 4,
+      "printed": "1%",
+      "context": " | noticed at 1% and at 5% | noticed at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L248.1",
+      "line": 248,
+      "k": 1,
+      "printed": "8",
+      "context": "| ",
+      "class": "C",
+      "note": "planted error sizes (design of the planted-error test; plant_rows levels -3/-5/-8/-12, +3/+5/+8/+12)"
+    },
+    {
+      "id": "L248.2",
+      "line": 248,
+      "k": 2,
+      "printed": "1%",
+      "context": "| 8 points | noticed at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L248.3",
+      "line": 248,
+      "k": 3,
+      "printed": "5%",
+      "context": "| 8 points | noticed at 1% and at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L248.4",
+      "line": 248,
+      "k": 4,
+      "printed": "1%",
+      "context": " | noticed at 1% and at 5% | noticed at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L249.1",
+      "line": 249,
+      "k": 1,
+      "printed": "12",
+      "context": "| ",
+      "class": "C",
+      "note": "planted error sizes (design of the planted-error test; plant_rows levels -3/-5/-8/-12, +3/+5/+8/+12)"
+    },
+    {
+      "id": "L249.2",
+      "line": 249,
+      "k": 2,
+      "printed": "1%",
+      "context": "| 12 points | noticed at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L249.3",
+      "line": 249,
+      "k": 3,
+      "printed": "5%",
+      "context": "| 12 points | noticed at 1% and at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L249.4",
+      "line": 249,
+      "k": 4,
+      "printed": "1%",
+      "context": " | noticed at 1% and at 5% | noticed at ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L255.1",
+      "line": 255,
+      "k": 1,
+      "printed": "62%",
+      "context": "rerun gap. Suppose simulated catch were ",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L255.2",
+      "line": 255,
+      "k": 2,
+      "printed": "60%",
+      "context": "catch were 62% and the real runs caught ",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L255.3",
+      "line": 255,
+      "k": 3,
+      "printed": "57%",
+      "context": "re 62% and the real runs caught 60% and ",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L255.4",
+      "line": 255,
+      "k": 4,
+      "printed": "2",
+      "context": "% and 57%. The simulation gap would be (",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L255.5",
+      "line": 255,
+      "k": 5,
+      "printed": "5",
+      "context": "d 57%. The simulation gap would be (2 + ",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L255.6",
+      "line": 255,
+      "k": 6,
+      "printed": "2",
+      "context": ". The simulation gap would be (2 + 5) / ",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L255.7",
+      "line": 255,
+      "k": 7,
+      "printed": "3.5",
+      "context": "e simulation gap would be (2 + 5) / 2 = ",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L255.8",
+      "line": 255,
+      "k": 8,
+      "printed": "3",
+      "context": "(2 + 5) / 2 = 3.5 points, the rerun gap ",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L255.9",
+      "line": 255,
+      "k": 9,
+      "printed": "0.5",
+      "context": "un gap 3 points, and the gap comparison ",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L257.1",
+      "line": 257,
+      "k": 1,
+      "printed": "1.0",
+      "context": "over six probes, the simulation gap was ",
+      "class": "R"
+    },
+    {
+      "id": "L257.2",
+      "line": 257,
+      "k": 2,
+      "printed": "95%",
+      "context": "s 1.0 points larger than the rerun gap (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L257.3",
+      "line": 257,
+      "k": 3,
+      "printed": "−0.4",
+      "context": "larger than the rerun gap (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L257.4",
+      "line": 257,
+      "k": 4,
+      "printed": "+2.9",
+      "context": "n the rerun gap (95% interval −0.4 to ",
+      "class": "R"
+    },
+    {
+      "id": "L257.5",
+      "line": 257,
+      "k": 5,
+      "printed": "+1.7",
+      "context": " from the main text, the difference was ",
+      "class": "R"
+    },
+    {
+      "id": "L257.6",
+      "line": 257,
+      "k": 6,
+      "printed": "95%",
+      "context": "n text, the difference was +1.7 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L257.7",
+      "line": 257,
+      "k": 7,
+      "printed": "−0.5",
+      "context": "ifference was +1.7 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L257.8",
+      "line": 257,
+      "k": 8,
+      "printed": "+3.5",
+      "context": "was +1.7 points (95% interval −0.5 to ",
+      "class": "R"
+    },
+    {
+      "id": "L257.9",
+      "line": 257,
+      "k": 9,
+      "printed": "4",
+      "context": "s (95% interval −0.5 to +3.5) (Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L259.1",
+      "line": 259,
+      "k": 1,
+      "printed": "5",
+      "context": "In the planted test it noticed falls of ",
+      "class": "R"
+    },
+    {
+      "id": "L259.2",
+      "line": 259,
+      "k": 2,
+      "printed": "3",
+      "context": " or more, but missed the smallest fall, ",
+      "class": "R"
+    },
+    {
+      "id": "L259.3",
+      "line": 259,
+      "k": 3,
+      "printed": "1%",
+      "context": "sed the smallest fall, 3 points, at the ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L259.4",
+      "line": 259,
+      "k": 4,
+      "printed": "5%",
+      "context": "3 points, at the 1% alarm level. At the ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L259.5",
+      "line": 259,
+      "k": 5,
+      "printed": "6",
+      "context": "5% level it noticed that one too (Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L261.1",
+      "line": 261,
+      "k": 1,
+      "printed": "4",
+      "context": "[FIGURE ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L261.2",
+      "line": 261,
+      "k": 2,
+      "printed": "8",
+      "context": "[FIGURE 4. v80 Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L263.1",
+      "line": 263,
+      "k": 1,
+      "printed": "4",
+      "context": "**Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L263.2",
+      "line": 263,
+      "k": 2,
+      "printed": "1,313",
+      "context": "simulation gap minus rerun gap), on all ",
+      "class": "R"
+    },
+    {
+      "id": "L263.3",
+      "line": 263,
+      "k": 3,
+      "printed": "95%",
+      "context": "13 tasks, probes scoring commands, with ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L263.4",
+      "line": 263,
+      "k": 4,
+      "printed": "2",
+      "context": " sat closer to real catch than real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L263.5",
+      "line": 263,
+      "k": 5,
+      "printed": "1",
+      "context": "l catch than real run 2 sat to real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L271.1",
+      "line": 271,
+      "k": 1,
+      "printed": "1%",
+      "context": " On tool outputs at the ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L271.2",
+      "line": 271,
+      "k": 2,
+      "printed": "5.6",
+      "context": "1% alarm level, the extra probe catches ",
+      "class": "R"
+    },
+    {
+      "id": "L271.3",
+      "line": 271,
+      "k": 3,
+      "printed": "95%",
+      "context": " one threshold set on real honest runs (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L271.4",
+      "line": 271,
+      "k": 4,
+      "printed": "+3.9",
+      "context": "d set on real honest runs (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L271.5",
+      "line": 271,
+      "k": 5,
+      "printed": "+7.6",
+      "context": " real honest runs (95% interval +3.9 to ",
+      "class": "R"
+    },
+    {
+      "id": "L271.6",
+      "line": 271,
+      "k": 6,
+      "printed": "0.4",
+      "context": "t runs (95% interval +3.9 to +7.6), but ",
+      "class": "R"
+    },
+    {
+      "id": "L271.7",
+      "line": 271,
+      "k": 7,
+      "printed": "95%",
+      "context": "ut 0.4 fewer under separate thresholds (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L271.8",
+      "line": 271,
+      "k": 8,
+      "printed": "−3.3",
+      "context": "under separate thresholds (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L271.9",
+      "line": 271,
+      "k": 9,
+      "printed": "+2.4",
+      "context": "rate thresholds (95% interval −3.3 to ",
+      "class": "R"
+    },
+    {
+      "id": "L271.10",
+      "line": 271,
+      "k": 10,
+      "printed": "+3.3",
+      "context": ". On commands, the same two numbers are ",
+      "class": "R"
+    },
+    {
+      "id": "L271.11",
+      "line": 271,
+      "k": 11,
+      "printed": "95%",
+      "context": ", the same two numbers are +3.3 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L271.12",
+      "line": 271,
+      "k": 12,
+      "printed": "+0.4",
+      "context": "o numbers are +3.3 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L271.13",
+      "line": 271,
+      "k": 13,
+      "printed": "+7.3",
+      "context": "s are +3.3 points (95% interval +0.4 to ",
+      "class": "R"
+    },
+    {
+      "id": "L271.14",
+      "line": 271,
+      "k": 14,
+      "printed": "−2.3",
+      "context": " points (95% interval +0.4 to +7.3) and ",
+      "class": "R"
+    },
+    {
+      "id": "L271.15",
+      "line": 271,
+      "k": 15,
+      "printed": "95%",
+      "context": "terval +0.4 to +7.3) and −2.3 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L271.16",
+      "line": 271,
+      "k": 16,
+      "printed": "−9.2",
+      "context": "o +7.3) and −2.3 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L271.17",
+      "line": 271,
+      "k": 17,
+      "printed": "+7.2",
+      "context": "d −2.3 points (95% interval −9.2 to ",
+      "class": "R"
+    },
+    {
+      "id": "L277.1",
+      "line": 277,
+      "k": 1,
+      "printed": "0.49",
+      "context": "detector comparing two real runs scores ",
+      "class": "R"
+    },
+    {
+      "id": "L277.2",
+      "line": 277,
+      "k": 2,
+      "printed": "0.50",
+      "context": " comparing two real runs scores 0.49 to ",
+      "class": "R"
+    },
+    {
+      "id": "L279.1",
+      "line": 279,
+      "k": 1,
+      "printed": "1,309",
+      "context": "ulated attack runs from real ones, over ",
+      "class": "R"
+    },
+    {
+      "id": "L279.2",
+      "line": 279,
+      "k": 2,
+      "printed": "1,311",
+      "context": "rom real ones, over 1,309 simulated and ",
+      "class": "R"
+    },
+    {
+      "id": "L279.3",
+      "line": 279,
+      "k": 3,
+      "printed": "863",
+      "context": "ted and 1,311 real attack runs covering ",
+      "class": "R"
+    },
+    {
+      "id": "L279.4",
+      "line": 279,
+      "k": 4,
+      "printed": "48",
+      "context": " on standardized activations from layer ",
+      "class": "C",
+      "note": "layer 48: the detector's and the on-policy probe's registered layer"
+    },
+    {
+      "id": "L281.1",
+      "line": 281,
+      "k": 1,
+      "printed": "7",
+      "context": "**What it finds.** Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L281.2",
+      "line": 281,
+      "k": 2,
+      "printed": "0.88",
+      "context": " simulation away more than commands do, ",
+      "class": "R"
+    },
+    {
+      "id": "L281.3",
+      "line": 281,
+      "k": 3,
+      "printed": "0.72",
+      "context": "way more than commands do, 0.88 against ",
+      "class": "R"
+    },
+    {
+      "id": "L281.4",
+      "line": 281,
+      "k": 4,
+      "printed": "0.65",
+      "context": "n separates the two settings less well, ",
+      "class": "R"
+    },
+    {
+      "id": "L281.5",
+      "line": 281,
+      "k": 5,
+      "printed": "0.57",
+      "context": "ngs less well, 0.65 on tool outputs and ",
+      "class": "R"
+    },
+    {
+      "id": "L283.1",
+      "line": 283,
+      "k": 1,
+      "printed": "0.75",
+      "context": "nest runs from real honest runs reaches ",
+      "class": "R"
+    },
+    {
+      "id": "L283.2",
+      "line": 283,
+      "k": 2,
+      "printed": "0.60",
+      "context": "t runs reaches 0.75 on tool outputs and ",
+      "class": "R"
+    },
+    {
+      "id": "L283.3",
+      "line": 283,
+      "k": 3,
+      "printed": "0.52",
+      "context": "ng two sets of real honest runs reaches ",
+      "class": "R"
+    },
+    {
+      "id": "L285.1",
+      "line": 285,
+      "k": 1,
+      "printed": "7",
+      "context": "**Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L285.2",
+      "line": 285,
+      "k": 2,
+      "printed": "0.5",
+      "context": "two kinds of runs apart.** AUROC, where ",
+      "class": "C",
+      "note": "AUROC scale: 0.5 is chance, 1 is perfect (definition)"
+    },
+    {
+      "id": "L285.3",
+      "line": 285,
+      "k": 3,
+      "printed": "1",
+      "context": "apart.** AUROC, where 0.5 is chance and ",
+      "class": "C",
+      "note": "AUROC scale: 0.5 is chance, 1 is perfect (definition)"
+    },
+    {
+      "id": "L285.4",
+      "line": 285,
+      "k": 4,
+      "printed": "48",
+      "context": " is perfect. Every detector reads layer ",
+      "class": "C",
+      "note": "layer 48: the detector's and the on-policy probe's registered layer"
+    },
+    {
+      "id": "L285.5",
+      "line": 285,
+      "k": 5,
+      "printed": "2",
+      "context": "a main task it trained on. The real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L289.1",
+      "line": 289,
+      "k": 1,
+      "printed": "0.88",
+      "context": " real attack runs, scoring whole runs | ",
+      "class": "R"
+    },
+    {
+      "id": "L289.2",
+      "line": 289,
+      "k": 2,
+      "printed": "0.72",
+      "context": "ttack runs, scoring whole runs | 0.88 | ",
+      "class": "R"
+    },
+    {
+      "id": "L290.1",
+      "line": 290,
+      "k": 1,
+      "printed": "0.65",
+      "context": "l attack runs, scoring single actions | ",
+      "class": "R"
+    },
+    {
+      "id": "L290.2",
+      "line": 290,
+      "k": 2,
+      "printed": "0.57",
+      "context": "k runs, scoring single actions | 0.65 | ",
+      "class": "R"
+    },
+    {
+      "id": "L291.1",
+      "line": 291,
+      "k": 1,
+      "printed": "2",
+      "context": "| Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L291.2",
+      "line": 291,
+      "k": 2,
+      "printed": "1",
+      "context": "| Real run 2 from real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L291.3",
+      "line": 291,
+      "k": 3,
+      "printed": "0.49",
+      "context": "| Real run 2 from real run 1 | ",
+      "class": "R"
+    },
+    {
+      "id": "L291.4",
+      "line": 291,
+      "k": 4,
+      "printed": "0.50",
+      "context": "| Real run 2 from real run 1 | 0.49 to ",
+      "class": "R"
+    },
+    {
+      "id": "L291.5",
+      "line": 291,
+      "k": 5,
+      "printed": "0.50",
+      "context": " run 2 from real run 1 | 0.49 to 0.50 | ",
+      "class": "R"
+    },
+    {
+      "id": "L292.1",
+      "line": 292,
+      "k": 1,
+      "printed": "0.75",
+      "context": "| Simulated from real honest runs | ",
+      "class": "R"
+    },
+    {
+      "id": "L292.2",
+      "line": 292,
+      "k": 2,
+      "printed": "0.60",
+      "context": "imulated from real honest runs | 0.75 | ",
+      "class": "R"
+    },
+    {
+      "id": "L293.1",
+      "line": 293,
+      "k": 1,
+      "printed": "0.52",
+      "context": "| Two sets of real honest runs | ",
+      "class": "R"
+    },
+    {
+      "id": "L293.2",
+      "line": 293,
+      "k": 2,
+      "printed": "0.52",
+      "context": "| Two sets of real honest runs | 0.52 | ",
+      "class": "R"
+    },
+    {
+      "id": "L295.1",
+      "line": 295,
+      "k": 1,
+      "printed": "0.72",
+      "context": "un's commands still separate the two at ",
+      "class": "R"
+    },
+    {
+      "id": "L301.1",
+      "line": 301,
+      "k": 1,
+      "printed": "−1.3",
+      "context": "s, simulated catch minus real catch was ",
+      "class": "R"
+    },
+    {
+      "id": "L301.2",
+      "line": 301,
+      "k": 2,
+      "printed": "95%",
+      "context": "tch minus real catch was −1.3 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L301.3",
+      "line": 301,
+      "k": 3,
+      "printed": "−3.8",
+      "context": "l catch was −1.3 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L301.4",
+      "line": 301,
+      "k": 4,
+      "printed": "+1.1",
+      "context": "s −1.3 points (95% interval −3.8 to ",
+      "class": "R"
+    },
+    {
+      "id": "L301.5",
+      "line": 301,
+      "k": 5,
+      "printed": "+0.9",
+      "context": " (95% interval −3.8 to +1.1), against ",
+      "class": "R"
+    },
+    {
+      "id": "L301.6",
+      "line": 301,
+      "k": 6,
+      "printed": "2",
+      "context": "3.8 to +1.1), against +0.9 for real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L301.7",
+      "line": 301,
+      "k": 7,
+      "printed": "1",
+      "context": "inst +0.9 for real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L301.8",
+      "line": 301,
+      "k": 8,
+      "printed": "5",
+      "context": "for real run 2 minus real run 1 (Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L301.9",
+      "line": 301,
+      "k": 9,
+      "printed": "−1.0",
+      "context": "or would read, the same two numbers are ",
+      "class": "R"
+    },
+    {
+      "id": "L301.10",
+      "line": 301,
+      "k": 10,
+      "printed": "95%",
+      "context": "the same two numbers are −1.0 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L301.11",
+      "line": 301,
+      "k": 11,
+      "printed": "−3.0",
+      "context": "numbers are −1.0 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L301.12",
+      "line": 301,
+      "k": 12,
+      "printed": "+1.0",
+      "context": "e −1.0 points (95% interval −3.0 to ",
+      "class": "R"
+    },
+    {
+      "id": "L301.13",
+      "line": 301,
+      "k": 13,
+      "printed": "−0.2",
+      "context": "oints (95% interval −3.0 to +1.0) and ",
+      "class": "R"
+    },
+    {
+      "id": "L303.1",
+      "line": 303,
+      "k": 1,
+      "printed": "0.88",
+      "context": " from real attack runs with an AUROC of ",
+      "class": "R"
+    },
+    {
+      "id": "L303.2",
+      "line": 303,
+      "k": 2,
+      "printed": "0.72",
+      "context": " AUROC of 0.88 on tool outputs, against ",
+      "class": "R"
+    },
+    {
+      "id": "L305.1",
+      "line": 305,
+      "k": 1,
+      "printed": "−3.4",
+      "context": "gest shifts were the refusal direction, ",
+      "class": "R"
+    },
+    {
+      "id": "L305.2",
+      "line": 305,
+      "k": 2,
+      "printed": "95%",
+      "context": "e the refusal direction, −3.4 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L305.3",
+      "line": 305,
+      "k": 3,
+      "printed": "−8.6",
+      "context": " direction, −3.4 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L305.4",
+      "line": 305,
+      "k": 4,
+      "printed": "+2.9",
+      "context": ", −3.4 points (95% interval −8.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L305.5",
+      "line": 305,
+      "k": 5,
+      "printed": "−2.5",
+      "context": "�8.6 to +2.9), and the deception probe, ",
+      "class": "R"
+    },
+    {
+      "id": "L305.6",
+      "line": 305,
+      "k": 6,
+      "printed": "95%",
+      "context": "and the deception probe, −2.5 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L305.7",
+      "line": 305,
+      "k": 7,
+      "printed": "−8.6",
+      "context": "tion probe, −2.5 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L305.8",
+      "line": 305,
+      "k": 8,
+      "printed": "+2.3",
+      "context": ", −2.5 points (95% interval −8.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L305.9",
+      "line": 305,
+      "k": 9,
+      "printed": "8",
+      "context": " Both intervals include zero, and Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L307.1",
+      "line": 307,
+      "k": 1,
+      "printed": "+0.6",
+      "context": "n tool outputs exceeds the rerun gap by ",
+      "class": "R"
+    },
+    {
+      "id": "L307.2",
+      "line": 307,
+      "k": 2,
+      "printed": "95%",
+      "context": "s exceeds the rerun gap by +0.6 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L307.3",
+      "line": 307,
+      "k": 3,
+      "printed": "−0.5",
+      "context": " rerun gap by +0.6 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L307.4",
+      "line": 307,
+      "k": 4,
+      "printed": "+2.8",
+      "context": " by +0.6 points (95% interval −0.5 to ",
+      "class": "R"
+    },
+    {
+      "id": "L307.5",
+      "line": 307,
+      "k": 5,
+      "printed": "+1.0",
+      "context": " (95% interval −0.5 to +2.8), against ",
+      "class": "R"
+    },
+    {
+      "id": "L309.1",
+      "line": 309,
+      "k": 1,
+      "printed": "5",
+      "context": "[FIGURE ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L309.2",
+      "line": 309,
+      "k": 2,
+      "printed": "10",
+      "context": "[FIGURE 5. v80 Figures ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L309.3",
+      "line": 309,
+      "k": 3,
+      "printed": "11",
+      "context": "[FIGURE 5. v80 Figures 10 and ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L309.4",
+      "line": 309,
+      "k": 4,
+      "printed": "1",
+      "context": "v80 Figures 10 and 11 merged, in Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L311.1",
+      "line": 311,
+      "k": 1,
+      "printed": "5",
+      "context": "**Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L311.2",
+      "line": 311,
+      "k": 2,
+      "printed": "1",
+      "context": "**Figure 5. Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L311.3",
+      "line": 311,
+      "k": 3,
+      "printed": "2",
+      "context": "nus real catch (orange) beside real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L311.4",
+      "line": 311,
+      "k": 4,
+      "printed": "1",
+      "context": "range) beside real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L311.5",
+      "line": 311,
+      "k": 5,
+      "printed": "1",
+      "context": "obes and of the four probes from Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L311.6",
+      "line": 311,
+      "k": 6,
+      "printed": "1,313",
+      "context": "ur probes from Figure 1 at the top. All ",
+      "class": "R"
+    },
+    {
+      "id": "L311.7",
+      "line": 311,
+      "k": 7,
+      "printed": "1%",
+      "context": "content token of each tool output, with ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L311.8",
+      "line": 311,
+      "k": 8,
+      "printed": "95%",
+      "context": "est tool outputs raising an alarm, with ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L311.9",
+      "line": 311,
+      "k": 9,
+      "printed": "1",
+      "context": "ng an alarm, with 95% intervals. Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L313.1",
+      "line": 313,
+      "k": 1,
+      "printed": "8",
+      "context": "**Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L313.2",
+      "line": 313,
+      "k": 2,
+      "printed": "5",
+      "context": "ol outputs.** The same columns as Table ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L313.3",
+      "line": 313,
+      "k": 3,
+      "printed": "1%",
+      "context": "content token of each tool output, with ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L315.1",
+      "line": 315,
+      "k": 1,
+      "printed": "1",
+      "context": "| **Tool outputs** | Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L315.2",
+      "line": 315,
+      "k": 2,
+      "printed": "2",
+      "context": "l outputs** | Real run 1 (%) | Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L315.3",
+      "line": 315,
+      "k": 3,
+      "printed": "95%",
+      "context": "ted (%) | Simulated minus real (points, ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L315.4",
+      "line": 315,
+      "k": 4,
+      "printed": "2",
+      "context": " real (points, 95% interval) | Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L315.5",
+      "line": 315,
+      "k": 5,
+      "printed": "1",
+      "context": "s, 95% interval) | Real run 2 minus run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L315.6",
+      "line": 315,
+      "k": 6,
+      "printed": "95%",
+      "context": "rval) | Real run 2 minus run 1 (points, ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L317.1",
+      "line": 317,
+      "k": 1,
+      "printed": "99.8",
+      "context": "| On-policy probe | ",
+      "class": "R"
+    },
+    {
+      "id": "L317.2",
+      "line": 317,
+      "k": 2,
+      "printed": "99.7",
+      "context": "| On-policy probe | 99.8 | ",
+      "class": "R"
+    },
+    {
+      "id": "L317.3",
+      "line": 317,
+      "k": 3,
+      "printed": "99.4",
+      "context": "| On-policy probe | 99.8 | 99.7 | ",
+      "class": "R"
+    },
+    {
+      "id": "L317.4",
+      "line": 317,
+      "k": 4,
+      "printed": "−0.34",
+      "context": " On-policy probe | 99.8 | 99.7 | 99.4 | ",
+      "class": "R"
+    },
+    {
+      "id": "L317.5",
+      "line": 317,
+      "k": 5,
+      "printed": "−0.80",
+      "context": "y probe | 99.8 | 99.7 | 99.4 | −0.34 (",
+      "class": "R"
+    },
+    {
+      "id": "L317.6",
+      "line": 317,
+      "k": 6,
+      "printed": "+0.03",
+      "context": "9.8 | 99.7 | 99.4 | −0.34 (−0.80 to ",
+      "class": "R"
+    },
+    {
+      "id": "L317.7",
+      "line": 317,
+      "k": 7,
+      "printed": "−0.1",
+      "context": "7 | 99.4 | −0.34 (−0.80 to +0.03) | ",
+      "class": "R"
+    },
+    {
+      "id": "L317.8",
+      "line": 317,
+      "k": 8,
+      "printed": "−0.6",
+      "context": " | −0.34 (−0.80 to +0.03) | −0.1 (",
+      "class": "R"
+    },
+    {
+      "id": "L317.9",
+      "line": 317,
+      "k": 9,
+      "printed": "+0.3",
+      "context": " (−0.80 to +0.03) | −0.1 (−0.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L318.1",
+      "line": 318,
+      "k": 1,
+      "printed": "93.7",
+      "context": "| Off-policy probe | ",
+      "class": "R"
+    },
+    {
+      "id": "L318.2",
+      "line": 318,
+      "k": 2,
+      "printed": "93.5",
+      "context": "| Off-policy probe | 93.7 | ",
+      "class": "R"
+    },
+    {
+      "id": "L318.3",
+      "line": 318,
+      "k": 3,
+      "printed": "94.7",
+      "context": "| Off-policy probe | 93.7 | 93.5 | ",
+      "class": "R"
+    },
+    {
+      "id": "L318.4",
+      "line": 318,
+      "k": 4,
+      "printed": "+1.1",
+      "context": "Off-policy probe | 93.7 | 93.5 | 94.7 | ",
+      "class": "R"
+    },
+    {
+      "id": "L318.5",
+      "line": 318,
+      "k": 5,
+      "printed": "−2.9",
+      "context": "licy probe | 93.7 | 93.5 | 94.7 | +1.1 (",
+      "class": "R"
+    },
+    {
+      "id": "L318.6",
+      "line": 318,
+      "k": 6,
+      "printed": "+3.7",
+      "context": " | 93.7 | 93.5 | 94.7 | +1.1 (−2.9 to ",
+      "class": "R"
+    },
+    {
+      "id": "L318.7",
+      "line": 318,
+      "k": 7,
+      "printed": "−0.1",
+      "context": "| 93.5 | 94.7 | +1.1 (−2.9 to +3.7) | ",
+      "class": "R"
+    },
+    {
+      "id": "L318.8",
+      "line": 318,
+      "k": 8,
+      "printed": "−2.0",
+      "context": " 94.7 | +1.1 (−2.9 to +3.7) | −0.1 (",
+      "class": "R"
+    },
+    {
+      "id": "L318.9",
+      "line": 318,
+      "k": 9,
+      "printed": "+1.9",
+      "context": ".1 (−2.9 to +3.7) | −0.1 (−2.0 to ",
+      "class": "R"
+    },
+    {
+      "id": "L319.1",
+      "line": 319,
+      "k": 1,
+      "printed": "61.0",
+      "context": "| Deception probe | ",
+      "class": "R"
+    },
+    {
+      "id": "L319.2",
+      "line": 319,
+      "k": 2,
+      "printed": "60.6",
+      "context": "| Deception probe | 61.0 | ",
+      "class": "R"
+    },
+    {
+      "id": "L319.3",
+      "line": 319,
+      "k": 3,
+      "printed": "58.3",
+      "context": "| Deception probe | 61.0 | 60.6 | ",
+      "class": "R"
+    },
+    {
+      "id": "L319.4",
+      "line": 319,
+      "k": 4,
+      "printed": "−2.5",
+      "context": " Deception probe | 61.0 | 60.6 | 58.3 | ",
+      "class": "R"
+    },
+    {
+      "id": "L319.5",
+      "line": 319,
+      "k": 5,
+      "printed": "−8.6",
+      "context": "on probe | 61.0 | 60.6 | 58.3 | −2.5 (",
+      "class": "R"
+    },
+    {
+      "id": "L319.6",
+      "line": 319,
+      "k": 6,
+      "printed": "+2.3",
+      "context": " 61.0 | 60.6 | 58.3 | −2.5 (−8.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L319.7",
+      "line": 319,
+      "k": 7,
+      "printed": "−0.3",
+      "context": "60.6 | 58.3 | −2.5 (−8.6 to +2.3) | ",
+      "class": "R"
+    },
+    {
+      "id": "L319.8",
+      "line": 319,
+      "k": 8,
+      "printed": "−3.7",
+      "context": "8.3 | −2.5 (−8.6 to +2.3) | −0.3 (",
+      "class": "R"
+    },
+    {
+      "id": "L319.9",
+      "line": 319,
+      "k": 9,
+      "printed": "+3.6",
+      "context": ".5 (−8.6 to +2.3) | −0.3 (−3.7 to ",
+      "class": "R"
+    },
+    {
+      "id": "L320.1",
+      "line": 320,
+      "k": 1,
+      "printed": "57.8",
+      "context": "| Harmfulness direction | ",
+      "class": "R"
+    },
+    {
+      "id": "L320.2",
+      "line": 320,
+      "k": 2,
+      "printed": "60.2",
+      "context": "| Harmfulness direction | 57.8 | ",
+      "class": "R"
+    },
+    {
+      "id": "L320.3",
+      "line": 320,
+      "k": 3,
+      "printed": "58.6",
+      "context": "| Harmfulness direction | 57.8 | 60.2 | ",
+      "class": "R"
+    },
+    {
+      "id": "L320.4",
+      "line": 320,
+      "k": 4,
+      "printed": "−0.4",
+      "context": "ulness direction | 57.8 | 60.2 | 58.6 | ",
+      "class": "R"
+    },
+    {
+      "id": "L320.5",
+      "line": 320,
+      "k": 5,
+      "printed": "−5.0",
+      "context": "irection | 57.8 | 60.2 | 58.6 | −0.4 (",
+      "class": "R"
+    },
+    {
+      "id": "L320.6",
+      "line": 320,
+      "k": 6,
+      "printed": "+4.5",
+      "context": " 57.8 | 60.2 | 58.6 | −0.4 (−5.0 to ",
+      "class": "R"
+    },
+    {
+      "id": "L320.7",
+      "line": 320,
+      "k": 7,
+      "printed": "+2.4",
+      "context": "60.2 | 58.6 | −0.4 (−5.0 to +4.5) | ",
+      "class": "R"
+    },
+    {
+      "id": "L320.8",
+      "line": 320,
+      "k": 8,
+      "printed": "−1.0",
+      "context": " 58.6 | −0.4 (−5.0 to +4.5) | +2.4 (",
+      "class": "R"
+    },
+    {
+      "id": "L320.9",
+      "line": 320,
+      "k": 9,
+      "printed": "+5.7",
+      "context": "�0.4 (−5.0 to +4.5) | +2.4 (−1.0 to ",
+      "class": "R"
+    },
+    {
+      "id": "L321.1",
+      "line": 321,
+      "k": 1,
+      "printed": "31.9",
+      "context": "| Refusal direction | ",
+      "class": "R"
+    },
+    {
+      "id": "L321.2",
+      "line": 321,
+      "k": 2,
+      "printed": "33.9",
+      "context": "| Refusal direction | 31.9 | ",
+      "class": "R"
+    },
+    {
+      "id": "L321.3",
+      "line": 321,
+      "k": 3,
+      "printed": "29.5",
+      "context": "| Refusal direction | 31.9 | 33.9 | ",
+      "class": "R"
+    },
+    {
+      "id": "L321.4",
+      "line": 321,
+      "k": 4,
+      "printed": "−3.4",
+      "context": "efusal direction | 31.9 | 33.9 | 29.5 | ",
+      "class": "R"
+    },
+    {
+      "id": "L321.5",
+      "line": 321,
+      "k": 5,
+      "printed": "−8.6",
+      "context": "irection | 31.9 | 33.9 | 29.5 | −3.4 (",
+      "class": "R"
+    },
+    {
+      "id": "L321.6",
+      "line": 321,
+      "k": 6,
+      "printed": "+2.9",
+      "context": " 31.9 | 33.9 | 29.5 | −3.4 (−8.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L321.7",
+      "line": 321,
+      "k": 7,
+      "printed": "+1.9",
+      "context": "33.9 | 29.5 | −3.4 (−8.6 to +2.9) | ",
+      "class": "R"
+    },
+    {
+      "id": "L321.8",
+      "line": 321,
+      "k": 8,
+      "printed": "−2.0",
+      "context": " 29.5 | −3.4 (−8.6 to +2.9) | +1.9 (",
+      "class": "R"
+    },
+    {
+      "id": "L321.9",
+      "line": 321,
+      "k": 9,
+      "printed": "+5.5",
+      "context": "�3.4 (−8.6 to +2.9) | +1.9 (−2.0 to ",
+      "class": "R"
+    },
+    {
+      "id": "L322.1",
+      "line": 322,
+      "k": 1,
+      "printed": "37.6",
+      "context": "| High-stakes probe | ",
+      "class": "R"
+    },
+    {
+      "id": "L322.2",
+      "line": 322,
+      "k": 2,
+      "printed": "39.3",
+      "context": "| High-stakes probe | 37.6 | ",
+      "class": "R"
+    },
+    {
+      "id": "L322.3",
+      "line": 322,
+      "k": 3,
+      "printed": "36.5",
+      "context": "| High-stakes probe | 37.6 | 39.3 | ",
+      "class": "R"
+    },
+    {
+      "id": "L322.4",
+      "line": 322,
+      "k": 4,
+      "printed": "−1.9",
+      "context": "igh-stakes probe | 37.6 | 39.3 | 36.5 | ",
+      "class": "R"
+    },
+    {
+      "id": "L322.5",
+      "line": 322,
+      "k": 5,
+      "printed": "−9.1",
+      "context": "es probe | 37.6 | 39.3 | 36.5 | −1.9 (",
+      "class": "R"
+    },
+    {
+      "id": "L322.6",
+      "line": 322,
+      "k": 6,
+      "printed": "+4.3",
+      "context": " 37.6 | 39.3 | 36.5 | −1.9 (−9.1 to ",
+      "class": "R"
+    },
+    {
+      "id": "L322.7",
+      "line": 322,
+      "k": 7,
+      "printed": "+1.7",
+      "context": "39.3 | 36.5 | −1.9 (−9.1 to +4.3) | ",
+      "class": "R"
+    },
+    {
+      "id": "L322.8",
+      "line": 322,
+      "k": 8,
+      "printed": "−2.6",
+      "context": " 36.5 | −1.9 (−9.1 to +4.3) | +1.7 (",
+      "class": "R"
+    },
+    {
+      "id": "L322.9",
+      "line": 322,
+      "k": 9,
+      "printed": "+5.0",
+      "context": "�1.9 (−9.1 to +4.3) | +1.7 (−2.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L323.1",
+      "line": 323,
+      "k": 1,
+      "printed": "63.6",
+      "context": "| Average of six | ",
+      "class": "R"
+    },
+    {
+      "id": "L323.2",
+      "line": 323,
+      "k": 2,
+      "printed": "64.5",
+      "context": "| Average of six | 63.6 | ",
+      "class": "R"
+    },
+    {
+      "id": "L323.3",
+      "line": 323,
+      "k": 3,
+      "printed": "62.8",
+      "context": "| Average of six | 63.6 | 64.5 | ",
+      "class": "R"
+    },
+    {
+      "id": "L323.4",
+      "line": 323,
+      "k": 4,
+      "printed": "−1.3",
+      "context": "| Average of six | 63.6 | 64.5 | 62.8 | ",
+      "class": "R"
+    },
+    {
+      "id": "L323.5",
+      "line": 323,
+      "k": 5,
+      "printed": "−3.8",
+      "context": "e of six | 63.6 | 64.5 | 62.8 | −1.3 (",
+      "class": "R"
+    },
+    {
+      "id": "L323.6",
+      "line": 323,
+      "k": 6,
+      "printed": "+1.1",
+      "context": " 63.6 | 64.5 | 62.8 | −1.3 (−3.8 to ",
+      "class": "R"
+    },
+    {
+      "id": "L323.7",
+      "line": 323,
+      "k": 7,
+      "printed": "+0.9",
+      "context": "64.5 | 62.8 | −1.3 (−3.8 to +1.1) | ",
+      "class": "R"
+    },
+    {
+      "id": "L323.8",
+      "line": 323,
+      "k": 8,
+      "printed": "−0.6",
+      "context": " 62.8 | −1.3 (−3.8 to +1.1) | +0.9 (",
+      "class": "R"
+    },
+    {
+      "id": "L323.9",
+      "line": 323,
+      "k": 9,
+      "printed": "+2.3",
+      "context": "�1.3 (−3.8 to +1.1) | +0.9 (−0.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L324.1",
+      "line": 324,
+      "k": 1,
+      "printed": "0.6",
+      "context": "| Average of four (AUROC at least ",
+      "class": "C",
+      "note": "four-probe group cut-off (AUROC at least 0.6), fixed before the results (09 RULE item 36(1); @19ba8f563)"
+    },
+    {
+      "id": "L324.2",
+      "line": 324,
+      "k": 2,
+      "printed": "78.1",
+      "context": " Average of four (AUROC at least 0.6) | ",
+      "class": "R"
+    },
+    {
+      "id": "L324.3",
+      "line": 324,
+      "k": 3,
+      "printed": "78.5",
+      "context": "e of four (AUROC at least 0.6) | 78.1 | ",
+      "class": "R"
+    },
+    {
+      "id": "L324.4",
+      "line": 324,
+      "k": 4,
+      "printed": "77.7",
+      "context": "ur (AUROC at least 0.6) | 78.1 | 78.5 | ",
+      "class": "R"
+    },
+    {
+      "id": "L324.5",
+      "line": 324,
+      "k": 5,
+      "printed": "−0.5",
+      "context": "OC at least 0.6) | 78.1 | 78.5 | 77.7 | ",
+      "class": "R"
+    },
+    {
+      "id": "L324.6",
+      "line": 324,
+      "k": 6,
+      "printed": "−2.9",
+      "context": "ast 0.6) | 78.1 | 78.5 | 77.7 | −0.5 (",
+      "class": "R"
+    },
+    {
+      "id": "L324.7",
+      "line": 324,
+      "k": 7,
+      "printed": "+1.4",
+      "context": " 78.1 | 78.5 | 77.7 | −0.5 (−2.9 to ",
+      "class": "R"
+    },
+    {
+      "id": "L324.8",
+      "line": 324,
+      "k": 8,
+      "printed": "+0.4",
+      "context": "78.5 | 77.7 | −0.5 (−2.9 to +1.4) | ",
+      "class": "R"
+    },
+    {
+      "id": "L324.9",
+      "line": 324,
+      "k": 9,
+      "printed": "−0.9",
+      "context": " 77.7 | −0.5 (−2.9 to +1.4) | +0.4 (",
+      "class": "R"
+    },
+    {
+      "id": "L324.10",
+      "line": 324,
+      "k": 10,
+      "printed": "+2.0",
+      "context": "�0.5 (−2.9 to +1.4) | +0.4 (−0.9 to ",
+      "class": "R"
+    },
+    {
+      "id": "L326.1",
+      "line": 326,
+      "k": 1,
+      "printed": "1,313",
+      "context": "*All ",
+      "class": "R"
+    },
+    {
+      "id": "L326.2",
+      "line": 326,
+      "k": 2,
+      "printed": "1%",
+      "context": "*All 1,313 tasks, with ",
+      "class": "C",
+      "note": "alarm level: the share of honest actions that raise an alarm (registered per-action levels 1e-2, 5e-2, 1e-3, 2e-4, 5e-4)"
+    },
+    {
+      "id": "L326.3",
+      "line": 326,
+      "k": 3,
+      "printed": "2",
+      "context": "nest actions raising an alarm. Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L326.4",
+      "line": 326,
+      "k": 4,
+      "printed": "1",
+      "context": "ing an alarm. Real run 2 minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L334.1",
+      "line": 334,
+      "k": 1,
+      "printed": "76",
+      "context": "*How much the agent did.** Out of about ",
+      "class": "R"
+    },
+    {
+      "id": "L334.2",
+      "line": 334,
+      "k": 2,
+      "printed": "0.4",
+      "context": " of about 76 steps, simulated runs took ",
+      "class": "R"
+    },
+    {
+      "id": "L334.3",
+      "line": 334,
+      "k": 3,
+      "printed": "1",
+      "context": "lated runs took 0.4 fewer than real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L334.4",
+      "line": 334,
+      "k": 4,
+      "printed": "95%",
+      "context": "ed runs took 0.4 fewer than real run 1 (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L334.5",
+      "line": 334,
+      "k": 5,
+      "printed": "−2.6",
+      "context": "0.4 fewer than real run 1 (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L334.6",
+      "line": 334,
+      "k": 6,
+      "printed": "+1.9",
+      "context": "than real run 1 (95% interval −2.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L334.7",
+      "line": 334,
+      "k": 7,
+      "printed": "2",
+      "context": " interval −2.6 to +1.9), and real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L334.8",
+      "line": 334,
+      "k": 8,
+      "printed": "0.4",
+      "context": "al −2.6 to +1.9), and real run 2 took ",
+      "class": "R"
+    },
+    {
+      "id": "L334.9",
+      "line": 334,
+      "k": 9,
+      "printed": "1",
+      "context": " real run 2 took 0.4 more than real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L334.10",
+      "line": 334,
+      "k": 10,
+      "printed": "143",
+      "context": "han real run 1. Simulated runs produced ",
+      "class": "R"
+    },
+    {
+      "id": "L334.11",
+      "line": 334,
+      "k": 11,
+      "printed": "1",
+      "context": "d 143 fewer output tokens than real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L334.12",
+      "line": 334,
+      "k": 12,
+      "printed": "95%",
+      "context": "43 fewer output tokens than real run 1 (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L334.13",
+      "line": 334,
+      "k": 13,
+      "printed": "−1,143",
+      "context": "ut tokens than real run 1 (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L334.14",
+      "line": 334,
+      "k": 14,
+      "printed": "+853",
+      "context": "an real run 1 (95% interval −1,143 to ",
+      "class": "R"
+    },
+    {
+      "id": "L336.1",
+      "line": 336,
+      "k": 1,
+      "printed": "95.7%",
+      "context": "gent clearly attempted the side task in ",
+      "class": "R"
+    },
+    {
+      "id": "L336.2",
+      "line": 336,
+      "k": 2,
+      "printed": "97.0%",
+      "context": "ask in 95.7% of simulated runs, against ",
+      "class": "R"
+    },
+    {
+      "id": "L336.3",
+      "line": 336,
+      "k": 3,
+      "printed": "96.3%",
+      "context": "7% of simulated runs, against 97.0% and ",
+      "class": "R"
+    },
+    {
+      "id": "L336.4",
+      "line": 336,
+      "k": 4,
+      "printed": "1",
+      "context": "he difference, simulated minus real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L336.5",
+      "line": 336,
+      "k": 5,
+      "printed": "−1.2",
+      "context": "ference, simulated minus real run 1, is ",
+      "class": "R"
+    },
+    {
+      "id": "L336.6",
+      "line": 336,
+      "k": 6,
+      "printed": "95%",
+      "context": "ted minus real run 1, is −1.2 points (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L336.7",
+      "line": 336,
+      "k": 7,
+      "printed": "−2.6",
+      "context": "l run 1, is −1.2 points (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L336.8",
+      "line": 336,
+      "k": 8,
+      "printed": "+0.2",
+      "context": "s −1.2 points (95% interval −2.6 to ",
+      "class": "R"
+    },
+    {
+      "id": "L338.1",
+      "line": 338,
+      "k": 1,
+      "printed": "4.3%",
+      "context": "er clearly attempted the side task were ",
+      "class": "R"
+    },
+    {
+      "id": "L338.2",
+      "line": 338,
+      "k": 2,
+      "printed": "3.0%",
+      "context": "sk were 4.3% of simulated runs, against ",
+      "class": "R"
+    },
+    {
+      "id": "L338.3",
+      "line": 338,
+      "k": 3,
+      "printed": "3.7%",
+      "context": ".3% of simulated runs, against 3.0% and ",
+      "class": "R"
+    },
+    {
+      "id": "L338.4",
+      "line": 338,
+      "k": 4,
+      "printed": "200",
+      "context": "eal ones. Most of them ran close to the ",
+      "class": "C",
+      "note": "step limit of each run (run.yaml max_steps 200)"
+    },
+    {
+      "id": "L338.5",
+      "line": 338,
+      "k": 5,
+      "printed": "192",
+      "context": "mit. In simulation they had a median of ",
+      "class": "R"
+    },
+    {
+      "id": "L338.6",
+      "line": 338,
+      "k": 6,
+      "printed": "67",
+      "context": "they had a median of 192 steps, against ",
+      "class": "R"
+    },
+    {
+      "id": "L338.7",
+      "line": 338,
+      "k": 7,
+      "printed": "191",
+      "context": "task. In the real runs the medians were ",
+      "class": "R"
+    },
+    {
+      "id": "L338.8",
+      "line": 338,
+      "k": 8,
+      "printed": "68",
+      "context": " real runs the medians were 191 against ",
+      "class": "R"
+    },
+    {
+      "id": "L338.9",
+      "line": 338,
+      "k": 9,
+      "printed": "69",
+      "context": "runs the medians were 191 against 68 to ",
+      "class": "R"
+    },
+    {
+      "id": "L350.1",
+      "line": 350,
+      "k": 1,
+      "printed": "90%",
+      "context": " misleads, because a probe that catches ",
+      "class": "H",
+      "note": "hypothetical worked example, not a result"
+    },
+    {
+      "id": "L350.2",
+      "line": 350,
+      "k": 2,
+      "printed": "0",
+      "context": " measures agreement beyond chance, from ",
+      "class": "C",
+      "note": "Cohen's kappa scale: 0 is chance, 1 is perfect (definition)"
+    },
+    {
+      "id": "L350.3",
+      "line": 350,
+      "k": 3,
+      "printed": "1",
+      "context": "ent beyond chance, from 0 for chance to ",
+      "class": "C",
+      "note": "Cohen's kappa scale: 0 is chance, 1 is perfect (definition)"
+    },
+    {
+      "id": "L352.1",
+      "line": 352,
+      "k": 1,
+      "printed": "2",
+      "context": "Averaged over the six probes, real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L352.2",
+      "line": 352,
+      "k": 2,
+      "printed": "1",
+      "context": "probes, real run 2 agrees with real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L352.3",
+      "line": 352,
+      "k": 3,
+      "printed": "0.16",
+      "context": " 2 agrees with real run 1 at a kappa of ",
+      "class": "R"
+    },
+    {
+      "id": "L352.4",
+      "line": 352,
+      "k": 4,
+      "printed": "0.19",
+      "context": "kappa of 0.16, and the simulated run at ",
+      "class": "R"
+    },
+    {
+      "id": "L352.5",
+      "line": 352,
+      "k": 5,
+      "printed": "+0.03",
+      "context": " simulated run at 0.19, a difference of ",
+      "class": "R"
+    },
+    {
+      "id": "L352.6",
+      "line": 352,
+      "k": 6,
+      "printed": "95%",
+      "context": "ted run at 0.19, a difference of +0.03 (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L352.7",
+      "line": 352,
+      "k": 7,
+      "printed": "−0.05",
+      "context": "19, a difference of +0.03 (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L352.8",
+      "line": 352,
+      "k": 8,
+      "printed": "+0.10",
+      "context": "rence of +0.03 (95% interval −0.05 to ",
+      "class": "R"
+    },
+    {
+      "id": "L352.9",
+      "line": 352,
+      "k": 9,
+      "printed": "1",
+      "context": "udes zero. So a task caught in real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L354.1",
+      "line": 354,
+      "k": 1,
+      "printed": "0.20",
+      "context": "ese results, the other five probes give ",
+      "class": "R"
+    },
+    {
+      "id": "L354.2",
+      "line": 354,
+      "k": 2,
+      "printed": "0.17",
+      "context": "s give 0.20 for the second real run and ",
+      "class": "R"
+    },
+    {
+      "id": "L354.3",
+      "line": 354,
+      "k": 3,
+      "printed": "−0.03",
+      "context": " for the simulated run, a difference of ",
+      "class": "R"
+    },
+    {
+      "id": "L354.4",
+      "line": 354,
+      "k": 4,
+      "printed": "95%",
+      "context": "simulated run, a difference of −0.03 (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L354.5",
+      "line": 354,
+      "k": 5,
+      "printed": "−0.06",
+      "context": ", a difference of −0.03 (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L354.6",
+      "line": 354,
+      "k": 6,
+      "printed": "+0.01",
+      "context": "nce of −0.03 (95% interval −0.06 to ",
+      "class": "R"
+    },
+    {
+      "id": "L356.1",
+      "line": 356,
+      "k": 1,
+      "printed": "6",
+      "context": "hether it crossed the threshold (Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L356.2",
+      "line": 356,
+      "k": 2,
+      "printed": "21%",
+      "context": "n a second real run predicts only about ",
+      "class": "R"
+    },
+    {
+      "id": "L356.3",
+      "line": 356,
+      "k": 3,
+      "printed": "0.21",
+      "context": "time. A second real run gives an R² of ",
+      "class": "R"
+    },
+    {
+      "id": "L356.4",
+      "line": 356,
+      "k": 4,
+      "printed": "0.15",
+      "context": "es an R² of 0.21 and the simulated run ",
+      "class": "R"
+    },
+    {
+      "id": "L356.5",
+      "line": 356,
+      "k": 5,
+      "printed": "−0.05",
+      "context": "the simulated run 0.15, a difference of ",
+      "class": "R"
+    },
+    {
+      "id": "L356.6",
+      "line": 356,
+      "k": 6,
+      "printed": "95%",
+      "context": "e of −0.05, computed before rounding (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L356.7",
+      "line": 356,
+      "k": 7,
+      "printed": "−0.10",
+      "context": " computed before rounding (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L356.8",
+      "line": 356,
+      "k": 8,
+      "printed": "−0.01",
+      "context": "efore rounding (95% interval −0.10 to ",
+      "class": "R"
+    },
+    {
+      "id": "L356.9",
+      "line": 356,
+      "k": 9,
+      "printed": "1",
+      "context": "). So the simulated run tracks real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L358.1",
+      "line": 358,
+      "k": 1,
+      "printed": "1",
+      "context": "e on-policy probe learned from real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L358.2",
+      "line": 358,
+      "k": 2,
+      "printed": "2",
+      "context": "tack runs on other tasks. With real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L358.3",
+      "line": 358,
+      "k": 3,
+      "printed": "−0.02",
+      "context": "he reference, the difference shrinks to ",
+      "class": "R"
+    },
+    {
+      "id": "L358.4",
+      "line": 358,
+      "k": 4,
+      "printed": "95%",
+      "context": "nce, the difference shrinks to −0.02 (",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L358.5",
+      "line": 358,
+      "k": 5,
+      "printed": "−0.06",
+      "context": "erence shrinks to −0.02 (95% interval ",
+      "class": "R"
+    },
+    {
+      "id": "L358.6",
+      "line": 358,
+      "k": 6,
+      "printed": "+0.03",
+      "context": "nks to −0.02 (95% interval −0.06 to ",
+      "class": "R"
+    },
+    {
+      "id": "L358.7",
+      "line": 358,
+      "k": 7,
+      "printed": "7",
+      "context": "(95% interval −0.06 to +0.03). Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L360.1",
+      "line": 360,
+      "k": 1,
+      "printed": "6",
+      "context": "[FIGURE ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L360.2",
+      "line": 360,
+      "k": 2,
+      "printed": "5",
+      "context": "[FIGURE 6. v80 Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L362.1",
+      "line": 362,
+      "k": 1,
+      "printed": "6",
+      "context": "**Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L362.2",
+      "line": 362,
+      "k": 2,
+      "printed": "1",
+      "context": "tion's honest-run scores, with real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L362.3",
+      "line": 362,
+      "k": 3,
+      "printed": "2",
+      "context": "es, with real run 1 across and real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L362.4",
+      "line": 362,
+      "k": 4,
+      "printed": "1,308",
+      "context": "l one run predicts the other across the ",
+      "class": "R"
+    },
+    {
+      "id": "L364.1",
+      "line": 364,
+      "k": 1,
+      "printed": "7",
+      "context": "[FIGURE ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L364.2",
+      "line": 364,
+      "k": 2,
+      "printed": "9",
+      "context": "[FIGURE 7. v80 Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L366.1",
+      "line": 366,
+      "k": 1,
+      "printed": "7",
+      "context": "**Figure ",
+      "class": "S",
+      "note": "reference to a table, figure or section, not a value"
+    },
+    {
+      "id": "L366.2",
+      "line": 366,
+      "k": 2,
+      "printed": "1",
+      "context": "**Figure 7. Per-task R² with real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L366.3",
+      "line": 366,
+      "k": 3,
+      "printed": "2",
+      "context": "real run 1, for every probe.** Real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L366.4",
+      "line": 366,
+      "k": 4,
+      "printed": "1,308",
+      "context": "ay) and the simulated run (orange), the ",
+      "class": "R"
+    },
+    {
+      "id": "L366.5",
+      "line": 366,
+      "k": 5,
+      "printed": "95%",
+      "context": " command, probes scoring commands, with ",
+      "class": "C",
+      "note": "interval level: two-sided 95% percentile bootstrap over main tasks"
+    },
+    {
+      "id": "L366.6",
+      "line": 366,
+      "k": 6,
+      "printed": "1,308",
+      "context": "noisy top score per run, so even across ",
+      "class": "R"
+    },
+    {
+      "id": "L366.7",
+      "line": 366,
+      "k": 7,
+      "printed": "0.21",
+      "context": "s 1,308 tasks we can pin down an R² of ",
+      "class": "R"
+    },
+    {
+      "id": "L366.8",
+      "line": 366,
+      "k": 8,
+      "printed": "0.04",
+      "context": "own an R² of 0.21 only to within about ",
+      "class": "R"
+    },
+    {
+      "id": "L366.9",
+      "line": 366,
+      "k": 9,
+      "printed": "1",
+      "context": "e excludes zero, and only with real run ",
+      "class": "S",
+      "note": "label of a run (real run 1 or 2), not a value"
+    },
+    {
+      "id": "L372.1",
+      "line": 372,
+      "k": 1,
+      "printed": "47",
+      "context": "We cannot rule it out. We dropped ",
+      "class": "R"
+    },
+    {
+      "id": "L372.2",
+      "line": 372,
+      "k": 2,
+      "printed": "1,360",
+      "context": "annot rule it out. We dropped 47 of the ",
+      "class": "R"
+    },
+    {
+      "id": "L374.1",
+      "line": 374,
+      "k": 1,
+      "printed": "1,360",
+      "context": " **Tasks we dropped.** We launched ",
+      "class": "R"
+    },
+    {
+      "id": "L374.2",
+      "line": 374,
+      "k": 2,
+      "printed": "1,313",
+      "context": "** We launched 1,360 tasks and kept the ",
+      "class": "R"
+    },
+    {
+      "id": "L374.3",
+      "line": 374,
+      "k": 3,
+      "printed": "47",
+      "context": "ack runs completed and were scored. The ",
+      "class": "R"
+    },
+    {
+      "id": "L374.4",
+      "line": 374,
+      "k": 4,
+      "printed": "22",
+      "context": " were scored. The 47 we dropped include ",
+      "class": "R"
+    },
+    {
+      "id": "L374.5",
+      "line": 374,
+      "k": 5,
+      "printed": "1,000",
+      "context": "ed. The 47 we dropped include 22 of the ",
+      "class": "R"
+    },
+    {
+      "id": "L376.1",
+      "line": 376,
+      "k": 1,
+      "printed": "9",
+      "context": "hat ended with reasoning but no answer (",
+      "class": "R"
+    },
+    {
+      "id": "L377.1",
+      "line": 377,
+      "k": 1,
+      "printed": "9",
+      "context": "- simulator output-format errors (",
+      "class": "R"
+    },
+    {
+      "id": "L378.1",
+      "line": 378,
+      "k": 1,
+      "printed": "9",
+      "context": "s before the agent made any model call (",
+      "class": "R"
+    },
+    {
+      "id": "L379.1",
+      "line": 379,
+      "k": 1,
+      "printed": "9",
+      "context": "no usable honest reference run existed (",
+      "class": "R"
+    },
+    {
+      "id": "L380.1",
+      "line": 380,
+      "k": 1,
+      "printed": "3",
+      "context": " launch, so no run of any kind started (",
+      "class": "R"
+    },
+    {
+      "id": "L381.1",
+      "line": 381,
+      "k": 1,
+      "printed": "2",
+      "context": "- timeouts with no recorded cause (",
+      "class": "R"
+    },
+    {
+      "id": "L381.2",
+      "line": 381,
+      "k": 2,
+      "printed": "2",
+      "context": " other failures with no recorded cause (",
+      "class": "R"
+    },
+    {
+      "id": "L382.1",
+      "line": 382,
+      "k": 1,
+      "printed": "2",
+      "context": " for the probes, with no scoreable run (",
+      "class": "R"
+    },
+    {
+      "id": "L387.1",
+      "line": 387,
+      "k": 1,
+      "printed": "39",
+      "context": "t of the thresholds.** We left at least ",
+      "class": "R"
+    },
+    {
+      "id": "L387.2",
+      "line": 387,
+      "k": 2,
+      "printed": "26",
+      "context": "out of the runs used to set thresholds, ",
+      "class": "R"
+    },
+    {
+      "id": "L387.3",
+      "line": 387,
+      "k": 3,
+      "printed": "10",
+      "context": "thresholds, 26 on model-registry tasks, ",
+      "class": "R"
+    },
+    {
+      "id": "L387.4",
+      "line": 387,
+      "k": 4,
+      "printed": "3",
+      "context": "stry tasks, 10 on slack-clone tasks and ",
+      "class": "R"
+    },
+    {
+      "id": "L387.5",
+      "line": 387,
+      "k": 5,
+      "printed": "11",
+      "context": "row, which real attack runs rarely did (",
+      "class": "R"
+    },
+    {
+      "id": "L387.6",
+      "line": 387,
+      "k": 6,
+      "printed": "2,744",
+      "context": "hich real attack runs rarely did (11 of ",
+      "class": "R"
+    },
+    {
+      "id": "L387.7",
+      "line": 387,
+      "k": 7,
+      "printed": "34",
+      "context": " runs rarely did (11 of 2,744). Another ",
+      "class": "R"
+    },
+    {
+      "id": "L246.w1",
+      "line": 246,
+      "k": null,
+      "printed": "noticed at 1% and at 5%",
+      "context": "Table 6, 3 points, six-probe average, signed difference",
+      "class": "R"
+    },
+    {
+      "id": "L246.w2",
+      "line": 246,
+      "k": null,
+      "printed": "missed at 1%, noticed at 5%",
+      "context": "Table 6, 3 points, six-probe average, gap comparison",
+      "class": "R"
+    },
+    {
+      "id": "L246.w3",
+      "line": 246,
+      "k": null,
+      "printed": "the on-policy probe only",
+      "context": "Table 6, 3 points, single probes, falls",
+      "class": "R"
+    },
+    {
+      "id": "L246.w4",
+      "line": 246,
+      "k": null,
+      "printed": "none",
+      "context": "Table 6, 3 points, single probes, rises",
+      "class": "R"
+    },
+    {
+      "id": "L247.w1",
+      "line": 247,
+      "k": null,
+      "printed": "noticed at 1% and at 5%",
+      "context": "Table 6, 5 points, six-probe average, signed difference",
+      "class": "R"
+    },
+    {
+      "id": "L247.w2",
+      "line": 247,
+      "k": null,
+      "printed": "noticed at 1%",
+      "context": "Table 6, 5 points, six-probe average, gap comparison",
+      "class": "R"
+    },
+    {
+      "id": "L247.w3",
+      "line": 247,
+      "k": null,
+      "printed": "three",
+      "context": "Table 6, 5 points, single probes, falls",
+      "class": "R"
+    },
+    {
+      "id": "L247.w4",
+      "line": 247,
+      "k": null,
+      "printed": "three",
+      "context": "Table 6, 5 points, single probes, rises",
+      "class": "R"
+    },
+    {
+      "id": "L248.w1",
+      "line": 248,
+      "k": null,
+      "printed": "noticed at 1% and at 5%",
+      "context": "Table 6, 8 points, six-probe average, signed difference",
+      "class": "R"
+    },
+    {
+      "id": "L248.w2",
+      "line": 248,
+      "k": null,
+      "printed": "noticed at 1%",
+      "context": "Table 6, 8 points, six-probe average, gap comparison",
+      "class": "R"
+    },
+    {
+      "id": "L248.w3",
+      "line": 248,
+      "k": null,
+      "printed": "all six",
+      "context": "Table 6, 8 points, single probes, falls",
+      "class": "R"
+    },
+    {
+      "id": "L248.w4",
+      "line": 248,
+      "k": null,
+      "printed": "all five",
+      "context": "Table 6, 8 points, single probes, rises",
+      "class": "R"
+    },
+    {
+      "id": "L249.w1",
+      "line": 249,
+      "k": null,
+      "printed": "noticed at 1% and at 5%",
+      "context": "Table 6, 12 points, six-probe average, signed difference",
+      "class": "R"
+    },
+    {
+      "id": "L249.w2",
+      "line": 249,
+      "k": null,
+      "printed": "noticed at 1%",
+      "context": "Table 6, 12 points, six-probe average, gap comparison",
+      "class": "R"
+    },
+    {
+      "id": "L249.w3",
+      "line": 249,
+      "k": null,
+      "printed": "all six",
+      "context": "Table 6, 12 points, single probes, falls",
+      "class": "R"
+    },
+    {
+      "id": "L249.w4",
+      "line": 249,
+      "k": null,
+      "printed": "all five",
+      "context": "Table 6, 12 points, single probes, rises",
+      "class": "R"
+    },
+    {
+      "id": "L228.w1",
+      "line": 228,
+      "k": null,
+      "printed": "a single run",
+      "context": "the simulated threshold rests on a single run at 0.02%",
+      "class": "R"
+    },
+    {
+      "id": "L228.w2",
+      "line": 228,
+      "k": null,
+      "printed": "four runs",
+      "context": "and on four runs at 0.05%",
+      "class": "R"
+    },
+    {
+      "id": "L383.w1",
+      "line": 383,
+      "k": null,
+      "printed": "one",
+      "context": "one malformed tool call",
+      "class": "R"
+    },
+    {
+      "id": "L383.w2",
+      "line": 383,
+      "k": null,
+      "printed": "one",
+      "context": "one run that hit the two-hour limit",
+      "class": "R"
+    },
+    {
+      "id": "L165.w1",
+      "line": 165,
+      "k": null,
+      "printed": "three",
+      "context": "three from simulated runs",
+      "class": "R"
+    },
+    {
+      "id": "L165.w2",
+      "line": 165,
+      "k": null,
+      "printed": "three",
+      "context": "and three from real ones",
+      "class": "R"
+    },
+    {
+      "id": "L169.w1",
+      "line": 169,
+      "k": null,
+      "printed": "Three",
+      "context": "Three came from simulated runs",
+      "class": "R"
+    },
+    {
+      "id": "L169.w2",
+      "line": 169,
+      "k": null,
+      "printed": "three",
+      "context": "and three from real ones",
+      "class": "R"
+    },
+    {
+      "id": "L169.w3",
+      "line": 169,
+      "k": null,
+      "printed": "Two",
+      "context": "Two of the six search the code with grep",
+      "class": "N",
+      "note": "counts of command types in Table 3; read from the command text, which is not in any committed record"
+    },
+    {
+      "id": "L169.w4",
+      "line": 169,
+      "k": null,
+      "printed": "one",
+      "context": "one lists running processes",
+      "class": "N",
+      "note": "as L169.w3"
+    },
+    {
+      "id": "L169.w5",
+      "line": 169,
+      "k": null,
+      "printed": "one",
+      "context": "one edits code in place",
+      "class": "N",
+      "note": "as L169.w3"
+    },
+    {
+      "id": "L169.w6",
+      "line": 169,
+      "k": null,
+      "printed": "one",
+      "context": "one creates a code file",
+      "class": "N",
+      "note": "as L169.w3"
+    },
+    {
+      "id": "L169.w7",
+      "line": 169,
+      "k": null,
+      "printed": "one",
+      "context": "one opens a file to read it",
+      "class": "N",
+      "note": "as L169.w3"
+    },
+    {
+      "id": "L184.w1",
+      "line": 184,
+      "k": null,
+      "printed": "Two",
+      "context": "Two of the four rows are missed only because the run had nothing to score",
+      "class": "R"
+    },
+    {
+      "id": "L184.w2",
+      "line": 184,
+      "k": null,
+      "printed": "three",
+      "context": "The other three failed in both settings",
+      "class": "N",
+      "note": "side-task outcomes of the four drawn tasks are not in the committed tables record"
+    },
+    {
+      "id": "L149.w1",
+      "line": 149,
+      "k": null,
+      "printed": "one in seven",
+      "context": "about one in seven of the calls the published probes score (14%)",
+      "class": "R"
+    },
+    {
+      "id": "L157.w1",
+      "line": 157,
+      "k": null,
+      "printed": "two",
+      "context": "on average about two and about one per main task (real)",
+      "class": "R"
+    },
+    {
+      "id": "L157.w2",
+      "line": 157,
+      "k": null,
+      "printed": "one",
+      "context": "on average about two and about one per main task (simulated)",
+      "class": "R"
+    }
+  ]
+}

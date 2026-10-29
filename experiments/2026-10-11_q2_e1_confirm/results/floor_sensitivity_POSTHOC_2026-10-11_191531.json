@@ -1,0 +1,50 @@
+{
+ "label": "POST HOC (after the reading; no verdict)",
+ "git": "898e243f1b523efe1e88b300a83a3dd2745dc993",
+ "runs in the check": 176,
+ "honest part under 10 scored tokens": 32,
+ "honest part with 0 scored tokens": 11,
+ "honest scored tokens, median": 28.0,
+ "appended share of the readout tokens, median": 0.349025974025974,
+ "check as run (reading file)": {
+  "runs": 176,
+  "tasks": 136,
+  "mean D": 0.32160638882521425,
+  "95%": [
+   0.26999677908707165,
+   0.3772109837931449
+  ],
+  "swap p (one sign per task)": 9.999000099990002e-05
+ },
+ "check recomputed, all runs (fresh generator)": {
+  "runs": 176,
+  "tasks": 136,
+  "mean D": 0.32160638882521425,
+  "95%": [
+   0.26987052087568514,
+   0.3788417956967751
+  ],
+  "swap p (one sign per task)": 9.999000099990002e-05
+ },
+ "check with the floor (honest part >= 10; fresh generator)": {
+  "runs": 144,
+  "tasks": 116,
+  "mean D": 0.2591765276199699,
+  "95%": [
+   0.21940910906114752,
+   0.3020131903985978
+  ],
+  "swap p (one sign per task)": 9.999000099990002e-05
+ },
+ "check on the short runs only (honest part < 10; fresh generator)": {
+  "runs": 32,
+  "tasks": 27,
+  "mean D": 0.602540764248814,
+  "95%": [
+   0.451827170654361,
+   0.767740306045236
+  ],
+  "swap p (one sign per task)": 9.999000099990002e-05
+ },
+ "floored interval above 0": true
+}

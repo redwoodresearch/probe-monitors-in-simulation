@@ -1,0 +1,24 @@
+# TF-IDF (tool calls): each tool call's text as Qwen3-32B reads it, the {"name": ..., "arguments": ...} JSON through its
+# last content token (call_end, the main session's call readout). Calls come from the same policy in both arms, so any
+# separation reflects the agent reacting to different tool outputs (behavioral divergence), not simulator-written text.
+name: tfidf_calls
+examples: examples_2026-10-06_142532     # .run_cache/ staging (v3, 939 cells; leading-content fix; with calls)
+folds_file: folds_v3.json
+baselines:
+  tfidf_calls: {text: text, scrub: 0, segments: calls}
+output_variants: [all, no_editor]        # no_editor: text_editor calls dropped (calls carry no error records)
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer; sklearn "char" collapses whitespace runs)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true                       # TfidfTransformer: tf -> 1 + log(tf); smooth_idf true; l2 row norm
+C: 1.0                                   # fixed a priori (sklearn default); c_sensitivity is reported, not used to choose
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 20}                # label-shuffle null: per main task, one flip swaps the e1 and sim labels of all its cells; refit
+top_features: 25
+bootstrap: 1000
+seed: 0
+n_jobs: 16

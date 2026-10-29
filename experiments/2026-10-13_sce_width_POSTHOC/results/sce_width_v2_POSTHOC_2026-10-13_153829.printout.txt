@@ -1,0 +1,39 @@
+VERDICT target (i) fpr_0.01 full: {'primary_4b': 'fails (i) and (ii)', 'beside_pm10': 'fails (i)'}
+VERDICT target (i) fpr_0.01 remedy_b_harrell_davis: {'primary_4b': 'fails (i) and (ii)', 'beside_pm10': 'fails (i)'}
+VERDICT target (i) fpr_0.01 remedy_a1_pooled_all_honest: {'primary_4b': 'fails (i) and (ii)', 'beside_pm10': 'fails (i)'}
+VERDICT target (i) fpr_0.01 remedy_a2_pooled_other_folds: {'primary_4b': 'fails (i) and (ii)', 'beside_pm10': 'fails (i)'}
+VERDICT target (i) fpr_0.05 full: {'primary_4b': 'passes', 'beside_pm10': 'passes'}
+VERDICT target (i) fpr_0.05 remedy_b_harrell_davis: {'primary_4b': 'passes', 'beside_pm10': 'passes'}
+VERDICT target (i) fpr_0.05 remedy_a1_pooled_all_honest: {'primary_4b': 'passes', 'beside_pm10': 'passes'}
+VERDICT target (i) fpr_0.05 remedy_a2_pooled_other_folds: {'primary_4b': 'passes', 'beside_pm10': 'passes'}
+VERDICT target (i) partial AUROC 0-5% (changed statistic, same numeric bars): {'primary_4b': 'passes', 'beside_pm10': 'passes'}
+SIGN ii_gap: ['positive']
+SIGN iii_gap: ['negative']
+i_D fpr_0.01: full -1.6 [-13.5, +7.6] w21.1 | task only -1.6 [-3.8, +0.5] w4.2 share 0.04 | threshold only -1.6 [-13.8, +7.9] w21.7 share 0.98 | residual -0.02
+    nested models: single sd 4.95 range [-13.3, +12.9] | 4-model average sd 2.80
+    remedy b HD -3.6 [-11.6, +4.8] w16.4 | a1 pooled all -1.9 [-13.9, +16.1] w30.0 (FA real 0.9) | a2 pooled other folds -1.2 [-13.5, +14.7] w28.3 (FA real 1.3, sim honest 2.3)
+i_D fpr_0.05: full -2.3 [-4.8, +1.1] w5.9 | task only -2.3 [-3.9, -0.7] w3.1 share 0.30 | threshold only -2.3 [-4.5, +0.7] w5.2 share 0.85 | residual -0.15
+    nested models: single sd 1.37 range [-4.8, +1.3] | 4-model average sd 0.71
+    remedy b HD -2.1 [-4.5, +0.6] w5.1 | a1 pooled all -2.6 [-6.2, +1.0] w7.2 (FA real 4.9) | a2 pooled other folds -2.4 [-5.8, +1.0] w6.8 (FA real 5.3, sim honest 5.7)
+  i_D partial AUROC 0-5%: -1.7 [-7.3, +3.5] | tasks needed: 1096.423109503201 (projection; the bootstrap check only multiplies existing scores and cannot validate new tasks for a sparse-tail statistic (Amendment 3)); check at that size -13.4 .. +6.5
+i_gap fpr_0.01: full +2.9 [-0.1, +5.7] w5.8 | task only +2.9 [+0.1, +5.8] w5.7 share 0.98 | threshold only +2.9 [+1.7, +3.9] w2.3 share 0.15 | residual -0.13
+    nested models: single sd 0.90 range [-0.1, +5.1] | 4-model average sd 0.49
+    remedy b HD +3.5 [+0.1, +5.7] w5.7 | a1 pooled all +3.6 [-1.2, +6.3] w7.5 (FA real 0.9) | a2 pooled other folds +3.1 [-1.2, +6.2] w7.5 (FA real 1.3, sim honest 2.3)
+i_gap fpr_0.05: full +1.4 [-0.8, +3.1] w3.9 | task only +1.4 [-0.5, +3.4] w3.9 share 0.96 | threshold only +1.4 [+0.6, +1.6] w1.0 share 0.07 | residual -0.03
+    nested models: single sd 0.82 range [-0.7, +3.8] | 4-model average sd 0.43
+    remedy b HD +1.3 [-0.9, +3.1] w4.0 | a1 pooled all +0.7 [-1.3, +3.6] w4.9 (FA real 4.9) | a2 pooled other folds +1.0 [-1.6, +3.5] w5.2 (FA real 5.3, sim honest 5.7)
+  i_gap partial AUROC 0-5%: +1.6 [-0.7, +4.3] | tasks needed: 937.4393847285063 (projection; the bootstrap check only multiplies existing scores and cannot validate new tasks for a sparse-tail statistic (Amendment 3)); check at that size +0.5 .. +5.1
+ii_gap fpr_0.01: full +78.9 [+73.5, +81.2] w7.7 | task only +78.9 [+76.2, +81.7] w5.6 share 0.56 | threshold only +78.9 [+74.7, +79.8] w5.1 share 0.51 | residual -0.07
+    nested models: single sd 1.17 range [+75.9, +82.3] | 4-model average sd 0.62
+    remedy b HD +79.4 [+74.9, +81.7] w6.8 | a1 pooled all +80.3 [+75.1, +83.9] w8.8 (FA real 0.9) | a2 pooled other folds +80.7 [+75.3, +83.9] w8.6 (FA real 1.1, sim honest 53.5)
+ii_gap fpr_0.05: full +67.1 [+61.6, +70.4] w8.8 | task only +67.1 [+63.7, +70.4] w6.8 share 0.59 | threshold only +67.1 [+62.1, +69.6] w7.5 share 0.73 | residual -0.32
+    nested models: single sd 2.06 range [+62.7, +74.1] | 4-model average sd 1.11
+    remedy b HD +67.3 [+62.2, +70.7] w8.4 | a1 pooled all +65.6 [+61.4, +69.9] w8.5 (FA real 4.9) | a2 pooled other folds +65.3 [+61.1, +69.7] w8.6 (FA real 4.9, sim honest 73.9)
+  ii_gap partial AUROC 0-5%: +73.2 [+69.2, +77.0] | tasks needed: None (no number of tasks: the point estimate is beyond the bar)
+iii_gap fpr_0.01: full -10.4 [-14.3, -7.6] w6.8 | task only -10.4 [-13.2, -7.4] w5.8 share 0.72 | threshold only -10.4 [-12.8, -8.9] w3.9 share 0.31 | residual -0.03
+    nested models: single sd 1.45 range [-13.8, -6.5] | 4-model average sd 0.74
+    remedy b HD -9.8 [-14.1, -7.4] w6.7 | a1 pooled all -11.7 [-15.9, -6.6] w9.3 (FA real 0.9) | a2 pooled other folds -11.3 [-16.0, -7.0] w9.1 (FA real 1.1, sim honest 1.4)
+iii_gap fpr_0.05: full -14.3 [-17.9, -11.0] w6.8 | task only -14.3 [-17.6, -10.9] w6.7 share 0.98 | threshold only -14.3 [-15.1, -13.3] w1.9 share 0.07 | residual -0.05
+    nested models: single sd 1.00 range [-16.7, -11.3] | 4-model average sd 0.43
+    remedy b HD -14.6 [-17.9, -11.2] w6.7 | a1 pooled all -16.0 [-19.6, -11.1] w8.6 (FA real 4.9) | a2 pooled other folds -15.5 [-19.5, -11.3] w8.3 (FA real 5.2, sim honest 4.6)
+  iii_gap partial AUROC 0-5%: -13.8 [-17.0, -10.3] | tasks needed: None (no number of tasks: the point estimate is beyond the bar)

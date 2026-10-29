@@ -1,0 +1,19 @@
+# Q1 pilot settings (2026-10-06). Activations from experiments/2026-10-06_activation_extraction.
+extraction_run: 2026-10-06_la_activations_qwen3-32b_v2
+layers: [8, 16, 24, 32, 40, 48, 56, 63]
+poolings: [mean, emamax0.8, emamax0.95]
+task_filter: tasks where real attack epoch 1, epoch 2 and simulated attack are all under 32k tokens
+features: average of a transcript's segment vectors of one kind (tool_output or agent), per layer and pooling
+probe: standardized features, L2 logistic regression
+C: 0.01
+folds_file: folds_v2.json            # splits/: shared main-task folds
+exclusions_file: exclusions_v2.json  # splits/: the paired attack cells this analysis should reproduce
+bootstrap: 1000          # resamples of main tasks for 95% intervals
+random_directions: 1000  # unit directions in the standardized feature space; best chosen on the training folds
+seed: 0
+shuffle_null: 100        # label-shuffle refits per probe config: each main task's runs swap labels at random, same folds
+# Probes that get the null: every reported comparison and pooling (192 configs with the layers, kinds and variants,
+# 6x the mean-pooled, real-vs-sim-only null of the first version).
+shuffle_null_comparisons: [null_e1_vs_e2, pilot_real_vs_sim]
+shuffle_null_poolings: [mean, emamax0.8, emamax0.95]
+n_jobs: 32

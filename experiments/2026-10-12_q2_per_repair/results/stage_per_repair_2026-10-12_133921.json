@@ -1,0 +1,25 @@
+{
+ "plan": "PLAN.md Part B (this folder)",
+ "git": "0ae651d9c7a8600ab5b471d1c7e68d67bd6c9df5",
+ "sr": {
+  "staged run": "2026-10-12_q2_perrepair_sr_inputs_v1",
+  "arm": "sim-attack-sr-only",
+  "runs changed": 817,
+  "messages changed": 6146,
+  "inputs sha256": "88fd4f034963944558983ecb5f199a42ca41048b97d66b73997b8500e84da6f4",
+  "keys sha256": "32b2b30f05355d24a0acfbd202ed0f272427b0b075b4df572b17960516d7aeea"
+ },
+ "insert": {
+  "staged run": "2026-10-12_q2_perrepair_insert_inputs_v1",
+  "arm": "sim-attack-insert-only",
+  "runs changed": 427,
+  "messages changed": 1075,
+  "inputs sha256": "06e6101855e314c4ca892c1e994a295fc2aafa5bbf6f4fb372ff15cc81dc5667",
+  "keys sha256": "f9472106b58b61be505ef161436fb8a2c936842ec65633ddc9e326f1b0b7b129"
+ },
+ "simulated runs read": 939,
+ "fix939 changed runs": 823,
+ "runs changed by both repairs": 421,
+ "runs changed by the insert repair only": 6,
+ "runs changed by the str_replace repair only": 396
+}

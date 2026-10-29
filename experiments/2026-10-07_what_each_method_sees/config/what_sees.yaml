@@ -1,0 +1,27 @@
+# Inputs for "what each method sees". All local copies are checked against the sha256 recorded here or in the
+# S3 archive manifests named below. Nothing here is regenerated; every score was made by an earlier run.
+
+# The TF-IDF staging (one row per tool output, the probe's 32k cut and readout), baselines-q3's probe-matched staging.
+# Archived at s3://individual-aswin-surya-probe-shift-kill-2027-04-06/2026-10-06_q1_text_baselines/2026-10-06_142532/examples_2026-10-06_142532/
+staging_dir: ~/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/.run_cache/examples_2026-10-06_142532
+staging_outputs_sha256: 3c3a08126034f5ecd3451b171dea164ebc0744663c59e00026da6f461472813b  # decompressed outputs.jsonl
+
+# TF-IDF out-of-fold per-output scores (baselines-q3, config tfidf_{,heldout_env_}all_levels.yaml): "env" is
+# leave-one-environment-out, "task" the shared main-task folds. Each file holds real_vs_sim (scores e1, e2, sim) and
+# null_e1_vs_e2 (scores e1, e2), all outputs and no editor outputs.
+tfidf_dir: ~/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/results
+tfidf:
+  L0: {env: level0_scores_2026-10-06_190619.jsonl.gz, task: level0_scores_2026-10-06_190549.jsonl.gz}
+  L7: {env: level7_scores_2026-10-06_190619.jsonl.gz, task: level7_scores_2026-10-06_190549.jsonl.gz}
+
+# Probe (Qwen3-32B output_end, the frozen protocol's headline: layer chosen per outer fold by inner CV). Summaries from
+# origin/aswin/q1-results at a19209f (results/q1_gpu_<id>.json); step scores of the headline layers only, from the
+# S3 archive (experiments/2026-10-06_q1_segment_end/s3_archive_manifest.jsonl on that branch), sha256-checked on download.
+probe_results_commit: a19209f
+probe:
+  L0: {analysis: 2026-10-06_190522}   # extraction 2026-10-06_la_segment-end_qwen3-32b_alllayers_v1 (original text)
+  L7: {analysis: 2026-10-06_181139}   # extraction 2026-10-06_la_segment-end-scrub7_qwen3-32b_alllayers_v1 (frozen level-7 test)
+
+folds_file: folds_v3.json              # identical to v2, which the probe analyses name
+splits: {env: held_out_environment, task: main_task_folds}
+comparisons: [real_vs_sim, null_e1_vs_e2]

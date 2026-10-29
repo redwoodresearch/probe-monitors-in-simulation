@@ -1,0 +1,23 @@
+{
+ "target": "nm360_s3_sim",
+ "arm": "sim_attack@september",
+ "staged_file": "/ev/nm360_s3_sim_v1/inputs/sim_attack@september.jsonl",
+ "staged_sha": "0a150f89ac82b1f538bf63544eb296283fb7569b9d07fa89e24c3daf8773d1a9",
+ "template": "fixed",
+ "seed": 20261014,
+ "n": 1,
+ "tasks": null,
+ "rows": [
+  {
+   "line": 0,
+   "assistant_turns": 194,
+   "prefix_mismatches": 0,
+   "think_blocks": 194,
+   "nonempty_think_blocks": 0,
+   "staged_len": 32768,
+   "full_len": 101622,
+   "cut_equal": true
+  }
+ ],
+ "passes": true
+}

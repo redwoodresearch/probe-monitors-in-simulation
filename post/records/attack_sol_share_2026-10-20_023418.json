@@ -1,0 +1,177 @@
+{
+ "a_reduce_counts": {
+  "per_cell": {
+   "command|L48": {
+    "n_class1_all": 1309,
+    "n_class1_sol_free": 763,
+    "n_class1_sol_using": 546,
+    "n_class1_unknown": 0
+   },
+   "command|L63": {
+    "n_class1_all": 1309,
+    "n_class1_sol_free": 763,
+    "n_class1_sol_using": 546,
+    "n_class1_unknown": 0
+   },
+   "reply|L48": {
+    "n_class1_all": 1309,
+    "n_class1_sol_free": 763,
+    "n_class1_sol_using": 546,
+    "n_class1_unknown": 0
+   },
+   "reply|L63": {
+    "n_class1_all": 1309,
+    "n_class1_sol_free": 763,
+    "n_class1_sol_using": 546,
+    "n_class1_unknown": 0
+   }
+  },
+  "pooled_union_of_cells": {
+   "n_all": 1309,
+   "n_sol_free": 763,
+   "n_sol_using": 546,
+   "n_unknown": 0
+  },
+  "post_wording_basis": "'about 42% of simulated attack runs' = n_class1_sol_using / n_class1_all (writing 10-17 08:33)",
+  "reproduces_relay_546_1309": {
+   "cell command|L48": true,
+   "cell command|L63": true,
+   "cell reply|L48": true,
+   "cell reply|L63": true,
+   "pooled": true
+  }
+ },
+ "b_scope_rule": {
+  "blob": "bb7701bc60276723e1a16c24e2c142634fff0626 (run_detector_solfree_auroc.py @ d1db55766)",
+  "lines": {
+   "a path with no copy, or only incomplete copies, is UNKNOWN (not Sol-free, not Sol-using); routed or not plays no part": "L135",
+   "cell sample: the simulated runs with a run score in the cell (problem c_simatk_vs_run1, prefix 'sim|')": "L142-L143 (rs = run_scores; keys = sorted(rs))",
+   "n_class1_all and n_class1_sol_using": "L210-L211",
+   "per run: Sol verdict by normalised eval path (record run_keys value, '#e<n>' and a leading 'runs/' dropped)": "L192",
+   "pooled Sol-flagged count: the union over cells of simulated keys flagged SOL": "L180",
+   "verdict sources: scan rows, the usage record and the header scan, every copy": "L119, L124, L128"
+  }
+ },
+ "c_routed_variants": {
+  "R1 family 'sim attack' and routed": {
+   "equals_relay_550_1322": true,
+   "gap_vs_reduce_pooled": {
+    "in_both_with_different_sol_verdict": [],
+    "in_reduce_only": {
+     "n": 0,
+     "n_sol_by_item_c_flags": 0,
+     "paths": []
+    },
+    "in_routed_only": {
+     "n": 13,
+     "n_sol_by_usage_record": 4,
+     "paths": [
+      "2026-10-09_182505_scaleup/sim_attack@september/t96_file_indexing/2026-10-10T03-07-54-00-00_la-file-indexing-sim-attack-1_HguHnLGfR6ez3N9MR2SkcT.eval",
+      "2026-10-14_173012_scaleup311_q1_fu/sim_attack@september/t387_tiktok/2026-10-15T02-42-05-00-00_la-tiktok-sim-attack-1_TAzgNNcMmGrnVEfAV3w68f.eval",
+      "2026-10-14_173012_scaleup311_q1_fu/sim_attack@september/t389_model_registry/2026-10-15T03-01-05-00-00_la-model-registry-sim-attack-1_LGaaHGHZ5NymsgZ2npAXbA.eval",
+      "2026-10-14_173012_scaleup311_q2_fu/sim_attack@september/t399_model_registry/2026-10-15T02-00-01-00-00_la-model-registry-sim-attack-1_9wpydSfioeKtTC4aBXaEvP.eval",
+      "2026-10-14_173012_scaleup311_q3_fu/sim_attack@september/t301_auto_workflow/2026-10-15T02-31-04-00-00_la-auto-workflow-sim-attack-1_b5yUiNReVwWvRvbQoSLHc8.eval",
+      "2026-10-14_newmains_s2_fu/sim_attack@september/nm079_file_indexing/2026-10-15T05-15-18-00-00_la-file-indexing-sim-attack-1_B3wPgmgu4mpcrJTzMpegFa.eval",
+      "2026-10-14_newmains_s4r_fu/sim_attack@september/nm024_auto_workflow/2026-10-15T15-04-27-00-00_la-auto-workflow-sim-attack-1_hVuQx7uyn6KpkknSFPNxif.eval",
+      "2026-10-14_newmains_s5r_fu/sim_attack@september/nm085_file_indexing/2026-10-15T08-57-43-00-00_la-file-indexing-sim-attack-1_9n9kebeQhwZ5M5ia8fifQk.eval",
+      "2026-10-14_newmains_s5r_fu/sim_attack@september/nm117_media_processing/2026-10-15T08-57-44-00-00_la-media-processing-sim-attack-1_TbobCbiRNsJe5cc9qaqN9F.eval",
+      "2026-10-15_sp493_sim_L2/sim_attack@september/t615_media_processing/2026-10-16T04-06-35-00-00_la-media-processing-sim-attack-1_fd8sE69jVF9gG8bJPeWWrT.eval",
+      "2026-10-15_sp493_sim_Y/sim_attack@september/t706_shared_dotfiles/2026-10-16T08-01-51-00-00_la-shared-dotfiles-sim-attack-1_7LhSi52nX7d8VNWzLX5o4e.eval",
+      "2026-10-15_sp493_sim_Y/sim_attack@september/t819_tiktok/2026-10-16T07-19-56-00-00_la-tiktok-sim-attack-1_9AuA7c27cLao97z6CWgHAe.eval",
+      "2026-10-15_sp493_sim_Y/sim_attack@september/t843_slack_clone/2026-10-16T07-50-51-00-00_la-slack-clone-sim-attack-1_hZMn2hn8xWWEVFf5GQoerq.eval"
+     ]
+    }
+   },
+   "kept_rows": 1322,
+   "n_incomplete": 4,
+   "n_runs": 1322,
+   "n_sol_using": 550
+  },
+  "R2 = R1 and arm 'sim_attack@september'": {
+   "equals_relay_550_1322": true,
+   "gap_vs_reduce_pooled": {
+    "in_both_with_different_sol_verdict": [],
+    "in_reduce_only": {
+     "n": 0,
+     "n_sol_by_item_c_flags": 0,
+     "paths": []
+    },
+    "in_routed_only": {
+     "n": 13,
+     "n_sol_by_usage_record": 4,
+     "paths": [
+      "2026-10-09_182505_scaleup/sim_attack@september/t96_file_indexing/2026-10-10T03-07-54-00-00_la-file-indexing-sim-attack-1_HguHnLGfR6ez3N9MR2SkcT.eval",
+      "2026-10-14_173012_scaleup311_q1_fu/sim_attack@september/t387_tiktok/2026-10-15T02-42-05-00-00_la-tiktok-sim-attack-1_TAzgNNcMmGrnVEfAV3w68f.eval",
+      "2026-10-14_173012_scaleup311_q1_fu/sim_attack@september/t389_model_registry/2026-10-15T03-01-05-00-00_la-model-registry-sim-attack-1_LGaaHGHZ5NymsgZ2npAXbA.eval",
+      "2026-10-14_173012_scaleup311_q2_fu/sim_attack@september/t399_model_registry/2026-10-15T02-00-01-00-00_la-model-registry-sim-attack-1_9wpydSfioeKtTC4aBXaEvP.eval",
+      "2026-10-14_173012_scaleup311_q3_fu/sim_attack@september/t301_auto_workflow/2026-10-15T02-31-04-00-00_la-auto-workflow-sim-attack-1_b5yUiNReVwWvRvbQoSLHc8.eval",
+      "2026-10-14_newmains_s2_fu/sim_attack@september/nm079_file_indexing/2026-10-15T05-15-18-00-00_la-file-indexing-sim-attack-1_B3wPgmgu4mpcrJTzMpegFa.eval",
+      "2026-10-14_newmains_s4r_fu/sim_attack@september/nm024_auto_workflow/2026-10-15T15-04-27-00-00_la-auto-workflow-sim-attack-1_hVuQx7uyn6KpkknSFPNxif.eval",
+      "2026-10-14_newmains_s5r_fu/sim_attack@september/nm085_file_indexing/2026-10-15T08-57-43-00-00_la-file-indexing-sim-attack-1_9n9kebeQhwZ5M5ia8fifQk.eval",
+      "2026-10-14_newmains_s5r_fu/sim_attack@september/nm117_media_processing/2026-10-15T08-57-44-00-00_la-media-processing-sim-attack-1_TbobCbiRNsJe5cc9qaqN9F.eval",
+      "2026-10-15_sp493_sim_L2/sim_attack@september/t615_media_processing/2026-10-16T04-06-35-00-00_la-media-processing-sim-attack-1_fd8sE69jVF9gG8bJPeWWrT.eval",
+      "2026-10-15_sp493_sim_Y/sim_attack@september/t706_shared_dotfiles/2026-10-16T08-01-51-00-00_la-shared-dotfiles-sim-attack-1_7LhSi52nX7d8VNWzLX5o4e.eval",
+      "2026-10-15_sp493_sim_Y/sim_attack@september/t819_tiktok/2026-10-16T07-19-56-00-00_la-tiktok-sim-attack-1_9AuA7c27cLao97z6CWgHAe.eval",
+      "2026-10-15_sp493_sim_Y/sim_attack@september/t843_slack_clone/2026-10-16T07-50-51-00-00_la-slack-clone-sim-attack-1_hZMn2hn8xWWEVFf5GQoerq.eval"
+     ]
+    }
+   },
+   "kept_rows": 1322,
+   "n_incomplete": 4,
+   "n_runs": 1322,
+   "n_sol_using": 550
+  }
+ },
+ "gates": {
+  "G_ITEM_C_GATES": "PASS (reduce() returned: its self-test, positive control and model-name gates passed)",
+  "G_REPRODUCES_546_1309": "PASS (5 of 5)",
+  "G_ROUTED_EQUALS_550_1322": {
+   "R1 family 'sim attack' and routed": true,
+   "R2 = R1 and arm 'sim_attack@september'": true
+  },
+  "G_ROUTED_ROWS": {
+   "R1 family 'sim attack' and routed": "kept 1322 rows",
+   "R2 = R1 and arm 'sim_attack@september'": "kept 1322 rows"
+  }
+ },
+ "item_c_attack_record": {
+  "sha256": "1b7d452c9ebf4c67f4339996946a01d5c3b3fd6cab6b7e66e10baea5aa56aeab",
+  "where": "Volume only (review O1): item (c) kept its AUROCs outside git"
+ },
+ "label": "POST HOC, descriptive; not route C; the attack-side Sol share's committed source",
+ "provenance": {
+  "app": "probe-shift_aswin-surya_sub-routecsim_atksol_kill-2026-11-19",
+  "git": "1c263d8428233d7ce5c4847aaaf7ca57140106cb",
+  "inputs": {
+   "attack": {
+    "commit": "80d75b27e",
+    "path": "experiments/2026-10-16_attack_refit3/results/attack_all_refit3_2026-10-16_141813.json",
+    "sha256": "df7171a98d82d28ae86653480be922d978fc36104c63f622b3a69fb43a074eac"
+   },
+   "header": {
+    "commit": "4326d76e9",
+    "path": "experiments/2026-10-15_e2e_sim_pipeline/results/simh_cont_headers_2026-10-17_081840.json",
+    "sha256": "a7638c2d19f6a56f2953babca0ea98a7fd63854cbec21be6f1861ea452941e5d"
+   },
+   "scan": {
+    "commit": "ff8ea35a7",
+    "path": "experiments/2026-10-16_attack_prompt_provenance/results/openai_usage_2026-10-16_185845_scan_rows.json",
+    "sha256": "0d0392fb773b1804a3ded3b4f3fd2f4dc8e7ae33b1ee660dd7200d0550410197"
+   },
+   "solfree_script": {
+    "commit": "d1db55766",
+    "path": "experiments/2026-10-15_e2e_sim_pipeline/run_detector_solfree_auroc.py",
+    "sha256": "a82879f4c4159352812ec69c23db40ee0d747e31bc7c1e4396c3813b5c76e36e"
+   },
+   "usage": {
+    "commit": "de0bf0301",
+    "path": "experiments/2026-10-16_attack_prompt_provenance/results/openai_usage_reanalysis_2026-10-16_191817.json",
+    "sha256": "a0bcb2cef1ec21d598dda1795cc8b027eaf49235ba191f5d4c9643e108701102"
+   }
+  },
+  "out_name": "attack_sol_share_2026-10-20_023418.json",
+  "out_volume": "probe-shift_aswin-surya_sub-routecsim_results_kill-2026-11-19",
+  "script_sha256": "20b772e333d5ae9c7bfed3d0216700a4161fc489d71d9219a2a23cac8b12d06b"
+ },
+ "what": "[^sim]'s attack-side share, given a committed source (2e's GO 10-20 ~02:2x; 09's ruling: the \"about 5%\" is UNSOURCED and NOT computed here).\nPOST HOC; not route C (attack runs are unchanged). NOT RUN until a short review PASS and refresh3's ARMED line.\n\nThe post prints \"GPT-5.6-Sol wrote part of the output in about 42% of simulated attack runs\". Writing's 10-17 08:33 relay gives 546 / 1,309,\nfrom item (c) (run_detector_solfree_auroc.py @ d1db55766, blob bb7701bc6), whose values file (8282cb5e...) is not in git. This tool reruns\nitem (c)'s own reduce() on the attack detector only, imported from its blob, on the committed inputs item (c) pinned. Then it records:\n- (a) reduce()'s counts per attack-detector cell (.detectors.attack.cells[<cell>].n_class1_sol_using / n_class1_all) and over the union of the\n  cells' simulated runs (pooled). Expected per writing: 546 / 1,309 (the gate G_REPRODUCES_546_1309 is a recorded boolean, not a STOP);\n- (b) the scope rule reduce() applied, cited by line in its blob;\n- (c) the routed-runs variant from the usage record @ de0bf0301 (0d's 10-17 00:36 \"routed runs only\", 550 / 1,322). The usage record holds no\n  definition of that query, so two filters on its own fields are stated here BEFORE the run, both are reported, and each is compared with\n  550 / 1,322 as a boolean: R1 = family \"sim attack\" and routed true; R2 = R1 and arm \"sim_attack@september\" (the lead arm). The gap between\n  (a) and each R is explained by key: simulated runs in only one of them, with their Sol verdicts.\nThe record bytes (counts and gates only; item (c)'s full attack record, with its AUROCs, goes to the Volume only: review O1) are built in the container,\nwritten to the results Volume with exclusive create and committed, then returned. The laptop prints only gate results and booleans."
+}

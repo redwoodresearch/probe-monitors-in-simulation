@@ -1,0 +1,17 @@
+# Resolved settings: Apollo's deception probe (repe.yaml recipe) retrained on Qwen3-32B.
+# Apollo's original: Llama-3.3-70B, layer 22 of 80, method lr, reg_coeff 10, val_fraction 0.2, train_data repe_honesty__plain.
+run: 2026-10-05_apollo_deception-probe_qwen3-32b
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+chat_template: {enable_thinking: false}
+primary_layer: 32            # middle of 64 decoder layers (0-indexed); activations are the residual stream after it
+layers: [16, 24, 32, 40, 48] # fit alongside for reference
+train_data: repe_honesty__plain   # instructed pairs: first 512 true statements (306 exist), honest/dishonest user prompt
+detect: statement minus its last five words (Apollo's split); statements of five words or fewer give no tokens
+eval_data: roleplaying__plain__llama-70b-3.3   # Llama-written responses, Apollo-graded: >=6 deceptive, <=2 honest, else ambiguous (excluded)
+method: logistic regression, per-token training on standardized activations, no intercept (Apollo LogisticRegressionDetector)
+reg_coeff: 10                # sklearn C = 1 / reg_coeff
+max_iter: 2000
+val_fraction: 0.2            # held-out instructed pairs, split by pair
+split_seed: 0
+aggregation: mean of per-token scores over the detected tokens

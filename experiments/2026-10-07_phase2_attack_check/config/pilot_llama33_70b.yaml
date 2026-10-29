@@ -1,0 +1,31 @@
+# The Llama-3.3-70B honest check's full launch, only after the smoke (pilot_llama33_70b_smoke.yaml) passes: the other
+# 38 runs (19 tasks: run_pilot.py --tasks, every task but t17_slack_clone) at once on 4 servers of servers_llama33_70b.yaml,
+# as the Qwen3-32B native check's relaunch (pilot_qwen3_32b_native_relaunch.yaml) except the policy and the server.
+# No canary gate (the smoke ran it); canary_watch.py --abort-missing-only still stops the launch on any str_replace whose
+# new_str is missing. Job stop $160 billed, servers, smoke and devbox together (the job watcher).
+#   launch_servers.py --count 4 --server-config servers_llama33_70b.yaml
+#   PATH=$PWD/fixed_digest_lookup:$PATH IMAGES_JSON=<setup_devbox images.json> run_pilot.py \
+#       --pilot-config config/pilot_llama33_70b.yaml --tasks <the 19 task keys> --base-urls <4 servers> \
+#       --commit <commit> --out <run dir>
+#   canary_watch.py <run dir> t01_media_processing --open-on-clean-finish --abort-missing-only
+
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september_ctx
+simulators: []
+real_arms: [honest_a, honest_b]
+policy: vllm/meta-llama/Llama-3.3-70B-Instruct
+server_checks: [tiny, repetition]
+policy_limits:
+  max_tokens: 8192
+  context_window: 40960
+
+max_runs_per_server: 10
+max_real_runs: 38
+reference_tries: 1
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+
+spend:
+  cap_usd: 0
+  worst_case_limit_usd: 1
+  worst_per_sim_run_usd: 0
+  prior_per_sim_run_usd: 0

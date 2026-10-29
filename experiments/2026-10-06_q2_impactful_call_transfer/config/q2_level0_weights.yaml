@@ -1,0 +1,5 @@
+# Level-0 Q2 probes with their weights, for the rendering swap (2026-10-07): the 64-layer level-0 fits predate weight
+# saving. The same fit as alllayers/ at layers 9, 16 and 17 (level 0's pre_call headline layers), real labels only, into
+# its own out_sub; fit() saves w, mu and sd for real labels. Merged over q2_probes.yaml and q2_alllayers.yaml.
+out_sub: level0_weights
+layers: [9, 16, 17]

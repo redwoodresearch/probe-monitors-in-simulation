@@ -1,0 +1,12 @@
+# Template slips, step 2 (PLAN.md addendum 3): Qwen3.5-27B reads the planted e2 runs and the 8 controls, as its dump read
+# the originals (../2026-10-06_qwen35_replication/config/qwen35_alllayers.yaml), saving only the detector's seven layers.
+run: 2026-10-12_q2_tplslips_plants_qwen35-27b_v1
+inputs_from: 2026-10-12_q2_tplslips_plants_inputs_v1   # staged by run_plant_stage.py (results/plant_stage_2026-10-12_124505.json)
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null                                        # whole transcripts, as the dump
+pad_to: 4096
+shards: 16
+chunk_size: 25
+layers: [16, 24, 32, 40, 48, 56, 63]                    # the frozen detector's layers

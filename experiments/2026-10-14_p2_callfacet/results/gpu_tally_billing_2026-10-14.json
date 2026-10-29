@@ -1,0 +1,106 @@
+[
+  {
+    "app": "ap-DrLpeEb2X1SLjpDQO9JHLM",
+    "description": "probe-shift_aswin-surya_sub-q3onpol_extract_kill-2026-11-08",
+    "resources": [
+      "CPU",
+      "H200",
+      "Memory"
+    ],
+    "cost_by_resource": {
+      "CPU": 0.04506565,
+      "H200": 4.27620994,
+      "Memory": 0.48225099
+    },
+    "intervals_utc": [
+      "2026-10-10T09:00:00",
+      "2026-10-10T10:00:00"
+    ]
+  },
+  {
+    "app": "ap-IUT5KkMDFzEr50wSdmTVhE",
+    "description": "probe-shift_aswin-surya_sub-q3onpol_extract_kill-2026-11-08",
+    "resources": [
+      "CPU",
+      "H200",
+      "Memory"
+    ],
+    "cost_by_resource": {
+      "CPU": 0.00588367,
+      "H200": 0.52714436,
+      "Memory": 0.05944888
+    },
+    "intervals_utc": [
+      "2026-10-10T08:00:00"
+    ]
+  },
+  {
+    "app": "ap-OjzCNnUowwKvM8p7dK1Vl9",
+    "description": "probe-shift_aswin-surya_sub-q3onpol_extract_kill-2026-11-08",
+    "resources": [
+      "CPU",
+      "H200",
+      "Memory"
+    ],
+    "cost_by_resource": {
+      "CPU": 0.18739411,
+      "H200": 19.05797463,
+      "Memory": 2.14926939
+    },
+    "intervals_utc": [
+      "2026-10-10T08:00:00",
+      "2026-10-10T09:00:00"
+    ]
+  },
+  {
+    "app": "ap-QdjYiE6DWdXWbvewu8GKib",
+    "description": "probe-shift_aswin-surya_sub-q3onpol_extract_kill-2026-11-08",
+    "resources": [
+      "CPU",
+      "H200",
+      "Memory"
+    ],
+    "cost_by_resource": {
+      "CPU": 0.01761677,
+      "H200": 1.66812381,
+      "Memory": 0.18812321
+    },
+    "intervals_utc": [
+      "2026-10-10T09:00:00"
+    ]
+  },
+  {
+    "app": "ap-jthQXUaoaI5tAZdG3Cnakh",
+    "description": "probe-shift_aswin-surya_sub-q3onpol_extract_kill-2026-11-08",
+    "resources": [
+      "CPU",
+      "H200",
+      "Memory"
+    ],
+    "cost_by_resource": {
+      "CPU": 0.04891430,
+      "H200": 4.88043183,
+      "Memory": 0.55039231
+    },
+    "intervals_utc": [
+      "2026-10-09T21:00:00"
+    ]
+  },
+  {
+    "app": "ap-n5fexV2oXlBnnF3Wkj47uw",
+    "description": "probe-shift_aswin-surya_sub-q3onpol_extract_kill-2026-11-08",
+    "resources": [
+      "CPU",
+      "H200",
+      "Memory"
+    ],
+    "cost_by_resource": {
+      "CPU": 0.07533550,
+      "H200": 7.39646423,
+      "Memory": 0.83413870
+    },
+    "intervals_utc": [
+      "2026-10-11T21:00:00"
+    ]
+  }
+]

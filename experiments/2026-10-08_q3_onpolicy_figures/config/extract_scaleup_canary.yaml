@@ -1,0 +1,14 @@
+# The September scale-up's canary (2026-10-09_173815_scaleup_canary, t21–t25): attack, honest_a, honest_b and
+# sim_attack@september, staged by run_replay_readouts.py --segment-ends --stage scaleup_canary_segends_v1: 20 context
+# epochs, 915,485 tokens; estimate about $0.50 at the 20-task rerun's billed $5.84 per 10.56M tokens.
+run: 2026-10-10_scaleup_canary_segends_v1
+inputs: scaleup_canary_segends_v1
+inputs_sha256:
+  attack.jsonl: 58a5018bfec97475f91421479c6006035f2af1c91ab520690f07386abcda7b50
+  honest_a.jsonl: e1e92cd99fd770fa4d99f53c6666bb928c82258f00f377d77634ca8cf81eda89
+  honest_b.jsonl: 648861af74a9365270f3e8d820499dc5c47d1e5420890e3c350dc1c704df11bc
+  sim_attack@september.jsonl: 831d79c8474a52ec99da5468cfdf84ffc990a9d5258238491e6b0f9e33da274a
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 10
+pad_to: 4096

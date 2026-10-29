@@ -1,0 +1,347 @@
+{
+ "label": "Part (b) input manifest (RULE.md); every file is checked by sha256 before any number; git sources are read with git show",
+ "volumes": {
+  "solavg": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+  "p2": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13"
+ },
+ "local": {
+  "probe_list": {
+   "git": "9866abcb7:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/p1_probe_list_v8a.json",
+   "sha256": "0cfe111739cc2e69f3a58e116820c76c0f5f977652e725cb2c23ff48fccea4ae"
+  },
+  "a24_jsonl_gz": {
+   "git": "fc60d1d3b:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/p1_main_2026-10-14_162810.jsonl.gz",
+   "sha256": "881474d8f339d0af48552e9b33b5ad5e5f6831d71f8c808c21869b5f14214c69",
+   "decompressed_sha256": "314a1b7ab17aab1d861b0311e2133237ee1591c33e10920288da4c92ffd4db4f"
+  },
+  "z22i": {
+   "git": "f6d197918:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/correctedb_z22i_2026-10-14_161145.json",
+   "sha256": "3b4eea9d8ae26705756caa30ef8ee25f82e68484a97742b8c3c853f55d8db2b1"
+  },
+  "v6": {
+   "git": "0ed287c95:experiments/2026-10-14_xerr_prelim_09/results/xerr_v6_2026-10-14_161122.json",
+   "sha256": "e789144b62f71e0fb168dc3106656c2b5f29aadafe12df0f86dd1f74441d7645"
+  },
+  "t196": {
+   "git": "HEAD:experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json",
+   "sha256": "55d9a8ec68f4685410d65c97bb84f470efb7cd8f05287384f92465ed5eadedbb"
+  },
+  "labels": {
+   "git": "62e23d67be0cf9ec87307fea973190a7cfa8115d:experiments/2026-10-15_attempt_rate/inputs/claimc_labels_reduced.json",
+   "sha256": "d00e88773fc2a71bef51e1ff0ccc2559932f5c3a306a8f5604c5248e797dc995"
+  },
+  "r36": {
+   "git": "03f14c2d407e63699532a984b99d76ad8a6401aa:experiments/2026-10-06_q3_attack_detector/results/run_scores_2026-10-06_175649/runs.json",
+   "sha256": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96"
+  }
+ },
+ "probes": [
+  {
+   "probe_id": "sol_a|avg_top2|corrected|none|tight",
+   "label": "Sol (a)",
+   "role": "main",
+   "folds": 5,
+   "rows": {
+    "volume": "solavg",
+    "path": "xfer/correctedb_tight22g_2026-10-14_144709/perrow_asis_tight__a__averaged_reply_top2.npz",
+    "sha256": "aca93022c00ebb8394977be5013aaf53f4881e35b401c91ab8ffad846cd52d50",
+    "pin_from": "A24 list source.sha256 (the list's npz source); 22g record source.record_sha256 06293dc904d20dcb0f947f89df852876677071ce2a59594bce2924918d73a4f3"
+   },
+   "run_scores": {
+    "kind": "npz_mean",
+    "note": "A24 load_rows: per run float(np.mean(list of row scores in file order))"
+   }
+  },
+  {
+   "probe_id": "fibs|reply_mean|corrected|none",
+   "label": "FIBS",
+   "role": "main",
+   "folds": 1,
+   "rows": {
+    "volume": "p2",
+    "path": "fibs/2026-10-14_124948/reply_mean.npz",
+    "sha256": "576538939ae53f9afbf6da8b7e7123e698413c34331baebf7193d8236266f666",
+    "pin_from": "record rows.reply_mean"
+   },
+   "run_scores": {
+    "kind": "json",
+    "git": "origin/aswin/p2-fibs-score:experiments/2026-10-14_p2_fibs_pair/results/fibs_scores_2026-10-14_124948.json",
+    "sha256": "366d594cd719d52e9bb11d34bf4d3491b6cbd82d64f61efa73f476773cb49b1a",
+    "keypath": [
+     "run_scores",
+     "reply_mean"
+    ],
+    "rows_keypath": [
+     "rows",
+     "reply_mean"
+    ]
+   }
+  },
+  {
+   "probe_id": "harmfulness|reply_mean|corrected|none",
+   "label": "harmfulness",
+   "role": "main",
+   "folds": 1,
+   "rows": {
+    "volume": "p2",
+    "path": "2026-10-14_p2_refusal_harm/2026-10-14_145748/harmfulness_reply_mean.npz",
+    "sha256": "28678271ce765b669d92127f15ff55092208c973d3232b4def0e3b113d52b675",
+    "pin_from": "record probes.harmfulness.rows.reply_mean"
+   },
+   "run_scores": {
+    "kind": "json",
+    "git": "origin/aswin/p2-fibs-score:experiments/2026-10-14_p2_refusal_harm/results/scores_2026-10-14_145748.json",
+    "sha256": "d0b7f028f8ac3795dd946a261f384f474748a296772fb1f2f2f22cecaac6c961",
+    "keypath": [
+     "probes",
+     "harmfulness",
+     "run_scores",
+     "reply_mean"
+    ],
+    "rows_keypath": [
+     "probes",
+     "harmfulness",
+     "rows",
+     "reply_mean"
+    ]
+   }
+  },
+  {
+   "probe_id": "refusal|reply_mean|corrected|none",
+   "label": "refusal",
+   "role": "main",
+   "folds": 1,
+   "rows": {
+    "volume": "p2",
+    "path": "2026-10-14_p2_refusal_harm/2026-10-14_145748/refusal_reply_mean.npz",
+    "sha256": "8b8e64752f5ee67077ef0ee7f018cc683cde2f51ddaf07e64ccc46bd028ff360",
+    "pin_from": "record probes.refusal.rows.reply_mean"
+   },
+   "run_scores": {
+    "kind": "json",
+    "git": "origin/aswin/p2-fibs-score:experiments/2026-10-14_p2_refusal_harm/results/scores_2026-10-14_145748.json",
+    "sha256": "d0b7f028f8ac3795dd946a261f384f474748a296772fb1f2f2f22cecaac6c961",
+    "keypath": [
+     "probes",
+     "refusal",
+     "run_scores",
+     "reply_mean"
+    ],
+    "rows_keypath": [
+     "probes",
+     "refusal",
+     "rows",
+     "reply_mean"
+    ]
+   }
+  },
+  {
+   "probe_id": "highstakes|reply_mean|corrected|none",
+   "label": "high-stakes",
+   "role": "main",
+   "folds": 1,
+   "rows": {
+    "volume": "p2",
+    "path": "2026-10-14_p2_highstakes/2026-10-14_133519/highstakes_reply_mean.npz",
+    "sha256": "98e246bd8441a14f0c9870a79d5645ba54953f86940712ae7acc12f4c9d02838",
+    "pin_from": "record probes.highstakes.rows.reply_mean"
+   },
+   "run_scores": {
+    "kind": "json",
+    "git": "origin/aswin/p2-fibs-score:experiments/2026-10-14_p2_highstakes/results/scores_2026-10-14_133519.json",
+    "sha256": "2d251dee71a4a0366bd9549fcc3726511fe576aafce0bb6a913353d7fc06f38a",
+    "keypath": [
+     "probes",
+     "highstakes",
+     "run_scores",
+     "reply_mean"
+    ],
+    "rows_keypath": [
+     "probes",
+     "highstakes",
+     "rows",
+     "reply_mean"
+    ]
+   }
+  },
+  {
+   "probe_id": "c_asis|avg_top2|corrected|none",
+   "label": "c_asis (positive control)",
+   "role": "positive control",
+   "folds": 5,
+   "rows": {
+    "volume": "solavg",
+    "path": "xfer/asis_2026-10-14_135701/rows_2026-10-14_142228/c_asis_tight__avg_top2.npz",
+    "sha256": "c028a5fb8719fab1bc3990abb467b42eb5e417b2a82ee19d6e6205de775f8c21",
+    "pin_from": "record rows_file.files.c_asis_tight__avg_top2"
+   },
+   "run_scores": {
+    "kind": "json",
+    "git": "9866abcb7:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/asis_scores_2026-10-14_142228.json",
+    "sha256": "59c051a4ff9cc40811745a119251224f031cdaf479b8d3fb909c1059ab94da31",
+    "keypath": [
+     "run_scores",
+     "avg_top2",
+     "c_asis_tight"
+    ],
+    "rows_keypath": [
+     "rows_file",
+     "files",
+     "c_asis_tight__avg_top2"
+    ]
+   }
+  }
+ ],
+ "own_a": {
+  "record": {
+   "git": "cc53afc3a:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/correctedb_scores_2026-10-14_164934.json",
+   "sha256": "c002d5f822e49d7877f4e8b79a80ca9dd2e2f16c664b921d3ad12cb3da4c49ac",
+   "volume": "solavg"
+  },
+  "z22j": {
+   "git": "b11a58831:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/correctedb_z22j_2026-10-14_175328.json",
+   "sha256": "ea42d0d4a39990f031a9f2d1fcb1122965bd7f8796c4124adad18f9a897f545b"
+  },
+  "layer_choice": [
+   [
+    49,
+    50
+   ],
+   [
+    49,
+    50
+   ],
+   [
+    50,
+    51
+   ],
+   [
+    49,
+    50
+   ],
+   [
+    49,
+    50
+   ]
+  ],
+  "readouts": {
+   "cmd_A": {
+    "label": "command A (content-only call end, L63)",
+    "rows_keypath": [
+     "saved",
+     "cmd",
+     "cmdA",
+     "rows|own_a_tight"
+    ],
+    "run_keypath": [
+     "scores",
+     "cmd",
+     "A_content_only_call_end",
+     "own_a_tight"
+    ],
+    "z22j_key": "A_content_only_call_end|tight|honest_B"
+   },
+   "avg_top2": {
+    "label": "averaged reply (mean of the fold's two chosen layers)",
+    "rows_keypath": [
+     "saved",
+     "tight",
+     "avg"
+    ],
+    "run_keypath": [
+     "scores",
+     "own_a_tight_substituted",
+     "avg_top2"
+    ],
+    "z22j_key": "avg_top2|tight|honest_B_u_C"
+   }
+  },
+  "split": "v6 universe_and_split: eligibility_half (selection, cohort 93), estimation_half (estimation, cohort 90)",
+  "targets": [
+   0.25,
+   0.5,
+   0.75
+  ]
+ },
+ "g4_command_file": {
+  "volume": "solavg",
+  "path": "xfer/correctedb_tight22g_2026-10-14_144709/perrow_asis_2026-10-14_135701_cmd__a__A_corrected_L63.npz",
+  "sha256": "3b0645c9c19456278fb6090b94476425b13a156a45a60a4508340068ef182d41",
+  "use": "keys only: 22i's universe is the union of its two tight files' tasks with T196"
+ },
+ "pool": {
+  "worlds": [
+   "honest_b",
+   "honest_c"
+  ],
+  "membership": "a24",
+  "note": "a24 = honest runs of these worlds whose task is in A24's 195-task universe (A24's A[w] filter); g4 uses 22i's membership (all units of the worlds)"
+ },
+ "part_a_inputs_pinned_now": {
+  "unusable": {
+   "git": "f0a371a29:experiments/2026-10-14_q3_q35_realhonest_1e4/results/unusable_by_cause_2026-10-14_234651.json",
+   "sha256": "80741883e54ee943674762fd0d97aa749063678d228c21e25f8c38be39cc97de"
+  },
+  "cue_d_relaunch": {
+   "git": "f0a371a29:experiments/2026-10-14_q3_q35_realhonest_1e4/results/cue_d_rh_2026-10-14_234621.json",
+   "sha256": "9ae8d992fb17e79ee6e2662086de3fc29709b2d4d71d926babe38285e56bb133",
+   "flag_field": "msg_cue_d"
+  },
+  "relaunch_sol_record": {
+   "git": "f874fb9c1:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_rh1e4_v1__honest_b_2026-10-14_235427.json",
+   "sha256": "afc52f7911536610f6a055a95b9b1303455b12e2be92e2627e7c6ef45f7f8eed",
+   "files": "convaudit_work:/ref/relaunch/sol/",
+   "manifest_sha256": "1893f22653f417ef5281e8292ac3249124465c2e299765350e59e56e7eca9dcc"
+  }
+ },
+ "own_frac100_L48": {
+  "index": {
+   "git": "84df4d069:experiments/2026-10-14_p2_family_expansion/results/own_family_unit_files_2026-10-15_000120.json",
+   "sha256": "4a8156107399630f791d65802044d35f21be76645205a026e661c46b1cc8084e"
+  },
+  "volume": "p2",
+  "files": {
+   "C": {
+    "open": {
+     "path": "famexp/2026-10-14_163027/pack_open_2026-10-14_180501/own_frac100_L48__C.npz",
+     "sha256": "0507648b648bf890367935d68c557641e3f5ea62672b211928d6e016a2c5f196"
+    },
+    "sim": {
+     "path": "famexp/2026-10-14_163027/pack_sim_sealed_2026-10-14_181123/own_frac100_L48__C.npz",
+     "sha256": "1fd6d7cdec936c2725721318dd2a8689101cb06ddd86d05eeb6312554d3b00b9"
+    },
+    "run_agg": "max",
+    "label": "C: content-only call-end rows (fixed tokens dropped)"
+   },
+   "R": {
+    "open": {
+     "path": "famexp/2026-10-14_163027/pack_open_2026-10-14_180501/own_frac100_L48__R.npz",
+     "sha256": "37b3122e9249ce0cf4fa829547bc2ce2f7bff95973af93f10ea15c3748476de0"
+    },
+    "sim": {
+     "path": "famexp/2026-10-14_163027/pack_sim_sealed_2026-10-14_181123/own_frac100_L48__R.npz",
+     "sha256": "c8365d94be860cf834f194905ba646d7b2771ecc2f8ea6db43d99550203149e6"
+    },
+    "run_agg": "mean",
+    "label": "R: output_end_mean reply rows"
+   }
+  },
+  "v7_phase1": {
+   "git": "6514cf401:experiments/2026-10-14_xerr_prelim_09/results/xerr_v7_phase1_2026-10-14_180820.json",
+   "sha256": "afcf8fe38e77bbb408980b255ef7e553535f731c77deefb7793f07998bf6550e",
+   "keypath": [
+    "result",
+    "phase1_eligibility_record",
+    "decisions"
+   ]
+  },
+  "pool_from_v7": {
+   "C": "B",
+   "R": "BuC"
+  },
+  "own_a_readout_match": {
+   "cmd_A": "C",
+   "avg_top2": "R"
+  }
+ }
+}

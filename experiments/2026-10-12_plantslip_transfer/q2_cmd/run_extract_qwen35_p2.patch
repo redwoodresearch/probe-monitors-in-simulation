@@ -1,0 +1,130 @@
+Planted slips, pair P2: run_extract_qwen35_p2.py as run (first committed at 65750a30 on aswin/plantslip-q2-cmd, reachable
+from this stack's top merge), kept here as a patch against its root source on main for the PR size cap (457 lines). The full
+copy (sha256 1b16aaef14c7a76cb77ed85f28fde4a47e895b98c50e421d12011ea042b6aca8, 27526 bytes) is on S3 via results/s3_manifest_v2.json.
+Source on main: experiments/2026-10-06_qwen35_replication/run_extract_qwen35.py, sha256 53f979fba370f17ab9e4ccecd42f8cf005f8e530d5691971cd643e4b4234cbd8.
+(The copy's own docstring names its direct parent, the template-slips extractor at 84d3b0a3, itself a copy of that source.)
+Rebuild, from the repository root:
+  patch -o experiments/2026-10-12_plantslip_transfer/q2_cmd/run_extract_qwen35_p2.py experiments/2026-10-06_qwen35_replication/run_extract_qwen35.py experiments/2026-10-12_plantslip_transfer/q2_cmd/run_extract_qwen35_p2.patch
+
+--- experiments/2026-10-06_qwen35_replication/run_extract_qwen35.py
++++ experiments/2026-10-12_plantslip_transfer/q2_cmd/run_extract_qwen35_p2.py
+@@ -1,5 +1,13 @@
+-"""All-layers extraction with Qwen3.5-27B as the reader: the segment-end positions at every one of its 64 layers.
++"""Planted slips, pair P2 (PINS.md): a copy of ../../2026-10-12_q2_template_slips/run_extract_qwen35_plants.py at 84d3b0a3
++(itself the extractor of Qwen3.5's dump with its saved layers limited to config `layers`), with its app, Volumes and lease
++Dict renamed, and one change to reading: the forward pass stops after the last saved layer (P2's probes read layers 3,
++7 and 11), which leaves those layers' values unchanged. Positions are unchanged. The earlier docstrings:
++Template slips, step 2 (PLAN.md addendum 3): a copy of ../2026-10-06_qwen35_replication/run_extract_qwen35.py (the extractor of
++Qwen3.5's dump) with only its app, Volumes and lease Dict renamed, and the saved layers limited to config `layers`
++(the detector's seven). The forward pass and positions are unchanged. The original docstring:
+ 
++All-layers extraction with Qwen3.5-27B as the reader: the segment-end positions at every one of its 64 layers.
++
+ The qwen35 track's copy of the main session's prepared script (experiments/2026-10-06_qwen35_reader at a0a4cda), with
+ four changes: this track's app name; inputs read only from the shared Volume and outputs written to this track's own
+ Volume; each transcript's forward time, peak GPU memory and padded length kept in its metadata; and a test mode that
+@@ -58,15 +66,15 @@
+ import modal
+ 
+ HERE = Path(__file__).parent
+-APP = "probe-shift_aswin-surya_sub-qwen35_extract_kill-2026-11-06"
++APP = "probe-shift_aswin-surya_sub-q2-plantP2_extract_kill-2026-11-12"
+ HF_CACHE = "probe-shift_aswin-surya_hf-cache"
+-INPUTS = "probe-shift_aswin-surya_sub-la-activations"  # the main session's Volume: staged inputs, mounted read only
++INPUTS = "probe-shift_aswin-surya_sub-q2-plantcmd_inputs_kill-2026-11-12"  # the planted inputs (run_stage_cmd.py), mounted read only
+ # The output Volume; QWEN35_OUTPUT_VOLUME overrides it for a run (claim B reader run, 2026-10-10). The image carries the
+ # same value, so containers resolve the same Volume. Unset, every earlier run's path is unchanged.
+-OUTPUT = os.environ.get("QWEN35_OUTPUT_VOLUME", "probe-shift_aswin-surya_sub-qwen35_acts_kill-2026-11-06")
++OUTPUT = os.environ.get("QWEN35_OUTPUT_VOLUME", "probe-shift_aswin-surya_sub-q2-plantcmd_acts_kill-2026-11-12")
+ GPU = "H200"
+ TIMEOUT_S = 3 * 3600
+-LEASES = "probe-shift_aswin-surya_sub-qwen35_leases_kill-2026-11-06"  # Modal Dict: (run/shard) -> its writer
++LEASES = "probe-shift_aswin-surya_sub-q2-plantcmd_leases_kill-2026-11-12"  # Modal Dict: (run/shard) -> its writer
+ LEASE_STALE_S, HEARTBEAT_S, RPC_TIMEOUT_S = 600, 60, 30
+ THROUGHPUT_DEFAULTS = {"shard_by": "round_robin", "prefetch": False}  # the options' defaults, recorded with every run
+ PIP = ["torch==2.8.0", "transformers==5.19.0", "accelerate>=1.1.0", "numpy", "huggingface_hub", "flash-linear-attention==0.5.2"]
+@@ -78,6 +86,10 @@
+ leases = modal.Dict.from_name(LEASES, create_if_missing=True)
+ 
+ 
++class StopAfterLast(Exception):
++    """Raised by the last saved layer's hook to end the forward pass (P2's one change to reading)."""
++
++
+ class LeaseTimeout(RuntimeError):
+     """A Modal Dict call with no answer in time. A RuntimeError, not a TimeoutError, so main() records the shard as
+     failed instead of retrying the result fetch as a connection timeout."""
+@@ -196,7 +208,8 @@
+     return key if len(key.encode()) <= 240 else f"{key[:150]}__{hashlib.sha1(key.encode()).hexdigest()[:12]}"
+ 
+ 
+-@app.function(image=image, gpu=GPU, memory=65536, volumes={"/hf": hf_cache, "/in": in_vol, "/out": out_vol}, timeout=TIMEOUT_S,
++@app.function(image=image, gpu=GPU, memory=98304,  # 64 GiB ran one P2 container out of memory at start (10-12)
++              volumes={"/hf": hf_cache, "/in": in_vol, "/out": out_vol}, timeout=TIMEOUT_S,
+               retries=0)  # resume by rerunning instead (see the docstring)
+ def extract_shard(cfg: dict, shard: int) -> list[dict]:
+     lease = ShardLease(f"{cfg['run']}/shard{shard:03d}")
+@@ -253,7 +266,7 @@
+     lm = AutoModelForCausalLM.from_pretrained(cfg["model"], revision=cfg["revision"], dtype=getattr(torch, cfg["dtype"]),
+                                               device_map="cuda", attn_implementation=cfg["attn_implementation"]).eval()
+     base = lm.model
+-    layers = list(range(lm.config.num_hidden_layers))
++    layers = sorted(cfg["layers"]) if cfg.get("layers") else list(range(lm.config.num_hidden_layers))  # the copy's one change to reading
+     load_s = round(time.time() - t_load)
+ 
+     def read(ids, idx):
+@@ -264,6 +277,8 @@
+             def hook(module, args, output):
+                 h = output[0] if isinstance(output, tuple) else output
+                 acts[layer] = h[0].index_select(0, idx).to(torch.float16).cpu().numpy()
++                if layer == layers[-1]:  # P2's change: every saved layer is in hand, so the rest of the pass is skipped
++                    raise StopAfterLast
+             return hook
+ 
+         handles = [base.layers[l].register_forward_hook(hook_for(l)) for l in layers]
+@@ -271,7 +286,10 @@
+         t0 = time.time()
+         try:
+             with torch.inference_mode():
+-                base(input_ids=torch.tensor([ids], device="cuda"), use_cache=False)
++                try:
++                    base(input_ids=torch.tensor([ids], device="cuda"), use_cache=False)
++                except StopAfterLast:
++                    pass
+             torch.cuda.synchronize()
+         finally:
+             for h in handles:
+@@ -369,10 +387,11 @@
+ 
+ 
+ @app.local_entrypoint()
+-def main(config: str = "qwen35_alllayers.yaml", test: bool = False, no_wait: bool = False):
++def main(config: str = "qwen35_alllayers.yaml", test: bool = False, no_wait: bool = False, shards: str = ""):
+     """`--test` (the pilot): one shard, 8 transcripts spread over its lengths, each read twice, chunks of 4, under a
+     separate run name. `--no-wait` (with `modal run --detach`): spawn the shards and return, so a laptop outage cannot
+-    stop them; shards resume past finished transcripts, and their stats are on the Volume."""
++    stop them; shards resume past finished transcripts, and their stats are on the Volume. `--shards 0,3`: spawn only those
++    shards (a resume of shards that crashed, without cold-starting the finished ones)."""
+     import yaml
+ 
+     from probe_shift.models import QWEN35_27B
+@@ -403,13 +422,16 @@
+         batch.put_file(io.BytesIO(json.dumps(cfg, indent=1).encode()), f"{cfg['run']}/config.json")
+     n = 1 if test else cfg["shards"]
+     started = time.time()
+-    calls = [extract_shard.spawn(cfg, i) for i in range(n)]
+-    print(f"{cfg['run']}: git {git['commit'][:7]}{' (dirty)' if git['dirty'] else ''}, spawned {n} shards reading inputs of {cfg['inputs_from']}", flush=True)
++    idx = sorted({int(s) for s in shards.split(",")}) if shards else list(range(n))
++    if not set(idx) <= set(range(n)):
++        raise ValueError(f"--shards {shards}: the run has shards 0-{n - 1}")
++    calls = [extract_shard.spawn(cfg, i) for i in idx]
++    print(f"{cfg['run']}: git {git['commit'][:7]}{' (dirty)' if git['dirty'] else ''}, spawned shards {idx} reading inputs of {cfg['inputs_from']}", flush=True)
+     if no_wait:
+         print(f"not waiting; output Volume {OUTPUT}, run {cfg['run']}", flush=True)
+         return
+     stats = []
+-    for shard, call in enumerate(calls):
++    for shard, call in zip(idx, calls):
+         for attempt in range(120):
+             try:
+                 stats.extend(call.get())

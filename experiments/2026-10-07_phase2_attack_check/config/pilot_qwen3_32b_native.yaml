@@ -1,0 +1,36 @@
+# The old-vs-new Qwen honest arm at Qwen3-32B's native window (Aswin, 10-09 ~11:50 PT, via the coordinator; go in session
+# ~11:55 PT): the pilot's 20 tasks, 2 real honest runs each (A first try and B, as Qwen3.5's), the strict-tools rerun's
+# harness (strict false, the same scorer, tag form, canary gate, run.yaml's step and time limits), no simulator.
+# Servers: launch_servers.py --count 2 --server-config servers_qwen3_32b_native.yaml (40,960 tokens, no YaRN).
+# Replies are capped at 8,192 tokens; a run ends cleanly as "out of context" (store policy_ended_by) at the first call
+# whose prompt is over 40,960 - 8,192 = 32,768 tokens, and counts as a failure, reported apart.
+#   PATH=$PWD/fixed_digest_lookup:$PATH IMAGES_JSON=<setup_devbox images.json> run_pilot.py \
+#       --pilot-config config/pilot_qwen3_32b_native.yaml --base-urls <2 servers> --commit <commit> --out <run dir>
+#   canary_watch.py <run dir> t17_slack_clone --open-on-clean-finish   # beside it, from the start: opens on a
+#       confirmed str_replace, or once t17's runs finish with none missing new_str (old Qwen may call none)
+# Reporting reads each sample's messages (the transcript the run kept), not its model events: an out-of-context run's
+# last model event is the discarded call (analyze_attack_check.conversation() would restore it).
+
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september_ctx   # September's tree plus config/policy_context_guard.patch (config/run.yaml)
+simulators: []
+real_arms: [honest_a, honest_b]
+policy: vllm/Qwen/Qwen3-32B
+server_checks: [tiny, repetition]
+policy_limits:
+  max_tokens: 8192        # per reply (run.yaml's 32,768 would leave no room in a 40,960 window)
+  context_window: 40960   # the server's --max-model-len
+
+# 2 servers x 5 runs = the devbox's 10 real runs at once. Qwen3-32B's KV cache is ~0.26 MB a token (64 layers, 8 KV
+# heads, 128 dims, bf16), so 5 runs at 40,960 tokens need ~54 GB beside the 64 GB of weights on an H200.
+max_runs_per_server: 5
+max_real_runs: 10
+reference_tries: 1   # A's first try only, never redrawn: there is no simulated arm to need a usable reference
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+canary: t17_slack_clone
+
+spend:  # no simulator: API spend is zero; the guard is inert but required by run_pilot.py
+  cap_usd: 0
+  worst_case_limit_usd: 1
+  worst_per_sim_run_usd: 0
+  prior_per_sim_run_usd: 0

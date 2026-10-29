@@ -1,0 +1,33 @@
+{
+ "dialogues": 20,
+ "span_rows": 244,
+ "tokens": 4456,
+ "forward_s": 43.2,
+ "load_s": 60.6,
+ "tokens_per_s": 103,
+ "gpu": "NVIDIA H100 80GB HBM3",
+ "run": "step1_2026-10-10_014402",
+ "volume": "probe-shift_aswin-surya_sub-evalaware_acts_kill-2026-11-09",
+ "layers": [
+  4,
+  8,
+  12,
+  16,
+  20,
+  24,
+  28,
+  32,
+  36,
+  40,
+  44,
+  48,
+  52,
+  56,
+  60,
+  63
+ ],
+ "git": "3a6bbda554acb3fa4bb3e3654196e82994ab09eb",
+ "dirty": false,
+ "sets": "pilot_sets_20.jsonl",
+ "sets_sha256": "8e83174b725c46339de6a560f2a18db8a8fa271415d2973d96629a4f00efc894"
+}

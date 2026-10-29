@@ -1,0 +1,11 @@
+# Overnight chain: sp493_a_run2 staged by stage_chain.py (record chain_stage_sp493_a_run2_2026-10-16_000614.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: sp493_a_run2_extract_v1_try3
+inputs: sp493_a_run2_v1_try3
+inputs_sha256:
+  attack.jsonl: d94be25220c45b04e850cdb1226d40cf511d25ac75cef3d5b4f9251aa188b723
+  repro-c.jsonl: 4a8573e7fa7f8057adbd0c1cd313dc46264331cb49f47166bd6e45d5596709c1
+model: Qwen/Qwen3.5-27B
+shards: 28
+chunk_size: 8
+pad_to: 4096

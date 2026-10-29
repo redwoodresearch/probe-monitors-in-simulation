@@ -1,0 +1,36 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_nm_s2_rlr of 2026-10-14_newmains_s2: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 1,
+  "by_arm": {
+   "sim_honest@september": 1
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_nm_s2_rlr",
+   "rel": "sim_honest@september/nm150_model_registry/2026-10-15T23-00-37-00-00_la-model-registry-sim-honest-1_6H5cmMZo9jTuoxLp3Y3oMG.eval",
+   "sha256": "38fa7715f744d6e87a92828238b88ff58b3336e9245676a64b9022eeb8ad6e14",
+   "bytes": 385885,
+   "arm_dir": "sim_honest@september",
+   "task": "nm150_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s2_rlr/sim_honest@september/nm150_model_registry/2026-10-15T23-00-37-00-00_la-model-registry-sim-honest-1_6H5cmMZo9jTuoxLp3Y3oMG.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s2_rlr",
+   "stratum": "simh_nm360",
+   "launch_task": "nm150_model_registry",
+   "first_start": "2026-10-15T16:00:34-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s2_rlr",
+   "run1_launch": "2026-10-14_newmains_s2",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "final"
+  }
+ ]
+}

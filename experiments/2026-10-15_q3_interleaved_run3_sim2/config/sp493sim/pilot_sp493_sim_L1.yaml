@@ -1,0 +1,17 @@
+# S_PAPER493 SIM ATTACK L1 (box3; make_sp493_sim.py): sims only, frozen IL design. From config/completion/pilot_ilc_old.yaml: only
+# this header, tasks, real_arms, max_runs_per_server and the caps differ.
+tasks: config/tasks_sp493_sim_L1.json   # S_paper493 sim attack L1: the on-box prep's built cells (<= 238)
+real_simulator: september
+real_arms: []   # sims only; honest_a from --references-from this launch's reference index (fork pins by key)
+simulators: [september]
+sim_arms: [sim_attack]
+simulator_confirmed: true
+max_runs_per_server: 5   # 09: concurrency bounded independently of the cap; 6 servers x 5 = 30 per launch
+max_real_runs: 60         # the 64-vCPU box's cap, as the canary and the real-honest launch
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json   # tag form for every task, as launch 2 and the canary
+spend:
+  cap_usd: 4246   # 238 cells x $13.48 x 1.3 + $75
+  worst_case_limit_usd: 4246   # = cap
+  worst_per_sim_run_usd: 75   # variant (iii): 0d
+  prior_per_sim_run_usd: 16.48

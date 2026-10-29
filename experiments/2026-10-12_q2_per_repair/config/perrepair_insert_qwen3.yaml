@@ -1,0 +1,11 @@
+# Per-repair Part B (PLAN.md here): the insert repair alone; as fix939's alllayers_q3_fix939.yaml
+# (layers 48 and 63, full forward pass, 32k cut), on the runs that repair changes.
+run: 2026-10-12_q2_perrepair_insert_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-12_q2_perrepair_insert_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 4
+chunk_size: 25
+layers: [48, 63]

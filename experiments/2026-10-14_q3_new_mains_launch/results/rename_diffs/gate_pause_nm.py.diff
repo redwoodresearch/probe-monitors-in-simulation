@@ -1,0 +1,18 @@
+--- gate_pause_311.py
++++ gate_pause_nm.py
+@@ -1,5 +1,5 @@
+ """gate_pause_311.py (RULE.md Amendment 10; 0d via d9, about 19:38 PT: in-job gates PAUSE and never kill): the follow-ups'
+-usable gate, replacing gate1_311b.py there. ON THE DEVBOX, tmux -L guards gp311q<N>, every 120 s while the follow-up's
++usable gate, replacing gate1_311b.py there. ON THE DEVBOX, tmux -L nmguards gpnms<N>, every 120 s while the follow-up's
+ launcher session exists and its launch hasn't finished: per arm, k usable of n ended runs (gate1_311b.py's counts(),
+ copied verbatim); any arm with >= 20 ended runs and usable <= 75% (inclusive, integers: 4 x usable <= 3 x ended) ->
+ <run>/PAUSE_SIMS (the patched launcher starts no new simulated run while it exists) and <run>/GATE_PAUSE.txt. Never a
+@@ -64,7 +64,7 @@
+     in 30 s (Codex rounds 20 and 22)."""
+     while True:
+         try:
+-            p = subprocess.run(["tmux", "-L", "phase2", "has-session", "-t", f"={session}"], capture_output=True, text=True,
++            p = subprocess.run(["tmux", "-L", "nm", "has-session", "-t", f"={session}"], capture_output=True, text=True,
+                                timeout=60)
+             if p.returncode == 0:
+                 return True

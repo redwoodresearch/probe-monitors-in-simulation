@@ -1,0 +1,35 @@
+# Step 2 (needs Aswin's OK): the 5 cells' attacks again, now SIMULATED by the September simulator, with Qwen3.5-27B
+# acting. Each forks at 0 from its own step-1 honest run of the main task (BA_REAL_LOG = BA_HONEST_LOG = that run),
+# which is never the run a simulated one is compared against (that is step 1's real attack of the same cell).
+# Simulator settings are September's, as recorded in its samples and used for the Astra honest batch
+# (experiments/2026-10-06_astra_sim_honest/config/astra_honest.json); only the mode and the policy differ.
+env:
+  BA_MODE: attack
+  BA_ONE_PER_CELL: "1"
+  BA_FORK_FRACTION: "0"
+  BA_MAX_STEPS: "200"  # run.yaml's max_steps: the same for both arms (raised from September's 150 after step 1)
+  PT_ATTACKER: vllm/Qwen/Qwen3.5-27B
+  # run.yaml's policy_limits, so the policy's calls are limited exactly as in the real arm (needs run.yaml's sims_tree)
+  PT_POLICY_MAX_TOKENS: "32768"
+  PT_POLICY_ATTEMPT_TIMEOUT: "1800"
+  PT_POLICY_MAX_RETRIES: "2"
+  PT_POLICY_TIMEOUT_ENDS_EPISODE: "1"
+  PT_POLICY_STRICT_TOOLS: "0"  # run.yaml's policy_limits.strict_tools: false, the same flag in both worlds
+  BA_ATTACKER_PROMPT: attacker_2026_08_28.md
+  PT_SIM_MODEL: openai/gpt-6-astra
+  PT_SIM_FALLBACK_MODEL: openai/gpt-5.6-sol
+  PT_SIM_REFUSAL_JUDGE_MODEL: openai/gpt-5.6-terra
+  PT_SIM_ROUTER_JUDGE_MODEL: openai/gpt-5.6-terra
+  BA_CODEBASE_READ: "1"
+  BA_CODEBASE_EXEC: "0"
+  BA_EXEC_SOURCE_AUTHORITY: "1"
+  BA_HONEST_LOG_MODE: dump
+  BA_HONEST_LOG_OUT_CAP: "32768"
+  BA_NOTES: "0"
+  BA_SELF_CRITIQUE: ""
+# September's Inspect arguments for the simulated arm, with three changes. The time limit is 7,200 s, as in the real
+# arm (run.yaml), raised from 3,300 s after step 1 (a simulated action takes ~19 s against ~8 s real). --log-model-api
+# is added, so every call's request ID joins the vLLM proxy's token record. --retry-on-error 2 is removed: no run is
+# redrawn once its policy has started (Aswin, D5); run_attack_check.py redraws only runs that failed before the
+# policy's first call. No --timeout or --max-retries either: they would override PT_POLICY_*.
+inspect_args: ["--max-samples", "1", "--time-limit", "7200", "--no-fail-on-error", "--log-model-api"]

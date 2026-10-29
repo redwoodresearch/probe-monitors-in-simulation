@@ -1,0 +1,114 @@
+{
+ "thread": "#1173 PRRT_kwDOU9RNXc6rxVuU",
+ "git": "6efff8c9ca5623f42a1fd274042723047fcd2846",
+ "files": {
+  "Qwen3.5-27B": {
+   "commit": "34c7c020",
+   "path": "experiments/2026-10-12_q2_qwen35_repaired/results/edit_effect_q35_2026-10-13_003512.json",
+   "sha256": "5a9bf0cf46aa621853bcac9d411d8e7d899923bdbde28959ee06c7e4611b3632"
+  },
+  "Llama-3.3-70B": {
+   "commit": "dddc8324",
+   "path": "experiments/2026-10-12_q2_llama_reader/results/edit_effect_llama_2026-10-12_153720.json",
+   "sha256": "ae24961a72693b47d03f7e50505f6b306c3018459e630a64222500358968203d"
+  },
+  "Olmo-3.1-32B": {
+   "commit": "03af438b",
+   "path": "experiments/2026-10-12_q2_olmo_reader/results/edit_effect_olmo_2026-10-12_115023.json",
+   "sha256": "e620a7c45c247e1848780e14484cde72f23c8c75375fe3f29b93609eed873a12"
+  }
+ },
+ "rows": [
+  {
+   "reader": "Qwen3.5-27B",
+   "rate": "0.05",
+   "fixed - e2": -1.5175718849840258,
+   "as simulated - e2": -2.7156549520766737,
+   "fixed 95%": [
+    -3.9671358259217624,
+    1.3724804607754002
+   ],
+   "outside": false,
+   "|fixed| > |as simulated|": false,
+   "committed label": "doesn't explain it",
+   "fix939's rule": "doesn't explain it",
+   "changes": false
+  },
+  {
+   "reader": "Qwen3.5-27B",
+   "rate": "0.01",
+   "fixed - e2": -0.772097976570818,
+   "as simulated - e2": -3.0883919062832774,
+   "fixed 95%": [
+    -4.010530982334052,
+    1.5690149662240835
+   ],
+   "outside": false,
+   "|fixed| > |as simulated|": false,
+   "committed label": "doesn't explain it",
+   "fix939's rule": "doesn't explain it",
+   "changes": false
+  },
+  {
+   "reader": "Llama-3.3-70B",
+   "rate": "0.05",
+   "fixed - e2": -5.804046858359957,
+   "as simulated - e2": -12.406815761448353,
+   "fixed 95%": [
+    -8.518623737373742,
+    -2.8549812992886907
+   ],
+   "outside": true,
+   "|fixed| > |as simulated|": false,
+   "committed label": "partial",
+   "fix939's rule": "partial",
+   "changes": false
+  },
+  {
+   "reader": "Llama-3.3-70B",
+   "rate": "0.01",
+   "fixed - e2": -6.3365282215122445,
+   "as simulated - e2": -13.55165069222577,
+   "fixed 95%": [
+    -9.570162146428322,
+    -2.9714816227655927
+   ],
+   "outside": true,
+   "|fixed| > |as simulated|": false,
+   "committed label": "partial",
+   "fix939's rule": "partial",
+   "changes": false
+  },
+  {
+   "reader": "Olmo-3.1-32B",
+   "rate": "0.05",
+   "fixed - e2": -2.076677316293929,
+   "as simulated - e2": -8.652822151224704,
+   "fixed 95%": [
+    -4.869267356049304,
+    0.8414741041693066
+   ],
+   "outside": true,
+   "|fixed| > |as simulated|": false,
+   "committed label": "explains it",
+   "fix939's rule": "explains it",
+   "changes": false
+  },
+  {
+   "reader": "Olmo-3.1-32B",
+   "rate": "0.01",
+   "fixed - e2": -3.061767838125667,
+   "as simulated - e2": -8.439829605963789,
+   "fixed 95%": [
+    -5.976415319514574,
+    0.26535925066525545
+   ],
+   "outside": true,
+   "|fixed| > |as simulated|": false,
+   "committed label": "explains it",
+   "fix939's rule": "explains it",
+   "changes": false
+  }
+ ],
+ "any label changes": false
+}

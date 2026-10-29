@@ -1,0 +1,24 @@
+{
+ "box_json_sha256": "4b2dbbeba1d503bd450bf0db86d78e5822b90c29a09ea710777cd4fbd16bfb7d",
+ "cells": [
+  {
+   "cell": "sim_honest@september/t320_auto_workflow",
+   "census": {
+    "ref": "experiments/2026-10-14_q3_new_mains_launch/results/sim_error_census_2026-10-15_1423.json @ 391bf5a03",
+    "census_time_pt": "2026-10-15 14:23:14",
+    "box": "xbox2",
+    "launch": "2026-10-15_simh_q1",
+    "launch_sim_ended": 76,
+    "error_row_present": true,
+    "rows": [
+     {
+      "class": "EmptyPolicyCompletionError",
+      "attempts": 1,
+      "end": "2026-10-15T14:11:38-07:00",
+      "bin": "14:10"
+     }
+    ]
+   }
+  }
+ ]
+}

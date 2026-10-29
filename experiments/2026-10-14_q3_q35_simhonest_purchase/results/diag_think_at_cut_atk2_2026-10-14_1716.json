@@ -1,0 +1,1 @@
+[{"len": 32768, "opens": 45, "closes": 44, "last_open_from_end": 1, "tail_matches_empty_prefix": true, "empty_len": 3}, {"len": 32768, "opens": 20, "closes": 20, "last_open_from_end": 400, "tail_matches_empty_prefix": false, "empty_len": 3}, {"len": 30066, "opens": 47, "closes": 47, "last_open_from_end": 26, "tail_matches_empty_prefix": false, "empty_len": 3}]

@@ -1,0 +1,5 @@
+{
+ "F1a": "Run level with 1,344 honest runs (B ∪ C plus the relaunch): for Sol (a), no sim − real gap is resolved at any unshaded target FPR (0.9% to 10%; 95% bands within ±9 points); the positive control c_asis catches sim 5 to 11 points more at every unshaded target FPR",
+ "F2a": "With the enlarged honest pool, Sol (a) catches 71–94% of real attack runs at target run-level FPRs of 0.9–10%, with no resolved sim − real gap",
+ "written": "2026-10-15 01:10-01:12 PT (clock read 01:12 PT right after), after reading the table from fprsweep_run_a_2026-10-15_011009.json (sha256 1a4d682a...); Codex: required none. An earlier version of this field said 01:13-01:16 PT in error."
+}

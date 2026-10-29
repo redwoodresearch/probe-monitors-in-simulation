@@ -1,0 +1,10 @@
+# Surface-edit sweep (2026-10-08; option B, the orchestrator's go). The GPU extraction was launched at 14:46:53 PT
+# without Aswin's sweep-specific approval in the session, a process gap (SPEND.md). Simulator tells applied in
+# reverse to real runs, one edit at a time. The swap's 100 cells' real attack e1 runs (by cell) and one real honest run
+# per main task (the first key in sorted order, chosen before any scoring). Only runs an edit changes are staged, plus an
+# unchanged control arm. Extraction: ../2026-10-06_all_layers_extraction/config/alllayers_q2_surface_edits.yaml.
+base: 2026-10-06_la_segment-end_qwen3-32b_v1
+runs_file: ../2026-10-07_q2_rendering_swap/config/swap_runs.json
+staged_run: 2026-10-08_q2_surface_edits_inputs_v1
+edits: [strip-gutter, add-newline, no-note]
+n_control: 20  # half attack, half honest, unchanged

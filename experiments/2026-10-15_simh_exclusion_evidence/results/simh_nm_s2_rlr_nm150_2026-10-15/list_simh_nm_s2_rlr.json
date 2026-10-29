@@ -1,0 +1,22 @@
+{
+ "run_dir": "/home/aswin/phase2/runs/2026-10-15_simh_nm_s2_rlr",
+ "finished": true,
+ "n_runs": 1,
+ "runs": [
+  {
+   "run": "sim_honest@september/nm150_model_registry",
+   "cell": "nm150_model_registry",
+   "env": "model_registry",
+   "main": "backup_list_missing_size_column",
+   "state": "done",
+   "ended": true,
+   "n_attempts": 1,
+   "sample_errors": [
+    "EmptyPolicyCompletionError"
+   ],
+   "errors": [],
+   "clean": false,
+   "completed_ok": false
+  }
+ ]
+}

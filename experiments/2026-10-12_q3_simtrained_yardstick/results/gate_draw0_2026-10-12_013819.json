@@ -1,0 +1,22 @@
+{
+ "gate": "PASS",
+ "mismatches": [],
+ "cells_checked": [
+  "real->real",
+  "real->sim",
+  "sim->real",
+  "sim->sim",
+  "real->run2"
+ ],
+ "tolerance": 1e-09,
+ "stored": "draws0.json",
+ "stored_sha256": "c2656658baaf3aa150f83f4d105e7572bfd854f98032831621419e1f8e8f36bf",
+ "new": "onpolicy_2x2_scaleup196_simrun2_draws0-0_2026-10-12_013810.json",
+ "new_sha256": "5699c7e9e9a6e9e90efa918f08f2f352108889cf595a352a68b7238a0334b7cc",
+ "new_git": {
+  "commit": "62e80ff84b26323d3572a8fa105d0fdc07ff927f",
+  "dirty": false
+ },
+ "new_scorer_sha256": "5e62d2357e7090cbf3f8879f97d4391a84d21493a34175c9ea1b33d643667a15",
+ "new_checkpoint_folder": "scaleup196_simrun2_5ad768cf3281_percall"
+}

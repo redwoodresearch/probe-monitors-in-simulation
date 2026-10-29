@@ -1,0 +1,17 @@
+{
+  "models": [
+    "x-ai/grok-4.7"
+  ],
+  "budget_usd": 125,
+  "concurrency": 24,
+  "timeout_seconds": 600,
+  "reasoning_effort": "high",
+  "datasets": [
+    {
+      "kind": "credential_final_adjudication",
+      "prepared": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/stage1_labels/credential/final_adjudication",
+      "prompt": "/private/tmp/probe-credential-stage1-pr/experiments/2026-10-11_credential_stage1_labels/config/final_adjudication_prompt.txt",
+      "max_tokens": 8192
+    }
+  ]
+}

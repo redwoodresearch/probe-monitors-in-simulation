@@ -1,0 +1,18 @@
+# Review-note test, V5 control (2026-10-07; within the same $10 cap). V1 with only the trailing newline dropped (diff
+# format, no note), so V4 vs V5 isolates the note in diff format: V4 differs from V1 by the note AND by the dropped
+# newline. Same 100 runs, frozen probes and readouts as swap.yaml; the same inserts change.
+n_runs: 100
+seed: 0
+inputs_from: 2026-10-06_la_segment-end_qwen3-32b_v1
+staged_run: 2026-10-07_q2_swap_v5_inputs_v1
+include_original: false
+variants:
+  sim-attack-diff-nonewline: diff_no_newline
+swap_arm: sim-attack-realstyle                          # V2's arm in the reference run
+extraction_run: 2026-10-07_q2_swap_v5_qwen3-32b_l9-17_v1   # config/alllayers_q2_swap_v5.yaml (layers 9, 16, 17 only)
+reference_extraction_run: 2026-10-07_q2_swap_qwen3-32b_alllayers_v1
+features_run: 2026-10-06_q2_features_eb014307fd1aab31_as_labeled
+weights_out_sub: level0_weights
+train_set: real-attack-e1
+layers: [9, 16, 17]
+positions: [pre_call, call_end, prev_content]

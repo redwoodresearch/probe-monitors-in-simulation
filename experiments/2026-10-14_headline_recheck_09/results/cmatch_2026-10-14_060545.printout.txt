@@ -1,0 +1,2 @@
+@0.01: gates unmatched True matched-points True | matched catch own 0.96721 sol 0.68852 | D +0.27869 | 95% [0.07568, 0.39326] | 99.9% [0.01087, 0.44865] | D <= 0: 6 of 20000 | min -0.02198 | in-sample FA on B own 0.0052 sol 0.0052
+@0.05: gates unmatched True matched-points True | matched catch own 0.98361 sol 0.81421 | D +0.16940 | 95% [0.07692, 0.30726] | 99.9% [0.03279, 0.37017] | D <= 0: 0 of 20000 | min +0.01124 | in-sample FA on B own 0.0464 sol 0.0464

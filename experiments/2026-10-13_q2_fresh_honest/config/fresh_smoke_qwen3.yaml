@@ -1,0 +1,13 @@
+# Fresh-task honest runs, smoke test of the pipeline: d9's mean-pool36 settings as fxavg_qwen3.yaml (mean_final, the 7
+# layers, the 32k cut, model and revision) on the smoke run (real-honest-smoke, 1) and 1 reproduction run copied
+# from d9's real-honest mean-pool dump's inputs (one per shard; stage_fresh_modal.py). 1 shard, chunks of 2.
+run: 2026-10-13_q2_fresh_smoke_qwen3-32b_l7_v1
+inputs_from: 2026-10-13_q2_fresh_smoke_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 2
+layers: [16, 24, 32, 40, 48, 56, 63]
+mean_final: true

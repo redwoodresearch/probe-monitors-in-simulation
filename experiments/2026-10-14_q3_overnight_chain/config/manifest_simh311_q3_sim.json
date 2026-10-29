@@ -1,0 +1,36 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_q3 of 2026-10-14_155838_scaleup311_q3: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 1,
+  "by_arm": {
+   "sim_honest@september": 1
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_q3",
+   "rel": "sim_honest@september/t493_media_processing/2026-10-15T20-00-37-00-00_la-media-processing-sim-honest-1_arLMLFWuuwQWiHHbca4psG.eval",
+   "sha256": "ffa382a9106cc86cb3d6b4e51674fa9c8b775c229bebcc213279085f5e414117",
+   "bytes": 672861,
+   "arm_dir": "sim_honest@september",
+   "task": "t493_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q3/sim_honest@september/t493_media_processing/2026-10-15T20-00-37-00-00_la-media-processing-sim-honest-1_arLMLFWuuwQWiHHbca4psG.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q3",
+   "stratum": "simh_311",
+   "launch_task": "t493_media_processing",
+   "first_start": "2026-10-15T13:00:35-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q3",
+   "run1_launch": "2026-10-14_155838_scaleup311_q3",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "final"
+  }
+ ]
+}

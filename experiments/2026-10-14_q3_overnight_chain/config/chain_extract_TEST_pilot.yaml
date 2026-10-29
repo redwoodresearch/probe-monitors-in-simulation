@@ -1,0 +1,12 @@
+# TEST: the overnight chain's pilot extraction (Q1, 3 runs per arm, plus repro-c on 2 shards)
+run: su311_q1t_main_TEST_extract_v1
+inputs: su311_q1t_main_TEST_v1_pilot3
+inputs_sha256:
+  attack.jsonl: 28fae8e35c1da68fdf933553e45d3e0a699bc04c3dbbf732ca6c0f3ed41f4902
+  honest_a.jsonl: 17d538f8b154c1ff9a31125060753b744ac0b4a9fb7c1152a7c7cfef745a6c24
+  honest_b.jsonl: d4fded3ff462dc206fcdae486b10c8645a7a50ad021f35f306d4e025fb08ffd0
+  repro-c.jsonl: cc8744273b8d4b50c78d7a156ffa77bcb05da667fb1cacdfac0159b02c5ee924
+model: Qwen/Qwen3.5-27B
+shards: 2
+chunk_size: 8
+pad_to: 4096

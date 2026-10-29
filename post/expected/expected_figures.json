@@ -1,0 +1,51 @@
+{
+  "_about": "The post's seven figures: which render bundle draws each one and the file the draft shows. For bundles fig2, figs156 and figs78 every output (PNG, _source.json, _text.md) must match the hashes in the bundle's render log; a PNG that differs in bytes is compared pixel by pixel with the reference copy in expected/figures/ (PNG bytes also depend on the Pillow and zlib build). Figure 3 is compared pixel by pixel with expected/figures/fig3_reference.png.",
+  "figures": [
+    {
+      "post": "Figure 1",
+      "bundle": "figs156",
+      "stem": "fig1_main_figs156_routecA",
+      "draft_png_sha256": "f1802d9562350023ae8a08eaa2c088b41186e618066910b20b813cf3b5474bc0"
+    },
+    {
+      "post": "Figure 2",
+      "bundle": "fig2",
+      "stem": "fig_attack_roc_attack_v5",
+      "draft_png_sha256": "2934101c2049f6518346b05813918484f2918bf0c546128c8cd3b0de23ceaa57"
+    },
+    {
+      "post": "Figure 3",
+      "bundle": "fig3",
+      "stem": "figure3_schematic_v5",
+      "draft_png_sha256": "50d53aa0da9313f0932f7184c1d2edd1a7ec0280d3426741f1b3766eecc987b1",
+      "gate": "pixels",
+      "reference": "expected/figures/fig3_reference.png",
+      "reason": "a schematic with no data; the draft's PNG (draft_png_sha256) was drawn on a laptop with matplotlib 3.9.2, so the reference is the first render in the pinned environment (Python 3.12, matplotlib 3.10.6), which 0d commits and pins in MANIFEST.json (pending); until then the check fails with \"fig3 reference missing\"",
+      "script_source": "~/probe-shift-writing-handoff-2026-10-15/w23/figs_schematic/draw_fig3_schematic_v5.py (local file, never committed before this branch)"
+    },
+    {
+      "post": "Figure 4",
+      "bundle": "figs156",
+      "stem": "fig5_excess_C_figs156_routecA",
+      "draft_png_sha256": "35169ba05083a0f80f83a18c2c8af21ed10303409c9ded70076f33dcad34c878"
+    },
+    {
+      "post": "Figure 5",
+      "bundle": "figs156",
+      "stem": "fig1_main_R_figs156_routecA",
+      "draft_png_sha256": "ed444c74597c56fa103735874f29db69ea4ca2739a37993a462d0e427115b389"
+    },
+    {
+      "post": "Figure 6",
+      "bundle": "figs78",
+      "stem": "fig_pertask_onpolicy_figs78_routecA",
+      "draft_png_sha256": "72acdd2bdc4df473eb8009bd3d48c48d27864bb090e8f52a08ebddd6599acb08"
+    },
+    {
+      "post": "Figure 7",
+      "bundle": "figs78",
+      "stem": "fig_pertask_summary_figs78_routecA",
+      "draft_png_sha256": "1377defb66ee04c0c95ff8ab90ff12b0d3b3fffed90c2db4b0f401c3e3527259"
+    }
+  ]
+}

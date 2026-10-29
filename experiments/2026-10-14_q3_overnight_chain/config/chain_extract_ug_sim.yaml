@@ -1,0 +1,11 @@
+# Overnight chain: ug_sim staged by stage_chain.py (record chain_stage_ug_sim_2026-10-15_140343.json), plus the per-shard reference arm repro-c;
+# every layer, last-token rows and output_end span means, as q4b_extract_c.yaml (chunk 8, pad 4096), H200.
+run: ug_sim_extract_v1_try2
+inputs: ug_sim_v1_try2
+inputs_sha256:
+  repro-c.jsonl: ee136e9c6fbb80c2506cacd4547b2c0a6e94603a682485b7cfc4c9ee33c99228
+  sim_attack@september_ungrounded.jsonl: 014e2de927ecf435f25c94ef4620e4b05d8ae2e9694c4129ae12f49795b05dc7
+model: Qwen/Qwen3.5-27B
+shards: 24
+chunk_size: 8
+pad_to: 4096

@@ -1,0 +1,10 @@
+# Amendment 11 (post hoc): the stripped-input re-read of 2026-10-10_scaleup_l2_segends_v1_scrub1_swapsys2 (sim): the agent's reasoning and chat removed by
+# run_claim_c_noagent.strip_stage (d8b55861); sha256s from its output.
+run: 2026-10-10_scaleup_l2_segends_v1_scrub1_swapsys2_noagent
+inputs: scaleup_l2_segends_v1_scrub1_swapsys2_noagent
+inputs_sha256:
+  sim_attack@september.jsonl: 146103e3693ea992c059fce90f2bea4f0aeb7c01f9c3dd623006b639fb28c262
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 10
+pad_to: 4096

@@ -1,0 +1,10 @@
+# Planted-slip transfer (experiments/2026-10-12_plantslip_transfer, RULE.md Amendment 1): P7+P8 (claim C detector), real run 1: the four _scrub1_swapsys run-1 stagings' changed epochs,
+# with plant_both() spliced in by run_plant_splice.py (gate passed: every unplanted epoch reproduced exactly).
+run: 2026-10-12_plantslip_p78_run1
+inputs: plantslip_p78_run1
+inputs_sha256:
+  attack.jsonl: e8572039675b846b51cd7931a4f3b9d9321a2d1ea7b1139698363683fbfbc72f
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 10
+pad_to: 4096

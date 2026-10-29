@@ -1,0 +1,4 @@
+shards [(0, None, 1747, 1, 0, None)]; other labels {'mitre': 981, 'frr': 750}
+anchor min cosine None (None = one shard); excluded {}; n {'train': 1385, 'test': 346}; held out 277
+cyber: layer 0, held-out AUROC 1.000; test AUROC 1.000; length-only baseline test AUROC 0.206 (separation 0.794, length-confounded True); gate passes True
+max_iter hit at layers: []; refit hit max_iter: False

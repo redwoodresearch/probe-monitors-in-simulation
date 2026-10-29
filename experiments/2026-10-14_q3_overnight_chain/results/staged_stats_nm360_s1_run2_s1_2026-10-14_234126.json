@@ -1,0 +1,15 @@
+{
+ "target": "nm360_s1_run2_s1",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "nm360_s1_run2_s1",
+   "arm": "attack",
+   "staged_file": "/ev/nm360_s1_run2_s1_v1/inputs/attack.jsonl",
+   "staged_sha": "e42616a6d9df04adb69667c4131de589bc24e9e3e6c8a0e42bcb9542df6ebe35",
+   "epochs": 63,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

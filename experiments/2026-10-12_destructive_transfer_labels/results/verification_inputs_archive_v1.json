@@ -1,0 +1,11 @@
+{
+  "bytes": 14317877,
+  "sha256": "037273b995737b63308f4f3675bea6b48db0171c230870c62747bd606be24aaf",
+  "members": 6860,
+  "included_paths": [
+    "verification_pair_v1",
+    "verification_pilot_v1",
+    "panel/record_corrections"
+  ],
+  "identity_key_included": false
+}

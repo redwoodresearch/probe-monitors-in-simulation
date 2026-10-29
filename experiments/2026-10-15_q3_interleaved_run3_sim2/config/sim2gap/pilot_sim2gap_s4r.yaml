@@ -1,0 +1,17 @@
+# SIM2 GAP-FILL, part s4r (experiments/2026-10-15_q3_interleaved_run3_sim2/make_sim2gap.py): per cell ONE simulated attack (sim2),
+# no real arm; a descriptive add-on, not a registered IL launch. From config/pilot_il_s4d.yaml: only this header, tasks, real_arms and the caps differ.
+tasks: config/tasks_sim2gap_s4r.json   # sim2 gap-fill: 59 S4 (4r-owned) cells, env round-robin
+real_simulator: september
+real_arms: []   # sim only (as the sim-honest follow-ups); honest_a from --references-from the S4 (4r) main
+simulators: [september]
+sim_arms: [sim_attack]
+simulator_confirmed: true
+max_runs_per_server: 10
+max_real_runs: 60
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+spend:
+  cap_usd: 2100   # 28 x $75 reserve: admission capacity 28 at the start (d9: <= 95 counted at admission capacity)
+  worst_case_limit_usd: 2100   # = cap: $75 reserved per unfinished sim
+  worst_per_sim_run_usd: 75
+  prior_per_sim_run_usd: 16.48

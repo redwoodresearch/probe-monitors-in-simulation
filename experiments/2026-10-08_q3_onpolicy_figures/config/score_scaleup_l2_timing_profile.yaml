@@ -1,0 +1,15 @@
+# Timing pilot for the 196-task scoring (the orchestrator's go, about 02:20 PT on 2026-10-10): one primal refit draw on
+# launch 2's extraction (t26–t196), to measure seconds per draw at scale before the morning brief. Not a result: it is
+# not the scale-up's cohort (no t01–t25, no top-up or second attack run), and its scores are not read.
+label: scaleup_l2_timing_profile
+extractions: [2026-10-10_scaleup_l2_segends_v1]
+worlds: {real: attack, sim: sim_attack@september}
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json
+n_layers: 64
+hidden: 5120
+seed: 0
+fitter: primal
+x_cache: xcache_scaleup_l2_timing
+amendments:
+  timing_only: "orchestrator's go for the profile run, about 03:18 PT on 2026-10-10 (measure only)"
+profile: true

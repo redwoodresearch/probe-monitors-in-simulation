@@ -1,0 +1,15 @@
+{
+ "status": "up",
+ "mode": "deployed",
+ "stand_in": true,
+ "servers": [
+  {
+   "name": "probe-shift_aswin-surya_sub-phase2_srv366e76a_kill-2026-11-06",
+   "mode": "deployed",
+   "call_id": "fc-01M4EB031K0V1E5JGTYG3MX2SF",
+   "app_id": "ap-u0CXgqWRTwrY2zNDh7V2aw",
+   "tunnel_url": "https://stand-in.invalid",
+   "base_url": "https://stand-in.invalid/v1"
+  }
+ ]
+}

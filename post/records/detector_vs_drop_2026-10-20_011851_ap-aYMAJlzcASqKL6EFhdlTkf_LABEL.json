@@ -1,0 +1,5 @@
+{
+ "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-20_011851_ap-aYMAJlzcASqKL6EFhdlTkf.json",
+ "record_sha256": "51aeb15d2b4fe4a369063d4ee79914269002d5d8c2bf323ac0efb8ab6f61567c",
+ "label": "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction; D1 read from route C pooled A @ a936a5d9762763f9feed351aebdeeec2d8114f21 via Stage D @ c22edd8d3cc1221225dec418ab00b40515d5ba43 (read, never recomputed; identity-guarded on the bytes read)"
+}

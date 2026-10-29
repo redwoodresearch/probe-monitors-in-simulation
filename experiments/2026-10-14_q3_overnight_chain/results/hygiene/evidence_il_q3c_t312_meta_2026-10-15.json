@@ -1,0 +1,22 @@
+{
+ "root": "il311_q3c_sim2_extract_v1_try2",
+ "arm": "sim_attack@september",
+ "found": [
+  {
+   "meta_file": "49cf75283d9455f14b55.json",
+   "key": "2026-10-15_il_q3c/sim_attack@september/t312_media_processing/2026-10-15T12-38-59-00-00_la-media-processing-sim-attack-1_dPYUDkG35Bmqzfm5byBVDP.eval#e0",
+   "task": "t312_media_processing",
+   "n_tokens": 541,
+   "n_rows": 0,
+   "chunk": "shard001_a1_chunk000",
+   "calls": 0,
+   "kinds": {},
+   "with_row": 0,
+   "with_row_mean": 0,
+   "readout_none": 0,
+   "call_fields": [],
+   "per_call": []
+  }
+ ],
+ "meta_files": 32
+}

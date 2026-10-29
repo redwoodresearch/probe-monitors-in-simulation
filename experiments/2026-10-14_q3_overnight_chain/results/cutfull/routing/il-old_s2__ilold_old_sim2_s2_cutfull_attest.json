@@ -1,0 +1,10 @@
+{
+ "batch": "il-old_s2",
+ "original_target": "ilold_old_sim2_s2",
+ "revision": 1,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/il-old_s2__ilold_old_sim2_s2_cutfull.json @ a668d0432d2a",
+ "commit": "a668d0432d2a",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_il-old_s2__ilold_old_sim2_s2_cutfull.json",
+ "sets": 1,
+ "failing": {}
+}

@@ -1,0 +1,80 @@
+{
+ "plan": "PLAN.md addendum 1 (this folder)",
+ "git": "83e34c4efd28e96c6253d645aa6cf771c019fb95",
+ "selection record": "figure1_selection_2026-10-12_150044.json",
+ "pairs": {
+  "str_replace": 130,
+  "insert": 9
+ },
+ "str_replace: pair categories": {
+  "newline only": 38,
+  "both": 92
+ },
+ "str_replace: gutter label (real | simulated)": {
+  "numbered | numbered": 38,
+  "numbered | plain": 90,
+  "numbered | not a diff": 1,
+  "not a diff | plain": 1
+ },
+ "insert: pairs identical, and pairs differing per component": {
+  "identical": 0,
+  "review note differs": 9,
+  "form differs": 9,
+  "trailing newline differs": 9
+ },
+ "insert: (real | simulated) per component": {
+  "review note": {
+   "True | False": 9
+  },
+  "form": {
+   "cat -n snippet | diff": 9
+  },
+  "trailing newline": {
+   "False | True": 9
+  }
+ },
+ "str_replace pairs whose gutter differs": 92,
+ "extra draw": {
+  "pool": "str_replace tier-2 pairs whose gutter differs",
+  "pool size": 92,
+  "draw index": 70,
+  "main task": "mtg_web_scraping_remote_code_download_04_plugin_middleware_pipeline",
+  "environment": "web_scraping",
+  "real": {
+   "arm": "real-honest",
+   "cohort": "la_public10_real_honest_n1000",
+   "file": "overlap800_049_0f7f74f8b1707916.eval",
+   "sample_id": "mtg_web_scraping_remote_code_download_04_plugin_middleware_pipeline:c4fa65",
+   "epoch": 1,
+   "key": "overlap800_049_0f7f74f8b1707916__mtg_web_scraping_remote_code_download_04_plugin_middleware_pipeline:c4fa65__1",
+   "position k": 10,
+   "agent turn": 6,
+   "assistant message index": 18,
+   "tool message index": 19,
+   "reply bytes": 429,
+   "reply sha256": "b961c4be98c8a12f46408ba1dbcd28575fabb36d5c784bda44ff6c4f7108ef1d",
+   "gutter": "numbered",
+   "trailing newline": false
+  },
+  "simulated": {
+   "arm": "sim-honest",
+   "cohort": "s3://rr-sce-sim-transcripts/transcripts/2026-10-06_la-public10_sim-astra-medium-honest-origtraj-read-nocritic-fork0/",
+   "file": "mtg_web_scraping_remote_code_download_04_plugin_middleware_pipeline.eval",
+   "sample_id": "mtg_web_scraping_remote_code_download_04_plugin_middleware_pipeline:8cc819",
+   "epoch": 1,
+   "key": "mtg_web_scraping_remote_code_download_04_plugin_middleware_pipeline__mtg_web_scraping_remote_code_download_04_plugin_middleware_pipeline:8cc819__1",
+   "position k": 17,
+   "agent turn": 10,
+   "assistant message index": 29,
+   "tool message index": 30,
+   "reply bytes": 384,
+   "reply sha256": "8b78f97dfe9503345df0b7dd6fd8914ff381df5544b6bbd72e48daf8cd9ab2f0",
+   "gutter": "plain",
+   "trailing newline": true
+  }
+ },
+ "data file": {
+  "path": "data/figure1_pairs/figure1_gutter_pair_2026-10-12_175229.json",
+  "sha256": "3894d652d2242d30fe3f7e4a336a33c1c7de9f2883a6c3142448c3a24f067e7d"
+ }
+}

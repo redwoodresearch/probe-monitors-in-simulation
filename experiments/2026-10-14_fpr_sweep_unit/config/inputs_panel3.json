@@ -1,0 +1,276 @@
+{
+ "label": "Panel 3 add-on input manifest (RULE.md Add-on (0d 02:1x, panel 3)); sim-honest pins from 2e's records simh_score_2026-10-14_230251 (batch 1) and _232103 (batch 2 at ac27aa8e5) on aswin/cmd-readout-curve",
+ "local": {
+  "labels": {
+   "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/slip_pins/claimc_labels_reduced.json",
+   "sha256": "d00e88773fc2a71bef51e1ff0ccc2559932f5c3a306a8f5604c5248e797dc995"
+  },
+  "t196": {
+   "git": "HEAD:experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json",
+   "sha256": "55d9a8ec68f4685410d65c97bb84f470efb7cd8f05287384f92465ed5eadedbb"
+  },
+  "r36": {
+   "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/cb_inputs/r36_runs.json",
+   "sha256": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96"
+  },
+  "v6": {
+   "git": "0ed287c95:experiments/2026-10-14_xerr_prelim_09/results/xerr_v6_2026-10-14_161122.json",
+   "sha256": "e789144b62f71e0fb168dc3106656c2b5f29aadafe12df0f86dd1f74441d7645"
+  },
+  "own_a_record": {
+   "git": "cc53afc3a:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/correctedb_scores_2026-10-14_164934.json",
+   "sha256": "c002d5f822e49d7877f4e8b79a80ca9dd2e2f16c664b921d3ad12cb3da4c49ac",
+   "volume": "solavg"
+  },
+  "rec_b": {
+   "path": "results/fprsweep_unit_2026-10-15_003643.json",
+   "sha256": "d979413913b988ff6f29fbc0a5910aa01d3bb048387bc41b1a848e039ebba7d2"
+  }
+ },
+ "own_a": {
+  "record": {
+   "git": "cc53afc3a:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/correctedb_scores_2026-10-14_164934.json",
+   "sha256": "c002d5f822e49d7877f4e8b79a80ca9dd2e2f16c664b921d3ad12cb3da4c49ac",
+   "volume": "solavg"
+  },
+  "z22j": {
+   "git": "b11a58831:experiments/2026-10-14_q35_sol_avg_POSTHOC/results/correctedb_z22j_2026-10-14_175328.json",
+   "sha256": "ea42d0d4a39990f031a9f2d1fcb1122965bd7f8796c4124adad18f9a897f545b"
+  },
+  "layer_choice": [
+   [
+    49,
+    50
+   ],
+   [
+    49,
+    50
+   ],
+   [
+    50,
+    51
+   ],
+   [
+    49,
+    50
+   ],
+   [
+    49,
+    50
+   ]
+  ],
+  "readouts": {
+   "cmd_A": {
+    "label": "command A (content-only call end, L63)",
+    "rows_keypath": [
+     "saved",
+     "cmd",
+     "cmdA",
+     "rows|own_a_tight"
+    ],
+    "run_keypath": [
+     "scores",
+     "cmd",
+     "A_content_only_call_end",
+     "own_a_tight"
+    ],
+    "z22j_key": "A_content_only_call_end|tight|honest_B"
+   },
+   "avg_top2": {
+    "label": "averaged reply (mean of the fold's two chosen layers)",
+    "rows_keypath": [
+     "saved",
+     "tight",
+     "avg"
+    ],
+    "run_keypath": [
+     "scores",
+     "own_a_tight_substituted",
+     "avg_top2"
+    ],
+    "z22j_key": "avg_top2|tight|honest_B_u_C"
+   }
+  },
+  "split": "v6 universe_and_split: eligibility_half (selection, cohort 93), estimation_half (estimation, cohort 90)",
+  "targets": [
+   0.25,
+   0.5,
+   0.75
+  ]
+ },
+ "own_frac100_L48": {
+  "index": {
+   "git": "84df4d069:experiments/2026-10-14_p2_family_expansion/results/own_family_unit_files_2026-10-15_000120.json",
+   "sha256": "4a8156107399630f791d65802044d35f21be76645205a026e661c46b1cc8084e"
+  },
+  "volume": "p2",
+  "files": {
+   "C": {
+    "open": {
+     "path": "famexp/2026-10-14_163027/pack_open_2026-10-14_180501/own_frac100_L48__C.npz",
+     "sha256": "0507648b648bf890367935d68c557641e3f5ea62672b211928d6e016a2c5f196"
+    },
+    "sim": {
+     "path": "famexp/2026-10-14_163027/pack_sim_sealed_2026-10-14_181123/own_frac100_L48__C.npz",
+     "sha256": "1fd6d7cdec936c2725721318dd2a8689101cb06ddd86d05eeb6312554d3b00b9"
+    },
+    "run_agg": "max",
+    "label": "C: content-only call-end rows (fixed tokens dropped)"
+   },
+   "R": {
+    "open": {
+     "path": "famexp/2026-10-14_163027/pack_open_2026-10-14_180501/own_frac100_L48__R.npz",
+     "sha256": "37b3122e9249ce0cf4fa829547bc2ce2f7bff95973af93f10ea15c3748476de0"
+    },
+    "sim": {
+     "path": "famexp/2026-10-14_163027/pack_sim_sealed_2026-10-14_181123/own_frac100_L48__R.npz",
+     "sha256": "c8365d94be860cf834f194905ba646d7b2771ecc2f8ea6db43d99550203149e6"
+    },
+    "run_agg": "mean",
+    "label": "R: output_end_mean reply rows"
+   }
+  },
+  "v7_phase1": {
+   "git": "6514cf401:experiments/2026-10-14_xerr_prelim_09/results/xerr_v7_phase1_2026-10-14_180820.json",
+   "sha256": "afcf8fe38e77bbb408980b255ef7e553535f731c77deefb7793f07998bf6550e",
+   "keypath": [
+    "result",
+    "phase1_eligibility_record",
+    "decisions"
+   ]
+  },
+  "pool_from_v7": {
+   "C": "B",
+   "R": "BuC"
+  },
+  "own_a_readout_match": {
+   "cmd_A": "C",
+   "avg_top2": "R"
+  }
+ },
+ "probes_b": [
+  {
+   "probe_id": "sol_a|avg_top2|corrected|none|tight",
+   "label": "Sol (a)",
+   "role": "main",
+   "folds": 5,
+   "rows": {
+    "volume": "solavg",
+    "path": "xfer/correctedb_tight22g_2026-10-14_144709/perrow_asis_tight__a__averaged_reply_top2.npz",
+    "sha256": "aca93022c00ebb8394977be5013aaf53f4881e35b401c91ab8ffad846cd52d50",
+    "pin_from": "A24 list source.sha256 (the list's npz source); 22g record source.record_sha256 06293dc904d20dcb0f947f89df852876677071ce2a59594bce2924918d73a4f3"
+   },
+   "run_scores": {
+    "kind": "npz_mean",
+    "note": "A24 load_rows: per run float(np.mean(list of row scores in file order))"
+   }
+  },
+  {
+   "probe_id": "fibs|reply_mean|corrected|none",
+   "label": "FIBS",
+   "role": "main",
+   "folds": 1,
+   "rows": {
+    "volume": "p2",
+    "path": "fibs/2026-10-14_124948/reply_mean.npz",
+    "sha256": "576538939ae53f9afbf6da8b7e7123e698413c34331baebf7193d8236266f666",
+    "pin_from": "record rows.reply_mean"
+   },
+   "run_scores": {
+    "kind": "json",
+    "git": "origin/aswin/p2-fibs-score:experiments/2026-10-14_p2_fibs_pair/results/fibs_scores_2026-10-14_124948.json",
+    "sha256": "366d594cd719d52e9bb11d34bf4d3491b6cbd82d64f61efa73f476773cb49b1a",
+    "keypath": [
+     "run_scores",
+     "reply_mean"
+    ],
+    "rows_keypath": [
+     "rows",
+     "reply_mean"
+    ]
+   }
+  }
+ ],
+ "probes_c": [
+  {
+   "label": "Sol (a) tight",
+   "bc_rows": {
+    "volume": "solavg",
+    "path": "xfer/asis_2026-10-14_135701/rows_2026-10-14_142228/a_tight__cmd_A.npz",
+    "sha256": "2e3b60e8e92dd744311773900a5b41b3dd2b48efadc29c9efcd665438a390cc3"
+   },
+   "simh": [
+    {
+     "batch": "b1",
+     "rows": {
+      "volume": "convaudit",
+      "path": "simh/full_b1/sol/a_tight__cmd_A.npz",
+      "sha256": "0831d2ef4e3675707b912bb8f52b5146222fa66f8191b57b35278c12a4dfd918"
+     },
+     "manifest": {
+      "volume": "convaudit",
+      "path": "simh/full_b1/sol/manifest_sol.json",
+      "sha256": "24c1bd2d7e351f174da9d6c5713d84a40510adeb10df534d4cf222c2907be311"
+     },
+     "n_rows": 4923,
+     "n_runs": 145
+    },
+    {
+     "batch": "b2",
+     "rows": {
+      "volume": "convaudit",
+      "path": "simh/full_b2/sol/a_tight__cmd_A.npz",
+      "sha256": "6e5c8c47a9678d7d1751c987b0057ddf66cf1ea9c6ef41ffac640e7f003d0f9b"
+     },
+     "manifest": {
+      "volume": "convaudit",
+      "path": "simh/full_b2/sol/manifest_sol.json",
+      "sha256": "ff58eb8c426a6ad193b7847ccea4cfeafdd2bd5cf05644d9d3f1195596d2e90d"
+     },
+     "n_rows": 156,
+     "n_runs": 4
+    }
+   ]
+  },
+  {
+   "label": "c_asis tight (positive control)",
+   "bc_rows": {
+    "volume": "solavg",
+    "path": "xfer/asis_2026-10-14_135701/rows_2026-10-14_142228/c_asis_tight__cmd_A.npz",
+    "sha256": "a5d0c452d44115f257ebda72eb607e510b3ee8920659f8b9f3477570d5af3429"
+   },
+   "simh": [
+    {
+     "batch": "b1",
+     "rows": {
+      "volume": "convaudit",
+      "path": "simh/full_b1/sol/c_asis_tight__cmd_A.npz",
+      "sha256": "a57e88b1280c43a28ffa5c1e0add4b6be8d45498cc1b79ed753a7a4329903756"
+     },
+     "manifest": {
+      "volume": "convaudit",
+      "path": "simh/full_b1/sol/manifest_sol.json",
+      "sha256": "24c1bd2d7e351f174da9d6c5713d84a40510adeb10df534d4cf222c2907be311"
+     },
+     "n_rows": 4923,
+     "n_runs": 145
+    },
+    {
+     "batch": "b2",
+     "rows": {
+      "volume": "convaudit",
+      "path": "simh/full_b2/sol/c_asis_tight__cmd_A.npz",
+      "sha256": "bef431ee3949f6e1f9116b48af5096b0c78e0b1fb0f26e11959acb4b48204973"
+     },
+     "manifest": {
+      "volume": "convaudit",
+      "path": "simh/full_b2/sol/manifest_sol.json",
+      "sha256": "ff58eb8c426a6ad193b7847ccea4cfeafdd2bd5cf05644d9d3f1195596d2e90d"
+     },
+     "n_rows": 156,
+     "n_runs": 4
+    }
+   ]
+  }
+ ]
+}

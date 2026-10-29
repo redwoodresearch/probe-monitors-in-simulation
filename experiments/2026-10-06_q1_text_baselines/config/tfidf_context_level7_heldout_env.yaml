@@ -1,0 +1,12 @@
+# Running mean of output scores up to each output ("all text up to this output") at scrub level 7, held-out environment
+# folds (from the scores), for the main session's paired probe-minus-TF-IDF test on its level-7 probe.
+name: tfidf_context_level7_heldout_env
+examples: examples_2026-10-06_142532     # the staging the level-7 scores were fitted on
+folds_file: folds_v3.json
+output_variants: [all, no_editor]
+variants:
+  level7_running_mean:
+    outputs: harness_normalized_editor_format_scores_2026-10-06_172551.jsonl.gz   # tfidf_heldout_env_level7_probe_match, environment folds
+    calls: null
+bootstrap: 1000
+seed: 0

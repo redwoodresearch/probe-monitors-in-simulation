@@ -1,0 +1,16 @@
+# For q3's tool-output readout (2026-10-08; q3's <= $5 approval via the orchestrator): two variants of the same 100 runs,
+# staged together so one H100 extraction at layers 48 and 63 covers both. q3 scores them with its frozen detector.
+#   sim-attack-diff-note: V4, the sim's own insert diff (trailing newline stripped) plus the real review note
+#   sim-attack-sr-both:   str_replace outputs in the real format (gutter added, trailing newline stripped)
+# V1 and V2 at these layers are in 2026-10-07_q2_swap_qwen3-32b_alllayers_v1 (all 64 layers).
+n_runs: 100
+seed: 0
+inputs_from: 2026-10-06_la_segment-end_qwen3-32b_v1
+staged_run: 2026-10-08_q2_swap_q3_inputs_v1
+include_original: false
+variants:
+  sim-attack-diff-note: diff_with_note
+  sim-attack-sr-both: sr_gutter_no_newline
+swap_arm: sim-attack-realstyle
+extraction_run: 2026-10-08_q2_swap_q3_qwen3-32b_l48-63_v1   # ../2026-10-06_all_layers_extraction/config/alllayers_q2_swap_q3.yaml
+reference_extraction_run: 2026-10-07_q2_swap_qwen3-32b_alllayers_v1

@@ -1,0 +1,17 @@
+Where F11's realism move lives (Amendment 4, descriptive): summary (ii) [95% main-task bootstrap], label-shuffle null (100 within-task shuffles)
+L48 A, gate: last token, all rows              full + F9  0.8084 [0.7839, 0.8326] | null mean 0.5329, 95th 0.5618, max 0.5796 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+    gate: as run 0.8080, passes True | real honest runs bit-exact to d9's pack 885 of 885
+L48 B: last token, text_editor rows dropped    full + F9  0.6672 [0.6355, 0.6959] | null mean 0.5241, 95th 0.5508, max 0.5764 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+L48 B: last token, text_editor rows dropped    + F11      0.6662 [0.6347, 0.6948] | null mean 0.5258, 95th 0.5548, max 0.5812 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+    + F11 minus full + F9: -0.0010 [-0.0048, +0.0030] (paired, same bootstrap draws)
+L48 C: averaged readout (output_end_mean)      full + F9  0.8078 [0.7841, 0.8317] | null mean 0.5390, 95th 0.5597, max 0.5720 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+L48 C: averaged readout (output_end_mean)      + F11      0.6744 [0.6502, 0.6979] | null mean 0.5386, 95th 0.5600, max 0.5809 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+    + F11 minus full + F9: -0.1334 [-0.1531, -0.1151] (paired, same bootstrap draws)
+L63 A, gate: last token, all rows              full + F9  0.8549 [0.8324, 0.8776] | null mean 0.5311, 95th 0.5627, max 0.5847 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+    gate: as run 0.8552, passes True | real honest runs bit-exact to d9's pack 885 of 885
+L63 B: last token, text_editor rows dropped    full + F9  0.7457 [0.7189, 0.7732] | null mean 0.5211, 95th 0.5492, max 0.5567 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+L63 B: last token, text_editor rows dropped    + F11      0.7366 [0.7084, 0.7649] | null mean 0.5207, 95th 0.5518, max 0.5596 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+    + F11 minus full + F9: -0.0090 [-0.0147, -0.0035] (paired, same bootstrap draws)
+L63 C: averaged readout (output_end_mean)      full + F9  0.8488 [0.8294, 0.8694] | null mean 0.5363, 95th 0.5576, max 0.5741 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+L63 C: averaged readout (output_end_mean)      + F11      0.7413 [0.7193, 0.7646] | null mean 0.5354, 95th 0.5581, max 0.5734 | p 0.0099 | runs (sim, real) [437, 885] | runs without rows {'simulated': 0, 'real': 0}
+    + F11 minus full + F9: -0.1076 [-0.1264, -0.0887] (paired, same bootstrap draws)

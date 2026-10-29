@@ -1,0 +1,29 @@
+# Is TF-IDF under-tuned on the 368 clean cells? Level 5, held-out environments, retrained on the clean cells, at fixed
+# C = 0.01, 0.1, 10, 100 (C = 1 is tfidf_heldout_env_clean_level5). The best of these on the test folds is an
+# optimistic bound on what picking C by inner cross-validation (tfidf_heldout_env_clean_level5_tuning) could reach.
+name: tfidf_heldout_env_clean_level5_fixed_C
+cells_file: config/clean_cells_2026-10-06_180321.json   # the main session's 368 clean cells (analysis 2026-10-06_180321)
+examples: examples_2026-10-06_142532
+folds_file: folds_v3.json
+fold_scheme: environment
+baselines:
+  level5_C0.01: {text: readout_text, scrub: 5, settings: {C: 0.01}}
+  level5_C0.1: {text: readout_text, scrub: 5, settings: {C: 0.1}}
+  level5_C10: {text: readout_text, scrub: 5, settings: {C: 10.0}}
+  level5_C100: {text: readout_text, scrub: 5, settings: {C: 100.0}}
+output_variants: [all, no_editor]
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true
+C: 1.0                                   # overridden per baseline
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 0}
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

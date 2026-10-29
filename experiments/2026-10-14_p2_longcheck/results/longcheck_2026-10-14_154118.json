@@ -1,0 +1,96 @@
+{
+ "label": "RULE.md Amendment 1 in this folder",
+ "stamp (PT)": "2026-10-14_154118",
+ "app": "probe-shift_aswin-surya_sub-p2probes_longcheck_kill-2026-11-13",
+ "job": "cyber",
+ "stage1_stamp": "2026-10-14_135713",
+ "pass_cosine": 0.9999,
+ "n_long": 8,
+ "timeout_s": 240,
+ "stored_shards": [
+  0
+ ],
+ "stored_part_files": [
+  "shard0_part00.json",
+  "shard0_part01.json"
+ ],
+ "stored_gpus": [
+  "NVIDIA H200"
+ ],
+ "gpu": "NVIDIA H200",
+ "results": {
+  "cyber|shard0": [
+   {
+    "item": 1406,
+    "n_tokens": 301,
+    "stored_part": "shard0_part01",
+    "min_cosine": 0.9997100622302781,
+    "max_abs_diff": 2.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1673,
+    "n_tokens": 194,
+    "stored_part": "shard0_part01",
+    "min_cosine": 0.9999111507130373,
+    "max_abs_diff": 0.75,
+    "bit_equal": false
+   },
+   {
+    "item": 1381,
+    "n_tokens": 191,
+    "stored_part": "shard0_part01",
+    "min_cosine": 0.9998811415408905,
+    "max_abs_diff": 2.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1288,
+    "n_tokens": 184,
+    "stored_part": "shard0_part01",
+    "min_cosine": 0.9998533547396868,
+    "max_abs_diff": 1.5,
+    "bit_equal": false
+   },
+   {
+    "item": 1465,
+    "n_tokens": 168,
+    "stored_part": "shard0_part01",
+    "min_cosine": 0.9998029454993426,
+    "max_abs_diff": 2.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1339,
+    "n_tokens": 157,
+    "stored_part": "shard0_part01",
+    "min_cosine": 0.9997791432141465,
+    "max_abs_diff": 1.5,
+    "bit_equal": false
+   },
+   {
+    "item": 1290,
+    "n_tokens": 157,
+    "stored_part": "shard0_part01",
+    "min_cosine": 0.9999093357550854,
+    "max_abs_diff": 2.0,
+    "bit_equal": false
+   },
+   {
+    "item": 1043,
+    "n_tokens": 153,
+    "stored_part": "shard0_part01",
+    "min_cosine": 0.9997560350135126,
+    "max_abs_diff": 2.0,
+    "bit_equal": false
+   }
+  ]
+ },
+ "passes": false,
+ "git": "6713b8af8b18510b15eab0ccf6c336a56fd97353",
+ "reader_blob": "f56d669ef1f216aa5c06e226fd379bd07e8e0b2d",
+ "stage1_record_git": "356af8f732da7547c6d7ac082a57d0785049dedb",
+ "stage1_items_per_shard": {
+  "0": 1747
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "box_json_sha256": "caa22aebc9e46fc5742ab173161455ae19cb0ceb5c117284ece638d424a14580",
+ "cells": [
+  {
+   "cell": "sim_honest@september/nm134_media_processing",
+   "census": {
+    "ref": "experiments/2026-10-14_q3_new_mains_launch/results/sim_error_census_2026-10-15_1337.json @ 8bb7ff6ed",
+    "census_time_pt": "2026-10-15 13:37:55",
+    "box": "box3",
+    "launch": "2026-10-15_simh_nm_s3",
+    "launch_sim_ended": 58,
+    "error_row_present": true,
+    "rows": [
+     {
+      "class": "OutputContractError",
+      "attempts": 1,
+      "end": "2026-10-15T13:05:34-07:00",
+      "bin": "13:00"
+     }
+    ]
+   }
+  }
+ ]
+}

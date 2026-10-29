@@ -1,0 +1,17 @@
+{
+ "app_id": "ap-RAGc8YoLg6i0HkP9sOG7VK",
+ "call_id": "fc-01M5133Y2AFP7CGKPJR1W8B6WP",
+ "label": "t196_v1",
+ "round": "extension 1",
+ "result": {
+  "spent_usd": 1331.4317,
+  "crash_resumes": [],
+  "overrun": null,
+  "max_committed_exposure_usd": 1350.1965,
+  "suppressed_print_lines": {
+   "batch_fallback": 0,
+   "coalesce_short": 0,
+   "other": 5
+  }
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "job": {
+  "kind": "pairs",
+  "probes": [
+   "A",
+   "panel"
+  ],
+  "file": "toc/dialogues_2026-10-11_154759.jsonl",
+  "sha256": "ef564962f5c07933bf9bab370873688ad71de16d95f72dc741b31800f4f0acb5",
+  "layers": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   63
+  ],
+  "shards": 4
+ },
+ "provenance": {
+  "git": "7048c66af9ec5c4b6eb63c8906b1168f097fb056",
+  "stamp": "2026-10-11_161002",
+  "build": "results/build_2026-10-11_154759.json",
+  "extractor_sha256": "acf943c8fa7acb4ab79aecd5aad523149d0f72e4bfbcc589639fb0d869ae0def",
+  "probe_shift_sha256": "c8e9952963ffa687a904eb05099060ba2ebd6b62ea282a86c3947b1cd90680e1",
+  "selection_sha256": "311dc66a52f70a85a7080df6613316d250bfb20ba5c34fb784df6291738c893c"
+ },
+ "shards": [
+  {
+   "shard": 0,
+   "dialogues": 720,
+   "skipped (no readable output)": 0,
+   "chunks resumed": 0,
+   "tokens (this attempt)": 15274007,
+   "forward_s": 3066.3,
+   "load_s": 39.5,
+   "tokens_per_s": 4981,
+   "gpu": "NVIDIA H200"
+  },
+  {
+   "shard": 1,
+   "dialogues": 720,
+   "skipped (no readable output)": 0,
+   "chunks resumed": 0,
+   "tokens (this attempt)": 15273839,
+   "forward_s": 3070.6,
+   "load_s": 30.3,
+   "tokens_per_s": 4974,
+   "gpu": "NVIDIA H200"
+  },
+  {
+   "shard": 2,
+   "dialogues": 720,
+   "skipped (no readable output)": 0,
+   "chunks resumed": 0,
+   "tokens (this attempt)": 15400552,
+   "forward_s": 3118.3,
+   "load_s": 31.1,
+   "tokens_per_s": 4939,
+   "gpu": "NVIDIA H200"
+  },
+  {
+   "shard": 3,
+   "dialogues": 720,
+   "skipped (no readable output)": 0,
+   "chunks resumed": 0,
+   "tokens (this attempt)": 15405043,
+   "forward_s": 3093.2,
+   "load_s": 29.5,
+   "tokens_per_s": 4980,
+   "gpu": "NVIDIA H200"
+  }
+ ],
+ "assembled": {
+  "tocAC_2026-10-11_161002": {
+   "dialogues": 2280,
+   "rows": 2280
+  },
+  "tocAM_2026-10-11_161002": {
+   "dialogues": 2280,
+   "rows": 2280
+  },
+  "tocPanelC_2026-10-11_161002": {
+   "dialogues": 600,
+   "rows": 600
+  },
+  "tocPanelM_2026-10-11_161002": {
+   "dialogues": 600,
+   "rows": 600
+  }
+ }
+}

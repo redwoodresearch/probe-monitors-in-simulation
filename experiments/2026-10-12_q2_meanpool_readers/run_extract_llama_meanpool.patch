@@ -1,0 +1,175 @@
+Gate row 1, Llama: run_extract_llama_meanpool.py as run (first committed at ddf96e51 on aswin/q2-meanpool-olmo, reachable
+from this stack's top merge), kept here as a patch against its source on main for the PR size cap (599 lines). The full
+copy (sha256 eca6f8f38746d8b6ad43f0f32f8186da2d0420a7370d6102946f617407c14203, 37404 bytes) is on S3 via results/s3_manifest_v1.json.
+Source on main: experiments/2026-10-12_q2_llama_reader/run_extract_llama.py, sha256 dd19a0e3a41cdfc6e285e5d1b63e7197b8dccbeef25b5c251f9f8b47b8afac80.
+Rebuild, from the repository root:
+  patch -o experiments/2026-10-12_q2_meanpool_readers/run_extract_llama_meanpool.py experiments/2026-10-12_q2_llama_reader/run_extract_llama.py experiments/2026-10-12_q2_meanpool_readers/run_extract_llama_meanpool.patch
+
+--- experiments/2026-10-12_q2_llama_reader/run_extract_llama.py
++++ experiments/2026-10-12_q2_meanpool_readers/run_extract_llama_meanpool.py
+@@ -1,4 +1,11 @@
+-"""A fourth reader (PLAN.md here): Llama-3.3-70B-Instruct on #36's staged transcripts and fix939's re-rendered ones,
++"""Gate row 1 for Llama (PLAN.md here): a copy of ../2026-10-12_q2_llama_reader/run_extract_llama.py at 8cd2a6cd that saves
++a mean-pooled reply readout, output_end_mean: per kept tool output, the mean of the residual stream over the tokens lying
++entirely inside its JSON-escaped string body (never the quotes or a template token), clipped to the context, at layers 60
++and 70 only. Those are the layers last-token Llama's folds chose; row 2's held-out layers (20, 30, 40, 50, 79) are never
++saved (asserted). Coverage is unchanged (R2J kept under C2). The forward pass runs to the last kept output's end and stops
++after block 70. Render and diff modes are dropped. The original docstring follows.
++
++A fourth reader (PLAN.md here): Llama-3.3-70B-Instruct on #36's staged transcripts and fix939's re-rendered ones,
+ at the R2J readout of every tool output that Qwen3-32B kept (C2). Built on ../2026-10-12_q2_olmo_reader/run_extract_olmo.py
+ (same layout, chunk markers, resume, orchestrator and check), with Llama's template and the JSON-escaped readout. The
+ weights come read-only from our Llama Volume. The shared code is untouched, and transformers lives only in this job's
+@@ -30,14 +37,17 @@
+ import modal
+ 
+ HERE = Path(__file__).parent
+-APP = "probe-shift_aswin-surya_sub-q2-llama_extract_kill-2026-11-12"
++APP = "probe-shift_aswin-surya_sub-q2-mpllama_extract_kill-2026-11-12"
+ ACTS = "probe-shift_aswin-surya_sub-la-activations"  # read-only: #36's dump (staged inputs, Qwen3-32B meta) and fix939's
+-OUT = "probe-shift_aswin-surya_sub-q2-llama_acts_kill-2026-11-12"
++OUT = "probe-shift_aswin-surya_sub-q2-mpllama_acts_kill-2026-11-12"
+ WEIGHTS = "probe-shift_aswin-surya_sub-apollo_llama-cache"  # read-only: the Llama snapshot (models--… at its root)
+ DUMP = "2026-10-06_la_segment-end_qwen3-32b_v1"
+ FIX_DUMP, FIX_INPUTS, FIX_ARM, FIX_LABEL = ("2026-10-11_q3_fix939_qwen3-32b_l48-63_v1", "2026-10-11_q3_fix939_inputs_v1",
+                                             "sim-attack-note-sr-both", "sim-attack-fix939")
+-RUN = "2026-10-12_la_output-end-r2j_llama33-70b_alllayers_v1"
++RUN = "2026-10-12_la_output-end-mean_llama33-70b_l2_v1"
++SAVE, ROW2 = (60, 70), (20, 30, 40, 50, 79)  # saved layers; row 2's held-out layers, never saved
++assert not set(SAVE) & set(ROW2)
++KIND = "output_end_mean"
+ MODEL, REVISION, CTX, CUT, H, N_LAYERS = "meta-llama/Llama-3.3-70B-Instruct", "6f6073b423013f6a7d4d9f39144961bfbfbc386b", 131072, 32768, 8192, 80
+ DATE = "26 Jul 2024"  # the template's default date_string, passed explicitly so every run gets the same line
+ HDR, END = "<|start_header_id|>ipython<|end_header_id|>\n\n", "<|eot_id|>"
+@@ -140,7 +150,8 @@
+         r2 = next((t for t in range(i1 - 1, i0 - 1, -1) if "nl" not in tc(t) and any(c != "ws" for c in tc(t))), None)
+         qk = q.get(f"{s},{a_}")
+         kept = bool(qk and qk[0]) and r2 is not None and r2 < CTX
+-        out.append({"kind": "output_end", "step": s, "action": a_, "tool": qk[1] if qk else None, "token": r2, "kept": kept, "token_text": None})
++        out.append({"kind": KIND, "step": s, "action": a_, "tool": qk[1] if qk else None, "token": r2, "kept": kept, "token_text": None,
++                    "span": [i0, min(i1, CTX)] if kept else None})  # the mean runs over these tokens
+         per.append({"qk": qk, "rules": {r: (t, None if t is None else tc(t)) for r, t in (("R0", r0), ("R1", r1), ("R2J", r2))},
+                     "content": content, "span": (a, b), "cls": cls, "dec": dec})
+     return {"ids": ids, "n_tokens": len(ids), "positions": out, "outputs": per, "text": text, "starts": starts, "ends": ends}
+@@ -315,7 +326,8 @@
+                 return -1
+             return max((p["token"] for p in r["positions"] if p["kept"]), default=-1) + 1
+         mine = sorted(mine[:40], key=lambda it: -fwd(it))[: cfg["limit_items"]]
+-    layers = list(range(N_LAYERS))
++    layers = list(SAVE)
++    assert not set(layers) & set(ROW2)
+     for l in layers:
+         (run_dir / "by_layer" / f"L{l}").mkdir(parents=True, exist_ok=True)
+     (run_dir / "chunks").mkdir(parents=True, exist_ok=True)
+@@ -333,7 +345,10 @@
+         idx.unlink(missing_ok=True)
+         print(f"shard {shard}: dropped incomplete chunk {name} before resuming", flush=True)
+     out_vol.commit()
+-    chunk = len(list((run_dir / "by_layer" / "L0").glob(f"shard{shard:03d}_chunk*.npy")))
++    chunk = len(list((run_dir / "by_layer" / f"L{layers[0]}").glob(f"shard{shard:03d}_chunk*.npy")))
++
++    class StopForward(Exception):  # raised after the last saved block: nothing later is needed
++        pass
+     buf, buf_meta, timing, failures = {l: [] for l in layers}, [], [], []
+ 
+     def shard_stats(extra):  # over every attempt's chunks, counting a transcript only in the chunk its meta points to
+@@ -408,19 +423,25 @@
+         rows = [p for p in r["positions"] if p["kept"]]
+         t0 = time.time()
+         if rows:
+-            last = max(p["token"] for p in rows)
+-            idx_cpu = torch.tensor([p["token"] for p in rows], dtype=torch.long)
++            spans = [p["span"] for p in rows]
++            if any(not (0 <= a < b <= CTX) for a, b in spans):
++                raise ValueError("an empty or out-of-range content span")
++            last = max(b for _, b in spans) - 1  # the last content token of the last kept output
+             got = {}
+ 
+             def hook_for(layer):
+                 def hook(module, args, output):
+-                    h = output[0] if isinstance(output, tuple) else output
+-                    got[layer] = h[0].index_select(0, idx_cpu.to(h.device)).to(torch.float16).cpu().numpy()
++                    h = (output[0] if isinstance(output, tuple) else output)[0]
++                    got[layer] = torch.stack([h[a:b].float().mean(0) for a, b in spans]).to(torch.float16).cpu().numpy()
++                    if layer == layers[-1]:
++                        raise StopForward
+                 return hook
+             handles = [base.layers[l].register_forward_hook(hook_for(l)) for l in layers]
+             try:
+                 with torch.inference_mode():
+                     base(input_ids=torch.tensor([r["ids"][: last + 1]], device=first), use_cache=False)
++            except StopForward:
++                pass
+             finally:
+                 for h_ in handles:
+                     h_.remove()
+@@ -431,7 +452,7 @@
+         positions_ = [p | {"row": next(row) if p["kept"] else None} for p in r["positions"]]
+         buf_meta.append({"key": it["key"], "arm": label, "filename": stem,
+                          **{k: it.get(k) for k in ("cohort", "file", "sample_id", "epoch", "environment", "main_task", "side_task", "cell")},
+-                         "n_tokens": r["n_tokens"], "truncated": r["n_tokens"] > CUT, "forward_tokens": (max(p["token"] for p in rows) + 1) if rows else 0,
++                         "n_tokens": r["n_tokens"], "truncated": r["n_tokens"] > CUT, "forward_tokens": max(p["span"][1] for p in rows) if rows else 0,
+                          "n_rows": len(rows), "positions": positions_})
+         if len(buf_meta) == cfg["chunk_size"]:
+             flush()
+@@ -471,7 +492,7 @@
+ 
+ @app.function(image=cpu_image, cpu=8, memory=32768, volumes={"/out": out_vol}, timeout=3600, retries=0)
+ def check(run: str, expected: dict) -> dict:
+-    """Counts only. As the Olmo check, but it opens only layers 0 and 79 per chunk (shape and non-finite recount) and
++    """Counts only. As the Olmo check, but it opens only the first and last saved layers per chunk (shape and non-finite recount) and
+     checks the other layers' files exist by listing (opening every file was too slow on the Volume at full size)."""
+     import numpy as np
+     from collections import Counter
+@@ -479,7 +500,7 @@
+     d = Path("/out") / run
+     metas = Counter(); kept = 0; problems = Counter(); rows_total = 0; nonfinite_index = 0; nonfinite_recount = 0
+     index = {}
+-    listed = {l: {p.stem for p in (d / "by_layer" / f"L{l}").glob("*.npy")} for l in range(N_LAYERS)}
++    listed = {l: {p.stem for p in (d / "by_layer" / f"L{l}").glob("*.npy")} for l in SAVE}
+     for idx in sorted((d / "chunks").glob("shard*_chunk*.json")):
+         c = json.loads(idx.read_text())
+         problems["chunk without its done marker"] += not (d / "chunks" / f"{idx.stem}.done").exists()
+@@ -489,16 +510,16 @@
+             problems["duplicate index entry"] += (t["arm"], t["filename"], idx.stem) in index
+             index[(t["arm"], t["filename"], idx.stem)] = (t["row_start"], t["n_rows"])
+         nonfinite_index += c["nonfinite"]
+-        problems["chunk missing a layer file"] += sum(idx.stem not in listed[l] for l in range(N_LAYERS))
+-        for l in (0, N_LAYERS - 1):
++        problems["chunk missing a layer file"] += sum(idx.stem not in listed[l] for l in SAVE)
++        for l in (SAVE[0], SAVE[-1]):
+             x = np.load(d / "by_layer" / f"L{l}" / f"{idx.stem}.npy")
+-            problems["layer file with the wrong shape (layers 0 and 79)"] += x.shape != (c["rows"], H)
++            problems["layer file with the wrong shape (first and last saved layers)"] += x.shape != (c["rows"], H)
+             nonfinite_recount += int((~np.isfinite(x)).sum())
+         rows_total += c["rows"]
+     for arm_dir in sorted((d / "meta").iterdir()):
+         for f in arm_dir.glob("*.json"):
+             m = json.loads(f.read_text()); metas[arm_dir.name] += 1
+-            kr = [p["row"] for p in m["positions"] if p["kind"] == "output_end" and p["kept"]]; kept += len(kr)
++            kr = [p["row"] for p in m["positions"] if p["kind"] == KIND and p["kept"]]; kept += len(kr)
+             problems["meta rows != kept readouts"] += m["n_rows"] != len(kr)
+             problems["kept rows not 0..n-1 in order"] += kr != list(range(len(kr)))
+             problems["unkept position with a row"] += any(p.get("row") is not None for p in m["positions"] if not p["kept"])
+@@ -510,7 +531,7 @@
+     timing = [t for s in st for t in s.get("forward [tokens, seconds]", [])]
+     toks, secs = sum(t[0] for t in timing), sum(t[1] for t in timing)
+     return {"run": run, "meta files by arm": dict(metas), "kept readouts (meta)": kept, "rows (chunks)": rows_total,
+-            "non-finite values: every layer (chunk indexes)": nonfinite_index, "non-finite values: layers 0 and 79 recounted": nonfinite_recount,
++            "non-finite values: every layer (chunk indexes)": nonfinite_index, "non-finite values: the first and last saved layers recounted": nonfinite_recount,
+             "expected transcripts by arm": expected, "problems": {k: v for k, v in problems.items()},
+             "forward passes": len(timing), "forward tokens": toks, "forward seconds": round(secs, 1),
+             "seconds per 1,000 forward tokens": round(1000 * secs / toks, 4) if toks else None,
+@@ -547,10 +568,8 @@
+         with open(dest := HERE / "results" / f"{name}_{stamp}.json", "x") as fh:
+             fh.write(json.dumps(out, indent=1) + "\n")
+         print(dest)
+-    if mode == "render":
+-        return write("llama_render_r2j", common | render.remote(cohort, fix_keys))
+-    if mode == "diff":
+-        return write("llama_token_diff", common | diff.remote(cohort, fix_keys))
++    if mode in ("render", "diff"):
++        raise SystemExit(f"--mode {mode} is not used in this copy (the original's render and diff cover these outputs)")
+     if mode == "check":
+         from collections import Counter
+         expected = ({"total": 4} if test else {FIX_LABEL: len(fix_keys)} if scope == "fix939" else dict(Counter(r["arm"] for r in cohort))

@@ -1,0 +1,10 @@
+{
+ "batch": "ep2-t196",
+ "original_target": "ep2_t196",
+ "revision": 1,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/ep2-t196__ep2_t196_cutfull.json @ 16609a1b5502",
+ "commit": "16609a1b5502",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_ep2-t196__ep2_t196_cutfull.json",
+ "sets": 1,
+ "failing": {}
+}

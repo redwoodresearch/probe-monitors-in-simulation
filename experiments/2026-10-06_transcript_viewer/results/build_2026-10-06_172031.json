@@ -1,0 +1,49 @@
+{
+ "config": {
+  "cache": ".run_cache/viewer",
+  "splits": "splits/exclusions_v3.json",
+  "scores": ".run_cache/viewer/scores",
+  "max_tokens": 32768,
+  "tokenizer": "Qwen/Qwen3-32B",
+  "workers": 8
+ },
+ "tokenizer": {
+  "name": "Qwen/Qwen3-32B",
+  "revision": "9216db5781bf21249d130ec9da846c4624c16137"
+ },
+ "arms": {
+  "real-attack-e1": "la_public10_real_attack_n1000",
+  "sim-attack": "la_public10_sim_astra_attack_n1000",
+  "real-attack-e2": "la_public10_real_attack_reroll_n1000",
+  "real-honest": "la_public10_real_honest_n1000"
+ },
+ "git": "8f6e09848470ddbbe16ee9aa79a7db43d9df4bde",
+ "git_dirty": false,
+ "built_at": "2026-10-06_172031",
+ "wall_seconds": 51,
+ "samples": {
+  "real-attack-e1": 1000,
+  "sim-attack": 1000,
+  "real-attack-e2": 1001,
+  "real-honest": 1000
+ },
+ "invalid": {
+  "real-attack-e1": {
+   "no_actions": 23
+  },
+  "sim-attack": {
+   "no_actions": 26
+  },
+  "real-attack-e2": {
+   "no_actions": 18,
+   "errored": 1
+  },
+  "real-honest": {}
+ },
+ "truncated": {
+  "real-attack-e1": 263,
+  "sim-attack": 208,
+  "real-attack-e2": 244,
+  "real-honest": 517
+ }
+}

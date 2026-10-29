@@ -1,0 +1,170 @@
+--- orig_end_main.py
++++ end_main_nm.py
+@@ -1,28 +1,28 @@
+-"""end_main.py (RULE.md Amendment 7; 0d's uniform rule): ON THE DEVBOX, its own tmux session em311q<N> on -L guards, every
++"""end_main.py (RULE.md Amendment 7; 0d's uniform rule): ON THE DEVBOX, its own tmux session emnms<N> on -L nmguards, every
+ POLL_S (120 s), no laptop. Ends one quarter's MAIN launch (whose simulated attacks stay paused for good) once its real
+ arms are done, then starts that quarter's simulated-only FOLLOW-UP launch on the same box, never both at once:
+   1. wait until EVERY real run of the main launch (honest_a, honest_b, attack, the r2 attacks) is terminal ("done",
+      "no policy call", "not run"), read from <main>/launch.json in two consecutive passes with no real run ready or
+      running in either; the simulated entries are all "waiting" or "ready" (paused by results/PAUSE_SIMS, so none can
+      start) and must have no attempt;
+-  2. Ctrl+C the main launcher ONCE (tmux -L phase2 send-keys to the exact session): with 0 real runs in flight and the
++  2. Ctrl+C the main launcher ONCE (tmux -L nm send-keys to the exact session): with 0 real runs in flight and the
+      pause in place, nothing is cut; the frozen run_pilot.py records every "ready" or "waiting" entry as "not run"
+      ("launcher stopped"), and only a "running" one as "stopped" (bbf0729, lines 714-726);
+   3. wait (up to 15 minutes) until the main session is GONE and launch.json carries "finished"; otherwise stop here;
+   4. checks, each on the box: no stop marker in the main run (GATE1_STOP, IDENTICAL, PAIR_CONFIG, PAIR_CHECK_FAILED,
+      DEADLINE_STOP, ATTEMPT_STOP, <run>.STOP_REQUEST); the attempt check over every cell with both real attacks
+      labelled (attempt/attempt_rate_311.py) >= 82% for r1 and r2 (else ATTEMPT_STOP.txt, no follow-up); the scratch image
+-     ba1bed0c...; the follow-up's server URLs (~/phase2/s311_checks/fu_bases_q<N>.txt, written from the laptop); for
+-     variant (i), box_guard running with --launch f311q<N>=<follow-up run>; the time before LAST_START (the follow-up
++     ba1bed0c...; the follow-up's server URLs (~/phase2/nm/checks/fu_bases_s<N>.txt, written from the laptop); for
++     variant (i), box_guard running with --launch fnms<N>=<follow-up run>; the time before LAST_START (the follow-up
+      servers' end - 2 h 15 min);
+   5. remove <harness>/results/PAUSE_SIMS (the follow-up's simulated runs must start) and run fu_launch.sh, which runs
+-     the follow-up's gates and starts its launcher (session f311q<N>) with --references-from <main run>;
+-  6. (scheduled BEFORE step 5's launch) the harness pause file again at LAST_START (tmux -L guards rp311q<N>; a file
++     the follow-up's gates and starts its launcher (session fnms<N>) with --references-from <main run>;
++  6. (scheduled BEFORE step 5's launch) the harness pause file again at LAST_START (tmux -L nmguards rpnms<N>; a file
+      write only; LAST_START = the servers' end - 2 h 45 min, so a simulated run's 7,200 s limit plus its sandbox start and
+-     scoring fit before the graceful stop) and one Ctrl+C to the follow-up at the servers' end - 10 minutes (gs311q<N>);
++     scoring fit before the graceful stop) and one Ctrl+C to the follow-up at the servers' end - 10 minutes (gsnms<N>);
+      after the launch, gate1_311b.py for the follow-up run (its usable gate).
+ Any failed check: log it, do nothing more, exit (the simulated attacks then wait for the laptop). One line per pass to
+-~/phase2/s311_checks/end_main_q<N>.log.
++~/phase2/nm/checks/end_main_s<N>.log.
+   <sept venv python> end_main.py <quarter> <main run dir> <follow-up run dir> <follow-up pilot config> <servers end, epoch s>
+       <variant i|iii>
+ """
+@@ -35,8 +35,8 @@
+ from pathlib import Path
+ from zoneinfo import ZoneInfo
+ 
+-HARNESS = Path("/home/aswin/phase2/attack_check_311")
+-CHECKS = Path("/home/aswin/phase2/s311_checks")
++HARNESS = Path("/home/aswin/phase2/nm/attack_check_nm")
++CHECKS = Path("/home/aswin/phase2/nm/checks")
+ PY = "/home/aswin/sims/simulated-control-evals-sept/.venv/bin/python"
+ TREE = "/home/aswin/phase2/sims-sept-strict-off/src"
+ POLL_S, TAIL_S = 120, 7200 + 3600 + 1200  # a sample's 7,200 s limit + Inspect's separate 3,600 s scoring allowance + 20 min
+@@ -44,9 +44,9 @@
+ MARKERS = ("GATE1_STOP.txt", "IDENTICAL.txt", "PAIR_CONFIG.txt", "PAIR_CHECK_FAILED.txt", "DEADLINE_STOP.txt", "ATTEMPT_STOP.txt")
+ q, main, fu, fu_cfg, servers_end, variant = sys.argv[1], Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4], float(sys.argv[5]), sys.argv[6]
+ assert variant in ("i", "iii"), variant
+-MAIN_S, FU_S = f"s311q{q}", f"f311q{q}"
++MAIN_S, FU_S = f"snms{q}", f"fnms{q}"
+ LAST_START = servers_end - TAIL_S
+-log_f = CHECKS / f"end_main_q{q}.log"
++log_f = CHECKS / f"end_main_s{q}.log"
+ 
+ 
+ def note(msg: str) -> None:
+@@ -68,7 +68,7 @@
+ 
+ def main_bound() -> bool:
+     """The main session's pane start command must name THIS main run (Codex round 12: bind the run to the launcher)."""
+-    p = subprocess.run(["tmux", "-L", "phase2", "list-panes", "-t", f"={MAIN_S}", "-F", "#{pane_start_command}"],
++    p = subprocess.run(["tmux", "-L", "nm", "list-panes", "-t", f"={MAIN_S}", "-F", "#{pane_start_command}"],
+                        capture_output=True, text=True)
+     return p.returncode == 0 and f"--out {main} " in p.stdout + " "
+ 
+@@ -91,7 +91,7 @@
+         continue
+     if sims_started:
+         fail(f"simulated runs of the main launch have attempts: {sims_started[:5]}")
+-    if not live("phase2", MAIN_S):
++    if not live("nm", MAIN_S):
+         fail("the main launcher session ended before its real arms did (a gate or deadline stop?)")
+     if not main_bound():
+         fail(f"session {MAIN_S} is not the launcher of {main}")
+@@ -107,17 +107,17 @@
+ # 2. Ctrl+C once (0 real runs in flight, read just now; the pause keeps every simulated entry from starting)
+ if not main_bound():
+     fail(f"session {MAIN_S} is not the launcher of {main} (checked again before the Ctrl+C)")
+-subprocess.run(["tmux", "-L", "phase2", "send-keys", "-t", f"={MAIN_S}:", "C-c"], check=True)
++subprocess.run(["tmux", "-L", "nm", "send-keys", "-t", f"={MAIN_S}:", "C-c"], check=True)
+ note("Ctrl+C sent to the main launcher (0 real runs open in two passes)")
+ for _ in range(90):  # 3. up to 15 minutes for the session to end and the record to be written
+     time.sleep(10)
+-    if not live("phase2", MAIN_S):
++    if not live("nm", MAIN_S):
+         break
+ try:
+     final = json.loads((main / "launch.json").read_text())
+ except Exception as e:  # noqa: BLE001
+     fail(f"main launch.json unreadable after the stop ({e!r})")
+-if live("phase2", MAIN_S) or not final.get("finished"):
++if live("nm", MAIN_S) or not final.get("finished"):
+     fail("the main session is still live or its record isn't finished: no second launcher on this box")
+ stopped = [r["key"] for r in final["runs"] if r["state"] == "stopped"]
+ if stopped:
+@@ -127,7 +127,7 @@
+ if any((main / m).exists() for m in MARKERS) or Path(f"{main}.STOP_REQUEST").exists():
+     fail("a stop marker is in the main run")
+ (HARNESS / "attempt" / "results").mkdir(exist_ok=True)
+-tasks = f"config/tasks_311_q{q}_launch.json"
++tasks = f"config/tasks_nm_s{q}_launch.json"
+ a = subprocess.run([PY, str(HARNESS / "attempt" / "attempt_rate_311.py"), str(main), str(HARNESS / tasks), "100000",
+                     str(main / "attempt_check_final.json")], capture_output=True, text=True, timeout=1800,
+                    env={"PYTHONPATH": TREE, "PATH": "/usr/bin:/bin"}, cwd=HARNESS)
+@@ -146,14 +146,14 @@
+                     capture_output=True, text=True, timeout=60)
+ if not sc.stdout.strip().startswith("sha256:ba1bed0c"):
+     fail("scratch image missing")
+-bases_f = CHECKS / f"fu_bases_q{q}.txt"
++bases_f = CHECKS / f"fu_bases_s{q}.txt"
+ bases = bases_f.read_text().strip() if bases_f.exists() else ""
+ if not bases or bases.count("https://") < 1:
+     fail("no follow-up server URLs")
+ while variant == "i":  # box_guard must be running for the follow-up run; wait for it (it is started from the laptop)
+     ps = subprocess.run(["pgrep", "-af", "box_guard.py"], capture_output=True, text=True).stdout
+     want = f"{FU_S}={fu}"
+-    if live("guards", f"bg311q{q}") and any(any(a == "--launch" and b == want for a, b in zip(t, t[1:]))
++    if live("nmguards", f"bgnms{q}") and any(any(a == "--launch" and b == want for a, b in zip(t, t[1:]))
+                                              for t in (l.split() for l in ps.splitlines())):
+         note("variant (i): box_guard running for the follow-up run")
+         break
+@@ -167,31 +167,31 @@
+ #    launcher honours it) and the graceful stop (one Ctrl+C to the follow-up session at the servers' end - 10 minutes) are
+ #    scheduled before the follow-up exists; then the pause off and the follow-up's gates and launcher
+ GRACE = int(servers_end - 600)
+-for name, cmd in ((f"rp311q{q}", f"sleep {max(0, int(LAST_START - time.time()))} && touch {HARNESS}/results/PAUSE_SIMS"),
+-                  (f"gs311q{q}", f"sleep {max(0, int(GRACE - time.time()))} && tmux -L phase2 send-keys -t ={FU_S}: C-c")):
+-    subprocess.run(["tmux", "-L", "guards", "new", "-d", "-s", name, cmd], check=True)
+-    if not live("guards", name):
++for name, cmd in ((f"rpnms{q}", f"sleep {max(0, int(LAST_START - time.time()))} && touch {HARNESS}/results/PAUSE_SIMS"),
++                  (f"gsnms{q}", f"sleep {max(0, int(GRACE - time.time()))} && tmux -L nm send-keys -t ={FU_S}: C-c")):
++    subprocess.run(["tmux", "-L", "nmguards", "new", "-d", "-s", name, cmd], check=True)
++    if not live("nmguards", name):
+         fail(f"could not schedule {name}")
+-note(f"scheduled: re-pause at {LAST_START:.0f} (rp311q{q}), graceful stop at {GRACE} (gs311q{q})")
++note(f"scheduled: re-pause at {LAST_START:.0f} (rpnms{q}), graceful stop at {GRACE} (gsnms{q})")
+ if variant == "iii":  # the simulator-dollar backstop on the box: the admission limit + $100, a fresh crossing pauses only
+     import yaml  # noqa: PLC0415 - the September venv's
+     limit = float(yaml.safe_load((HARNESS / fu_cfg).read_text())["spend"]["worst_case_limit_usd"])
+-    subprocess.run(["tmux", "-L", "guards", "new", "-d", "-s", f"sc311q{q}",
++    subprocess.run(["tmux", "-L", "nmguards", "new", "-d", "-s", f"scnms{q}",
+                     f"{PY} {CHECKS}/sim_cap_stop.py {fu} {FU_S} {limit + 100:.0f}"], check=True)
+     time.sleep(3)
+-    if not live("guards", f"sc311q{q}"):
++    if not live("nmguards", f"scnms{q}"):
+         fail("could not start sim_cap_stop.py")
+-    note(f"sim_cap_stop.py running (sc311q{q}, pause at ${limit + 100:.0f} = the admission limit ${limit:.0f} + $100)")
++    note(f"sim_cap_stop.py running (scnms{q}, pause at ${limit + 100:.0f} = the admission limit ${limit:.0f} + $100)")
+ if time.time() > LAST_START:
+     fail("past the last start for the follow-up's simulated runs")
+ (HARNESS / "results" / "PAUSE_SIMS").unlink(missing_ok=True)
+ r = subprocess.run(["bash", str(HARNESS / "fu_launch.sh"), q, str(main), str(fu), fu_cfg, bases], capture_output=True,
+                    text=True, timeout=1800)
+ note(f"fu_launch.sh exit {r.returncode}: {r.stdout.strip()[-400:]} {r.stderr.strip()[-200:]}")
+-if r.returncode != 0 or not live("phase2", FU_S):
++if r.returncode != 0 or not live("nm", FU_S):
+     fail("the follow-up did not start")
+ # 6. the follow-up's usable gate (its time protections are already scheduled)
+-subprocess.run(["tmux", "-L", "phase2", "new", "-d", "-s", f"gf311q{q}",
++subprocess.run(["tmux", "-L", "nm", "new", "-d", "-s", f"gfnms{q}",
+                 f"cd {CHECKS} && PYTHONPATH={TREE} {PY} gate1_311b.py {fu} {FU_S} {int(servers_end - 600)}"], check=True)
+ time.sleep(5)
+-note(f"FOLLOW-UP STARTED: session {FU_S}, gate gf311q{q} {'up' if live('phase2', f'gf311q{q}') else 'NOT UP'}")
++note(f"FOLLOW-UP STARTED: session {FU_S}, gate gfnms{q} {'up' if live('phase2', f'gfnms{q}') else 'NOT UP'}")

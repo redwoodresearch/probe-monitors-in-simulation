@@ -1,0 +1,13 @@
+[project]
+name = "probe-shift-post-repro"
+version = "0.1.0"
+description = "Redraw every figure and recompute every printed number of the post from its saved result files."
+# The original renders and slot readouts ran on Modal's debian_slim Python 3.12 image with these two pins (render_all.py L33).
+requires-python = "==3.12.*"
+dependencies = [
+    "numpy==2.3.3",
+    "matplotlib==3.10.6",
+]
+
+[tool.uv]
+package = false  # a folder of scripts, not an installable package; it needs nothing from the rest of the repository

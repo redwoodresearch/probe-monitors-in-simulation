@@ -1,0 +1,56 @@
+{
+ "scope": "nladd",
+ "POST HOC": true,
+ "render files": {
+  "g3_render_nladd_2026-10-13_134931.json": {
+   "sha256": "ebad0e6cc8ce1b111e966654f8c8cc2fada9773ddc2306ffea8dde65beea36ab",
+   "git (render)": "32cd8b2f4366ab0bf0f8049409737072d7a01014",
+   "which": "nladd",
+   "ids sha256": "4ed7dfe5a7b14bcb5df7bd5cb97c05c9223bdcb3fbc31390791d40ca16ffc8c9"
+  }
+ },
+ "arms": {
+  "real-attack-e2-nladd": {
+   "runs": 939,
+   "render failures": 0,
+   "required rows (outputs Qwen3-32B kept)": 22720,
+   "eligible (own, before matching)": 22720,
+   "coverage (own)": 1.0,
+   "left out: no eligible token in the span": 0,
+   "left out: other reason (readout past the context, or no span)": 0,
+   "empty runs (own)": [],
+   "runs with no required row": 0,
+   "tool outputs with no Qwen3-32B position": 0,
+   "tool outputs quoting a special token's text": 0,
+   "kept outputs ending in a newline": 21637,
+   "kept outputs with a token crossing the span's end": 0,
+   "R2 differs from R0": 21750,
+   "forward tokens": 24562577,
+   "forward tokens squared, summed over runs": 706231550611,
+   "reader tokens": 26894597,
+   "R0 at C2: readouts, whitespace-only, contains a newline": [
+    22720,
+    21750,
+    21637
+   ],
+   "R2 at C2: readouts, whitespace-only, contains a newline": [
+    22720,
+    0,
+    0
+   ]
+  }
+ },
+ "edit": {
+  "edited outputs among the Qwen3-32B-kept (required) rows": 7955,
+  "edited outputs whose readout token text differs from the unedited rendering's": 0,
+  "edited outputs: create": 1516,
+  "edited outputs: insert": 1233,
+  "edited outputs: str_replace": 6244,
+  "runs with at least one edited output": 883
+ },
+ "frozen row drops (own)": {},
+ "runs with no eligible row": [],
+ "gate": "pass",
+ "failing": [],
+ "unevaluable": []
+}

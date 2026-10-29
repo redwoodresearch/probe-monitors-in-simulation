@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "source_commit": "3b4d413d",
+  "region": "us-east-2",
+  "account": "427393346222",
+  "public_access_block_verified": true,
+  "objects": [
+    {
+      "id": "experiments/2026-10-11_target_touch_labels/results/v2/target_labels_v2.csv",
+      "sha256": "9727f21cb71e50461cf9dab6cc229e6ae92efee073247e4cb3e59b98f0205884",
+      "bytes": 9370827,
+      "columns": [
+        "run_id",
+        "epoch",
+        "turn",
+        "call_index",
+        "touch_any",
+        "touch_modify",
+        "unclear"
+      ],
+      "rows": 73666,
+      "uri": "s3://rr-sce-sim-transcripts/probe-shift/aswin-surya/labels/2026-10-11/sha256/9727f21cb71e50461cf9dab6cc229e6ae92efee073247e4cb3e59b98f0205884/target_labels_v2.csv",
+      "version_id": null,
+      "verified_download_sha256": "9727f21cb71e50461cf9dab6cc229e6ae92efee073247e4cb3e59b98f0205884",
+      "role": "canonical_ids_and_binary_labels"
+    },
+    {
+      "id": "experiments/2026-10-11_target_touch_labels/results/v2/replay_join_v2.csv",
+      "sha256": "253f8df1013debb98a757ccdc8e856972aa6d1082772c650fc375e55daa37bf8",
+      "bytes": 17816903,
+      "columns": [
+        "run_id",
+        "inspect_epoch",
+        "turn",
+        "call_index",
+        "irid",
+        "sample_id",
+        "q2_excluded",
+        "blind_order",
+        "audit_opaque_id"
+      ],
+      "rows": 73666,
+      "uri": "s3://rr-sce-sim-transcripts/probe-shift/aswin-surya/labels/2026-10-11/sha256/253f8df1013debb98a757ccdc8e856972aa6d1082772c650fc375e55daa37bf8/replay_join_v2.csv",
+      "version_id": null,
+      "verified_download_sha256": "253f8df1013debb98a757ccdc8e856972aa6d1082772c650fc375e55daa37bf8",
+      "role": "ids_only_replay_join"
+    },
+    {
+      "id": "experiments/2026-10-11_target_touch_labels/results/v2/counts_v2.json",
+      "sha256": "7583773a4f7212f7b544cb76f6bd3a5ec7edc5981c2b444b847b88f0a70becb8",
+      "bytes": 264762,
+      "uri": "s3://rr-sce-sim-transcripts/probe-shift/aswin-surya/labels/2026-10-11/sha256/7583773a4f7212f7b544cb76f6bd3a5ec7edc5981c2b444b847b88f0a70becb8/counts_v2.json",
+      "version_id": null,
+      "verified_download_sha256": "7583773a4f7212f7b544cb76f6bd3a5ec7edc5981c2b444b847b88f0a70becb8",
+      "role": "per_run_and_arm_numeric_counts"
+    },
+    {
+      "id": "experiments/2026-10-11_target_touch_labels/results/v2/source_hashes_v2.json",
+      "sha256": "1b0d670ae1d2ba57049e2e85cc0167a95c5baaae60551f8e5470fa74abb9722f",
+      "bytes": 277001,
+      "uri": "s3://rr-sce-sim-transcripts/probe-shift/aswin-surya/labels/2026-10-11/sha256/1b0d670ae1d2ba57049e2e85cc0167a95c5baaae60551f8e5470fa74abb9722f/source_hashes_v2.json",
+      "version_id": null,
+      "verified_download_sha256": "1b0d670ae1d2ba57049e2e85cc0167a95c5baaae60551f8e5470fa74abb9722f",
+      "role": "archive_provenance_ids_and_hashes"
+    }
+  ]
+}

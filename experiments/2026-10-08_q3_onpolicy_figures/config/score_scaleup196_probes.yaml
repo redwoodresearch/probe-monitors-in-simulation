@@ -1,0 +1,21 @@
+# The follow-ups' redesign (scoring plan amendment of 2026-10-10 23:30 PT): the main config unchanged (same rows, the
+# same 23.7 GiB cache), plus save_probes, so its observed draw saves draw 0's outer models (layer, C, standardization,
+# coefficients). honest_scores() then scores the honest and simulated-honest read-only calls at each model's layer only,
+# after gate b. Observed draw per call only.
+label: scaleup196_probes
+extractions: [2026-10-09_rerun_strict_segends_v1, 2026-10-10_scaleup_canary_segends_v1, 2026-10-10_scaleup_l2_segends_v1,
+              2026-10-10_scaleup_topup_segends_v1, 2026-10-10_second_attack_segends_v1]
+worlds: {real: attack, sim: sim_attack@september, run2: attack@2026-10-10_second_attack_segends_v1}
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json
+n_layers: 64
+hidden: 5120
+seed: 0
+fitter: primal
+warm_start: true
+x_cache: xcache_scaleup196
+amendments:
+  primary_simulator: "A46, commit 32666df, PR #258"
+  margin_and_primary_result: "A47, commit 3d2805e; freeze update at PR #259 head 8810192"
+  layer_selection: "A27, adopted in A42"
+  scaleup_scoring: "plan_scaleup_196_scoring_2026-10-10.md (#339), Amendments 1-6 (aswin/scaleup196-scoring)"
+save_probes: true

@@ -1,0 +1,80 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_nm_s1 of 2026-10-14_newmains_s1: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 3,
+  "by_arm": {
+   "sim_honest@september": 3
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_nm_s1",
+   "rel": "sim_honest@september/nm164_model_registry/2026-10-15T19-52-28-00-00_la-model-registry-sim-honest-1_PjAM7vkKmKPsbjkUq4D2Ny.eval",
+   "sha256": "24f1eb87579be8d6a6da8cece8da4139c139f71cf28189f677ba86e4bb2e569e",
+   "bytes": 541763,
+   "arm_dir": "sim_honest@september",
+   "task": "nm164_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s1/sim_honest@september/nm164_model_registry/2026-10-15T19-52-28-00-00_la-model-registry-sim-honest-1_PjAM7vkKmKPsbjkUq4D2Ny.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s1",
+   "stratum": "simh_nm360",
+   "launch_task": "nm164_model_registry",
+   "first_start": "2026-10-15T12:52:25-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s1",
+   "run1_launch": "2026-10-14_newmains_s1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "5"
+  },
+  {
+   "launch": "2026-10-15_simh_nm_s1",
+   "rel": "sim_honest@september/nm281_tiktok/2026-10-15T19-59-34-00-00_la-tiktok-sim-honest-1_MuhqnsGNH9RYBQ2HkgY3Gc.eval",
+   "sha256": "3fc89a8929d02ec433199c7701972216a4494d40c7e61e2fcb293095ff922763",
+   "bytes": 515240,
+   "arm_dir": "sim_honest@september",
+   "task": "nm281_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s1/sim_honest@september/nm281_tiktok/2026-10-15T19-59-34-00-00_la-tiktok-sim-honest-1_MuhqnsGNH9RYBQ2HkgY3Gc.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s1",
+   "stratum": "simh_nm360",
+   "launch_task": "nm281_tiktok",
+   "first_start": "2026-10-15T12:59:32-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s1",
+   "run1_launch": "2026-10-14_newmains_s1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "5"
+  },
+  {
+   "launch": "2026-10-15_simh_nm_s1",
+   "rel": "sim_honest@september/nm301_user_tracking/2026-10-15T20-05-41-00-00_la-user-tracking-sim-honest-1_EyfzvuNHVzuMAhNHtcny8Y.eval",
+   "sha256": "0c23c957d3018dac0164258ea3b69816074b473bf25fa212fe449db2e06712ed",
+   "bytes": 623200,
+   "arm_dir": "sim_honest@september",
+   "task": "nm301_user_tracking",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s1/sim_honest@september/nm301_user_tracking/2026-10-15T20-05-41-00-00_la-user-tracking-sim-honest-1_EyfzvuNHVzuMAhNHtcny8Y.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s1",
+   "stratum": "simh_nm360",
+   "launch_task": "nm301_user_tracking",
+   "first_start": "2026-10-15T13:05:39-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s1",
+   "run1_launch": "2026-10-14_newmains_s1",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "5"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+# The purchase fork's negative_tests.sh @ 343e73b5, run on the canary devbox (q3-scale-canary) at 13:59 PT from
+# ~/phase2/simh_checks (the paths the tests expect), $0, no model calls. Output verbatim (PASS/FAIL lines):
+PASS gate12 exits 1 on a FAIL fixture and on a wrong task set, 0 on a PASS one
+FAIL the A check on 0/0: exit 1,
+PASS a stale snapshot stops the group (exit 0)
+PASS stop_group's deadline runs from the first Ctrl+C (exit 2 after 10s)
+FAIL server numbering
+FAIL settings check on a run with no .eval: exit 1
+PASS an early launcher exit still stops and confirms the apps (exit 0)
+PASS "stopping" is not stopped (exit 3 after 10s)
+PASS no fresh price read for > 300 s charges the worst case ('19.76 1 1 0' then '60.00 2 1 1')
+FAIL spend_now control: 'absent' vs
+PASS wait_settled holds an unstarted A run, passes a finished A
+PASS launch_simh.sh refuses a hard-stopped session
+negative tests: 8/12 pass
+# The 4 FAILs read the purchase fork's own records, absent on this devbox: tests 2, 6 and 10 read the 2026-10-09
+# scale-up canary launch (on sims-astra), test 5 greps the purchase fork's LAUNCH.md. Every stop-path test passes:
+# 3 (stale snapshot), 4 (stop deadline), 7 (early launcher exit still stops the apps), 8 ("stopping" is not stopped),
+# 9 (no fresh price read for > 300 s charges the worst case).

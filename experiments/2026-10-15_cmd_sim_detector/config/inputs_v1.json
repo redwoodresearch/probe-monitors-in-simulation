@@ -1,0 +1,32 @@
+{
+ "label": "RULE.md inputs v1: every record is read with git show <commit>:<path> and its sha256 checked; runs36.json is the only local file (--r36, sha256 pinned in the script)",
+ "real": {
+  "worlds_from_manifest": ["honest_b"],
+  "manifest": {"commit": "46ca25fc48905bca51ec79822970abc655df7b55", "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/correctedb_manifest_v1.json",
+               "sha256": "bf847d425b80d95ebb75a9ed1d524fc68c9efcd014710ddc18e445ed9d373ebc"},
+  "c_upload": {"commit": "50a7664eacccc0774e36d4dd891f7c6c96887474", "path": "experiments/2026-10-13_q4_why_weaker_POSTHOC/results/manifest_q4f_c_eval_upload_v1.json",
+               "sha256": "98cbbbd52aeb73cfce884b08350130ddd7cc23bf637d1603896f3ae0137be157"},
+  "c_stage": {"commit": "4c8c2f6a1e8f17579bd8ddeace2eba9119856354", "path": "experiments/2026-10-13_q4_why_weaker_POSTHOC/results/q4f_stage_c_2026-10-14_120510.json",
+              "sha256": "7864132d252fa225eb6019e0b9558669b121b9ea374c0d77b5de6b95424556a0"},
+  "c_extract": {"commit": "34ed9fcd91a3969407596dfa9828220cc687026b", "path": "experiments/2026-10-13_q4_why_weaker_POSTHOC/results/extract_q4b_q4b_extract_c_v1_a1_2026-10-14_121640.json",
+                "sha256": "d362ab2c23f0d05105901955aaa335eca98e70cb8422ce3285ae863116ac43f1"}
+ },
+ "sim_dumps": [
+  {"name": "simh_full_b1", "batch": "sim_b1", "world": "simh_full", "extract_run": "simh_full_b1", "staged_run": "simh_q4f_v1_full_b1", "arm": "sim_honest@september",
+   "record": {"commit": "d48da1200052cb025778f3b7978513bc4a48884e", "path": "experiments/2026-10-14_q3_q35_simhonest_purchase/results/extract_simh_simh_full_b1_a1_2026-10-14_205202.json",
+              "sha256": "dc4a545a4f628273ccba64d422612f0a372953d434fb028b004c345e9b1a72d7"},
+   "prov": {"shards_key": "shards", "gpu_key": "gpu", "gpu_pin": "", "longest_key": "shard:reproduction", "run_key": "config.run", "inputs_sha_key": "config.inputs_sha256"},
+   "counted_keys": {"commit": "ae1ca69d70e37b2416be0f66322b14fb6d6c1de0", "path": "experiments/2026-10-14_q3_q35_simhonest_purchase/results/simh_counted_keys_cont_v2.json",
+                    "sha256": "688cc1cc6d6ecb7302dd023407b333f1aa76ca2e6aa929c286cf909a4a6ff1f7"},
+   "batch_keys": {"commit": "39c81008615ce940beacfb97e5843194fc39003c", "path": "experiments/2026-10-14_q3_q35_simhonest_purchase/results/simh_full_b1_keys.json",
+                  "sha256": "17bdf9b04fe375af3bbe790765106cd1fb0aa2a2a5e02172d3a2551ea7d23b29"}},
+  {"name": "simh_pilot_c", "batch": "sim_pilot", "world": "simh_pilot", "extract_run": "simh_q4b_extract_v1_pilot_c", "staged_run": "simh_q4f_v1_pilot", "arm": "sim_honest@september",
+   "record": {"commit": "c389286cf702ea832e118c25891cd43af8dd4124", "path": "experiments/2026-10-14_q3_q35_simhonest_purchase/results/extract_simh_simh_q4b_extract_v1_pilot_c_a1_2026-10-14_171107.json",
+              "sha256": "9ba914b378369bd40f09db16fea82d99b717c7f9bed73a9f3c28c14c8981b76e"},
+   "prov": {"shards_key": "shards", "gpu_key": "", "gpu_pin": "experiments/2026-10-14_q3_q35_simhonest_purchase/extract_simh.py@3944dc8eb96a1243003b4125c0c9cf73a268ceaf:109",
+            "longest_key": "shard:reproduction", "run_key": "config.run", "inputs_sha_key": "config.inputs_sha256"},
+   "counted_keys": {"commit": "344829af6dc4cd0473757398d542bb8e1f72f512", "path": "experiments/2026-10-14_q3_q35_simhonest_purchase/results/simh_counted_keys_pilot_v3.json",
+                    "sha256": "2149c5cde368aef9e5012c8d9cda5b12fe5a93db3d27ad2d525225bb9f511b27"},
+   "batch_keys": null}
+ ]
+}

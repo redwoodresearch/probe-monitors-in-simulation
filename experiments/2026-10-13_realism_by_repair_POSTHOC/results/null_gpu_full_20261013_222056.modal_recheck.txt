@@ -1,0 +1,2 @@
+Modal CPU re-run of print_null_results.py (app ap-hJukThUhEjcUZFIA2sj2ng, 10-14 01:00 PT, runner rerun_print_null_modal.py @ 8132cf05) on the 16 checkpoint JSONs in Volume probe-shift_aswin-surya_sub-realism-null_ckpt_kill-2026-11-13 folder full_20261013_222056.
+Output sha256 1934266fe47c4c42c1412ba45f57d40ea9bc51305c6b948a5d093c6983f9deb4; committed null_gpu_full_20261013_222056.printout.txt sha256 1934266fe47c4c42c1412ba45f57d40ea9bc51305c6b948a5d093c6983f9deb4; cmp: byte-identical.

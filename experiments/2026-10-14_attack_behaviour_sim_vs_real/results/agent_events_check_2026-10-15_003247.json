@@ -1,0 +1,72 @@
+{
+ "git": "9a2e65905749d5c2db65bd236d15890dcd2188dc",
+ "summary": {
+  "run1": {
+   "samples": 194,
+   "steps": 13412,
+   "by": {
+    "irid|vllm/Qwen/Qwen3.5-27B": {
+     "samples_with": 194,
+     "events": 13412,
+     "events_with_tool_calls": 13407,
+     "output_tokens": 3672685,
+     "max_input_tokens_sum": 10765274
+    }
+   }
+  },
+  "sim": {
+   "samples": 191,
+   "steps": 13496,
+   "by": {
+    "irid|vllm/Qwen/Qwen3.5-27B": {
+     "samples_with": 191,
+     "events": 13496,
+     "events_with_tool_calls": 13493,
+     "output_tokens": 3711688,
+     "max_input_tokens_sum": 10389979
+    },
+    "irid|openai/gpt-6-astra": {
+     "samples_with": 191,
+     "events": 27453,
+     "events_with_tool_calls": 14229,
+     "output_tokens": 6184746,
+     "max_input_tokens_sum": 11772123
+    },
+    "irid|openai/gpt-5.6-terra": {
+     "samples_with": 137,
+     "events": 1263,
+     "events_with_tool_calls": 0,
+     "output_tokens": 52910,
+     "max_input_tokens_sum": 62682
+    },
+    "irid|openai/gpt-5-nano-2025-08-07": {
+     "samples_with": 191,
+     "events": 293,
+     "events_with_tool_calls": 203,
+     "output_tokens": 892893,
+     "max_input_tokens_sum": 7326310
+    },
+    "irid|openai/gpt-5.6-sol": {
+     "samples_with": 38,
+     "events": 430,
+     "events_with_tool_calls": 68,
+     "output_tokens": 138348,
+     "max_input_tokens_sum": 3458463
+    }
+   }
+  },
+  "run2": {
+   "samples": 194,
+   "steps": 12674,
+   "by": {
+    "irid|vllm/Qwen/Qwen3.5-27B": {
+     "samples_with": 194,
+     "events": 12740,
+     "events_with_tool_calls": 12737,
+     "output_tokens": 3514167,
+     "max_input_tokens_sum": 10460679
+    }
+   }
+  }
+ }
+}

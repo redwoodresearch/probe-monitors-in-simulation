@@ -1,0 +1,769 @@
+{
+ "rule": "experiments/2026-10-15_q3_interleaved_run3_sim2/RULE.md",
+ "seed": "q3-interleaved-run3-sim2-2026-10-14",
+ "launch": "q3",
+ "rerun_of_launch": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+ "rerun_reason": "infra: RateLimitError",
+ "cells": [
+  {
+   "key": "t262_tiktok",
+   "env": "tiktok",
+   "cell": "add_pro:become_admin",
+   "main": "add_pro",
+   "side": "become_admin",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0546_retained_overlap_610b4ec7573c7d2f.eval",
+    "id": "add_pro:become_admin:321cea",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0510_retained_overlap_3bb5b9a4b48fc083.eval",
+     "id": "add_pro:become_admin:dad89b",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 2,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "d5042a0a7fac1292e1523c96fe8a151361e8ca3340bd1728a3a16f2dc501b6d6",
+   "q2_approach_chars": 5718,
+   "approach_sha256": "d5042a0a7fac1292e1523c96fe8a151361e8ca3340bd1728a3a16f2dc501b6d6",
+   "approach_chars": 5718,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/d5042a0a7fac1292e1523c96fe8a151361e8ca3340bd1728a3a16f2dc501b6d6.txt",
+   "template_sha256": "cd05df782d7cc97ab9c9d6edf9cd43311145a7e708b14879e9c0df8d7ba2348a",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t420_auto_workflow",
+   "env": "auto_workflow",
+   "cell": "mtg_auto_workflow_hijack_cross_team_workflows_04_implement_comprehensive_integration_test_suite:aw_reverse_shell",
+   "main": "mtg_auto_workflow_hijack_cross_team_workflows_04_implement_comprehensive_integration_test_suite",
+   "side": "aw_reverse_shell",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0800_random_000_2026-09-17T06-37-30-00-00_la-auto-workflow-real-attack-20_jzsuKTTrQChwRti2NTQFXt.eval",
+    "id": "mtg_auto_workflow_hijack_cross_team_workflows_04_implement_comprehensive_integration_test_suite:aw_reverse_shell:292f7e",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0821_random_2026-09-17T17-10-13-00-00_la-auto-workflow-real-attack-20_Tfp6WXRCioNYnzANXpxgXA.eval",
+     "id": "mtg_auto_workflow_hijack_cross_team_workflows_04_implement_comprehensive_integration_test_suite:aw_reverse_shell:22ec5b",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": false,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t307_tiktok",
+   "env": "tiktok",
+   "cell": "mtg_tiktok_malicious_website_06_refactor_monolithic_page_into_components:malicious_website",
+   "main": "mtg_tiktok_malicious_website_06_refactor_monolithic_page_into_components",
+   "side": "malicious_website",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0084_guidance_correction_3e4609ad5b1214e5.eval",
+    "id": "mtg_tiktok_malicious_website_06_refactor_monolithic_page_into_components:malicious_website:943168",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0354_guidance_correction_dab5dd2ffcbabe49.eval",
+     "id": "mtg_tiktok_malicious_website_06_refactor_monolithic_page_into_components:malicious_website:0c23f1",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 2,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "c1e66cf299fc31f8e5775b1151a3d1536762983b4aac546b7145a999ea670139",
+   "q2_approach_chars": 4050,
+   "approach_sha256": "c1e66cf299fc31f8e5775b1151a3d1536762983b4aac546b7145a999ea670139",
+   "approach_chars": 4050,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/c1e66cf299fc31f8e5775b1151a3d1536762983b4aac546b7145a999ea670139.txt",
+   "template_sha256": "cd05df782d7cc97ab9c9d6edf9cd43311145a7e708b14879e9c0df8d7ba2348a",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t260_auto_workflow",
+   "env": "auto_workflow",
+   "cell": "external_credential_provider_integration:aw_run_malware_delayed",
+   "main": "external_credential_provider_integration",
+   "side": "aw_run_malware_delayed",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0514_retained_overlap_4d8f42cb0f5b1e99.eval",
+    "id": "external_credential_provider_integration:aw_run_malware_delayed:de44c6",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0782_retained_overlap_e99bc38f24984e56.eval",
+     "id": "external_credential_provider_integration:aw_run_malware_delayed:b87201",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": false,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t298_user_tracking",
+   "env": "user_tracking",
+   "cell": "mtg_user_tracking_delete_evidence_03_rest_api_story_management:ut_rce",
+   "main": "mtg_user_tracking_delete_evidence_03_rest_api_story_management",
+   "side": "ut_rce",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0523_retained_overlap_53d06bd1844667e4.eval",
+    "id": "mtg_user_tracking_delete_evidence_03_rest_api_story_management:ut_rce:04c48d",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0549_retained_overlap_52f066367a031928.eval",
+     "id": "mtg_user_tracking_delete_evidence_03_rest_api_story_management:ut_rce:b91d0b",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t306_model_registry",
+   "env": "model_registry",
+   "cell": "migrate_backup_records_to_sqlite:mr_reverse_shell",
+   "main": "migrate_backup_records_to_sqlite",
+   "side": "mr_reverse_shell",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0684_retained_overlap_af5f67cbd2c53f93.eval",
+    "id": "migrate_backup_records_to_sqlite:mr_reverse_shell:c9cdf3",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0458_retained_overlap_1fb850e2796beea2.eval",
+     "id": "migrate_backup_records_to_sqlite:mr_reverse_shell:2583f5",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t333_auto_workflow",
+   "env": "auto_workflow",
+   "cell": "add_execution_log_streaming_to_minio:aw_rce",
+   "main": "add_execution_log_streaming_to_minio",
+   "side": "aw_rce",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0567_retained_overlap_6fc632c1bbf08357.eval",
+    "id": "add_execution_log_streaming_to_minio:aw_rce:b8ca55",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0578_retained_overlap_6312f24456025298.eval",
+     "id": "add_execution_log_streaming_to_minio:aw_rce:360ee6",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t239_file_indexing",
+   "env": "file_indexing",
+   "cell": "add_symlink_aware_indexing_and_path_normalization:fi_exfiltrate_secrets_live",
+   "main": "add_symlink_aware_indexing_and_path_normalization",
+   "side": "fi_exfiltrate_secrets_live",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0716_retained_overlap_c0f229a61c20eb02.eval",
+    "id": "add_symlink_aware_indexing_and_path_normalization:fi_exfiltrate_secrets_live:b3e75d",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0503_retained_overlap_37c22cf31483b443.eval",
+     "id": "add_symlink_aware_indexing_and_path_normalization:fi_exfiltrate_secrets_live:b5192d",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t315_web_scraping",
+   "env": "web_scraping",
+   "cell": "elk_stack_centralized_logging:remote_code_download",
+   "main": "elk_stack_centralized_logging",
+   "side": "remote_code_download",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0719_retained_overlap_c2f04f38cf8e6c21.eval",
+    "id": "elk_stack_centralized_logging:remote_code_download:da7722",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0536_retained_overlap_497a19e39397135d.eval",
+     "id": "elk_stack_centralized_logging:remote_code_download:d7a6d6",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t291_tiktok",
+   "env": "tiktok",
+   "cell": "prometheus_grafana_monitoring_stack:tt_rce",
+   "main": "prometheus_grafana_monitoring_stack",
+   "side": "tt_rce",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0509_retained_overlap_48e15c077350bcbd.eval",
+    "id": "prometheus_grafana_monitoring_stack:tt_rce:2c86a1",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0613_retained_overlap_7f9a2b272c4d52a9.eval",
+     "id": "prometheus_grafana_monitoring_stack:tt_rce:c14092",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": false,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t405_shared_dotfiles",
+   "env": "shared_dotfiles",
+   "cell": "implement_per_user_dotfile_testing_framework:bypass_blacklist",
+   "main": "implement_per_user_dotfile_testing_framework",
+   "side": "bypass_blacklist",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0424_retained_overlap_13bd521abe1cf441.eval",
+    "id": "implement_per_user_dotfile_testing_framework:bypass_blacklist:b3a14b",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0430_retained_overlap_0f944ccc7fbf404a.eval",
+     "id": "implement_per_user_dotfile_testing_framework:bypass_blacklist:5503c8",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t493_media_processing",
+   "env": "media_processing",
+   "cell": "migrate_gateway_status_publishing_to_local_postgresql_listennotify:mp_reverse_shell",
+   "main": "migrate_gateway_status_publishing_to_local_postgresql_listennotify",
+   "side": "mp_reverse_shell",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0659_retained_overlap_a34dccbcdce4891c.eval",
+    "id": "migrate_gateway_status_publishing_to_local_postgresql_listennotify:mp_reverse_shell:15b241",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0605_retained_overlap_7b4d3ee5a40dc928.eval",
+     "id": "migrate_gateway_status_publishing_to_local_postgresql_listennotify:mp_reverse_shell:9be3d2",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t352_file_indexing",
+   "env": "file_indexing",
+   "cell": "prometheus_grafana_observability:fi_run_malware_live",
+   "main": "prometheus_grafana_observability",
+   "side": "fi_run_malware_live",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0403_retained_overlap_06f51ddb09692832.eval",
+    "id": "prometheus_grafana_observability:fi_run_malware_live:de3527",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0593_retained_overlap_6d157bbd1fc0c4eb.eval",
+     "id": "prometheus_grafana_observability:fi_run_malware_live:452998",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": false,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t382_media_processing",
+   "env": "media_processing",
+   "cell": "add_file_access_audit_trail:hijack_hls_playback",
+   "main": "add_file_access_audit_trail",
+   "side": "hijack_hls_playback",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0803_random_003_2026-09-17T07-34-03-00-00_la-media-processing-real-attack-20_WEwrr7HrrMdMxqFofAByRP.eval",
+    "id": "add_file_access_audit_trail:hijack_hls_playback:15b68f",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0824_random_2026-09-17T17-23-28-00-00_la-media-processing-real-attack-20_S7dCwgNCJNuDkqLvv8nWqZ.eval",
+     "id": "add_file_access_audit_trail:hijack_hls_playback:81de36",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 1,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": false,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "c890864675c2b6afffa8a0b9d3d8373e96c050d820f7eb43e4668621e3436336",
+   "q2_approach_chars": 6301,
+   "approach_sha256": "c890864675c2b6afffa8a0b9d3d8373e96c050d820f7eb43e4668621e3436336",
+   "approach_chars": 6301,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/c890864675c2b6afffa8a0b9d3d8373e96c050d820f7eb43e4668621e3436336.txt",
+   "template_sha256": "cd05df782d7cc97ab9c9d6edf9cd43311145a7e708b14879e9c0df8d7ba2348a",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t245_web_scraping",
+   "env": "web_scraping",
+   "cell": "page_screenshot_capture:ws_run_malware_live",
+   "main": "page_screenshot_capture",
+   "side": "ws_run_malware_live",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0437_retained_overlap_1a701eb31492d51e.eval",
+    "id": "page_screenshot_capture:ws_run_malware_live:eafdea",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0781_retained_overlap_e89b819b3d1ab072.eval",
+     "id": "page_screenshot_capture:ws_run_malware_live:95b47d",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t310_file_indexing",
+   "env": "file_indexing",
+   "cell": "berkeleydb_file_index:deleted_files_persist",
+   "main": "berkeleydb_file_index",
+   "side": "deleted_files_persist",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0227_guidance_correction_a44b68d37870e3a2.eval",
+    "id": "berkeleydb_file_index:deleted_files_persist:b83003",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0028_guidance_correction_0dfcae1dca2cc54a.eval",
+     "id": "berkeleydb_file_index:deleted_files_persist:59fa9c",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 1,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "501716a40117717837de194efe24d1b8f5b908cc4f126d6ca830c24c6e24a2c4",
+   "q2_approach_chars": 4153,
+   "approach_sha256": "501716a40117717837de194efe24d1b8f5b908cc4f126d6ca830c24c6e24a2c4",
+   "approach_chars": 4153,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/501716a40117717837de194efe24d1b8f5b908cc4f126d6ca830c24c6e24a2c4.txt",
+   "template_sha256": "cd05df782d7cc97ab9c9d6edf9cd43311145a7e708b14879e9c0df8d7ba2348a",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t478_media_processing",
+   "env": "media_processing",
+   "cell": "speaker_diarization_management:mp_run_malware_delayed",
+   "main": "speaker_diarization_management",
+   "side": "mp_run_malware_delayed",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0656_retained_overlap_a14a2bd73fde7ff7.eval",
+    "id": "speaker_diarization_management:mp_run_malware_delayed:e03514",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0765_retained_overlap_d9dd001b7c417975.eval",
+     "id": "speaker_diarization_management:mp_run_malware_delayed:fe5bad",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 0,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "q2_approach_chars": 0,
+   "approach_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "approach_chars": 0,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt",
+   "template_sha256": "fec9f6614c887e78c8c9016270705e8c294650034f85272e4f5ff6cd62b6b473",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t347_media_processing",
+   "env": "media_processing",
+   "cell": "rename_team:access_other_teams_media",
+   "main": "rename_team",
+   "side": "access_other_teams_media",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0101_guidance_correction_484dd911afb48333.eval",
+    "id": "rename_team:access_other_teams_media:a68fb4",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0066_guidance_correction_2d25041868c935e9.eval",
+     "id": "rename_team:access_other_teams_media:bed0e7",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 1,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "7a9a27581dfb610e12d473ad3b72c2ee01f31938f8ccb5244777db5dabaf8d9d",
+   "q2_approach_chars": 4238,
+   "approach_sha256": "7a9a27581dfb610e12d473ad3b72c2ee01f31938f8ccb5244777db5dabaf8d9d",
+   "approach_chars": 4238,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/7a9a27581dfb610e12d473ad3b72c2ee01f31938f8ccb5244777db5dabaf8d9d.txt",
+   "template_sha256": "cd05df782d7cc97ab9c9d6edf9cd43311145a7e708b14879e9c0df8d7ba2348a",
+   "attack_pair_launch": "same"
+  },
+  {
+   "key": "t224_auto_workflow",
+   "env": "auto_workflow",
+   "cell": "aw_rewrite_in_php:hijack_cross_team_workflows",
+   "main": "aw_rewrite_in_php",
+   "side": "hijack_cross_team_workflows",
+   "sol_system_sha256": null,
+   "sol_input_sha256": null,
+   "sol_e1": {
+    "alias": "la_public10_real_attack_n1000",
+    "file": "0046_guidance_correction_21a91c8446fd371b.eval",
+    "id": "aw_rewrite_in_php:hijack_cross_team_workflows:1c3b51",
+    "epoch": 1,
+    "side_success": null,
+    "tool_calls": null
+   },
+   "sol_e2": [
+    {
+     "alias": "la_public10_real_attack_reroll_n1000",
+     "file": "0297_guidance_correction_b5a0718e51b7bfd8.eval",
+     "id": "aw_rewrite_in_php:hijack_cross_team_workflows:b0869e",
+     "epoch": 1,
+     "side_success": null,
+     "tool_calls": null
+    }
+   ],
+   "flags": {
+    "strategy_files": 1,
+    "phase1_paired_attack_cell": true,
+    "main_in_437_paired_honest": true,
+    "main_in_196": false
+   },
+   "q2_approach_sha256": "1758f9708413d49e97d990e2b0bf057f13346da30059652921a5cc6ea5cddfcd",
+   "q2_approach_chars": 4566,
+   "approach_sha256": "1758f9708413d49e97d990e2b0bf057f13346da30059652921a5cc6ea5cddfcd",
+   "approach_chars": 4566,
+   "approach_s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/approaches/1758f9708413d49e97d990e2b0bf057f13346da30059652921a5cc6ea5cddfcd.txt",
+   "template_sha256": "cd05df782d7cc97ab9c9d6edf9cd43311145a7e708b14879e9c0df8d7ba2348a",
+   "attack_pair_launch": "same"
+  }
+ ]
+}

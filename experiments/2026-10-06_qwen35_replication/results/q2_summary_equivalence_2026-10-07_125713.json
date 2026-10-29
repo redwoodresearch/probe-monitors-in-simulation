@@ -1,0 +1,22 @@
+{
+ "features_run": "2026-10-06_q2_qwen35_matched_eb014307fd1aab31_as_labeled",
+ "out_sub": "threeway",
+ "fits": 1920,
+ "identical": true,
+ "per_key": {
+  "layers": {
+   "numbers": 64,
+   "max_abs_diff": 0.0
+  },
+  "reproduction": {
+   "numbers": 18,
+   "max_abs_diff": 0.0
+  },
+  "views": {
+   "numbers": 84898,
+   "max_abs_diff": 0.0
+  }
+ },
+ "mismatches": [],
+ "n_mismatches": 0
+}

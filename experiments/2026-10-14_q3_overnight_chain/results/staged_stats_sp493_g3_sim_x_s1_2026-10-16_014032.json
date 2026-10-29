@@ -1,0 +1,15 @@
+{
+ "target": "sp493_g3_sim_x_s1",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "sp493_g3_sim_x_s1",
+   "arm": "sim_attack@september",
+   "staged_file": "/ev/sp493_g3_sim_x_s1_v1/inputs/sim_attack@september.jsonl",
+   "staged_sha": "99974ecc7075ad544d5ea7ee25fe573ee931c1def54eb297a19436bdc6ce0e33",
+   "epochs": 18,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

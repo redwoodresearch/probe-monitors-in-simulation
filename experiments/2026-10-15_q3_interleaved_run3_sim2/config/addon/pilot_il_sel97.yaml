@@ -1,0 +1,24 @@
+# IL SELECTION-HALF ADD-ON (descriptive; not a registered IL launch): from pilot_ilc_old.yaml with only tasks and caps changed.
+# IL COMPLETION old (tier 2 + tier 3, both arms): from pilot_il_old_all.yaml with only tasks and caps changed.
+# INTERLEAVED S_old launch (experiments/2026-10-15_q3_interleaved_run3_sim2/RULE.md) on q3-xbox1: per cell one real attack (run3)
+# and one simulated attack (sim2). From experiments/2026-10-14_q3_scaleup_311/config/pilot_311_fu_q1_iii.yaml @ b6ce20247eda (settings-equal to the 196's sims: the settings gate's reference).
+# FOLLOW-UP (simulated-only) launch, variant (iii), RULE.md Amendment 7. Derived from pilot_311_q1.yaml.
+# Scale-up +311, quarter Q1 (experiments/2026-10-14_q3_scaleup_311/RULE.md; Aswin via 0d: "i approve scale up, just run things
+# and get me results quickly, ensure correctness and speed"). The canary's launch A config (pilot_canary_a.yaml) on this
+# box's cells: per cell honest_a (real; the fork source), attack and honest_b (real) and sim_attack@september; plus each
+# cell's `<key>_r2` entry (real_arms [attack]): its second real attack, in this same launch (scaleup_r2_arms.patch).
+tasks: config/tasks_il_sel97.json   # add-on: 95 selection-half cells, il_order
+real_simulator: september
+real_arms: [attack]   # run3; honest_a from --references-from the merged index (make_reference_index.py, 193 keys)
+simulators: [september]
+sim_arms: [sim_attack]
+simulator_confirmed: true
+max_runs_per_server: 10   # 8 servers (servers_september_scaleup.yaml): 80 runs at once (6 servers: 60)
+max_real_runs: 60         # the 64-vCPU box's cap, as the canary and the real-honest launch
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json   # tag form for every task, as launch 2 and the canary
+spend:
+  cap_usd: 2044   # max(95 cells x $20.5, 95 x $13.62 + 10 x $75)
+  worst_case_limit_usd: 2044   # = cap
+  worst_per_sim_run_usd: 75   # variant (iii): 0d
+  prior_per_sim_run_usd: 16.48

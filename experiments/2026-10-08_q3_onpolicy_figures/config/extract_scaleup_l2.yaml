@@ -1,0 +1,15 @@
+# The September scale-up's launch 2 (2026-10-09_182505_scaleup, t26–t196): attack, honest_a, honest_b and
+# sim_attack@september, staged by run_replay_readouts.py --segment-ends --stage scaleup_l2_segends_v1
+# (results/replay_readouts_scaleup_l2_segends_2026-10-10_014046.json): 862 context epochs, 53,437,037 tokens.
+# The strict rerun's extraction settings. Approved under the scale-up (SPEND_scaleup.md).
+run: 2026-10-10_scaleup_l2_segends_v1
+inputs: scaleup_l2_segends_v1
+inputs_sha256:
+  attack.jsonl: 44cb9cd757e15a640d3e0081db246f12623c5f558c5a907975b03eca417bf0ab
+  honest_a.jsonl: a49b108c797f9779848befe12c530c449a332f7879b0e9ad158f87283191e95d
+  honest_b.jsonl: 74d7e1d2852cbdb3be6cf46f6f2ef71d639a4e7222bd2ab239af852e685e16b3
+  sim_attack@september.jsonl: 95cc51603c80d7f1d9ae8020b27f093b30c4800fee0ae3006690b90c2388538c
+model: Qwen/Qwen3.5-27B
+shards: 8
+chunk_size: 10
+pad_to: 4096

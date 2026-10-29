@@ -1,0 +1,58 @@
+Gate row 2, step 2(a): q2_run_extract_heldout.py as run (first committed at e4a9ba45 on aswin/q2-heldout-step2, reachable from this
+stack's top merge), kept here as a patch against its source on main for the PR size cap (339 lines). The full copy
+(sha256 ed5cc051236c2c73e56ace7ca8f8bd98b633633f44a29e7f4fb2bdfb4c531b90, 20744 bytes) is on S3 via results_manifest_v9.json.
+Source on main: experiments/2026-10-06_all_layers_extraction/run_extract_all_layers.py, sha256 ea63c9f1243f15de5fa1cde1ca0d0e09205d0ed1ac7fba1bf1d33853e05aeee5.
+Rebuild, from the repository root:
+  patch -o experiments/2026-10-12_plantslip_heldout/q2_run_extract_heldout.py experiments/2026-10-06_all_layers_extraction/run_extract_all_layers.py experiments/2026-10-12_plantslip_heldout/q2_run_extract_heldout.patch
+
+--- experiments/2026-10-06_all_layers_extraction/run_extract_all_layers.py
++++ experiments/2026-10-12_plantslip_heldout/q2_run_extract_heldout.py
+@@ -1,5 +1,11 @@
+-"""All-layers extraction: the segment-end positions at every one of Qwen3-32B's 64 layers, written per layer.
++"""Row 2, step 2(a) (RULE.md here, Amendment 1): a copy of ../2026-10-06_all_layers_extraction/run_extract_all_layers.py at
++f0ff845f with three changes: its app name; config `arms` (the staged arms to read) with `expect` (their exact count,
++checked in every shard before any GPU work); and config `inputs_sha256` (each staged shard file's sha256 from the
++staging record, checked before it is read). Everything else, positions, model, revision, forward pass and layout, is
++unchanged. The original docstring follows.
+ 
++All-layers extraction: the segment-end positions at every one of Qwen3-32B's 64 layers, written per layer.
++
+ Same transcripts and text as an existing segment-end run (its staged inputs on the Volume are read directly, so
+ nothing is restaged), same per-action positions (`probe_shift.reader.segment_end_positions`: pre_call, call_end,
+ call_marker, output_end, output_marker), the residual stream after every decoder block, fp16; no log-probs. Optionally
+@@ -26,7 +32,7 @@
+ import modal
+ 
+ HERE = Path(__file__).parent
+-APP = "probe-shift_aswin-surya_sub-la-acts_all-layers_kill-2026-11-06"
++APP = "probe-shift_aswin-surya_sub-q2-heldout_extract_kill-2026-11-12"
+ HF_CACHE = "probe-shift_aswin-surya_hf-cache"
+ OUTPUT = "probe-shift_aswin-surya_sub-la-activations"
+ GPU = "H100!"
+@@ -58,8 +64,16 @@
+ 
+     from probe_shift.reader import segment_end_positions
+ 
++    import hashlib
+     src = Path("/out") / cfg["inputs_from"] / "inputs"
+-    items = [json.loads(l) for p in sorted(src.glob("shard_*.jsonl")) for l in p.read_text().splitlines()]
++    files = sorted(src.glob("shard_*.jsonl"))
++    pins = {k.split("/", 1)[1]: v for k, v in cfg["inputs_sha256"].items() if k.split("/", 1)[0] == cfg["inputs_from"]}
++    if sorted(f"inputs/{p.name}" for p in files) != sorted(pins) or any(hashlib.sha256(p.read_bytes()).hexdigest() != pins[f"inputs/{p.name}"] for p in files):
++        raise ValueError("the staged shard files differ from the staging record's sha256")
++    items = [json.loads(l) for p in files for l in p.read_text().splitlines()]
++    items = [it for it in items if it["arm"] in cfg["arms"]]
++    if len(items) != cfg["expect"]:
++        raise ValueError(f"{len(items)} staged transcripts in arms {cfg['arms']}, expected {cfg['expect']}")
+     ids = [(it["arm"], it["key"]) for it in items]
+     if len(set(ids)) != len(ids):  # e.g. stale shard files left by a resume with fewer shards
+         raise ValueError(f"{len(ids) - len(set(ids))} duplicate transcripts in {src}")
+@@ -265,7 +279,7 @@
+ 
+     cfg = yaml.safe_load((HERE / "config" / config).read_text())
+     unknown = set(cfg) - {"run", "inputs_from", "model", "dtype", "attn_implementation", "max_tokens", "shards", "chunk_size",
+-                          "ema_final_decays", "ema_only", "mean_final", "max_final", "layers"}
++                          "ema_final_decays", "ema_only", "mean_final", "max_final", "layers", "arms", "expect", "inputs_sha256"}
+     if unknown:  # a setting the code does not read must not pass silently
+         raise ValueError(f"config/{config}: settings this extraction does not implement: {sorted(unknown)}")
+     if cfg["model"] != QWEN3_32B["name"]:

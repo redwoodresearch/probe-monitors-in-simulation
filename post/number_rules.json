@@ -1,0 +1,3992 @@
+{
+  "_about": "One rule per rebuilt (R) or recorded (Q) token of expected/expected_post_numbers.json; post_numbers.py evaluates them. slot: a slot string recomputed by slot_table.build from the records (run = which slot readout); rec: a key path in a record of MANIFEST.json; fn: a named function in post_numbers.py.",
+  "L217.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.own_all_rs_uncut_L48 C.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L217.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.own_all_rs_uncut_L48 C.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L217.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.own_all_rs_uncut_L48 C.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L217.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.own_all_rs_uncut_L48 C",
+    "i": 0
+  },
+  "L217.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.own_all_rs_uncut_L48 C",
+    "i": 1
+  },
+  "L217.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.own_all_rs_uncut_L48 C",
+    "i": 2
+  },
+  "L217.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.own_all_rs_uncut_L48 C",
+    "i": 0
+  },
+  "L217.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.own_all_rs_uncut_L48 C",
+    "i": 1
+  },
+  "L217.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.own_all_rs_uncut_L48 C",
+    "i": 2
+  },
+  "L218.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.sol_a_uncut C.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L218.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.sol_a_uncut C.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L218.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.sol_a_uncut C.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L218.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.sol_a_uncut C",
+    "i": 0
+  },
+  "L218.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.sol_a_uncut C",
+    "i": 1
+  },
+  "L218.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.sol_a_uncut C",
+    "i": 2
+  },
+  "L218.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.sol_a_uncut C",
+    "i": 0
+  },
+  "L218.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.sol_a_uncut C",
+    "i": 1
+  },
+  "L218.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.sol_a_uncut C",
+    "i": 2
+  },
+  "L219.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.FIBS|uncut C.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L219.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.FIBS|uncut C.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L219.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.FIBS|uncut C.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L219.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.FIBS|uncut C",
+    "i": 0
+  },
+  "L219.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.FIBS|uncut C",
+    "i": 1
+  },
+  "L219.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.FIBS|uncut C",
+    "i": 2
+  },
+  "L219.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.FIBS|uncut C",
+    "i": 0
+  },
+  "L219.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.FIBS|uncut C",
+    "i": 1
+  },
+  "L219.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.FIBS|uncut C",
+    "i": 2
+  },
+  "L220.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.harmfulness|uncut C.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L220.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.harmfulness|uncut C.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L220.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.harmfulness|uncut C.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L220.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.harmfulness|uncut C",
+    "i": 0
+  },
+  "L220.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.harmfulness|uncut C",
+    "i": 1
+  },
+  "L220.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.harmfulness|uncut C",
+    "i": 2
+  },
+  "L220.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.harmfulness|uncut C",
+    "i": 0
+  },
+  "L220.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.harmfulness|uncut C",
+    "i": 1
+  },
+  "L220.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.harmfulness|uncut C",
+    "i": 2
+  },
+  "L221.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.refusal|uncut C.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L221.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.refusal|uncut C.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L221.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.refusal|uncut C.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L221.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.refusal|uncut C",
+    "i": 0
+  },
+  "L221.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.refusal|uncut C",
+    "i": 1
+  },
+  "L221.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.refusal|uncut C",
+    "i": 2
+  },
+  "L221.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.refusal|uncut C",
+    "i": 0
+  },
+  "L221.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.refusal|uncut C",
+    "i": 1
+  },
+  "L221.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.refusal|uncut C",
+    "i": 2
+  },
+  "L222.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.high-stakes|uncut C.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L222.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.high-stakes|uncut C.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L222.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.high-stakes|uncut C.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L222.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.high-stakes|uncut C",
+    "i": 0
+  },
+  "L222.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.high-stakes|uncut C",
+    "i": 1
+  },
+  "L222.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.high-stakes|uncut C",
+    "i": 2
+  },
+  "L222.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.high-stakes|uncut C",
+    "i": 0
+  },
+  "L222.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.high-stakes|uncut C",
+    "i": 1
+  },
+  "L222.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.high-stakes|uncut C",
+    "i": 2
+  },
+  "L223.1": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.six|C.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L223.2": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.six|C.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L223.3": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.six|C.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L223.4": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 0
+  },
+  "L223.5": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 1
+  },
+  "L223.6": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 2
+  },
+  "L223.7": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.Y",
+    "i": 0
+  },
+  "L223.8": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.Y",
+    "i": 1
+  },
+  "L223.9": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.Y",
+    "i": 2
+  },
+  "L224.2": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.four|C.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L224.3": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.four|C.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L224.4": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.four|C.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L224.5": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.S",
+    "i": 0
+  },
+  "L224.6": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.S",
+    "i": 1
+  },
+  "L224.7": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.S",
+    "i": 2
+  },
+  "L224.8": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.Y",
+    "i": 0
+  },
+  "L224.9": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.Y",
+    "i": 1
+  },
+  "L224.10": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.Y",
+    "i": 2
+  },
+  "L317.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.own_all_rs_uncut_L48 R.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L317.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.own_all_rs_uncut_L48 R.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L317.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.own_all_rs_uncut_L48 R.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L317.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.own_all_rs_uncut_L48 R",
+    "i": 0
+  },
+  "L317.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.own_all_rs_uncut_L48 R",
+    "i": 1
+  },
+  "L317.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.own_all_rs_uncut_L48 R",
+    "i": 2
+  },
+  "L317.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.own_all_rs_uncut_L48 R",
+    "i": 0
+  },
+  "L317.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.own_all_rs_uncut_L48 R",
+    "i": 1
+  },
+  "L317.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.own_all_rs_uncut_L48 R",
+    "i": 2
+  },
+  "L318.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.sol_a_uncut R.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L318.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.sol_a_uncut R.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L318.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.sol_a_uncut R.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L318.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.sol_a_uncut R",
+    "i": 0
+  },
+  "L318.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.sol_a_uncut R",
+    "i": 1
+  },
+  "L318.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.sol_a_uncut R",
+    "i": 2
+  },
+  "L318.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.sol_a_uncut R",
+    "i": 0
+  },
+  "L318.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.sol_a_uncut R",
+    "i": 1
+  },
+  "L318.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.sol_a_uncut R",
+    "i": 2
+  },
+  "L319.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.FIBS|uncut R.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L319.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.FIBS|uncut R.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L319.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.FIBS|uncut R.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L319.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.FIBS|uncut R",
+    "i": 0
+  },
+  "L319.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.FIBS|uncut R",
+    "i": 1
+  },
+  "L319.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.FIBS|uncut R",
+    "i": 2
+  },
+  "L319.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.FIBS|uncut R",
+    "i": 0
+  },
+  "L319.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.FIBS|uncut R",
+    "i": 1
+  },
+  "L319.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.FIBS|uncut R",
+    "i": 2
+  },
+  "L320.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.harmfulness|uncut R.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L320.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.harmfulness|uncut R.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L320.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.harmfulness|uncut R.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L320.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.harmfulness|uncut R",
+    "i": 0
+  },
+  "L320.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.harmfulness|uncut R",
+    "i": 1
+  },
+  "L320.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.harmfulness|uncut R",
+    "i": 2
+  },
+  "L320.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.harmfulness|uncut R",
+    "i": 0
+  },
+  "L320.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.harmfulness|uncut R",
+    "i": 1
+  },
+  "L320.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.harmfulness|uncut R",
+    "i": 2
+  },
+  "L321.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.refusal|uncut R.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L321.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.refusal|uncut R.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L321.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.refusal|uncut R.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L321.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.refusal|uncut R",
+    "i": 0
+  },
+  "L321.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.refusal|uncut R",
+    "i": 1
+  },
+  "L321.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.refusal|uncut R",
+    "i": 2
+  },
+  "L321.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.refusal|uncut R",
+    "i": 0
+  },
+  "L321.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.refusal|uncut R",
+    "i": 1
+  },
+  "L321.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.refusal|uncut R",
+    "i": 2
+  },
+  "L322.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.high-stakes|uncut R.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L322.2": {
+    "slot": "rc1a",
+    "entry": "09.catch.high-stakes|uncut R.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L322.3": {
+    "slot": "rc1a",
+    "entry": "09.catch.high-stakes|uncut R.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L322.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.high-stakes|uncut R",
+    "i": 0
+  },
+  "L322.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.high-stakes|uncut R",
+    "i": 1
+  },
+  "L322.6": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.high-stakes|uncut R",
+    "i": 2
+  },
+  "L322.7": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.high-stakes|uncut R",
+    "i": 0
+  },
+  "L322.8": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.high-stakes|uncut R",
+    "i": 1
+  },
+  "L322.9": {
+    "slot": "rc1a",
+    "entry": "11.run2_minus_run1_at_tauB.high-stakes|uncut R",
+    "i": 2
+  },
+  "L323.1": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.six|R.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L323.2": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.six|R.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L323.3": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.six|R.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L323.4": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 0
+  },
+  "L323.5": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 1
+  },
+  "L323.6": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 2
+  },
+  "L323.7": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.Y",
+    "i": 0
+  },
+  "L323.8": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.Y",
+    "i": 1
+  },
+  "L323.9": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.Y",
+    "i": 2
+  },
+  "L324.2": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.four|R.run1",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L324.3": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.four|R.run2",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L324.4": {
+    "slot": "rc1a",
+    "entry": "09.catch_avg.four|R.sim",
+    "i": 0,
+    "strip": [
+      "pct"
+    ]
+  },
+  "L324.5": {
+    "slot": "rc1a",
+    "entry": "04.coheadline.auroc06_subset|R@0.01.S",
+    "i": 0
+  },
+  "L324.6": {
+    "slot": "rc1a",
+    "entry": "04.coheadline.auroc06_subset|R@0.01.S",
+    "i": 1
+  },
+  "L324.7": {
+    "slot": "rc1a",
+    "entry": "04.coheadline.auroc06_subset|R@0.01.S",
+    "i": 2
+  },
+  "L324.8": {
+    "slot": "rc1a",
+    "entry": "04.coheadline.auroc06_subset|R@0.01.Y",
+    "i": 0
+  },
+  "L324.9": {
+    "slot": "rc1a",
+    "entry": "04.coheadline.auroc06_subset|R@0.01.Y",
+    "i": 1
+  },
+  "L324.10": {
+    "slot": "rc1a",
+    "entry": "04.coheadline.auroc06_subset|R@0.01.Y",
+    "i": 2
+  },
+  "L6.1": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L46.8": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L86.1": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L118.1": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L182.2": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L199.3": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L226.1": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L238.6": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L263.2": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L311.6": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L326.1": {
+    "rec": "A",
+    "paths": [
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_old (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_new (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_newmains (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ],
+      [
+        "coverage",
+        "own_all_rs_uncut_L48 C",
+        "S_paper493 (all-origins draws) [pooled: pooled_all_origins]",
+        "coverage",
+        "cohort_cells"
+      ]
+    ],
+    "op": "sum",
+    "fmt": "{:,}"
+  },
+  "L86.2": {
+    "slot": "rc1a",
+    "entries": [
+      "14.attack_mains.own_all_rs_uncut_L48 C",
+      "14.attack_mains.own_all_rs_uncut_L48 R",
+      "14.attack_mains.sol_a_uncut C",
+      "14.attack_mains.sol_a_uncut R",
+      "14.attack_mains.FIBS|uncut C",
+      "14.attack_mains.FIBS|uncut R",
+      "14.attack_mains.harmfulness|uncut C",
+      "14.attack_mains.harmfulness|uncut R",
+      "14.attack_mains.refusal|uncut C",
+      "14.attack_mains.refusal|uncut R",
+      "14.attack_mains.high-stakes|uncut C",
+      "14.attack_mains.high-stakes|uncut R"
+    ],
+    "i": 0
+  },
+  "L118.2": {
+    "slot": "rc1a",
+    "entries": [
+      "14.attack_mains.own_all_rs_uncut_L48 C",
+      "14.attack_mains.own_all_rs_uncut_L48 R",
+      "14.attack_mains.sol_a_uncut C",
+      "14.attack_mains.sol_a_uncut R",
+      "14.attack_mains.FIBS|uncut C",
+      "14.attack_mains.FIBS|uncut R",
+      "14.attack_mains.harmfulness|uncut C",
+      "14.attack_mains.harmfulness|uncut R",
+      "14.attack_mains.refusal|uncut C",
+      "14.attack_mains.refusal|uncut R",
+      "14.attack_mains.high-stakes|uncut C",
+      "14.attack_mains.high-stakes|uncut R"
+    ],
+    "i": 0
+  },
+  "L56.1": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L60.3": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L281.2": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L289.1": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L303.1": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L60.4": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L281.3": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L289.2": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L295.1": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L303.2": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L281.4": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "call_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L290.1": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "call_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L281.5": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "call_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L290.2": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "c_simatk_vs_run1",
+      "call_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L60.7": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "d_run2_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L60.8": {
+    "rec": "refit3",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "d_run2_vs_run1",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L56.2": {
+    "rec": "refit3",
+    "paths": [
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "run_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "run_level",
+        "auroc"
+      ]
+    ],
+    "op": "same",
+    "fmt": "{:.1f}"
+  },
+  "L277.1": {
+    "rec": "refit3",
+    "paths": [
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "run_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "run_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "call_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "call_level",
+        "auroc"
+      ]
+    ],
+    "op": "min",
+    "fmt": "{:.2f}"
+  },
+  "L277.2": {
+    "rec": "refit3",
+    "paths": [
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "run_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "run_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "call_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "call_level",
+        "auroc"
+      ]
+    ],
+    "op": "max",
+    "fmt": "{:.2f}"
+  },
+  "L291.3": {
+    "rec": "refit3",
+    "paths": [
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "run_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "call_level",
+        "auroc"
+      ]
+    ],
+    "op": "min",
+    "fmt": "{:.2f}"
+  },
+  "L291.4": {
+    "rec": "refit3",
+    "paths": [
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "run_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "call_level",
+        "auroc"
+      ]
+    ],
+    "op": "max",
+    "fmt": "{:.2f}"
+  },
+  "L291.5": {
+    "rec": "refit3",
+    "paths": [
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "run_level",
+        "auroc"
+      ],
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "d_run2_vs_run1",
+        "call_level",
+        "auroc"
+      ]
+    ],
+    "op": "same",
+    "fmt": "{:.2f}"
+  },
+  "L279.1": {
+    "rec": "refit3",
+    "paths": [
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "c_simatk_vs_run1",
+        "n_runs",
+        "class1"
+      ],
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "c_simatk_vs_run1",
+        "n_runs",
+        "class1"
+      ]
+    ],
+    "op": "same",
+    "fmt": "{:,}"
+  },
+  "L279.2": {
+    "rec": "refit3",
+    "paths": [
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "c_simatk_vs_run1",
+        "n_runs",
+        "class0"
+      ],
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "c_simatk_vs_run1",
+        "n_runs",
+        "class0"
+      ]
+    ],
+    "op": "same",
+    "fmt": "{:,}"
+  },
+  "L279.3": {
+    "rec": "refit3",
+    "paths": [
+      [
+        "cells",
+        "reply|L48",
+        "problems",
+        "c_simatk_vs_run1",
+        "run_auroc_boot",
+        "n_tasks"
+      ],
+      [
+        "cells",
+        "command|L48",
+        "problems",
+        "c_simatk_vs_run1",
+        "run_auroc_boot",
+        "n_tasks"
+      ]
+    ],
+    "op": "same",
+    "fmt": "{:,}"
+  },
+  "L7.1": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L7.3": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 1
+  },
+  "L7.4": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 2
+  },
+  "L7.5": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.Y",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L48.1": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L48.3": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 1
+  },
+  "L48.4": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 2
+  },
+  "L48.5": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.Y",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L48.9": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.S",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L48.11": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.Y",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L50.1": {
+    "slot": "rc1a",
+    "entry": "10.halfwidth_C.max_all",
+    "i": 0
+  },
+  "L62.1": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L62.3": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.Y",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L100.2": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.S",
+    "i": 1
+  },
+  "L100.3": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.S",
+    "i": 2
+  },
+  "L100.4": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.Y",
+    "i": 1
+  },
+  "L100.5": {
+    "slot": "rc1a",
+    "entry": "02.coheadline.auroc06_subset|C@0.01.Y",
+    "i": 2
+  },
+  "L102.2": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 1
+  },
+  "L102.3": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 2
+  },
+  "L102.4": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.Y",
+    "i": 1
+  },
+  "L102.5": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.Y",
+    "i": 2
+  },
+  "L104.10": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 0
+  },
+  "L104.11": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 0
+  },
+  "L35.2": {
+    "slot": "rc1a",
+    "entry": "16.units_per_run.range",
+    "i": 0
+  },
+  "L35.3": {
+    "slot": "rc1a",
+    "entry": "16.units_per_run.range",
+    "i": 1
+  },
+  "L35.4": {
+    "slot": "rc1a",
+    "entry": "15.alarm_share.range",
+    "i": 0
+  },
+  "L35.5": {
+    "slot": "rc1a",
+    "entry": "15.alarm_share.range",
+    "i": 1
+  },
+  "L40.2": {
+    "slot": "rc1a",
+    "entry": "15.alarm_share.range",
+    "i": 0
+  },
+  "L40.3": {
+    "slot": "rc1a",
+    "entry": "15.alarm_share.range",
+    "i": 1
+  },
+  "L155.2": {
+    "slot": "rc1a",
+    "entry": "15.alarm_share.range",
+    "i": 0
+  },
+  "L155.3": {
+    "slot": "rc1a",
+    "entry": "15.alarm_share.range",
+    "i": 1
+  },
+  "L201.1": {
+    "slot": "rc1a",
+    "entry": "10.halfwidth_C.min_excl_on_policy",
+    "i": 0
+  },
+  "L201.2": {
+    "slot": "rc1a",
+    "entry": "10.halfwidth_C.max_excl_on_policy",
+    "i": 0
+  },
+  "L203.1": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.own_all_rs_uncut_L48 C",
+    "i": 0
+  },
+  "L203.3": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.own_all_rs_uncut_L48 C",
+    "i": 1
+  },
+  "L203.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.own_all_rs_uncut_L48 C",
+    "i": 2
+  },
+  "L205.1": {
+    "slot": "rc1a",
+    "entry": "09.catch.own_all_rs10_uncut_L48 C.mean",
+    "i": 0
+  },
+  "L207.1": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.sol_a_uncut C",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L207.3": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.sol_a_uncut C",
+    "i": 1
+  },
+  "L207.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.sol_a_uncut C",
+    "i": 2
+  },
+  "L207.5": {
+    "slot": "rc1a",
+    "entries": [
+      "10.delta_full.harmfulness|uncut C",
+      "10.delta_full.FIBS|uncut C"
+    ],
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L209.1": {
+    "slot": "rc1b_detl48",
+    "entry": "23.spearman.sol_a_uncut C.commands L48.sim_score_vs_drop",
+    "i": 0
+  },
+  "L209.3": {
+    "slot": "rc1b_detl48",
+    "entry": "23.spearman.sol_a_uncut C.commands L48.sim_score_vs_drop",
+    "i": 1
+  },
+  "L209.4": {
+    "slot": "rc1b_detl48",
+    "entry": "23.spearman.sol_a_uncut C.commands L48.sim_score_vs_drop",
+    "i": 2
+  },
+  "L209.5": {
+    "slot": "rc1b_detl48",
+    "entry": "23.spearman.sol_a_uncut C.commands L48.null_run2_score_vs_run2_minus_run1",
+    "i": 0
+  },
+  "L230.2": {
+    "slot": "rc1a",
+    "entry": "05.coheadline.headline_six_full|C@0.05.S",
+    "i": 0
+  },
+  "L230.4": {
+    "slot": "rc1a",
+    "entry": "05.coheadline.headline_six_full|C@0.05.S",
+    "i": 1
+  },
+  "L230.5": {
+    "slot": "rc1a",
+    "entry": "05.coheadline.headline_six_full|C@0.05.S",
+    "i": 2
+  },
+  "L257.1": {
+    "slot": "rc1a",
+    "entry": "06.excess.headline_six_full|C",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L257.3": {
+    "slot": "rc1a",
+    "entry": "06.excess.headline_six_full|C",
+    "i": 1
+  },
+  "L257.4": {
+    "slot": "rc1a",
+    "entry": "06.excess.headline_six_full|C",
+    "i": 2
+  },
+  "L257.5": {
+    "slot": "rc1a",
+    "entry": "08.excess.four_probe|C",
+    "i": 0
+  },
+  "L257.7": {
+    "slot": "rc1a",
+    "entry": "08.excess.four_probe|C",
+    "i": 1
+  },
+  "L257.8": {
+    "slot": "rc1a",
+    "entry": "08.excess.four_probe|C",
+    "i": 2
+  },
+  "L271.2": {
+    "slot": "rc1a",
+    "entry": "13.real_line.c_asis_uncut R",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L271.4": {
+    "slot": "rc1a",
+    "entry": "13.real_line.c_asis_uncut R",
+    "i": 1
+  },
+  "L271.5": {
+    "slot": "rc1a",
+    "entry": "13.real_line.c_asis_uncut R",
+    "i": 2
+  },
+  "L271.6": {
+    "slot": "rc1a",
+    "entry": "13.delta_full.c_asis_uncut R",
+    "i": 0,
+    "strip": [
+      "sign"
+    ]
+  },
+  "L271.8": {
+    "slot": "rc1a",
+    "entry": "13.delta_full.c_asis_uncut R",
+    "i": 1
+  },
+  "L271.9": {
+    "slot": "rc1a",
+    "entry": "13.delta_full.c_asis_uncut R",
+    "i": 2
+  },
+  "L271.10": {
+    "slot": "rc1a",
+    "entry": "13.real_line.c_asis_uncut C",
+    "i": 0
+  },
+  "L271.12": {
+    "slot": "rc1a",
+    "entry": "13.real_line.c_asis_uncut C",
+    "i": 1
+  },
+  "L271.13": {
+    "slot": "rc1a",
+    "entry": "13.real_line.c_asis_uncut C",
+    "i": 2
+  },
+  "L271.14": {
+    "slot": "rc1a",
+    "entry": "13.delta_full.c_asis_uncut C",
+    "i": 0
+  },
+  "L271.16": {
+    "slot": "rc1a",
+    "entry": "13.delta_full.c_asis_uncut C",
+    "i": 1
+  },
+  "L271.17": {
+    "slot": "rc1a",
+    "entry": "13.delta_full.c_asis_uncut C",
+    "i": 2
+  },
+  "L301.1": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 0
+  },
+  "L301.3": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 1
+  },
+  "L301.4": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.S",
+    "i": 2
+  },
+  "L301.5": {
+    "slot": "rc1a",
+    "entry": "03.coheadline.headline_six_full|R@0.01.Y",
+    "i": 0
+  },
+  "L301.9": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 0
+  },
+  "L301.11": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 1
+  },
+  "L301.12": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.S",
+    "i": 2
+  },
+  "L301.13": {
+    "slot": "rc1a",
+    "entry": "01.coheadline.headline_six_full|C@0.01.Y",
+    "i": 0
+  },
+  "L305.1": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.refusal|uncut R",
+    "i": 0
+  },
+  "L305.3": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.refusal|uncut R",
+    "i": 1
+  },
+  "L305.4": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.refusal|uncut R",
+    "i": 2
+  },
+  "L305.5": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.FIBS|uncut R",
+    "i": 0
+  },
+  "L305.7": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.FIBS|uncut R",
+    "i": 1
+  },
+  "L305.8": {
+    "slot": "rc1a",
+    "entry": "10.delta_full.FIBS|uncut R",
+    "i": 2
+  },
+  "L307.1": {
+    "slot": "rc1a",
+    "entry": "07.excess.headline_six_full|R",
+    "i": 0
+  },
+  "L307.3": {
+    "slot": "rc1a",
+    "entry": "07.excess.headline_six_full|R",
+    "i": 1
+  },
+  "L307.4": {
+    "slot": "rc1a",
+    "entry": "07.excess.headline_six_full|R",
+    "i": 2
+  },
+  "L307.5": {
+    "slot": "rc1a",
+    "entry": "06.excess.headline_six_full|C",
+    "i": 0
+  },
+  "L352.3": {
+    "slot": "rc1b",
+    "entry": "21.kappa_group.headline_six|C.joint.mean_kappa_run2_vs_run1",
+    "i": 0
+  },
+  "L352.4": {
+    "slot": "rc1b",
+    "entry": "21.kappa_group.headline_six|C.joint.mean_kappa_sim_vs_run1",
+    "i": 0
+  },
+  "L352.5": {
+    "slot": "rc1b",
+    "entry": "21.kappa_group.headline_six|C.joint.mean_kappa_sim_minus_run2",
+    "i": 0
+  },
+  "L352.7": {
+    "slot": "rc1b",
+    "entry": "21.kappa_group.headline_six|C.joint.mean_kappa_sim_minus_run2",
+    "i": 1
+  },
+  "L352.8": {
+    "slot": "rc1b",
+    "entry": "21.kappa_group.headline_six|C.joint.mean_kappa_sim_minus_run2",
+    "i": 2
+  },
+  "L354.1": {
+    "slot": "rc1b",
+    "entry": "22.kappa_five.C.joint.mean_kappa_run2_vs_run1",
+    "i": 0
+  },
+  "L354.2": {
+    "slot": "rc1b",
+    "entry": "22.kappa_five.C.joint.mean_kappa_sim_vs_run1",
+    "i": 0
+  },
+  "L354.3": {
+    "slot": "rc1b",
+    "entry": "22.kappa_five.C.joint.mean_kappa_sim_minus_run2",
+    "i": 0
+  },
+  "L354.5": {
+    "slot": "rc1b",
+    "entry": "22.kappa_five.C.joint.mean_kappa_sim_minus_run2",
+    "i": 1
+  },
+  "L354.6": {
+    "slot": "rc1b",
+    "entry": "22.kappa_five.C.joint.mean_kappa_sim_minus_run2",
+    "i": 2
+  },
+  "L356.2": {
+    "slot": "rc1b",
+    "entry": "24.r2.lead.own_all_rs_uncut_L48 C.yardstick",
+    "i": 0,
+    "take": "num",
+    "scale": 100,
+    "fmt": "{:.0f}",
+    "suffix": "%"
+  },
+  "L356.3": {
+    "slot": "rc1b",
+    "entry": "24.r2.lead.own_all_rs_uncut_L48 C.yardstick",
+    "i": 0
+  },
+  "L356.4": {
+    "slot": "rc1b",
+    "entry": "24.r2.lead.own_all_rs_uncut_L48 C.main",
+    "i": 0
+  },
+  "L356.5": {
+    "slot": "rc1b",
+    "entry": "24.r2.lead.own_all_rs_uncut_L48 C.delta_main_minus_yardstick",
+    "i": 0
+  },
+  "L356.7": {
+    "slot": "rc1b",
+    "entry": "24.r2.lead.own_all_rs_uncut_L48 C.delta_main_minus_yardstick",
+    "i": 1
+  },
+  "L356.8": {
+    "slot": "rc1b",
+    "entry": "24.r2.lead.own_all_rs_uncut_L48 C.delta_main_minus_yardstick",
+    "i": 2
+  },
+  "L358.3": {
+    "slot": "rc1b",
+    "entry": "24.r2.sensitivity_run2_anchor.own_all_rs_uncut_L48 C.delta_main_minus_yardstick",
+    "i": 0
+  },
+  "L358.5": {
+    "slot": "rc1b",
+    "entry": "24.r2.sensitivity_run2_anchor.own_all_rs_uncut_L48 C.delta_main_minus_yardstick",
+    "i": 1
+  },
+  "L358.6": {
+    "slot": "rc1b",
+    "entry": "24.r2.sensitivity_run2_anchor.own_all_rs_uncut_L48 C.delta_main_minus_yardstick",
+    "i": 2
+  },
+  "L362.4": {
+    "slot": "rc1b",
+    "entry": "24.n_cells.lead.own_all_rs_uncut_L48 C",
+    "i": 0
+  },
+  "L366.4": {
+    "slot": "rc1b",
+    "entry": "24.n_cells.lead.own_all_rs_uncut_L48 C",
+    "i": 0
+  },
+  "L366.6": {
+    "slot": "rc1b",
+    "entry": "24.n_cells.lead.own_all_rs_uncut_L48 C",
+    "i": 0
+  },
+  "L366.7": {
+    "slot": "rc1b",
+    "entry": "24.r2.lead.own_all_rs_uncut_L48 C.yardstick",
+    "i": 0
+  },
+  "L366.8": {
+    "slot": "rc1b",
+    "entry": "24.r2.yardstick_halfwidth.lead.own_all_rs_uncut_L48 C",
+    "i": 0
+  },
+  "L149.1": {
+    "slot": "rc1a",
+    "entry": "17.readout_share.range",
+    "i": 0,
+    "agg_tokens": "same"
+  },
+  "L157.1": {
+    "slot": "rc1a",
+    "entries": [
+      "14.after_runs.own_all_rs_uncut_L48 C.B",
+      "14.after_runs.sol_a_uncut C.B",
+      "14.after_runs.FIBS|uncut C.B",
+      "14.after_runs.harmfulness|uncut C.B",
+      "14.after_runs.refusal|uncut C.B",
+      "14.after_runs.high-stakes|uncut C.B"
+    ],
+    "i": 0
+  },
+  "L157.2": {
+    "slot": "rc1a",
+    "entries": [
+      "14.after_runs.own_all_rs_uncut_L48 C.S",
+      "14.after_runs.sol_a_uncut C.S",
+      "14.after_runs.FIBS|uncut C.S",
+      "14.after_runs.harmfulness|uncut C.S",
+      "14.after_runs.refusal|uncut C.S",
+      "14.after_runs.high-stakes|uncut C.S"
+    ],
+    "i": 0
+  },
+  "L28.1": {
+    "rec": "pooledmetrics",
+    "path": [
+      "pooled",
+      "own_all_rs_uncut_L48 C",
+      "pooled_all_origins",
+      "metrics",
+      "auroc|run1",
+      "point"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L29.1": {
+    "rec": "pooledmetrics",
+    "path": [
+      "pooled",
+      "sol_a_uncut C",
+      "pooled_all_origins",
+      "metrics",
+      "auroc|run1",
+      "point"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L30.1": {
+    "rec": "pooledmetrics",
+    "path": [
+      "pooled",
+      "FIBS|uncut C",
+      "pooled_all_origins",
+      "metrics",
+      "auroc|run1",
+      "point"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L31.1": {
+    "rec": "pooledmetrics",
+    "path": [
+      "pooled",
+      "harmfulness|uncut C",
+      "pooled_all_origins",
+      "metrics",
+      "auroc|run1",
+      "point"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L32.1": {
+    "rec": "pooledmetrics",
+    "path": [
+      "pooled",
+      "refusal|uncut C",
+      "pooled_all_origins",
+      "metrics",
+      "auroc|run1",
+      "point"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L33.1": {
+    "rec": "pooledmetrics",
+    "path": [
+      "pooled",
+      "high-stakes|uncut C",
+      "pooled_all_origins",
+      "metrics",
+      "auroc|run1",
+      "point"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L82.1": {
+    "rec": "attack_sol_share",
+    "paths": [
+      [
+        "a_reduce_counts",
+        "pooled_union_of_cells",
+        "n_sol_using"
+      ],
+      [
+        "a_reduce_counts",
+        "pooled_union_of_cells",
+        "n_all"
+      ]
+    ],
+    "op": "ratio",
+    "scale": 100,
+    "fmt": "{:.0f}",
+    "suffix": "%"
+  },
+  "L82.2": {
+    "rec": "simpool",
+    "path": [
+      "items",
+      "1_sim_footnote",
+      "percent",
+      "routec_pool"
+    ],
+    "fmt": "{:.0f}",
+    "suffix": "%"
+  },
+  "L92.3": {
+    "rec": "simpool",
+    "path": [
+      "items",
+      "2_failed_footnote",
+      "routec",
+      "percent"
+    ],
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L92.4": {
+    "rec": "simpool",
+    "path": [
+      "items",
+      "2_failed_footnote",
+      "routec",
+      "percent_without_rate_limit"
+    ],
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L92.1": {
+    "fn": "failed_range",
+    "end": "lo"
+  },
+  "L92.2": {
+    "fn": "failed_range",
+    "end": "hi",
+    "suffix": "%"
+  },
+  "L84.1": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rates",
+      "sim",
+      "rate"
+    ],
+    "scale": 100,
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L84.2": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rates",
+      "run1",
+      "rate"
+    ],
+    "scale": 100,
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L84.3": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rates",
+      "run2",
+      "rate"
+    ],
+    "scale": 100,
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L336.1": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rates",
+      "sim",
+      "rate"
+    ],
+    "scale": 100,
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L336.2": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rates",
+      "run1",
+      "rate"
+    ],
+    "scale": 100,
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L336.3": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rates",
+      "run2",
+      "rate"
+    ],
+    "scale": 100,
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L336.5": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rate_pairs",
+      "sim - run1",
+      "diff"
+    ],
+    "scale": 100,
+    "fmt": "{:+.1f}"
+  },
+  "L336.7": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rate_pairs",
+      "sim - run1",
+      "ci95_main",
+      0
+    ],
+    "scale": 100,
+    "fmt": "{:+.1f}"
+  },
+  "L336.8": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rate_pairs",
+      "sim - run1",
+      "ci95_main",
+      1
+    ],
+    "scale": 100,
+    "fmt": "{:+.1f}"
+  },
+  "L338.1": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rates",
+      "sim",
+      "non_attempt_share"
+    ],
+    "scale": 100,
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L338.2": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rates",
+      "run1",
+      "non_attempt_share"
+    ],
+    "scale": 100,
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L338.3": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "rates",
+      "run2",
+      "non_attempt_share"
+    ],
+    "scale": 100,
+    "fmt": "{:.1f}",
+    "suffix": "%"
+  },
+  "L334.1": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "behaviour",
+      "run1",
+      "steps",
+      "mean"
+    ],
+    "fmt": "{:.0f}"
+  },
+  "L334.2": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "behaviour_pairs",
+      "sim - run1",
+      "steps",
+      "diff"
+    ],
+    "abs": true,
+    "fmt": "{:.1f}"
+  },
+  "L334.5": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "behaviour_pairs",
+      "sim - run1",
+      "steps",
+      "ci95_main",
+      0
+    ],
+    "fmt": "{:+.1f}"
+  },
+  "L334.6": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "behaviour_pairs",
+      "sim - run1",
+      "steps",
+      "ci95_main",
+      1
+    ],
+    "fmt": "{:+.1f}"
+  },
+  "L334.8": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "behaviour_pairs",
+      "run2 - run1",
+      "steps",
+      "diff"
+    ],
+    "abs": true,
+    "fmt": "{:.1f}"
+  },
+  "L334.10": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "behaviour_pairs",
+      "sim - run1",
+      "out_tokens",
+      "diff"
+    ],
+    "abs": true,
+    "fmt": "{:,.0f}"
+  },
+  "L334.13": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "behaviour_pairs",
+      "sim - run1",
+      "out_tokens",
+      "ci95_main",
+      0
+    ],
+    "fmt": "{:+,.0f}"
+  },
+  "L334.14": {
+    "rec": "behaviour",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "behaviour_pairs",
+      "sim - run1",
+      "out_tokens",
+      "ci95_main",
+      1
+    ],
+    "fmt": "{:+,.0f}"
+  },
+  "L338.5": {
+    "rec": "behaviour_medians",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "non_attempt_median_steps",
+      "sim",
+      "median"
+    ],
+    "fmt": "{:.0f}"
+  },
+  "L338.6": {
+    "rec": "behaviour_medians",
+    "path": [
+      "results",
+      "cohort = 32k-frozen (58f12786)",
+      "pooled",
+      "attempted_median_steps",
+      "sim",
+      "median"
+    ],
+    "fmt": "{:.0f}"
+  },
+  "L338.7": {
+    "rec": "behaviour_medians",
+    "paths": [
+      [
+        "results",
+        "cohort = 32k-frozen (58f12786)",
+        "pooled",
+        "non_attempt_median_steps",
+        "run1",
+        "median"
+      ],
+      [
+        "results",
+        "cohort = 32k-frozen (58f12786)",
+        "pooled",
+        "non_attempt_median_steps",
+        "run2",
+        "median"
+      ]
+    ],
+    "op": "same",
+    "fmt": "{:.0f}"
+  },
+  "L338.8": {
+    "rec": "behaviour_medians",
+    "paths": [
+      [
+        "results",
+        "cohort = 32k-frozen (58f12786)",
+        "pooled",
+        "attempted_median_steps",
+        "run1",
+        "median"
+      ],
+      [
+        "results",
+        "cohort = 32k-frozen (58f12786)",
+        "pooled",
+        "attempted_median_steps",
+        "run2",
+        "median"
+      ]
+    ],
+    "op": "min",
+    "fmt": "{:.0f}"
+  },
+  "L338.9": {
+    "rec": "behaviour_medians",
+    "paths": [
+      [
+        "results",
+        "cohort = 32k-frozen (58f12786)",
+        "pooled",
+        "attempted_median_steps",
+        "run1",
+        "median"
+      ],
+      [
+        "results",
+        "cohort = 32k-frozen (58f12786)",
+        "pooled",
+        "attempted_median_steps",
+        "run2",
+        "median"
+      ]
+    ],
+    "op": "max",
+    "fmt": "{:.0f}"
+  },
+  "L86.3": {
+    "rec": "exclusions",
+    "path": [
+      "N_jeffrey_1000",
+      "final"
+    ],
+    "fmt": "{:,}"
+  },
+  "L118.3": {
+    "rec": "exclusions",
+    "path": [
+      "N_jeffrey_1000",
+      "final"
+    ],
+    "fmt": "{:,}"
+  },
+  "L86.4": {
+    "rec": "exclusions",
+    "path": [
+      "N_jeffrey_1000",
+      "launched"
+    ],
+    "fmt": "{:,}"
+  },
+  "L118.4": {
+    "rec": "exclusions",
+    "path": [
+      "N_jeffrey_1000",
+      "launched"
+    ],
+    "fmt": "{:,}"
+  },
+  "L374.5": {
+    "rec": "exclusions",
+    "path": [
+      "N_jeffrey_1000",
+      "launched"
+    ],
+    "fmt": "{:,}"
+  },
+  "L86.5": {
+    "rec": "exclusions",
+    "path": [
+      "N_jeffrey_1000",
+      "excluded"
+    ],
+    "fmt": "{:,}"
+  },
+  "L118.5": {
+    "rec": "exclusions",
+    "path": [
+      "N_jeffrey_1000",
+      "excluded"
+    ],
+    "fmt": "{:,}"
+  },
+  "L374.4": {
+    "rec": "exclusions",
+    "path": [
+      "N_jeffrey_1000",
+      "excluded"
+    ],
+    "fmt": "{:,}"
+  },
+  "L118.6": {
+    "rec": "exclusions",
+    "paths": [
+      [
+        "N_all_sets",
+        "excluded"
+      ],
+      [
+        "N_jeffrey_1000",
+        "excluded"
+      ]
+    ],
+    "op": "diff",
+    "fmt": "{:,}"
+  },
+  "L372.1": {
+    "rec": "exclusions",
+    "path": [
+      "N_all_sets",
+      "excluded"
+    ],
+    "fmt": "{:,}"
+  },
+  "L374.3": {
+    "rec": "exclusions",
+    "path": [
+      "N_all_sets",
+      "excluded"
+    ],
+    "fmt": "{:,}"
+  },
+  "L372.2": {
+    "rec": "exclusions",
+    "path": [
+      "N_all_sets",
+      "launched"
+    ],
+    "fmt": "{:,}"
+  },
+  "L374.1": {
+    "rec": "exclusions",
+    "path": [
+      "N_all_sets",
+      "launched"
+    ],
+    "fmt": "{:,}"
+  },
+  "L374.2": {
+    "rec": "exclusions",
+    "path": [
+      "N_all_sets",
+      "final"
+    ],
+    "fmt": "{:,}"
+  },
+  "L376.1": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "eq": "errored run (EmptyPolicyCompletionError)",
+    "fmt": "{:,}"
+  },
+  "L377.1": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "eq": "errored run (OutputContractError)",
+    "fmt": "{:,}"
+  },
+  "L378.1": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "eq": "setup failure (no policy call)",
+    "fmt": "{:,}"
+  },
+  "L379.1": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "prefix": "sim never launched (no usable honest_a reference",
+    "fmt": "{:,}"
+  },
+  "L380.1": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "eq": "never launched (preflight failed)",
+    "fmt": "{:,}"
+  },
+  "L381.1": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "eq": "attempt timeout (cause unknown)",
+    "fmt": "{:,}"
+  },
+  "L381.2": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "eq": "other (cause unknown)",
+    "fmt": "{:,}"
+  },
+  "L382.1": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "eq": "staging exclusion",
+    "fmt": "{:,}"
+  },
+  "L387.1": {
+    "rec": "appI_counts",
+    "path": [
+      "counts",
+      "honest_real",
+      "epce_total"
+    ],
+    "fmt": "{:,}"
+  },
+  "L387.2": {
+    "rec": "appI_counts",
+    "path": [
+      "counts",
+      "honest_real",
+      "epce_by_env",
+      "model_registry"
+    ],
+    "fmt": "{:,}"
+  },
+  "L387.3": {
+    "rec": "appI_counts",
+    "path": [
+      "counts",
+      "honest_real",
+      "epce_by_env",
+      "slack_clone"
+    ],
+    "fmt": "{:,}"
+  },
+  "L387.4": {
+    "rec": "appI_counts",
+    "path": [
+      "counts",
+      "honest_real",
+      "epce_by_env",
+      "tiktok"
+    ],
+    "fmt": "{:,}"
+  },
+  "L387.5": {
+    "rec": "appI_counts",
+    "path": [
+      "counts",
+      "attack_real",
+      "total",
+      "epce"
+    ],
+    "fmt": "{:,}"
+  },
+  "L387.6": {
+    "rec": "appI_counts",
+    "path": [
+      "counts",
+      "attack_real",
+      "total",
+      "runs"
+    ],
+    "fmt": "{:,}"
+  },
+  "L387.7": {
+    "rec": "appI_counts_e2",
+    "path": [
+      "counts",
+      "honest_real_epoch2_usable0",
+      "total"
+    ],
+    "fmt": "{:,}"
+  },
+  "L149.2": {
+    "rec": "cunits_by_tool",
+    "paths": [
+      [
+        "cells",
+        "pooled|H_B",
+        "readers",
+        "p2",
+        "text_editor"
+      ],
+      [
+        "cells",
+        "pooled|H_B",
+        "readers",
+        "p2",
+        "units"
+      ]
+    ],
+    "op": "ratio",
+    "scale": 100,
+    "fmt": "{:.0f}",
+    "suffix": "%"
+  },
+  "L149.3": {
+    "rec": "cunits_by_tool",
+    "paths": [
+      [
+        "cells",
+        "pooled|run1",
+        "readers",
+        "p2",
+        "text_editor"
+      ],
+      [
+        "cells",
+        "pooled|run1",
+        "readers",
+        "p2",
+        "units"
+      ]
+    ],
+    "op": "ratio",
+    "scale": 100,
+    "fmt": "{:.0f}",
+    "suffix": "%"
+  },
+  "L135.3": {
+    "rec": "read_fit_refusal_harm",
+    "path": [
+      "directions",
+      "harmfulness",
+      "layer"
+    ],
+    "fmt": "{:d}"
+  },
+  "L135.4": {
+    "rec": "read_fit_refusal_harm",
+    "path": [
+      "directions",
+      "refusal",
+      "layer"
+    ],
+    "fmt": "{:d}"
+  },
+  "L136.1": {
+    "rec": "read_fit_highstakes",
+    "path": [
+      "directions",
+      "highstakes",
+      "layer"
+    ],
+    "fmt": "{:d}"
+  },
+  "L133.4": {
+    "rec": "sola_fit",
+    "path": [
+      "fit_spec",
+      "readouts",
+      "C"
+    ],
+    "regex": "L(\\d+)"
+  },
+  "L133.5": {
+    "fn": "mostly_range",
+    "end": "lo"
+  },
+  "L133.6": {
+    "fn": "mostly_range",
+    "end": "hi"
+  },
+  "L133.2": {
+    "rec": "sola_keys",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "index": 0,
+    "eq": "real-attack-e1",
+    "fmt": "{:,}"
+  },
+  "L133.3": {
+    "rec": "sola_keys",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "index": 0,
+    "eq": "real-honest",
+    "fmt": "{:,}"
+  },
+  "L132.4": {
+    "rec": "oaru_keys",
+    "path": [
+      "counts",
+      "by_world",
+      "run1"
+    ],
+    "round_to": 10,
+    "fmt": "{:d}",
+    "approx": "about: the on-policy probe's run 1 training runs, one per main task, rounded to 10"
+  },
+  "L132.5": {
+    "rec": "oaru_keys",
+    "path": [
+      "counts",
+      "by_world",
+      "run1"
+    ],
+    "scale": 0.8,
+    "round_to": 10,
+    "fmt": "{:d}",
+    "approx": "about: four of five folds of the training mains, rounded to 10"
+  },
+  "L283.1": {
+    "rec": "honest_all",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "simh_vs_b",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L292.1": {
+    "rec": "honest_all",
+    "path": [
+      "cells",
+      "reply|L48",
+      "problems",
+      "simh_vs_b",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L283.2": {
+    "rec": "honest_all",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "simh_vs_b",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L292.2": {
+    "rec": "honest_all",
+    "path": [
+      "cells",
+      "command|L48",
+      "problems",
+      "simh_vs_b",
+      "run_level",
+      "auroc"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L283.3": {
+    "rec": "simpool",
+    "paths": [
+      [
+        "items",
+        "5_table7_row5_control",
+        "run_level_auroc",
+        "routec",
+        "reply|L48"
+      ],
+      [
+        "items",
+        "5_table7_row5_control",
+        "run_level_auroc",
+        "routec",
+        "command|L48"
+      ]
+    ],
+    "op": "same",
+    "fmt": "{:.2f}"
+  },
+  "L293.1": {
+    "rec": "simpool",
+    "path": [
+      "items",
+      "5_table7_row5_control",
+      "run_level_auroc",
+      "routec",
+      "reply|L48"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L293.2": {
+    "rec": "simpool",
+    "path": [
+      "items",
+      "5_table7_row5_control",
+      "run_level_auroc",
+      "routec",
+      "command|L48"
+    ],
+    "fmt": "{:.2f}"
+  },
+  "L175.1": {
+    "rec": "tables",
+    "paths": [
+      [
+        "false_alarms",
+        "draws",
+        0,
+        "z"
+      ],
+      [
+        "false_alarms",
+        "draws",
+        0,
+        "T"
+      ]
+    ],
+    "op": "diff",
+    "fmt": "{:+.2f}"
+  },
+  "L176.1": {
+    "rec": "tables",
+    "paths": [
+      [
+        "false_alarms",
+        "draws",
+        1,
+        "z"
+      ],
+      [
+        "false_alarms",
+        "draws",
+        1,
+        "T"
+      ]
+    ],
+    "op": "diff",
+    "fmt": "{:+.2f}"
+  },
+  "L177.1": {
+    "rec": "tables",
+    "paths": [
+      [
+        "false_alarms",
+        "draws",
+        2,
+        "z"
+      ],
+      [
+        "false_alarms",
+        "draws",
+        2,
+        "T"
+      ]
+    ],
+    "op": "diff",
+    "fmt": "{:+.2f}"
+  },
+  "L178.1": {
+    "rec": "tables",
+    "paths": [
+      [
+        "false_alarms",
+        "draws",
+        3,
+        "z"
+      ],
+      [
+        "false_alarms",
+        "draws",
+        3,
+        "T"
+      ]
+    ],
+    "op": "diff",
+    "fmt": "{:+.2f}"
+  },
+  "L180.1": {
+    "rec": "tables",
+    "paths": [
+      [
+        "false_alarms",
+        "draws",
+        5,
+        "z"
+      ],
+      [
+        "false_alarms",
+        "draws",
+        5,
+        "T"
+      ]
+    ],
+    "op": "diff",
+    "fmt": "{:+.2f}"
+  },
+  "L179.1": {
+    "rec": "tables",
+    "paths": [
+      [
+        "false_alarms",
+        "draws",
+        4,
+        "z"
+      ],
+      [
+        "false_alarms",
+        "draws",
+        4,
+        "T"
+      ]
+    ],
+    "op": "diff",
+    "below": 0.01,
+    "note": "printed as less than +0.01: the margin is positive and rounds to +0.00"
+  },
+  "L190.1": {
+    "rec": "tables",
+    "path": [
+      "outcome_table",
+      "outcomes",
+      "both caught",
+      "drawn",
+      "real (run 1)",
+      "z_minus_T"
+    ],
+    "fmt": "{:+.1f}"
+  },
+  "L190.2": {
+    "rec": "tables",
+    "path": [
+      "outcome_table",
+      "outcomes",
+      "both caught",
+      "drawn",
+      "sim (sim 1)",
+      "z_minus_T"
+    ],
+    "fmt": "{:+.1f}"
+  },
+  "L191.1": {
+    "rec": "tables",
+    "path": [
+      "outcome_table",
+      "outcomes",
+      "real caught, sim missed",
+      "drawn",
+      "real (run 1)",
+      "z_minus_T"
+    ],
+    "fmt": "{:+.1f}"
+  },
+  "L192.1": {
+    "rec": "tables",
+    "path": [
+      "outcome_table",
+      "outcomes",
+      "real missed, sim caught",
+      "drawn",
+      "real (run 1)",
+      "z_minus_T"
+    ],
+    "fmt": "{:+.2f}"
+  },
+  "L192.2": {
+    "rec": "tables",
+    "path": [
+      "outcome_table",
+      "outcomes",
+      "real missed, sim caught",
+      "drawn",
+      "sim (sim 1)",
+      "z_minus_T"
+    ],
+    "fmt": "{:+.2f}"
+  },
+  "L182.3": {
+    "rec": "tables",
+    "path": [
+      "outcome_table",
+      "outcomes",
+      "both caught",
+      "n"
+    ],
+    "fmt": "{:,}"
+  },
+  "L182.5": {
+    "rec": "tables",
+    "path": [
+      "outcome_table",
+      "outcomes",
+      "real caught, sim missed",
+      "n"
+    ],
+    "fmt": "{:,}"
+  },
+  "L182.6": {
+    "rec": "tables",
+    "path": [
+      "outcome_table",
+      "outcomes",
+      "real missed, sim caught",
+      "n"
+    ],
+    "fmt": "{:,}"
+  },
+  "L182.7": {
+    "rec": "tables",
+    "path": [
+      "outcome_table",
+      "outcomes",
+      "both missed",
+      "n"
+    ],
+    "fmt": "{:,}"
+  },
+  "L209.6": {
+    "rec": "A",
+    "path": [
+      "pooled",
+      "sol_a_uncut C",
+      "pooled_all_origins",
+      "joint",
+      "0.01",
+      "gap",
+      "real_line",
+      "point"
+    ],
+    "scale": 100,
+    "abs": true,
+    "fmt": "{:.1f}"
+  },
+  "L209.8": {
+    "rec": "A",
+    "path": [
+      "pooled",
+      "sol_a_uncut C",
+      "pooled_all_origins",
+      "joint",
+      "0.01",
+      "gap",
+      "real_line",
+      "ci95",
+      0
+    ],
+    "scale": 100,
+    "fmt": "{:+.1f}"
+  },
+  "L209.9": {
+    "rec": "A",
+    "path": [
+      "pooled",
+      "sol_a_uncut C",
+      "pooled_all_origins",
+      "joint",
+      "0.01",
+      "gap",
+      "real_line",
+      "ci95",
+      1
+    ],
+    "scale": 100,
+    "fmt": "{:+.1f}"
+  },
+  "L104.2": {
+    "fn": "realline_mean",
+    "ro": "C"
+  },
+  "L104.6": {
+    "fn": "realline_mean",
+    "ro": "R"
+  },
+  "L104.4": {
+    "fn": "realline_interval",
+    "ro": "C",
+    "end": "lo"
+  },
+  "L104.5": {
+    "fn": "realline_interval",
+    "ro": "C",
+    "end": "hi"
+  },
+  "L104.8": {
+    "fn": "realline_interval",
+    "ro": "R",
+    "end": "lo"
+  },
+  "L104.9": {
+    "fn": "realline_interval",
+    "ro": "R",
+    "end": "hi"
+  },
+  "L203.5": {
+    "fn": "near_100"
+  },
+  "L228.3": {
+    "slot": "rc2",
+    "entries": [
+      "19.units_above_tau_sim.own_all_rs_uncut_L48 C@0.001",
+      "19.units_above_tau_sim.sol_a_uncut C@0.001",
+      "19.units_above_tau_sim.FIBS|uncut C@0.001",
+      "19.units_above_tau_sim.harmfulness|uncut C@0.001",
+      "19.units_above_tau_sim.refusal|uncut C@0.001",
+      "19.units_above_tau_sim.high-stakes|uncut C@0.001"
+    ],
+    "i": 0,
+    "agg": "min"
+  },
+  "L228.4": {
+    "slot": "rc2",
+    "entries": [
+      "19.units_above_tau_sim.own_all_rs_uncut_L48 C@0.001",
+      "19.units_above_tau_sim.sol_a_uncut C@0.001",
+      "19.units_above_tau_sim.FIBS|uncut C@0.001",
+      "19.units_above_tau_sim.harmfulness|uncut C@0.001",
+      "19.units_above_tau_sim.refusal|uncut C@0.001",
+      "19.units_above_tau_sim.high-stakes|uncut C@0.001"
+    ],
+    "i": 0,
+    "agg": "max"
+  },
+  "L228.5": {
+    "slot": "rc2",
+    "entries": [
+      "19.distinct_runs_above_tau_sim.own_all_rs_uncut_L48 C@0.001",
+      "19.distinct_runs_above_tau_sim.sol_a_uncut C@0.001",
+      "19.distinct_runs_above_tau_sim.FIBS|uncut C@0.001",
+      "19.distinct_runs_above_tau_sim.harmfulness|uncut C@0.001",
+      "19.distinct_runs_above_tau_sim.refusal|uncut C@0.001",
+      "19.distinct_runs_above_tau_sim.high-stakes|uncut C@0.001"
+    ],
+    "i": 0,
+    "agg": "min"
+  },
+  "L228.6": {
+    "slot": "rc2",
+    "entries": [
+      "19.distinct_runs_above_tau_sim.own_all_rs_uncut_L48 C@0.001",
+      "19.distinct_runs_above_tau_sim.sol_a_uncut C@0.001",
+      "19.distinct_runs_above_tau_sim.FIBS|uncut C@0.001",
+      "19.distinct_runs_above_tau_sim.harmfulness|uncut C@0.001",
+      "19.distinct_runs_above_tau_sim.refusal|uncut C@0.001",
+      "19.distinct_runs_above_tau_sim.high-stakes|uncut C@0.001"
+    ],
+    "i": 0,
+    "agg": "max"
+  },
+  "L228.10": {
+    "slot": "rc2",
+    "src": "full",
+    "entries": [
+      "20.delta_full.joint.own_all_rs_uncut_L48 C@0.0005",
+      "20.delta_full.joint.own_all_rs_uncut_L48 C@0.0002"
+    ],
+    "i": 0,
+    "take": "num",
+    "scale": 100,
+    "abs": true,
+    "agg": "min",
+    "fmt": "{:.0f}"
+  },
+  "L228.11": {
+    "slot": "rc2",
+    "src": "full",
+    "entries": [
+      "20.delta_full.joint.own_all_rs_uncut_L48 C@0.0005",
+      "20.delta_full.joint.own_all_rs_uncut_L48 C@0.0002"
+    ],
+    "i": 0,
+    "take": "num",
+    "scale": 100,
+    "abs": true,
+    "agg": "max",
+    "fmt": "{:.0f}"
+  },
+  "L228.12": {
+    "slot": "rc2",
+    "entries": [
+      "20.delta_full.joint.sol_a_uncut C@0.0002",
+      "20.delta_full.joint.sol_a_uncut C@0.0005",
+      "20.delta_full.joint.FIBS|uncut C@0.0002",
+      "20.delta_full.joint.FIBS|uncut C@0.0005",
+      "20.delta_full.joint.harmfulness|uncut C@0.0002",
+      "20.delta_full.joint.harmfulness|uncut C@0.0005",
+      "20.delta_full.joint.refusal|uncut C@0.0002",
+      "20.delta_full.joint.refusal|uncut C@0.0005",
+      "20.delta_full.joint.high-stakes|uncut C@0.0002",
+      "20.delta_full.joint.high-stakes|uncut C@0.0005"
+    ],
+    "i": 0,
+    "take": "num",
+    "abs": true,
+    "agg": "le_bound",
+    "bound": 3,
+    "note": "within 3 points: every |simulated minus real| at 0.02% and 0.05% for the other five probes is at most 3.0 (inclusive)"
+  },
+  "L50.2": {
+    "fn": "plant",
+    "what": "signed_smallest"
+  },
+  "L236.1": {
+    "fn": "plant",
+    "what": "signed_smallest"
+  },
+  "L236.2": {
+    "fn": "plant",
+    "what": "single_all_smallest"
+  },
+  "L236.3": {
+    "fn": "plant",
+    "what": "single_notall_min"
+  },
+  "L236.4": {
+    "fn": "plant",
+    "what": "single_notall_max"
+  },
+  "L259.1": {
+    "fn": "plant",
+    "what": "gap_smallest"
+  },
+  "L259.2": {
+    "fn": "plant",
+    "what": "gap_missed_at_1"
+  },
+  "L246.w1": {
+    "fn": "t6",
+    "k": 3,
+    "col": "signed"
+  },
+  "L246.w2": {
+    "fn": "t6",
+    "k": 3,
+    "col": "gap"
+  },
+  "L246.w3": {
+    "fn": "t6",
+    "k": 3,
+    "col": "falls"
+  },
+  "L246.w4": {
+    "fn": "t6",
+    "k": 3,
+    "col": "rises"
+  },
+  "L247.w1": {
+    "fn": "t6",
+    "k": 5,
+    "col": "signed"
+  },
+  "L247.w2": {
+    "fn": "t6",
+    "k": 5,
+    "col": "gap"
+  },
+  "L247.w3": {
+    "fn": "t6",
+    "k": 5,
+    "col": "falls"
+  },
+  "L247.w4": {
+    "fn": "t6",
+    "k": 5,
+    "col": "rises"
+  },
+  "L248.w1": {
+    "fn": "t6",
+    "k": 8,
+    "col": "signed"
+  },
+  "L248.w2": {
+    "fn": "t6",
+    "k": 8,
+    "col": "gap"
+  },
+  "L248.w3": {
+    "fn": "t6",
+    "k": 8,
+    "col": "falls"
+  },
+  "L248.w4": {
+    "fn": "t6",
+    "k": 8,
+    "col": "rises"
+  },
+  "L249.w1": {
+    "fn": "t6",
+    "k": 12,
+    "col": "signed"
+  },
+  "L249.w2": {
+    "fn": "t6",
+    "k": 12,
+    "col": "gap"
+  },
+  "L249.w3": {
+    "fn": "t6",
+    "k": 12,
+    "col": "falls"
+  },
+  "L249.w4": {
+    "fn": "t6",
+    "k": 12,
+    "col": "rises"
+  },
+  "L228.w1": {
+    "slot": "rc2",
+    "entry": "20.distinct_runs_above_tau_sim.own_all_rs_uncut_L48 C@0.0002",
+    "i": 0,
+    "words": {
+      "1": "a single run",
+      "2": "two runs",
+      "3": "three runs",
+      "4": "four runs",
+      "5": "five runs"
+    }
+  },
+  "L228.w2": {
+    "slot": "rc2",
+    "entry": "20.distinct_runs_above_tau_sim.own_all_rs_uncut_L48 C@0.0005",
+    "i": 0,
+    "words": {
+      "1": "a single run",
+      "2": "two runs",
+      "3": "three runs",
+      "4": "four runs",
+      "5": "five runs"
+    }
+  },
+  "L383.w1": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "eq": "registered exclusion (malformed call)",
+    "words": {
+      "1": "one",
+      "2": "two",
+      "3": "three"
+    }
+  },
+  "L383.w2": {
+    "rec": "exclusions",
+    "path": [
+      "rows"
+    ],
+    "op": "count",
+    "field": "class",
+    "prefix": "time-limit end",
+    "words": {
+      "1": "one",
+      "2": "two",
+      "3": "three"
+    }
+  },
+  "L165.w1": {
+    "rec": "tables",
+    "path": [
+      "false_alarms",
+      "draws"
+    ],
+    "op": "count",
+    "field": "pool",
+    "eq": "pooled H_sim",
+    "words": {
+      "1": "one",
+      "2": "two",
+      "3": "three",
+      "4": "four",
+      "5": "five",
+      "6": "six"
+    }
+  },
+  "L165.w2": {
+    "rec": "tables",
+    "path": [
+      "false_alarms",
+      "draws"
+    ],
+    "op": "count",
+    "field": "pool",
+    "eq": "pooled H_B",
+    "words": {
+      "1": "one",
+      "2": "two",
+      "3": "three",
+      "4": "four",
+      "5": "five",
+      "6": "six"
+    }
+  },
+  "L169.w1": {
+    "rec": "tables",
+    "path": [
+      "false_alarms",
+      "draws"
+    ],
+    "op": "count",
+    "field": "pool",
+    "eq": "pooled H_sim",
+    "words": {
+      "1": "One",
+      "2": "Two",
+      "3": "Three",
+      "4": "Four",
+      "5": "Five",
+      "6": "Six"
+    }
+  },
+  "L169.w2": {
+    "rec": "tables",
+    "path": [
+      "false_alarms",
+      "draws"
+    ],
+    "op": "count",
+    "field": "pool",
+    "eq": "pooled H_B",
+    "words": {
+      "1": "one",
+      "2": "two",
+      "3": "three",
+      "4": "four",
+      "5": "five",
+      "6": "six"
+    }
+  },
+  "L184.w1": {
+    "fn": "t4_nothing_to_score",
+    "words": {
+      "1": "One",
+      "2": "Two",
+      "3": "Three",
+      "4": "Four"
+    }
+  },
+  "L149.w1": {
+    "fn": "one_in_n",
+    "words": {
+      "6": "one in six",
+      "7": "one in seven",
+      "8": "one in eight"
+    }
+  },
+  "L157.w1": {
+    "fn": "per_main",
+    "pool": "B",
+    "words": {
+      "1": "one",
+      "2": "two",
+      "3": "three"
+    }
+  },
+  "L157.w2": {
+    "fn": "per_main",
+    "pool": "S",
+    "words": {
+      "1": "one",
+      "2": "two",
+      "3": "three"
+    }
+  }
+}

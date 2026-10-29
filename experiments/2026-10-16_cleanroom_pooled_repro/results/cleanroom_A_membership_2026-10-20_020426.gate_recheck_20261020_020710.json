@@ -1,0 +1,12 @@
+{
+  "n_labels": 12,
+  "labels_pass": 12,
+  "failing": [],
+  "n_c_labels": 6,
+  "c_units_ok": true,
+  "pilot_ok": true,
+  "fixed_ids_ok": true,
+  "cohort_ok": true,
+  "env_ok": true,
+  "PASS": true
+}

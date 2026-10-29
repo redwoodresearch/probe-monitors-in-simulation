@@ -1,0 +1,21 @@
+# Every layer of Llama-3.3-70B-Instruct, both readouts, Apollo's recipe. Same model settings as the Llama check's port.
+run: 2026-10-06_apollo-sweep_llama-3.3-70b
+model: meta-llama/Llama-3.3-70B-Instruct
+tokenizer: meta-llama/Meta-Llama-3.1-70B-Instruct   # as in Apollo's models.py
+weights: llama-cache         # Modal Volume probe-shift_aswin-surya_sub-apollo_llama-cache, mounted read only
+dtype: float16               # as Apollo loads Llama
+n_gpus: 2
+chat_template: {date_string: 26 Jul 2024}           # the Llama 3.1 template's default, which Apollo's prompts carry
+readouts: [block_output, apollo]
+layers: all                  # 0..79; Apollo's probe is the apollo readout at layer 22
+eval_sets: [roleplaying_llama-70b-3.3, roleplaying_qwen3-32b]
+train_data: repe_honesty__plain
+detect: statement minus its last five words; statements of five words or fewer give no tokens (31 of 306)
+reg_coeff: 10
+max_iter: 2000
+val_fraction: 0.2
+split_seed: 0
+aggregation: mean of per-token scores over the detected tokens
+fit_workers: 8
+blas_threads_per_fit: 2
+pilot: {pairs: 40, eval_every: 12}

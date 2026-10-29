@@ -1,0 +1,12 @@
+# Qwen3.5-27B reader smoke test (2026-10-06, side check from James's meeting). Same 20 transcripts as
+# experiments/2026-10-05_activation_smoke_test (10 cells x real attack epoch 1 / simulated attack), read whole:
+# the real slack_clone one is ~79k tokens (79,348 with the Qwen3 tokenizer), skipped by the 32k cut on 2026-10-05.
+run: 2026-10-06_la_reader-smoke_qwen3.5-27b
+model: Qwen/Qwen3.5-27B
+load: AutoModelForCausalLM, which maps qwen3_5 to Qwen3_5ForCausalLM (text only; vision tower and MTP head not loaded)
+dtype: bfloat16
+attn_implementation: sdpa                # the 16 full-attention layers; the 48 Gated DeltaNet layers use fla kernels
+chat_template: {enable_thinking: false}
+layers: [8, 16, 24, 32, 40, 48, 56, 63]  # 0-indexed decoder layers of 64, residual stream after each (as Qwen3-32B)
+max_tokens: null                         # no cut: the point is memory and speed on the long transcript
+cells_from: experiments/2026-10-05_activation_smoke_test/config/smoke.yaml

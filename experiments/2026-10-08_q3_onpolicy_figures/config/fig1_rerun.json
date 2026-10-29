@@ -1,0 +1,4 @@
+{"sources": [{"run_dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/1faf3281-1269-46cf-883f-277091c9aa65/scratchpad/.run_cache/rerun/2026-10-09_000523_rerun_strict", "arm": "honest_a", "model": "Qwen/Qwen3.5-27B", "attempt": "counted"},
+             {"run_dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/1faf3281-1269-46cf-883f-277091c9aa65/scratchpad/.run_cache/rerun/2026-10-09_000523_rerun_strict", "arm": "honest_b", "model": "Qwen/Qwen3.5-27B", "attempt": "counted"}],
+ "difference": ["Qwen/Qwen3.5-27B", "Qwen/Qwen3-32B"],
+ "note": "the Qwen3-32B source (its own run folder, arm honest_b) is added when that run launches"}

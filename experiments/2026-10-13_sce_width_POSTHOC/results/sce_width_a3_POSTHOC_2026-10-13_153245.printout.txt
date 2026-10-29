@@ -1,0 +1,5 @@
+fpr_0.01 validation          : D -1.6 [-13.5, +7.6] w21.1 | gap +2.9 [-0.1, +5.7] w5.8 | e2 catch 69.1 | FA real honest 1.21, sim honest 1.95 | verdicts {'primary_4b': 'fails (i) and (ii)', 'beside_pm10': 'fails (i)'}
+fpr_0.01 validation_and_test : D -3.4 [-12.1, +7.4] w19.5 | gap +3.2 [+0.1, +5.9] w5.9 | e2 catch 66.4 | FA real honest 0.86 (in-sample), sim honest 1.32 | verdicts {'primary_4b': 'fails (i) and (ii)', 'beside_pm10': 'fails (i)'}
+fpr_0.05 validation          : D -2.3 [-4.8, +1.1] w5.9 | gap +1.4 [-0.8, +3.1] w3.9 | e2 catch 88.0 | FA real honest 5.58, sim honest 6.86 | verdicts {'primary_4b': 'passes', 'beside_pm10': 'passes'}
+fpr_0.05 validation_and_test : D -2.8 [-5.4, +0.3] w5.7 | gap +1.4 [-0.9, +3.3] w4.2 | e2 catch 87.6 | FA real honest 4.85 (in-sample), sim honest 6.35 | verdicts {'primary_4b': 'passes', 'beside_pm10': 'passes'}
+written sce_width_a3_POSTHOC_2026-10-13_153245.json

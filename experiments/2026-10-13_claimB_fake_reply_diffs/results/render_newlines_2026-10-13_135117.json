@@ -1,0 +1,906 @@
+{
+ "label": "POST HOC; synthetic fixtures only",
+ "rule": "RULE.md Amendment 1 @ 266ecf07, item 2",
+ "git": "83789d41e9c8a7ac7c237ef912f3c25a1c62b6b2",
+ "readers": {
+  "Qwen3-32B": [
+   "Qwen/Qwen3-32B",
+   "9216db5781bf21249d130ec9da846c4624c16137",
+   "qwen"
+  ],
+  "Qwen3.5-27B": [
+   "Qwen/Qwen3.5-27B",
+   "fc05daec18b0a78c049392ed2e771dde82bdf654",
+   "qwen"
+  ],
+  "Olmo-3.1-32B": [
+   "allenai/Olmo-3.1-32B-Instruct",
+   "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+   "r2"
+  ],
+  "Llama-3.3-70B": [
+   "meta-llama/Llama-3.3-70B-Instruct",
+   "6f6073b423013f6a7d4d9f39144961bfbfbc386b",
+   "r2j"
+  ],
+  "Seed-OSS-36B": [
+   "ByteDance-Seed/Seed-OSS-36B-Instruct",
+   "497f1dca95ebdec98e41d517b9f060ee753c902f",
+   "r2s"
+  ]
+ },
+ "newlines": {
+  "Qwen3-32B|shell|0->1": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    74,
+    74
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    19,
+    19
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ],
+    [
+     "\u010a\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ]
+   ]
+  },
+  "Qwen3-32B|shell|1->2": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    74,
+    74
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    19,
+    19
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\u010a\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ],
+    [
+     "\u010a\u010a\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ]
+   ]
+  },
+  "Qwen3-32B|view|0->1": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    79,
+    79
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    15,
+    15
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ],
+    [
+     "\u010a\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ]
+   ]
+  },
+  "Qwen3-32B|view|1->2": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    79,
+    79
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    15,
+    15
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\u010a\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ],
+    [
+     "\u010a\u010a\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ]
+   ]
+  },
+  "Qwen3.5-27B|shell|0->1": {
+   "reaches": false,
+   "readout_unaffected": true,
+   "readout_index": [
+    85,
+    85
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    19,
+    19
+   ],
+   "differing_tokens_after_readout": 0,
+   "next_tokens": [
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ],
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ]
+   ]
+  },
+  "Qwen3.5-27B|shell|1->2": {
+   "reaches": false,
+   "readout_unaffected": true,
+   "readout_index": [
+    85,
+    85
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    19,
+    19
+   ],
+   "differing_tokens_after_readout": 0,
+   "next_tokens": [
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ],
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ]
+   ]
+  },
+  "Qwen3.5-27B|view|0->1": {
+   "reaches": false,
+   "readout_unaffected": true,
+   "readout_index": [
+    95,
+    95
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    15,
+    15
+   ],
+   "differing_tokens_after_readout": 0,
+   "next_tokens": [
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ],
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ]
+   ]
+  },
+  "Qwen3.5-27B|view|1->2": {
+   "reaches": false,
+   "readout_unaffected": true,
+   "readout_index": [
+    95,
+    95
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    15,
+    15
+   ],
+   "differing_tokens_after_readout": 0,
+   "next_tokens": [
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ],
+    [
+     "\u010a",
+     "</tool_response>",
+     "<|im_end|>"
+    ]
+   ]
+  },
+  "Olmo-3.1-32B|shell|0->1": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    115,
+    115
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    14,
+    15
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "<|im_end|>",
+     "\u010a",
+     "<|im_start|>"
+    ],
+    [
+     "\u010a",
+     "<|im_end|>",
+     "\u010a"
+    ]
+   ]
+  },
+  "Olmo-3.1-32B|shell|1->2": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    115,
+    115
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    15,
+    15
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\u010a",
+     "<|im_end|>",
+     "\u010a"
+    ],
+    [
+     "\u010a\u010a",
+     "<|im_end|>",
+     "\u010a"
+    ]
+   ]
+  },
+  "Olmo-3.1-32B|view|0->1": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    122,
+    122
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    10,
+    11
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "<|im_end|>",
+     "\u010a",
+     "<|im_start|>"
+    ],
+    [
+     "\u010a",
+     "<|im_end|>",
+     "\u010a"
+    ]
+   ]
+  },
+  "Olmo-3.1-32B|view|1->2": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    122,
+    122
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    11,
+    11
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\u010a",
+     "<|im_end|>",
+     "\u010a"
+    ],
+    [
+     "\u010a\u010a",
+     "<|im_end|>",
+     "\u010a"
+    ]
+   ]
+  },
+  "Llama-3.3-70B|shell|0->1": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    94,
+    94
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    13,
+    14
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\"",
+     "<|eot_id|>",
+     "<|start_header_id|>"
+    ],
+    [
+     "\\n",
+     "\"",
+     "<|eot_id|>"
+    ]
+   ]
+  },
+  "Llama-3.3-70B|shell|1->2": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    94,
+    94
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    14,
+    15
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\\n",
+     "\"",
+     "<|eot_id|>"
+    ],
+    [
+     "\\n",
+     "\\n",
+     "\""
+    ]
+   ]
+  },
+  "Llama-3.3-70B|view|0->1": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    106,
+    106
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    9,
+    10
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\"",
+     "<|eot_id|>",
+     "<|start_header_id|>"
+    ],
+    [
+     "\\n",
+     "\"",
+     "<|eot_id|>"
+    ]
+   ]
+  },
+  "Llama-3.3-70B|view|1->2": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    106,
+    106
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    10,
+    11
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\\n",
+     "\"",
+     "<|eot_id|>"
+    ],
+    [
+     "\\n",
+     "\\n",
+     "\""
+    ]
+   ]
+  },
+  "Seed-OSS-36B|shell|0->1": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    79,
+    79
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    12,
+    13
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "<seed:eos>",
+     "<seed:bos>",
+     "ass"
+    ],
+    [
+     "\u010a",
+     "<seed:eos>",
+     "<seed:bos>"
+    ]
+   ]
+  },
+  "Seed-OSS-36B|shell|1->2": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    79,
+    79
+   ],
+   "readout_token": [
+    ".txt",
+    ".txt"
+   ],
+   "tokens_after_readout": [
+    13,
+    13
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\u010a",
+     "<seed:eos>",
+     "<seed:bos>"
+    ],
+    [
+     "\u010a\u010a",
+     "<seed:eos>",
+     "<seed:bos>"
+    ]
+   ]
+  },
+  "Seed-OSS-36B|view|0->1": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    90,
+    90
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    8,
+    9
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "<seed:eos>",
+     "<seed:bos>",
+     "ass"
+    ],
+    [
+     "\u010a",
+     "<seed:eos>",
+     "<seed:bos>"
+    ]
+   ]
+  },
+  "Seed-OSS-36B|view|1->2": {
+   "reaches": true,
+   "readout_unaffected": true,
+   "readout_index": [
+    90,
+    90
+   ],
+   "readout_token": [
+    "2",
+    "2"
+   ],
+   "tokens_after_readout": [
+    9,
+    9
+   ],
+   "differing_tokens_after_readout": 1,
+   "next_tokens": [
+    [
+     "\u010a",
+     "<seed:eos>",
+     "<seed:bos>"
+    ],
+    [
+     "\u010a\u010a",
+     "<seed:eos>",
+     "<seed:bos>"
+    ]
+   ]
+  }
+ },
+ "markers": {
+  "Qwen3-32B|level0": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "placeholders": {
+    "<time>": 0,
+    "<date>": 0,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  },
+  "Qwen3-32B|level1": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "placeholders": {
+    "<time>": 4,
+    "<date>": 3,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  },
+  "Qwen3.5-27B|level0": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "placeholders": {
+    "<time>": 0,
+    "<date>": 0,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  },
+  "Qwen3.5-27B|level1": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "placeholders": {
+    "<time>": 4,
+    "<date>": 3,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  },
+  "Olmo-3.1-32B|level0": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "placeholders": {
+    "<time>": 0,
+    "<date>": 0,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  },
+  "Olmo-3.1-32B|level1": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "placeholders": {
+    "<time>": 4,
+    "<date>": 3,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  },
+  "Llama-3.3-70B|level0": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "placeholders": {
+    "<time>": 0,
+    "<date>": 0,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  },
+  "Llama-3.3-70B|level1": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "placeholders": {
+    "<time>": 4,
+    "<date>": 3,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  },
+  "Seed-OSS-36B|level0": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "placeholders": {
+    "<time>": 0,
+    "<date>": 0,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  },
+  "Seed-OSS-36B|level1": {
+   "content_marker": true,
+   "error_message": true,
+   "error_type": false,
+   "stamps_verbatim": {
+    "date_cmd": false,
+    "iso": false,
+    "ls": false,
+    "http": false
+   },
+   "stamp_lines_masked_form": {
+    "date_cmd": true,
+    "iso": true,
+    "ls": true,
+    "http": true
+   },
+   "placeholders": {
+    "<time>": 4,
+    "<date>": 3,
+    "<epoch>": 0
+   },
+   "leftover_parts": {
+    "Thu": true,
+    "UTC": true,
+    "2026": true,
+    "18 Sep": true,
+    "GMT": true
+   }
+  }
+ }
+}

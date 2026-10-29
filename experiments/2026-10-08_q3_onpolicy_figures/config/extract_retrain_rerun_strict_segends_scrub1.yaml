@@ -1,0 +1,17 @@
+# The retrain's masked (scrub level 1) re-extraction of 2026-10-09_rerun_strict_segends_v1 (plan_attack_detector_retrain_2026-10-10.md,
+# #342, Amendment 1). Inputs: run_mask_stage.py on rerun_strict_segends_v2. The sha256s are filled in from that stage's output
+# before launch; run_extract_replay.py refuses to run until they match.
+run: 2026-10-09_rerun_strict_segends_v1_scrub1
+inputs: rerun_strict_segends_v2_scrub1
+inputs_sha256:
+  attack.jsonl: 21b80aaccf575ab5cd610e649926805473585d86d73be9c2833175ab51b00189
+  honest_a.jsonl: 874707802701875534a3b4536461c441486d995c913c75974c7e2ad41d389714
+  honest_b.jsonl: 472930ec764a6de985fa0b3327f7758e0508cd59c63f735e13a5d1d3e535859c
+  sim_attack@september.jsonl: af72f8336355e5c0b545deda30289aed3f69dec0d8b79a261ff519966524fb1c
+  sim_attack@today.jsonl: 8c927b341449566c14ae0aca63d75954af3def62013947dd5b90a2ec28672277
+  sim_honest@september.jsonl: 30b66899a3182561eae8402d8a91ba3c6762fe7a30415a7eedf91451e996708f
+  sim_honest@today.jsonl: 96ea4e28a2a2534b072f7f2500bb1f42c8d3afe14cc4fe943eef11f5c02c8b20
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 10
+pad_to: 4096

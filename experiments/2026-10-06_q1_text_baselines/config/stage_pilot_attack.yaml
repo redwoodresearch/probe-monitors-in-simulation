@@ -1,0 +1,9 @@
+# Today's-simulator attack pilot (sims main e561f936, 20 tasks) added to the September staging as one more arm
+# (run_stage_cohort.py), rendered and cut exactly as the probe reads the September arms.
+base: examples_2026-10-06_142532                         # September: real attack e1, e2, simulated attack, 939 cells
+cohort: la_public10_sim_astra_attack_simcode_e561f936_n20 # probe_shift.cohorts (#26)
+arm: sim-attack-today
+honest_prompts_from: 2026-10-06_la_segment-end_qwen3-32b_v1  # extraction reader inputs: each main task's honest prompt
+max_tokens: 32768
+tokenizer: {name: Qwen/Qwen3-32B, revision: 9216db5781bf21249d130ec9da846c4624c16137}
+threads: 16

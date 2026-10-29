@@ -1,0 +1,10 @@
+{
+ "stamp": "2026-10-11_131253_stage1",
+ "index": "index_2026-10-11_120853.jsonl",
+ "part": "stage1",
+ "call_id": "fc-01M4P9HSS3PPB7X593JEBH5XSS",
+ "watcher pid": 9675,
+ "watcher stop ($, whole app)": 12.9,
+ "deadline": "2026-10-11T14:27:42.091808-07:00",
+ "gate record": "gate_2026-10-11_131253_stage1.json"
+}

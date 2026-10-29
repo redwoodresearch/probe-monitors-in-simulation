@@ -1,0 +1,192 @@
+diff --git a/experiments/2026-10-15_fpr_sweep_507_prep/full_override.py b/experiments/2026-10-15_fpr_sweep_507_prep/full_override.py
+index bbcd68e35..fe546d78b 100644
+--- a/experiments/2026-10-15_fpr_sweep_507_prep/full_override.py
++++ b/experiments/2026-10-15_fpr_sweep_507_prep/full_override.py
+@@ -58,6 +58,18 @@ def out_label(job_label, retrain=None):
+ 
+ 
+ NOT_IN_BUILD = "not in the full-length build (09 RULE lead §1: headline probes, registered-scored-uncut and the four external probes only)"
++# 09 (10-16, pre-approved; applied only on 2e's relayed go, as INPUTS_FULL "withhold" {retrain: [sets]}): the appendix positive control's rows on a
++# set whose uncut scores are not pinned at freeze are withheld with this exact text; no other probe may be withheld this way
++WITHHOLD_OK = ("c_asis_uncut",)
++WITHHOLD_TEXT = "c_asis_uncut: withheld on {set} (uncut scores not pinned at freeze); addendum to follow"
++
++
++def withhold_problems(wh):
++    """INPUTS_FULL "withhold": {name: [sets]} with name in WITHHOLD_OK and sets a sorted, non-empty, duplicate-free subset of SETS."""
++    if not isinstance(wh, dict):
++        return ["withhold: not a mapping"]
++    return [f"withhold {k!r}: only {WITHHOLD_OK} may be withheld, on a sorted non-empty list of {SETS}" for k, v in wh.items()
++            if k not in WITHHOLD_OK or not isinstance(v, list) or not v or v != sorted(set(v)) or not set(v) <= set(SETS)]
+ 
+ 
+ # 09 (10-16, via 507-prep): in the full-length record the headline is the four-set pooled combo, one main once (pooled_all_origins); pooled_all is
+@@ -316,10 +328,13 @@ def addendum_jobs(jobs, pair, allowed, name):
+              | {"full_allowed": allowed, "full_as": out_label(lb, name)}, b) for lb, v, b in jobs if lb.rsplit(" ", 1)[0] == ADDENDUM_OF[name]]
+ 
+ 
+-def full_jobs(jobs, reg, retrains, allowed):
++def full_jobs(jobs, reg, retrains, allowed, withhold=None):
+     """The 32k job list -> the full-length one. reg = (cfg_u, cfg_old_u) for the registered-file labels; retrains {name: (cfg_u, cfg_old_u)}.
+     Every job keeps its variant keys (origin, merge, cohort, no_s4, ...) and takes the substituted blocks; a retrain job runs under its
+-    counterpart's label (its row rules) and is renamed by run_rows (full_as). Labels outside the scope are dropped."""
++    counterpart's label (its row rules) and is renamed by run_rows (full_as). Labels outside the scope are dropped. withhold {name: [sets]}:
++    that retrain's jobs on those origins carry full_withhold (the row returns WITHHOLD_TEXT before reading any file)."""
++    if withhold_problems(withhold or {}):
++        raise SystemExit(f"full_jobs: {withhold_problems(withhold)}")
+     def sub(v, pair):
+         c, co = pair
+         x = {k: c[k] for k in SUB_KEYS if k in c}
+@@ -334,5 +349,7 @@ def full_jobs(jobs, reg, retrains, allowed):
+             out.append((lb, sub(v, reg) | {"full_as": out_label(lb)}, b))
+         for name, pair in retrains.items():
+             if RETRAIN_OF[name] == base:
+-                out.append((lb, sub(v, pair) | {"full_as": out_label(lb, name)}, b))
++                org = v.get("origin", "S_new")
++                out.append((lb, sub(v, pair) | {"full_as": out_label(lb, name)}
++                            | ({"full_withhold": WITHHOLD_TEXT.format(set=org)} if org in (withhold or {}).get(name, ()) else {}), b))
+     return out
+diff --git a/experiments/2026-10-15_fpr_sweep_507_prep/inputs_full.py b/experiments/2026-10-15_fpr_sweep_507_prep/inputs_full.py
+index d169e0b30..f6c9b8c9d 100644
+--- a/experiments/2026-10-15_fpr_sweep_507_prep/inputs_full.py
++++ b/experiments/2026-10-15_fpr_sweep_507_prep/inputs_full.py
+@@ -46,13 +46,13 @@ PROVISIONAL_LABELS = [
+     "0093df634 1621aa0c9 9c904371e); run_peraction311 gate code 88733fb72 b5c5f9b6f 1621aa0c9 0093df634 cb7511c42 be66df23e; stamp_gates.py 7e649afff; "
+     "check_staged.py f475a1a30; inventory builders make_inventory_addendum c9f74aed4 7db048406 2abc53746 1a5a5a4a4 fd65c1d39, make_inventory_b_fix_v1 "
+     "cf1ecd53d, make_inventory_il_fix_v1 d86042930 a09b675f3, make_inventory_ha25f_v2 84a73959b, make_il_scope 649081545 49522cb0d 2704c8405, "
+-    "make_il_scope_v2/v3/v4 1d87eb219 992848516 d933d412e; records committed after 04:50: b0a78bbe5 17136e7c4 509f46222 e93f297ff b6a29b898.",
+-    "PROVISIONAL (full fork): full-length commits 3c8fc9fa3 d14ba40d9 92cded3d6 d6d9e5a33 a61b38248 38fae86e3 1fb8c4be1 f9911ae44 1f796116d were "
+-    "made while Codex was unavailable (0d 05:2x: provisional build only); per-commit Codex rounds 10-16 09:13 PDT, required fixes in the commit adding "
+-    "this text; relaxations in INPUTS_FULL.relaxations and in each record's meta.relaxations; CUT's ha25f lookup fix efd143756.",
++    "make_il_scope_v2/v3/v4 1d87eb219 992848516 d933d412e; CUT's ha25f lookup fix efd143756; records committed after 04:50: b0a78bbe5 17136e7c4 "
++    "509f46222 e93f297ff b6a29b898.",
+     "Codex unavailable at commit",
+-    "ep2 identity by metadata tag; world|cell join assert pending Codex",
+ ]
++# Dropped labels (0d's item (c), 10-16): the full fork's commits 3c8fc9fa3 d14ba40d9 92cded3d6 d6d9e5a33 a61b38248 38fae86e3 1fb8c4be1 f9911ae44
++# 1f796116d (results/codex/full_codex_<sha>.md, 1f796116d in full_codex_1fb8c4be1.md; fixes e90ea046d, rounds r2a / r2b / r3 clean) and "ep2 identity by
++# metadata tag; world|cell join assert pending Codex" (E12's 4bd9c7eea: results/codex/e12_codex_index.md @ 9b6d994fe, r9 = git diff 2385f562b 4bd9c7eea)
+ S4MAP = ("b68ab0a53", "experiments/2026-10-14_q3_overnight_chain/results/s4_source_map/s4_source_map_4r_2026-10-15.json")  # d9's S4 source map
+ S4_N = 52  # its staged outside-source-map (orphan) entries = inventory_b_v2's s4_orphans_out
+ # the probe files whose 32k S_old relaunch file exists (cut map: Sol a_tight / c_asis_tight R and C): their relaunch entries need inside_32k_equal
+@@ -137,6 +137,7 @@ def build(pins_path, status, test):
+     m["waitlist_pending"] = waitlist_pending(m, test)
+     m["paired_pool_exclusions"] = paired_exclusions(m)  # 09 item 26: listed by key; asserted again at verify
+     m["estimator"] = P["estimator"]
++    m["withhold"] = P.get("withhold", {})  # 09's pre-approved c_asis_uncut withhold path ({} unless 2e's go is relayed); the runner reads it
+     if not isinstance(P.get("provisional"), bool) or not isinstance(P.get("score_records"), list):  # Codex 1fb8c4be1 #3 / d6d9e5a33 #5: stated,
+         raise SystemExit('pins: "provisional" (true | false) and "score_records" (a list) must both be stated')  # never defaulted
+     m["provisional"] = P["provisional"]
+@@ -611,7 +612,7 @@ def verify(m, deep=False, want_relax=False):
+     pr = []
+     if m.get("schema") != SCHEMA:
+         return [f"schema {m.get('schema')!r}"]
+-    pr += schema_problems(m) + key_problems(m)
++    pr += schema_problems(m) + key_problems(m) + FO.withhold_problems(m.get("withhold", {}))
+     frozen = str(m.get("status", "")).startswith("FROZEN")
+     if frozen and (m.get("test") or m.get("pending")):
+         pr.append("FROZEN with test set or pending items")
+diff --git a/experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py b/experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py
+index 3bc9694d1..2961c8093 100644
+--- a/experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py
++++ b/experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py
+@@ -892,6 +892,8 @@ def _row(label: str, cfg: dict, blobs: dict) -> dict:
+             + (f" [{cfg['sp_block']}]" if SPO and cfg.get("sp_block") else "") + (" (all-origins draws)" if MG else ""))
+     if cfg.get("cohort") and orig == "union":
+         raise SystemExit("--cohort-list: the shared pool (union) is not wired")
++    if cfg.get("full_withhold"):  # 09's pre-approved withhold path (full_override.full_jobs): nothing is read for this retrain on this set
++        return {"label": label, "origin": vtag, "withheld": cfg["full_withhold"]}
+     if SPO and p.get("kind") == "dt":
+         return {"label": label, "origin": vtag, "withheld": "WITHHELD (DT's S_paper493 reader is not wired in this build)"}
+     if SPO and p["new"] in cfg["sp493"]["families_pending"] and not cfg.get("keys_only"):  # a scorer missed some S_paper493 folder: nothing read
+@@ -2882,6 +2884,17 @@ def finish_rows(mode, outs, meta, IN, cfg, label):
+                     if isinstance(r_, dict) and o_.startswith("S_paper493") and "admitted sim-honest runs without rows" in str(r_.get("withheld", ""))]
+             if sph_:
+                 raise SystemExit(f"full length: headline S_paper493 rows withheld for admitted sim-honest runs without rows: {sph_[:6]}")
++            wh_ = meta["full_length"].get("withheld") or {}  # 09's pre-approved withhold path: (1) only c_asis_uncut rows carry its text, on its sets
++            wr_ = sorted((lb_.rsplit(" ", 1)[0], o_) for lb_, d_ in rows_.items() for o_, r_ in d_.items()
++                         if isinstance(r_, dict) and str(r_.get("withheld", "")).startswith(FO.WITHHOLD_TEXT.split("{set}")[0]))
++            if any(n_ not in wh_ or o_.split(" ")[0] not in wh_[n_] for n_, o_ in wr_):
++                raise SystemExit(f"full length: rows withheld by the withhold path outside INPUTS_FULL's withhold list: {wr_[:6]}")
++            cov_ = {lb_: sorted(o_ for o_, r_ in d_.items() if isinstance(r_, dict) and "withheld" not in r_ and "unavailable_rule" not in r_)
++                    for lb_, d_ in rows_.items() if lb_.rsplit(" ", 1)[0] in FO.HEADLINE_SIX}
++            if wh_ and len({tuple(v_) for v_ in cov_.values()}) != 1:  # (2) the six lead probes' scored origins are one set (unchanged by the withhold)
++                raise SystemExit(f"full length: the six lead probes' scored origins differ under the withhold path: { {k_: len(v_) for k_, v_ in cov_.items()} }")
++            meta["full_length"]["lead_coverage"] = {"scored_origins": sorted({o_ for v_ in cov_.values() for o_ in v_}), "labels": len(cov_),
++                                                    "equal_across_labels": len({tuple(v_) for v_ in cov_.values()}) == 1, "withheld_rows": wr_}
+         if meta.get("full_length"):  # 09 (both builds): fold -1 cells are KEPT and scored; the actual drops are 0 by key for these rows, else STOP
+             bad_ = [f"{lb_} | {o_}: {r_['fold_minus1_dropped']['cohort_cells']['n']}" for lb_, d_ in rows_.items() if lb_.rsplit(" ", 1)[0] in FO.NO_FOLD_DROPS
+                     for o_, r_ in d_.items() if isinstance(r_, dict) and (r_.get("fold_minus1_dropped") or {}).get("cohort_cells", {}).get("n", 0)]
+@@ -4047,6 +4060,9 @@ def main(readouts: str = "C", roots: str = "s1", repro: bool = False, pooled: bo
+         fpr_ = IFU.verify(FIN)
+         if fpr_:
+             raise SystemExit(f"INPUTS_FULL fails verification ({len(fpr_)}): {fpr_[:6]}")
++        WH_ = FIN.get("withhold") or {}  # 09's pre-approved c_asis_uncut withhold path (INPUTS_FULL "withhold"; empty unless 2e's go was relayed)
++        if FO.withhold_problems(WH_):
++            raise SystemExit(f"INPUTS_FULL withhold: {FO.withhold_problems(WH_)}")
+         if FIN["base"].get("sha256") != inputs.rsplit("@", 1)[1]:
+             raise SystemExit("INPUTS_FULL's base is not the --inputs file")
+         if not dryrun and not ((FIN["status"].startswith("FROZEN") and not FIN["test"]) or (test and FIN["test"])):
+@@ -4175,7 +4191,8 @@ def main(readouts: str = "C", roots: str = "s1", repro: bool = False, pooled: bo
+                 continue
+             lbs_ = [f"{base_} {r}" for r in "CR"]
+             alias_ = {next(q for q in cfg["probes"] if q["label"] == f"{base_} {r}")["new"]: f_["files"][r] for r in "CR"}
+-            cr_, cor_, ap_, al_ = FO.apply_full(cfg, cfg_old, ovs_, lbs_, roles_, alias=alias_, skip=skip_)
++            cr_, cor_, ap_, al_ = FO.apply_full(cfg, cfg_old, ovs_, lbs_, roles_, alias=alias_, skip=skip_ + list(WH_.get(nm_, [])))  # withheld sets:
++            # their rows return FO.WITHHOLD_TEXT before reading any file (full_jobs' full_withhold), so their cut entries are never read
+             rts_[nm_] = (cr_, cor_)
+             applied_ += [dict(x, retrain=nm_) for x in ap_]
+             allowed_ = sorted(set(allowed_) | set(al_))
+@@ -4216,7 +4233,7 @@ def main(readouts: str = "C", roots: str = "s1", repro: bool = False, pooled: bo
+             if not coh_:
+                 raise SystemExit("--full-stage-a: the record carries no cohort_cell_keys")
+             ADD["stage_a_cohort_sha256"] = {o_: C.sha_b(json.dumps(sorted(v_)).encode()) for o_, v_ in coh_.items()}
+-        FULL = {"reg": (c_u, co_u), "rt": rts_, "allowed": allowed_, "completion": compl_, "add": ADD,
++        FULL = {"reg": (c_u, co_u), "rt": rts_, "allowed": allowed_, "completion": compl_, "add": ADD, "withhold": WH_,
+                 "meta": {"inputs_full": {"path": fp_, "sha256": fh_, "status": FIN["status"], "test": FIN["test"]}, "rules": FIN["rules"],
+                          "scope": FIN["scope"], "lead_readout": "C", "estimator": {"used": estimator, "A": FIN["estimator"]["A"], "B": FIN["estimator"].get("B"),
+                                                                                     "rule": "09 RULE @ 3aaf425ef (width-only adopt rule)"},
+@@ -4339,7 +4356,8 @@ def main(readouts: str = "C", roots: str = "s1", repro: bool = False, pooled: bo
+         if cohort_list:
+             plan["cohort_list"] = {"ref": CL["ref"], "headline_cells": {o: len(CL[o]) for o in ("S_old", "S_new", "S_newmains")}}
+         if FULL:  # full-length: the substitution ran; the job list it would send (labels and variants only)
+-            jl_ = FO.full_jobs([(lb, v_, None) for lb in labels for v_ in ({"origin": "S_old", "simh_old": {}}, {})], FULL["reg"], FULL["rt"], FULL["allowed"])
++            jl_ = FO.full_jobs([(lb, v_, None) for lb in labels for v_ in ({"origin": "S_old", "simh_old": {}}, {})], FULL["reg"], FULL["rt"], FULL["allowed"],
++                               withhold=FULL["withhold"])
+             plan["full_length"] = FULL["meta"] | {"jobs_per_variant": len(jl_) // 2, "labels_out": sorted({v_.get("full_as", lb) for lb, v_, _ in jl_})}
+         if honest_b_relaunch:
+             plan["honest_b_relaunch"] = meta["honest_b_relaunch"] | {"members_loaded": len(cfg_old["honest_b_relaunch"]["members"]),
+@@ -4431,13 +4449,14 @@ def main(readouts: str = "C", roots: str = "s1", repro: bool = False, pooled: bo
+                 meta["own_all_loo"] = meta["own_all_loo"] | {"labels": [], "full_length": "own_all_LOO rows are not in the full-length build"}
+             n32_ = len(jobs)
+             jobs = (FO.addendum_jobs(jobs, FULL["add"]["pair"], FULL["add"]["allowed"], FULL["add"]["name"]) if FULL.get("add")
+-                    else FO.full_jobs(jobs, FULL["reg"], FULL["rt"], FULL["allowed"]))
++                    else FO.full_jobs(jobs, FULL["reg"], FULL["rt"], FULL["allowed"], withhold=FULL["withhold"]))
+             if FULL.get("add"):
+                 meta["addendum"] = {k_: v_ for k_, v_ in FULL["add"].items() if k_ not in ("pair", "allowed")} | {
+                     "label": FO.ADDENDUM[FULL["add"]["name"]], "gate": "primary-arm cohort keys equal by key to the frozen Stage A record's (per origin)"}
+             FULL["meta"]["labels_out_in_job"] = sorted({v_["full_as"] for _, v_, _ in jobs})
+             meta["full_length"] = FULL["meta"] | {"jobs": len(jobs), "jobs_32k_list": n32_, "not_in_build": FO.NOT_IN_BUILD,
+-                                                  "labels": sorted({v_.get("full_as", lb) for lb, v_, _ in jobs})}
++                                                  "labels": sorted({v_.get("full_as", lb) for lb, v_, _ in jobs}),
++                                                  "withheld": FULL["withhold"]}  # (3) the withheld sets by key ({} unless 2e's go was relayed)
+             meta["lead_readout"] = "C"
+             meta["roles"] = meta["roles"] | {f"alltasks.{k_}": v_ for k_, v_ in FO.FULL_COMBO_ROLE.items()}  # 09 (10-16): one lead, pooled_all_origins
+             FO.lead_check(meta["roles"])
+diff --git a/experiments/2026-10-15_fpr_sweep_507_prep/test_inputs_full_neg.py b/experiments/2026-10-15_fpr_sweep_507_prep/test_inputs_full_neg.py
+index a2a6d19f9..db24fc8cb 100644
+--- a/experiments/2026-10-15_fpr_sweep_507_prep/test_inputs_full_neg.py
++++ b/experiments/2026-10-15_fpr_sweep_507_prep/test_inputs_full_neg.py
+@@ -60,4 +60,12 @@ for nm_, roles_ in (("a config tagging pooled_all as the lead STOPs", {"pooled_a
+         res.append(case(nm_, True))
+ res.append(case("pooled_all_origins as the one lead passes (lead-2 is not a lead)",
+                 FO.lead_check({"pooled_all_origins": "lead: four sets", "pooled_455": "lead-2", "pooled_all": FO.FULL_COMBO_ROLE["pooled_all"]}) == "pooled_all_origins"))
++res.append(case("the withhold path takes only c_asis_uncut on a non-empty list of known sets",
++                FO.withhold_problems({"c_asis_uncut": ["S_new"]}) == [] and FO.withhold_problems({"sol_a_uncut": ["S_new"]}) != []
++                and FO.withhold_problems({"c_asis_uncut": []}) != [] and FO.withhold_problems({"c_asis_uncut": ["S_typo"]}) != []))
++jw_ = FO.full_jobs([("c_asis C", {"origin": "S_new"}, None), ("c_asis C", {"origin": "S_old"}, None), ("Sol (a) C", {"origin": "S_new"}, None)],
++                   ({}, {}), {"c_asis_uncut": ({}, {}), "sol_a_uncut": ({}, {})}, [], withhold={"c_asis_uncut": ["S_new"]})
++res.append(case("full_jobs marks only c_asis_uncut's S_new job withheld, with the exact text",
++                [(v_["full_as"], v_.get("full_withhold")) for _, v_, _ in jw_ if v_.get("full_withhold")]
++                == [("c_asis_uncut C", "c_asis_uncut: withheld on S_new (uncut scores not pinned at freeze); addendum to follow")]))
+ raise SystemExit(0 if all(res) else 1)

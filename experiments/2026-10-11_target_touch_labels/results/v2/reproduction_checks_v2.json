@@ -1,0 +1,12 @@
+{
+  "frozen_v1_files_verified": 9,
+  "same_blind_inputs_and_order": true,
+  "same_source_archives": true,
+  "v1_audit_selection_reproduced": true,
+  "v1_audit_counts_reproduced": true,
+  "credential_extraction_and_terminal_checks_reproduced": true,
+  "changed_calls": 885,
+  "all_changed_calls_have_endpoint_targets": true,
+  "private_blind_input_sha256": "90badcd02145c2130883471e3cbef22bcb000e70ed61754b5e4ea05ff13ca390",
+  "producer_sha256": "03f0ab06efc22faaae76d9a09d316120d3ed12175d37ffa130b35b70530346db"
+}

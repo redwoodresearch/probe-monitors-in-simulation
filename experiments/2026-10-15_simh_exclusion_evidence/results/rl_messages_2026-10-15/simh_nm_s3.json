@@ -1,0 +1,24 @@
+{
+ "run_dir": "/home/aswin/phase2/runs/2026-10-15_simh_nm_s3",
+ "runs": [
+  {
+   "run": "sim_honest@september/nm103_file_indexing",
+   "n_rate_limit_lines": 1,
+   "distinct_parsed": [
+    {
+     "parsed": true,
+     "limit_kind": "tokens_per_minute",
+     "model": "gpt-6-astra",
+     "limit": 40000000,
+     "used": 39943860,
+     "requested": 165774,
+     "contains_org_id": true,
+     "contains_project_id": false,
+     "http_status": 429,
+     "type_field": "tokens",
+     "code_field": "rate_limit_exceeded"
+    }
+   ]
+  }
+ ]
+}

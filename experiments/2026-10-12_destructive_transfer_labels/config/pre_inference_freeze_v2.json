@@ -1,0 +1,23 @@
+{
+  "files": {
+    "experiments/2026-10-12_destructive_transfer_labels/run_judges.py": "5e0d25a1b36e677395ffe22b0dc3f2867e032f3834d079cb151d05ca90b03fc3",
+    "experiments/2026-10-12_destructive_transfer_labels/README.md": "1facd7385a08806dcf8517a5dbef8397c36ad5c8c47fe45cd24933802061d91e",
+    "experiments/2026-10-12_destructive_transfer_labels/analyze_prepare.py": "a35ec57f61256015ac8e21f6b2950f0d4e0a5421e524ef20b79d9fd66959a4d4",
+    "experiments/2026-10-12_destructive_transfer_labels/analyze_price.py": "7add5b8f5acaa72ee17f361d9623f7d7ad4ac1388bb732fd1f1a97b1d0ffef80",
+    "experiments/2026-10-12_destructive_transfer_labels/config/panel_approved_v1.json": "c0908bb9684c085213a31b90546c2ed89045493b35f8f240b33efcd0404e21f3",
+    "experiments/2026-10-12_destructive_transfer_labels/config/judge_prompt.txt": "da158313314532c9fe30d3fb4adbfae0bbbd12ff6899c93c94f5cc6a1581c373",
+    "experiments/2026-10-12_destructive_transfer_labels/config/panel_proposed.json": "d07500351d0fe42c798ff23f3152403fd52d5eef07a7e48b14aa45cf85bbba9b",
+    "experiments/2026-10-12_destructive_transfer_labels/results/price_estimate_v1.json": "3f536d3dab87871f1dcbdb60cdd097ceafaa21e3f604468ebcc5be07a7260475",
+    "experiments/2026-10-12_destructive_transfer_labels/results/preparation_verification_v1.json": "94a27539d56402c208f41f5349ff8d6cf0a5dfc860afe15f2136433ae7328738",
+    "src/probe_shift/dt_label_prepare.py": "09f3c859cf22c19ce3d352db519873cadcac368c5d29e45c4e45a63e82084bda",
+    "src/probe_shift/dt_label_price.py": "8b472cbbb79ca721b9858b6edcc6e2be610e4cdbc41b6423f6fe464f7d188846",
+    "src/probe_shift/dt_label_panel.py": "770dc4b3b886091127fba4efb1d8c91b23e2e53d0c45d1823616a6b70dd082f6",
+    "tests/test_dt_labels.py": "cdb6dbda25cdfb0e29bfa1303d350c1477e0031bbb03abf2bfb8dcf1f3fc3b26",
+    "experiments/2026-10-12_destructive_transfer_labels/results/blind_bridge_verification_v2.json": "c4e1af778fc24bf44125ebdd590cd288f046b995d6033b32bd694e5c049e3e06"
+  },
+  "base_git": "fc9ed0e90687fc4c437efd6d55bf3b0a7d7396e7",
+  "status": "pre_inference",
+  "raw_commands_in_git": false,
+  "budget_approved_usd": 1000,
+  "pilot_cap_usd": 15
+}

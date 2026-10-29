@@ -1,0 +1,298 @@
+{
+ "POST HOC": true,
+ "rule": "RULE.md",
+ "git": "4818f70dba4a7bb77dbc76436fa95bbe93a7eab0",
+ "stamp": "2026-10-14_153206",
+ "gates": {
+  "F8 templates == 14": true,
+  "F7 donors == 376": true,
+  "attack F1: 427 staged runs reproduced, the rest unchanged": true,
+  "attack F2: 427 staged runs reproduced, the rest unchanged": true,
+  "attack F3: 755 staged runs reproduced, the rest unchanged": true,
+  "attack F4: 817 staged runs reproduced, the rest unchanged": true,
+  "attack F5: 424 staged runs reproduced, the rest unchanged": true,
+  "attack F6: 55 staged runs reproduced, the rest unchanged": true,
+  "attack F7: 694 staged runs reproduced, the rest unchanged": true,
+  "attack F8: 236 staged runs reproduced, the rest unchanged": true,
+  "attack NL: 939 staged runs reproduced, the rest unchanged": true,
+  "attack C: 764 staged runs reproduced, the rest unchanged": true,
+  "attack full: 939 staged runs reproduced, the rest unchanged": true,
+  "attack F9: 36 staged runs reproduced, the rest unchanged": true,
+  "attack fullF9: 939 staged runs reproduced, the rest unchanged": true,
+  "honest NL: 437 staged runs reproduced, the rest unchanged": true,
+  "honest full: 437 staged runs reproduced, the rest unchanged": true,
+  "honest fullF9: 437 staged runs reproduced, the rest unchanged": true
+ },
+ "gates pass": true,
+ "templates": {
+  "as run": 14,
+  "e1 only": 9,
+  "only in the as-run set": [
+   "2685d8145c3a",
+   "620cf6700d19",
+   "dd45216c9bb2",
+   "f1c637b7f406",
+   "f4023a34d893"
+  ],
+  "only in the e1-only set": [],
+  "in both, rule differs": [],
+  "by template (sha256[:12])": {
+   "473cf823fb5c": {
+    "rule as run": "strip",
+    "rule e1 only": "strip",
+    "real e1 errored outputs": 31,
+    "real e1 + e2 errored outputs": 52
+   },
+   "971b36304f8d": {
+    "rule as run": "strip",
+    "rule e1 only": "strip",
+    "real e1 errored outputs": 231,
+    "real e1 + e2 errored outputs": 462
+   },
+   "c07ec6d5f5e5": {
+    "rule as run": "strip",
+    "rule e1 only": "strip",
+    "real e1 errored outputs": 112,
+    "real e1 + e2 errored outputs": 229
+   },
+   "7418132bec05": {
+    "rule as run": "strip",
+    "rule e1 only": "strip",
+    "real e1 errored outputs": 44,
+    "real e1 + e2 errored outputs": 81
+   },
+   "2685d8145c3a": {
+    "rule as run": "strip",
+    "rule e1 only": null,
+    "real e1 errored outputs": 1,
+    "real e1 + e2 errored outputs": 5
+   },
+   "620cf6700d19": {
+    "rule as run": "strip",
+    "rule e1 only": null,
+    "real e1 errored outputs": 3,
+    "real e1 + e2 errored outputs": 7
+   },
+   "7f4031a7d1f5": {
+    "rule as run": "strip",
+    "rule e1 only": "strip",
+    "real e1 errored outputs": 20,
+    "real e1 + e2 errored outputs": 36
+   },
+   "dd45216c9bb2": {
+    "rule as run": "strip",
+    "rule e1 only": null,
+    "real e1 errored outputs": 3,
+    "real e1 + e2 errored outputs": 7
+   },
+   "0294b6e4d67c": {
+    "rule as run": "strip",
+    "rule e1 only": "strip",
+    "real e1 errored outputs": 7,
+    "real e1 + e2 errored outputs": 11
+   },
+   "f1c637b7f406": {
+    "rule as run": "strip",
+    "rule e1 only": null,
+    "real e1 errored outputs": 2,
+    "real e1 + e2 errored outputs": 5
+   },
+   "f4023a34d893": {
+    "rule as run": "strip",
+    "rule e1 only": null,
+    "real e1 errored outputs": 3,
+    "real e1 + e2 errored outputs": 5
+   },
+   "b047b06303b1": {
+    "rule as run": "strip",
+    "rule e1 only": "strip",
+    "real e1 errored outputs": 5,
+    "real e1 + e2 errored outputs": 14
+   },
+   "54ce3f365889": {
+    "rule as run": "strip",
+    "rule e1 only": "strip",
+    "real e1 errored outputs": 147,
+    "real e1 + e2 errored outputs": 301
+   },
+   "1a46733b5c74": {
+    "rule as run": "strip",
+    "rule e1 only": "strip",
+    "real e1 errored outputs": 29,
+    "real e1 + e2 errored outputs": 73
+   }
+  }
+ },
+ "per arm": {
+  "attack|C": {
+   "runs": 939,
+   "runs whose messages differ": 0,
+   "tool outputs whose content differs": 0,
+   "runs whose changed status flips": 0
+  },
+  "attack|F1": {
+   "runs": 939,
+   "runs whose messages differ": 0,
+   "tool outputs whose content differs": 0,
+   "runs whose changed status flips": 0
+  },
+  "attack|F2": {
+   "runs": 939,
+   "runs whose messages differ": 0,
+   "tool outputs whose content differs": 0,
+   "runs whose changed status flips": 0
+  },
+  "attack|F3": {
+   "runs": 939,
+   "runs whose messages differ": 0,
+   "tool outputs whose content differs": 0,
+   "runs whose changed status flips": 0
+  },
+  "attack|F4": {
+   "runs": 939,
+   "runs whose messages differ": 0,
+   "tool outputs whose content differs": 0,
+   "runs whose changed status flips": 0
+  },
+  "attack|F5": {
+   "runs": 939,
+   "runs whose messages differ": 0,
+   "tool outputs whose content differs": 0,
+   "runs whose changed status flips": 0
+  },
+  "attack|F6": {
+   "runs": 939,
+   "runs whose messages differ": 0,
+   "tool outputs whose content differs": 0,
+   "runs whose changed status flips": 0
+  },
+  "attack|F7": {
+   "runs": 939,
+   "runs whose messages differ": 0,
+   "tool outputs whose content differs": 0,
+   "runs whose changed status flips": 0
+  },
+  "attack|F8": {
+   "runs": 939,
+   "runs whose messages differ": 2,
+   "tool outputs whose content differs": 2,
+   "runs whose changed status flips": 1
+  },
+  "attack|F9": {
+   "runs": 939,
+   "runs whose messages differ": 0,
+   "tool outputs whose content differs": 0,
+   "runs whose changed status flips": 0
+  },
+  "attack|NL": {
+   "runs": 939,
+   "runs whose messages differ": 2,
+   "tool outputs whose content differs": 2,
+   "runs whose changed status flips": 0
+  },
+  "attack|full": {
+   "runs": 939,
+   "runs whose messages differ": 2,
+   "tool outputs whose content differs": 2,
+   "runs whose changed status flips": 0
+  },
+  "attack|fullF9": {
+   "runs": 939,
+   "runs whose messages differ": 2,
+   "tool outputs whose content differs": 2,
+   "runs whose changed status flips": 0
+  },
+  "honest|NL": {
+   "runs": 437,
+   "runs whose messages differ": 1,
+   "tool outputs whose content differs": 1,
+   "runs whose changed status flips": 0
+  },
+  "honest|full": {
+   "runs": 437,
+   "runs whose messages differ": 1,
+   "tool outputs whose content differs": 1,
+   "runs whose changed status flips": 0
+  },
+  "honest|fullF9": {
+   "runs": 437,
+   "runs whose messages differ": 1,
+   "tool outputs whose content differs": 1,
+   "runs whose changed status flips": 0
+  }
+ },
+ "total changes": {
+  "templates differ": 5,
+  "rules differ": 0,
+  "runs whose messages differ, all arms": 11,
+  "tool outputs whose content differs, all arms": 11
+ },
+ "any change": true,
+ "counts": {
+  "F7|donors": 376,
+  "F8|real errored outputs": 1396,
+  "F8|real errored outputs covered by templates": 1288,
+  "F8|real errored outputs whose call tool differs from the error file's": 0,
+  "F8|templates": 14,
+  "F8|templates with rule keep": 0,
+  "F8|templates with rule one": 0,
+  "F8|templates with rule strip": 14,
+  "gate|attack|C|runs": 939,
+  "gate|attack|C|staged runs reproduced": 764,
+  "gate|attack|C|unstaged runs": 175,
+  "gate|attack|C|unstaged runs unchanged (changed-only arm)": 175,
+  "gate|attack|F1|runs": 939,
+  "gate|attack|F1|staged runs reproduced": 427,
+  "gate|attack|F1|unstaged runs": 512,
+  "gate|attack|F1|unstaged runs unchanged (changed-only arm)": 512,
+  "gate|attack|F2|runs": 939,
+  "gate|attack|F2|staged runs reproduced": 427,
+  "gate|attack|F2|unstaged runs": 512,
+  "gate|attack|F2|unstaged runs unchanged (changed-only arm)": 512,
+  "gate|attack|F3|runs": 939,
+  "gate|attack|F3|staged runs reproduced": 755,
+  "gate|attack|F3|unstaged runs": 184,
+  "gate|attack|F3|unstaged runs unchanged (changed-only arm)": 184,
+  "gate|attack|F4|runs": 939,
+  "gate|attack|F4|staged runs reproduced": 817,
+  "gate|attack|F4|unstaged runs": 122,
+  "gate|attack|F4|unstaged runs unchanged (changed-only arm)": 122,
+  "gate|attack|F5|runs": 939,
+  "gate|attack|F5|staged runs reproduced": 424,
+  "gate|attack|F5|unstaged runs": 515,
+  "gate|attack|F5|unstaged runs unchanged (changed-only arm)": 515,
+  "gate|attack|F6|runs": 939,
+  "gate|attack|F6|staged runs reproduced": 55,
+  "gate|attack|F6|unstaged runs": 884,
+  "gate|attack|F6|unstaged runs unchanged (changed-only arm)": 884,
+  "gate|attack|F7|runs": 939,
+  "gate|attack|F7|staged runs reproduced": 694,
+  "gate|attack|F7|unstaged runs": 245,
+  "gate|attack|F7|unstaged runs unchanged (changed-only arm)": 245,
+  "gate|attack|F8|runs": 939,
+  "gate|attack|F8|staged runs reproduced": 236,
+  "gate|attack|F8|unstaged runs": 703,
+  "gate|attack|F8|unstaged runs unchanged (changed-only arm)": 703,
+  "gate|attack|F9|runs": 939,
+  "gate|attack|F9|staged runs reproduced": 36,
+  "gate|attack|F9|unstaged runs": 903,
+  "gate|attack|F9|unstaged runs unchanged (changed-only arm)": 903,
+  "gate|attack|NL|runs": 939,
+  "gate|attack|NL|staged runs reproduced": 939,
+  "gate|attack|fullF9|runs": 939,
+  "gate|attack|fullF9|staged runs reproduced": 939,
+  "gate|attack|full|runs": 939,
+  "gate|attack|full|staged runs reproduced": 939,
+  "gate|honest|NL|runs": 437,
+  "gate|honest|NL|staged runs reproduced": 437,
+  "gate|honest|fullF9|runs": 437,
+  "gate|honest|fullF9|staged runs reproduced": 437,
+  "gate|honest|full|runs": 437,
+  "gate|honest|full|staged runs reproduced": 437
+ },
+ "inputs": {
+  "#36 runs.json": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96",
+  "honest runs.json": "f420ed2401dcc776cbbcfd414bbe9d6d1132a3bbd012b529a33aba7fa5ecd068",
+  "tool errors": "59ac3381a8e717a22c643679f717d047ee63e8db4063d3b40100f64688e0a6ff"
+ }
+}

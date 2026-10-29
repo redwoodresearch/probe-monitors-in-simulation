@@ -1,0 +1,1 @@
+cosines {'harmfulness': 0.9999918017578329, 'refusal': 0.99999606804222}; max |catch diff| 0.01092896174863388 over 96 catches; problems []; reading: MATERIAL: report to 0d before anything else

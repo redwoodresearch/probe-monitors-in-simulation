@@ -1,0 +1,4 @@
+shards [(0, 'NVIDIA H200', 6508, 27, 653, {'min': 6, 'median': 72.0, 'max': 1835}), (1, 'NVIDIA H200', 6508, 32, 832, {'min': 19, 'median': 73.0, 'max': 1715})]; other labels {}
+anchor min cosine 1.000000 (both readouts, every layer); excluded {}; n {'train': 8000, 'test': 2000, 'hh': 2984}; held out 1600
+highstakes: layer 43, held-out AUROC 0.999; test AUROC 0.999; HH AUROC 0.886; gate passes True
+max_iter hit at layers: []; refit hit max_iter: False

@@ -1,0 +1,18 @@
+# Level-5 TF-IDF trained on all 939 cells (held-out environments: tfidf_heldout_env_level5_probe_match) and scored on
+# the 368 clean cells only: is the clean retrain at chance because 368 cells are too few to train on? Output-only
+# (each output's own score) and running mean of output scores up to each output.
+name: tfidf_context_heldout_env_clean_level5_all_cells_model
+cells_file: config/clean_cells_2026-10-06_180321.json   # the main session's 368 clean cells (analysis 2026-10-06_180321)
+examples: examples_2026-10-06_142532
+folds_file: folds_v3.json
+output_variants: [all, no_editor]
+variants:
+  level5_all_cells_model_own_output:
+    outputs: harness_normalized_diff_lines_scores_2026-10-06_162757.jsonl.gz   # tfidf_heldout_env_level5_probe_match, environment folds, all cells
+    calls: null
+    running: false
+  level5_all_cells_model_running_mean:
+    outputs: harness_normalized_diff_lines_scores_2026-10-06_162757.jsonl.gz
+    calls: null
+bootstrap: 1000
+seed: 0

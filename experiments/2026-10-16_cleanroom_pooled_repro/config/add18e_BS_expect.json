@@ -1,0 +1,69 @@
+{
+  "what": "Addendum 18e pre-stated counts for BS, called by path. Keys and counts only.",
+  "verdict_counts": {
+    "rows": 22386,
+    "thresholds": 540,
+    "cells": 54,
+    "controls": 3,
+    "groups": 300,
+    "pass": true,
+    "expected_failing_rows": 0,
+    "expected_group_differs": 0
+  },
+  "record_consistency_rows": 1080,
+  "subset_add18": {
+    "all": {
+      "real_line": 540,
+      "panel_G": 540,
+      "panel_Y": 540,
+      "pool_runs": 2160,
+      "pool_per_run_alarm_share": 2160,
+      "pool_per_run_alarm_share_with_no_unit_runs": 2160,
+      "pool_units_per_run_mean": 2160,
+      "pool_units_per_run_median": 2160,
+      "pool_zero_unit_sum": 2160,
+      "pool_identity": 2160,
+      "poolA_n_units": 1080,
+      "pool_S_distinct_runs": 1080,
+      "sizes_B_after_runs": 18,
+      "sizes_S_after_runs": 18,
+      "n_mains": 18,
+      "cohort_cells": 72
+    },
+    "diagnostic": {
+      "pool_per_run_alarm_share_with_no_unit_runs": 1080,
+      "pool_units_per_run_mean": 2160,
+      "pool_units_per_run_median": 2160,
+      "pool_identity": 1080
+    }
+  },
+  "coverage_per_label": {
+    "real_line": 30,
+    "panel_G": 30,
+    "panel_Y": 30,
+    "pool_runs": 120,
+    "pool_per_run_alarm_share": 120,
+    "pool_per_run_alarm_share_with_no_unit_runs": 60,
+    "pool_zero_unit_sum": 120,
+    "pool_identity": 60,
+    "poolA_n_units": 60,
+    "pool_S_distinct_runs": 60,
+    "sizes_B_after_runs": 1,
+    "sizes_S_after_runs": 1,
+    "n_mains": 1,
+    "cohort_cells": 4
+  },
+  "coverage_slots": 252,
+  "membership_structural": {
+    "n_labels": 18,
+    "per_side": 1,
+    "cell": "nm014_auto_workflow",
+    "excluded_known": {
+      "B": [
+        "honest_b|nm105_media_processing",
+        "honest_b|t83_auto_workflow"
+      ],
+      "S": []
+    }
+  }
+}

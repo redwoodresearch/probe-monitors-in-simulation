@@ -1,0 +1,79 @@
+{
+ "plan": "PLAN.md (this folder), POST HOC",
+ "git": "da209382d5fb7256b434491d4cc832da810e84c5",
+ "which": "nladd",
+ "extraction run": "2026-10-13_g3_nladd_seed-oss-36b_v1",
+ "arm": "real-attack-e2-nladd",
+ "unedited dump": [
+  "2026-10-13_g3_real_seed-oss-36b_v1",
+  "real-attack-e2"
+ ],
+ "frozen fit": "2026-10-13_111525",
+ "forecast.json": {
+  "commit": "6d7b1f50",
+  "sha256 of forecast.json": "4243f2cd38d93d33e5b63ef08bc7e3fb3b387198af43e667c8821966504fff77"
+ },
+ "probes": {
+  "16": "70aeb87dbc2c372a7ed9103d35be21fea6cd3b52383d287e30fd37954b706343",
+  "24": "f4d24e77014914f7746912e709c0dbc14a4559d12b57d2756a42996758a1b790",
+  "32": "7f18518ad0565de58551009d795279875aa100aaa7a9037554165c0d12f8f980",
+  "40": "5d41c69b9cb118e783be004760618cbbbc0b3069c7043671853c819ad2fabc00",
+  "48": "41dbd919a0110a6d892daacea5a9529314161919a8eec4d6046770a9f136a608",
+  "56": "1f66a1813761183ab4b1995159b5753c7e5027273070459c87fab9dbc34042b3",
+  "63": "3b3646b0edb49b2ae738c359c7965bc846ea756024f6f3d62ba26058b18ebf9e"
+ },
+ "chosen layer by test fold": {
+  "0": 40,
+  "1": 63,
+  "2": 63,
+  "3": 63,
+  "4": 63
+ },
+ "runs": 939,
+ "row columns": [
+  "item",
+  "step",
+  "action",
+  "family",
+  "in the first 5 outputs",
+  "in the last 5 outputs",
+  "edited",
+  "before the first edit",
+  "edited outputs before it",
+  "edited logit v0",
+  "edited logit v1",
+  "edited logit v2",
+  "edited logit v3",
+  "edited logit v4",
+  "unedited logit v0",
+  "unedited logit v1",
+  "unedited logit v2",
+  "unedited logit v3",
+  "unedited logit v4"
+ ],
+ "row count": 22720,
+ "missing": {
+  "edited run without a meta": 0,
+  "rows kept in one dump only": 0
+ },
+ "runs without four finite nested scores, by layer": {
+  "16": 0,
+  "24": 0,
+  "32": 0,
+  "40": 0,
+  "48": 0,
+  "56": 0,
+  "63": 0
+ },
+ "extraction check": {
+  "file": "extract_check_2026-10-13_g3_nladd_seed-oss-36b_v1_2026-10-13_141956.json",
+  "sha256 of the check": "3b222a872ec8c38bd7baa58da1902cc0a62a73fbe55c4813027df73c0abad444"
+ },
+ "inputs": {
+  "#36 runs.json": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96",
+  "fit runs.json": "5c987d6a79315344c76ccad0f71c91a4150e762952109838fdbed43819872a00"
+ },
+ "scores file": "scores_nladd_2026-10-13_143345.npz",
+ "sha256 of the scores file": "c21999952c42b8c37ec2d9158c83d45f665489d78c84addca4762761105ff825",
+ "status": "scored"
+}

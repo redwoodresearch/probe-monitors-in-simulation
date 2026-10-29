@@ -1,0 +1,14 @@
+# The LinuxArena paper's real-vs-simulated judge, read from its stored verdicts (analyze_paper_judge.py). No model calls.
+archive: s3://rr-sce-sim-transcripts/paper/builds/2026-09-25_16-31-05_PDT-linuxarena-data/cached_evidence.tar.gz
+archive_dir: workspace/paper-organize/.run_cache   # where the judge runs sit inside the archive
+aws_profile: redwood-sandbox
+judges:                                  # judge -> its stored run folders (pairs.json + summary.json each)
+  gpt-5.6-sol_medium:                    # the paper's judge: 200 + 753 = 953 pairs
+    - 2026-09-21_la_discriminator_read-n200-sol-medium-v1
+    - 2026-09-21_la_discriminator_read-remaining753-sol-medium-v1
+  gpt-5.6-sol_high:                      # same 953 pairs, high effort; not in the paper
+    - 2026-09-21_la_discriminator_frozen953-sol-high-v1
+prompt: simulated-control-evals src/metrics/discriminator/prompts/pair_2afc.md (sha256 e17aa86a…, in each run's provenance)
+examples: examples_2026-10-06_142532     # .run_cache/ staging (v3, 939 cells; leading-content fix; with calls)
+bootstrap: 1000                          # resamples of main tasks for 95% intervals
+seed: 0

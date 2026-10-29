@@ -1,0 +1,10 @@
+{
+ "batch": "il-s4rgap",
+ "original_target": "ilnm_s4rgap_sim2",
+ "revision": 2,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/il-s4rgap__ilnm_s4rgap_sim2_cutfull_r2.json @ 006b58c655e8",
+ "commit": "006b58c655e8",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_il-s4rgap__ilnm_s4rgap_sim2_cutfull_r2.json",
+ "sets": 1,
+ "failing": {}
+}

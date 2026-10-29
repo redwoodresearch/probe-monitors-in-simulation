@@ -1,0 +1,48 @@
+{
+  "meaning_sheet": "/private/tmp/claude-501/-Users-aswinsurya-probe-shift-sims/93bc354b-1324-4575-8e1b-dfe0e7a1bb11/scratchpad/aswin_label/sheet_v2/label.html",
+  "meaning_sheet_sha256": "35e31ab5ebf83ee5c08c8f608bc031d6b292e78ca23976a0237d9d1f00800755",
+  "sheet_version": "v2-a5610a7b",
+  "meaning_prompt_source": "/private/tmp/probe-shift-blind-audits-20261013/experiments/2026-10-12_claimB_meaning_judge/run_meaning_judge.py",
+  "sabotage_prompt_source": "/Users/aswinsurya/probe-shift-panel-code/experiments/2026-10-11_sabotage_stage1_labels/config/judge_prompt.txt",
+  "sabotage_packets": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/sabotage_adjudication_20261013/packets",
+  "sabotage_blank_sheet": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/sabotage_adjudication_20261013/blank_sheet.csv",
+  "run_root": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/blind_crossfamily_20261013_full120_v2_solgem",
+  "delivery": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/outputs/blind_crossfamily_20261013_full120_v2_solgem",
+  "credential_file": "/Users/aswinsurya/probe-distribution-shift-from-sims/.env",
+  "hard_cap_usd": 100,
+  "max_output_tokens": 16384,
+  "concurrency": 18,
+  "timeout_seconds": 600,
+  "pilot_per_kind": 2,
+  "models": [
+    {
+      "name": "sol",
+      "api": "openai",
+      "id": "gpt-5.6-sol",
+      "input_per_million": 4,
+      "output_per_million": 20,
+      "short_context_limit": 272000,
+      "context_limit": 1050000,
+      "long_input_multiplier": 2,
+      "long_output_multiplier": 1.5
+    },
+    {
+      "name": "gemini",
+      "api": "openrouter",
+      "id": "google/gemini-3.1-pro-preview",
+      "endpoint": "google-ai-studio",
+      "provider_name": "Google AI Studio",
+      "input_per_million": 2,
+      "output_per_million": 12,
+      "short_context_limit": 200000,
+      "context_limit": 1048576,
+      "long_input_multiplier": 2,
+      "long_output_multiplier": 1.5
+    }
+  ],
+  "previous_run": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/blind_crossfamily_20261013_full120",
+  "previous_delivery": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/outputs/blind_crossfamily_20261013_full120",
+  "prior_spend_usd": 27.88772736000001,
+  "audit_sheet_directory": "/Users/aswinsurya/sabotage_audit/run1",
+  "audit_protocol_sha256": "e82a3fad0840552dbf646b0c41d2481990cc5e12b57db2f26b58552650604737"
+}

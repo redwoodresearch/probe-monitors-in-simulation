@@ -1,0 +1,30 @@
+# Q2 probes with Qwen3.5-27B as the reader (2026-10-06): the protocol of the Qwen3-32B run (PR #16's q2_probes.yaml),
+# on whole transcripts. Torch logistic regression on Modal GPU.
+activations_run: 2026-10-06_la_segment-end_qwen35-27b_alllayers_v1   # this track's Volume (read only): original text, all 64 layers
+match_cut_of: null                      # whole transcripts; the _matched config keeps only calls Qwen3-32B read inside its 32k cut
+features_run: 2026-10-06_q2_features_qwen35   # on this track's Q2 features Volume; the labeler hash and label_rule are appended
+labels_file: latest                     # newest .run_cache table from run_label_calls.py with the current labeler's fingerprint
+folds_file: folds_v3.json               # splits/: shared main-task folds
+tasks: paired                           # label-table flag: the 939 paired tasks (v3); honest calls of the same main tasks
+label_rule: as_labeled                  # as_labeled (every network call impactful; Aswin, 2026-10-06) | localhost_reads_read_only (robustness)
+test_domains: [real-attack-e1, sim-attack]
+train_sets:                             # name -> arms whose calls (outside the test and validation folds) train it
+  real-attack-e1: [real-attack-e1]
+  sim-attack: [sim-attack]
+  real-attack-e1+real-honest: [real-attack-e1, real-honest]   # the project doc's "LA honest + attack"
+home: {real-attack-e1: real-attack-e1, sim-attack: sim-attack, real-attack-e1+real-honest: real-attack-e1}
+positions: [call_end, pre_call, prev_content]   # readout (a), readout (b), and (b)'s content-token control
+eligibility: all three positions read (whole transcripts, no cut); tasks whose two attack transcripts were both read
+layers: all                             # all 64 layers (Aswin, 2026-10-06), selected per outer fold as before
+probe: standardized features (training-fold mean and sd), L2 logistic regression with sklearn's objective, torch L-BFGS
+C_grid: [0.001, 0.01, 0.1]
+selection: per outer fold, on that fold's training-set validation AUROC; earliest layer within layer_tolerance of the best
+layer_tolerance: 0.005
+max_iter: 500
+fpr: 0.01                               # threshold frozen at this false-positive rate on training-set validation
+n_boot: 1000                            # resamples of main tasks for 95% intervals
+n_boot_category: 200
+shuffle_null: 20                        # label permutations within each transcript; selection repeated per draw
+null_train_sets: [real-attack-e1, sim-attack]
+null_draws_per_job: 1                   # one H200 per null draw: 64-layer selection is slow
+seed: 0

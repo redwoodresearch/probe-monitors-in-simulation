@@ -1,0 +1,1 @@
+{"shard": 0, "transcripts": 4, "chunks": [{"chunk": "shard000_chunk000", "transcripts": 2, "rows": 24, "nonfinite": 0}, {"chunk": "shard000_chunk001", "transcripts": 2, "rows": 25, "nonfinite": 0}], "render failures": [], "load seconds": 87, "seconds": 159, "forward [tokens, seconds]": [[38797, 39.966], [37863, 37.208], [37109, 35.872], [36742, 35.316]]}

@@ -1,0 +1,27 @@
+{
+ "status_utc": "2026-10-15T18:03:52+00:00",
+ "status_written_pt": "2026-10-15T11:03:52-07:00",
+ "label": "dry_main",
+ "mode": "stub",
+ "rule_sha": "604bc7c60",
+ "paused": false,
+ "overrun_stop": null,
+ "runs_total": 135,
+ "runs_in_flight": 0,
+ "runs_done": 135,
+ "runs_pending": 0,
+ "rate_limit_errors_last_10min": 0,
+ "rate_limit_errors_by_10min": {
+  "2026-10-15T11:00:00-07:00": {
+   "rate_limit_errors": 0,
+   "runs_ended": 60
+  },
+  "2026-10-15T11:10:00-07:00": {
+   "rate_limit_errors": 0,
+   "runs_ended": 75
+  }
+ },
+ "spend_logged_usd": 0.0,
+ "reserved_in_flight_usd": 0.0,
+ "hard_stop_usd": 3000.0
+}

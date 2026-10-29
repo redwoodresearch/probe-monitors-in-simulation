@@ -1,0 +1,21 @@
+# Simulated honest CONTINUATION (150 tasks; keys config/cont_keys.txt; the all-196 task file only so t10 fits: its cells equal the 176 and amendment-9 files', check_launch_tasks.py), ONE launch (RULE.md amendment 7), started with --references-from ~/phase2/runs/2026-10-14_simh_refs_merged (each
+# task's honest_a reference, verbatim from the launch that holds it; make_merged_refs.py). Same harness and settings as the
+# September scale-up (config/pilot_september_scaleup.yaml @ bbf0729) except: the only arm is sim_honest@september (no real arms;
+# each run forks at 0 from the task's existing honest_a) and the spend guard below. The guard plans simulator spend and
+# blocks NEW tasks only. Here (amendment 10, unwatched) worst_case_limit IS the binding box-side bound: a new task starts
+# only if every running run at max(its spend, $106) plus finished runs' actuals stays <= $3,500. Copied into the frozen harness's config/ on the devbox.
+tasks: config/pilot_tasks_amendment9_all196.json
+real_simulator: september
+simulators: [september]
+real_arms: []
+sim_arms: [sim_honest]
+simulator_confirmed: true
+max_runs_per_server: 10   # 4 servers
+max_real_runs: 24         # no real runs in this launch; as in the scale-up's canary
+reference_tries: 3        # unused: references are pinned
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+spend:
+  cap_usd: 3500   # the box-side bound (amendment 10); 150 x $19.76 = $2,964 fits
+  worst_case_limit_usd: 3500   # BINDING, box-side (amendment 10): sim spend <= $3,500 while no run exceeds the worst
+  worst_per_sim_run_usd: 106   # 200-step cap x $0.531, the max simulator cost per step over 251 runs
+  prior_per_sim_run_usd: 19.76

@@ -1,0 +1,19 @@
+# S5 FOLLOW-UP RERUN 5r (RULE.md Amendment 10, make_s5r.py; Append 35): pilot_nm_fu_s5.yaml with only the task file and the caps changed
+# FOLLOW-UP (simulated-only) launch of new-mains split S5 (experiments/2026-10-14_q3_new_mains_launch/RULE.md), as
+# the scale-up's variant (iii): references from the main launch (--references-from); the launcher's own box-side admission
+# guard bounds simulator spend (cap = cells x $16.50 + $300, + $1,000 by Aswin's 'Yes, same', about 20:36 PT; $75 worst per run); sim_cap_stop.py pauses at cap + $100.
+tasks: config/tasks_nm_s5r_fu.json   # make_splits_nm.py: the split's r1 entries, simulated attacks only
+real_simulator: september
+real_arms: []
+simulators: [september]
+sim_arms: [sim_attack]
+simulator_confirmed: true
+max_runs_per_server: 10
+max_real_runs: 40
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+spend:
+  cap_usd: 1399
+  worst_case_limit_usd: 1399
+  worst_per_sim_run_usd: 75
+  prior_per_sim_run_usd: 16.48

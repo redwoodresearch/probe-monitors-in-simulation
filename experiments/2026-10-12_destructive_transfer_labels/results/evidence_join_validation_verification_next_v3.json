@@ -1,0 +1,12 @@
+{
+  "commands_sha256": "0cb1096f02b4c62d9fb6866b31a513097fc696a2ca1e75ae8ec097030d07f514",
+  "definitions_sha256": "3f5f391db8262fa173054352ed3a65cde7bb0ac4c7f91c2eeeda1c3d29e0c6ee",
+  "stages": [
+    {
+      "prepared": ".run_cache/dt_labels_20261012/verification_next_v3/m2",
+      "verified_calls": 24,
+      "join_sha256": "6953670f0697278d472ad7042cda7f31c5e55c760b96352edfc50e0737185d5f",
+      "packets_sha256": "10448425e4bcd06851bc5a6947812798fa935ec1b183b176bab6191df34e8a00"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+ "target": "simh_nm360_s4r_sim_s4",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "simh_nm360_s4r_sim_s4",
+   "arm": "sim_honest@september",
+   "staged_file": "/ev/simh_nm360_s4r_sim_s4_v1/inputs/sim_honest@september.jsonl",
+   "staged_sha": "83ef6949130d16393d295d4639756bf3b38d4ce1f3b12e45928ce0db70ad14d1",
+   "epochs": 2,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

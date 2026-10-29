@@ -1,0 +1,158 @@
+--- analyze_q1_gpu.py as launched for 2026-10-06_181139 (18:11 PT, reconstructed)
++++ analyze_q1_gpu.py at 404274f (committed 18:32 PT)
+@@ -960,14 +960,23 @@
+ 
+ 
+ @app.local_entrypoint()
+-def selection_null(results: str, variants: str = "all_outputs,no_editor_outputs", max_layers: str = "63,48", scheme: str = "task"):
++def selection_null(results: str = "", variants: str = "all_outputs,no_editor_outputs", max_layers: str = "63,48",
++                   scheme: str = "task", config: str = "", analysis_id: str = ""):
+     """The headline's own label-shuffle null, for a finished GPU analysis; `--scheme environment` for the held-out-
+-    environment headline (inner CV over training environments). Writes results/q1_gpu_selection_null_<stamp>.json."""
++    environment headline (inner CV over training environments). Or, while that analysis runs, from its `--config` and
++    `--analysis-id` (the same settings and runs; checkpoints go under that analysis). Writes
++    results/q1_gpu_selection_null_<scheme>_<stamp>.json."""
+     import numpy as np
++    import yaml
+     from sklearn.metrics import roc_auc_score
+ 
+-    res = json.loads(Path(results).read_text())
+-    cfg, man = res["config"], res["manifest"]
++    if results:
++        res = json.loads(Path(results).read_text())
++        cfg, man = res["config"], res["manifest"]
++    else:  # the running analysis's resolved settings and manifest, as `main` saved them (clean cells, test overrides)
++        run = yaml.safe_load((HERE / "config" / config).read_text())["extraction_run"]
++        saved = json.loads(b"".join(acts_vol.read_file(f"{run}__q1gpu/{analysis_id}/run_config.json")))
++        cfg, man = saved["config"], saved["manifest"]
+     splits = HERE.parent.parent / "splits"
+     folds = json.loads((splits / cfg["folds_file"]).read_text())
+     cfg["main_task_to_fold"] = folds["task_folds"]["main_task_to_fold"]
+@@ -1006,7 +1015,8 @@
+                 print(f"selection-aware null, layers <= {max_layer}, {key}: mean {null.mean():.3f}, p95 {np.percentile(null, 95):.3f}")
+     stamp = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d_%H%M%S")
+     path = HERE / "results" / f"q1_gpu_selection_null_{scheme}_{stamp}.json"
+-    path.write_text(json.dumps({"source": results, "rule": "same draws as the main null; per draw and outer fold, the "
++    path.write_text(json.dumps({"source": results or f"{config} / {analysis_id}", "scheme": scheme,
++                                "rule": "same draws as the main null; per draw and outer fold, the "
+                                 "earliest layer within headline_tolerance of the best inner-CV AUROC", "results": out}, indent=1))
+     print(f"-> {path}")
+ 
+@@ -1286,7 +1296,7 @@
+ 
+ 
+ @app.function(image=image, cpu=8, memory=32768, volumes={"/acts": acts_vol}, timeout=TIMEOUT_S)
+-def protocol_checks(cfg: dict, man: dict, heads: dict, tfidf: dict, clean_cells: list[str], layer_scores: dict) -> dict:
++def protocol_checks(cfg: dict, man: dict, heads: dict, tfidf: dict, clean_cells: list[str]) -> dict:
+     import numpy as np
+ 
+     from probe_shift.q1_eval import EDITOR, Scorer, load_runs, step_table
+@@ -1312,7 +1322,8 @@
+             s[rows] = saved[l][f"{comparison}__{variant}{suffix}"][rows]
+         return s
+ 
+-    out = {}
++    out = {"cut_at_32k_by_arm": {a: {"runs": int(sum(m["arm"] == a for m in runs)), "cut": int(sum(m["arm"] == a and m["truncated"] for m in runs))}
++                                 for a in sorted({m["arm"] for m in runs})}}  # this extraction's text, not the original's
+     for split, head in heads.items():
+         fold = np.array([cfg["environment_to_fold"][m["environment"]] if split.startswith("A") else m["fold"] for m in runs])
+         out[split] = {}
+@@ -1354,18 +1365,21 @@
+                     r["within_fold"] = {int(f): sc.auc_ci(sc.y_run[m], p[m], sc.main[m])
+                                         for f in sorted(set(fold)) for m in [sc.runs_in & (fold == f)]}
+                     if tf is not None:  # the gap at every layer, for interpretation (the headline gap above decides)
+-                        m = sc.runs_in
+                         r["gap_by_layer"] = {}
+-                        for l, ls in layer_scores.get(f"{split}|{pos}|{comparison}|{variant}", {}).items():
+-                            pl = np.array([np.nan if x is None else x for x in ls])
+-                            r["gap_by_layer"][l] = sc.auc_gap(sc.y_run[m], pl[m], tf[m], sc.main[m])
++                        for l in cfg["layers"]:
++                            if l not in saved:
++                                saved[l] = np.load(base / f"L{l}_step_scores_output_end.npz")
++                            sl = saved[l][f"{comparison}__{variant}{'__held_out_environment' if split.startswith('A') else ''}"]
++                            hit_l = sc.runs_in[t["run"]] & ~np.isnan(sl) & ~np.isnan(v)  # this layer's outputs TF-IDF also scored
++                            pl, tl = sc.run_scores(t["run"][hit_l], sl[hit_l]), sc.run_scores(t["run"][hit_l], v[hit_l])
++                            m = sc.runs_in
++                            r["gap_by_layer"][str(l)] = sc.auc_gap(sc.y_run[m], pl[m], tl[m], sc.main[m])
+                     out[split][f"{pos}__{comparison}__{variant}"] = r
+     return out
+ 
+ 
+ @app.local_entrypoint()
+-def protocol_report(results: str, tfidf_env: str, tfidf_task: str, run_scores: str = "", selection_null_env: str = "",
+-                    selection_null_task: str = ""):
++def protocol_report(results: str, tfidf_env: str, tfidf_task: str, selection_null_env: str = "", selection_null_task: str = ""):
+     """The frozen protocol's decision and checks for a finished level-7 analysis (headlines for both splits); TF-IDF
+     level-7 scores on held-out-environment folds (`tfidf_env`) and main-task folds (`tfidf_task`), baselines-q3's format.
+     Writes results/q1_protocol_<stamp>.json."""
+@@ -1383,33 +1397,32 @@
+     heads = {s: res[k] for s, k in SPLITS.items() if res.get(k)}
+     if set(heads) != set(SPLITS):
+         raise ValueError(f"results lack a headline for {set(SPLITS) - set(heads)}")
+-    tfidf = {}
++    # TF-IDF at the probe's text level, on each output's own text (the protocol's baseline); one baseline per file,
++    # named in the output, so a running-mean or other-level file cannot stand in silently.
++    tfidf, baselines = {}, {}
+     for split, path in (("A_held_out_environment", tfidf_env), ("B_main_task", tfidf_task)):
+         with gzip.open(path, "rt") as fh:
+             for line in fh:
+                 r = json.loads(line)
+-                tfidf.setdefault(f"{split}|{r['comparison']}|{r['outputs']}", {})[f"{r['key']}|{r['step']}|{r['action']}"] = r["score"]
++                baselines.setdefault(split, set()).add(r["baseline"])
++                k = f"{r['key']}|{r['step']}|{r['action']}"
++                d = tfidf.setdefault(f"{split}|{r['comparison']}|{r['outputs']}", {})
++                if k in d:
++                    raise ValueError(f"{path}: two scores for {r['comparison']} {r['outputs']} {k}")
++                d[k] = r["score"]
++        if len(baselines[split]) != 1:
++            raise ValueError(f"{path} mixes TF-IDF baselines {sorted(baselines[split])}; pass a file with one")
++    print("TF-IDF baselines:", {k: sorted(v) for k, v in baselines.items()})
+     dirty = set(insert_undo_cells.remote(cfg))
+     clean_cells = [c for c in cfg["paired_cells"] if c not in dirty]
+-    # Per-layer run scores (results/q1_gpu_run_scores_<stamp>.jsonl, in manifest order) for the gap at every layer.
+-    layer_scores = {}
+-    if run_scores:
+-        rows = [json.loads(l) for l in Path(run_scores).read_text().splitlines()]
+-        if len(rows) != len(man["runs"]) or not all(r["arm"] == a and (r["key"] == f or len(r["key"].encode()) > 240)
+-                                                    for r, (a, f) in zip(rows, man["runs"])):
+-            raise ValueError("run_scores rows do not match the manifest (long keys are stored under a hashed name)")
+-        for k in rows[0]:
+-            if k.startswith("L") and "__output_end__" in k:
+-                l, _, comparison, variant, *held = k.split("__")
+-                split = "A_held_out_environment" if held else "B_main_task"
+-                layer_scores.setdefault(f"{split}|output_end|{comparison}|{variant}", {})[l[1:]] = [r[k] for r in rows]
+-    out = protocol_checks.remote(cfg, man, heads, tfidf, clean_cells, layer_scores)
+-    # Validity check 5: tasks cut at 32k or excluded as invalid, by arm (splits/exclusions).
++    out = protocol_checks.remote(cfg, man, heads, tfidf, clean_cells)
++    # Validity check 5: samples excluded as invalid, by arm (splits/exclusions; text-independent). Cuts at 32k depend on
++    # the text, so they come from the analyzed runs' extraction metadata (results: cut_at_32k_by_arm).
+     table = {}
+     for r in ex["samples"]:
+         c = table.setdefault(r["arm"], Counter())
+         c["samples"] += 1
+-        c[f"excluded: {r['reason']}" if r["reason"] else ("cut at 32k" if r["truncated"] else "whole")] += 1
++        c[f"excluded: {r['reason']}" if r["reason"] else "valid"] += 1
+     stamp = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d_%H%M%S")
+     path = HERE / "results" / f"q1_protocol_{stamp}.json"
+     # Validity check 1: the headline against its selection-aware shuffle null (selection_null, per split).
+@@ -1422,6 +1435,7 @@
+                 r["selection_null"] = None if nk not in nulls else nulls[nk] | {
+                     "headline_above_p95": r["probe"]["auroc"] > nulls[nk]["p95"]}
+     path.write_text(json.dumps({"source": results, "tfidf_env": tfidf_env, "tfidf_task": tfidf_task, "protocol": "protocol_level7.md",
++                                "tfidf_baselines": {k: sorted(v) for k, v in baselines.items()},
+                                 "selection_null_env": selection_null_env, "selection_null_task": selection_null_task,
+                                 "n_clean_cells": len(clean_cells), "exclusions_by_arm": {a: dict(c) for a, c in table.items()},
+                                 "results": out}, indent=1))
+@@ -1436,6 +1450,11 @@
+           f"[{g['ci95'][0]:+.4f}, {g['ci95'][1]:+.4f}] over {g['n_tasks']} tasks -> {verdict}; TF-IDF coverage "
+           f"{prim['tfidf_coverage_of_probe_outputs']}")
+     if verdict == "probe advantage":
+-        carry = ("not carry-over" if cg["ci95"][0] > 0 else "carry-over" if cg["gap"] < g["gap"] / 2 else "inconclusive")
++        if cg["ci95"][0] > 0:
++            carry = "not carry-over"
++        elif cg["ci95"][1] < 0:  # not covered by the frozen rule (amendment 1): reported as its own outcome
++            carry = "clean-cell gap below 0: TF-IDF better on clean cells (outside the frozen rule)"
++        else:
++            carry = "carry-over" if cg["gap"] < g["gap"] / 2 else "inconclusive"
+         print(f"clean cells ({len(clean_cells)}): gap {cg['gap']:+.4f} [{cg['ci95'][0]:+.4f}, {cg['ci95'][1]:+.4f}] -> {carry}")
+     print(f"-> {path}")

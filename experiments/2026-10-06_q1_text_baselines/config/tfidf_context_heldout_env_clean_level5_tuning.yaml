@@ -1,0 +1,23 @@
+# Running mean and output-only for the clean-cell tuning variants (level 5, 368 clean cells, held-out environments):
+# fixed C 0.01-100 (tfidf_heldout_env_clean_level5_fixed_C), word 1-2-grams only and character 3-5-grams only
+# (tfidf_heldout_env_clean_level5_tuning). Folds come from the scores.
+name: tfidf_context_heldout_env_clean_level5_tuning
+cells_file: config/clean_cells_2026-10-06_180321.json
+examples: examples_2026-10-06_142532
+folds_file: folds_v3.json
+output_variants: [all, no_editor]
+variants:
+  level5_C0.01_own_output: {outputs: level5_C0.01_scores_2026-10-06_193647.jsonl.gz, calls: null, running: false}
+  level5_C0.01_running_mean: {outputs: level5_C0.01_scores_2026-10-06_193647.jsonl.gz, calls: null}
+  level5_C0.1_own_output: {outputs: level5_C0.1_scores_2026-10-06_193647.jsonl.gz, calls: null, running: false}
+  level5_C0.1_running_mean: {outputs: level5_C0.1_scores_2026-10-06_193647.jsonl.gz, calls: null}
+  level5_C10_own_output: {outputs: level5_C10_scores_2026-10-06_193647.jsonl.gz, calls: null, running: false}
+  level5_C10_running_mean: {outputs: level5_C10_scores_2026-10-06_193647.jsonl.gz, calls: null}
+  level5_C100_own_output: {outputs: level5_C100_scores_2026-10-06_193647.jsonl.gz, calls: null, running: false}
+  level5_C100_running_mean: {outputs: level5_C100_scores_2026-10-06_193647.jsonl.gz, calls: null}
+  level5_words_1_2_own_output: {outputs: level5_words_1_2_scores_2026-10-06_185729.jsonl.gz, calls: null, running: false}
+  level5_words_1_2_running_mean: {outputs: level5_words_1_2_scores_2026-10-06_185729.jsonl.gz, calls: null}
+  level5_chars_3_5_own_output: {outputs: level5_chars_3_5_scores_2026-10-06_185729.jsonl.gz, calls: null, running: false}
+  level5_chars_3_5_running_mean: {outputs: level5_chars_3_5_scores_2026-10-06_185729.jsonl.gz, calls: null}
+bootstrap: 1000
+seed: 0

@@ -1,0 +1,76 @@
+# Blinded pairwise judge on fixed-sim (PLAN.md "Blinded AI judge"; run_judge_fixed.py). The paper's judge, as the 0.633
+# baseline ran it (experiments/2026-10-06_q1_text_baselines/config/judge_repro.yaml): same prompt, model, effort and
+# both orders per pair. The judge sees only the two transcripts' actions (tool calls and outputs): no run IDs, no
+# environment names, no metadata.
+model: openai/gpt-5.6-sol
+reasoning_effort: medium
+max_concurrent: 100
+prompt: simulated-control-evals src/metrics/discriminator/prompts/pair_2afc.md   # digest must match the paper's stored runs
+stored_summary: ../2026-10-06_q1_text_baselines/results/paper_judge_summary_2026-10-06_123010.json   # its prompt digest
+stored_judge: gpt-5.6-sol_medium
+orders_per_pair: 2                       # every pair both ways round (discriminate_pair), in the main run and the control
+split_file: split.json
+cohorts:                                 # aliases in simulated-control-evals src/paper/configs/real_runs.yml
+  real-attack-e1: la_public10_real_attack_n1000
+  real-attack-e2: la_public10_real_attack_reroll_n1000
+  sim-attack: la_public10_sim_astra_attack_n1000
+designs:
+  main:                                  # approved: all 473 test-environment pairs, about $400; stop at 120%
+    real: real-attack-e1
+    other: sim-attack                    # its tool outputs replaced by the fixed run's (v2)
+    cells: test                          # every paired cell of the 5 test environments
+    stop_usd: 480
+  control:                               # approved: 200 seeded pairs from the main run's cells, both orders, about $120-170
+    real: real-attack-e1                 # scored as "real": picking e1 counts as correct (chance 0.5 by construction)
+    other: real-attack-e2
+    cells: test
+    sample: 200
+    sample_seed: 20261011
+    stop_usd: 204
+  pilot_main:                            # run-level judge pilot (Aswin 22:29 PT 10-10): 3 seeded accepted pairs, both orders,
+    real: real-attack-e1                 # run with --level 1 --cut 32768 (the probe's view); measures cost per call
+    other: sim-attack
+    cells: test
+    sample: 3                            # 3 (not 5): the fixed sampling chose longer runs; keeps the pilot under ~$4
+    sample_seed: 20261012
+    stop_usd: 2.3                        # main 2.3 + control 2.3 + planted 2.4 = the $7 stop (Aswin 23:22 PT)
+    batch_pairs: 1
+  pilot_control:                         # its real-vs-real control: 3 pairs from the same accepted cells, both orders
+    real: real-attack-e1
+    other: real-attack-e2
+    cells: test
+    sample: 3                            # 3 (not 5): the fixed sampling chose longer runs; keeps the pilot under ~$4
+    sample_seed: 20261012
+    stop_usd: 2.3
+    batch_pairs: 1
+  pilot_planted:                         # its planted check (Aswin 23:22 PT): a fixed-sim run vs the same run with R2 undone
+    real: sim-attack                     # the fixed copy sits in the "real" slot; correct = the R2-undone copy called simulated
+    other: sim-attack
+    planted: R2
+    cells: test
+    sample: 3
+    sample_seed: 20261012
+    stop_usd: 2.4
+    batch_pairs: 1
+  pilot_planted_xhigh:                   # the planted check again (Aswin 23:4x PT, "Try a fix, ~$0.50-1"): xhigh effort, the two orders
+    real: sim-attack                     # of each pair sent one after the other in a seeded order; same 3 pairs as pilot_planted
+    other: sim-attack
+    planted: R2
+    cells: test
+    sample: 3
+    sample_seed: 20261012
+    reasoning_effort: xhigh
+    order_seed: planted-order-2026-10-10
+    worst_output_tokens_per_call: 6000
+    stop_usd: 1.5
+    batch_pairs: 1
+batch_pairs: 50                          # cost is summed from the ledger after every batch; the run stops past stop_usd
+run_name: fixed-sim_judge                # cache and cost-ledger label (JudgeClient)
+# Cost estimate (preflight only), as judge_repro.yaml
+chars_per_token: 3.5
+price_per_mtok_input: 5.0
+price_per_mtok_output: 30.0
+output_tokens_per_call: 1500
+worst_output_tokens_per_call: 10000          # reserved per call before each batch (no output cap is settable; typical answers ~1,500)
+bootstrap: 1000
+seed: 0

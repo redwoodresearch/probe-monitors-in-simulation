@@ -1,0 +1,63 @@
+{
+ "note": "Judge v2 pair sets, fixed before any call (Aswin about 22:18 PT 10-10 via 0d). Ids and hashes only; the excerpts are on S3 (results_manifest_v15.json, v18).",
+ "sets": {
+  "main_top20": {
+   "md": "data/top_sim_top20_2026-10-10_214722.md",
+   "md_sha256": "11e2918c764fcfc38863f134d1b240c6017868e661eb93d8ce80e0727a81466b",
+   "result": "results/top_sim_examples_2026-10-10_214722.json",
+   "pairs": 20,
+   "ids": [
+    "2e6aaf042c",
+    "5214e8081b",
+    "5ee43d5425",
+    "9637301a38",
+    "d172685315",
+    "e8c2071dd6",
+    "8592a36e21",
+    "cc701a5e7d",
+    "ecccd03197",
+    "e0ebe1a824",
+    "6897c7fc08",
+    "00fc8eb023",
+    "b51274144c",
+    "f675b1de4b",
+    "50ec080bd8",
+    "ffaf901b14",
+    "ce3a107750",
+    "9c92943174",
+    "5eef0f617f",
+    "10e9fdb0a9"
+   ],
+   "excerpt_lines": 20
+  },
+  "fair_top20": {
+   "md": "data/top_sim_top20_fair_2026-10-10_221633.md",
+   "md_sha256": "e63d746b7030995fb5fc4402129bcef9b418f6e6048ac3e21f76d22456bfb1dd",
+   "result": "results/top_sim_examples_fair_2026-10-10_221633.json",
+   "pairs": 20,
+   "ids": [
+    "e0ebe1a824",
+    "b51274144c",
+    "f675b1de4b",
+    "0bd702ba49",
+    "d700800f2e",
+    "7408fd7209",
+    "fa52d87d55",
+    "a2208782ca",
+    "273dbcec70",
+    "544672e371",
+    "6106c79d54",
+    "fef41ce589",
+    "89a7eba7a8",
+    "f1fe8b25f1",
+    "48eb46fc55",
+    "0651aa364b",
+    "b1c32b1a88",
+    "3025c7d185",
+    "613569d3a0",
+    "33e1dabbef"
+   ],
+   "excerpt_lines": 80
+  }
+ }
+}

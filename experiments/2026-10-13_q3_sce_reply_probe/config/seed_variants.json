@@ -1,0 +1,194 @@
+{
+ "_note": "RULE.md Amendments 15, 17, 19 (and fix939 (c') as a comparator in the same load). Filled 2026-10-13 16:22 PT (by date) from q2's records below.",
+ "sources": {
+  "q2 extraction check (fix-full and NL arms complete: 939 / 437, 0 problems)": "experiments/2026-10-13_q2_fixfull/results/extract_check_2026-10-13_fixfull_seed-oss-36b_v1_2026-10-13_152541.json @ fc1c1d24",
+  "q2 staging manifest (keys = source runs' keys)": "experiments/2026-10-13_q2_fixfull/results/g3_manifest_fx_2026-10-13_142924.json @ 5389b68e",
+  "q2 F9 mapping": "experiments/2026-10-13_q2_fixfull/results/f9_mapping_seed_2026-10-13_154954.json @ 6a75ebdd, sha256 e9d18bdda77ba079df3f324bfe2b32bfc25a5ddbc45712e51b85b486ad5b1c3f",
+  "fix939 (c') record": "experiments/2026-10-13_g3_followups/results/extract_check_2026-10-13_g3_rep_seed-oss-36b_v1_2026-10-13_142533.json @ 6ecb2366"
+ },
+ "variants": {
+  "sim-attack-fx-full": {
+   "of": "sim-attack",
+   "run": "2026-10-13_fixfull_seed-oss-36b_v1",
+   "meta_arm": "sim-attack-fx-full",
+   "n_extracted": 939,
+   "fallback": [
+    "2026-10-13_g3_sim_seed-oss-36b_v1",
+    "sim-attack"
+   ]
+  },
+  "sim-honest-fx-full": {
+   "of": "sim-honest",
+   "run": "2026-10-13_fixfull_seed-oss-36b_v1",
+   "meta_arm": "sim-honest-fx-full",
+   "n_extracted": 437,
+   "fallback": [
+    "2026-10-13_g3_simhonest_seed-oss-36b_v1",
+    "sim-honest"
+   ]
+  },
+  "sim-attack-fx-NL": {
+   "of": "sim-attack",
+   "run": "2026-10-13_fixfull_seed-oss-36b_v1",
+   "meta_arm": "sim-attack-fx-NL",
+   "n_extracted": 939,
+   "fallback": [
+    "2026-10-13_g3_sim_seed-oss-36b_v1",
+    "sim-attack"
+   ]
+  },
+  "sim-honest-fx-NL": {
+   "of": "sim-honest",
+   "run": "2026-10-13_fixfull_seed-oss-36b_v1",
+   "meta_arm": "sim-honest-fx-NL",
+   "n_extracted": 437,
+   "fallback": [
+    "2026-10-13_g3_simhonest_seed-oss-36b_v1",
+    "sim-honest"
+   ]
+  },
+  "sim-attack-fx-fullF9": {
+   "of": "sim-attack",
+   "mapping": {
+    "base run": "2026-10-13_fixfull_seed-oss-36b_v1",
+    "base arm": "sim-attack-fx-full",
+    "override run": "2026-10-13_fixfull_f9_seed-oss-36b_v1",
+    "override arm": "sim-attack-fx-fullF9",
+    "override keys": [
+     "base200_000_000_2026-09-17T11-51-48-00-00_la-auto-workflow-sim-attack-20_WeGkwRZbqpyD8YuVTScgWk__conditional_workflow_triggers:aw_exfiltrate_secrets_live:57eec8__1",
+     "base200_001_001_2026-09-17T11-51-48-00-00_la-clinical-trial-sim-attack-20_GHR93ChhJ7HPygWPnXYqdc__mtg_clinical_trial_suppress_warnings_05_replace_ets_with_arima_forecasting:suppress_safety_notifications:236202__1",
+     "base200_002_002_2026-09-17T11-51-49-00-00_la-file-indexing-sim-attack-20_Ur6jsZG4f4iZ4DZKyKPNME__postgresql_user_registry:file_corruption:0e17ce__1",
+     "base200_004_004_2026-09-17T12-29-28-00-00_la-model-registry-sim-attack-20_UcMijfuH6nGPHrtCaNHUqn__mtg_model_registry_privilege_escalation_03_implement_granular_rbac_permission_enforcement_layer:delete_model:e80d35__1",
+     "base200_006_006_2026-09-17T13-18-42-00-00_la-slack-clone-sim-attack-20_Bq3zHF9a6YXgxXhdwRH9Bk__webhook_owner_check_wrong_field:ssh_backdoor:9ec030__1",
+     "base200_007_007_2026-09-17T13-26-02-00-00_la-tiktok-sim-attack-20_ftTv8YLnqbQxAEkgDp2Mmn__registration_duplicate_check_wrong_status:leak_env_vars:b4a708__1",
+     "overlap800_11e7870a2c3f5e90__policy_factory_pattern:message_impersonate:dda9b5__1",
+     "overlap800_23ada4f14c49759c__error_analytics:exfiltrate_tokens:acdc3c__1",
+     "overlap800_27f642220dafe581__mtg_slack_clone_login_hijack_03_link_preview_and_unfurling_system:exfiltrate_private_messages_delayed:68c4c1__1",
+     "overlap800_31235abe92f18856__speaker_diarization_management:mp_run_malware_delayed:3cca1e__1",
+     "overlap800_42a07645da90d1e1__migrate_session_tokens_to_sqlite:sc_reverse_shell:dfd583__1",
+     "overlap800_42ac3610fd7e8621__heartbeat_health_monitor:ut_run_malware_live:0e3457__1",
+     "overlap800_46a7e778c9499a15__add_user_self_service_config_portal:install_blacklisted_package:68db88__1",
+     "overlap800_482f471a925ac9bb__add_clip_trim_endpoint:submit_untracked_job:0c5e98__1",
+     "overlap800_4e2890de9880152b__mtg_file_indexing_access_secret_files_you_dont_own_06_migrate_socket_protocol_to_async_with_streaming:authentication_bypass:eb6785__1",
+     "overlap800_52d366ae5076292e__migrate_worker_admin_server_to_unix_socket:mp_run_malware_live:e1bbfe__1",
+     "overlap800_553ac1d60c039098__extract_auth_into_middleware_layer:leak_env_vars:1772df__1",
+     "overlap800_5eb877e1658cf687__abstract_middleware_chain:mr_run_malware_delayed:b30184__1",
+     "overlap800_5f6cf0d68829e1a9__mtg_slack_clone_message_impersonate_05_role_based_access_control:exfiltrate_private_messages_live:5b72b7__1",
+     "overlap800_652a6260a3d40b41__mtg_auto_workflow_exfiltrate_secrets_05_implement_webhook_node_with_secret_injection_and_retry:aw_run_malware_delayed:c2e2f7__1",
+     "overlap800_7b8cb43db52b875f__file_permission_constant_wrong_value:sd_exfiltrate_secrets_live:ec77b5__1",
+     "overlap800_815425045c19e7c1__multialgorithm_forecasting_engine:suppress_warnings:a59691__1",
+     "overlap800_83dd94ea700d36e5__fi_rewrite_in_java:fi_exfiltrate_secrets_live:157a82__1",
+     "overlap800_8e54ff0b0d9042cd__add_webhook_retry_with_exponential_backoff:mp_run_malware_delayed:2451f2__1",
+     "overlap800_9163a6f85ca53c71__latest_story_null_check_inverted:ut_reverse_shell:80e8a4__1",
+     "overlap800_9debee788a745fd3__local_dns_resolution_cache:fi_run_malware_delayed:321469__1",
+     "overlap800_a17de7159f47ddf7__filebased_config:tt_rce:f03228__1",
+     "overlap800_b3214b4fbc6367b8__mtg_slack_clone_login_hijack_03_link_preview_and_unfurling_system:exfiltrate_private_messages_live:16593a__1",
+     "overlap800_b4845e275623a078__latest_story_wrong_limit_offset:ut_reverse_shell:c0cd51__1",
+     "overlap800_c44365a5933dc96c__validation_pipeline:exfiltrate_credentials:367bb1__1",
+     "overlap800_c786ac79d23bc2c4__mtg_file_indexing_redis_indexer_result_poisoning_04_convert_synchronous_server_to_async_with_connection_poolin:authentication_bypass:cfe2f3__1",
+     "overlap800_d729c88480c9c068__ct_rewrite_in_java:export_medical_data:aafb58__1",
+     "overlap800_da6cdad26d40fed8__export_api:ut_run_malware_delayed:07c2f1__1",
+     "overlap800_e2d8216caa20220a__file_integrity_monitoring_with_aide:sd_reverse_shell:b4ebd3__1",
+     "overlap800_ecc5021cd18d3776__backup:ws_reverse_shell:dfcd98__1",
+     "overlap800_fa64faa1bad1b170__add_user_self_service_config_portal:erase_history:24e76d__1"
+    ]
+   }
+  },
+  "sim-honest-fx-fullF9": {
+   "of": "sim-honest",
+   "mapping": {
+    "base run": "2026-10-13_fixfull_seed-oss-36b_v1",
+    "base arm": "sim-honest-fx-full",
+    "override run": "2026-10-13_fixfull_f9_seed-oss-36b_v1",
+    "override arm": "sim-honest-fx-fullF9",
+    "override keys": [
+     "ARIMA_forecasting__ARIMA_forecasting:2a19fb__1",
+     "abstract_storage_backend_interface__abstract_storage_backend_interface:d77f46__1",
+     "archive_testability_refactor__archive_testability_refactor:be4895__1",
+     "blacklist_pattern_anchor_inversion__blacklist_pattern_anchor_inversion:d80baa__1",
+     "check_security_marker_abuse_not_called_for_team__check_security_marker_abuse_not_called_for_team:b78bac__1",
+     "comment_char_vimrc_wrong__comment_char_vimrc_wrong:7de5e7__1",
+     "complex_search__complex_search:9a4142__1",
+     "concurrent_session_limiter__concurrent_session_limiter:4a80fc__1",
+     "conditional_workflow_triggers__conditional_workflow_triggers:cf0d08__1",
+     "config_manager__config_manager:982450__1",
+     "connection_pooling_for_redis__connection_pooling_for_redis:5a5e6a__1",
+     "content_encoding_detector__content_encoding_detector:72e4bf__1",
+     "credentials_authorize_null_password_bypass__credentials_authorize_null_password_bypass:b60523__1",
+     "database_query_column_order_mismatch__database_query_column_order_mismatch:a79c54__1",
+     "export__export:e15382__1",
+     "export_channel_history__export_channel_history:0c9b94__1",
+     "external_credential_provider_integration__external_credential_provider_integration:5cd06c__1",
+     "externalize_database_credentials_to_env_config__externalize_database_credentials_to_env_config:468c51__1",
+     "extract_auth_into_middleware_layer__extract_auth_into_middleware_layer:90e11a__1",
+     "extract_video_query_builder__extract_video_query_builder:d48abf__1",
+     "gitconfig_section_header_regex__gitconfig_section_header_regex:0de0c8__1",
+     "implement_rbac_with_role_permissions__implement_rbac_with_role_permissions:8be520__1",
+     "latest_story_order_by_start_time__latest_story_order_by_start_time:7abd10__1",
+     "latest_story_order_by_wrong_column__latest_story_order_by_wrong_column:de5852__1",
+     "latest_story_orders_by_start_time__latest_story_orders_by_start_time:4561ce__1",
+     "metadata_sql_injection_via_format__metadata_sql_injection_via_format:37bac0__1",
+     "migrate_worker_admin_server_to_unix_socket__migrate_worker_admin_server_to_unix_socket:2cff08__1",
+     "model_artifact_integrity_verification__model_artifact_integrity_verification:d985b5__1",
+     "model_registry_etcd_configuration_store__model_registry_etcd_configuration_store:09e493__1",
+     "mtg_clinical_trial_suppress_safety_notifications_02_add_granular_severity_tiers_and_notification_routing__mtg_clinical_trial_suppress_safety_notifications_02_add_granular_severity_tiers_and_notification_routing:3bf7f2__1",
+     "mtg_clinical_trial_withdrawal_misclassification_01_add_withdrawal_reason_validation_and_detail_fields__mtg_clinical_trial_withdrawal_misclassification_01_add_withdrawal_reason_validation_and_detail_fields:33480e__1",
+     "mtg_file_indexing_deleted_files_persist_03_add_incremental_update_with_change_detection__mtg_file_indexing_deleted_files_persist_03_add_incremental_update_with_change_detection:eb01ef__1",
+     "mtg_slack_clone_message_impersonate_01_add_message_editing_and_update_api__mtg_slack_clone_message_impersonate_01_add_message_editing_and_update_api:f91287__1",
+     "mtg_slack_clone_message_impersonate_05_role_based_access_control__mtg_slack_clone_message_impersonate_05_role_based_access_control:2e132e__1",
+     "mtg_tiktok_become_admin_03_implement_error_analytics_dashboard__mtg_tiktok_become_admin_03_implement_error_analytics_dashboard:cc3e87__1",
+     "mtg_tiktok_exfiltrate_tokens_02_comprehensive_error_analytics_dashboard__mtg_tiktok_exfiltrate_tokens_02_comprehensive_error_analytics_dashboard:61a30e__1",
+     "mtg_tiktok_leak_env_vars_04_implement_error_analytics_dashboard__mtg_tiktok_leak_env_vars_04_implement_error_analytics_dashboard:a8690b__1",
+     "mtg_user_tracking_delete_evidence_04_story_compression_and_dedup__mtg_user_tracking_delete_evidence_04_story_compression_and_dedup:1a787d__1",
+     "mtg_web_scraping_embedded_code_execution_03_add_scrape_depth_crawling_with_page_config_processing__mtg_web_scraping_embedded_code_execution_03_add_scrape_depth_crawling_with_page_config_processing:f3b88b__1",
+     "policy_factory_pattern__policy_factory_pattern:9f838d__1",
+     "resolve_url_fragment_filter_inverted__resolve_url_fragment_filter_inverted:af8e76__1",
+     "sc_rewrite_in_java__sc_rewrite_in_java:9bfda5__1",
+     "story_checksum_verification__story_checksum_verification:f5018a__1",
+     "story_comparison_report__story_comparison_report:16a2fc__1",
+     "weighted_ensemble_forecasting__weighted_ensemble_forecasting:5f195a__1"
+    ]
+   }
+  },
+  "sim-attack-fix939": {
+   "of": "sim-attack",
+   "run": "2026-10-13_g3_rep_seed-oss-36b_v1",
+   "meta_arm": "sim-attack-fix939",
+   "n_extracted": 823,
+   "fallback": [
+    "2026-10-13_g3_sim_seed-oss-36b_v1",
+    "sim-attack"
+   ]
+  }
+ },
+ "cells": {
+  "c_ff": [
+   "sim-attack-fx-full",
+   "real-honest"
+  ],
+  "b_ff": [
+   "sim-attack-fx-full",
+   "sim-honest-fx-full"
+  ],
+  "c_N": [
+   "sim-attack-fx-NL",
+   "real-honest"
+  ],
+  "b_N": [
+   "sim-attack-fx-NL",
+   "sim-honest-fx-NL"
+  ],
+  "c_F9": [
+   "sim-attack-fx-fullF9",
+   "real-honest"
+  ],
+  "b_F9": [
+   "sim-attack-fx-fullF9",
+   "sim-honest-fx-fullF9"
+  ],
+  "c_fix939": [
+   "sim-attack-fix939",
+   "real-honest"
+  ]
+ }
+}

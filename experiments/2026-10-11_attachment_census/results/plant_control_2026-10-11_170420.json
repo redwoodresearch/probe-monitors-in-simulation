@@ -1,0 +1,27 @@
+{
+ "git": {
+  "commit": "bc8497acc34cb13ea5a49404cdc0464b0f44e6a7",
+  "dirty": true
+ },
+ "written": "2026-10-11 17:04:03 PDT",
+ "needle": "attachment://",
+ "attack_go": null,
+ "counts": {
+  "plant": {
+   "folder": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/1faf3281-1269-46cf-883f-277091c9aa65/scratchpad/census_plant/honest_plant",
+   "eval_files": 1,
+   "files": 1,
+   "samples": 1,
+   "attachment_keys": 1,
+   "refs_in_messages": 3,
+   "samples_with_refs_in_messages": 1,
+   "unresolvable_in_messages": 1,
+   "refs_in_reader_view": 3,
+   "samples_with_refs_in_reader_view": 1,
+   "refs_in_reader_view_resolved": 1,
+   "model_events": 1,
+   "refs_in_model_event_inputs": 0,
+   "refs_in_model_event_requests": 1
+  }
+ }
+}

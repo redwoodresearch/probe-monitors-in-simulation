@@ -1,0 +1,52 @@
+# Every number in the figures is read from these files: committed ones via git show <commit>:<path>, the Q1 files from a local checkout (below); nothing is recomputed.
+# Commits are the tips of each track's branch on 2026-10-06, pinned so the figures regenerate exactly.
+q1:          # main session: Q1 probe, segment-end features. NOT committed anywhere on 2026-10-06 (untracked in the
+             # main session's checkout), so read from that checkout; figures.md records each file's sha256.
+  local: ~/probe-distribution-shift-from-sims
+  dir: experiments/2026-10-06_q1_segment_end/results
+  levels:    # text (scrub) level -> full-mode analysis; level from each file's config.extraction_run
+    0: q1_gpu_2026-10-06_190522.json
+    1: q1_gpu_2026-10-06_190523.json
+    2: q1_gpu_2026-10-06_190526.json
+    3: q1_gpu_2026-10-06_190528.json
+    4: q1_gpu_2026-10-06_190531.json
+    5: q1_gpu_2026-10-06_190535.json
+    6: q1_gpu_2026-10-06_190537.json
+    7: q1_gpu_2026-10-06_181139.json
+  selection_null:  # level -> selection-aware label-shuffle null (100 draws through the whole pipeline, 64-way layer choice)
+    0: q1_gpu_selection_null_environment_2026-10-06_215348.json
+    1: q1_gpu_selection_null_environment_2026-10-06_215203.json
+    2: q1_gpu_selection_null_environment_2026-10-06_214931.json
+    3: q1_gpu_selection_null_environment_2026-10-06_215631.json
+    4: q1_gpu_selection_null_environment_2026-10-06_215711.json
+    5: q1_gpu_selection_null_environment_2026-10-06_215539.json
+    6: q1_gpu_selection_null_environment_2026-10-06_223000.json
+    7: q1_gpu_selection_null_environment_2026-10-06_184104.json
+  callend_level7: q1_gpu_2026-10-06_213733_q1_alllayers_callend_scrub7.json   # call_end rerun without the <n> slot (amendment 3)
+  original_text: q1_gpu_2026-10-06_143545.json                                # original text, 8 layers
+  original_baselines: baselines_2026-10-06_134624.json                        # length, perplexity (original text)
+  random_layer: "48"
+tfidf_levels:     # baselines-q3: TF-IDF at every text level, held-out environments
+  commit: 82ebf28
+  path: experiments/2026-10-06_q1_text_baselines/results/tfidf_context_heldout_env_all_levels_summary_2026-10-06_192558.json
+tfidf_original:   # baselines-q3: TF-IDF on original text, main-task folds
+  commit: 9d1401a
+  path: experiments/2026-10-06_q1_text_baselines/results/tfidf_summary_2026-10-06_171905.json
+  variant: tfidf_cleaned
+judge:            # baselines-q3: the LinuxArena paper's stored judge verdicts
+  commit: fa3c5de
+  path: experiments/2026-10-06_q1_text_baselines/results/paper_judge_summary_2026-10-06_130221.json
+  judge: gpt-5.6-sol_medium
+  slice: no_run_over_32k
+pilots:           # baselines-q3: today's simulator vs September's
+  commit: 82ebf28
+  attack: experiments/2026-10-06_q1_text_baselines/results/tfidf_pilot_attack_summary_2026-10-06_190421.json
+  honest: experiments/2026-10-06_q1_text_baselines/results/tfidf_pilot_honest_summary_2026-10-06_213900.json
+q2:               # q2: impactful-call probes, labeler eb014307fd1aab31
+  commit: 65cd72b
+  path: experiments/2026-10-06_q2_impactful_call_transfer/results/q2_final_table_2026-10-06_221639.md
+q3:               # q3: in-domain attack detector, run 2026-10-06_181548
+  commit: 1e6d26b
+  path: experiments/2026-10-06_q3_attack_detector/results/metrics_2026-10-06_181548__2026-10-06_182739.json
+newlines:         # this experiment: output_end tokens ending in a newline, level 0 (analyze_readout_newlines.py)
+  repo_path: results/readout_newlines_2026-10-06_234901.json   # generated from a committed analyzer (git_dirty false)

@@ -1,0 +1,17 @@
+# Qwen3-32B writes its own Roleplaying responses to Apollo's prompts (the on-policy test).
+run: 2026-10-06_roleplaying-generations_qwen3-32b
+model: Qwen/Qwen3-32B
+weights: qwen-cache
+dtype: bfloat16
+prompts: roleplaying__plain__llama-70b-3.3   # Apollo's rollout file: system (scenario + "Answer the question directly,
+                                             # without asides or internal thoughts."), user question, answer prefix
+n_per_scenario: 1            # as Apollo's Llama-3.3 rollouts: 371 scenarios, one response each
+chat_template: {enable_thinking: false}
+continue_final_message: true # the answer prefix (e.g. "Student:") opens the assistant turn; Qwen continues it
+temperature: 1.0             # Apollo's setting (Together API and their local generation)
+top_p: 1.0                   # overrides Qwen3's generation_config defaults (temperature 0.6, top_p 0.95, top_k 20)
+top_k: 0                     # 0 = off
+max_new_tokens: 1024         # Apollo's Together cap was 3072; Llama's responses average about 45 tokens
+batch_size: 24
+seed: 0
+postprocess: rstrip("\n ") then lstrip("\n"), as Apollo's local generation; keeps the leading space

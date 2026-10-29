@@ -1,0 +1,15 @@
+{
+ "target": "il311_q3_sim2_s1",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "il311_q3_sim2_s1",
+   "arm": "sim_attack@september",
+   "staged_file": "/ev/il311_q3_sim2_s1_v1/inputs/sim_attack@september.jsonl",
+   "staged_sha": "1159d181fa042ba5df4c16adf48d3aaa92e27c6c63b95a00c523b5a41a915efe",
+   "epochs": 10,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

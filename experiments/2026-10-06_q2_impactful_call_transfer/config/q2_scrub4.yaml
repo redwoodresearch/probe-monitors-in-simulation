@@ -1,0 +1,11 @@
+# Q2 cleaned-text test (2026-10-07; approved by Aswin via the orchestrator): does normalizing the editor format remove
+# the real->sim pre_call gap? Text level 4 (line-number gutter removed from editor outputs). Merged over q2_probes.yaml and
+# q2_alllayers.yaml: the same calls, labels, folds, C grid and 1% threshold rule; only the reader's input text changes.
+# Launch without --draws: real labels only, no null. Level 0 at the same layers is in alllayers/fits.
+out_sub: scrub4
+alllayers_run: 2026-10-06_la_segment-end-scrub4_qwen3-32b_alllayers_v1   # main session's all-layer read at level 4 (read only)
+reference_alllayers_run: 2026-10-06_la_segment-end_qwen3-32b_alllayers_v1   # level 0: only calls whose three readouts sit where they do there
+                                        # are fit (scrubbing can empty an output and move prev_content); the kept
+                                        # calls go to scrub4/manifest.json, so level 0 can be scored on the same calls
+layers: [9, 16, 17]                     # level 0 pre_call headline layers, per outer fold, trained on real or sim (attack only, 64 layers);
+                                        # call_end and prev_content are fit at the same layers, as controls

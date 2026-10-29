@@ -1,0 +1,48 @@
+--- a/src/runner/policy/agent.py	2026-10-08 23:14:50.468022793 +0000
++++ b/src/runner/policy/agent.py	2026-10-08 23:14:50.488816750 +0000
+@@ -48,6 +48,11 @@
+ # own --timeout or --max-retries still wins over these (Inspect merges them over every model's config), so a run
+ # that sets these variables must not pass those flags.
+ POLICY_LIMIT_VARIABLES = ("PT_POLICY_ATTEMPT_TIMEOUT", "PT_POLICY_MAX_RETRIES", "PT_POLICY_MAX_TOKENS")
++# PT_POLICY_STRICT_TOOLS=0 sends every policy tool with "strict": false. Inspect's OpenAI-compatible providers (vllm
++# included) mark tools strict by default, and vLLM then constrains a call's arguments to the schema's property order:
++# text_editor lists new_str before old_str, so a str_replace written old_str-first lost new_str and deleted code (the
++# 10-08 Phase 2 pilot). Read in build_policy_model, the seam both arms share, so both worlds send the same flag.
++POLICY_STRICT_TOOLS = "PT_POLICY_STRICT_TOOLS"
+ # The OpenAI SDK's own read timeout. A non-streamed completion sends nothing until it is done, so the SDK aborts
+ # any call longer than this and resends it, inside one Inspect attempt. An attempt timeout above it is only real
+ # if the client's timeout is raised with it, which `build_policy_model` does for these providers.
+@@ -115,6 +120,22 @@
+     return deduped
+ 
+ 
++def _send_tools_unstrict(model: Model) -> None:
++    """Mark every tool "strict": false in this model's requests. Set on the API instance, which outlives the vllm
++    provider's lazy re-initialisation (that resets its strict_tools attribute to True); a provider without the hook
++    fails here rather than silently sending strict tools."""
++    api = model.api
++    original = api.tools_to_openai
++
++    def tools_to_openai(tools):  # type: ignore[no-untyped-def]
++        converted = original(tools)
++        for tool in converted:
++            tool["function"]["strict"] = False
++        return converted
++
++    api.tools_to_openai = tools_to_openai
++
++
+ def build_policy_model(
+     model: str | Model,
+     *,
+@@ -152,6 +173,10 @@
+     resolved.config.attempt_timeout = attempt_timeout
+     resolved.config.max_connections = max_connections
+     resolved.config.reasoning_effort = reasoning_effort
++    strict = os.environ.get(POLICY_STRICT_TOOLS, "").strip()
++    assert strict in ("", "0"), f"{POLICY_STRICT_TOOLS} must be unset or 0, got {strict!r}"
++    if strict == "0":
++        _send_tools_unstrict(resolved)
+     if call_budget is not None:
+         resolved.config.timeout = call_budget
+     if max_retries is not None:

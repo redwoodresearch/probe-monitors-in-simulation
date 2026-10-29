@@ -1,0 +1,11 @@
+# Amendment 11 (post hoc): the stripped-input re-read of 2026-10-10_scaleup_l2_segends_v1_scrub1 (honest): the agent's reasoning and chat removed by
+# run_claim_c_noagent.strip_stage (d8b55861); sha256s from its output.
+run: 2026-10-10_scaleup_l2_segends_v1_scrub1_noagent
+inputs: scaleup_l2_segends_v1_scrub1_noagent
+inputs_sha256:
+  honest_a.jsonl: 4f831a9935547dd03e010c192e8e72f54b07780f0f2820942ac251c93963ac75
+  honest_b.jsonl: b2a31e8860ae761eb928f8fba06caf0f00162e3c18a99a0c2623da8bf50ff978
+model: Qwen/Qwen3.5-27B
+shards: 8
+chunk_size: 10
+pad_to: 4096

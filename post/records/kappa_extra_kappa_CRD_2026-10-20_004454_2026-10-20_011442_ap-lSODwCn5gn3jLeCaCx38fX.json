@@ -1,0 +1,7397 @@
+{
+ "meta": {
+  "git": "10d3b2e28ebf0ac116134d1fc319248cb23ac688",
+  "stamp": "2026-10-20_011442",
+  "app_id": "ap-lSODwCn5gn3jLeCaCx38fX",
+  "name": "kappa_extra_kappa_CRD_2026-10-20_004454_2026-10-20_011442_ap-lSODwCn5gn3jLeCaCx38fX",
+  "label": "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction; D1 read from route C pooled A @ a936a5d9762763f9feed351aebdeeec2d8114f21 (read, never recomputed; identity-guarded on the bytes read); POST HOC; five-probe without on-policy; the five-probe sensitivity (09 @ 3fbc0e451) and kappa degeneracy counts; a reduce over the job's stored rows; chosen after the per-set values were seen (0d, 10-16); the six-probe group stays PRIMARY",
+  "record_sha256": "40ca1bf7a6deaf51175fb56cd89d7277b64ca1ec1ffdf87292d6ae0feca3cce9",
+  "job": "kappa_CRD_2026-10-20_004454",
+  "spec_dest": "xfer/fpr507prep/records/results/kappa_CRD_2026-10-20_004454.json",
+  "spec_git": "7797f2cc29ed00571dc2091e234a6d3396936c33"
+ },
+ "gate": {
+  "record": "xfer/fpr507prep/records/results/kappa_CRD_2026-10-20_004454.json",
+  "record_sha256": "40ca1bf7a6deaf51175fb56cd89d7277b64ca1ec1ffdf87292d6ae0feca3cce9",
+  "mismatch": [],
+  "draw0_points_compared": 96,
+  "pass": true
+ },
+ "five_probe_sensitivity": {
+  "label": "POST HOC (chosen after the per-set values were seen): excludes the on-policy probe (own_all_rs_uncut_L48), whose kappa is degenerate at the catch ceiling. The six-probe group is primary.",
+  "members": [
+   "sol_a_uncut",
+   "FIBS|uncut",
+   "harmfulness|uncut",
+   "refusal|uncut",
+   "high-stakes|uncut"
+  ],
+  "groups": {
+   "five_probe_sensitivity|C|paper_cells": {
+    "members": [
+     "sol_a_uncut C",
+     "FIBS|uncut C",
+     "harmfulness|uncut C",
+     "refusal|uncut C",
+     "high-stakes|uncut C"
+    ],
+    "role": "lead",
+    "draw_stream": "the union stream (all-origins draws)",
+    "definition": "per draw b: mean over the group's probes of each probe's combo kappa; Delta = mean kappa(sim) - mean kappa(run2) (paired)",
+    "joint": {
+     "mean_kappa_sim_vs_run1": {
+      "point": 0.17781179896127713,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.1391656802256411,
+       0.2107435481454735
+      ]
+     },
+     "mean_kappa_run2_vs_run1": {
+      "point": 0.201609267271585,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.1637253878122666,
+       0.23340988972748575
+      ]
+     },
+     "mean_kappa_sim_minus_run2": {
+      "point": -0.02379746831030788,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       -0.06916775060110292,
+       0.022940293686559064
+      ]
+     }
+    },
+    "fixed": {
+     "mean_kappa_sim_vs_run1": {
+      "point": 0.17781179896127713,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.14520353742610742,
+       0.21006743253999857
+      ]
+     },
+     "mean_kappa_run2_vs_run1": {
+      "point": 0.201609267271585,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.1685276603005706,
+       0.23415208026362302
+      ]
+     },
+     "mean_kappa_sim_minus_run2": {
+      "point": -0.02379746831030788,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       -0.06666820546598352,
+       0.019750774583239455
+      ]
+     }
+    },
+    "labels": {
+     "members_launch_share": {
+      "sol_a_uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "FIBS|uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "harmfulness|uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "refusal|uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "high-stakes|uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      }
+     },
+     "mean_kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+    }
+   },
+   "five_probe_sensitivity|C|pooled_all_origins": {
+    "members": [
+     "sol_a_uncut C",
+     "FIBS|uncut C",
+     "harmfulness|uncut C",
+     "refusal|uncut C",
+     "high-stakes|uncut C"
+    ],
+    "role": "lead",
+    "draw_stream": "the union stream (all-origins draws)",
+    "definition": "per draw b: mean over the group's probes of each probe's combo kappa; Delta = mean kappa(sim) - mean kappa(run2) (paired)",
+    "joint": {
+     "mean_kappa_sim_vs_run1": {
+      "point": 0.16719511042956325,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.14054763593038327,
+       0.19825577688735482
+      ]
+     },
+     "mean_kappa_run2_vs_run1": {
+      "point": 0.19514902542771823,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.1647113209468518,
+       0.2230722182854225
+      ]
+     },
+     "mean_kappa_sim_minus_run2": {
+      "point": -0.02795391499815497,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       -0.06183371085572523,
+       0.013368770527908485
+      ]
+     }
+    },
+    "fixed": {
+     "mean_kappa_sim_vs_run1": {
+      "point": 0.16719511042956325,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.13952804303791344,
+       0.1941869638500303
+      ]
+     },
+     "mean_kappa_run2_vs_run1": {
+      "point": 0.19514902542771823,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.16818045224940736,
+       0.22230106133926145
+      ]
+     },
+     "mean_kappa_sim_minus_run2": {
+      "point": -0.02795391499815497,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       -0.06352734035026451,
+       0.008162102003176672
+      ]
+     }
+    },
+    "labels": {
+     "members_launch_share": {
+      "sol_a_uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "FIBS|uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "harmfulness|uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "refusal|uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "high-stakes|uncut C": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      }
+     },
+     "mean_kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+    }
+   },
+   "five_probe_sensitivity|R|paper_cells": {
+    "members": [
+     "sol_a_uncut R",
+     "FIBS|uncut R",
+     "harmfulness|uncut R",
+     "refusal|uncut R",
+     "high-stakes|uncut R"
+    ],
+    "role": "beside (R)",
+    "draw_stream": "the union stream (all-origins draws)",
+    "definition": "per draw b: mean over the group's probes of each probe's combo kappa; Delta = mean kappa(sim) - mean kappa(run2) (paired)",
+    "joint": {
+     "mean_kappa_sim_vs_run1": {
+      "point": 0.23418470897846774,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.18337598309002284,
+       0.26294471332222596
+      ]
+     },
+     "mean_kappa_run2_vs_run1": {
+      "point": 0.2462284743538791,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.19727595022999445,
+       0.2761163288531761
+      ]
+     },
+     "mean_kappa_sim_minus_run2": {
+      "point": -0.012043765375411353,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       -0.06572474008445772,
+       0.039335957775377225
+      ]
+     }
+    },
+    "fixed": {
+     "mean_kappa_sim_vs_run1": {
+      "point": 0.23418470897846774,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.19567333497273376,
+       0.27194795852110176
+      ]
+     },
+     "mean_kappa_run2_vs_run1": {
+      "point": 0.2462284743538791,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.20812731772470053,
+       0.28427815054422184
+      ]
+     },
+     "mean_kappa_sim_minus_run2": {
+      "point": -0.012043765375411353,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       -0.06237574574491019,
+       0.03727936166869891
+      ]
+     }
+    },
+    "labels": {
+     "members_launch_share": {
+      "sol_a_uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "FIBS|uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "harmfulness|uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "refusal|uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "high-stakes|uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      }
+     },
+     "mean_kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+    }
+   },
+   "five_probe_sensitivity|R|pooled_all_origins": {
+    "members": [
+     "sol_a_uncut R",
+     "FIBS|uncut R",
+     "harmfulness|uncut R",
+     "refusal|uncut R",
+     "high-stakes|uncut R"
+    ],
+    "role": "beside (R)",
+    "draw_stream": "the union stream (all-origins draws)",
+    "definition": "per draw b: mean over the group's probes of each probe's combo kappa; Delta = mean kappa(sim) - mean kappa(run2) (paired)",
+    "joint": {
+     "mean_kappa_sim_vs_run1": {
+      "point": 0.2100461044926536,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.18077732053828452,
+       0.24595293795974343
+      ]
+     },
+     "mean_kappa_run2_vs_run1": {
+      "point": 0.22890742163831593,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.19653076857800295,
+       0.26346787328905064
+      ]
+     },
+     "mean_kappa_sim_minus_run2": {
+      "point": -0.018861317145662332,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       -0.05977110050340338,
+       0.028028367460498485
+      ]
+     }
+    },
+    "fixed": {
+     "mean_kappa_sim_vs_run1": {
+      "point": 0.2100461044926536,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.1789166717214587,
+       0.24083517640837038
+      ]
+     },
+     "mean_kappa_run2_vs_run1": {
+      "point": 0.22890742163831593,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       0.1978444013195252,
+       0.25993164882605596
+      ]
+     },
+     "mean_kappa_sim_minus_run2": {
+      "point": -0.018861317145662332,
+      "finite_draws": 10000,
+      "draws": 10000,
+      "ci95": [
+       -0.060059151216587676,
+       0.02133393015481632
+      ]
+     }
+    },
+    "labels": {
+     "members_launch_share": {
+      "sol_a_uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "FIBS|uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "harmfulness|uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "refusal|uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      },
+      "high-stakes|uncut R": {
+       "kappa_run2_vs_run1": "descriptive",
+       "kappa_sim_vs_run1": "descriptive",
+       "kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+      }
+     },
+     "mean_kappa_sim_minus_run2": "Delta kappa = kappa(sim, run1) - kappa(run2, run1), paired over the same draws (09 RULE item 30(5) @ 8c5a39038: required for any sim-vs-run2 kappa comparison; the post compares them); the body value: the union-stream combo, JOINT"
+    }
+   }
+  }
+ },
+ "degeneracy": {
+  "rule": "undefined: 1 - p_e not > 0 (p_e = p1 q1 + (1 - p1)(1 - q1)) or a non-finite margin; ceiling: the world's catch exactly 0 or 1; per union combo x mode, the combo's per-draw 2x2 margins as kappa_reduce combines them; counts over draws 1..D, draw 0 separately",
+  "by_combo": {
+   "paper_cells": {
+    "joint": {
+     "sol_a_uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "sol_a_uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "FIBS|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "FIBS|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "harmfulness|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "harmfulness|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "refusal|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "refusal|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "high-stakes|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "high-stakes|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "own_all_rs_uncut_L48 C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 78,
+       "kappa_sim_vs_run1": 1
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 727
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 860
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 10
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "own_all_rs_uncut_L48 R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 1,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 189
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 217
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 1
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "fixed": {
+     "sol_a_uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "sol_a_uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "FIBS|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "FIBS|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "harmfulness|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "harmfulness|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "refusal|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "refusal|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "high-stakes|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "high-stakes|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "own_all_rs_uncut_L48 C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 20,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 484
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 456
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 1
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "own_all_rs_uncut_L48 R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 1,
+       "kappa_sim_vs_run1": 1
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 190
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 178
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 2
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "pooled_all_origins": {
+    "joint": {
+     "sol_a_uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "sol_a_uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "FIBS|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "FIBS|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "harmfulness|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "harmfulness|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "refusal|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "refusal|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "high-stakes|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "high-stakes|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "own_all_rs_uncut_L48 C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 29,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 520
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 561
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 8
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "own_all_rs_uncut_L48 R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 1,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 190
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 187
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 1
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "fixed": {
+     "sol_a_uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "sol_a_uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "FIBS|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "FIBS|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "harmfulness|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "harmfulness|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "refusal|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "refusal|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "high-stakes|uncut C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "high-stakes|uncut R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "own_all_rs_uncut_L48 C": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 20,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 484
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 456
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 12
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "own_all_rs_uncut_L48 R": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 1,
+       "kappa_sim_vs_run1": 1
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 190
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 178
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 2
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   }
+  },
+  "by_probe_origin": {
+   "sol_a_uncut C": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "sol_a_uncut R": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 1
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 15
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 1
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 2
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 1
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 1
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 2
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 1
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 2
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 1
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 1
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 2
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "FIBS|uncut C": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "FIBS|uncut R": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "harmfulness|uncut C": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "harmfulness|uncut R": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "refusal|uncut C": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "refusal|uncut R": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "high-stakes|uncut C": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "high-stakes|uncut R": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 0,
+       "kappa_sim_vs_run1": 0
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 0
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 0
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "own_all_rs_uncut_L48 C": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 3579,
+       "kappa_sim_vs_run1": 109
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3579
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 112
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": "1",
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 3700,
+       "kappa_sim_vs_run1": 184
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3700
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 184
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": "1",
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 3693,
+       "kappa_sim_vs_run1": 139
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3693
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 139
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": "1",
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 3700,
+       "kappa_sim_vs_run1": 184
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3700
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 184
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": "1",
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 10000,
+       "kappa_sim_vs_run1": 7719
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": true,
+       "kappa_sim_vs_run1": true
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 7719
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": "1",
+       "run2": "1",
+       "sim": "1"
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 10000,
+       "kappa_sim_vs_run1": 10000
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": true,
+       "kappa_sim_vs_run1": true
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 10000
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": "1",
+       "run2": "1",
+       "sim": "1"
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 2008,
+       "kappa_sim_vs_run1": 4983
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 5447
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3679
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 9096
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": "1"
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 1292,
+       "kappa_sim_vs_run1": 3592
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3592
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3655
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 10000
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": "1"
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 1390,
+       "kappa_sim_vs_run1": 3815
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3854
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3660
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 9851
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": "1"
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 1292,
+       "kappa_sim_vs_run1": 3592
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3592
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3655
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 10000
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": "1"
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 856,
+       "kappa_sim_vs_run1": 88
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3710
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 2346
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 232
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 452,
+       "kappa_sim_vs_run1": 13
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3712
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 1296
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 27
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 552,
+       "kappa_sim_vs_run1": 125
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3711
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 1581
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 326
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 452,
+       "kappa_sim_vs_run1": 191
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3712
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 1296
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 501
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   },
+   "own_all_rs_uncut_L48 R": {
+    "S_new (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 523,
+       "kappa_sim_vs_run1": 456
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3700
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 1537
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 456
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 437,
+       "kappa_sim_vs_run1": 489
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3700
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 1297
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 489
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_new (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 459,
+       "kappa_sim_vs_run1": 476
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3700
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 1356
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 476
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 437,
+       "kappa_sim_vs_run1": 489
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 3700
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 1297
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 489
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_newmains (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 10000,
+       "kappa_sim_vs_run1": 10000
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": true,
+       "kappa_sim_vs_run1": true
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 10000
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": "1",
+       "run2": "1",
+       "sim": "1"
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 10000,
+       "kappa_sim_vs_run1": 10000
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": true,
+       "kappa_sim_vs_run1": true
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 10000
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": "1",
+       "run2": "1",
+       "sim": "1"
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 3655,
+       "kappa_sim_vs_run1": 1292
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3655
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 1292
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": "1",
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 3655,
+       "kappa_sim_vs_run1": 1292
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3655
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 1292
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": "1",
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_old (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 3655,
+       "kappa_sim_vs_run1": 1292
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3655
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 1292
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": "1",
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 3655,
+       "kappa_sim_vs_run1": 1292
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 10000
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3655
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 1292
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": "1",
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: paper_cells]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 163,
+       "kappa_sim_vs_run1": 20
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 502
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3693
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 475
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 165,
+       "kappa_sim_vs_run1": 24
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 509
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3693
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 502
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    },
+    "S_paper493 (all-origins draws) [pooled: pooled_all_origins]": {
+     "joint": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 165,
+       "kappa_sim_vs_run1": 22
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 508
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3693
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 479
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     },
+     "fixed": {
+      "undefined_draws": {
+       "kappa_run2_vs_run1": 165,
+       "kappa_sim_vs_run1": 24
+      },
+      "undefined_draw0": {
+       "kappa_run2_vs_run1": false,
+       "kappa_sim_vs_run1": false
+      },
+      "catch_at_ceiling_draws": {
+       "run1": {
+        "at_0": 0,
+        "at_1": 509
+       },
+       "run2": {
+        "at_0": 0,
+        "at_1": 3693
+       },
+       "sim": {
+        "at_0": 0,
+        "at_1": 502
+       }
+      },
+      "catch_at_ceiling_draw0": {
+       "run1": null,
+       "run2": null,
+       "sim": null
+      },
+      "draws": 10000
+     }
+    }
+   }
+  },
+  "summary": {
+   "paper_cells|joint|C": {
+    "undefined_draws_and_draw0_by_probe": {
+     "sol_a_uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "FIBS|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "harmfulness|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "refusal|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "high-stakes|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "own_all_rs_uncut_L48 C": {
+      "undefined_draws_max_over_pairs": 78,
+      "draw0_undefined": false
+     }
+    },
+    "on_policy_degenerate": true,
+    "probes_with_any_undefined_kappa": [
+     "own_all_rs_uncut_L48 C"
+    ],
+    "other_probes_at_least_as_degenerate_as_on_policy": [],
+    "statement": "no other probe is as degenerate as the on-policy probe"
+   },
+   "paper_cells|joint|R": {
+    "undefined_draws_and_draw0_by_probe": {
+     "sol_a_uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "FIBS|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "harmfulness|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "refusal|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "high-stakes|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "own_all_rs_uncut_L48 R": {
+      "undefined_draws_max_over_pairs": 1,
+      "draw0_undefined": false
+     }
+    },
+    "on_policy_degenerate": true,
+    "probes_with_any_undefined_kappa": [
+     "own_all_rs_uncut_L48 R"
+    ],
+    "other_probes_at_least_as_degenerate_as_on_policy": [],
+    "statement": "no other probe is as degenerate as the on-policy probe"
+   },
+   "paper_cells|fixed|C": {
+    "undefined_draws_and_draw0_by_probe": {
+     "sol_a_uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "FIBS|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "harmfulness|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "refusal|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "high-stakes|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "own_all_rs_uncut_L48 C": {
+      "undefined_draws_max_over_pairs": 20,
+      "draw0_undefined": false
+     }
+    },
+    "on_policy_degenerate": true,
+    "probes_with_any_undefined_kappa": [
+     "own_all_rs_uncut_L48 C"
+    ],
+    "other_probes_at_least_as_degenerate_as_on_policy": [],
+    "statement": "no other probe is as degenerate as the on-policy probe"
+   },
+   "paper_cells|fixed|R": {
+    "undefined_draws_and_draw0_by_probe": {
+     "sol_a_uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "FIBS|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "harmfulness|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "refusal|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "high-stakes|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "own_all_rs_uncut_L48 R": {
+      "undefined_draws_max_over_pairs": 1,
+      "draw0_undefined": false
+     }
+    },
+    "on_policy_degenerate": true,
+    "probes_with_any_undefined_kappa": [
+     "own_all_rs_uncut_L48 R"
+    ],
+    "other_probes_at_least_as_degenerate_as_on_policy": [],
+    "statement": "no other probe is as degenerate as the on-policy probe"
+   },
+   "pooled_all_origins|joint|C": {
+    "undefined_draws_and_draw0_by_probe": {
+     "sol_a_uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "FIBS|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "harmfulness|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "refusal|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "high-stakes|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "own_all_rs_uncut_L48 C": {
+      "undefined_draws_max_over_pairs": 29,
+      "draw0_undefined": false
+     }
+    },
+    "on_policy_degenerate": true,
+    "probes_with_any_undefined_kappa": [
+     "own_all_rs_uncut_L48 C"
+    ],
+    "other_probes_at_least_as_degenerate_as_on_policy": [],
+    "statement": "no other probe is as degenerate as the on-policy probe"
+   },
+   "pooled_all_origins|joint|R": {
+    "undefined_draws_and_draw0_by_probe": {
+     "sol_a_uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "FIBS|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "harmfulness|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "refusal|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "high-stakes|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "own_all_rs_uncut_L48 R": {
+      "undefined_draws_max_over_pairs": 1,
+      "draw0_undefined": false
+     }
+    },
+    "on_policy_degenerate": true,
+    "probes_with_any_undefined_kappa": [
+     "own_all_rs_uncut_L48 R"
+    ],
+    "other_probes_at_least_as_degenerate_as_on_policy": [],
+    "statement": "no other probe is as degenerate as the on-policy probe"
+   },
+   "pooled_all_origins|fixed|C": {
+    "undefined_draws_and_draw0_by_probe": {
+     "sol_a_uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "FIBS|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "harmfulness|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "refusal|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "high-stakes|uncut C": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "own_all_rs_uncut_L48 C": {
+      "undefined_draws_max_over_pairs": 20,
+      "draw0_undefined": false
+     }
+    },
+    "on_policy_degenerate": true,
+    "probes_with_any_undefined_kappa": [
+     "own_all_rs_uncut_L48 C"
+    ],
+    "other_probes_at_least_as_degenerate_as_on_policy": [],
+    "statement": "no other probe is as degenerate as the on-policy probe"
+   },
+   "pooled_all_origins|fixed|R": {
+    "undefined_draws_and_draw0_by_probe": {
+     "sol_a_uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "FIBS|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "harmfulness|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "refusal|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "high-stakes|uncut R": {
+      "undefined_draws_max_over_pairs": 0,
+      "draw0_undefined": false
+     },
+     "own_all_rs_uncut_L48 R": {
+      "undefined_draws_max_over_pairs": 1,
+      "draw0_undefined": false
+     }
+    },
+    "on_policy_degenerate": true,
+    "probes_with_any_undefined_kappa": [
+     "own_all_rs_uncut_L48 R"
+    ],
+    "other_probes_at_least_as_degenerate_as_on_policy": [],
+    "statement": "no other probe is as degenerate as the on-policy probe"
+   }
+  }
+ }
+}

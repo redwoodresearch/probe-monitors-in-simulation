@@ -1,0 +1,27 @@
+# The 10-08 pilot's rerun with policy tools strict false (Aswin, 10-08 ~16:08 PT, option A), after the dry check passed
+# (2026-10-08_172255_dry_strict: analyze_strict_dry_check.py PASS; the coordinator's raw-file check PASS). All 140
+# runs again, fresh references: the 2026-10-08_124444_pilot run stays as invalid evidence (str_replace lost new_str).
+# Aswin's conditions (10-08 ~18:20 PT): a canary first (one task's real arms, canary_watch.py aborting the launch on a
+# real str_replace without new_str and opening the gate after one passes), interleaved real arms (run_pilot.py starts
+# a task's A, B and attack together), the spend limit blocking new tasks only (#177).
+#   PATH=$PWD/fixed_digest_lookup:$PATH IMAGES_JSON=<setup_devbox images.json> run_pilot.py \
+#       --pilot-config config/pilot_rerun_strict.yaml --base-urls <3 servers> --commit <commit> --out <run dir>
+#   canary_watch.py <run dir> t17_slack_clone   # beside it, from the start
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september
+simulators: [september, today]
+simulator_confirmed: true
+max_runs_per_server: 10   # 3 servers, as in the pilot (amendment 21)
+max_real_runs: 10
+reference_tries: 3
+# Tag form for every task (no lookup answered), downloads blocked: a reference and its forks see one compose file.
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+# The canary: t17_slack_clone's real arms made str_replace calls in all three arms of the broken pilot (6, 6, 4).
+canary: t17_slack_clone
+# Aswin's limits cover the pilot, the dry check and this rerun together: $2,500 projected and $2,750 worst case,
+# minus the pilot's actual simulator spend ($420.22, launch.json's last entry) and the dry check's ($30.81).
+spend:
+  cap_usd: 2048            # 2500 - 420.22 - 30.81, rounded down
+  worst_case_limit_usd: 2298   # 2750 - 420.22 - 30.81, rounded down
+  worst_per_sim_run_usd: 60
+  prior_per_sim_run_usd: 25

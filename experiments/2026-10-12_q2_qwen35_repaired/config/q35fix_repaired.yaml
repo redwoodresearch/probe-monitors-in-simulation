@@ -1,0 +1,12 @@
+# Qwen3.5 repaired arm (post hoc; PLAN.md): fix939's 823 both-fixes copies (staged by ../2026-10-08_q3_swap_cue/run_fix939_stage.py),
+# read as Qwen3.5's dump read the originals, saving only the detector's layer 63.
+run: 2026-10-13_q2_q35fix_repaired_qwen35-27b_l63_v1
+inputs_from: 2026-10-11_q3_fix939_inputs_v1
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null
+pad_to: 4096
+shards: 8
+chunk_size: 25
+layers: [63]

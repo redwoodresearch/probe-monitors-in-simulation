@@ -1,0 +1,21 @@
+{
+ "headroom_json": "results/il_headroom_2026-10-15_0600.json",
+ "usable_hard_usd": 1028.03,
+ "order": "global cell-ID order (sorted keys across hosts)",
+ "requested_caps_usd": {
+  "old": 269
+ },
+ "requested_total_usd": 269,
+ "fits": true,
+ "selected": {
+  "old": [
+   "t112_tiktok",
+   "t178_clinical_trial",
+   "t58_model_registry"
+  ]
+ },
+ "held": {},
+ "caps_usd": {
+  "old": 269
+ }
+}

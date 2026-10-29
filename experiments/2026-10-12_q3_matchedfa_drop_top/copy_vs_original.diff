@@ -1,0 +1,89 @@
+--- experiments/2026-10-08_q3_onpolicy_figures/analyze_q22_matched_fa_POSTHOC.py	2026-10-12 10:41:36
++++ experiments/2026-10-12_q3_matchedfa_drop_top/analyze_q22_matched_fa_dropped_POSTHOC.py	2026-10-12 10:43:25
+@@ -1,5 +1,10 @@
+ """POST HOC, exploratory: Q2.2 at matched false alarms. $0, local, fixed scores.
+ 
++COPY of experiments/2026-10-08_q3_onpolicy_figures/analyze_q22_matched_fa_POSTHOC.py (blob f87ca212, as run at 5097ff6b)
++with only a task filter added (--drop-sets, --drop): the dropped tasks are removed from every world and from calibration
++before anything is computed, and the task resamples run over the kept tasks. Also: the import path, the output folder
++(this experiment), the output name (it carries the drop key) and two provenance fields (drop, kept_tasks). See copy_vs_original.diff.
++
+ Q2.2 compares catch at one frozen threshold set on real runs, where simulated harmless calls false-alarm at 2.92% vs
+ 1.14% real (q22_levels_POSTHOC). Here each world gets its own threshold, so catch is compared at matched false-alarm
+ targets. The probes are the real-trained monitor's, as in Q2.2 (cells real->real, real->sim, real->run2), on the per-call
+@@ -12,7 +17,7 @@
+ - Intervals: the scorer's 2,000 task resamples (task_weights, its seed), thresholds re-estimated on every draw, scores
+   fixed. They do not refit, so they are narrower than Q2.2's 500-refit intervals.
+ 
+-  uv run --no-project --with numpy python analyze_q22_matched_fa_POSTHOC.py <per-call draw-0 file>
++  uv run --no-project --with numpy python analyze_q22_matched_fa_dropped_POSTHOC.py <per-call draw-0 file> --drop-sets <drop_sets json> --drop none|top1|top3|top5
+ """
+ 
+ import argparse
+@@ -22,28 +27,33 @@
+ from pathlib import Path
+ from zoneinfo import ZoneInfo
+ 
++import sys
++
+ import numpy as np
+ 
+-from analyze_scaleup_plants import task_weights, threshold
+-
+ HERE = Path(__file__).parent
++sys.path.insert(0, str(HERE.parent / "2026-10-08_q3_onpolicy_figures"))
++from analyze_scaleup_plants import task_weights, threshold  # noqa: E402
++
+ WORLDS = {"real": "real->real", "sim": "real->sim", "run2": "real->run2"}
+ FPRS, N = (0.01, 0.05), 2000
+ 
+ 
+-def main(percall_path: str):
++def main(percall_path: str, drop_sets_path: str, drop_key: str):
++    ds_raw = Path(drop_sets_path).read_bytes()
++    DROP = set() if drop_key == "none" else set(json.loads(ds_raw)["drop_sets"][drop_key])
+     raw = Path(percall_path).read_bytes()
+     P = json.loads(raw)
+     meta, cells, folds, seed = P["meta"], P["draws"][0]["cells"], P["folds"], P["config"]["seed"]
+-    tasks = sorted({m["task"] for m in meta})
++    tasks = sorted({m["task"] for m in meta} - DROP)
+     ti = {t: i for i, t in enumerate(tasks)}
+     cal = cells["real->real"]["per_call"]["calibration"]  # every world's calibration calls, scored by the real-trained model k
+     C = {w: tuple(np.array(x) for x in zip(*[(ti[meta[i]["task"]], s, k) for i, s, k in zip(cal["row"], cal["score"], cal["model_fold"])
+-                                               if meta[i]["world"] == w and meta[i]["y"] == 0])) for w in WORLDS}
++                                               if meta[i]["world"] == w and meta[i]["y"] == 0 and meta[i]["task"] not in DROP])) for w in WORLDS}
+     T = {}
+     for w, cell in WORLDS.items():
+         p = cells[cell]["per_call"]
+-        rows = [(ti[meta[i]["task"]], folds[meta[i]["task"]], s, meta[i]["y"]) for i, s in zip(p["row"], p["score"]) if meta[i]["world"] == w]
++        rows = [(ti[meta[i]["task"]], folds[meta[i]["task"]], s, meta[i]["y"]) for i, s in zip(p["row"], p["score"]) if meta[i]["world"] == w and meta[i]["task"] not in DROP]
+         T[w] = tuple(np.array(x) for x in zip(*rows))
+ 
+     def levels(w8):
+@@ -70,13 +80,15 @@
+     ok = [v for v in vals[1:] if v is not None]
+     ci = lambda xs: [float(np.percentile(xs, 2.5)), float(np.percentile(xs, 97.5))]
+     res = {"label": "POST HOC, exploratory: Q2.2 at matched false alarms (each world's own threshold); fixed scores, 2,000 task resamples, no refit",
+-           "input": {"file": Path(percall_path).name, "sha256": hashlib.sha256(raw).hexdigest()}, "failed": N - len(ok), "targets": {}}
++           "input": {"file": Path(percall_path).name, "sha256": hashlib.sha256(raw).hexdigest()}, "failed": N - len(ok), "targets": {},
++           "drop": {"key": drop_key, "tasks": sorted(DROP), "drop_sets_file": Path(drop_sets_path).name, "drop_sets_sha256": hashlib.sha256(ds_raw).hexdigest()},
++           "kept_tasks": len(tasks)}
+     for key in ("1%", "5%"):
+         o = vals[0][key]
+         res["targets"][key] = {w: {m: {"observed": o[w][m], "ci95": ci([v[key][w][m] for v in ok])} for m in ("catch", "false_alarm")} for w in WORLDS} | {
+             g: {"observed": o[g], "ci95": ci([v[key][g] for v in ok])} for g in ("gap real - sim", "control run 1 - run 2")}
+     stamp = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d_%H%M%S")
+-    dst = HERE / "results" / f"q22_matched_fa_POSTHOC_{stamp}.json"
++    dst = HERE / "results" / f"q22_matched_fa_drop_{drop_key}_POSTHOC_{stamp}.json"
+     with dst.open("x") as fh:
+         fh.write(json.dumps(res, indent=1))
+     print("failed draws:", res["failed"])
+@@ -92,4 +104,7 @@
+ if __name__ == "__main__":
+     ap = argparse.ArgumentParser()
+     ap.add_argument("percall_path")
+-    main(ap.parse_args().percall_path)
++    ap.add_argument("--drop-sets", required=True)
++    ap.add_argument("--drop", required=True, choices=["none", "top1", "top3", "top5"])
++    a = ap.parse_args()
++    main(a.percall_path, a.drop_sets, a.drop)

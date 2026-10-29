@@ -1,0 +1,19 @@
+{
+ "mode": "gate",
+ "analysis_git": "3c8f19bfbb494ba01b07f4f402473ffe9d01c2c9",
+ "written": "2026-10-13_173209",
+ "draws": 2000,
+ "seed": 20261013,
+ "d9_scores_sha256": "48fc5eb52546f8884bf1083a3d8530a6c80624b52c619678edf72c28443826be",
+ "got": {
+  "real_attack_catch_e2": 0.2819,
+  "real_attack_catch_e1": 0.2657,
+  "fake_attack_catch": 0.7095
+ },
+ "d9": {
+  "real_attack_catch_e2": 0.2819,
+  "real_attack_catch_e1": 0.2657,
+  "fake_attack_catch": 0.7095
+ },
+ "pass": true
+}

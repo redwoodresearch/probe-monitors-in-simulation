@@ -1,0 +1,134 @@
+{
+ "plan": {
+  "stamp": "_attack_v5",
+  "detach": true,
+  "keep_going": true,
+  "parallel": true,
+  "title_banner": "",
+  "note": "Attack figure v5 = post Figure 2 (Aswin via the writing session and 2e, 10-16: layer 48 for both readouts): bars and ROC from cells reply|L48 and command|L48, v3b styling.",
+  "records": {
+   "attack_all_refit3_2026-10-16_141813.json": "git:80d75b27e:experiments/2026-10-16_attack_refit3/results/attack_all_refit3_2026-10-16_141813.json"
+  },
+  "figures": [
+   {
+    "script": "post_attack.py",
+    "args": [
+     "--record",
+     "attack_all_refit3_2026-10-16_141813.json",
+     "df7171a98d82d28ae86653480be922d978fc36104c63f622b3a69fb43a074eac",
+     "experiments/2026-10-16_attack_refit3/results/attack_all_refit3_2026-10-16_141813.json@80d75b27e (certified: NOTE @ cb1da6112)",
+     "--name",
+     "fig_attack_auroc",
+     "--mode",
+     "bars",
+     "--cells",
+     "reply|L48",
+     "command|L48",
+     "--allow-nonprimary",
+     "--layer-choice",
+     "layer 48 was chosen for one-layer consistency (Aswin, 10-16)",
+     "--stamp",
+     "_attack_v5",
+     "--note",
+     "data check open (nm172, nm305 score files)"
+    ]
+   },
+   {
+    "script": "post_attack.py",
+    "args": [
+     "--record",
+     "attack_all_refit3_2026-10-16_141813.json",
+     "df7171a98d82d28ae86653480be922d978fc36104c63f622b3a69fb43a074eac",
+     "experiments/2026-10-16_attack_refit3/results/attack_all_refit3_2026-10-16_141813.json@80d75b27e (certified: NOTE @ cb1da6112)",
+     "--name",
+     "fig_attack_roc",
+     "--mode",
+     "roc",
+     "--cells",
+     "reply|L48",
+     "command|L48",
+     "--allow-nonprimary",
+     "--layer-choice",
+     "layer 48 was chosen for one-layer consistency (Aswin, 10-16)",
+     "--stamp",
+     "_attack_v5",
+     "--note",
+     "data check open (nm172, nm305 score files)"
+    ]
+   }
+  ]
+ },
+ "script_commit": "6790ea75d33b6c4ddc87109a404f28437b175b24",
+ "app": "probe-shift_aswin-surya_sub-render_final-figs_kill-2026-11-13",
+ "started_pt": "2026-10-16 19:39:25 PDT",
+ "records": {
+  "attack_all_refit3_2026-10-16_141813.json": {
+   "source": "git:80d75b27e:experiments/2026-10-16_attack_refit3/results/attack_all_refit3_2026-10-16_141813.json",
+   "sha256": "df7171a98d82d28ae86653480be922d978fc36104c63f622b3a69fb43a074eac",
+   "volume_path": "records/by_sha/df7171a98d82d28ae86653480be922d978fc36104c63f622b3a69fb43a074eac"
+  }
+ },
+ "logs": [
+  {
+   "script": "post_attack.py",
+   "args": [
+    "--record",
+    "attack_all_refit3_2026-10-16_141813.json",
+    "df7171a98d82d28ae86653480be922d978fc36104c63f622b3a69fb43a074eac",
+    "experiments/2026-10-16_attack_refit3/results/attack_all_refit3_2026-10-16_141813.json@80d75b27e (certified: NOTE @ cb1da6112)",
+    "--name",
+    "fig_attack_auroc",
+    "--mode",
+    "bars",
+    "--cells",
+    "reply|L48",
+    "command|L48",
+    "--allow-nonprimary",
+    "--layer-choice",
+    "layer 48 was chosen for one-layer consistency (Aswin, 10-16)",
+    "--stamp",
+    "_attack_v5",
+    "--note",
+    "data check open (nm172, nm305 score files)"
+   ],
+   "rc": 0,
+   "stdout": "/tmp/tmpchtau1wu/exp/results/fig_attack_auroc_attack_v5.png\n",
+   "stderr": ""
+  },
+  {
+   "script": "post_attack.py",
+   "args": [
+    "--record",
+    "attack_all_refit3_2026-10-16_141813.json",
+    "df7171a98d82d28ae86653480be922d978fc36104c63f622b3a69fb43a074eac",
+    "experiments/2026-10-16_attack_refit3/results/attack_all_refit3_2026-10-16_141813.json@80d75b27e (certified: NOTE @ cb1da6112)",
+    "--name",
+    "fig_attack_roc",
+    "--mode",
+    "roc",
+    "--cells",
+    "reply|L48",
+    "command|L48",
+    "--allow-nonprimary",
+    "--layer-choice",
+    "layer 48 was chosen for one-layer consistency (Aswin, 10-16)",
+    "--stamp",
+    "_attack_v5",
+    "--note",
+    "data check open (nm172, nm305 score files)"
+   ],
+   "rc": 0,
+   "stdout": "/tmp/tmp0x3s7acy/exp/results/fig_attack_roc_attack_v5.png\n",
+   "stderr": ""
+  }
+ ],
+ "outputs": {
+  "fig_attack_auroc_attack_v5.png": "d201d02ae7e01cf518699891f59579cd9565ce08a06e6d80075f6416f2f68b2d",
+  "fig_attack_auroc_attack_v5_source.json": "05a4a1e963d08e64858e99cb6a92fab92b845419ec8742093ab449d93d1f8266",
+  "fig_attack_auroc_attack_v5_text.md": "6002d53f048a0b271215d5378afd6a98b78f956c83629e69e8dfb894dff6174d",
+  "fig_attack_roc_attack_v5.png": "2934101c2049f6518346b05813918484f2918bf0c546128c8cd3b0de23ceaa57",
+  "fig_attack_roc_attack_v5_source.json": "6fb887d62ead6080c059d93d0b490cdda6cc27792d1560e2db3504bd4deca112",
+  "fig_attack_roc_attack_v5_text.md": "9933e090238431cedcd69eb39006d05566533802f46655bce4a0aae9c25e7d2b"
+ },
+ "how": "fetched from probe-shift_aswin-surya_sub-render_final-figs_kill-2026-11-13:outputs/attack_v5/193850_4f5a9211"
+}

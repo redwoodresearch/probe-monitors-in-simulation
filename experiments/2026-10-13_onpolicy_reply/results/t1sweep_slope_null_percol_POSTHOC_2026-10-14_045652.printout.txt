@@ -1,0 +1,2 @@
+{"max_abs_diff_vs_committed": 2.1871393585115584e-14, "passes": true, "aggregates_equal_asrun": false, "aggregate_mismatches": ["gate", "variants"]}
+gate failed: gate fields only saved (app ap-3Ad33Ec1UvHHwAxRHsMU4q, 04:56:52-04:57:47 PT, from 35a21a59)

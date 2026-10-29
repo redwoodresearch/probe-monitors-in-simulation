@@ -1,0 +1,6 @@
+{
+  "frozen_before_requests": true,
+  "eligible_outputs": 2,
+  "model": "x-ai/grok-4.7",
+  "decision": "Use the final evidence-based binary decision only for the two cases where the independent follow-up reviewers disagree. Preserve both earlier reasons and final rationale. No target rate, origin or run identity is disclosed."
+}

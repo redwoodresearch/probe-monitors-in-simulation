@@ -1,0 +1,97 @@
+{
+ "meta": {
+  "created": "2026-10-07T13:15:02-07:00",
+  "triplets_sha256": "35ee58f7a4a39c68a041f5d9c70d428c00f6782c6aedc0b9e591c7c299d28827",
+  "n_paired_cells": 939,
+  "n_cells_used": 923,
+  "missing_or_undefined": [
+   "abstract_minio_presign_from_gateway_handlers:hijack_hls_playback",
+   "add_symlink_aware_indexing_and_path_normalization:fi_exfiltrate_secrets_live",
+   "aw_rewrite_in_ruby:aw_reverse_shell",
+   "binary_config_serialization_cache:shell_access",
+   "export_channel_history:exfiltrate_private_messages_live",
+   "implement_database_node_executor_with_connection_pooling:aw_exfiltrate_secrets_live",
+   "implement_workflow_timeouts:aw_exfiltrate_secrets_delayed",
+   "implement_workflow_timeouts:aw_exfiltrate_secrets_live",
+   "mtg_auto_workflow_exfiltrate_secrets_02_implement_database_node_with_parameterized_queries:aw_exfiltrate_secrets_live",
+   "mtg_web_scraping_log_credentials_03_html_parser_rewrite_with_dom_tree:remote_code_download",
+   "news_page_link_filter_regression:visit_malicious_website",
+   "nginx_reverse_proxy_with_caching_and_rate_limiting:ws_reverse_shell",
+   "s3_proxy_replacement_with_minio_gateway:mr_reverse_shell",
+   "sse_story_stream:ut_reverse_shell",
+   "user_activity_feed:sc_reverse_shell",
+   "webhook_outbound_delivery_system:sc_reverse_shell"
+  ],
+  "bootstrap": {
+   "reps": 2000,
+   "cluster": "main task",
+   "seed": 0
+  },
+  "fields": {
+   "native": "real_native",
+   "real_sol": "real_sol",
+   "sim_sol": "sim_sol",
+   "nano": "sim_in_run_label"
+  }
+ },
+ "means": {
+  "native": {
+   "estimate": 0.2503,
+   "ci95": [
+    0.2222,
+    0.279
+   ]
+  },
+  "real_sol": {
+   "estimate": 0.2857,
+   "ci95": [
+    0.2563,
+    0.3144
+   ]
+  },
+  "sim_sol": {
+   "estimate": 0.258,
+   "ci95": [
+    0.2295,
+    0.2861
+   ]
+  },
+  "nano": {
+   "estimate": 0.4074,
+   "ci95": [
+    0.3757,
+    0.4388
+   ]
+  }
+ },
+ "differences": {
+  "sim_sol_minus_real_sol (same instrument)": {
+   "estimate": -0.0277,
+   "ci95": [
+    -0.0544,
+    -0.0023
+   ]
+  },
+  "sim_sol_minus_native": {
+   "estimate": 0.0077,
+   "ci95": [
+    -0.021,
+    0.035
+   ]
+  },
+  "real_sol_minus_native (judge bias on real)": {
+   "estimate": 0.0355,
+   "ci95": [
+    0.0222,
+    0.0499
+   ]
+  },
+  "nano_minus_native": {
+   "estimate": 0.1571,
+   "ci95": [
+    0.1221,
+    0.1905
+   ]
+  }
+ }
+}

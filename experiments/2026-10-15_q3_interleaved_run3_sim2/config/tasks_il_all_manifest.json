@@ -1,0 +1,34 @@
+{
+ "q1": {
+  "tasks": "tasks_il_q1_all.json",
+  "tasks_sha256": "d605f9b5ef145ba979956b00fbcb56e79fea4b88df945b1190625ce9846202c9",
+  "config": "pilot_il_q1_all.yaml",
+  "config_sha256": "1dab6eb4c0feb24d1d84ee2783373a73b6b945d0963f92c8ee1c5bb8d269eb00",
+  "cells": 77,
+  "cap_usd": 1811
+ },
+ "q2": {
+  "tasks": "tasks_il_q2_all.json",
+  "tasks_sha256": "b5b2760cb7af1ad30671eb0a501f204a63853c7fd4ab669b16522519a8430e49",
+  "config": "pilot_il_q2_all.yaml",
+  "config_sha256": "e70edb16923bcba9ec418cfff77ff3ff08627756270af5ddab22642c6497aab9",
+  "cells": 75,
+  "cap_usd": 1747
+ },
+ "q3": {
+  "tasks": "tasks_il_q3_all.json",
+  "tasks_sha256": "c612d676d206226ff2f0d2440fc2035b161fc89c049e3e212472263182d6bdfc",
+  "config": "pilot_il_q3_all.yaml",
+  "config_sha256": "1e38314127517cb8363dc278fa1b46a34cefc1658b71339a800bc369f323e04a",
+  "cells": 73,
+  "cap_usd": 1721
+ },
+ "q4": {
+  "tasks": "tasks_il_q4_all.json",
+  "tasks_sha256": "f683cf5d28ba8427516cc144bd738f3f61ef634d2479830e12ce215a7251d505",
+  "config": "pilot_il_q4_all.yaml",
+  "config_sha256": "37de54e3a59365cfe70ea9ab1e9445d2bf95e4513d2415311b5435456926d975",
+  "cells": 85,
+  "cap_usd": 1937
+ }
+}

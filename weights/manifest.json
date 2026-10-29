@@ -1,0 +1,3851 @@
+{
+ "what": "The trained probes' weights, byte for byte the files the post's scoring code read, and the fold files needed to score with them. pipeline/score.py loads them and explains the scoring.",
+ "model": "Qwen/Qwen3.5-27B",
+ "hidden_size": 5120,
+ "layer": "layer L = the output of decoder layer L (model.model.layers[L]), before the final norm",
+ "units": {
+  "commands": "the activation row at the last content token of the tool call",
+  "tool_outputs": "the mean of the activation rows over the tool output's content tokens"
+ },
+ "score": "per fold copy and layer: ((x - mean) / std) @ W + b, standardized in the dtype of mean and std; a copy's score is the mean of its layers' logits; a unit is scored by the copy whose held-out fold holds its main task, or by all five copies when its main task is in no fold",
+ "probes": {
+  "on_policy_probe": {
+   "fold_file": "on_policy_folds.csv",
+   "standardization_dtype": "float64",
+   "layers_by_fold_copy": {
+    "commands": [
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ]
+    ],
+    "tool_outputs": [
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ]
+    ]
+   },
+   "arrays": "one file per fold copy: W, b, mean, std"
+  },
+  "on_policy_probe_25pct_tasks": {
+   "fold_file": "on_policy_folds.csv",
+   "standardization_dtype": "float64",
+   "layers_by_fold_copy": {
+    "commands": [
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ]
+    ],
+    "tool_outputs": [
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ]
+    ]
+   },
+   "arrays": "one file per fold copy: W, b, mean, std"
+  },
+  "on_policy_probe_10pct_tasks": {
+   "fold_file": "on_policy_folds.csv",
+   "standardization_dtype": "float64",
+   "layers_by_fold_copy": {
+    "commands": [
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ]
+    ],
+    "tool_outputs": [
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ],
+     [
+      48
+     ]
+    ]
+   },
+   "arrays": "one file per fold copy: W, b, mean, std"
+  },
+  "off_policy_probe": {
+   "fold_file": "off_policy_folds.csv",
+   "standardization_dtype": "float32",
+   "layers_by_fold_copy": {
+    "commands": [
+     [
+      63
+     ],
+     [
+      63
+     ],
+     [
+      63
+     ],
+     [
+      63
+     ],
+     [
+      63
+     ]
+    ],
+    "tool_outputs": [
+     [
+      48,
+      45
+     ],
+     [
+      47,
+      49
+     ],
+     [
+      48,
+      45
+     ],
+     [
+      47,
+      46
+     ],
+     [
+      47,
+      34
+     ]
+    ]
+   },
+   "arrays": "one file per layer holding all five fold copies: a__f<k>__W, __b, __mean, __std for fold copy k"
+  },
+  "extra_probe_simulated_attack_vs_real_honest": {
+   "fold_file": "off_policy_folds.csv",
+   "standardization_dtype": "float32",
+   "layers_by_fold_copy": {
+    "commands": [
+     [
+      63
+     ],
+     [
+      63
+     ],
+     [
+      63
+     ],
+     [
+      63
+     ],
+     [
+      63
+     ]
+    ],
+    "tool_outputs": [
+     [
+      48,
+      45
+     ],
+     [
+      47,
+      49
+     ],
+     [
+      48,
+      45
+     ],
+     [
+      47,
+      46
+     ],
+     [
+      47,
+      34
+     ]
+    ]
+   },
+   "arrays": "one file per layer holding all five fold copies: c_asis__f<k>__W, __b, __mean, __std for fold copy k"
+  }
+ },
+ "fold_files": {
+  "off_policy_folds.csv": {
+   "used_by": [
+    "off_policy_probe",
+    "extra_probe_simulated_attack_vs_real_honest"
+   ],
+   "made_from": {
+    "path": "experiments/2026-10-06_q3_attack_detector/results/run_scores_2026-10-06_181548/runs.json",
+    "commit": "c24106ca0897b228980ad31d8e415a18dff2ff6c",
+    "sha256": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96",
+    "how": "each run's (main_task, fold), deduplicated"
+   },
+   "sha256": "762b836dc59acff1b791646ed8438125bbd2c797639f98fcc78d3c1395a23d8a",
+   "main_tasks": 536
+  },
+  "on_policy_folds.csv": {
+   "used_by": [
+    "on_policy_probe",
+    "on_policy_probe_25pct_tasks",
+    "on_policy_probe_10pct_tasks"
+   ],
+   "made_from": {
+    "path": "experiments/2026-10-16_own_all_rs/results/own_all_rs_folds_2026-10-16.json",
+    "commit": "ec56720adde66baabe642a7fc842172c83737679",
+    "sha256": "c2fc5d40eb84a34a64cbb9ce7155572d1414f12ea1fbc2ec05708bd73061e299",
+    "how": "by_main: main task -> first element (the fold)"
+   },
+   "sha256": "954db103f891f1f4652eff219ff5461dca41f6775bf9686f5cc25bf199dcac0e",
+   "main_tasks": 901
+  }
+ },
+ "files": {
+  "off_policy_probe/tool_outputs/layer34.npz": {
+   "probe": "off_policy_probe",
+   "input": "tool_outputs",
+   "layer": 34,
+   "fold_copies": [
+    4
+   ],
+   "sha256": "6eb86b8a255c35658571410af5c25606e84a1cfc8486bfe3989107a82003f1b9",
+   "bytes": 414672,
+   "arrays": {
+    "a__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/sola_uncut_reselect_2026-10-16_030230_cutfull_491db0e7e2c9/outer_tight_L34.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "199f50846a3158194743048f39159e3414dec14e",
+     "line": 1389
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+     "commit": "9564a41b4a35c39214ad4d5e65120b5053b7f4ad",
+     "sha256": "40e7b12c3f0c24939e40f9e0a00a1b2a5b3845d2d81138c342e9d68e2515ef74"
+    }
+   }
+  },
+  "off_policy_probe/tool_outputs/layer45.npz": {
+   "probe": "off_policy_probe",
+   "input": "tool_outputs",
+   "layer": 45,
+   "fold_copies": [
+    0,
+    2
+   ],
+   "sha256": "65439396056dcbccb0483d042e2fbea6b1cffdd72b1581d69a7211bfb9b3846a",
+   "bytes": 414672,
+   "arrays": {
+    "a__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/sola_uncut_reselect_2026-10-16_030230_cutfull_491db0e7e2c9/outer_tight_L45.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "199f50846a3158194743048f39159e3414dec14e",
+     "line": 1389
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+     "commit": "9564a41b4a35c39214ad4d5e65120b5053b7f4ad",
+     "sha256": "40e7b12c3f0c24939e40f9e0a00a1b2a5b3845d2d81138c342e9d68e2515ef74"
+    }
+   }
+  },
+  "off_policy_probe/tool_outputs/layer46.npz": {
+   "probe": "off_policy_probe",
+   "input": "tool_outputs",
+   "layer": 46,
+   "fold_copies": [
+    3
+   ],
+   "sha256": "a9cfde9f622efe049d703be24f3f2d3942848df6fb76920f28fd8a0a5a46ad48",
+   "bytes": 414672,
+   "arrays": {
+    "a__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/sola_uncut_reselect_2026-10-16_030230_cutfull_491db0e7e2c9/outer_tight_L46.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "199f50846a3158194743048f39159e3414dec14e",
+     "line": 1389
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+     "commit": "9564a41b4a35c39214ad4d5e65120b5053b7f4ad",
+     "sha256": "40e7b12c3f0c24939e40f9e0a00a1b2a5b3845d2d81138c342e9d68e2515ef74"
+    }
+   }
+  },
+  "off_policy_probe/tool_outputs/layer47.npz": {
+   "probe": "off_policy_probe",
+   "input": "tool_outputs",
+   "layer": 47,
+   "fold_copies": [
+    1,
+    3,
+    4
+   ],
+   "sha256": "ea5f6699ea4f4875f62e708588f47179c6e5a41b476cad68ca88e1a67e617060",
+   "bytes": 414672,
+   "arrays": {
+    "a__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/sola_uncut_reselect_2026-10-16_030230_cutfull_491db0e7e2c9/outer_tight_L47.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "199f50846a3158194743048f39159e3414dec14e",
+     "line": 1389
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+     "commit": "9564a41b4a35c39214ad4d5e65120b5053b7f4ad",
+     "sha256": "40e7b12c3f0c24939e40f9e0a00a1b2a5b3845d2d81138c342e9d68e2515ef74"
+    }
+   }
+  },
+  "off_policy_probe/tool_outputs/layer48.npz": {
+   "probe": "off_policy_probe",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    0,
+    2
+   ],
+   "sha256": "54020d3d58f3f9cc04434cdfcc4007aa536c8eb15fff8a22573acd66d5a45521",
+   "bytes": 414672,
+   "arrays": {
+    "a__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/sola_uncut_reselect_2026-10-16_030230_cutfull_491db0e7e2c9/outer_tight_L48.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "199f50846a3158194743048f39159e3414dec14e",
+     "line": 1389
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+     "commit": "9564a41b4a35c39214ad4d5e65120b5053b7f4ad",
+     "sha256": "40e7b12c3f0c24939e40f9e0a00a1b2a5b3845d2d81138c342e9d68e2515ef74"
+    }
+   }
+  },
+  "off_policy_probe/tool_outputs/layer49.npz": {
+   "probe": "off_policy_probe",
+   "input": "tool_outputs",
+   "layer": 49,
+   "fold_copies": [
+    1
+   ],
+   "sha256": "dc986936db90c8d2c5c69133d95aded53be8d6306f7c260cb4ba7f31e599921e",
+   "bytes": 414672,
+   "arrays": {
+    "a__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/sola_uncut_reselect_2026-10-16_030230_cutfull_491db0e7e2c9/outer_tight_L49.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "199f50846a3158194743048f39159e3414dec14e",
+     "line": 1389
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+     "commit": "9564a41b4a35c39214ad4d5e65120b5053b7f4ad",
+     "sha256": "40e7b12c3f0c24939e40f9e0a00a1b2a5b3845d2d81138c342e9d68e2515ef74"
+    }
+   }
+  },
+  "off_policy_probe/commands/layer63.npz": {
+   "probe": "off_policy_probe",
+   "input": "commands",
+   "layer": 63,
+   "fold_copies": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "sha256": "ec758876d5124b58d7565ae4adccfe57e99a5772bf4160c21872706d58dd6c44",
+   "bytes": 414672,
+   "arrays": {
+    "a__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "a__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "a__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/sola_uncut_reselect_2026-10-16_030230_cutfull_491db0e7e2c9_cmd/outer_tight_L63.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "199f50846a3158194743048f39159e3414dec14e",
+     "line": 1389
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+     "commit": "9564a41b4a35c39214ad4d5e65120b5053b7f4ad",
+     "sha256": "40e7b12c3f0c24939e40f9e0a00a1b2a5b3845d2d81138c342e9d68e2515ef74"
+    }
+   }
+  },
+  "extra_probe_simulated_attack_vs_real_honest/tool_outputs/layer34.npz": {
+   "probe": "extra_probe_simulated_attack_vs_real_honest",
+   "input": "tool_outputs",
+   "layer": 34,
+   "fold_copies": [
+    4
+   ],
+   "sha256": "1f7b316fb1896b51a6a7339e9a802bb996b1333b581a0013dcfe2b240236ef7f",
+   "bytes": 414872,
+   "arrays": {
+    "c_asis__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/casis_uncut_inherit_2026-10-16_035520_cutfull_d76d0ca08a3d/outer_tight_L34.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "7feaa2bf34e93df6b6feceeedb0b29737c7503a0",
+     "line": 1403
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d.json",
+     "commit": "8b6124cb3d49b13b9bba328a21a4c14afcbb9512",
+     "sha256": "f9e32638ad45a4afe1b6d75862b4745be0a23c77fb2268bf9f32bbc1c113b7df"
+    }
+   }
+  },
+  "extra_probe_simulated_attack_vs_real_honest/tool_outputs/layer45.npz": {
+   "probe": "extra_probe_simulated_attack_vs_real_honest",
+   "input": "tool_outputs",
+   "layer": 45,
+   "fold_copies": [
+    0,
+    2
+   ],
+   "sha256": "d47c1b21debd6f41da174a5e2d9b1a95a35b6a4e53d1f28389c8fdedd66dd901",
+   "bytes": 414872,
+   "arrays": {
+    "c_asis__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/casis_uncut_inherit_2026-10-16_035520_cutfull_d76d0ca08a3d/outer_tight_L45.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "7feaa2bf34e93df6b6feceeedb0b29737c7503a0",
+     "line": 1403
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d.json",
+     "commit": "8b6124cb3d49b13b9bba328a21a4c14afcbb9512",
+     "sha256": "f9e32638ad45a4afe1b6d75862b4745be0a23c77fb2268bf9f32bbc1c113b7df"
+    }
+   }
+  },
+  "extra_probe_simulated_attack_vs_real_honest/tool_outputs/layer46.npz": {
+   "probe": "extra_probe_simulated_attack_vs_real_honest",
+   "input": "tool_outputs",
+   "layer": 46,
+   "fold_copies": [
+    3
+   ],
+   "sha256": "230a244f85a12a2d2e520503a7c9158c2f39d01f1696e880a7ab44fa9d402b30",
+   "bytes": 414872,
+   "arrays": {
+    "c_asis__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/casis_uncut_inherit_2026-10-16_035520_cutfull_d76d0ca08a3d/outer_tight_L46.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "7feaa2bf34e93df6b6feceeedb0b29737c7503a0",
+     "line": 1403
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d.json",
+     "commit": "8b6124cb3d49b13b9bba328a21a4c14afcbb9512",
+     "sha256": "f9e32638ad45a4afe1b6d75862b4745be0a23c77fb2268bf9f32bbc1c113b7df"
+    }
+   }
+  },
+  "extra_probe_simulated_attack_vs_real_honest/tool_outputs/layer47.npz": {
+   "probe": "extra_probe_simulated_attack_vs_real_honest",
+   "input": "tool_outputs",
+   "layer": 47,
+   "fold_copies": [
+    1,
+    3,
+    4
+   ],
+   "sha256": "66df94c28070ebc16f5c179de0883328378378509a8a17f1235290c1576b0d79",
+   "bytes": 414872,
+   "arrays": {
+    "c_asis__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/casis_uncut_inherit_2026-10-16_035520_cutfull_d76d0ca08a3d/outer_tight_L47.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "7feaa2bf34e93df6b6feceeedb0b29737c7503a0",
+     "line": 1403
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d.json",
+     "commit": "8b6124cb3d49b13b9bba328a21a4c14afcbb9512",
+     "sha256": "f9e32638ad45a4afe1b6d75862b4745be0a23c77fb2268bf9f32bbc1c113b7df"
+    }
+   }
+  },
+  "extra_probe_simulated_attack_vs_real_honest/tool_outputs/layer48.npz": {
+   "probe": "extra_probe_simulated_attack_vs_real_honest",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    0,
+    2
+   ],
+   "sha256": "92bb33323008952b345c48226a97b9ae4de131399427b371d85648966a2f55cc",
+   "bytes": 414872,
+   "arrays": {
+    "c_asis__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/casis_uncut_inherit_2026-10-16_035520_cutfull_d76d0ca08a3d/outer_tight_L48.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "7feaa2bf34e93df6b6feceeedb0b29737c7503a0",
+     "line": 1403
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d.json",
+     "commit": "8b6124cb3d49b13b9bba328a21a4c14afcbb9512",
+     "sha256": "f9e32638ad45a4afe1b6d75862b4745be0a23c77fb2268bf9f32bbc1c113b7df"
+    }
+   }
+  },
+  "extra_probe_simulated_attack_vs_real_honest/tool_outputs/layer49.npz": {
+   "probe": "extra_probe_simulated_attack_vs_real_honest",
+   "input": "tool_outputs",
+   "layer": 49,
+   "fold_copies": [
+    1
+   ],
+   "sha256": "dafa2d5777822a088bc7d2b321162e4f07dafaf8d362325ccc4b8d4e23479909",
+   "bytes": 414872,
+   "arrays": {
+    "c_asis__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/casis_uncut_inherit_2026-10-16_035520_cutfull_d76d0ca08a3d/outer_tight_L49.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "7feaa2bf34e93df6b6feceeedb0b29737c7503a0",
+     "line": 1403
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d.json",
+     "commit": "8b6124cb3d49b13b9bba328a21a4c14afcbb9512",
+     "sha256": "f9e32638ad45a4afe1b6d75862b4745be0a23c77fb2268bf9f32bbc1c113b7df"
+    }
+   }
+  },
+  "extra_probe_simulated_attack_vs_real_honest/commands/layer63.npz": {
+   "probe": "extra_probe_simulated_attack_vs_real_honest",
+   "input": "commands",
+   "layer": 63,
+   "fold_copies": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "sha256": "cc878a867d6b247fe5e85b0194f1a1b930937a005cefe8586b42cbd767f00eca",
+   "bytes": 414872,
+   "arrays": {
+    "c_asis__f0__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f0__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f0__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f1__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f1__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f2__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f2__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f3__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f3__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__W": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "c_asis__f4__mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    },
+    "c_asis__f4__std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float32"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+    "path": "cutfull/xfer/casis_uncut_inherit_2026-10-16_035520_cutfull_d76d0ca08a3d_cmd/outer_tight_L63.npz",
+    "written_by": {
+     "script": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py",
+     "commit": "7feaa2bf34e93df6b6feceeedb0b29737c7503a0",
+     "line": 1403
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d.json",
+     "commit": "8b6124cb3d49b13b9bba328a21a4c14afcbb9512",
+     "sha256": "f9e32638ad45a4afe1b6d75862b4745be0a23c77fb2268bf9f32bbc1c113b7df"
+    }
+   }
+  },
+  "on_policy_probe/commands/fold0.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    0
+   ],
+   "sha256": "955e2dd88aadc1cde0a1e4df2a2c0381a19ff22cdec425dd5426604666b0ce65",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__C__L48__f0.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe/commands/fold1.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    1
+   ],
+   "sha256": "0b103e91bfbb53412fda28bc6336437212ed7c2fa3d1ba405ac963e67154576d",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__C__L48__f1.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe/commands/fold2.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    2
+   ],
+   "sha256": "4b2ce01eeca63d72597941169d2bcc6695fe64a4f91f6deb8328a93785da7e76",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__C__L48__f2.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe/commands/fold3.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    3
+   ],
+   "sha256": "1bb37765e16180b1c5b55a0954801c9695ad43e8d7fa411f9e27d87a48c2e222",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__C__L48__f3.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe/commands/fold4.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    4
+   ],
+   "sha256": "5e09d94901d462490c63eb037c14724b07e82c4928c204194c0e36ca1cbaa3c1",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__C__L48__f4.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe/tool_outputs/fold0.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    0
+   ],
+   "sha256": "e0096372efcf7f9945ac9e450b8d29aec15d1425381f2a580cfdb0799f5574c5",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__R__L48__f0.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe/tool_outputs/fold1.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    1
+   ],
+   "sha256": "29876d41681b5751e332201b7ebb305b2df8e2a3030bf2235962e1919820d87e",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__R__L48__f1.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe/tool_outputs/fold2.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    2
+   ],
+   "sha256": "c37a1326898900d309b3a87029ed4da49da2cce353cd1d7c8f369b815b17349d",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__R__L48__f2.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe/tool_outputs/fold3.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    3
+   ],
+   "sha256": "1636b827c14da4cf5b95da774670fb3c4456e836b3984193a1373ffe1d0ca9f8",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__R__L48__f3.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe/tool_outputs/fold4.safetensors": {
+   "probe": "on_policy_probe",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    4
+   ],
+   "sha256": "b105b17be0958336b0784757d4ba7ec6e0b53699ccca37bfa6fb16e5cce00705",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs_uncut_L48__R__L48__f4.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/commands/fold0.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    0
+   ],
+   "sha256": "6a922de792080d2d32cb2470ef94d4b3ea58bbfbcac97170ef3c1f57a46991bb",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__C__L48__f0.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/commands/fold1.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    1
+   ],
+   "sha256": "a56e5dc667be6995dfdec0c4a5377c37c1d4eddeeb1dc9acc74f1ad15a240c9b",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__C__L48__f1.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/commands/fold2.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    2
+   ],
+   "sha256": "60c8c8485abf80567104e4eae5e9619a93e46d95331ad2b19b2143e3a2101cb1",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__C__L48__f2.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/commands/fold3.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    3
+   ],
+   "sha256": "8d6957582443e7d4388306ee745d758530ce87dfc6c6ab6db8da4620e5db4944",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__C__L48__f3.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/commands/fold4.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    4
+   ],
+   "sha256": "b627d5f5b9c68ce58f53307dcc71c486575c0459363d5eb9ee6a2466b9c38c39",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__C__L48__f4.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/tool_outputs/fold0.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    0
+   ],
+   "sha256": "689cdb7e83d11ce5c20c4cb054ff2c4451eb97eea193088b9733b375ca048c86",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__R__L48__f0.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/tool_outputs/fold1.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    1
+   ],
+   "sha256": "1356c052d4f3e534cc98184bd32587c9d903c19add67f393b9e05ce9a0d9e3b0",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__R__L48__f1.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/tool_outputs/fold2.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    2
+   ],
+   "sha256": "3bce1fe678b21a1b6070a5b3a2ef0fd5e1baf2171a748ffd7bc7094435e0fce6",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__R__L48__f2.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/tool_outputs/fold3.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    3
+   ],
+   "sha256": "6a0949668d688ea59194c5d684f98d8ac20886d1612e0be6777d13cdad873d67",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__R__L48__f3.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_25pct_tasks/tool_outputs/fold4.safetensors": {
+   "probe": "on_policy_probe_25pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    4
+   ],
+   "sha256": "1545a33cf32f3fbca04a48e05fa0c9d83f664ad6fc57aec1014af00a0343e0cd",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs25_uncut_L48__R__L48__f4.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/commands/fold0.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    0
+   ],
+   "sha256": "1e6ad88b5d0e34093925a0a84b83d8e0c29ef5447ce2012a2d1e5dc993c489bf",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__C__L48__f0.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/commands/fold1.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    1
+   ],
+   "sha256": "d000d8edb35423c626f972a932850b62aba8398c13fbeb345d6cd70fe95dd029",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__C__L48__f1.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/commands/fold2.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    2
+   ],
+   "sha256": "42191d1b651c20f25c0ed5ca94fb8542140669468195102f3c7a93ebf56a47e6",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__C__L48__f2.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/commands/fold3.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    3
+   ],
+   "sha256": "9d91beb7d2de35ebd90ac2940e3f69f009ee26899808d2f8826002597903bd28",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__C__L48__f3.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/commands/fold4.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "commands",
+   "layer": 48,
+   "fold_copies": [
+    4
+   ],
+   "sha256": "c0d73897b72dfe1cffe881848bee70af266b53abf428aea628740fa085d9f02e",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__C__L48__f4.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/tool_outputs/fold0.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    0
+   ],
+   "sha256": "3a7ea8f944ed8bb4c907f3bc1eced4f1dea52573194bac65b9118a27e62ad262",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__R__L48__f0.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/tool_outputs/fold1.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    1
+   ],
+   "sha256": "9ab843a8b1ae9679f63c3ad313ade77df891ec1958bc56c30f3da3cf152d1ccb",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__R__L48__f1.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/tool_outputs/fold2.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    2
+   ],
+   "sha256": "da1c87b82cad86d8689ca5d02ea1fb16e48192414ada0beff036ae2cf3b66121",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__R__L48__f2.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/tool_outputs/fold3.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    3
+   ],
+   "sha256": "2ba9d1c3157f4056411fac3da136d70f7e8599caab4a3efdbacbd60c9a264907",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__R__L48__f3.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  },
+  "on_policy_probe_10pct_tasks/tool_outputs/fold4.safetensors": {
+   "probe": "on_policy_probe_10pct_tasks",
+   "input": "tool_outputs",
+   "layer": 48,
+   "fold_copies": [
+    4
+   ],
+   "sha256": "1e0be8ab734e502e3cf0598c21effd7dc32cfcfd42ef0fc48d62674d7db7e116",
+   "bytes": 123160,
+   "arrays": {
+    "W": {
+     "shape": [
+      5120,
+      1
+     ],
+     "dtype": "float64"
+    },
+    "b": {
+     "shape": [
+      1
+     ],
+     "dtype": "float64"
+    },
+    "mean": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    },
+    "std": {
+     "shape": [
+      5120
+     ],
+     "dtype": "float64"
+    }
+   },
+   "original": {
+    "volume": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+    "path": "own_all_rs_uncut/2026-10-16_030614/weights/own_all_rs10_uncut_L48__R__L48__f4.safetensors",
+    "written_by": {
+     "script": "experiments/2026-10-14_p2_family_expansion/run_own_all.py",
+     "commit": "63096838cf546c86dca4774b4810f8e5a435b916",
+     "line": 619
+    },
+    "fit_record": {
+     "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+     "commit": "19611550c25e994b2a10369b2efc03d418735e64",
+     "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+    }
+   }
+  }
+ }
+}

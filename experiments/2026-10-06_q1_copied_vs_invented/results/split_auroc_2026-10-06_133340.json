@@ -1,0 +1,2476 @@
+{
+ "config": {
+  "arms": [
+   "real-attack-e1",
+   "real-attack-e2",
+   "sim-attack"
+  ],
+  "cohorts": {
+   "real-attack-e1": "la_public10_real_attack_n1000",
+   "real-attack-e2": "la_public10_real_attack_reroll_n1000",
+   "sim-attack": "la_public10_sim_astra_attack_n1000"
+  },
+  "staged_outputs": "~/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/.run_cache/examples_2026-10-06_130135/outputs.jsonl.gz",
+  "expected_paired_cells": 939,
+  "eval_dir": "~/probe-shift-viewer/.run_cache/viewer/eval",
+  "near_threshold": 0.9,
+  "near_max_chars": 20000,
+  "ignore_arg_keys": [
+   "timeout"
+  ],
+  "tfidf_scores": "~/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/results/tfidf_cleaned_scores_2026-10-06_130213.jsonl.gz",
+  "tfidf_baseline": "tfidf_cleaned",
+  "tfidf_outputs": "all",
+  "bootstrap": 1000,
+  "seed": 0,
+  "n_jobs": 12
+ },
+ "git": "2aa39eb5d1ee8f6dd9400d3066b25e28ef146f64",
+ "stamp": "2026-10-06_133340",
+ "flags_file": ".run_cache/flags_2026-10-06_132929.jsonl.gz",
+ "n_outputs": 68835,
+ "sanity_identical_text": {
+  "identical_text_pairs_groups": 852,
+  "max_score_gap": 0.13604,
+  "share_with_gap_over_1e-4": 0.0035
+ },
+ "table": [
+  {
+   "slice": "all",
+   "grouping": "out_match",
+   "group": "exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 1504,
+     "share": 0.0659
+    },
+    "real-attack-e2": {
+     "n": 1477,
+     "share": 0.065
+    },
+    "sim-attack": {
+     "n": 1351,
+     "share": 0.058
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 623,
+    "sim-attack": 618
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5564,
+    "ci95": [
+     0.5341,
+     0.5792
+    ],
+    "n": 2855,
+    "n_main_tasks": 447
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4936,
+    "ci95": [
+     0.48,
+     0.5074
+    ],
+    "n": 2981,
+    "n_main_tasks": 451
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.5821,
+    "ci95": [
+     0.5548,
+     0.6077
+    ],
+    "n": 1241,
+    "n_main_tasks": 447
+   }
+  },
+  {
+   "slice": "all",
+   "grouping": "out_match",
+   "group": "near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 2321,
+     "share": 0.1016
+    },
+    "real-attack-e2": {
+     "n": 2181,
+     "share": 0.096
+    },
+    "sim-attack": {
+     "n": 2016,
+     "share": 0.0866
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 746,
+    "sim-attack": 720
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8474,
+    "ci95": [
+     0.8225,
+     0.871
+    ],
+    "n": 4337,
+    "n_main_tasks": 493
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5289,
+    "ci95": [
+     0.5144,
+     0.5426
+    ],
+    "n": 4502,
+    "n_main_tasks": 496
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.8567,
+    "ci95": [
+     0.8341,
+     0.8788
+    ],
+    "n": 1466,
+    "n_main_tasks": 493
+   }
+  },
+  {
+   "slice": "all",
+   "grouping": "out_match",
+   "group": "none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 19011,
+     "share": 0.8325
+    },
+    "real-attack-e2": {
+     "n": 19062,
+     "share": 0.839
+    },
+    "sim-attack": {
+     "n": 19912,
+     "share": 0.8554
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 939,
+    "sim-attack": 939
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8201,
+    "ci95": [
+     0.8102,
+     0.8299
+    ],
+    "n": 38923,
+    "n_main_tasks": 536
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5537,
+    "ci95": [
+     0.5449,
+     0.5626
+    ],
+    "n": 38073,
+    "n_main_tasks": 536
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9803,
+    "ci95": [
+     0.9735,
+     0.9864
+    ],
+    "n": 1878,
+    "n_main_tasks": 536
+   }
+  },
+  {
+   "slice": "all",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 1202,
+     "share": 0.0526
+    },
+    "real-attack-e2": {
+     "n": 1185,
+     "share": 0.0522
+    },
+    "sim-attack": {
+     "n": 1121,
+     "share": 0.0482
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 591,
+    "sim-attack": 577
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5315,
+    "ci95": [
+     0.5114,
+     0.5504
+    ],
+    "n": 2323,
+    "n_main_tasks": 428
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.494,
+    "ci95": [
+     0.4786,
+     0.5101
+    ],
+    "n": 2387,
+    "n_main_tasks": 436
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.5505,
+    "ci95": [
+     0.5258,
+     0.5734
+    ],
+    "n": 1168,
+    "n_main_tasks": 428
+   }
+  },
+  {
+   "slice": "all",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 2140,
+     "share": 0.0937
+    },
+    "real-attack-e2": {
+     "n": 2001,
+     "share": 0.0881
+    },
+    "sim-attack": {
+     "n": 1799,
+     "share": 0.0773
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 735,
+    "sim-attack": 707
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8352,
+    "ci95": [
+     0.8073,
+     0.8611
+    ],
+    "n": 3939,
+    "n_main_tasks": 492
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5298,
+    "ci95": [
+     0.5146,
+     0.5445
+    ],
+    "n": 4141,
+    "n_main_tasks": 493
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.8494,
+    "ci95": [
+     0.8257,
+     0.8701
+    ],
+    "n": 1442,
+    "n_main_tasks": 492
+   }
+  },
+  {
+   "slice": "all",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 18984,
+     "share": 0.8313
+    },
+    "real-attack-e2": {
+     "n": 19023,
+     "share": 0.8373
+    },
+    "sim-attack": {
+     "n": 19854,
+     "share": 0.8529
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 939,
+    "sim-attack": 939
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.82,
+    "ci95": [
+     0.8102,
+     0.8298
+    ],
+    "n": 38838,
+    "n_main_tasks": 536
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5538,
+    "ci95": [
+     0.5449,
+     0.5627
+    ],
+    "n": 38007,
+    "n_main_tasks": 536
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9804,
+    "ci95": [
+     0.9736,
+     0.9864
+    ],
+    "n": 1878,
+    "n_main_tasks": 536
+   }
+  },
+  {
+   "slice": "all",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 302,
+     "share": 0.0132
+    },
+    "real-attack-e2": {
+     "n": 292,
+     "share": 0.0129
+    },
+    "sim-attack": {
+     "n": 230,
+     "share": 0.0099
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 166,
+    "sim-attack": 146
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.6527,
+    "ci95": [
+     0.592,
+     0.7179
+    ],
+    "n": 532,
+    "n_main_tasks": 178
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4916,
+    "ci95": [
+     0.4487,
+     0.5316
+    ],
+    "n": 594,
+    "n_main_tasks": 171
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.6911,
+    "ci95": [
+     0.6399,
+     0.7465
+    ],
+    "n": 312,
+    "n_main_tasks": 178
+   }
+  },
+  {
+   "slice": "all",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 181,
+     "share": 0.0079
+    },
+    "real-attack-e2": {
+     "n": 180,
+     "share": 0.0079
+    },
+    "sim-attack": {
+     "n": 217,
+     "share": 0.0093
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 120,
+    "sim-attack": 116
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.9367,
+    "ci95": [
+     0.8982,
+     0.9656
+    ],
+    "n": 398,
+    "n_main_tasks": 146
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5194,
+    "ci95": [
+     0.4665,
+     0.5815
+    ],
+    "n": 361,
+    "n_main_tasks": 142
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9154,
+    "ci95": [
+     0.8734,
+     0.9523
+    ],
+    "n": 236,
+    "n_main_tasks": 146
+   }
+  },
+  {
+   "slice": "all",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 27,
+     "share": 0.0012
+    },
+    "real-attack-e2": {
+     "n": 39,
+     "share": 0.0017
+    },
+    "sim-attack": {
+     "n": 58,
+     "share": 0.0025
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 24,
+    "sim-attack": 46
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8388,
+    "ci95": [
+     0.7064,
+     0.9254
+    ],
+    "n": 85,
+    "n_main_tasks": 52
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5028,
+    "ci95": [
+     0.3762,
+     0.639
+    ],
+    "n": 66,
+    "n_main_tasks": 50
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.8324,
+    "ci95": [
+     0.7235,
+     0.9228
+    ],
+    "n": 70,
+    "n_main_tasks": 52
+   }
+  },
+  {
+   "slice": "all",
+   "grouping": "everything",
+   "group": "all",
+   "shares": {
+    "real-attack-e1": {
+     "n": 22836,
+     "share": 1.0
+    },
+    "real-attack-e2": {
+     "n": 22720,
+     "share": 1.0
+    },
+    "sim-attack": {
+     "n": 23279,
+     "share": 1.0
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 939,
+    "sim-attack": 939
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8101,
+    "ci95": [
+     0.799,
+     0.8209
+    ],
+    "n": 46115,
+    "n_main_tasks": 536
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5477,
+    "ci95": [
+     0.5396,
+     0.5557
+    ],
+    "n": 45556,
+    "n_main_tasks": 536
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9767,
+    "ci95": [
+     0.969,
+     0.9834
+    ],
+    "n": 1878,
+    "n_main_tasks": 536
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "out_match",
+   "group": "exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 1074,
+     "share": 0.1176
+    },
+    "real-attack-e2": {
+     "n": 1035,
+     "share": 0.1141
+    },
+    "sim-attack": {
+     "n": 823,
+     "share": 0.0895
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 492,
+    "sim-attack": 446
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5722,
+    "ci95": [
+     0.5446,
+     0.5973
+    ],
+    "n": 1897,
+    "n_main_tasks": 340
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4941,
+    "ci95": [
+     0.4783,
+     0.5093
+    ],
+    "n": 2109,
+    "n_main_tasks": 350
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.5945,
+    "ci95": [
+     0.5642,
+     0.6238
+    ],
+    "n": 938,
+    "n_main_tasks": 340
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "out_match",
+   "group": "near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 1342,
+     "share": 0.1469
+    },
+    "real-attack-e2": {
+     "n": 1227,
+     "share": 0.1353
+    },
+    "sim-attack": {
+     "n": 1054,
+     "share": 0.1146
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 461,
+    "sim-attack": 400
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.9383,
+    "ci95": [
+     0.9138,
+     0.9582
+    ],
+    "n": 2396,
+    "n_main_tasks": 326
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5138,
+    "ci95": [
+     0.4963,
+     0.5316
+    ],
+    "n": 2569,
+    "n_main_tasks": 337
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9203,
+    "ci95": [
+     0.8969,
+     0.9412
+    ],
+    "n": 861,
+    "n_main_tasks": 326
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "out_match",
+   "group": "none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 6719,
+     "share": 0.7355
+    },
+    "real-attack-e2": {
+     "n": 6806,
+     "share": 0.7506
+    },
+    "sim-attack": {
+     "n": 7319,
+     "share": 0.7959
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 843,
+    "sim-attack": 831
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.9563,
+    "ci95": [
+     0.9466,
+     0.9657
+    ],
+    "n": 14038,
+    "n_main_tasks": 516
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5008,
+    "ci95": [
+     0.4897,
+     0.5128
+    ],
+    "n": 13525,
+    "n_main_tasks": 517
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9716,
+    "ci95": [
+     0.9614,
+     0.9804
+    ],
+    "n": 1674,
+    "n_main_tasks": 516
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 838,
+     "share": 0.0917
+    },
+    "real-attack-e2": {
+     "n": 802,
+     "share": 0.0884
+    },
+    "sim-attack": {
+     "n": 708,
+     "share": 0.077
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 458,
+    "sim-attack": 426
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5451,
+    "ci95": [
+     0.5226,
+     0.5683
+    ],
+    "n": 1546,
+    "n_main_tasks": 315
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4931,
+    "ci95": [
+     0.4763,
+     0.5096
+    ],
+    "n": 1640,
+    "n_main_tasks": 318
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.5628,
+    "ci95": [
+     0.5378,
+     0.587
+    ],
+    "n": 884,
+    "n_main_tasks": 315
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 1241,
+     "share": 0.1359
+    },
+    "real-attack-e2": {
+     "n": 1140,
+     "share": 0.1257
+    },
+    "sim-attack": {
+     "n": 876,
+     "share": 0.0953
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 450,
+    "sim-attack": 370
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.9291,
+    "ci95": [
+     0.9001,
+     0.9522
+    ],
+    "n": 2117,
+    "n_main_tasks": 318
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5165,
+    "ci95": [
+     0.4982,
+     0.5352
+    ],
+    "n": 2381,
+    "n_main_tasks": 334
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9152,
+    "ci95": [
+     0.8915,
+     0.9386
+    ],
+    "n": 820,
+    "n_main_tasks": 318
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 6717,
+     "share": 0.7353
+    },
+    "real-attack-e2": {
+     "n": 6802,
+     "share": 0.7501
+    },
+    "sim-attack": {
+     "n": 7286,
+     "share": 0.7923
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 842,
+    "sim-attack": 831
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.9563,
+    "ci95": [
+     0.9467,
+     0.9658
+    ],
+    "n": 14003,
+    "n_main_tasks": 516
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.501,
+    "ci95": [
+     0.4898,
+     0.5129
+    ],
+    "n": 13519,
+    "n_main_tasks": 517
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9716,
+    "ci95": [
+     0.9615,
+     0.9804
+    ],
+    "n": 1673,
+    "n_main_tasks": 516
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 236,
+     "share": 0.0258
+    },
+    "real-attack-e2": {
+     "n": 233,
+     "share": 0.0257
+    },
+    "sim-attack": {
+     "n": 115,
+     "share": 0.0125
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 120,
+    "sim-attack": 63
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.6067,
+    "ci95": [
+     0.522,
+     0.6928
+    ],
+    "n": 351,
+    "n_main_tasks": 109
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4961,
+    "ci95": [
+     0.4504,
+     0.5402
+    ],
+    "n": 469,
+    "n_main_tasks": 130
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.6227,
+    "ci95": [
+     0.5482,
+     0.6927
+    ],
+    "n": 183,
+    "n_main_tasks": 109
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 101,
+     "share": 0.0111
+    },
+    "real-attack-e2": {
+     "n": 87,
+     "share": 0.0096
+    },
+    "sim-attack": {
+     "n": 178,
+     "share": 0.0194
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 65,
+    "sim-attack": 90
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.9847,
+    "ci95": [
+     0.968,
+     0.995
+    ],
+    "n": 279,
+    "n_main_tasks": 98
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4793,
+    "ci95": [
+     0.3964,
+     0.5606
+    ],
+    "n": 188,
+    "n_main_tasks": 75
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9775,
+    "ci95": [
+     0.9491,
+     0.995
+    ],
+    "n": 155,
+    "n_main_tasks": 98
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 2,
+     "share": 0.0002
+    },
+    "real-attack-e2": {
+     "n": 4,
+     "share": 0.0004
+    },
+    "sim-attack": {
+     "n": 33,
+     "share": 0.0036
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 2,
+    "sim-attack": 24
+   }
+  },
+  {
+   "slice": "text_editor",
+   "grouping": "everything",
+   "group": "all",
+   "shares": {
+    "real-attack-e1": {
+     "n": 9135,
+     "share": 1.0
+    },
+    "real-attack-e2": {
+     "n": 9068,
+     "share": 1.0
+    },
+    "sim-attack": {
+     "n": 9196,
+     "share": 1.0
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 888,
+    "sim-attack": 863
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.9349,
+    "ci95": [
+     0.9222,
+     0.9465
+    ],
+    "n": 18331,
+    "n_main_tasks": 520
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5023,
+    "ci95": [
+     0.4928,
+     0.5119
+    ],
+    "n": 18203,
+    "n_main_tasks": 527
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9651,
+    "ci95": [
+     0.9545,
+     0.9749
+    ],
+    "n": 1751,
+    "n_main_tasks": 520
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "out_match",
+   "group": "exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 430,
+     "share": 0.0314
+    },
+    "real-attack-e2": {
+     "n": 442,
+     "share": 0.0324
+    },
+    "sim-attack": {
+     "n": 528,
+     "share": 0.0375
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 314,
+    "sim-attack": 353
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.4989,
+    "ci95": [
+     0.4712,
+     0.5276
+    ],
+    "n": 958,
+    "n_main_tasks": 318
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4828,
+    "ci95": [
+     0.4512,
+     0.5142
+    ],
+    "n": 872,
+    "n_main_tasks": 308
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.5094,
+    "ci95": [
+     0.4767,
+     0.5436
+    ],
+    "n": 667,
+    "n_main_tasks": 318
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "out_match",
+   "group": "near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 979,
+     "share": 0.0715
+    },
+    "real-attack-e2": {
+     "n": 954,
+     "share": 0.0699
+    },
+    "sim-attack": {
+     "n": 962,
+     "share": 0.0683
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 576,
+    "sim-attack": 568
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.629,
+    "ci95": [
+     0.6045,
+     0.6526
+    ],
+    "n": 1941,
+    "n_main_tasks": 454
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5454,
+    "ci95": [
+     0.5222,
+     0.569
+    ],
+    "n": 1933,
+    "n_main_tasks": 452
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.6736,
+    "ci95": [
+     0.6408,
+     0.7029
+    ],
+    "n": 1144,
+    "n_main_tasks": 454
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "out_match",
+   "group": "none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 12292,
+     "share": 0.8972
+    },
+    "real-attack-e2": {
+     "n": 12256,
+     "share": 0.8977
+    },
+    "sim-attack": {
+     "n": 12593,
+     "share": 0.8942
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 938,
+    "sim-attack": 934
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.6874,
+    "ci95": [
+     0.6781,
+     0.698
+    ],
+    "n": 24885,
+    "n_main_tasks": 536
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5817,
+    "ci95": [
+     0.5703,
+     0.5934
+    ],
+    "n": 24548,
+    "n_main_tasks": 536
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9312,
+    "ci95": [
+     0.9194,
+     0.943
+    ],
+    "n": 1872,
+    "n_main_tasks": 536
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 364,
+     "share": 0.0266
+    },
+    "real-attack-e2": {
+     "n": 383,
+     "share": 0.0281
+    },
+    "sim-attack": {
+     "n": 413,
+     "share": 0.0293
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 271,
+    "sim-attack": 286
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.498,
+    "ci95": [
+     0.4664,
+     0.5304
+    ],
+    "n": 777,
+    "n_main_tasks": 290
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4882,
+    "ci95": [
+     0.4542,
+     0.5211
+    ],
+    "n": 747,
+    "n_main_tasks": 298
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.5141,
+    "ci95": [
+     0.4776,
+     0.5498
+    ],
+    "n": 557,
+    "n_main_tasks": 290
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 899,
+     "share": 0.0656
+    },
+    "real-attack-e2": {
+     "n": 861,
+     "share": 0.0631
+    },
+    "sim-attack": {
+     "n": 923,
+     "share": 0.0655
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 554,
+    "sim-attack": 558
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.6249,
+    "ci95": [
+     0.601,
+     0.6525
+    ],
+    "n": 1822,
+    "n_main_tasks": 448
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5445,
+    "ci95": [
+     0.5214,
+     0.5665
+    ],
+    "n": 1760,
+    "n_main_tasks": 447
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.664,
+    "ci95": [
+     0.6333,
+     0.695
+    ],
+    "n": 1112,
+    "n_main_tasks": 448
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 12267,
+     "share": 0.8953
+    },
+    "real-attack-e2": {
+     "n": 12221,
+     "share": 0.8952
+    },
+    "sim-attack": {
+     "n": 12568,
+     "share": 0.8924
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 938,
+    "sim-attack": 934
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.6872,
+    "ci95": [
+     0.678,
+     0.6979
+    ],
+    "n": 24835,
+    "n_main_tasks": 536
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5818,
+    "ci95": [
+     0.5702,
+     0.5936
+    ],
+    "n": 24488,
+    "n_main_tasks": 536
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9302,
+    "ci95": [
+     0.9186,
+     0.9424
+    ],
+    "n": 1872,
+    "n_main_tasks": 536
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 66,
+     "share": 0.0048
+    },
+    "real-attack-e2": {
+     "n": 59,
+     "share": 0.0043
+    },
+    "sim-attack": {
+     "n": 115,
+     "share": 0.0082
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 61,
+    "sim-attack": 101
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5013,
+    "ci95": [
+     0.4192,
+     0.5806
+    ],
+    "n": 181,
+    "n_main_tasks": 106
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4303,
+    "ci95": [
+     0.3521,
+     0.5083
+    ],
+    "n": 125,
+    "n_main_tasks": 65
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.505,
+    "ci95": [
+     0.4185,
+     0.5852
+    ],
+    "n": 162,
+    "n_main_tasks": 106
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 80,
+     "share": 0.0058
+    },
+    "real-attack-e2": {
+     "n": 93,
+     "share": 0.0068
+    },
+    "sim-attack": {
+     "n": 39,
+     "share": 0.0028
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 63,
+    "sim-attack": 30
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.6426,
+    "ci95": [
+     0.5402,
+     0.7652
+    ],
+    "n": 119,
+    "n_main_tasks": 64
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5602,
+    "ci95": [
+     0.4794,
+     0.6584
+    ],
+    "n": 173,
+    "n_main_tasks": 83
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.6603,
+    "ci95": [
+     0.545,
+     0.7847
+    ],
+    "n": 93,
+    "n_main_tasks": 64
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 25,
+     "share": 0.0018
+    },
+    "real-attack-e2": {
+     "n": 35,
+     "share": 0.0026
+    },
+    "sim-attack": {
+     "n": 25,
+     "share": 0.0018
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 22,
+    "sim-attack": 23
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.7688,
+    "ci95": [
+     0.6328,
+     0.8823
+    ],
+    "n": 50,
+    "n_main_tasks": 35
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5446,
+    "ci95": [
+     0.4,
+     0.6808
+    ],
+    "n": 60,
+    "n_main_tasks": 46
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.7767,
+    "ci95": [
+     0.6337,
+     0.8934
+    ],
+    "n": 45,
+    "n_main_tasks": 35
+   }
+  },
+  {
+   "slice": "other_tools",
+   "grouping": "everything",
+   "group": "all",
+   "shares": {
+    "real-attack-e1": {
+     "n": 13701,
+     "share": 1.0
+    },
+    "real-attack-e2": {
+     "n": 13652,
+     "share": 1.0
+    },
+    "sim-attack": {
+     "n": 14083,
+     "share": 1.0
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 939,
+    "sim-attack": 938
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.6773,
+    "ci95": [
+     0.6683,
+     0.6875
+    ],
+    "n": 27784,
+    "n_main_tasks": 536
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5766,
+    "ci95": [
+     0.5658,
+     0.5874
+    ],
+    "n": 27353,
+    "n_main_tasks": 536
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9303,
+    "ci95": [
+     0.9189,
+     0.9418
+    ],
+    "n": 1877,
+    "n_main_tasks": 536
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "out_match",
+   "group": "exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 315,
+     "share": 0.0727
+    },
+    "real-attack-e2": {
+     "n": 302,
+     "share": 0.0712
+    },
+    "sim-attack": {
+     "n": 268,
+     "share": 0.0622
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 130,
+    "sim-attack": 138
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5558,
+    "ci95": [
+     0.511,
+     0.602
+    ],
+    "n": 583,
+    "n_main_tasks": 152
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4641,
+    "ci95": [
+     0.4294,
+     0.4995
+    ],
+    "n": 617,
+    "n_main_tasks": 153
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.6032,
+    "ci95": [
+     0.5585,
+     0.6479
+    ],
+    "n": 268,
+    "n_main_tasks": 152
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "out_match",
+   "group": "near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 414,
+     "share": 0.0955
+    },
+    "real-attack-e2": {
+     "n": 366,
+     "share": 0.0863
+    },
+    "sim-attack": {
+     "n": 371,
+     "share": 0.086
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 153,
+    "sim-attack": 143
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8338,
+    "ci95": [
+     0.7889,
+     0.8683
+    ],
+    "n": 785,
+    "n_main_tasks": 168
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5377,
+    "ci95": [
+     0.5034,
+     0.5695
+    ],
+    "n": 780,
+    "n_main_tasks": 167
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.8447,
+    "ci95": [
+     0.7926,
+     0.8859
+    ],
+    "n": 296,
+    "n_main_tasks": 168
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "out_match",
+   "group": "none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 3604,
+     "share": 0.8318
+    },
+    "real-attack-e2": {
+     "n": 3571,
+     "share": 0.8424
+    },
+    "sim-attack": {
+     "n": 3673,
+     "share": 0.8518
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 196,
+    "sim-attack": 196
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.7689,
+    "ci95": [
+     0.7495,
+     0.7872
+    ],
+    "n": 7277,
+    "n_main_tasks": 196
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5598,
+    "ci95": [
+     0.5462,
+     0.5759
+    ],
+    "n": 7175,
+    "n_main_tasks": 196
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9534,
+    "ci95": [
+     0.9297,
+     0.9731
+    ],
+    "n": 392,
+    "n_main_tasks": 196
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 236,
+     "share": 0.0545
+    },
+    "real-attack-e2": {
+     "n": 231,
+     "share": 0.0545
+    },
+    "sim-attack": {
+     "n": 215,
+     "share": 0.0499
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 122,
+    "sim-attack": 125
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5401,
+    "ci95": [
+     0.4942,
+     0.5827
+    ],
+    "n": 451,
+    "n_main_tasks": 143
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4562,
+    "ci95": [
+     0.4233,
+     0.488
+    ],
+    "n": 467,
+    "n_main_tasks": 147
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.573,
+    "ci95": [
+     0.5214,
+     0.6225
+    ],
+    "n": 247,
+    "n_main_tasks": 143
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 369,
+     "share": 0.0852
+    },
+    "real-attack-e2": {
+     "n": 328,
+     "share": 0.0774
+    },
+    "sim-attack": {
+     "n": 312,
+     "share": 0.0724
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 151,
+    "sim-attack": 139
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8119,
+    "ci95": [
+     0.7657,
+     0.8506
+    ],
+    "n": 681,
+    "n_main_tasks": 167
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5417,
+    "ci95": [
+     0.5031,
+     0.5771
+    ],
+    "n": 697,
+    "n_main_tasks": 167
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.8327,
+    "ci95": [
+     0.784,
+     0.8767
+    ],
+    "n": 290,
+    "n_main_tasks": 167
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 3598,
+     "share": 0.8304
+    },
+    "real-attack-e2": {
+     "n": 3564,
+     "share": 0.8408
+    },
+    "sim-attack": {
+     "n": 3656,
+     "share": 0.8479
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 196,
+    "sim-attack": 196
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.7688,
+    "ci95": [
+     0.7497,
+     0.787
+    ],
+    "n": 7254,
+    "n_main_tasks": 196
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5597,
+    "ci95": [
+     0.5459,
+     0.5759
+    ],
+    "n": 7162,
+    "n_main_tasks": 196
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9539,
+    "ci95": [
+     0.9304,
+     0.9736
+    ],
+    "n": 392,
+    "n_main_tasks": 196
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 79,
+     "share": 0.0182
+    },
+    "real-attack-e2": {
+     "n": 71,
+     "share": 0.0167
+    },
+    "sim-attack": {
+     "n": 53,
+     "share": 0.0123
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 34,
+    "sim-attack": 36
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5726,
+    "ci95": [
+     0.4522,
+     0.719
+    ],
+    "n": 132,
+    "n_main_tasks": 53
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4954,
+    "ci95": [
+     0.4093,
+     0.5951
+    ],
+    "n": 150,
+    "n_main_tasks": 51
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.6577,
+    "ci95": [
+     0.547,
+     0.7766
+    ],
+    "n": 70,
+    "n_main_tasks": 53
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 45,
+     "share": 0.0104
+    },
+    "real-attack-e2": {
+     "n": 38,
+     "share": 0.009
+    },
+    "sim-attack": {
+     "n": 59,
+     "share": 0.0137
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 29,
+    "sim-attack": 29
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.939,
+    "ci95": [
+     0.8769,
+     0.9778
+    ],
+    "n": 104,
+    "n_main_tasks": 44
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5053,
+    "ci95": [
+     0.3812,
+     0.6127
+    ],
+    "n": 83,
+    "n_main_tasks": 40
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.912,
+    "ci95": [
+     0.8283,
+     0.9749
+    ],
+    "n": 58,
+    "n_main_tasks": 44
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 6,
+     "share": 0.0014
+    },
+    "real-attack-e2": {
+     "n": 7,
+     "share": 0.0017
+    },
+    "sim-attack": {
+     "n": 17,
+     "share": 0.0039
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 5,
+    "sim-attack": 14
+   }
+  },
+  {
+   "slice": "base200",
+   "grouping": "everything",
+   "group": "all",
+   "shares": {
+    "real-attack-e1": {
+     "n": 4333,
+     "share": 1.0
+    },
+    "real-attack-e2": {
+     "n": 4239,
+     "share": 1.0
+    },
+    "sim-attack": {
+     "n": 4312,
+     "share": 1.0
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 196,
+    "sim-attack": 196
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.7637,
+    "ci95": [
+     0.7433,
+     0.7824
+    ],
+    "n": 8645,
+    "n_main_tasks": 196
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5519,
+    "ci95": [
+     0.5388,
+     0.5668
+    ],
+    "n": 8572,
+    "n_main_tasks": 196
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9529,
+    "ci95": [
+     0.9296,
+     0.9725
+    ],
+    "n": 392,
+    "n_main_tasks": 196
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "out_match",
+   "group": "exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 1189,
+     "share": 0.0643
+    },
+    "real-attack-e2": {
+     "n": 1175,
+     "share": 0.0636
+    },
+    "sim-attack": {
+     "n": 1083,
+     "share": 0.0571
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 493,
+    "sim-attack": 480
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5563,
+    "ci95": [
+     0.5279,
+     0.5832
+    ],
+    "n": 2272,
+    "n_main_tasks": 363
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5013,
+    "ci95": [
+     0.4864,
+     0.5156
+    ],
+    "n": 2364,
+    "n_main_tasks": 363
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.5775,
+    "ci95": [
+     0.5474,
+     0.6064
+    ],
+    "n": 973,
+    "n_main_tasks": 363
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "out_match",
+   "group": "near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 1907,
+     "share": 0.1031
+    },
+    "real-attack-e2": {
+     "n": 1815,
+     "share": 0.0982
+    },
+    "sim-attack": {
+     "n": 1645,
+     "share": 0.0867
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 593,
+    "sim-attack": 577
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8504,
+    "ci95": [
+     0.8198,
+     0.8785
+    ],
+    "n": 3552,
+    "n_main_tasks": 400
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5263,
+    "ci95": [
+     0.5108,
+     0.5426
+    ],
+    "n": 3722,
+    "n_main_tasks": 401
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.8596,
+    "ci95": [
+     0.8335,
+     0.8836
+    ],
+    "n": 1170,
+    "n_main_tasks": 400
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "out_match",
+   "group": "none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 15407,
+     "share": 0.8327
+    },
+    "real-attack-e2": {
+     "n": 15491,
+     "share": 0.8382
+    },
+    "sim-attack": {
+     "n": 16239,
+     "share": 0.8562
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 743,
+    "sim-attack": 743
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.831,
+    "ci95": [
+     0.8211,
+     0.8407
+    ],
+    "n": 31646,
+    "n_main_tasks": 430
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5524,
+    "ci95": [
+     0.5426,
+     0.5622
+    ],
+    "n": 30898,
+    "n_main_tasks": 430
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9859,
+    "ci95": [
+     0.9794,
+     0.991
+    ],
+    "n": 1486,
+    "n_main_tasks": 430
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 966,
+     "share": 0.0522
+    },
+    "real-attack-e2": {
+     "n": 954,
+     "share": 0.0516
+    },
+    "sim-attack": {
+     "n": 906,
+     "share": 0.0478
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 469,
+    "sim-attack": 452
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.5293,
+    "ci95": [
+     0.507,
+     0.55
+    ],
+    "n": 1872,
+    "n_main_tasks": 352
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.503,
+    "ci95": [
+     0.4851,
+     0.5203
+    ],
+    "n": 1920,
+    "n_main_tasks": 354
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.5453,
+    "ci95": [
+     0.52,
+     0.5711
+    ],
+    "n": 921,
+    "n_main_tasks": 352
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 1771,
+     "share": 0.0957
+    },
+    "real-attack-e2": {
+     "n": 1673,
+     "share": 0.0905
+    },
+    "sim-attack": {
+     "n": 1487,
+     "share": 0.0784
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 584,
+    "sim-attack": 568
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8399,
+    "ci95": [
+     0.8091,
+     0.8692
+    ],
+    "n": 3258,
+    "n_main_tasks": 399
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5267,
+    "ci95": [
+     0.5113,
+     0.5425
+    ],
+    "n": 3444,
+    "n_main_tasks": 397
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.8533,
+    "ci95": [
+     0.8265,
+     0.878
+    ],
+    "n": 1152,
+    "n_main_tasks": 399
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "new_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 15386,
+     "share": 0.8315
+    },
+    "real-attack-e2": {
+     "n": 15459,
+     "share": 0.8365
+    },
+    "sim-attack": {
+     "n": 16198,
+     "share": 0.854
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 743,
+    "sim-attack": 743
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8309,
+    "ci95": [
+     0.821,
+     0.8408
+    ],
+    "n": 31584,
+    "n_main_tasks": 430
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5525,
+    "ci95": [
+     0.5427,
+     0.5625
+    ],
+    "n": 30845,
+    "n_main_tasks": 430
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9859,
+    "ci95": [
+     0.9794,
+     0.991
+    ],
+    "n": 1486,
+    "n_main_tasks": 430
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|exact",
+   "shares": {
+    "real-attack-e1": {
+     "n": 223,
+     "share": 0.0121
+    },
+    "real-attack-e2": {
+     "n": 221,
+     "share": 0.012
+    },
+    "sim-attack": {
+     "n": 177,
+     "share": 0.0093
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 132,
+    "sim-attack": 110
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.6781,
+    "ci95": [
+     0.6084,
+     0.7401
+    ],
+    "n": 400,
+    "n_main_tasks": 136
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4919,
+    "ci95": [
+     0.4528,
+     0.5295
+    ],
+    "n": 444,
+    "n_main_tasks": 133
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.6982,
+    "ci95": [
+     0.6376,
+     0.7544
+    ],
+    "n": 242,
+    "n_main_tasks": 136
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|near",
+   "shares": {
+    "real-attack-e1": {
+     "n": 136,
+     "share": 0.0074
+    },
+    "real-attack-e2": {
+     "n": 142,
+     "share": 0.0077
+    },
+    "sim-attack": {
+     "n": 158,
+     "share": 0.0083
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 91,
+    "sim-attack": 87
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.9359,
+    "ci95": [
+     0.8828,
+     0.9706
+    ],
+    "n": 294,
+    "n_main_tasks": 111
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5213,
+    "ci95": [
+     0.4586,
+     0.5921
+    ],
+    "n": 278,
+    "n_main_tasks": 112
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9173,
+    "ci95": [
+     0.8592,
+     0.96
+    ],
+    "n": 178,
+    "n_main_tasks": 111
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "cmd_in_ref|out_match",
+   "group": "same_cmd|none",
+   "shares": {
+    "real-attack-e1": {
+     "n": 21,
+     "share": 0.0011
+    },
+    "real-attack-e2": {
+     "n": 32,
+     "share": 0.0017
+    },
+    "sim-attack": {
+     "n": 41,
+     "share": 0.0022
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 19,
+    "sim-attack": 32
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.867,
+    "ci95": [
+     0.72,
+     0.9474
+    ],
+    "n": 62,
+    "n_main_tasks": 38
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.4918,
+    "ci95": [
+     0.3359,
+     0.6491
+    ],
+    "n": 53,
+    "n_main_tasks": 40
+   }
+  },
+  {
+   "slice": "overlap800",
+   "grouping": "everything",
+   "group": "all",
+   "shares": {
+    "real-attack-e1": {
+     "n": 18503,
+     "share": 1.0
+    },
+    "real-attack-e2": {
+     "n": 18481,
+     "share": 1.0
+    },
+    "sim-attack": {
+     "n": 18967,
+     "share": 1.0
+    }
+   },
+   "runs_with_group_outputs": {
+    "real-attack-e1": 743,
+    "sim-attack": 743
+   },
+   "output_real_vs_sim": {
+    "auroc": 0.8201,
+    "ci95": [
+     0.8087,
+     0.8309
+    ],
+    "n": 37470,
+    "n_main_tasks": 430
+   },
+   "output_null_e1_vs_e2": {
+    "auroc": 0.5467,
+    "ci95": [
+     0.5379,
+     0.5553
+    ],
+    "n": 36984,
+    "n_main_tasks": 430
+   },
+   "run_real_vs_sim": {
+    "auroc": 0.9818,
+    "ci95": [
+     0.9745,
+     0.9881
+    ],
+    "n": 1486,
+    "n_main_tasks": 430
+   }
+  }
+ ]
+}

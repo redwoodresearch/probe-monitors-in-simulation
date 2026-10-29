@@ -1,0 +1,11 @@
+# For q3's tool-output readout (2026-10-08): layers 48 and 63 (full forward pass) for the swap's 100 runs with both fixes,
+# the note on insert diffs and str_replace in the real format (staged by run_swap.py --config swap_combined.yaml).
+run: 2026-10-08_q2_swap_combined_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-08_q2_swap_combined_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 25
+layers: [48, 63]

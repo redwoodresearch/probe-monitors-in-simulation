@@ -1,0 +1,8 @@
+{
+ "reading": "README stages 3 and 4, committed before running",
+ "fits": {"C": "../2026-10-10_eval_awareness_probe/results/fit_2026-10-11_012120.json", "T": "../2026-10-10_eval_awareness_probe/results/fit_2026-10-11_011607.json"},
+ "git": "02a0e29dcc042a5c8509f9dc9809e9041987ede0",
+ "stage 3 (C)": {"layer": 16, "held-out AUROC": 0.5476, "whole-pipeline null p95": 0.607, "reference (median held-out pair change)": 0.1313, "reference 95%": [-0.0104, 0.5238], "AUROC above the null": false, "reference interval above 0": false},
+ "stage 3 (T)": {"layer": 8, "held-out AUROC": 0.5831, "whole-pipeline null p95": 0.5885, "reference (median held-out pair change)": 1.0723, "reference 95%": [0.6852, 1.4729], "AUROC above the null": false, "reference interval above 0": true},
+ "stage 4 may run": false
+}

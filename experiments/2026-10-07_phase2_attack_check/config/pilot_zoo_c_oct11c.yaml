@@ -1,0 +1,27 @@
+# Zoo C's new real Sol honest runs, batch oct11c (q2's AMENDMENT_C_GUARD.md @ 52feeae3, #754; Aswin, relayed by the
+# orchestrator, just before 16:22 PT 2026-10-11: "All 274 tasks, ~$718 (Recommended)"): two runs for each of the 274
+# tasks, launched one stage at a time with `--tasks` set to that stage's keys (make_zoo_c_tasks.py), and each stage's
+# Sol spend watched by policy_spend_watch.py. Settings matched to the overlap800 batch's log header: openai/gpt-5.6-sol
+# in HONEST mode on control_tower task_setup and arena_policy, 150 steps, 2,700 s per sample, max_samples 1, the
+# September snapshot unpatched (reasoning effort medium is its default), and launch 2's pinned environment images.
+tasks: config/pilot_tasks_zoo_c_oct11c.json
+real_simulator: september_base
+real_arms: [honest_b]
+simulators: []
+simulator_confirmed: true
+policy: openai/gpt-5.6-sol
+server_checks: []                      # no policy servers: --base-urls takes a placeholder
+run: {max_steps: 150, time_limit_s: 2700}
+max_runs_per_server: 30                # one placeholder server
+max_real_runs: 30                      # launch 2's devbox cap
+reference_tries: 3                     # honest_a only; unused here
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+# The policy's own spend: a new run starts only while policy_spend_watch.py's fresh reading, plus the worst case of
+# every run started since it and of the new one, stays under this (the API part of a 100-run stage's $131 stop).
+policy_stop_usd: 120
+# No simulator calls: both limits at 0.
+spend:
+  cap_usd: 0
+  worst_case_limit_usd: 0
+  worst_per_sim_run_usd: 40
+  prior_per_sim_run_usd: 16.8

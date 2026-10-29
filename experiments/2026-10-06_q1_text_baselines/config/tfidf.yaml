@@ -1,0 +1,29 @@
+# TF-IDF + logistic regression baselines for Q1 (analyze_tfidf.py). Resolved settings, defaults included.
+name: tfidf                              # output files: <baseline>_scores_<stamp>, <name>_summary_<stamp>
+examples: examples_2026-10-06_142532     # .run_cache/ staging (v3, 939 cells; leading-content fix; with calls)
+folds_file: folds_v3.json                # splits/: shared main-task folds (identical to v1, v2)
+baselines:                               # name -> which text of each tool output, and its scrub level (analyze_tfidf.scrub)
+  tfidf_cleaned: {text: readout_text, scrub: 0}               # TF-IDF (cleaned text): as Qwen3-32B reads it, up to the probe's readout
+  tfidf_cleaned_times_masked: {text: readout_text, scrub: 1}  # the same, clock times and dates replaced by placeholders
+  tfidf_raw: {text: raw, scrub: 0}                            # TF-IDF (raw text): the tool message as stored in the log
+  tfidf_raw_times_masked: {text: raw, scrub: 1}               # the same, times masked
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer; sklearn "char" collapses whitespace runs)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true                       # TfidfTransformer: tf -> 1 + log(tf); smooth_idf true; l2 row norm
+C: 1.0                                   # fixed a priori (sklearn default); c_sensitivity is reported, not used to choose
+c_sensitivity: [0.1, 10.0]
+solver: liblinear
+max_iter: 1000
+top_features: 25
+bootstrap: 1000                          # resamples of main tasks for 95% intervals
+seed: 0
+n_jobs: 16                               # one Modal container per baseline, 16 CPUs each
+shuffle_null:                            # label-shuffle null for real_vs_sim, all outputs: per main task, one flip
+  draws: 20                              #   (probability 1/2) swaps the e1 and sim labels of all its cells; same folds; seeds seed+1 .. seed+draws
+tells:                                   # analyze_tfidf_tells.py: readable list of the snippets the model leans on
+  baseline: tfidf_cleaned
+  top: 40
+output_variants: [all, no_editor, no_errors]   # refit on each: all; text_editor segments dropped; tool-error outputs dropped

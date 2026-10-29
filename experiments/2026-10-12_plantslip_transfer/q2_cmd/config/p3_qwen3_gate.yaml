@@ -1,0 +1,12 @@
+# Planted slips P3 (PINS.md): the gate. Qwen3-32B reads the 20 unplanted e1 controls as the segment-end dumps read them
+# (32k cut, bfloat16, sdpa), saving P3's fold layers only (8, 16) and stopping after 16.
+run: 2026-10-12_q2_plantP3_gate_qwen3-32b_v1
+inputs_from: 2026-10-12_q2_plantcmd_e1_inputs_v1   # staged by run_stage_cmd.py
+transcripts: gate_transcripts_p3.json               # the 20 e1 controls (P3 has no e2 control), and the inputs' sha256s
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 2
+chunk_size: 10
+layers: [8, 16]

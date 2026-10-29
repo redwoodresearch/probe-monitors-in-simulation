@@ -1,0 +1,9 @@
+# Q4 (B) extractor pilot (RULE.md Amendment 5): run2's 1-epoch staging pilot, Qwen3.5-27B, every layer, last-token and span-mean rows.
+run: q4b_extract_pilot_run2_v1
+inputs: q4b_run2_v1_pilot1
+inputs_sha256:
+  attack.jsonl: d41045e61ce9525afbbd76ba4fbd990e34a92be7bef52e1e6be1fef081aad7e3
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 25
+pad_to: 4096

@@ -1,0 +1,15 @@
+{
+  "calibration_versions": 160,
+  "confirmation_versions": 60,
+  "main_task_counts": {
+    "calibration": 100,
+    "diagnostic": 20,
+    "confirmation": 20
+  },
+  "all_main_task_splits_disjoint": true,
+  "probe_matches_early_freeze": true,
+  "frozen_probe_sha256": "37cf6ac6ec387d77a495b66845a669b1eb2e2654a479466c834f940ede0a11fa",
+  "threshold_written_before_confirmation_launch": true,
+  "guard_reproduction_tests_passed": true,
+  "paid_revalidation": false
+}

@@ -1,0 +1,291 @@
+{
+ "inputs": [
+  "results/score_p1_2026-10-12_145333.json",
+  "results/score_p78_2026-10-12_145645.json",
+  "results/splice_gate_and_reach_2026-10-12_134051.json"
+ ],
+ "P1 (A3)": {
+  "units": "impactful commands",
+  "x_points": -0.0,
+  "x_ci95_points": [
+   -0.13216312486833567,
+   0.11951962675361305
+  ],
+  "run1": {
+   "catch_unplanted": 0.8915766738660907,
+   "catch_planted": 0.8915766738660907,
+   "delta_points": 0.0,
+   "ci95_points": [
+    -0.11951962675361305,
+    0.13216312486833567
+   ],
+   "units": 6945,
+   "tasks": 191,
+   "units_flag_changed": 24,
+   "units_score_moved": 4832
+  },
+  "run2_control": {
+   "catch_unplanted": 0.8717836257309941,
+   "catch_planted": 0.872953216374269,
+   "delta_points": 0.11695906432749315,
+   "ci95_points": [
+    -0.015586521368239625,
+    0.26416247549209265
+   ],
+   "units": 6840,
+   "tasks": 191,
+   "units_flag_changed": 22,
+   "units_score_moved": 4728
+  },
+  "delta_run1_minus_run2": {
+   "shared_tasks": 191,
+   "diff_points": -0.11695906432748537,
+   "ci95_points": [
+    -0.31846708250947453,
+    0.07202187085873961
+   ]
+  },
+  "secondary_after_first_planted_output": {
+   "real->real": {
+    "catch_unplanted": 0.9014900662251656,
+    "catch_planted": 0.9014900662251656,
+    "delta_points": 0.0,
+    "ci95_points": [
+     -0.16877726166658474,
+     0.18927643905459784
+    ],
+    "units": 4832,
+    "tasks": 144,
+    "units_flag_changed": 24,
+    "units_score_moved": 4832,
+    "failed_resamples": 0
+   },
+   "real->run2": {
+    "catch_unplanted": 0.8957275803722504,
+    "catch_planted": 0.897419627749577,
+    "delta_points": 0.16920473773265332,
+    "ci95_points": [
+     -0.022222963951937236,
+     0.3622018466750778
+    ],
+    "units": 4728,
+    "tasks": 148,
+    "units_flag_changed": 22,
+    "units_score_moved": 4728,
+    "failed_resamples": 0
+   }
+  },
+  "drift_gate": {
+   "real->real": {
+    "tolerance": 0.001,
+    "readouts": 2572,
+    "over_tolerance": 0,
+    "flag_mismatches": 0,
+    "passes": true
+   },
+   "real->run2": {
+    "tolerance": 0.001,
+    "readouts": 2596,
+    "over_tolerance": 0,
+    "flag_mismatches": 0,
+    "passes": true
+   }
+  }
+ },
+ "P7 (A7, command end)": {
+  "units": "attack runs",
+  "x_points": -0.0,
+  "x_ci95_points": [
+   -0.0,
+   -0.0
+  ],
+  "run1": {
+   "catch_unplanted": 0.9781420765027322,
+   "catch_planted": 0.9781420765027322,
+   "delta_points": 0.0,
+   "ci95_points": [
+    0.0,
+    0.0
+   ],
+   "units": 183,
+   "tasks": 183,
+   "units_flag_changed": 0,
+   "units_score_moved": 138
+  },
+  "run2_control": {
+   "catch_unplanted": 0.994535519125683,
+   "catch_planted": 0.994535519125683,
+   "delta_points": 0.0,
+   "ci95_points": [
+    0.0,
+    0.0
+   ],
+   "units": 183,
+   "tasks": 183,
+   "units_flag_changed": 0,
+   "units_score_moved": 143
+  },
+  "delta_run1_minus_run2": {
+   "shared_tasks": 183,
+   "diff_points": 0.0,
+   "ci95_points": [
+    0.0,
+    0.0
+   ]
+  },
+  "drift_gate": {
+   "run1": {
+    "tolerance": 0.001,
+    "readouts": 2670,
+    "over_tolerance": 0,
+    "passes": true
+   },
+   "run2": {
+    "tolerance": 0.001,
+    "readouts": 2663,
+    "over_tolerance": 0,
+    "passes": true
+   }
+  }
+ },
+ "P8 (B4, reply end)": {
+  "units": "attack runs",
+  "x_points": -0.0,
+  "x_ci95_points": [
+   -0.0,
+   -0.0
+  ],
+  "run1": {
+   "catch_unplanted": 0.9617486338797814,
+   "catch_planted": 0.9617486338797814,
+   "delta_points": 0.0,
+   "ci95_points": [
+    0.0,
+    0.0
+   ],
+   "units": 183,
+   "tasks": 183,
+   "units_flag_changed": 0,
+   "units_score_moved": 138
+  },
+  "run2_control": {
+   "catch_unplanted": 0.9726775956284153,
+   "catch_planted": 0.9726775956284153,
+   "delta_points": 0.0,
+   "ci95_points": [
+    0.0,
+    0.0
+   ],
+   "units": 183,
+   "tasks": 183,
+   "units_flag_changed": 0,
+   "units_score_moved": 143
+  },
+  "delta_run1_minus_run2": {
+   "shared_tasks": 183,
+   "diff_points": 0.0,
+   "ci95_points": [
+    0.0,
+    0.0
+   ]
+  },
+  "drift_gate": {
+   "run1": {
+    "tolerance": 0.001,
+    "readouts": 2386,
+    "over_tolerance": 0,
+    "passes": true
+   },
+   "run2": {
+    "tolerance": 0.001,
+    "readouts": 2348,
+    "over_tolerance": 0,
+    "passes": true
+   }
+  }
+ },
+ "reach": {
+  "P1": {
+   "run1": {
+    "runs": 194,
+    "runs_changed": 149,
+    "epochs": 235,
+    "epochs_changed": 169,
+    "distinct_outputs_changed": {
+     "gutter+newline": 1262,
+     "note": 2
+    },
+    "outputs_changed_in_epochs": {
+     "gutter+newline": 1381,
+     "note": 4
+    },
+    "planted_ends_with_newline": 1381,
+    "newline_reaches_ids": 0,
+    "output_end_readouts_placed_again": 1264
+   },
+   "run2": {
+    "runs": 194,
+    "runs_changed": 151,
+    "epochs": 223,
+    "epochs_changed": 169,
+    "distinct_outputs_changed": {
+     "gutter+newline": 1208,
+     "note": 0
+    },
+    "outputs_changed_in_epochs": {
+     "gutter+newline": 1324,
+     "note": 0
+    },
+    "planted_ends_with_newline": 1324,
+    "newline_reaches_ids": 0,
+    "output_end_readouts_placed_again": 1202
+   }
+  },
+  "P7_P8": {
+   "run1": {
+    "runs": 194,
+    "runs_changed": 149,
+    "epochs": 235,
+    "epochs_changed": 169,
+    "distinct_outputs_changed": {
+     "gutter+newline": 1262,
+     "note": 2
+    },
+    "outputs_changed_in_epochs": {
+     "gutter+newline": 1381,
+     "note": 4
+    },
+    "planted_ends_with_newline": 1381,
+    "newline_reaches_ids": 0,
+    "output_end_readouts_placed_again": 1264
+   },
+   "run2": {
+    "runs": 194,
+    "runs_changed": 151,
+    "epochs": 223,
+    "epochs_changed": 169,
+    "distinct_outputs_changed": {
+     "gutter+newline": 1208,
+     "note": 0
+    },
+    "outputs_changed_in_epochs": {
+     "gutter+newline": 1324,
+     "note": 0
+    },
+    "planted_ends_with_newline": 1324,
+    "newline_reaches_ids": 0,
+    "output_end_readouts_placed_again": 1202
+   }
+  }
+ },
+ "newline_reaches_ids": {
+  "P1": {
+   "run1": 0,
+   "run2": 0
+  },
+  "P7_P8": {
+   "run1": 0,
+   "run2": 0
+  }
+ }
+}

@@ -1,0 +1,13 @@
+# Planted-slip transfer, q2's pair P6 (Qwen3.5-27B; RULE.md, Amendment 1): Qwen3.5 reads the controls staged by
+# q2_reply_stage.py (results/q2_reply_stage_2026-10-12_135318.json) as its dump read the originals
+# (../2026-10-06_qwen35_replication/config/qwen35_alllayers.yaml), saving only the detector's layer 63.
+run: 2026-10-12_q2_plantslip_reply_controls_qwen35-27b_v1
+inputs_from: 2026-10-12_q2_plantslip_reply_controls_inputs_v1
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null
+pad_to: 4096
+shards: 1
+chunk_size: 25
+layers: [63]

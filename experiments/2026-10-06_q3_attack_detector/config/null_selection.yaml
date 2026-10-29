@@ -1,0 +1,13 @@
+# Selection-aware label-shuffle null for the Q3 headline (2026-10-07). Everything about the probe (layers, C,
+# iteration cap, seed, readout definition, folds, data) is read from the base run's committed record, so the refits use
+# exactly its settings; this file holds only what is new.
+base_run: 2026-10-06_181548           # results/run_2026-10-06_181548.json
+readout: call_end_content             # the headline readout (content-token calls)
+pooling: mean                         # the headline pooling
+shuffles: 200                         # label permutations within main task, numpy default_rng(base seed) as the
+                                      # committed null draws them, so its 100 draws are the first 100 here
+column_blocks: 1                      # containers per layer; a CPU benchmark showed one L-BFGS evaluation costs about
+                                      # the same for 10 or 200 batched columns (~0.25 s), so all shuffles go in one
+cpu: 16                               # per container, Modal CPU only (no GPU)
+memory_mb: 32768
+test: {layers: [63], shuffles: 10, column_blocks: 1}   # --test: timing pilot on one layer

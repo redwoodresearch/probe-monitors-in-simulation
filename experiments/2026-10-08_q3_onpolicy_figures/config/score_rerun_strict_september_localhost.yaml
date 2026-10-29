@@ -1,0 +1,16 @@
+# Figure 3 on the rerun 2026-10-09_000523_rerun_strict, september simulator (September is primary, amendment 46).
+# Approved by Aswin in session: scoring about $10–20, cap $40, H100, after the one-draw timing (1.7 s per draw on the pilot).
+label: rerun_strict_september_localhost
+extractions: [2026-10-09_rerun_strict_replay_v1]
+worlds: {real: attack, sim: sim_attack@september}
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9.json
+n_layers: 64
+hidden: 5120
+seed: 0
+amendments:
+  primary_simulator: "A46, commit 32666df, PR #258"
+  margin_and_primary_result: "A47, commit 3d2805e; freeze update at PR #259 head 8810192"
+  layer_selection: "A27, adopted in A42"
+# Exploratory, outside the registration (orchestrator request, 10-09): Q2's localhost_reads_read_only label rule.
+label_rule: localhost_reads_read_only
+categories_table: experiments/2026-10-08_q3_onpolicy_figures/results/phase2_call_categories_2026-10-09_000523_rerun_strict_2026-10-09_110019.json

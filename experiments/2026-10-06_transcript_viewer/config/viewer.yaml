@@ -1,0 +1,7 @@
+# Transcript viewer (2026-10-06). Paths are relative to the repo root.
+cache: .run_cache/viewer                 # raw .eval downloads, per-sample JSON, index.jsonl (regenerable, gitignored)
+splits: splits/exclusions_v3.json        # paired task list and per-sample tags; bump when splits move
+scores: .run_cache/viewer/scores         # probe score files, *.jsonl, rows {probe, arm, key, step, action, score}
+max_tokens: 32768                        # the reader's cut, as in the activation extraction
+tokenizer: Qwen/Qwen3-32B                # segments come from probe_shift.reader.render; revision pinned in probe_shift.models
+workers: 8                               # processes for the cache build

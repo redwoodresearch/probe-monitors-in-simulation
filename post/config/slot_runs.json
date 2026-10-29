@@ -1,0 +1,215 @@
+{
+  "_about": "The four slot readouts behind the post (run_slot_readout.py on Modal, 10-20). rebuild_post.py reruns slot_table.build on the same records (role -> record in MANIFEST.json; path = the pointer string the original run passed, used only in the label registry check) and requires its output to equal the committed slot file exactly.",
+  "rc1a": {
+    "code": "slots/slot_table_a8b4a156.py",
+    "committed": "slots_rc1a",
+    "slot_table_sha256_as_run": "1daad759f12220097b339a656a52dcc813c746a5d90c9d3a483c3328cac2c46d",
+    "inputs": {
+      "A": {
+        "record": "A",
+        "path": "xfer/fpr507prep/records/results/alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json"
+      },
+      "A_group_catch": {
+        "record": "group_catch",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430.json"
+      },
+      "A_group_excess": {
+        "record": "group_excess",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246.json"
+      },
+      "LABELS_171": {
+        "record": "labels_171",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/LABELS_171pool_2026-10-17.json"
+      },
+      "A_label": {
+        "record": "A_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json"
+      },
+      "A_group_catch_label": {
+        "record": "group_catch_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430_LABEL.json"
+      },
+      "A_group_excess_label": {
+        "record": "group_excess_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246_LABEL.json"
+      }
+    }
+  },
+  "rc1b": {
+    "code": "slots/slot_table_a8b4a156.py",
+    "committed": "slots_rc1b",
+    "slot_table_sha256_as_run": "1daad759f12220097b339a656a52dcc813c746a5d90c9d3a483c3328cac2c46d",
+    "inputs": {
+      "A": {
+        "record": "A",
+        "path": "xfer/fpr507prep/records/results/alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json"
+      },
+      "A_group_catch": {
+        "record": "group_catch",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430.json"
+      },
+      "A_group_excess": {
+        "record": "group_excess",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246.json"
+      },
+      "KAPPA": {
+        "record": "kappa",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/kappa_CRD_2026-10-20_004454.json.gz"
+      },
+      "KAPPA_EXTRA": {
+        "record": "kappa_extra",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/kappa_extra_kappa_CRD_2026-10-20_004454_2026-10-20_011442_ap-lSODwCn5gn3jLeCaCx38fX.json"
+      },
+      "DETDROP": {
+        "record": "detdrop",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-20_011851_ap-aYMAJlzcASqKL6EFhdlTkf.json"
+      },
+      "ANCHOR": {
+        "record": "anchor",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh.json"
+      },
+      "PLANT": {
+        "record": "plant_rows",
+        "path": "experiments/2026-10-15_panel_noise_matched/results/panel_plant_rows_plant_rows_POOLED_FULL_routeC_2026-10-20_004247_2026-10-20_004833.json"
+      },
+      "LABELS_171": {
+        "record": "labels_171",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/LABELS_171pool_2026-10-17.json"
+      },
+      "A_label": {
+        "record": "A_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json"
+      },
+      "A_group_catch_label": {
+        "record": "group_catch_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430_LABEL.json"
+      },
+      "A_group_excess_label": {
+        "record": "group_excess_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246_LABEL.json"
+      },
+      "KAPPA_label": {
+        "record": "kappa_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_kap_label_sidecar_2026-10-20_004454.json"
+      },
+      "KAPPA_EXTRA_label": {
+        "record": "kappa_extra_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_kx_label_sidecar_2026-10-20_004454.json"
+      },
+      "DETDROP_label": {
+        "record": "detdrop_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-20_011851_ap-aYMAJlzcASqKL6EFhdlTkf_LABEL.json"
+      },
+      "ANCHOR_label": {
+        "record": "anchor_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh_LABEL.json"
+      },
+      "PLANT_label": {
+        "record": "plant_rows_label",
+        "path": "experiments/2026-10-15_panel_noise_matched/results/routec_plant_rows_label_sidecar_2026-10-20_004247.json"
+      }
+    }
+  },
+  "rc1b_detl48": {
+    "code": "slots/slot_table_bfb2dc01.py",
+    "committed": "slots_rc1b_detl48",
+    "slot_table_sha256_as_run": "0fd9ddad75d796d8ce147b26fe9451429a50575c3e1a25966395bb4c96145aad",
+    "inputs": {
+      "A": {
+        "record": "A",
+        "path": "xfer/fpr507prep/records/results/alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json"
+      },
+      "A_group_catch": {
+        "record": "group_catch",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430.json"
+      },
+      "A_group_excess": {
+        "record": "group_excess",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246.json"
+      },
+      "KAPPA": {
+        "record": "kappa",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/kappa_CRD_2026-10-20_004454.json.gz"
+      },
+      "KAPPA_EXTRA": {
+        "record": "kappa_extra",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/kappa_extra_kappa_CRD_2026-10-20_004454_2026-10-20_011442_ap-lSODwCn5gn3jLeCaCx38fX.json"
+      },
+      "DETDROP": {
+        "record": "detdrop_l48",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-20_125606_ap-NuUKhGaNZaLhqdKopouezY.json"
+      },
+      "ANCHOR": {
+        "record": "anchor",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh.json"
+      },
+      "PLANT": {
+        "record": "plant_rows",
+        "path": "experiments/2026-10-15_panel_noise_matched/results/panel_plant_rows_plant_rows_POOLED_FULL_routeC_2026-10-20_004247_2026-10-20_004833.json"
+      },
+      "LABELS_171": {
+        "record": "labels_171",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/LABELS_171pool_2026-10-17.json"
+      },
+      "A_label": {
+        "record": "A_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json"
+      },
+      "A_group_catch_label": {
+        "record": "group_catch_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430_LABEL.json"
+      },
+      "A_group_excess_label": {
+        "record": "group_excess_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246_LABEL.json"
+      },
+      "KAPPA_label": {
+        "record": "kappa_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_kap_label_sidecar_2026-10-20_004454.json"
+      },
+      "KAPPA_EXTRA_label": {
+        "record": "kappa_extra_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_kx_label_sidecar_2026-10-20_004454.json"
+      },
+      "DETDROP_label": {
+        "record": "detdrop_l48_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-20_125606_ap-NuUKhGaNZaLhqdKopouezY_LABEL.json"
+      },
+      "ANCHOR_label": {
+        "record": "anchor_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh_LABEL.json"
+      },
+      "PLANT_label": {
+        "record": "plant_rows_label",
+        "path": "experiments/2026-10-15_panel_noise_matched/results/routec_plant_rows_label_sidecar_2026-10-20_004247.json"
+      }
+    }
+  },
+  "rc2": {
+    "code": "slots/slot_table_a8b4a156.py",
+    "committed": "slots_rc2",
+    "slot_table_sha256_as_run": "1daad759f12220097b339a656a52dcc813c746a5d90c9d3a483c3328cac2c46d",
+    "inputs": {
+      "B": {
+        "record": "B",
+        "path": "xfer/fpr507prep/records/results/alltasks_CRD_FULL_r2_allorigins_sweep15_pooledworld_scored_e12_2026-10-19_180652.json"
+      },
+      "R37": {
+        "record": "R37",
+        "path": "xfer/fpr507prep/records/results/alltasks_CRD_FULL_r2_allorigins_rule37_pooledworld_scored_e12_2026-10-19_181100.json"
+      },
+      "LABELS_171": {
+        "record": "labels_171",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/LABELS_171pool_2026-10-17.json"
+      },
+      "B_label": {
+        "record": "B_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_B_label_sidecar_2026-10-19_181355.json"
+      },
+      "R37_label": {
+        "record": "R37_label",
+        "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_R37_label_sidecar_2026-10-19_181355.json"
+      }
+    }
+  }
+}

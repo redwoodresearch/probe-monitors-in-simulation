@@ -1,0 +1,19 @@
+# All 7 arms of the rerun with the per-segment readouts (command, call_end, output_end), staged by run_replay_readouts.py
+# --segment-ends --stage rerun_strict_segends_v2 --unoffered str_replace_editor,str_replace
+# (results/replay_readouts_rerun_strict_segends_2026-10-09_135600.json): 191 context epochs, 10,563,248 tokens; readouts
+# 10,023 command, 10,023 call_end, 8,572 output_end (rule-E calls and their outputs excluded). The attack detector on Qwen's own runs, approved by Aswin in session
+# at 13:35 PT ("recommended"; the plan's cap $11). Longest prompt 216,712 tokens: --test first.
+run: 2026-10-09_rerun_strict_segends_v1
+inputs: rerun_strict_segends_v2
+inputs_sha256:
+  attack.jsonl: b5ff12088b626520d96152e8f2b12a93a60bb3c04f81e64919b52fddb717e07b
+  honest_a.jsonl: b890ed449cfc5b91f614f12fb04f50bd4ab31adc5e6051406b5d496918015a0d
+  honest_b.jsonl: 8b709a0dd0630fa80fa71c53abfc574844a08866534d45673b65d6ad01c0684c
+  sim_attack@september.jsonl: 6111e4e8c4469876f937524536b7c319dade99ea1860853a85ee841c00b044b1
+  sim_attack@today.jsonl: 10434ea1e6402f1fa3b576b44a8a29fe1e769233e404161a1067b3e8277b5d1f
+  sim_honest@september.jsonl: 2fd004c38289837d7916fa9676941e166ba8c8a74b997c1d50a49db692c33654
+  sim_honest@today.jsonl: 67f8f45bfbbc52a7c0dc88d13b4460f5230b9b332d462750c470ed921ba31978
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 10
+pad_to: 4096

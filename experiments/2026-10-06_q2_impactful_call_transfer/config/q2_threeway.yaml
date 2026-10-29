@@ -1,0 +1,19 @@
+# Q2 three ways (2026-10-06): attack only, honest only, pooled. Merged over q2_probes.yaml and q2_alllayers.yaml.
+# Design approved by Aswin via the orchestrator, 2026-10-06; one real honest run per task is the primary analysis.
+out_sub: threeway                       # on the Q2 features Volume, next to alllayers/ (whose packed rows it reuses)
+extra_arm: sim-honest                   # la_public10_sim_astra_honest_n437: one run per main task
+extra_alllayers_run: 2026-10-06_la_segment-end-v4_qwen3-32b_alllayers_v1   # main session's five-arm all-layer read (read only); identical to the attack-only run on shared transcripts
+honest_tasks: every main task with a real and a sim honest run (437, the shared splits' paired honest tasks; 431 also have attack pairs)
+real_honest_run: one per task, chosen before any result -- lowest epoch, then lowest sample ID, then lowest .eval file name
+views:                                  # arm -> domain; arms not listed are left out. one_run: only each task's chosen real honest run
+  attack_only: {domains: {real-attack-e1: real, sim-attack: sim}}   # the 536 paired tasks; reproduces the attack-only run
+  honest_only: {domains: {real-honest: real, sim-honest: sim}, one_run: true}   # the 437 paired honest tasks
+  honest_only_all_runs: {domains: {real-honest: real, sim-honest: sim}}   # sensitivity: every real honest run (1-8 per task)
+  pooled: {domains: {real-attack-e1: real, real-honest: real, sim-attack: sim, sim-honest: sim}, one_run: true}   # attack calls from 536 tasks, honest from 437
+  pooled_all_runs: {domains: {real-attack-e1: real, real-honest: real, sim-attack: sim, sim-honest: sim}}
+test_domains: [real, sim]
+train_sets: {real: [real], sim: [sim]}
+home: {real: real, sim: sim}
+null_train_sets: [real, sim]
+slices: [sim_honest_local_digest_task, sim_honest_redrawn_task]   # label-table task flags; each dropped from every arm at test time, no refit
+reproduces: {view: attack_only, train_sets: {real: real-attack-e1, sim: sim-attack}}

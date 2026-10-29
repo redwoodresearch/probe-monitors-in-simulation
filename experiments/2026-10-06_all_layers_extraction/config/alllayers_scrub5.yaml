@@ -1,0 +1,9 @@
+# All 64 layers at the segment-end positions, level-5 scrubbed text (the transcripts and text of the scrubbed run).
+run: 2026-10-06_la_segment-end-scrub5_qwen3-32b_alllayers_v1
+inputs_from: 2026-10-06_la_segment-end-scrub5-ema_qwen3-32b_v1   # its staged, scrubbed reader messages
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 40
+chunk_size: 25                                          # transcripts per per-layer chunk file

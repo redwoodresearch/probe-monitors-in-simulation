@@ -1,0 +1,149 @@
+{
+ "label": "STUB allowlist for testing 09's sec. 2-3 code only (NOT the sec. 1 table): own_frac10/25/100_L48 launch-disjoint on S_new (all arms), not on S_old (run 1 is their training launch); own_all_L48 not listed (fails closed). Replace with the committed sec. 1 table by path@sha for stage C.",
+ "rows": [
+  {
+   "probe": "own_frac100_L48",
+   "origin": "S_old",
+   "arm": "run1",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac100_L48",
+   "origin": "S_old",
+   "arm": "run2",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac100_L48",
+   "origin": "S_old",
+   "arm": "honest_B",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac100_L48",
+   "origin": "S_old",
+   "arm": "honest_C",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac100_L48",
+   "origin": "S_new",
+   "arm": "run1",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac100_L48",
+   "origin": "S_new",
+   "arm": "run2",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac100_L48",
+   "origin": "S_new",
+   "arm": "honest_A",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac100_L48",
+   "origin": "S_new",
+   "arm": "honest_B",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac25_L48",
+   "origin": "S_old",
+   "arm": "run1",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac25_L48",
+   "origin": "S_old",
+   "arm": "run2",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac25_L48",
+   "origin": "S_old",
+   "arm": "honest_B",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac25_L48",
+   "origin": "S_old",
+   "arm": "honest_C",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac25_L48",
+   "origin": "S_new",
+   "arm": "run1",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac25_L48",
+   "origin": "S_new",
+   "arm": "run2",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac25_L48",
+   "origin": "S_new",
+   "arm": "honest_A",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac25_L48",
+   "origin": "S_new",
+   "arm": "honest_B",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac10_L48",
+   "origin": "S_old",
+   "arm": "run1",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac10_L48",
+   "origin": "S_old",
+   "arm": "run2",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac10_L48",
+   "origin": "S_old",
+   "arm": "honest_B",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac10_L48",
+   "origin": "S_old",
+   "arm": "honest_C",
+   "disjoint": false
+  },
+  {
+   "probe": "own_frac10_L48",
+   "origin": "S_new",
+   "arm": "run1",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac10_L48",
+   "origin": "S_new",
+   "arm": "run2",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac10_L48",
+   "origin": "S_new",
+   "arm": "honest_A",
+   "disjoint": true
+  },
+  {
+   "probe": "own_frac10_L48",
+   "origin": "S_new",
+   "arm": "honest_B",
+   "disjoint": true
+  }
+ ]
+}

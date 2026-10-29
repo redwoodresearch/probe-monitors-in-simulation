@@ -1,0 +1,19 @@
+{
+  "n_readable_rule37_mine": 108,
+  "n_unreadable_mine": 36,
+  "n_verdict_rows": 4686,
+  "nongroup_rows": 4554,
+  "nongroup_pass": 4554,
+  "group_rows": 132,
+  "group_expected_withheld": 44,
+  "group_pass16": 132,
+  "group_fail16": [],
+  "orig_failing_rows": 44,
+  "membership_checked": 60,
+  "membership_differs": 20,
+  "membership_differs_all_expected_withheld": true,
+  "other_verdict_parts_pass": true,
+  "rows_pass16": 4686,
+  "membership_pass16": 60,
+  "PASS16": true
+}

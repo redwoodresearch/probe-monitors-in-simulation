@@ -1,0 +1,148 @@
+{
+ "label": "k = 1 stage summary (preliminary until reviewed)",
+ "inputs": {
+  "scores_4be7958c7157.json": "b9e4eeac0d82ffef762fdf83d4dfbf7ff6242607b983abbfd11da03fd207a8af"
+ },
+ "lost": {},
+ "build_counts": {
+  "fix_changes_elsewhere_sim": 0,
+  "fix_changes_elsewhere_self": 0,
+  "clock_shifted_sim": 34,
+  "clock_shifted_self": 0,
+  "self_text_equals_staged": 400,
+  "sim_text_equals_self_text": 198
+ },
+ "gate": true,
+ "fits_converged": true,
+ "check_self_swap": {
+  "sites": 400,
+  "max_abs_diff": 3.552713678800501e-15,
+  "pass": true
+ },
+ "check_planted": {
+  "sites": 100,
+  "lost_to_cut": 0,
+  "reference_mean": 0.2456413295514645,
+  "read_shift_mean": 0.2456413295514646,
+  "ci95": [
+   0.10455726263653277,
+   0.3882089378966437
+  ],
+  "pass": true
+ },
+ "checks_pass": true,
+ "layer_63": {
+  "delta1": 0.13721706045631266,
+  "delta1_ci95": [
+   0.07401972479113225,
+   0.20811222225097725
+  ],
+  "G": 0.5498958153804372,
+  "G_ci95": [
+   0.4204076567548885,
+   0.6778700318497436
+  ],
+  "R1": 0.24953283261735879,
+  "R1_ci95": [
+   0.14088819497972355,
+   0.38155277288862766
+  ],
+  "draws_with_nonpositive_G": 0,
+  "e2_yardstick_gap": -0.00913066834357068,
+  "e2_sites": 338,
+  "R1_net": 0.245457173231272,
+  "R1_net_ci95": [
+   0.1345766942127785,
+   0.4037070681753061
+  ]
+ },
+ "layer_A": {
+  "delta1": 0.1472751365538022,
+  "delta1_ci95": [
+   0.08576438411514752,
+   0.22015731330690191
+  ],
+  "G": 0.5903128084649374,
+  "G_ci95": [
+   0.4572619782474138,
+   0.720591931241756
+  ],
+  "R1": 0.24948660175065446,
+  "R1_ci95": [
+   0.14148840727234915,
+   0.3820559570039801
+  ],
+  "draws_with_nonpositive_G": 0,
+  "e2_yardstick_gap": -0.013377642035518247,
+  "e2_sites": 338,
+  "R1_net": 0.24395803583063475,
+  "R1_net_ci95": [
+   0.13837572652051927,
+   0.380292890969702
+  ]
+ },
+ "reading": "not the reply itself",
+ "by_environment": {
+  "clinical_trial": {
+   "sites": 79,
+   "R1": 0.10402378454059799
+  },
+  "media_processing": {
+   "sites": 70,
+   "R1": 0.2586983648075292
+  },
+  "shared_dotfiles": {
+   "sites": 82,
+   "R1": 0.10201156830945833
+  },
+  "tiktok": {
+   "sites": 79,
+   "R1": 0.5427476209630993
+  },
+  "user_tracking": {
+   "sites": 90,
+   "R1": 0.2413985872863571
+  }
+ },
+ "by_tool": {
+  "bash": {
+   "sites": 201,
+   "R1": 0.3418134734252203
+  },
+  "client_bash": {
+   "sites": 4,
+   "R1": 6.0123405788766675
+  },
+  "db_bash": {
+   "sites": 12,
+   "R1": 0.010772755913444355
+  },
+  "py_ml_bash": {
+   "sites": 1,
+   "R1": 0.4518520895924626
+  },
+  "rust_worker_bash": {
+   "sites": 5,
+   "R1": 0.9823348954637238
+  },
+  "text_editor:create": {
+   "sites": 38,
+   "R1": 0.03145081711211897
+  },
+  "text_editor:insert": {
+   "sites": 27,
+   "R1": 0.22014630425547413
+  },
+  "text_editor:str_replace": {
+   "sites": 105,
+   "R1": 0.19128737324013262
+  },
+  "text_editor:view": {
+   "sites": 7,
+   "R1": 0.9743247624549133
+  }
+ },
+ "identical_replies": 198,
+ "git": "d3874fbbe2e898d662c97c5fcf35d8f7bc1ffa87",
+ "script_sha256": "089e5f8b15ae25ee06e8c6b5d2ffd567c4a4a58513b00c72a6e5e386a1c79e3e"
+}

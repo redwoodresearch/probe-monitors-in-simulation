@@ -1,0 +1,484 @@
+{
+ "git": "9cd23708e01fb422e7b9241e60ddce332c64aef7",
+ "c": {
+  "out": "rh1e4_stage_v1",
+  "parts": [
+   {
+    "part": 0,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 1,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 2,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 3,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 4,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 5,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 6,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 7,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 8,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 9,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 10,
+    "runs": 21,
+    "staged": 20
+   },
+   {
+    "part": 11,
+    "runs": 21,
+    "staged": 20
+   },
+   {
+    "part": 12,
+    "runs": 21,
+    "staged": 20
+   },
+   {
+    "part": 13,
+    "runs": 21,
+    "staged": 20
+   },
+   {
+    "part": 14,
+    "runs": 21,
+    "staged": 20
+   },
+   {
+    "part": 15,
+    "runs": 21,
+    "staged": 20
+   },
+   {
+    "part": 16,
+    "runs": 21,
+    "staged": 21
+   },
+   {
+    "part": 17,
+    "runs": 21,
+    "staged": 20
+   },
+   {
+    "part": 18,
+    "runs": 21,
+    "staged": 20
+   },
+   {
+    "part": 19,
+    "runs": 21,
+    "staged": 20
+   },
+   {
+    "part": 20,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 21,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 22,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 23,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 24,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 25,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 26,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 27,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 28,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 29,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 30,
+    "runs": 20,
+    "staged": 18
+   },
+   {
+    "part": 31,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 32,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 33,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 34,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 35,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 36,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 37,
+    "runs": 20,
+    "staged": 19
+   },
+   {
+    "part": 38,
+    "runs": 20,
+    "staged": 19
+   },
+   {
+    "part": 39,
+    "runs": 20,
+    "staged": 19
+   },
+   {
+    "part": 40,
+    "runs": 20,
+    "staged": 19
+   },
+   {
+    "part": 41,
+    "runs": 20,
+    "staged": 19
+   },
+   {
+    "part": 42,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 43,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 44,
+    "runs": 20,
+    "staged": 19
+   },
+   {
+    "part": 45,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 46,
+    "runs": 20,
+    "staged": 20
+   },
+   {
+    "part": 47,
+    "runs": 20,
+    "staged": 20
+   }
+  ],
+  "assembled": {
+   "set": "c",
+   "epochs": {
+    "honest_b": 963
+   },
+   "staged_inputs_sha256": {
+    "honest_b.jsonl": "8a150d13903df37c974e6d2ffd3f6fe4b114fb1ad1a328858a21d50ff4eabb78"
+   },
+   "format_gate": {
+    "honest_b": {
+     "runs": [
+      {
+       "assistant_turns": 53,
+       "think_open": 53,
+       "think_close": 53,
+       "think_blocks_with_content": 0,
+       "tools_block": false,
+       "submit_rows": 0,
+       "think_open_truncated_at_cut": false
+      },
+      {
+       "assistant_turns": 42,
+       "think_open": 42,
+       "think_close": 42,
+       "think_blocks_with_content": 0,
+       "tools_block": false,
+       "submit_rows": 0,
+       "think_open_truncated_at_cut": false
+      },
+      {
+       "assistant_turns": 35,
+       "think_open": 35,
+       "think_close": 35,
+       "think_blocks_with_content": 0,
+       "tools_block": false,
+       "submit_rows": 0,
+       "think_open_truncated_at_cut": false
+      }
+     ],
+     "passes": true,
+     "think_open_truncated_at_cut_runs": 3,
+     "epochs": 963
+    }
+   },
+   "coverage": {
+    "honest_b": {
+     "runs": 980,
+     "runs excluded": {
+      "errored run: events and messages misaligned": 17
+     },
+     "runs unchanged by the edit": 0,
+     "totals": {
+      "tokens_before": 58686488,
+      "tokens_after": 29314129,
+      "truncated": 773,
+      "edited": 0,
+      "commands read_only": 40753,
+      "commands read_only inside": 22008,
+      "outputs shown": 84627,
+      "outputs with an output_end inside": 31001,
+      "commands impactful": 43928,
+      "commands impactful inside": 12934,
+      "diff numbered inside": 2505,
+      "slip outputs inside": 0,
+      "diff numbered": 5163,
+      "slip outputs": 0,
+      "diff outputs never shown": 0,
+      "exposed": 0,
+      "output_end rows inside": 31001,
+      "read_only rows inside": 22008
+     },
+     "read-only rows inside, per fold [rows, tasks]": {
+      "0": [
+       4515,
+       192
+      ],
+      "1": [
+       4106,
+       189
+      ],
+      "2": [
+       4315,
+       191
+      ],
+      "3": [
+       4414,
+       197
+      ],
+      "4": [
+       4658,
+       189
+      ]
+     }
+    }
+   }
+  },
+  "c_gate": {
+   "manifest_keys": 980,
+   "staged": 963,
+   "excluded": {
+    "2026-10-14_135334_honest_rh980/honest_b/t98_model_registry_r1_redraw1/2026-10-14T21-17-22-00-00_la-model-registry-real-honest-1_3o9zYpg7QvBczz6ZLZHiqp.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t98_model_registry_r2/2026-10-14T23-33-27-00-00_la-model-registry-real-honest-1_AkqeLeGGFQyNVjCAdsfFMK.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t98_model_registry_r3/2026-10-15T00-55-07-00-00_la-model-registry-real-honest-1_Ueay6MWibNbW56u8mKugB7.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t98_model_registry_r4_redraw1/2026-10-15T02-27-05-00-00_la-model-registry-real-honest-1_CztExxaXc7jF58xtbj7t6n.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t98_model_registry_r5/2026-10-15T03-34-24-00-00_la-model-registry-real-honest-1_VYqb5kqunVmB5VfaAoj4Qe.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t139_model_registry_r1/2026-10-14T23-07-19-00-00_la-model-registry-real-honest-1_afmfb79WmHjzPLEK7WjQVa.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t139_model_registry_r3_redraw2/2026-10-15T01-14-52-00-00_la-model-registry-real-honest-1_iwmbojjjM2ZBoa45QspEnR.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t139_model_registry_r4/2026-10-15T02-30-08-00-00_la-model-registry-real-honest-1_nytAHmm4A7aU43ZkCejnVT.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t139_model_registry_r5/2026-10-15T03-52-10-00-00_la-model-registry-real-honest-1_d7LGLPp2bCUJAxtYFzyQP9.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t115_model_registry_r2/2026-10-14T23-38-32-00-00_la-model-registry-real-honest-1_ahBixpJhzpUugBgPfjKkX5.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t34_tiktok_r5/2026-10-15T03-20-10-00-00_la-tiktok-real-honest-1_Lg2k76GXTMTM7EsJdHsUKk.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_135334_honest_rh980/honest_b/t151_model_registry_r1/2026-10-14T21-34-01-00-00_la-model-registry-real-honest-1_M2SqDjsnAZ7GFeQdSPis3V.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t151_model_registry_r2_redraw2/2026-10-14T23-55-11-00-00_la-model-registry-real-honest-1_jLLRvHhyQspF9iS8QqXh6f.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t151_model_registry_r3/2026-10-15T01-13-21-00-00_la-model-registry-real-honest-1_NkkCACHFs5GvbJkbaKYpn2.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t151_model_registry_r4/2026-10-15T02-34-41-00-00_la-model-registry-real-honest-1_33xrtK9yTsJRv6hbGYmu2d.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t151_model_registry_r5/2026-10-15T03-55-13-00-00_la-model-registry-real-honest-1_Qs6Bkf9rCHawa4KettPA3U.eval#e0": "errored run: events and messages misaligned",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t37_slack_clone_r4/2026-10-15T01-58-43-00-00_la-slack-clone-real-honest-1_CEUH3cDqrFKfSzFDUjQ2s3.eval#e0": "errored run: events and messages misaligned"
+   },
+   "render_changed": [
+    "2026-10-14_135334_honest_rh980/honest_b/t01_media_processing_r1/2026-10-14T20-55-44-00-00_la-media-processing-real-honest-1_4uWt5W6ieAUYaEnLxv9veQ.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t03_auto_workflow_r1/2026-10-14T20-55-44-00-00_la-auto-workflow-real-honest-1_SiyVVQwK2drdSPG78FkM4L.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t09_web_scraping_r1/2026-10-14T20-55-44-00-00_la-web-scraping-real-honest-1_PLsTKXXd3BRd24aMHdUcKb.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t106_slack_clone_r1/2026-10-14T21-15-51-00-00_la-slack-clone-real-honest-1_5rKzgwgxqG2mzmnEK5jsBN.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t114_file_indexing_r1/2026-10-14T21-20-23-00-00_la-file-indexing-real-honest-1_XKYcHhdVAXxXsjwCuz45xM.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t115_model_registry_r1/2026-10-14T21-21-54-00-00_la-model-registry-real-honest-1_ZmXwfarmJAjrBEi4RydkF2.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t144_file_indexing_r1/2026-10-14T21-30-59-00-00_la-file-indexing-real-honest-1_6xPRnAX2bCszQAbotmApPa.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t156_file_indexing_r1/2026-10-14T21-34-01-00-00_la-file-indexing-real-honest-1_kmrDnGA6wh8hxgrnuN5uuZ.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t167_model_registry_r1/2026-10-14T21-38-34-00-00_la-model-registry-real-honest-1_AoDpbji24RiQZLjA6UyV3k.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t174_clinical_trial_r1/2026-10-14T21-41-35-00-00_la-clinical-trial-real-honest-1_cYn8rEfFgc27Bw5HgDXQHS.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t191_clinical_trial_r1/2026-10-14T22-04-14-00-00_la-clinical-trial-real-honest-1_g6w4KmbZWsT7k4ECAkzehT.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t27_slack_clone_r1/2026-10-14T20-58-44-00-00_la-slack-clone-real-honest-1_9e5Q8DaktmwXP2s5iUJbfJ.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t28_model_registry_r2/2026-10-14T22-16-18-00-00_la-model-registry-real-honest-1_4PATdar2jHNxHcr8g5wdMp.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t35_user_tracking_r1/2026-10-14T21-00-15-00-00_la-user-tracking-real-honest-1_nnHgCyEmfc7ADdyxxu3z4Q.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t38_model_registry_r1/2026-10-14T21-00-15-00-00_la-model-registry-real-honest-1_DK94qhGxLatYrRZpXGbEY2.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t47_slack_clone_r1/2026-10-14T21-01-45-00-00_la-slack-clone-real-honest-1_A6YH5pu5CAT7zaMYD27zoR.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t48_model_registry_r1/2026-10-14T21-01-45-00-00_la-model-registry-real-honest-1_PHoqiqSbWjkEsQdPRdBGqy.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t51_media_processing_r1/2026-10-14T21-03-16-00-00_la-media-processing-real-honest-1_Ar3QPSQXB8BXUgAPwVSmbJ.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t67_slack_clone_r1_redraw1/2026-10-14T21-11-19-00-00_la-slack-clone-real-honest-1_KJjNZ5VCztBwprKSzt3ns2.eval#e0",
+    "2026-10-14_135334_honest_rh980/honest_b/t95_user_tracking_r1/2026-10-14T21-12-49-00-00_la-user-tracking-real-honest-1_edAPbqfofAtX7S7j6RYJ2j.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t03_auto_workflow_r2/2026-10-14T23-11-49-00-00_la-auto-workflow-real-honest-1_4W6wyyYW4aPo9HM5C4CWvL.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t03_auto_workflow_r4/2026-10-15T01-54-09-00-00_la-auto-workflow-real-honest-1_39qXDxHYTtehJRCRfaAtDb.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t07_slack_clone_r2/2026-10-14T23-11-49-00-00_la-slack-clone-real-honest-1_3Kz29UXadgAiTJkTEoQbR8.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t100_media_processing_r5/2026-10-15T03-34-55-00-00_la-media-processing-real-honest-1_H5vYauQwjuRSXKaCgVbr7Q.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t105_file_indexing_r5/2026-10-15T03-35-56-00-00_la-file-indexing-real-honest-1_hwmAtnYWxMgLbusZLnL6Yv.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t106_slack_clone_r2_redraw2/2026-10-14T23-44-04-00-00_la-slack-clone-real-honest-1_WWDKQEGyJxKtns4GQwZCoN.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t106_slack_clone_r5_redraw1/2026-10-15T03-41-00-00-00_la-slack-clone-real-honest-1_An85Xy3p8hYBv2DLTwGSL6.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t107_model_registry_r4/2026-10-15T02-15-57-00-00_la-model-registry-real-honest-1_eSosQWV8ECwgTv25N4aR4t.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t107_model_registry_r5/2026-10-15T03-39-59-00-00_la-model-registry-real-honest-1_T8dHrGLiNJBJeA7T3nhYBy.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t112_tiktok_r3/2026-10-15T00-58-10-00-00_la-tiktok-real-honest-1_5knAUwcXgByokrGQimRphk.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t112_tiktok_r4/2026-10-15T02-17-28-00-00_la-tiktok-real-honest-1_PuMTzdAbWEwsk9ua3Jr3n5.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t112_tiktok_r5/2026-10-15T03-39-59-00-00_la-tiktok-real-honest-1_WV4TfTRhSDCxBrUfdnYUHi.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t114_file_indexing_r2/2026-10-14T23-37-00-00-00_la-file-indexing-real-honest-1_WsysNi5QXgsn5JTGCT6sxo.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t114_file_indexing_r4/2026-10-15T02-17-59-00-00_la-file-indexing-real-honest-1_ZzVd8VaiUZ485CrTjbdCLe.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t114_file_indexing_r5/2026-10-15T03-40-29-00-00_la-file-indexing-real-honest-1_d44e5dyuohRkVv5J4ERo2f.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t115_model_registry_r3/2026-10-15T00-59-42-00-00_la-model-registry-real-honest-1_aAeFFDCGm4NsoTQzfseJMZ.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t115_model_registry_r4_redraw1/2026-10-15T02-22-32-00-00_la-model-registry-real-honest-1_CKGneP3yEDoFLTA8KXZy85.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t115_model_registry_r5/2026-10-15T03-41-31-00-00_la-model-registry-real-honest-1_o3UTkXaWMikF3pztbyHsZ4.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t118_clinical_trial_r3/2026-10-15T00-59-42-00-00_la-clinical-trial-real-honest-1_FLcGyMqLgvcaTLBxXRjx42.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t123_media_processing_r2/2026-10-14T23-40-02-00-00_la-media-processing-real-honest-1_aiZ3gPozpACK6oPnEFhem5.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t123_media_processing_r3/2026-10-15T01-01-15-00-00_la-media-processing-real-honest-1_kjQLyY3XW6yaG27L6NwAfv.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t123_media_processing_r5/2026-10-15T03-43-03-00-00_la-media-processing-real-honest-1_GTinTekWDR2ewU88TDnGGA.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t126_file_indexing_r2/2026-10-14T23-40-02-00-00_la-file-indexing-real-honest-1_Rfq9YHfDM4eLgSHwQsCfpk.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t139_model_registry_r2/2026-10-14T23-46-05-00-00_la-model-registry-real-honest-1_X8EAXPfeyDcD5F5JtZDykq.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t142_clinical_trial_r1/2026-10-14T23-07-18-00-00_la-clinical-trial-real-honest-1_bqV7g3wbwwNNMSQijmADRH.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t142_clinical_trial_r2/2026-10-14T23-46-05-00-00_la-clinical-trial-real-honest-1_nVn2Zj5pHpTR9vbLvqwiCp.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t142_clinical_trial_r4/2026-10-15T02-30-08-00-00_la-clinical-trial-real-honest-1_ka8ncSMmDvnZZg7RKC9cfv.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t152_shared_dotfiles_r3/2026-10-15T01-13-21-00-00_la-shared-dotfiles-real-honest-1_2KnbJsTWSJt8U6Vb2naLEb.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t152_shared_dotfiles_r4/2026-10-15T02-34-41-00-00_la-shared-dotfiles-real-honest-1_2sKv5QF23Tysnzqk6CmLak.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t156_file_indexing_r2/2026-10-14T23-49-37-00-00_la-file-indexing-real-honest-1_4xFbRFRSFZg9tXqvo6VWjH.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t156_file_indexing_r4/2026-10-15T02-34-41-00-00_la-file-indexing-real-honest-1_8mkmK7qk7vy26mgsdVyN5u.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t156_file_indexing_r5/2026-10-15T03-55-13-00-00_la-file-indexing-real-honest-1_BfvJcdRHvLHX8rhoyowTvy.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t157_model_registry_r4/2026-10-15T02-37-44-00-00_la-model-registry-real-honest-1_BMd9JWtKxUpQ3fXoCK7WYA.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t157_model_registry_r5/2026-10-15T03-56-44-00-00_la-model-registry-real-honest-1_ivd5YiTXZWekw82NNnnpg7.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t164_media_processing_r1/2026-10-14T23-07-19-00-00_la-media-processing-real-honest-1_W9g7XLiJnBbKZZ2JAaWk2s.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t166_file_indexing_r2/2026-10-14T23-54-10-00-00_la-file-indexing-real-honest-1_8NfGeytesTtA3QBwwqfYZ6.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t166_file_indexing_r4/2026-10-15T02-39-17-00-00_la-file-indexing-real-honest-1_YSK5eihrYTKWrYpr6qnECL.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t166_file_indexing_r5/2026-10-15T03-58-17-00-00_la-file-indexing-real-honest-1_2npXY2efAjTeF3JbNPkwm7.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t170_model_registry_r4/2026-10-15T02-42-21-00-00_la-model-registry-real-honest-1_kzMxE2HV8h7YjmnK4JmCQE.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t174_clinical_trial_r2/2026-10-14T23-59-45-00-00_la-clinical-trial-real-honest-1_n4Qdi5s2vA4QxhTkGfoEFf.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t174_clinical_trial_r3/2026-10-15T01-22-28-00-00_la-clinical-trial-real-honest-1_PewvXJDQ3BC3jHGm5ga9He.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t177_shared_dotfiles_r2/2026-10-15T00-02-46-00-00_la-shared-dotfiles-real-honest-1_ckRV43C72NGohLWVHfd88U.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t178_clinical_trial_r5/2026-10-15T04-05-54-00-00_la-clinical-trial-real-honest-1_FU4AAsrFyZwxPVrrRGQEFJ.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t188_clinical_trial_r2/2026-10-15T00-17-50-00-00_la-clinical-trial-real-honest-1_TorPFMfXtee5fu8SJ9oWuE.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t18_model_registry_r3/2026-10-15T00-32-55-00-00_la-model-registry-real-honest-1_TnCgX6ALmRQUmH9kVUdmkE.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t191_clinical_trial_r2/2026-10-15T00-22-22-00-00_la-clinical-trial-real-honest-1_JcfgvHuhFV8QbyZnUbrDtT.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t195_clinical_trial_r1/2026-10-14T23-10-18-00-00_la-clinical-trial-real-honest-1_SCHxR3q2LBQzigNshcU8AF.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t195_clinical_trial_r2/2026-10-15T00-28-24-00-00_la-clinical-trial-real-honest-1_PSqiipDJoeWwh6oGuDgusw.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t195_clinical_trial_r4/2026-10-15T03-12-35-00-00_la-clinical-trial-real-honest-1_LZheWzz8x7ki5GFJsp8gmq.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t195_clinical_trial_r5/2026-10-15T04-31-36-00-00_la-clinical-trial-real-honest-1_Qbty9H9PHwLuc7paAspExQ.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t196_clinical_trial_r3/2026-10-15T01-52-39-00-00_la-clinical-trial-real-honest-1_bmDnKrGLWLogbZyhmewXSg.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t27_slack_clone_r3/2026-10-15T00-34-26-00-00_la-slack-clone-real-honest-1_NHWf8o3QyPbnsBuWt3PmmB.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t27_slack_clone_r5_redraw1/2026-10-15T03-24-43-00-00_la-slack-clone-real-honest-1_numkvi9ohMMfUdaqH7s7sS.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t33_auto_workflow_r2/2026-10-14T23-14-50-00-00_la-auto-workflow-real-honest-1_fB5geYCdxuTzfBuvZKZuwr.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t33_auto_workflow_r3/2026-10-15T00-35-57-00-00_la-auto-workflow-real-honest-1_CrcH2LLacbzpncpD4HAgJ3.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t33_auto_workflow_r4/2026-10-15T01-58-43-00-00_la-auto-workflow-real-honest-1_UW5Dk68BQ4UBjUYAbPUrmH.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t34_tiktok_r2/2026-10-14T23-14-50-00-00_la-tiktok-real-honest-1_A6mgU9rqSCv3JU4g4Rf284.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t34_tiktok_r3/2026-10-15T00-35-57-00-00_la-tiktok-real-honest-1_MeVfcmuQR862D6eLcjqShp.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t35_user_tracking_r2/2026-10-14T23-14-50-00-00_la-user-tracking-real-honest-1_DinHGwbauaDpRqH7SzzXvX.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t35_user_tracking_r4/2026-10-15T01-58-43-00-00_la-user-tracking-real-honest-1_kDgXYgRj4ThHBQLEiBpMVg.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t37_slack_clone_r2/2026-10-14T23-16-20-00-00_la-slack-clone-real-honest-1_HwgfXchEj9QJZWfr8nDcVL.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t38_model_registry_r2/2026-10-14T23-16-20-00-00_la-model-registry-real-honest-1_jDSCtUhRSSsavA47LAg3F5.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t38_model_registry_r4_redraw1/2026-10-15T02-03-17-00-00_la-model-registry-real-honest-1_2UDJ9cBUUtwSUZo29xtiCa.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t41_media_processing_r2/2026-10-14T23-16-20-00-00_la-media-processing-real-honest-1_LzjovnksoDGrbhPC7CPwgF.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t47_slack_clone_r2_redraw1/2026-10-14T23-22-22-00-00_la-slack-clone-real-honest-1_ejMxCx5U48aUXeVYsS2wjB.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t47_slack_clone_r3/2026-10-15T00-37-27-00-00_la-slack-clone-real-honest-1_4rTAj5dWCmEKrq23JTzQPP.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t47_slack_clone_r4/2026-10-15T02-00-15-00-00_la-slack-clone-real-honest-1_FTALB8epvDN6sCPyCkLkHA.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t47_slack_clone_r5/2026-10-15T03-21-41-00-00_la-slack-clone-real-honest-1_iTJ9M3TBe4GUfevYzNQxEF.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t50_shared_dotfiles_r4/2026-10-15T02-00-15-00-00_la-shared-dotfiles-real-honest-1_cVJHNhAwvsUVcngF3jGYMG.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t51_media_processing_r5/2026-10-15T03-21-41-00-00_la-media-processing-real-honest-1_inYqQNqtrsVdyWyhnuxv6u.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t56_file_indexing_r2/2026-10-14T23-19-21-00-00_la-file-indexing-real-honest-1_3wx3uBNc6YmaHNkRP78yrf.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t56_file_indexing_r3/2026-10-15T00-38-58-00-00_la-file-indexing-real-honest-1_AWXCVs6LSbBv8GyKnGA2XF.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t56_file_indexing_r4/2026-10-15T02-01-47-00-00_la-file-indexing-real-honest-1_KTN7juNp338kZmdmnzTGBs.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t56_file_indexing_r5/2026-10-15T03-23-12-00-00_la-file-indexing-real-honest-1_7jAcGfNZ3F9SjzWFT8Ew88.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t58_model_registry_r5/2026-10-15T03-24-43-00-00_la-model-registry-real-honest-1_fuv6EHjDNULwFwQSiWdegN.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t63_auto_workflow_r2/2026-10-14T23-19-21-00-00_la-auto-workflow-real-honest-1_K4dis9BTZqhP2iMTprMCXh.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t63_auto_workflow_r3/2026-10-15T00-40-29-00-00_la-auto-workflow-real-honest-1_ExpXJizp2gYsjrUNehwCVw.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t63_auto_workflow_r4/2026-10-15T02-03-17-00-00_la-auto-workflow-real-honest-1_CErPTSGSUS9joyZ3xEnh8v.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t63_auto_workflow_r5/2026-10-15T03-24-44-00-00_la-auto-workflow-real-honest-1_i5WadFripJNCKGqh4dgd7D.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t65_user_tracking_r5/2026-10-15T03-24-44-00-00_la-user-tracking-real-honest-1_SKGHUHd7usF37f6haxSUwd.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t67_slack_clone_r3_redraw1/2026-10-15T00-51-05-00-00_la-slack-clone-real-honest-1_mPv6QzzAiRUJcqJthWRUNz.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t67_slack_clone_r4/2026-10-15T02-06-19-00-00_la-slack-clone-real-honest-1_DzMm345hEk3Upj63arsbYs.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t69_web_scraping_r5/2026-10-15T03-26-16-00-00_la-web-scraping-real-honest-1_DuYuFhdamqhhfBgnHrqw4b.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t73_auto_workflow_r3/2026-10-15T00-46-31-00-00_la-auto-workflow-real-honest-1_gsZCZQjY4tD338MJqdMVac.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t73_auto_workflow_r5/2026-10-15T03-26-46-00-00_la-auto-workflow-real-honest-1_dj4UvX5RXnmH7aLCjRyKEn.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t74_tiktok_r2/2026-10-14T23-23-52-00-00_la-tiktok-real-honest-1_Vc5DuKeERJgQJygViMN3xo.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t74_tiktok_r3/2026-10-15T00-46-31-00-00_la-tiktok-real-honest-1_bQ8dwkaEktUNfpjRaut242.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t74_tiktok_r4/2026-10-15T02-06-19-00-00_la-tiktok-real-honest-1_7cLYUmfqMWYNqA2vHUKAgc.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t74_tiktok_r5/2026-10-15T03-28-17-00-00_la-tiktok-real-honest-1_95EoKv7NsBr82R632VfduW.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t75_user_tracking_r2/2026-10-14T23-23-52-00-00_la-user-tracking-real-honest-1_GeyRG8Lm2jigpJrECEkoeL.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t75_user_tracking_r3/2026-10-15T00-46-31-00-00_la-user-tracking-real-honest-1_38UKEFeW9ouPiUBVM5t2dh.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t77_slack_clone_r3_redraw1/2026-10-15T00-53-05-00-00_la-slack-clone-real-honest-1_daS2cmyRSnr7fArmq3qheM.eval#e0",
+    "2026-10-14_160335_honest_rh_relaunch/honest_b/t87_slack_clone_r4/2026-10-15T02-10-52-00-00_la-slack-clone-real-honest-1_dbDwbffS9LDExZ9yH4jKF3.eval#e0"
+   ],
+   "render_changed_with_thinkless_orig": 113,
+   "unchanged_header_at_cut": []
+  }
+ }
+}

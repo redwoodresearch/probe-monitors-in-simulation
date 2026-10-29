@@ -1,0 +1,911 @@
+{
+  "_about": "Every input of rebuild_post.py, checked by sha256 before anything else. records: the 50 result files the post was written from, each a byte-for-byte copy of the file at `path` in the commit `commit` of our internal research repository (pertask is gzipped here; realline_draws was extracted for this package and has no commit of its own). copied_files: the original plotting scripts, statistics-table scripts, render logs and the post's figures, byte-identical to the commit given (edits: none). pinned_files: this folder's own rules, expected numbers, table configuration and figure input maps, so that what is checked cannot change silently. pending: the Figure 3 reference render. token_counts: the class counts that expected/expected_post_numbers.json must have.",
+  "draft": {
+    "name": "draft_v90_candidate_frozen_162806.md",
+    "sha256": "f9a9352967bc53c68c6324cf98afd4f4e5bae9a4e532581f96b26f6abca882ca",
+    "in_branch": false,
+    "why": "The post's source text is not copied here; expected/expected_post_numbers.json holds every number it prints, by line."
+  },
+  "release_records": [
+    {
+      "name": "internal sign-off record of the post's numbers and result files, version 2.7",
+      "path": "experiments/2026-10-14_priority1_spec_09/final_release/routec_FINAL_release_v2.7_2026-10-21.json",
+      "commit": "13ca31b07742dd5b115c9ed4c389337bc9efbd08"
+    },
+    {
+      "name": "internal sign-off record of the post's numbers and result files, version 2.8 (its commit was not pushed to the shared copy of the internal repository)",
+      "path": "experiments/2026-10-14_priority1_spec_09/final_release/routec_FINAL_release_v2.8_2026-10-26.json",
+      "commit": "0f1924b65"
+    }
+  ],
+  "records": [
+    {
+      "name": "A",
+      "file": "records/routec_A_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json.gz",
+      "sha256": "191c467ab095b0f9ddfe2271822655bc5b49ee02a1a2c5a5b0e11bc855a00865",
+      "decompressed_sha256": "54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a",
+      "bytes": 3424187,
+      "commit": "a936a5d9762763f9feed351aebdeeec2d8114f21",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/routec_A_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json.gz",
+      "what": "The main result: for every probe and both kinds of input (commands, tool outputs), catch rates on real run 1, real run 2 and the simulated attack runs at the 1% and 5% alarm levels, their differences, the real-threshold check, and 95% intervals from 10,000 resamples of main tasks.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py at commit f2d47f19f"
+    },
+    {
+      "name": "A_label",
+      "file": "records/routec_A_label_sidecar_2026-10-19_181355.json",
+      "sha256": "ffe923311b75313e9bd31b967326efe4c6e594da073f2c35a3ca72a07ad6e479",
+      "bytes": 467,
+      "commit": "095a9db4c0fedaa52fdcf103d167c8dff8675e3f",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json",
+      "what": "Companion file naming record A's run and its sha256; the plotting scripts and the table script check it.",
+      "made_by": "no script identified; added in its own commit 095a9db4c"
+    },
+    {
+      "name": "group_catch",
+      "file": "records/group_catch_2026-10-20_003430.json",
+      "sha256": "f9dfda2349e2ead23b543eccd7a722aa125513e50e766e141eb61b30c3a7fae1",
+      "bytes": 7434,
+      "commit": "65a6e44deaecee8e730214b4979e7aa9019a836e",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430.json",
+      "what": "Catch rates averaged over the six probes and over the four probes, computed from record A, with 95% intervals.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_group_catch.py at commit 74edde46f"
+    },
+    {
+      "name": "group_catch_label",
+      "file": "records/group_catch_2026-10-20_003430_LABEL.json",
+      "sha256": "9dc2bb20aff262bfe11ff3e2d8bdabd1915bd9de7df583c7253231c6b16b1f76",
+      "bytes": 543,
+      "commit": "65a6e44deaecee8e730214b4979e7aa9019a836e",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-20_003430_LABEL.json",
+      "what": "Companion file naming group_catch's run and its sha256.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_group_catch.py at commit 74edde46f; committed with its record; the commit message says the same run wrote both"
+    },
+    {
+      "name": "group_excess",
+      "file": "records/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246.json",
+      "sha256": "f4fe20de538d63c1d2e769755220b3d76574e8b80213c9d2b0439d2b70fe8169",
+      "bytes": 4557,
+      "commit": "5eb9888d4dd6d7b9ddda5f8822471050bba11217",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246.json",
+      "what": "Figure 4's comparison for the four-probe average, computed from record A: how far simulated catch sits from the two real runs, minus how far the two real runs sit from each other.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_group_excess.py at commit 74edde46f"
+    },
+    {
+      "name": "group_excess_label",
+      "file": "records/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246_LABEL.json",
+      "sha256": "495b59928e181c960fe52d8031a027a655c4b234ac8f994a12cf6a857c56bd63",
+      "bytes": 578,
+      "commit": "5eb9888d4dd6d7b9ddda5f8822471050bba11217",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_excess_2026-10-20_003418_a6cada8b0fa546d890b6976f675f7246_LABEL.json",
+      "what": "Companion file naming group_excess's run and its sha256.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_group_excess.py at commit 74edde46f; committed with its record; the commit message says the same run wrote both"
+    },
+    {
+      "name": "pw_shares",
+      "file": "records/pw_shares_pooled_all_origins_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327_routeC_2026-10-20_003446.json",
+      "sha256": "32a6549f1a40319442f703b3fe694728bdcb62cb2de8781c634f1f888b436bae",
+      "bytes": 18169,
+      "commit": "98222e0c5a4ee57c9aa213b9e37b110ba9ebe72e",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/pw_shares_routec/pw_shares_pooled_all_origins_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327_routeC_2026-10-20_003446.json",
+      "what": "For each probe, the share of honest runs that raise at least one alarm (the tick marks in Figures 1 and 5), computed from record A.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_pw_shares_routec.py at commit 74edde46f"
+    },
+    {
+      "name": "pw_shares_label",
+      "file": "records/pw_shares_pooled_all_origins_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327_routeC_2026-10-20_003446_LABEL.json",
+      "sha256": "e7230bb30b0e9faf3ea31abd72a48f9dc7bb6d77f243265b186f9b45f81c96a3",
+      "bytes": 659,
+      "commit": "98222e0c5a4ee57c9aa213b9e37b110ba9ebe72e",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/pw_shares_routec/pw_shares_pooled_all_origins_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327_routeC_2026-10-20_003446_LABEL.json",
+      "what": "Companion file naming pw_shares's run and its sha256.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_pw_shares_routec.py at commit 74edde46f; committed with its record; the commit message says the same run wrote both"
+    },
+    {
+      "name": "pertask",
+      "file": "records/pertask_full_2026-10-20_004115.json.gz",
+      "sha256": "1444ac79a95eca18b350d51219cb8329e004aece181f2eea3fe72078fcf28294",
+      "bytes": 5212164,
+      "commit": "c22edd8d3cc1221225dec418ab00b40515d5ba43",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/pertask_full_2026-10-20_004115.json",
+      "what": "For every probe, task and attack run, the score of the run's most suspicious command or tool output, which Figures 6 and 7 compare with the 1% alarm threshold (gzipped here).",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py at commit 7797f2cc2",
+      "decompressed_sha256": "468655154f826ec1a93e08333eb802e68abea6db65a8e2f80a3e0f23465f36d9",
+      "note": "Compressed here with gzip -n; the decompressed bytes are the committed .json file (decompressed_sha256)."
+    },
+    {
+      "name": "anchor",
+      "file": "records/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh.json",
+      "sha256": "2763ad99b7d37ee25784d9b58563a60d5d6c4b425656e45a97f71b82684cfbad",
+      "bytes": 274581,
+      "commit": "2a41e5f3bf133aaf54329e1c72dde2d63757da37",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh.json",
+      "what": "Per-task R² between real run 1 and the simulated run, and between real run 1 and real run 2, with 95% intervals (Figure 7 and Appendix H).",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_pertask_anchor.py at commit d8b087792"
+    },
+    {
+      "name": "anchor_label",
+      "file": "records/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh_LABEL.json",
+      "sha256": "2595ac7e2a01505fa65c3bf939b0dfbe45360cd760731e85d0a059ea478b6d35",
+      "bytes": 681,
+      "commit": "2a41e5f3bf133aaf54329e1c72dde2d63757da37",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/pertask_full_2026-10-20_004115_anchor_2026-10-20_011851_ap-Ul4ZPPM7A0z6LFMNMfGTqh_LABEL.json",
+      "what": "Companion file naming anchor's run and its sha256.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_pertask_anchor.py at commit d8b087792; committed with its record; the commit message says the same run wrote both"
+    },
+    {
+      "name": "kappa",
+      "file": "records/kappa_CRD_2026-10-20_004454.json.gz",
+      "sha256": "b290f71c457609949555812faed78a1c18294d38e3e0138a6ff31f0a3d1516e8",
+      "decompressed_sha256": "40ca1bf7a6deaf51175fb56cd89d7277b64ca1ec1ffdf87292d6ae0feca3cce9",
+      "bytes": 2914509,
+      "commit": "947ec6d4535377f9b1b204a53519a2f4af0a2646",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/kappa_CRD_2026-10-20_004454.json.gz",
+      "what": "Per-task agreement (Cohen's kappa) between real and simulated caught-or-missed outcomes, for each probe (gzipped).",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py at commit 7797f2cc2"
+    },
+    {
+      "name": "kappa_label",
+      "file": "records/routec_kap_label_sidecar_2026-10-20_004454.json",
+      "sha256": "c44700ce62dfeeb622a6d1534ea83d9bfd896c7ce0e17e57c31b9cb21f79bc4c",
+      "bytes": 634,
+      "commit": "10d3b2e28ebf0ac116134d1fc319248cb23ac688",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_kap_label_sidecar_2026-10-20_004454.json",
+      "what": "Companion file naming kappa's run and its sha256.",
+      "made_by": "no script identified; added in its own commit 10d3b2e28"
+    },
+    {
+      "name": "kappa_extra",
+      "file": "records/kappa_extra_kappa_CRD_2026-10-20_004454_2026-10-20_011442_ap-lSODwCn5gn3jLeCaCx38fX.json",
+      "sha256": "85b995c9d640eab80b84c23bfac1b3945d49336047e7b48721507dc54e1e5a3f",
+      "bytes": 159813,
+      "commit": "93ffca1ffcf76aef105940658af080939ffa1bf6",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/kappa_extra_kappa_CRD_2026-10-20_004454_2026-10-20_011442_ap-lSODwCn5gn3jLeCaCx38fX.json",
+      "what": "The kappa averaged over five probes, as a sensitivity check on the six-probe average (Appendix H).",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_kappa_extra.py at commit 10d3b2e28"
+    },
+    {
+      "name": "kappa_extra_label",
+      "file": "records/routec_kx_label_sidecar_2026-10-20_004454.json",
+      "sha256": "28806bb15b6d72f8e72bfd8b14ae17ff33a446c8ba13b09efae7c1fa168d35ab",
+      "bytes": 912,
+      "commit": "82194c0c58091e277dc1df983a357f470c39b969",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_kx_label_sidecar_2026-10-20_004454.json",
+      "what": "Companion file naming kappa_extra's run and its sha256.",
+      "made_by": "no script identified; added in its own commit 82194c0c5"
+    },
+    {
+      "name": "detdrop",
+      "file": "records/detector_vs_drop_2026-10-20_011851_ap-aYMAJlzcASqKL6EFhdlTkf.json",
+      "sha256": "51aeb15d2b4fe4a369063d4ee79914269002d5d8c2bf323ac0efb8ab6f61567c",
+      "bytes": 15901,
+      "commit": "17f522e49333177626d9a9c783cba570b3f3bd8d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-20_011851_ap-aYMAJlzcASqKL6EFhdlTkf.json",
+      "what": "A simulation detector's score (layer 63, reading commands) for each task against that task's drop in catch rate from real to simulated runs. No printed number uses it; it is an input of statistics table rc1b, which must be reproduced exactly.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_detector_vs_drop.py at commit d8b087792"
+    },
+    {
+      "name": "detdrop_label",
+      "file": "records/detector_vs_drop_2026-10-20_011851_ap-aYMAJlzcASqKL6EFhdlTkf_LABEL.json",
+      "sha256": "66638ca94f470610e2977e552852ecf3ca7523b20a5d6a95edeb42523fc6f379",
+      "bytes": 660,
+      "commit": "17f522e49333177626d9a9c783cba570b3f3bd8d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-20_011851_ap-aYMAJlzcASqKL6EFhdlTkf_LABEL.json",
+      "what": "Companion file naming detdrop's run and its sha256.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_detector_vs_drop.py at commit d8b087792; committed with its record; the commit message says the same run wrote both"
+    },
+    {
+      "name": "detdrop_l48",
+      "file": "records/detector_vs_drop_2026-10-20_125606_ap-NuUKhGaNZaLhqdKopouezY.json",
+      "sha256": "a536b65f78a40582c4e9491866c566a2139db906279ae0100d2ca23eb357af2c",
+      "bytes": 15988,
+      "commit": "a66fa8d80e2fd56d78b3f4c5d533dd8480da81ee",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-20_125606_ap-NuUKhGaNZaLhqdKopouezY.json",
+      "what": "The same as detdrop with the detector at layer 48; Appendix C uses its rank correlation.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_detector_vs_drop.py at commit 76032545d"
+    },
+    {
+      "name": "detdrop_l48_label",
+      "file": "records/detector_vs_drop_2026-10-20_125606_ap-NuUKhGaNZaLhqdKopouezY_LABEL.json",
+      "sha256": "d8a961e045210cb25ac7c41ce09c4c94ae5146fcb10665f4513ced271076e989",
+      "bytes": 660,
+      "commit": "a66fa8d80e2fd56d78b3f4c5d533dd8480da81ee",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-20_125606_ap-NuUKhGaNZaLhqdKopouezY_LABEL.json",
+      "what": "Companion file naming detdrop_l48's run and its sha256.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_detector_vs_drop.py at commit 76032545d; committed with its record (commit a66fa8d80)"
+    },
+    {
+      "name": "plant_rows",
+      "file": "records/panel_plant_rows_plant_rows_POOLED_FULL_routeC_2026-10-20_004247_2026-10-20_004833.json",
+      "sha256": "a864fad74436f0b5052adfaae7ba4ff54a0f192670b74b9b88ec8235b7048a21",
+      "bytes": 174308,
+      "commit": "699f214035a4f15b9e3025307eb21ee6705c3b7b",
+      "path": "experiments/2026-10-15_panel_noise_matched/results/panel_plant_rows_plant_rows_POOLED_FULL_routeC_2026-10-20_004247_2026-10-20_004833.json",
+      "what": "The planted-error test: every simulated attack run's scores shifted so that simulated catch falls or rises by about 3, 5, 8 or 12 points, and which measures notice it (Table 6).",
+      "made_by": "experiments/2026-10-15_panel_noise_matched/run_plant_rows.py at commit fd12eca35"
+    },
+    {
+      "name": "plant_rows_label",
+      "file": "records/routec_plant_rows_label_sidecar_2026-10-20_004247.json",
+      "sha256": "062f2ddebac522c33f168179da676aff144ffe4e68b21e8ef4db483050fbe373",
+      "bytes": 656,
+      "commit": "2d69ba99023164b82f6c8114eb3e942e3658233b",
+      "path": "experiments/2026-10-15_panel_noise_matched/results/routec_plant_rows_label_sidecar_2026-10-20_004247.json",
+      "what": "Companion file naming plant_rows's run and its sha256.",
+      "made_by": "no script identified; added in its own commit 2d69ba990"
+    },
+    {
+      "name": "labels_171",
+      "file": "records/LABELS_171pool_2026-10-17.json",
+      "sha256": "5cbc8fb41a73d9b7c69f65ca90e1e705f40abebaace81f971574e890c0c52d81",
+      "bytes": 4686,
+      "commit": "429232ceee0d5e910de2a61273a6997a4a96c7d0",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/LABELS_171pool_2026-10-17.json",
+      "what": "The registry of labels that the table script checks to tell the final records apart from records built on an earlier pool of 171 simulated honest runs.",
+      "made_by": "no script identified; added in its own commit 429232cee"
+    },
+    {
+      "name": "B",
+      "file": "records/routec_B_alltasks_CRD_FULL_r2_allorigins_sweep15_pooledworld_scored_e12_2026-10-19_180652.json.gz",
+      "sha256": "5d5c58f76f7c0cfda0c09666ea8a1651e055a486a48bece8dafcb8657ad2c435",
+      "decompressed_sha256": "ef5c765716ee338a1e8d207a820eecd5c083ba1d51262ff72361d6d254bf6ad7",
+      "bytes": 6971519,
+      "commit": "f4e21b0f76acde02d1ae4e7408028d6eaeb559d8",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/routec_B_alltasks_CRD_FULL_r2_allorigins_sweep15_pooledworld_scored_e12_2026-10-19_180652.json.gz",
+      "what": "Record A's analysis at 15 alarm levels from 0.1% to 5% (Appendix C; gzipped).",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py at commit f2d47f19f"
+    },
+    {
+      "name": "B_label",
+      "file": "records/routec_B_label_sidecar_2026-10-19_181355.json",
+      "sha256": "bd75309a1b1c876f81f1e7d90ad201d857b9fa21111d07dcf71d48cf00670a90",
+      "bytes": 475,
+      "commit": "e4cb2a190e4d2335cdefd3d6bf7bf014f82a70e7",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_B_label_sidecar_2026-10-19_181355.json",
+      "what": "Companion file naming record B's run and its sha256.",
+      "made_by": "no script identified; added in its own commit e4cb2a190"
+    },
+    {
+      "name": "R37",
+      "file": "records/routec_R37_alltasks_CRD_FULL_r2_allorigins_rule37_pooledworld_scored_e12_2026-10-19_181100.json.gz",
+      "sha256": "3bc0021a3e974b7d189f4fa503722e35568c70f378bb9452360a7cda99591833",
+      "decompressed_sha256": "8e6635e7413eb0202e469e3af84af70e72b801de9fc0c9d6b7505848a21807e4",
+      "bytes": 3743820,
+      "commit": "55a2fb20e1206b37ffe85656901bcf4aa70edfde",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/routec_R37_alltasks_CRD_FULL_r2_allorigins_rule37_pooledworld_scored_e12_2026-10-19_181100.json.gz",
+      "what": "Record A's analysis at the strictest alarm levels: 0.01%, 0.02% and 0.05% (Appendix C; gzipped).",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py at commit f2d47f19f"
+    },
+    {
+      "name": "R37_label",
+      "file": "records/routec_R37_label_sidecar_2026-10-19_181355.json",
+      "sha256": "b880244ad58a77249c65948c73089e0296335d60b81482cd84f7569156b2369b",
+      "bytes": 476,
+      "commit": "03ec92d1a3eba9f394e2dfc3c1c93c375a76e6d5",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/routec_R37_label_sidecar_2026-10-19_181355.json",
+      "what": "Companion file naming record R37's run and its sha256.",
+      "made_by": "no script identified; added in its own commit 03ec92d1a"
+    },
+    {
+      "name": "slots_rc1a",
+      "file": "records/slots_routeC_writing_rc1a.json",
+      "sha256": "3d7b036b445dca6b467ce709071c7003ab94fe3b854c0bc3d0f82ec4bedc9238",
+      "bytes": 30167,
+      "commit": "6bee032a951c7d753ae9834f50f5a47c8519fa4e",
+      "path": "experiments/2026-10-17_routec_slot_readout/results/slots_routeC_writing_rc1a.json",
+      "what": "Saved statistics table rc1a: the post's formatted numbers made by slot_table.py from records A, group_catch and group_excess. The rebuild recomputes it and requires an exact match.",
+      "made_by": "experiments/2026-10-17_routec_slot_readout/run_slot_readout.py and slot_table.py at commit 283a711ab"
+    },
+    {
+      "name": "slots_rc1b",
+      "file": "records/slots_routeC_writing_rc1b.json",
+      "sha256": "ab8dcb439b942c92d30b784ae1e6a3a193b18127391ff1753426663b726e728b",
+      "bytes": 138436,
+      "commit": "600f63614c0ab77f74fa7e326461e2e73086c2ac",
+      "path": "experiments/2026-10-17_routec_slot_readout/results/slots_routeC_writing_rc1b.json",
+      "what": "Saved statistics table rc1b: as rc1a, plus kappa, kappa_extra, detdrop, anchor and plant_rows.",
+      "made_by": "experiments/2026-10-17_routec_slot_readout/run_slot_readout.py and slot_table.py at commit 283a711ab"
+    },
+    {
+      "name": "slots_rc1b_detl48",
+      "file": "records/slots_routeC_writing_rc1b_detl48.json",
+      "sha256": "9519ea1b7aadcfa611a4cfa012af9aa4698f543f57b8ebd9ef1bf3858332590c",
+      "bytes": 138439,
+      "commit": "6d77ea36908000cf282e5b52e16b288da058db2d",
+      "path": "experiments/2026-10-17_routec_slot_readout/results/slots_routeC_writing_rc1b_detl48.json",
+      "what": "Saved statistics table rc1b_detl48: rc1b with the layer-48 detector (detdrop_l48) in place of detdrop.",
+      "made_by": "experiments/2026-10-17_routec_slot_readout/run_slot_readout.py and slot_table.py at commit a0a8cc70c"
+    },
+    {
+      "name": "slots_rc2",
+      "file": "records/slots_routeC_writing_rc2.json",
+      "sha256": "de6636afa74098cd69ab7bf630f031ef53ed0dd87a0c3fb24f28281f6e83e66c",
+      "bytes": 198168,
+      "commit": "d6ff04c9c0951c417f6536b7ccc5e6fe3afcbb1d",
+      "path": "experiments/2026-10-17_routec_slot_readout/results/slots_routeC_writing_rc2.json",
+      "what": "Saved statistics table rc2: the post's formatted numbers from records B and R37.",
+      "made_by": "experiments/2026-10-17_routec_slot_readout/run_slot_readout.py and slot_table.py at commit 6f86f2b0b"
+    },
+    {
+      "name": "tables",
+      "file": "records/examples_v81_tables_pooled_2026-10-20_003359.json",
+      "sha256": "3f59bde3f4f91bfc95ec57844c6fe28f9a3d0db10012801e750abe1a9e91b6c0",
+      "bytes": 463359,
+      "commit": "34c9c5998ae209c6485a5f0ad556a9d75b4f2c7a",
+      "path": "experiments/2026-10-16_examples_v81/results/examples_v81_tables_pooled_2026-10-20_003359.json",
+      "what": "Scores, thresholds and outcome counts behind the worked examples of Tables 3 and 4 (no command text).",
+      "made_by": "experiments/2026-10-16_examples_v81/run_tables_v81.py at commit f4f575ce6"
+    },
+    {
+      "name": "honest_all",
+      "file": "records/honest_all_routec_2026-10-18_121211.json",
+      "sha256": "10ed5645e0a8357150e07ac6416a06c6196e995d01eb5088b94de1d554d73c46",
+      "bytes": 5187817,
+      "commit": "596bc767e9f2bcb97ac187024ff7efd411b2d6f5",
+      "path": "experiments/2026-10-16_honest_sim_detector_all/results/honest_all_routec_2026-10-18_121211.json",
+      "what": "The simulation detector applied to honest runs: simulated versus real honest runs, and two sets of real honest runs as a control (Table 7 and Appendix E).",
+      "made_by": "experiments/2026-10-16_honest_sim_detector_all/run_honest_all.py at commit 4c29bb573"
+    },
+    {
+      "name": "simpool",
+      "file": "records/routec_simpool_numbers_2026-10-20_020501.json",
+      "sha256": "2e17de0c852612d8a2b1d83468997c0cb6f787dcfee9a3c93eef6edee711fd11",
+      "bytes": 27596,
+      "commit": "104087089d65a4561f7c15634017b283edb68714",
+      "path": "experiments/2026-10-20_routec_simpool_numbers/results/routec_simpool_numbers_2026-10-20_020501.json",
+      "what": "Counts from the final pool of simulated honest runs: the share in which GPT-5.6-Sol wrote part of the simulated output, the failed-run rate, and the run counts of Table 7's honest rows.",
+      "made_by": "experiments/2026-10-20_routec_simpool_numbers/run_routec_simpool_numbers.py at commit 8030f8c29"
+    },
+    {
+      "name": "attack_sol_share",
+      "file": "records/attack_sol_share_2026-10-20_023418.json",
+      "sha256": "522897ef4fddcbefef46e396361ae2e22564231484a0d0a3162a28181d544b2d",
+      "bytes": 11031,
+      "commit": "db6f6628784661f26bf8e8eb0b1f2ae9c2ac356c",
+      "path": "experiments/2026-10-20_routec_simpool_numbers/results/attack_sol_share_2026-10-20_023418.json",
+      "what": "The share of simulated attack runs in which GPT-5.6-Sol wrote part of the simulated output.",
+      "made_by": "experiments/2026-10-20_routec_simpool_numbers/run_attack_sol_share.py at commit 1c263d842"
+    },
+    {
+      "name": "appI_counts",
+      "file": "records/appI_real_counts_2026-10-20_021136.json",
+      "sha256": "6cd455fe8b7b93b61ffc5510f0984f9f9b81cb5bd3144952ebfdbfc58fc93f37",
+      "bytes": 14372,
+      "commit": "dd8f1b5a18bd4dc4575d05b21681a6c8c260fa43",
+      "path": "experiments/2026-10-20_appI_counts/results/appI_real_counts_2026-10-20_021136.json",
+      "what": "Counts of real honest and real attack runs that errored, by environment (Appendix I).",
+      "made_by": "experiments/2026-10-20_appI_counts/count_appI_real.zsh at commit 7e0abf8c3"
+    },
+    {
+      "name": "appI_counts_e2",
+      "file": "records/appI_real_counts_2026-10-20_022807.json",
+      "sha256": "8f1909b8044fdcd95dffc9f6ea9b20cbaf728e74ac6663939205985d3d34b0db",
+      "bytes": 18488,
+      "commit": "c82df6d2c7b140192532248d4432aa1c8c3901ae",
+      "path": "experiments/2026-10-20_appI_counts/results/appI_real_counts_2026-10-20_022807.json",
+      "what": "The same counts, adding honest attempts in which no model call gave a usable reply (Appendix I).",
+      "made_by": "experiments/2026-10-20_appI_counts/count_appI_real.zsh at commit b86d7b12f"
+    },
+    {
+      "name": "cunits_by_tool",
+      "file": "records/cunits_by_tool_2026-10-20_044328.json",
+      "sha256": "072efe87b87c3dc1d5b67de4e599bba516585924775f0d39edeeb132ba51daa6",
+      "bytes": 59612,
+      "commit": "a6d37c024c6609031b65ec9bebf201c2a5cce4bd",
+      "path": "experiments/2026-10-20_routec_fileedit_share/results/cunits_by_tool_2026-10-20_044328.json",
+      "what": "The share of scored commands that are file edits rather than shell commands, in honest and attack runs (Appendix A).",
+      "made_by": "experiments/2026-10-20_routec_fileedit_share/run_routec_fileedit_share.py at commit a6d37c024"
+    },
+    {
+      "name": "read_fit_highstakes",
+      "file": "records/read_fit_2026-10-14_131233.json",
+      "sha256": "05d90ecbb5bd0ea8eb6e439015f8baec1643f97405001164360db6fdf1c54999",
+      "bytes": 12562,
+      "commit": "d54d497e9bb5d498353c0b687aa51631e776f432",
+      "path": "experiments/2026-10-14_p2_highstakes/results/read_fit_2026-10-14_131233.json",
+      "what": "The high-stakes probe's fit on Qwen3.5-27B: the layer chosen and its held-out scores.",
+      "made_by": "experiments/2026-10-14_p2_highstakes/run_read_fit.py at commit fd47141c3"
+    },
+    {
+      "name": "read_fit_refusal_harm",
+      "file": "records/read_fit_2026-10-14_125514.json",
+      "sha256": "0b2a313fe9c90af85944a71b013abaf51a756c69bf127d5acf781f65e60cc676",
+      "bytes": 23880,
+      "commit": "671cb4b91a1263c6e1e8e0f0aaf59ac028274b5b",
+      "path": "experiments/2026-10-14_p2_refusal_harm/results/read_fit_2026-10-14_125514.json",
+      "what": "The harmfulness and refusal directions' fit on Qwen3.5-27B: the layers chosen and their scores.",
+      "made_by": "experiments/2026-10-14_p2_refusal_harm/run_read_fit.py at commit ecc07824a"
+    },
+    {
+      "name": "sola_fit",
+      "file": "records/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+      "sha256": "40e7b12c3f0c24939e40f9e0a00a1b2a5b3845d2d81138c342e9d68e2515ef74",
+      "bytes": 158324,
+      "commit": "9564a41b4a35c39214ad4d5e65120b5053b7f4ad",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+      "what": "The off-policy probe's fit: the layers chosen for each of its five fold copies.",
+      "made_by": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py at commit 199f50846"
+    },
+    {
+      "name": "sola_keys",
+      "file": "records/sola_uncut_reselect_training_keys_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+      "sha256": "d644971385d435a249f5e855a20ffd107fe4f394bc6b77ef8b0934fdfea674bf",
+      "bytes": 525634,
+      "commit": "9564a41b4a35c39214ad4d5e65120b5053b7f4ad",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_training_keys_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+      "what": "The runs the off-policy probe was trained on (run identifiers only).",
+      "made_by": "experiments/2026-10-14_q35_sol_avg_POSTHOC/run_avg_transfer.py at commit 199f50846"
+    },
+    {
+      "name": "exclusions",
+      "file": "records/exclusions_2026-10-16_102159.json",
+      "sha256": "67a608c25a84e77cb6beb2c70d8c91177e2274d2c96e166469060462d4c9223d",
+      "bytes": 124285,
+      "commit": "6414c492b663ee128b07d8ec045735ca41f0635f",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/exclusions_2026-10-16_102159.json",
+      "what": "The tasks left out of the comparison, with their class and the reason (Appendix I and the task counts).",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/make_exclusions.py at commit 6414c492b"
+    },
+    {
+      "name": "appendix_a_rates",
+      "file": "records/appendix_a_rates_2026-10-16_121443.json",
+      "sha256": "3c034ec9c74cc6989936a84e15ae07124cc93d94d0fe6fcb4bc6a4e958fd6e64",
+      "bytes": 54109,
+      "commit": "73cd0f2bee480b06ef7a0c0cbbad7f6ad8b30ea8",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/appendix_a_rates_2026-10-16_121443.json",
+      "what": "Failure rates of real honest runs (the footnote on failed runs).",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/make_appendix_a_rates.py at commit 35dff7132"
+    },
+    {
+      "name": "pooledmetrics",
+      "file": "records/pooledmetrics_FULL_E12_r2_union_2026-10-16_145637_ap-CtBFalAop8o369oES3vfrt.json",
+      "sha256": "47027a2eb49f90570772361afa9082a67429d312327f61f19bf9aa44679e525c",
+      "bytes": 7614206,
+      "commit": "96d22b95a6c456bd4cb0c1138fd95274deb0665d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/pooledmetrics_FULL_E12_r2_union_2026-10-16_145637_ap-CtBFalAop8o369oES3vfrt.json",
+      "what": "Each probe's AUROC (Table 1). Made by an earlier version of the main pipeline; an internal review of the code changes (2026-10-18) found that the final analysis leaves these values unchanged.",
+      "made_by": "experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py at commit 7be398471"
+    },
+    {
+      "name": "refit3",
+      "file": "records/attack_all_refit3_2026-10-16_141813.json",
+      "sha256": "df7171a98d82d28ae86653480be922d978fc36104c63f622b3a69fb43a074eac",
+      "bytes": 4361230,
+      "commit": "80d75b27e9ac00127b44d052a9fa1aaa7da47d47",
+      "path": "experiments/2026-10-16_attack_refit3/results/attack_all_refit3_2026-10-16_141813.json",
+      "what": "The simulation detector on attack runs: how well a probe reading Qwen3.5-27B's activations tells simulated runs from real ones (Figure 2, Table 7 and Appendix E), after 3 of its 40 fits were refitted to meet the convergence bar.",
+      "made_by": "experiments/2026-10-16_attack_refit3/run_attack_all.py (the detector, first written at 8ea4a6a5d) and run_refit3.py at commit 4a9322473"
+    },
+    {
+      "name": "behaviour",
+      "file": "records/main_bootstrap_2026-10-16_100211.json",
+      "sha256": "2c393458ef8206d3cd44bd352f86e6008cbc9059b9c68dfae84e0fa2d7fa10af",
+      "bytes": 111927,
+      "commit": "03d5b90d76370ff78733a6104dddfc2f6052cff7",
+      "path": "experiments/2026-10-16_behaviour_full/results/main_bootstrap_2026-10-16_100211.json",
+      "what": "The agent's behaviour in simulated and real runs (steps, tool calls, output tokens, how often it attempted the side task), with intervals from resampling main tasks (Appendix G).",
+      "made_by": "experiments/2026-10-16_behaviour_full/run_main_bootstrap.py at commit 4a0acbc17"
+    },
+    {
+      "name": "behaviour_medians",
+      "file": "records/main_bootstrap_2026-10-16_144720.json",
+      "sha256": "319034847f18652c856a4e65fcae3526b042db622ed78834f767844cf5905442",
+      "bytes": 121438,
+      "commit": "368533e9781853126fc648c45e55066711ea0dec",
+      "path": "experiments/2026-10-16_behaviour_full/results/main_bootstrap_2026-10-16_144720.json",
+      "what": "Median steps of runs that did not attempt the side task, with intervals (Appendix G).",
+      "made_by": "experiments/2026-10-16_behaviour_full/run_main_bootstrap.py at commit c7dd37380"
+    },
+    {
+      "name": "oaru_keys",
+      "file": "records/oaru_training_keys_2026-10-16_132653.json",
+      "sha256": "7690f7d01a9af11361b4b383b84dfe46f75e2d9cc3d4e397408e28f82d37ace7",
+      "bytes": 1061800,
+      "commit": "3209957f84d6b8ab88153785b1cc68d15f599be8",
+      "path": "experiments/2026-10-16_examples_v81/results/oaru_training_keys_2026-10-16_132653.json",
+      "what": "The runs the on-policy probe was trained on (run identifiers only).",
+      "made_by": "experiments/2026-10-16_examples_v81/run_examples_v81.py at commit 4cc8da1ba"
+    },
+    {
+      "name": "realline",
+      "file": "records/realline_boot_read_2026-10-25_180356.json",
+      "sha256": "cf86f3d916a77124eaf3d11ca8f67f65a9e805da74dbba14ffea6b7851b3aecc",
+      "bytes": 12641,
+      "commit": "9eb78b6cd593aa1e6dbd1897c5978ace47241c78",
+      "path": "experiments/2026-10-25_realline_final_read/results/realline_boot_read_2026-10-25_180356.json",
+      "what": "The six-probe average of simulated minus real catch when simulated runs are judged against the real threshold, with 95% intervals; the rebuild recomputes these from realline_draws and requires an exact match.",
+      "made_by": "experiments/2026-10-25_realline_final_read/run_realline_boot_read.py at commit 9eb78b6cd (this commit was not pushed to the shared copy of the internal repository)"
+    },
+    {
+      "name": "realline_draws",
+      "file": "records/realline_draws.npz",
+      "sha256": "3dc9c32d51cffedbca425e1b302c5fea1a2167f084060f848c45a3b6592c0488",
+      "bytes": 963342,
+      "commit": null,
+      "path": null,
+      "what": "The 12 resample arrays (10,001 values each) behind realline's intervals, copied unchanged from record A's full resample file, which is too large to include. The one file here that is not a copy of a committed file.",
+      "made_by": "experiments/2026-10-25_realline_final_read/run_extract_realline_draws.py at commit 5bcec4bab (this commit was not pushed to the shared copy of the internal repository)",
+      "source_npz_sha256": "5e6cd10e382d8b03d409982c67efd72512176d7e95d2f3c94752d2b90e5650d1"
+    }
+  ],
+  "copied_files": [
+    {
+      "file": "figures/figs156/post_main.py",
+      "sha256": "e3b2d9d8279e1896c15c1632f71f20b7f799a46defd07d5da8fd8d494a41d177",
+      "git_blob": "d1776eab1bdb9ca915b2da454f098311eb6bab8b",
+      "commit": "85204152c48c528ecf1b30dd2079cd60da51e5e7",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/post_main.py",
+      "what": "Figures 1 and 5 (render script, as run)",
+      "edits": "none"
+    },
+    {
+      "file": "figures/figs156/post_excess.py",
+      "sha256": "892b6f3334044be0cd19cf4b3fdb491bab74677140abfa6d55631d9e82645d75",
+      "git_blob": "9fcda1b672a9e944026aa6d7e67a54b693c0fc97",
+      "commit": "85204152c48c528ecf1b30dd2079cd60da51e5e7",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/post_excess.py",
+      "what": "Figure 4 (render script, as run)",
+      "edits": "none"
+    },
+    {
+      "file": "figures/figs156/postfig.py",
+      "sha256": "b2f297300eddbc6ec05334c052544467bd9089c4bcdd7640627da043c2a8f5de",
+      "git_blob": "a3fe27ebfb4bff909c2c618b85accf14a7a07b5f",
+      "commit": "85204152c48c528ecf1b30dd2079cd60da51e5e7",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/postfig.py",
+      "what": "shared figure helpers",
+      "edits": "none"
+    },
+    {
+      "file": "figures/figs156/figio.py",
+      "sha256": "5b2b1f6affdf9dabd83f2c6c50dc8da954bdae01bbe4c1994e85d308000320a5",
+      "git_blob": "4ca9ae2475fa3c1383b5d3ff86f26f3acd3c4a7d",
+      "commit": "85204152c48c528ecf1b30dd2079cd60da51e5e7",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/figio.py",
+      "what": "shared figure I/O",
+      "edits": "none"
+    },
+    {
+      "file": "figures/figs156/render_log_figs156_routecA_012618.json",
+      "sha256": "55d83407d5c66a063252e99aeb51c9e4644e0fae28322d63afa20d99a265817d",
+      "git_blob": "131fdaea3db26b5b790fd4fc6a18081b297d2514",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/render_log_figs156_routecA_012618.json",
+      "what": "plan, script commit and output hashes of the run that drew Figures 1, 4, 5",
+      "edits": "none"
+    },
+    {
+      "file": "figures/figs78/post_pertask.py",
+      "sha256": "c173f1d677a8f23b795214ae911067eab437ade1689d2881be1ec479f207e58f",
+      "git_blob": "9e3f334f5cec28461043993b9a87e91e07b4ece9",
+      "commit": "a9ca8a5c929c15542f5f793c9ef260c62eb703ef",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/post_pertask.py",
+      "what": "Figures 6 and 7 (render script, as run)",
+      "edits": "none"
+    },
+    {
+      "file": "figures/figs78/postfig.py",
+      "sha256": "b2f297300eddbc6ec05334c052544467bd9089c4bcdd7640627da043c2a8f5de",
+      "git_blob": "a3fe27ebfb4bff909c2c618b85accf14a7a07b5f",
+      "commit": "a9ca8a5c929c15542f5f793c9ef260c62eb703ef",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/postfig.py",
+      "what": "shared figure helpers",
+      "edits": "none"
+    },
+    {
+      "file": "figures/figs78/figio.py",
+      "sha256": "5b2b1f6affdf9dabd83f2c6c50dc8da954bdae01bbe4c1994e85d308000320a5",
+      "git_blob": "4ca9ae2475fa3c1383b5d3ff86f26f3acd3c4a7d",
+      "commit": "a9ca8a5c929c15542f5f793c9ef260c62eb703ef",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/figio.py",
+      "what": "shared figure I/O",
+      "edits": "none"
+    },
+    {
+      "file": "figures/figs78/render_log_figs78_routecA_013135.json",
+      "sha256": "306ad507dd5087b5725630c410e89bbcdb6f2745e30ed047fb22973c835c5354",
+      "git_blob": "a6919bdeca40627677884c145ce4aa7f0cb353a3",
+      "commit": "3efcd4a05e086ce32f8af67a9c4fda0db78abc42",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/render_log_figs78_routecA_013135.json",
+      "what": "plan, script commit and output hashes of the run that drew Figures 6, 7",
+      "edits": "none"
+    },
+    {
+      "file": "figures/fig2/post_attack.py",
+      "sha256": "14175e665788566d26dfa1de4addd78e86a63674e07d54a5c751c01664d2c703",
+      "git_blob": "6de888c10b53ac2d54b13ea4a98e90f16e6716c2",
+      "commit": "6790ea75d33b6c4ddc87109a404f28437b175b24",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/post_attack.py",
+      "what": "Figure 2 (render script, as run)",
+      "edits": "none"
+    },
+    {
+      "file": "figures/fig2/postfig.py",
+      "sha256": "b653eeb9cf5673c247bb578a0924d6cd09b1380335390985066b23a0a6884399",
+      "git_blob": "1886f2fb5716dce1dbf0008234528d477bcd7f45",
+      "commit": "6790ea75d33b6c4ddc87109a404f28437b175b24",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/postfig.py",
+      "what": "shared figure helpers (older version)",
+      "edits": "none"
+    },
+    {
+      "file": "figures/fig2/figio.py",
+      "sha256": "5b2b1f6affdf9dabd83f2c6c50dc8da954bdae01bbe4c1994e85d308000320a5",
+      "git_blob": "4ca9ae2475fa3c1383b5d3ff86f26f3acd3c4a7d",
+      "commit": "6790ea75d33b6c4ddc87109a404f28437b175b24",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/figio.py",
+      "what": "shared figure I/O",
+      "edits": "none"
+    },
+    {
+      "file": "figures/fig2/render_log_attack_v5_193930.json",
+      "sha256": "003d7f5118e626286a13a533cd1609f3b9f2b61b8bbc6a7acb01ac92406d7d8e",
+      "git_blob": "99c71e2a08c6935d397c93c0387127fbde7be235",
+      "commit": "327ebbb23ea3000bad2e24702edbeadfb724c1a4",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/render_log_attack_v5_193930.json",
+      "what": "plan, script commit and output hashes of the run that drew Figure 2",
+      "edits": "none"
+    },
+    {
+      "file": "slots/slot_table_a8b4a156.py",
+      "sha256": "1daad759f12220097b339a656a52dcc813c746a5d90c9d3a483c3328cac2c46d",
+      "git_blob": "a8b4a1565321bc4c5aeb8d61ee616eeca162118b",
+      "commit": "283a711abd61521c5502e7b4e8a126bcacce5aa7",
+      "path": "experiments/2026-10-17_routec_slot_readout/slot_table.py",
+      "what": "the statistics-table script (slot_table.py) as run for tables rc1a, rc1b and rc2; those tables record its sha256, 1daad759…",
+      "edits": "none"
+    },
+    {
+      "file": "slots/slot_table_bfb2dc01.py",
+      "sha256": "0fd9ddad75d796d8ce147b26fe9451429a50575c3e1a25966395bb4c96145aad",
+      "git_blob": "bfb2dc010dfa9aef46c739c47ee0379c25b1cbaf",
+      "commit": "a0a8cc70c894a3eda412a44f02c0954247364f1c",
+      "path": "experiments/2026-10-17_routec_slot_readout/slot_table.py",
+      "what": "the statistics-table script (slot_table.py) as run for table rc1b_detl48, set to the layer-48 detector on commands; that table records its sha256, 0fd9ddad…",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig1_main_figs156_routecA.png",
+      "sha256": "f1802d9562350023ae8a08eaa2c088b41186e618066910b20b813cf3b5474bc0",
+      "git_blob": "0e2b46efb92110a02315e309a81c9d606133e2d6",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig1_main_figs156_routecA.png",
+      "what": "Figure 1 as in the post",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig1_main_figs156_routecA_source.json",
+      "sha256": "4f31f71b9d8b92fe25845d715c91d1dcfbd9910fbd9c11f8ab185b3cb97c74e1",
+      "git_blob": "511f785218361f7a66fa9cf766c6af2ec6ebb021",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig1_main_figs156_routecA_source.json",
+      "what": "Figure 1 values, written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig1_main_figs156_routecA_text.md",
+      "sha256": "8cc9a60b296d47ae25cc47216617d139b19b6d4353d5a59e32aab754df3c2294",
+      "git_blob": "2f5a81b8ce5a3d02840ca6ca8f13ab650674c14d",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig1_main_figs156_routecA_text.md",
+      "what": "Figure 1 notes written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig1_main_R_figs156_routecA.png",
+      "sha256": "ed444c74597c56fa103735874f29db69ea4ca2739a37993a462d0e427115b389",
+      "git_blob": "1017de31813a39c562294ecca2fee28e59a30d84",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig1_main_R_figs156_routecA.png",
+      "what": "Figure 5 as in the post",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig1_main_R_figs156_routecA_source.json",
+      "sha256": "69b30ddcd3fcd8db7d7d634e4a258849848ca00168792c68ccb25af202ed6536",
+      "git_blob": "a134580b502edbd8ac1000ce1852cb05063bd8ab",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig1_main_R_figs156_routecA_source.json",
+      "what": "Figure 5 values, written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig1_main_R_figs156_routecA_text.md",
+      "sha256": "4d30fc2231d701ebed71a1d3cf02b64e9d49a4569429be7a331dd3b5e2c0828d",
+      "git_blob": "ee1fa160ca27f1d4a6b0b8dd8c87c1ac4150a062",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig1_main_R_figs156_routecA_text.md",
+      "what": "Figure 5 notes written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig5_excess_C_figs156_routecA.png",
+      "sha256": "35169ba05083a0f80f83a18c2c8af21ed10303409c9ded70076f33dcad34c878",
+      "git_blob": "6415c3bbc8479d36f23e22e32638268709a4ba48",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig5_excess_C_figs156_routecA.png",
+      "what": "Figure 4 as in the post",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig5_excess_C_figs156_routecA_source.json",
+      "sha256": "1e9c1b1cd74cadb83ac6713a21b136793cd8aec792f2cbfb1f2aaf4ed99877c1",
+      "git_blob": "cc7299daa7d8db3cbf0ffe202b5a8fa619c5fb05",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig5_excess_C_figs156_routecA_source.json",
+      "what": "Figure 4 values, written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig5_excess_C_figs156_routecA_text.md",
+      "sha256": "e5ca58003e793aeaa265d399a58d2f79ba8fec33db4060c04366d799113ca1e3",
+      "git_blob": "1fb3684c5a25ad15ea5e1772ba143ad66d20736c",
+      "commit": "f35c8a0dc6b7d5e3c10808659779b4bb408cc76d",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig5_excess_C_figs156_routecA_text.md",
+      "what": "Figure 4 notes written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_pertask_onpolicy_figs78_routecA.png",
+      "sha256": "72acdd2bdc4df473eb8009bd3d48c48d27864bb090e8f52a08ebddd6599acb08",
+      "git_blob": "32360a1212a77c92c831b11b6849ae5909c07953",
+      "commit": "3efcd4a05e086ce32f8af67a9c4fda0db78abc42",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_pertask_onpolicy_figs78_routecA.png",
+      "what": "Figure 6 as in the post",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_pertask_onpolicy_figs78_routecA_source.json",
+      "sha256": "62cb3739c9058a6c183df69526fabd0bc1a5e7fc925a8560864666c6b3050065",
+      "git_blob": "3ff6bf7ccafeb032644ad012b169fe7971b4cfa5",
+      "commit": "3efcd4a05e086ce32f8af67a9c4fda0db78abc42",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_pertask_onpolicy_figs78_routecA_source.json",
+      "what": "Figure 6 values, written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_pertask_onpolicy_figs78_routecA_text.md",
+      "sha256": "de5dbb0889a58382ab7d04465c58485f0ec454a2cea669b6bed8760db041f487",
+      "git_blob": "f9803bd55c1b01254f21e65b143a5da527f1b74b",
+      "commit": "3efcd4a05e086ce32f8af67a9c4fda0db78abc42",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_pertask_onpolicy_figs78_routecA_text.md",
+      "what": "Figure 6 notes written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_pertask_summary_figs78_routecA.png",
+      "sha256": "1377defb66ee04c0c95ff8ab90ff12b0d3b3fffed90c2db4b0f401c3e3527259",
+      "git_blob": "3a086f7c898f76c8056aa0faeb77e098c4a12ef3",
+      "commit": "3efcd4a05e086ce32f8af67a9c4fda0db78abc42",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_pertask_summary_figs78_routecA.png",
+      "what": "Figure 7 as in the post",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_pertask_summary_figs78_routecA_source.json",
+      "sha256": "1f9a873e39192d2258eeafb51f22b50b17ce274b8755708730f00d256096e19e",
+      "git_blob": "b25a4759c06ca62a0ec321f18f7d1f40cbb31a52",
+      "commit": "3efcd4a05e086ce32f8af67a9c4fda0db78abc42",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_pertask_summary_figs78_routecA_source.json",
+      "what": "Figure 7 values, written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_pertask_summary_figs78_routecA_text.md",
+      "sha256": "8cf4b91f28ccc96cf1dc49a025ec17c065a2016f607b3d5b479afd0d5a8ad897",
+      "git_blob": "a0867d352d9817902e3d94e9c80b064a6e5f8d86",
+      "commit": "3efcd4a05e086ce32f8af67a9c4fda0db78abc42",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_pertask_summary_figs78_routecA_text.md",
+      "what": "Figure 7 notes written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_attack_roc_attack_v5.png",
+      "sha256": "2934101c2049f6518346b05813918484f2918bf0c546128c8cd3b0de23ceaa57",
+      "git_blob": "59856138cfef9f16ef601d945c4d3a0d8cb95194",
+      "commit": "327ebbb23ea3000bad2e24702edbeadfb724c1a4",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_attack_roc_attack_v5.png",
+      "what": "Figure 2 as in the post",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_attack_roc_attack_v5_source.json",
+      "sha256": "6fb887d62ead6080c059d93d0b490cdda6cc27792d1560e2db3504bd4deca112",
+      "git_blob": "60847361c74204c4fa0c6b4a5505c24ff5de3f7a",
+      "commit": "327ebbb23ea3000bad2e24702edbeadfb724c1a4",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_attack_roc_attack_v5_source.json",
+      "what": "Figure 2 values, written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_attack_roc_attack_v5_text.md",
+      "sha256": "9933e090238431cedcd69eb39006d05566533802f46655bce4a0aae9c25e7d2b",
+      "git_blob": "5d59857a142612897b8074220380ac6d565463a1",
+      "commit": "327ebbb23ea3000bad2e24702edbeadfb724c1a4",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_attack_roc_attack_v5_text.md",
+      "what": "Figure 2 notes written by the plotting script next to the figure",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/fig_attack_auroc_attack_v5.png",
+      "sha256": "d201d02ae7e01cf518699891f59579cd9565ce08a06e6d80075f6416f2f68b2d",
+      "git_blob": "bbc1648c39a5c032b7eb94718685ee64f6d3f351",
+      "commit": "327ebbb23ea3000bad2e24702edbeadfb724c1a4",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/fig_attack_auroc_attack_v5.png",
+      "what": "Figure 2's companion bar chart from the same run (not in the post)",
+      "edits": "none"
+    },
+    {
+      "file": "figures/fig3/draw_fig3_schematic_v5.py",
+      "sha256": "e5efc94f9ce6e528dcef6ecce9962841f45085e43e5bb646db23beddbe590aa1",
+      "git_blob": "c30309f0f7b267b0d71b7ac350f1612b5e8aed7d",
+      "path": "~/probe-shift-writing-handoff-2026-10-15/w23/figs_schematic/draw_fig3_schematic_v5.py (local file, never committed)",
+      "what": "Figure 3, a diagram with no data",
+      "edits": "none"
+    },
+    {
+      "file": "expected/figures/figure3_schematic_v5.png",
+      "sha256": "50d53aa0da9313f0932f7184c1d2edd1a7ec0280d3426741f1b3766eecc987b1",
+      "git_blob": "f23b2c7b4c3094bb70341f035ee27dabd8d20b94",
+      "path": "~/probe-shift-writing-handoff-2026-10-15/w23/figs_schematic/figure3_schematic_v5.png (local file, never committed)",
+      "what": "Figure 3 as in the post (drawn with matplotlib 3.9.2; not compared)",
+      "edits": "none"
+    }
+  ],
+  "pending": [
+    {
+      "name": "fig3_reference",
+      "file": "expected/figures/fig3_reference.png",
+      "sha256": "797ea390530556e0f355a7c25423d4cdf7602f5a5580cbdbb8590c5055eeef30",
+      "missing_message": "fig3 reference missing",
+      "what": "Figure 3 as rendered by figures/fig3/draw_fig3_schematic_v5.py in the pinned environment; the reference for its pixel check"
+    }
+  ],
+  "token_counts": {
+    "total": 708,
+    "R": 445,
+    "Q": 0,
+    "C": 116,
+    "S": 124,
+    "X": 5,
+    "H": 10,
+    "N": 8,
+    "note": "The class counts that expected/expected_post_numbers.json must have; rebuild_post.py fails otherwise. R: rebuilt and compared. Q: compared as recorded (none). C, S, X, H, N: not rebuilt; see README.md."
+  },
+  "pinned_files": [
+    {
+      "file": "number_rules.json",
+      "sha256": "ffe543e6d9758caa0188a2d57646ff3da0a7385af1c9143502b1c7fb61c798da",
+      "what": "one rule per rebuilt number"
+    },
+    {
+      "file": "expected/expected_post_numbers.json",
+      "sha256": "a6acb54ac9fa91a3a3e5ccf4070fa2936ee67faddef6db055177689c29f1233f",
+      "what": "every number printed in the post, by line, with its class"
+    },
+    {
+      "file": "expected/expected_figures.json",
+      "sha256": "bb87392e67298832711ab37258f73e608473c30c725e6b19c5d0683ffe00a00d",
+      "what": "the post's figures, the plotting folder of each, and the sha256 of each figure in the post"
+    },
+    {
+      "file": "config/slot_runs.json",
+      "sha256": "433eedd746c1b1c22d7ec30289eeb9bdb2a6f8385b3e61900cef35bca160b571",
+      "what": "the inputs of the four statistics tables"
+    },
+    {
+      "file": "figures/fig2/inputs.json",
+      "sha256": "0f390caabd501749f6f1d1f99cb9b8e1fa342a12d790d2e945b3a35bda8ff39f",
+      "what": "maps each file name in the plotting run's plan to a record in this file"
+    },
+    {
+      "file": "figures/figs156/inputs.json",
+      "sha256": "9f5e3d27481b72f593cfc1f19f175cce591873ce19643ea8dacea7b8e7b70afb",
+      "what": "maps each file name in the plotting run's plan to a record in this file"
+    },
+    {
+      "file": "figures/figs78/inputs.json",
+      "sha256": "9453a147abd2d8fc842ad594c3ceb7d0f4897b634ae5a1829c56e35b67ed4082",
+      "what": "maps each file name in the plotting run's plan to a record in this file"
+    }
+  ]
+}

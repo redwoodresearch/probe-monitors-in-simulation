@@ -1,0 +1,5 @@
+N=190 task corr=0.3 SE=0.0429 M=±0.10 95%: P(real-vs-sim inside)=0.29 P(both inside)=0.09
+N=190 task corr=0.3 SE=0.0429 M=±0.10 Holm first step, 97.5%: P(real-vs-sim inside)=0.07 P(both inside)=0.01
+N=190 task corr=0.3 SE=0.0429 M=±0.15 95%: P(real-vs-sim inside)=0.88 P(both inside)=0.78
+N=190 task corr=0.3 SE=0.0429 M=±0.15 Holm first step, 97.5%: P(real-vs-sim inside)=0.79 P(both inside)=0.65
+tasks for 80% on the real-vs-sim interval alone at ±0.10: 368 (95%), 434 (97.5%)

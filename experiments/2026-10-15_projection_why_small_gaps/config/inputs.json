@@ -1,0 +1,241 @@
+{
+ "label": "projection add-on inputs (RULE.md); git sources are read with git show and sha256-checked on the laptop; Volume files are sha256-checked in the job",
+ "volumes": {
+  "sol": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+  "p2": "probe-shift_aswin-surya_sub-p2probes_scores_kill-2026-11-13",
+  "b": "probe-shift_aswin-surya_sub-q4own_evals_kill-2026-11-13"
+ },
+ "git": {
+  "fpr_record": {
+   "commit": "46190253a1d56f9883c91ce6fda0d18b89f615ee",
+   "path": "experiments/2026-10-14_fpr_sweep_unit/results/fprsweep_unit_2026-10-15_003643.json",
+   "sha256": "d979413913b988ff6f29fbc0a5910aa01d3bb048387bc41b1a848e039ebba7d2"
+  },
+  "manifest": {
+   "commit": "46ca25fc48905bca51ec79822970abc655df7b55",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/correctedb_manifest_v1.json",
+   "sha256": "bf847d425b80d95ebb75a9ed1d524fc68c9efcd014710ddc18e445ed9d373ebc"
+  },
+  "own_a_record": {
+   "commit": "cc53afc3a5241ccda1199303a7dd20f3df76b4f0",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/correctedb_scores_2026-10-14_164934.json",
+   "sha256": "c002d5f822e49d7877f4e8b79a80ca9dd2e2f16c664b921d3ad12cb3da4c49ac"
+  },
+  "asis_scores": {
+   "commit": "9866abcb7152166f20f358ce2c2c57d599e26819",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/asis_scores_2026-10-14_142228.json",
+   "sha256": "59c051a4ff9cc40811745a119251224f031cdaf479b8d3fb909c1059ab94da31"
+  },
+  "fibs_record": {
+   "commit": "ea52b7e19b168566b3f404e65b559c0e4a0b6fae",
+   "path": "experiments/2026-10-14_p2_fibs_pair/results/fibs_scores_2026-10-14_124948.json",
+   "sha256": "366d594cd719d52e9bb11d34bf4d3491b6cbd82d64f61efa73f476773cb49b1a"
+  },
+  "refharm_record": {
+   "commit": "ea52b7e19b168566b3f404e65b559c0e4a0b6fae",
+   "path": "experiments/2026-10-14_p2_refusal_harm/results/scores_2026-10-14_145748.json",
+   "sha256": "d0b7f028f8ac3795dd946a261f384f474748a296772fb1f2f2f22cecaac6c961"
+  },
+  "highstakes_record": {
+   "commit": "ea52b7e19b168566b3f404e65b559c0e4a0b6fae",
+   "path": "experiments/2026-10-14_p2_highstakes/results/scores_2026-10-14_133519.json",
+   "sha256": "2d251dee71a4a0366bd9549fcc3726511fe576aafce0bb6a913353d7fc06f38a"
+  },
+  "harmfulness_w": {
+   "commit": "10539faa120b66883f87c290c7e82c27b49c8f5f",
+   "path": "experiments/2026-10-14_p2_refusal_harm/results/harmfulness_direction_h200_2026-10-14_145255.safetensors",
+   "sha256": "77e6af62e1ef50ae6ce9c5d69f2ac532492f0e98144014064b5972ddb724e4f6"
+  },
+  "refusal_w": {
+   "commit": "10539faa120b66883f87c290c7e82c27b49c8f5f",
+   "path": "experiments/2026-10-14_p2_refusal_harm/results/refusal_direction_h200_2026-10-14_145255.safetensors",
+   "sha256": "7f1f3619a4c09e65d1ed78edffd954ce1e959f81f4da80fc2b05ea2bb85528ea"
+  },
+  "highstakes_w": {
+   "commit": "d54d497e9bb5d498353c0b687aa51631e776f432",
+   "path": "experiments/2026-10-14_p2_highstakes/results/highstakes_probe_2026-10-14_131233.safetensors",
+   "sha256": "ef0d8671c9fbae63714bb4eef0b8c93aa6c7d4ff06aa5168eda6acd63845534b"
+  },
+  "fibs_w_L19": {
+   "commit": "5f3674a677c53df4899cdc520e913b5126a51f30",
+   "path": "experiments/2026-10-14_q2_fibs_probe/results/fibs_qwen3.5-27b_linear_L19.safetensors",
+   "sha256": "0f3521840385c5b381503ca90653c16d0a3c026c9dc12eceddd7db513647eba3"
+  },
+  "fibs_w_L27": {
+   "commit": "5f3674a677c53df4899cdc520e913b5126a51f30",
+   "path": "experiments/2026-10-14_q2_fibs_probe/results/fibs_qwen3.5-27b_linear_L27.safetensors",
+   "sha256": "aa01ede3c02494fd8714bfecd26910e22561c55266f4237835b94fc87c64e21f"
+  },
+  "fibs_w_L35": {
+   "commit": "5f3674a677c53df4899cdc520e913b5126a51f30",
+   "path": "experiments/2026-10-14_q2_fibs_probe/results/fibs_qwen3.5-27b_linear_L35.safetensors",
+   "sha256": "9b963f9bed60451dc41f6dcc7a2c85eafdae8e7f6be21d6938111489e57dfda7"
+  },
+  "fibs_w_L43": {
+   "commit": "5f3674a677c53df4899cdc520e913b5126a51f30",
+   "path": "experiments/2026-10-14_q2_fibs_probe/results/fibs_qwen3.5-27b_linear_L43.safetensors",
+   "sha256": "0ea17a2d5bd266910a9f0416f0fabd2a3322740969be88c0dc47db26a503aa15"
+  },
+  "fibs_w_L51": {
+   "commit": "5f3674a677c53df4899cdc520e913b5126a51f30",
+   "path": "experiments/2026-10-14_q2_fibs_probe/results/fibs_qwen3.5-27b_linear_L51.safetensors",
+   "sha256": "236121cc9886e88eff49cf7cde7e538ba66289a82094e37dd33956d4ee20c4e0"
+  },
+  "fibs_w_L58": {
+   "commit": "5f3674a677c53df4899cdc520e913b5126a51f30",
+   "path": "experiments/2026-10-14_q2_fibs_probe/results/fibs_qwen3.5-27b_linear_L58.safetensors",
+   "sha256": "2f1107d3ec1cf360f55965a3fbd2caa637bcc72fac219e3a5b25c74270970ff4"
+  }
+ },
+ "unit_files": {
+  "sol_a": {
+   "vol": "sol",
+   "path": "xfer/correctedb_tight22g_2026-10-14_144709/perrow_asis_tight__a__averaged_reply_top2.npz",
+   "sha256": "aca93022c00ebb8394977be5013aaf53f4881e35b401c91ab8ffad846cd52d50"
+  },
+  "c_asis": {
+   "vol": "sol",
+   "path": "xfer/asis_2026-10-14_135701/rows_2026-10-14_142228/c_asis_tight__avg_top2.npz",
+   "sha256": "c028a5fb8719fab1bc3990abb467b42eb5e417b2a82ee19d6e6205de775f8c21"
+  },
+  "fibs": {
+   "vol": "p2",
+   "path": "fibs/2026-10-14_124948/reply_mean.npz",
+   "sha256": "576538939ae53f9afbf6da8b7e7123e698413c34331baebf7193d8236266f666"
+  },
+  "harmfulness": {
+   "vol": "p2",
+   "path": "2026-10-14_p2_refusal_harm/2026-10-14_145748/harmfulness_reply_mean.npz",
+   "sha256": "28678271ce765b669d92127f15ff55092208c973d3232b4def0e3b113d52b675"
+  },
+  "refusal": {
+   "vol": "p2",
+   "path": "2026-10-14_p2_refusal_harm/2026-10-14_145748/refusal_reply_mean.npz",
+   "sha256": "8b8e64752f5ee67077ef0ee7f018cc683cde2f51ddaf07e64ccc46bd028ff360"
+  },
+  "highstakes": {
+   "vol": "p2",
+   "path": "2026-10-14_p2_highstakes/2026-10-14_133519/highstakes_reply_mean.npz",
+   "sha256": "98e246bd8441a14f0c9870a79d5645ba54953f86940712ae7acc12f4c9d02838"
+  },
+  "own_frac100_L48_R": [
+   {
+    "vol": "p2",
+    "path": "famexp/2026-10-14_163027/pack_open_2026-10-14_180501/own_frac100_L48__R.npz",
+    "sha256": "37b3122e9249ce0cf4fa829547bc2ce2f7bff95973af93f10ea15c3748476de0"
+   },
+   {
+    "vol": "p2",
+    "path": "famexp/2026-10-14_163027/pack_sim_sealed_2026-10-14_181123/own_frac100_L48__R.npz",
+    "sha256": "c8365d94be860cf834f194905ba646d7b2771ecc2f8ea6db43d99550203149e6"
+   }
+  ],
+  "own_frac100_L48_C": [
+   {
+    "vol": "p2",
+    "path": "famexp/2026-10-14_163027/pack_open_2026-10-14_180501/own_frac100_L48__C.npz",
+    "sha256": "0507648b648bf890367935d68c557641e3f5ea62672b211928d6e016a2c5f196"
+   },
+   {
+    "vol": "p2",
+    "path": "famexp/2026-10-14_163027/pack_sim_sealed_2026-10-14_181123/own_frac100_L48__C.npz",
+    "sha256": "1fd6d7cdec936c2725721318dd2a8689101cb06ddd86d05eeb6312554d3b00b9"
+   }
+  ],
+  "own_a_cmd_A": "own_a_record saved.cmd.cmdA['rows|own_a_tight'] (path, sha256)",
+  "own_a_avg_top2": "own_a_record saved.tight.avg['<L>|<f>'] (rows, rows_sha256) for the fold's two chosen layers"
+ },
+ "weights": {
+  "sol_a": {
+   "vol": "sol",
+   "path": "xfer/asis_2026-10-14_135701/outer_tight_L{L}.npz",
+   "prefix": "a__f{f}__",
+   "sha256": "not pinned by any record: recorded at read; identity established by gate G2 (reproduces the sha-pinned unit file)"
+  },
+  "c_asis": {
+   "vol": "sol",
+   "path": "xfer/asis_2026-10-14_135701/outer_tight_L{L}.npz",
+   "prefix": "c_asis__f{f}__",
+   "sha256": "as sol_a"
+  },
+  "layer_choice_a": "asis_scores record layer_choice_a (Sol (a)'s as-run choice; c_asis inherits it)",
+  "own_a_avg_top2": "own_a_record saved.tight.avg['<L>|<f>'] (weights, weights_sha256); layer_choice_own_a from the same record",
+  "own_a_cmd_A": "own_a_record saved.cmd.cmdA: own_a_tight_weights where the fold's key exists, else own_a_weights (as run_correctedb.py @ 18c21b556 L296-327)",
+  "own_frac100_L48": {
+   "R|0": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__R__L48__f0.safetensors",
+    "sha256": "eaa80bca3bf43cafb9fe38a0067dbd5f903515c9c69cb93e078ef7ff48671ba0",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_R_L48_f0.json fits[].sha256.weights"
+   },
+   "R|1": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__R__L48__f1.safetensors",
+    "sha256": "32b0ee0f5f79869112a92daa1d7d291e054dfab7c53c1f1482404423083e3930",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_R_L48_f1.json fits[].sha256.weights"
+   },
+   "R|2": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__R__L48__f2.safetensors",
+    "sha256": "59da1580d9d18530340d2417d32d68bbee4d738c050f333f5b87a55584dd086c",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_R_L48_f2.json fits[].sha256.weights"
+   },
+   "R|3": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__R__L48__f3.safetensors",
+    "sha256": "edd05abc40dae5f67ffe66208e8a2d4d7c69ab0f10b257d50bea60593f0fdba7",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_R_L48_f3.json fits[].sha256.weights"
+   },
+   "R|4": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__R__L48__f4.safetensors",
+    "sha256": "1382dc9c7c38215d753eb5fe6e7c658c520653aed27bcd91a49da5bfdc5dbfbd",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_R_L48_f4.json fits[].sha256.weights"
+   },
+   "C|0": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__C__L48__f0.safetensors",
+    "sha256": "244b833c16f8aba370e7280d9ff095602f40f409a586883be0111a7c1e9da31d",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_C_L48_f0.json fits[].sha256.weights"
+   },
+   "C|1": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__C__L48__f1.safetensors",
+    "sha256": "66f03581459ead35716a9a3a66b79aa5385bce5be465b5b84ded943716fbff90",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_C_L48_f1.json fits[].sha256.weights"
+   },
+   "C|2": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__C__L48__f2.safetensors",
+    "sha256": "516e6b1b5c021fc2c872f8d1fcfa2fa9c75f4b7dcbccf089091ad39eb19d952c",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_C_L48_f2.json fits[].sha256.weights"
+   },
+   "C|3": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__C__L48__f3.safetensors",
+    "sha256": "8234df399e438dc1c6b86df102a2905a23df39da5a8ee64516e9767946d627a9",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_C_L48_f3.json fits[].sha256.weights"
+   },
+   "C|4": {
+    "path": "famexp/2026-10-14_163027/run_2026-10-14_175636/weights/own_frac100_L48__C__L48__f4.safetensors",
+    "sha256": "1efeb393f7001cf356858409d16a1f912dd4251fa83f784a50f9f4b38ad19f3d",
+    "certified": true,
+    "from": "p2 Volume famexp/2026-10-14_163027/run_2026-10-14_175636/groups/own_C_L48_f4.json fits[].sha256.weights"
+   }
+  },
+  "fibs": "git fibs_w_L<L> (linear.weight, linear.bias, input_scale)",
+  "harmfulness": "git harmfulness_w (direction, bias if present)",
+  "refusal": "git refusal_w",
+  "highstakes": "git highstakes_w"
+ },
+ "a2_detector": {
+  "status": "weights never saved; item 2 (cosine with the detector) is not computed (0d: stop for missing weights, no refit)",
+  "evidence": "run_controls_a2.py @ 2188f0ad1 fit_a2 deletes W, b after scoring and returns scores only; no savez / save_file / torch.save in run_simh_control.py, run_controls_a1.py or run_controls_a2.py",
+  "record": "aswin/cmd-readout-simh-control results/controls_a2_2026-10-15_004048.json @ db69919f6"
+ },
+ "bootstrap": {
+  "draws": 2000,
+  "seed": 20261015,
+  "unit": "main task (the 183 cohort tasks), with replacement, unstratified"
+ }
+}

@@ -1,0 +1,200 @@
+G3's real-only fit runner (step 4), run_q3_attack_g3.py with its pre-run fixes (r40zz, r3n0V, and the config sha256 that
+r3ocj/r3__l check), as committed at dce960c4 on aswin/q2-g3-reader; NOT RUN (first committed at 02adbed6). Kept here as a
+patch against its root source on main for the PR size cap (800 lines). The full copy (sha256
+5f1ab81931c8a2dd4b347bfdfd09961b8403d15e8c35a18a0fd29c8cea96946e, 52538 bytes) is on S3 via results/s3_manifest_v7.json;
+manifest v5's copy (the 02adbed6 bytes) is superseded and stays on S3.
+Source on main (d2507f17): experiments/2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py, sha256 7f1f06c2079fbd9f4d1d1ff32bb16cd7d383b7399374ac83ee1cb164fc35dc77.
+(The copy's own docstring names its direct parent, Olmo's run_q3_attack_olmo.py.)
+To run G3's next steps, use the as-run branch aswin/q2-g3-reader (23197821 or later), not a checkout of these PRs: the
+runners require their own source committed, and the S3'd records are absent here. These PRs carry the record for review.
+Rebuild, from the repository root:
+  patch -o experiments/2026-10-13_g3_new_reader/run_q3_attack_g3.py experiments/2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py experiments/2026-10-13_g3_new_reader/run_q3_attack_g3.patch
+
+--- experiments/2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py
++++ experiments/2026-10-13_g3_new_reader/run_q3_attack_g3.py
+@@ -1,3 +1,15 @@
++"""G3, step 4 (RULE.md here): #36's recipe on Seed-OSS-36B, real arms only. A copy of
++../2026-10-12_q2_olmo_reader/run_q3_attack_olmo.py (at c70b5993; the reader-swap copy, its text below) with row 2's real-only
++change applied (../2026-10-12_plantslip_heldout/q2_run_q3_attack_heldout.py at 62edb8e8, the rule's pinned fit runner:
++load_arms = the three real arms after select_runs, load_arms in the data identity, no sim-attack run in manifest, pack or
++probe, chunk blocks read by exact byte range, --check-data disabled). Changed here: the app, the activations Volume (G3's
++real dump, run_extract_g3.py), the work Volume, the S3 prefix and the default config (config/q3_attack_g3.yaml).
++"""
++"""Q3 attack detector #36's recipe on Olmo-3.1-32B as the reader (PLAN.md step 2 here): a copy of
++../2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py (itself a copy of #36's run_q3_attack.py) with only its app,
++activations Volume (the Olmo extraction, run_extract_olmo.py), work Volume, S3 prefix and default config changed. The
++rest below, the Qwen3.5 copy's text included, is unchanged:
++"""
+ """Q3 attack detector #36's recipe on Qwen3.5-27B as the reader (PLAN.md here): a copy of
+ experiments/2026-10-06_q3_attack_detector/run_q3_attack.py at main with only these changes: the activations Volume is
+ the Qwen3.5 one (read-only), the staged inputs come from a second, read-only Volume (/inputs, the Qwen3-32B dump's
+@@ -49,16 +61,16 @@
+ 
+ HERE = Path(__file__).parent
+ REPO = HERE.parent.parent
+-APP = "probe-shift_aswin-surya_sub-q2-qwen35-reply_probe_kill-2026-11-12"
+-ACTS = "probe-shift_aswin-surya_sub-qwen35_acts_kill-2026-11-06"
++APP = "probe-shift_aswin-surya_sub-q2-g3_probe_kill-2026-11-12"
++ACTS = "probe-shift_aswin-surya_sub-q2-g3_acts_kill-2026-11-12"
+ INPUTS = "probe-shift_aswin-surya_sub-la-activations"  # the staged reader inputs (the Qwen3.5 dump read these)
+-WORK = "probe-shift_aswin-surya_sub-q2-qwen35-reply_work_kill-2026-11-12"
++WORK = "probe-shift_aswin-surya_sub-q2-g3_work_kill-2026-11-12"
+ GPU = "H100!"
+ H = 5120
+ MANIFEST_VERSION = 2  # part of data_id: bump when the manifest's outputs change (2: a tool column in the tables)
+ # Durable home of each run's raw scores and trained probes (the work Volume is kill-dated): the project bucket
+ # (private, versioned), one prefix per run. Archives are written from the laptop with the user's own AWS session.
+-S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-12_q2_qwen35_reply_readout/"
++S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-13_g3_new_reader/fits/"
+ S3_ARCHIVE_REGION = "us-east-2"
+ ARCHIVE_MAX_BYTES = 1_000_000_000  # a run's archive is ~350 MB; refuse anything over ~1 GB rather than fetch it
+ 
+@@ -84,6 +96,8 @@
+     from probe_shift.attack_eval import CALL_END_KINDS, HONEST, NUDGE, STEP_LIMIT, call_end_kind, original_kinds
+ 
+     out = data_dir(data_id)
++    if any(r["arm"] == "sim-attack" for r in runs):  # RULE.md step 2
++        raise ValueError("manifest: a sim-attack run is present")
+     if (out / "summary.json").exists():  # built earlier from the same runs and settings (data_id is their hash)
+         return json.loads((out / "summary.json").read_text())
+     ext = Path("/acts") / cfg["extraction_run"]
+@@ -154,7 +168,9 @@
+                         token_texts[r["arm"]][p["token_text"]] += 1
+                     tool = tool_ids.setdefault(p["tool"] or "", len(tool_ids))
+                     tables[pos].append((i, p["row"], p["step"], p["action"], p["token"], kind, tool))
+-        per_run.append({"filename": m["filename"], "n_tokens": m["n_tokens"], "truncated": m["truncated"],
++        # G3: Seed's metas carry no "truncated" (every kept readout lies below its 65,536 context); the exclusions file's value
++        # (Qwen3-32B's 32k cut) is kept for the length baseline's column only (check_truncation is off)
++        per_run.append({"filename": m["filename"], "n_tokens": m["n_tokens"], "truncated": m.get("truncated", r["truncated"]),
+                         "n_steps": len(turns), "n_actions": len(calls), "n_nudges": n_nudges, "n_step_limit_messages": n_limit,
+                         **{f"n_{pos}_kept": sum(p["kind"] == pos and p["kept"] for p in m["positions"]) for pos in cfg["positions"]},
+                         "n_call_end_none": sum(p["kind"] == "call_end" and p["token"] is None for p in m["positions"]),
+@@ -162,7 +178,7 @@
+                         "call_end_kinds": {k: kinds[k] for k in CALL_END_KINDS.values()}, "kept_call_tools": dict(tools),
+                         **({"chunk": m["chunk"], "row_start": m["row_start"]} if by_layer else {})})
+         # the exclusions file's truncation is at original text; cleaned text is shorter, so it can be cut less often
+-        if cfg.get("check_truncation", True) and m["truncated"] != r["truncated"]:
++        if cfg.get("check_truncation", True) and m.get("truncated") != r["truncated"]:
+             raise ValueError(f"{r['key']}: truncation differs between the extraction and {cfg['exclusions_file']}")
+     bad = {k: v for k, v in checks.items() if v}
+     if bad:
+@@ -203,6 +219,8 @@
+     work_vol.reload()
+     d = data_dir(data_id)
+     runs = json.loads((d / "runs.json").read_text())
++    if any(r["arm"] == "sim-attack" for r in runs):  # RULE.md step 2
++        raise ValueError("pack_layer: a sim-attack run is present")
+     t = np.load(d / "tables.npz")
+     targets = {pos: d / "packed" / f"L{layer}_{pos}.npy" for pos in cfg["positions"]}
+     if all(p.exists() and np.load(p, mmap_mode="r").shape == (len(t[f"{pos}__run"]), H) for pos, p in targets.items()):
+@@ -212,11 +230,31 @@
+     ext = Path("/acts") / cfg["extraction_run"] / ("by_layer" if by_layer else "acts")
+     feats = {pos: np.zeros((len(t[f"{pos}__run"]), H), np.float16) for pos in cfg["positions"]}
+     bounds = {pos: np.searchsorted(t[f"{pos}__run"], np.arange(len(runs) + 1)) for pos in cfg["positions"]}
+-    blocks = {c: np.load(ext / f"L{layer}" / f"{c}.npy", mmap_mode="r") for c in {r["chunk"] for r in runs}} if by_layer else {}
++    # RULE.md step 2: the dump's chunk files pack every arm's rows, sim-attack included, so a chunk is never loaded or mapped
++    # whole. Each run's own block is read by exact, unbuffered byte range, after the chunk index confirms the block is that
++    # run's (same key and real arm, same row_start) and the rows read lie inside it.
++    if by_layer:
++        index = {c: {(x["arm"], x["key"]): x for x in json.loads((Path("/acts") / cfg["extraction_run"] / "chunks" / f"{c}.json").read_text())["transcripts"]}
++                 for c in {r["chunk"] for r in runs}}
++
++    def read_block(path, start, count):
++        with open(path, "rb", buffering=0) as fh:
++            v = np.lib.format.read_magic(fh)
++            shape, fortran, dtype = (np.lib.format.read_array_header_1_0 if v == (1, 0) else np.lib.format.read_array_header_2_0)(fh)
++            if fortran or len(shape) != 2 or shape[1] != H or start + count > shape[0]:
++                raise ValueError("unexpected chunk layout")
++            rb = shape[1] * dtype.itemsize
++            fh.seek(fh.tell() + start * rb)
++            buf = fh.read(count * rb)
++        return np.frombuffer(buf, dtype).reshape(count, shape[1])
+ 
+     def load(i):
+         if by_layer:  # a run's rows start at row_start in its chunk file
+-            x, off = blocks[runs[i]["chunk"]], runs[i]["row_start"]
++            blk = index[runs[i]["chunk"]].get((runs[i]["arm"], runs[i]["key"]))
++            span = 1 + max(int(t[f"{pos}__row"][bounds[pos][i]:bounds[pos][i + 1]].max(initial=-1)) for pos in cfg["positions"])
++            if blk is None or blk["arm"] == "sim-attack" or blk["row_start"] != runs[i]["row_start"] or span > blk["n_rows"]:
++                raise ValueError("a run's rows lie outside its own real block")
++            x, off = read_block(ext / f"L{layer}" / f"{runs[i]['chunk']}.npy", runs[i]["row_start"], span), 0
+         else:
+             x, off = np.load(ext / runs[i]["arm"] / f"{runs[i]['filename']}.npz")[f"L{layer}"], 0
+         for pos in cfg["positions"]:
+@@ -278,6 +316,8 @@
+     work_vol.reload()
+     d = data_dir(data_id)
+     runs = json.loads((d / "runs.json").read_text())
++    if any(r["arm"] == "sim-attack" for r in runs):  # RULE.md step 2
++        raise ValueError("probe_layer: a sim-attack run is present")
+     t = np.load(d / "tables.npz")
+     n = len(runs)
+     arm = np.array([r["arm"] for r in runs])
+@@ -628,7 +668,7 @@
+ 
+ 
+ @app.local_entrypoint()
+-def main(test: bool = False, resume: str = "", config: str = "q3_attack_qwen35.yaml", pack_only: bool = False,
++def main(test: bool = False, resume: str = "", config: str = "q3_attack_g3.yaml", pack_only: bool = False,
+          check_data: str = ""):
+     """`--test`: a few main tasks per fold, one layer, a small null, under a separate run id. `--resume <run_id>`:
+     spawn only the fits whose outputs are not on the work Volume yet (a fit still running from the first launch is
+@@ -643,19 +683,48 @@
+     from probe_shift.transcripts import REACT_NUDGE
+ 
+     launched_at = time.time()
++    if check_data:  # RULE.md step 2: compare_data reads whole reference arrays, which could hold simulated rows
++        raise ValueError("--check-data is disabled in this copy")
+     if resume and (pack_only or check_data):  # a resumed run is already packed: it would go straight to the fits
+         raise ValueError("--pack-only and --check-data apply to a new launch, not to --resume")
+     if resume:
+         launch = json.loads(read_volume(f"runs/{resume}/launch.json"))
++        # G3: a resume runs the launch's code only: this script, clean, with the same bytes as at the launch's commit
++        root = REPO.resolve(); me = Path(__file__).resolve(); rel = str(me.relative_to(root))  # r40zz: both paths resolved
++        then = subprocess.run(["git", "show", f"{launch['git']}:{rel}"], cwd=root, capture_output=True).stdout
++        if subprocess.run(["git", "diff", "--quiet", "HEAD", "--", str(me)], cwd=root).returncode or then != me.read_bytes():
++            raise ValueError("--resume needs this script clean and identical to the launch's commit")
++        # r3n0V: and the probe_shift package the containers import (add_local_python_source), file for file as at the launch
++        pkg = set(subprocess.run(["git", "ls-tree", "-r", "--name-only", launch["git"], "src/probe_shift/"], cwd=root,
++                                 capture_output=True, text=True, check=True).stdout.split())
++        now = {str(p.relative_to(root)) for p in (root / "src" / "probe_shift").rglob("*") if p.is_file() and "__pycache__" not in p.parts}
++        if not pkg or pkg != now or any(subprocess.run(["git", "show", f"{launch['git']}:{p}"], cwd=root, capture_output=True).stdout
++                                        != (root / p).read_bytes() for p in pkg):
++            raise ValueError("--resume needs src/probe_shift identical to the launch's commit, file for file")
+     else:
+         cfg = yaml.safe_load((HERE / "config" / config).read_text())
+         if (cfg["activations_volume"], cfg["inputs_volume"], cfg["work_volume"]) != (ACTS, INPUTS, WORK):
+             raise ValueError("config volumes differ from the script's")
+         if ae.NUDGE != REACT_NUDGE:
+             raise ValueError("attack_eval.NUDGE is out of date with transcripts.REACT_NUDGE")
++        # G3: the splits, this script and its config must be committed and clean (the freeze checks the splits' bytes)
++        for f_ in (REPO / "splits" / cfg["folds_file"], REPO / "splits" / cfg["exclusions_file"], Path(__file__).resolve(), HERE / "config" / config):
++            if subprocess.run(["git", "ls-files", "--error-unmatch", str(f_)], cwd=REPO, capture_output=True).returncode \
++                    or subprocess.run(["git", "diff", "--quiet", "HEAD", "--", str(f_)], cwd=REPO).returncode:
++                raise ValueError(f"{f_.name} differs from HEAD: commit it before fitting")
++        if subprocess.run(["git", "status", "--porcelain", "--", "src/probe_shift"], cwd=REPO, capture_output=True, text=True).stdout.strip():
++            raise ValueError("src/probe_shift is not clean: the containers import it, so commit it before fitting (r3n0V)")
++        config_sha = hashlib.sha256((HERE / "config" / config).read_bytes()).hexdigest()  # r3ocj/r3__l: the config the fit read
++        splits_sha = {k: hashlib.sha256((REPO / "splits" / cfg[k]).read_bytes()).hexdigest() for k in ("folds_file", "exclusions_file")}
+         folds = json.loads((REPO / "splits" / cfg["folds_file"]).read_text())
+         ex = json.loads((REPO / "splits" / cfg["exclusions_file"]).read_text())
+         runs, excluded = ae.select_runs(ex, folds)
++        load_arms = cfg["load_arms"]  # RULE.md step 2: real arms only; no simulated run is loaded, packed, fitted or scored
++        if sorted(load_arms) != sorted(["real-honest", "real-attack-e1", "real-attack-e2"]):
++            raise ValueError(f"load_arms must be the three real arms, not {load_arms}")
++        runs = [r for r in runs if r["arm"] in load_arms]
++        if any(r["arm"] == "sim-attack" for r in runs) or {r["arm"] for r in runs} != set(load_arms):
++            raise ValueError("the run list holds a sim-attack run or misses a real arm")
+         if test:
+             keep = set()
+             for f in range(5):
+@@ -669,6 +738,9 @@
+         ident = [MANIFEST_VERSION, cfg["extraction_run"], cfg["positions"],
+                  [(r["arm"], r["key"], r["fold"], r["env_fold"]) for r in runs]]
+         ident += [cfg["kinds_from"]] if cfg.get("kinds_from") else []  # other kinds, other tables
++        ident += [["load_arms", sorted(load_arms)]]  # RULE.md step 2: the arm filter is part of the data identity
++        cfg["splits sha256 (read)"] = splits_sha  # G3: the bytes the fit read, recorded with its config
++        cfg["config file"], cfg["config sha256 (read)"] = config, config_sha  # the scorer and the freeze check these
+         data_id = hashlib.sha1(json.dumps(ident).encode()).hexdigest()[:12]
+         print(f"run {run_id} | data {data_id} | {len(runs)} runs:", {a: sum(r["arm"] == a for r in runs) for a in ae.ARMS},
+               f"| git {git[:8]}{' (dirty)' if dirty else ''}", flush=True)

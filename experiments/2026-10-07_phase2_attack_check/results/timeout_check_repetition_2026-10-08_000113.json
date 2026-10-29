@@ -1,0 +1,24 @@
+{
+ "case": "repetition",
+ "started": "2026-10-08T00:01:11-07:00",
+ "inspect_stop_reason": "unknown",
+ "output_tokens": 26,
+ "http_requests_by_request_id": {
+  "grZtZhc6KCMGHzVuMXTvc3": 1
+ },
+ "proxy_stop_reasons": {
+  "grZtZhc6KCMGHzVuMXTvc3": [
+   {
+    "status": 200,
+    "received": "2026-10-08T00:01:12.146-07:00",
+    "finish_reasons": [
+     "repetition"
+    ],
+    "stop_reasons": [
+     "repetition_detected"
+    ]
+   }
+  ]
+ },
+ "verdict": "PASS"
+}

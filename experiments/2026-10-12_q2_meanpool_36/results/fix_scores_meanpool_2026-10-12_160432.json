@@ -1,0 +1,34 @@
+{
+ "plan": "PLAN.md (this folder)",
+ "git": "000773e0218b6144d2be91c0dd1d30f178126269",
+ "run": "2026-10-12_154817",
+ "extraction": [
+  "2026-10-12_la_mean-pool36_qwen3-32b_l7_v1",
+  "2026-10-12_la_mean-pool36-fix939_qwen3-32b_l7_v1"
+ ],
+ "inputs sha256": {
+  "fix939_frozen_runs_POSTHOC_2026-10-11_020458.jsonl": "5f6ecbc42b1c6bb9586cb58e474d74c5c1d914bedb95d80a5a07dd078b0e5ebd",
+  "runs.json": "53409dce1b141a863047cd43ee33e579158b76b591b2cac63c6d98303829ef71",
+  "scores_L16.npz": "52f9d84cf6523c301e85ae141072133001b0e3c1bb07220eab20d9b3f36a7631",
+  "scores_L24.npz": "d19647624dd2d7b302cd771f919f8dc3122fe83499fd9984d2fe840c4ec1bc8e",
+  "scores_L32.npz": "9cf35ab87df91db4253a775538ac1d68ea5f0772961de95223b1bcd9c47ae371",
+  "scores_L40.npz": "f18c901da4867c350f63c530ac6308c20af3c35c59f6819c14eaf0541dbe4af9",
+  "scores_L48.npz": "243835fa31e5a1eba69117fc68f150173b67905e22ef2f62f56994e495e688ee",
+  "scores_L56.npz": "476b5dd78ad39ad4d7c59a7fcf769b662044049772ec571d0207af4c3f937404",
+  "scores_L63.npz": "3416e172fcb1269380d95dc610a9056f2b35782fb5b4234128200593b82de71f"
+ },
+ "gate: max |re-scored - stored| nested score, by layer (tolerance 1e-3)": {
+  "16": 3.3676624298095703e-06,
+  "24": 3.4173329668263364e-06,
+  "32": 3.129243850708008e-06,
+  "40": 2.082969461136841e-06,
+  "48": 4.390875498527791e-06,
+  "56": 2.702077229965738e-06,
+  "63": 3.433227539151318e-06
+ },
+ "as-simulated runs": 939,
+ "with re-rendered scores": 823,
+ "unchanged (as-simulated scores stand)": 116,
+ "scores file": "fix_scores_meanpool_2026-10-12_160432.npz",
+ "scores sha256": "0c60113d64071702bfe2c1e349789fa95336b00c18dfe790cf93aa06e51ccf06"
+}

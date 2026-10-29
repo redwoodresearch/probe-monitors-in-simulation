@@ -1,0 +1,188 @@
+{
+ "git": "9ee62f90ea72814590182c198f3d07b3524cc8b4",
+ "draws": 2000,
+ "seed": 20261017,
+ "alpha": 0.05,
+ "cells": {
+  "qwen_a": {
+   "cohort_tasks": 183,
+   "k100": {
+    "gate_honest_a_catch_reproduced": true,
+    "catch_honest_a_threshold": 0.8076502732240438,
+    "catch_matched_honest_b_threshold": 0.7879781420765027,
+    "achieved_fa_honest_b_at_matched": [
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959
+    ]
+   },
+   "S_k100": {
+    "gate_honest_a_catch_reproduced": true,
+    "catch_honest_a_threshold": 0.8459016393442622,
+    "catch_matched_honest_b_threshold": 0.7967213114754098,
+    "achieved_fa_honest_b_at_matched": [
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959
+    ]
+   },
+   "S_minus_R_matched": {
+    "point": 0.008743169398907069,
+    "ci95": [
+     -0.05222222222222228,
+     0.05883645765998701
+    ]
+   },
+   "S_minus_R_record": {
+    "point": 0.0382513661202184,
+    "ci95": {
+     "ci95": [
+      -0.01829818468824011,
+      0.07205512229705781
+     ],
+     "failed": 0,
+     "invalid": false
+    }
+   }
+  },
+  "qwen_b": {
+   "cohort_tasks": 183,
+   "k100": {
+    "gate_honest_a_catch_reproduced": true,
+    "catch_honest_a_threshold": 0.8185792349726775,
+    "catch_matched_honest_b_threshold": 0.8076502732240437,
+    "achieved_fa_honest_b_at_matched": [
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959
+    ]
+   },
+   "S_k100": {
+    "gate_honest_a_catch_reproduced": true,
+    "catch_honest_a_threshold": 0.8327868852459016,
+    "catch_matched_honest_b_threshold": 0.7934426229508198,
+    "achieved_fa_honest_b_at_matched": [
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959
+    ]
+   },
+   "S_minus_R_matched": {
+    "point": -0.014207650273223904,
+    "ci95": [
+     -0.09668016759776527,
+     0.05934362934362945
+    ]
+   },
+   "S_minus_R_record": {
+    "point": 0.014207650273224126,
+    "ci95": {
+     "ci95": [
+      -0.09120879120879122,
+      0.05539262531554268
+     ],
+     "failed": 0,
+     "invalid": false
+    }
+   }
+  },
+  "seed_a": {
+   "cohort_tasks": 183,
+   "k100": {
+    "gate_honest_a_catch_reproduced": true,
+    "catch_honest_a_threshold": 0.8,
+    "catch_matched_honest_b_threshold": 0.8502732240437159,
+    "achieved_fa_honest_b_at_matched": [
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959
+    ]
+   },
+   "S_k100": {
+    "gate_honest_a_catch_reproduced": true,
+    "catch_honest_a_threshold": 0.7814207650273224,
+    "catch_matched_honest_b_threshold": 0.8349726775956284,
+    "achieved_fa_honest_b_at_matched": [
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959
+    ]
+   },
+   "S_minus_R_matched": {
+    "point": -0.015300546448087426,
+    "ci95": [
+     -0.0684797874938935,
+     0.021981203007518706
+    ]
+   },
+   "S_minus_R_record": {
+    "point": -0.01857923497267766,
+    "ci95": {
+     "ci95": [
+      -0.05934362934362935,
+      0.05084143350961674
+     ],
+     "failed": 0,
+     "invalid": false
+    }
+   }
+  },
+  "seed_b": {
+   "cohort_tasks": 183,
+   "k100": {
+    "gate_honest_a_catch_reproduced": true,
+    "catch_honest_a_threshold": 0.8174863387978142,
+    "catch_matched_honest_b_threshold": 0.8469945355191257,
+    "achieved_fa_honest_b_at_matched": [
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959
+    ]
+   },
+   "S_k100": {
+    "gate_honest_a_catch_reproduced": true,
+    "catch_honest_a_threshold": 0.8349726775956284,
+    "catch_matched_honest_b_threshold": 0.8338797814207652,
+    "achieved_fa_honest_b_at_matched": [
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959,
+     0.04639175257731959
+    ]
+   },
+   "S_minus_R_matched": {
+    "point": -0.013114754098360493,
+    "ci95": [
+     -0.06522537460083513,
+     0.034499810534293164
+    ]
+   },
+   "S_minus_R_record": {
+    "point": 0.01748633879781425,
+    "ci95": {
+     "ci95": [
+      -0.05465231489821649,
+      0.08002185792349732
+     ],
+     "failed": 0,
+     "invalid": false
+    }
+   }
+  }
+ }
+}

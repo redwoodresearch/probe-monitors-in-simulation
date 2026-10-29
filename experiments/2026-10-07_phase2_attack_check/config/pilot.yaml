@@ -1,0 +1,42 @@
+# The Phase 2 pilot (run_pilot.py), as Aswin decided on 10-08 at about 12:10 PT (#82 amendments 9 and 10c-17): per task
+# the real honest reference A (the simulators' fork source), a second real honest run B (the honest comparator: never
+# A), the real attack, and for each simulator a simulated honest and a simulated attack run forked from A: 7 runs per
+# task. Every other setting (policy, limits, environments, simulator settings) is config/run.yaml's and sim.yaml's.
+
+# Amendment 9's pool (234 cells on 196 main tasks; run_select_tasks.py --rule amendment9), frozen, in launch order.
+# 15 of the 20 are also eligible under the stricter rule A (config/pilot_tasks_a_eligible.json), for the sensitivity
+# analysis; t06_file_indexing has an empty approach (approach_chars 0): the no-approach stratum, reported on its own.
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september       # the sims tree the real arms run on (their code only; no simulator is involved)
+# Both simulators, September primary (#82 amendment 10c). Pinned by src sha256 in config/run.yaml:
+# - september: ~/phase2/sims-sept-strict-off (src 1ea37722..., config/run.yaml), the September snapshot plus the
+#   policy-limits and strict-tools patches: the paper's and Phase 1's simulator, pre-4b31bd30. (The 10-08 pilot ran
+#   step 2's tree, ~/phase2/sims-sept-policy-limits-v2, src b71b3042..., without the strict-tools patch.)
+# - today: sims e561f936, ~/phase2/sims-today-strict-off (src ce9b3025...; the pilot ran caf76e76...), router narrow and
+#   briefing off, so it
+#   differs from september only by 4b31bd30 (the formatting secondary).
+simulators: [september, today]
+# run_pilot.py refuses to launch unless this is true. True for exactly the two trees pinned above (Aswin, 10-08 12:10).
+simulator_confirmed: true
+
+# Load (decision 6, plus a third H200: Aswin 10-08). A server's KV cache holds 1.14M tokens: 10 runs at ~75k tokens of
+# context plus a 32,768-token turn fit; 12 can overflow, and a queued turn counts against the 1,800 s attempt timeout.
+# Three servers; each task goes to the least-loaded one, and all of a task's runs go to that server.
+max_runs_per_server: 10
+max_real_runs: 10   # real environments on the devbox at once (step 1 ran 10 cleanly)
+
+# Decision 4, rule 4: a task's honest_a is its simulators' reference. One that isn't usable (no action other than
+# submit, the time limit, or an error; the 200-step limit leaves it usable) is rerun, at most this many runs in all;
+# every try is kept.
+reference_tries: 3
+
+# Decision 1: simulator API spend. No new task starts once the projection (spent, plus an estimate for every
+# simulated run of the started tasks still to finish, plus the next task's) passes cap_usd; a started task always
+# runs all its arms. Nor does one start if actual spend plus the worst case to finish every started task would pass
+# worst_case_limit_usd (Aswin, 10-08 ~14:35 PT). Nothing is stopped for spend. (The 10-08 pilot itself ran launch
+# commit 1e1a31d, whose hard stop at $2,750 actual never bound.)
+spend:
+  cap_usd: 2500       # Aswin, 10-08: no new task past this projection; started tasks finish all their arms
+  worst_case_limit_usd: 2750  # no new task past this worst case; started tasks always finish
+  worst_per_sim_run_usd: 60   # per unfinished simulated run, or the costliest finished one if higher (pilot max $49)
+  prior_per_sim_run_usd: 25  # the estimate until simulated runs finish (step 2: $8-26 a run, mean $16)

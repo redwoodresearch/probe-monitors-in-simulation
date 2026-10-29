@@ -1,0 +1,15 @@
+{
+  "source_content_preserved_at_revision": "5447d32d5eb815a7502ea2a4b5a276bd09e787f8",
+  "files": [
+    {
+      "path": "src/probe_shift/label_panel_results.py",
+      "sha256": "579c9e68a616214599bba1514c2b7ba7cb3b814a3ed6d82e9674ca54cb464864"
+    },
+    {
+      "path": "src/probe_shift/credential_stage1_adjudicate.py",
+      "sha256": "d45632bc61625644d880b53e840f1c7499e1efca65fd431732ae38ede39e9a91"
+    }
+  ],
+  "ledger_sha256": "5cafd7b0288a6a5001b2a41c26366088077d3091ad17d1e71dce4a020618c6b2",
+  "primary_consensus_sha256": "6ffad7fb4d4e280f653235bce45db12b3e0bc978fc663af5f5e6c644091d985d"
+}

@@ -1,0 +1,29 @@
+{
+ "run": "/home/aswin/phase2/nm/runs/2026-10-15_il_s2_rlr2",
+ "sha_before": "af897b0f0b96cad39c67cae110348c9478926afc6b5775a100627870d06694fd",
+ "launch_json_sha256": "af897b0f0b96cad39c67cae110348c9478926afc6b5775a100627870d06694fd",
+ "finished": "2026-10-15T04:51:53-07:00",
+ "stopped_by_signal": [],
+ "cells": {
+  "nm146_model_registry": {
+   "real": {
+    "state": "done",
+    "attempts": 1
+   },
+   "sim": {
+    "state": "done",
+    "attempts": 1
+   }
+  },
+  "nm079_file_indexing": {
+   "real": {
+    "state": "done",
+    "attempts": 1
+   },
+   "sim": {
+    "state": "done",
+    "attempts": 1
+   }
+  }
+ }
+}

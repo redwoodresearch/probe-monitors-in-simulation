@@ -1,0 +1,36 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_nm_s4r_rlr of 2026-10-14_newmains_s4r: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 1,
+  "by_arm": {
+   "sim_honest@september": 1
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_nm_s4r_rlr",
+   "rel": "sim_honest@september/nm353_web_scraping/2026-10-15T23-58-47-00-00_la-web-scraping-sim-honest-1_HmPABCE3RpcNE46o7max6W.eval",
+   "sha256": "e70b32fb50fab4cb8bdacd8a859a4167ad764f7387b8035292279e0e013616dd",
+   "bytes": 1281846,
+   "arm_dir": "sim_honest@september",
+   "task": "nm353_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s4r_rlr/sim_honest@september/nm353_web_scraping/2026-10-15T23-58-47-00-00_la-web-scraping-sim-honest-1_HmPABCE3RpcNE46o7max6W.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s4r_rlr",
+   "stratum": "simh_nm360",
+   "launch_task": "nm353_web_scraping",
+   "first_start": "2026-10-15T16:58:45-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s4r_rlr",
+   "run1_launch": "2026-10-14_newmains_s4r",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "final"
+  }
+ ]
+}

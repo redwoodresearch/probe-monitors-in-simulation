@@ -1,0 +1,12 @@
+# Planted slips P2 (PINS.md): Qwen3.5-27B reads every staged planted run (e1 and e2), as the gate read the controls.
+run: 2026-10-12_q2_plantP2_planted_qwen35-27b_v1
+inputs_from: 2026-10-12_q2_plantcmd_e1_inputs_v1
+transcripts: planted_transcripts_p2.json            # the planted e1 and e2 runs, and the inputs' sha256s
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null
+pad_to: 4096
+shards: 16
+chunk_size: 25
+layers: [3, 7, 11]

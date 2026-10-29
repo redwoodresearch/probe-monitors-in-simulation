@@ -1,0 +1,11 @@
+# Pilot pair viewer (2026-10-08). Paths are on the devbox that holds the phase-2 runs (sims-astra).
+runs_root: ~/phase2/runs
+seed: 0                  # the first pick; "Next random pair" adds 1
+invalid:                 # run folder -> why it is not evidence; shown as a banner
+  2026-10-08_124444_pilot: >-
+    broken pilot. Its real runs sent tools with strict true, so vLLM dropped str_replace's new_str (150 of 159
+    edits deleted code), and its simulated runs were shown those broken references. The valid run is
+    2026-10-09_000523_rerun_strict.
+  2026-10-09_000323_rerun_strict: >-
+    empty. Nothing launched: its server-start checks failed, so it has no attempts or logs. The valid run is
+    2026-10-09_000523_rerun_strict.

@@ -1,0 +1,7 @@
+{
+  "threshold": -2.2868880681264883,
+  "n_tasks": 40,
+  "n_runs": 80,
+  "method": "higher",
+  "quantile": 0.99
+}

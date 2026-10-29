@@ -1,0 +1,9 @@
+{
+ "label": "RULE.md Amendment 6 (X_err v6); PRELIMINARY",
+ "git": "647b4ec17cdb803714cffb1b9177e09479d70c96",
+ "stamp": "2026-10-14_174422",
+ "result": {
+  "fatal": "GateError",
+  "gate": "sol variant"
+ }
+}

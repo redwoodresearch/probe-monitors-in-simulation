@@ -1,0 +1,13 @@
+# Qwen3-32B cross-read (RULE.md), set main: staged by stage_crossread.py (stage_main_2026-10-13_013207.json), uploaded to the job's Volume as
+# xread_main_v1/inputs/. Epochs: {'attack': 193, 'honest_a': 191, 'honest_b': 195, 'sim_attack@september': 191}.
+run: 2026-10-13_xread_main_v1
+inputs: xread_main_v1
+inputs_sha256:
+  attack.jsonl: 74a09fe26a7e0a012f5a24a7a4e4260921d18f7d196c7b0cadd04e1e6c255180
+  honest_a.jsonl: b5c4b17706e80c97b1354cad0c91e48869d04c9ea52f7cfd3db3eefce0296996
+  honest_b.jsonl: 5c7c854e66e9c45f7f331c8ec15bd4a2e42812e23363dcd2172e0ee8b0a30c5d
+  sim_attack@september.jsonl: 98a40a683f36448d820ebf8767614f0dc7d9d5b955cbb460559bd9fbd3be851c
+model: Qwen/Qwen3-32B
+shards: 8
+chunk_size: 10
+pad_to: 1024

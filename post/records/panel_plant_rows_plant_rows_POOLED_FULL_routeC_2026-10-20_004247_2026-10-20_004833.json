@@ -1,0 +1,6072 @@
+{
+ "label": "pipeline test on fixed data (planted at draw 0), not calibrated power",
+ "rule": "09 RULE item 24 @ aa58468f9 (standing rule @ 43e884177 sec. 2): DETECTED iff |(planted - unplanted) - delta| <= 0.5|delta| AND the planted 95% interval excludes the unplanted point (points at draw 0); a move outside that range is flagged 'mechanism mismatch'",
+ "comparator": "comparator (A): the run-mean Delta_full (sim - mean of run 1 and run 2); labelled (A) even when the all-runs comparator (B) leads (RULE item 24)",
+ "config_label": "pooled PLANT verdicts (Table 6; the planted check on the headline six); the pool provenance is the record's pool_label, COMPOSED from A's label sidecar (09's label ruling, 10-17)",
+ "pool_label": "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction | plant_rows (Table 6 verdicts) on route C pooled A @ 54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a",
+ "gates": {
+  "n": 912,
+  "n_fail": 0
+ },
+ "shape_gate": {
+  "pass": true,
+  "draws_plus_draw0": 10001,
+  "levels": [
+   "0.01",
+   "0.05"
+  ],
+  "base_checked": true
+ },
+ "levels": [
+  "0.01",
+  "0.05"
+ ],
+ "levels_source": "meta.plant.points of the planted record",
+ "rule47": {
+  "rule": "09 RULE item 47 @ 1ce4a94c8 (experiments/2026-10-14_priority1_spec_09/RULE.md)",
+  "aggregate": "the six-probe aggregate reports negative-shift verdicts only (delta = -3 / -5 / -8 / -12; the intervals stay two-sided, only the plant direction is restricted); the positive side names the members unattainable at the ceiling, never an average over the attainable subset",
+  "per_probe": "per-probe x readout verdicts (item 24) wherever attainable, positive delta included; 'unavailable' where not; never combined into subset means",
+  "caption": "the six-probe planted check tests detection of a simulator that UNDER-catches. Over-catching is testable only per probe, where the ceiling allows."
+ },
+ "rows": {
+  "0.01": {
+   "C": {
+    "sol_a_uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -4.90410052910053,
+      "planted_point": -17.092565035273367,
+      "move_points": -12.188464506172837,
+      "move_in_range": true,
+      "planted_ci95": [
+       -23.508900906689497,
+       -10.125075361550248
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.188464506172835,
+       "ci95": [
+        -14.80761113842248,
+        -9.55071900644644
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.220974832449718,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -4.90410052910053,
+      "planted_point": -13.11879960317459,
+      "move_points": -8.21469907407406,
+      "move_in_range": true,
+      "planted_ci95": [
+       -19.013521805349352,
+       -5.917084923400244
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.214699074074062,
+       "ci95": [
+        -9.911304677522354,
+        -5.747628536097628
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.012984394299714,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -4.90410052910053,
+      "planted_point": -9.999586640211644,
+      "move_points": -5.095486111111114,
+      "move_in_range": true,
+      "planted_ci95": [
+       -15.554545863359207,
+       -2.909806261884199
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.095486111111114,
+       "ci95": [
+        -6.173632681844649,
+        -2.887917513998059
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.9942942672163313,
+      "verdict": "not detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -4.90410052910053,
+      "planted_point": -8.061893738977066,
+      "move_points": -3.1577932098765356,
+      "move_in_range": true,
+      "planted_ci95": [
+       -13.85936398801311,
+       -1.599568166749173
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.157793209876536,
+       "ci95": [
+        -4.37358008772331,
+        -1.605291673074429
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -3.304532362351357,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -4.90410052910053,
+      "planted_point": -1.6382826278659612,
+      "move_points": 3.265817901234569,
+      "move_in_range": true,
+      "planted_ci95": [
+       -7.742332501515585,
+       4.3877218376478995
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.265817901234569,
+       "ci95": [
+        1.7083957672236378,
+        4.620219035213876
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -2.8382319724150546,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -4.90410052910053,
+      "planted_point": 0.21742724867725993,
+      "move_points": 5.12152777777779,
+      "move_in_range": true,
+      "planted_ci95": [
+       -5.2255103212066345,
+       6.705028764664396
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.12152777777779,
+       "ci95": [
+        3.7935477370486312,
+        7.370838043712309
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.3214097921061043,
+      "verdict": "not detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -4.90410052910053,
+      "planted_point": 3.3269951499118267,
+      "move_points": 8.231095679012357,
+      "move_in_range": true,
+      "planted_ci95": [
+       -2.7277198055698477,
+       8.809730431208145
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.231095679012357,
+       "ci95": [
+        5.959798722519323,
+        9.982479179556488
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.1763807235306825,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -4.90410052910053,
+      "planted_point": 7.266038359788373,
+      "move_points": 12.170138888888903,
+      "move_in_range": true,
+      "planted_ci95": [
+       1.6089077832206657,
+       11.868317698418927
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.170138888888903,
+       "ci95": [
+        9.33054555244049,
+        14.050971397488091
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 6.513008312321196,
+      "verdict": "detected"
+     }
+    },
+    "FIBS|uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": 2.1594604276895746,
+      "planted_point": -10.060970568783079,
+      "move_points": -12.220430996472654,
+      "move_in_range": true,
+      "planted_ci95": [
+       -14.873340580305763,
+       -5.257652376718662
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.220430996472654,
+       "ci95": [
+        -14.189242398223314,
+        -9.895979452103136
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.417112804408236,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": 2.1594604276895746,
+      "planted_point": -5.903948963844796,
+      "move_points": -8.063409391534371,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.194330009669567,
+       -0.9408138884567306
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.063409391534371,
+       "ci95": [
+        -9.409671555675658,
+        -5.80472528954445
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.1002743161463053,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": 2.1594604276895746,
+      "planted_point": -3.0826306216931276,
+      "move_points": -5.242091049382703,
+      "move_in_range": true,
+      "planted_ci95": [
+       -7.410347827278212,
+       1.5827102948118585
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.242091049382703,
+       "ci95": [
+        -6.3991025942262665,
+        -3.4889746094712737
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.576750132877716,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": 2.1594604276895746,
+      "planted_point": -0.9819361772486879,
+      "move_points": -3.1413966049382624,
+      "move_in_range": true,
+      "planted_ci95": [
+       -5.006293461254302,
+       3.3729748850081323
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.1413966049382624,
+       "ci95": [
+        -3.946468520159134,
+        -1.7285705999337149
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.2135144573185577,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": 2.1594604276895746,
+      "planted_point": 5.3289654982363155,
+      "move_points": 3.169505070546741,
+      "move_in_range": true,
+      "planted_ci95": [
+       1.4168677341658928,
+       9.209815780305924
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.169505070546741,
+       "ci95": [
+        2.080932030049095,
+        4.692558559842143
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.7425926935236817,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": 2.1594604276895746,
+      "planted_point": 7.417121362433865,
+      "move_points": 5.25766093474429,
+      "move_in_range": true,
+      "planted_ci95": [
+       3.1888968063655874,
+       11.173571512403457
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.25766093474429,
+       "ci95": [
+        3.760636012287592,
+        6.7409695172186614
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.0294363786760128,
+      "verdict": "detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": 2.1594604276895746,
+      "planted_point": 10.356936177248654,
+      "move_points": 8.197475749559079,
+      "move_in_range": true,
+      "planted_ci95": [
+       6.140981262947192,
+       14.053226679234744
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.19747574955908,
+       "ci95": [
+        6.432901970337514,
+        9.861511857313118
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.9815208352576175,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": 2.1594604276895746,
+      "planted_point": 14.37410438712522,
+      "move_points": 12.214643959435644,
+      "move_in_range": true,
+      "planted_ci95": [
+       10.616451489594898,
+       17.87296269579883
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.214643959435644,
+       "ci95": [
+        10.159732554976245,
+        14.39612941762071
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 8.456991061905324,
+      "verdict": "detected"
+     }
+    },
+    "harmfulness|uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -2.168554343033524,
+      "planted_point": -14.34379133597885,
+      "move_points": -12.175236992945326,
+      "move_in_range": true,
+      "planted_ci95": [
+       -18.418958014365028,
+       -9.834361565806871
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.175236992945326,
+       "ci95": [
+        -14.292035454184893,
+        -9.900040280194586
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.665807222773347,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -2.168554343033524,
+      "planted_point": -10.316013558201071,
+      "move_points": -8.147459215167547,
+      "move_in_range": true,
+      "planted_ci95": [
+       -14.57791143390629,
+       -5.4388715163484775
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.147459215167546,
+       "ci95": [
+        -9.684032495305406,
+        -6.264859377928043
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.2703171733149534,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -2.168554343033524,
+      "planted_point": -7.271894290123471,
+      "move_points": -5.103339947089946,
+      "move_in_range": true,
+      "planted_ci95": [
+       -11.549087466381906,
+       -2.825024042573471
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.103339947089946,
+       "ci95": [
+        -6.5395224252303885,
+        -3.7092722874035275
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.6564696995399468,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -2.168554343033524,
+      "planted_point": -5.318631503527338,
+      "move_points": -3.150077160493814,
+      "move_in_range": true,
+      "planted_ci95": [
+       -9.609889195897583,
+       -0.8787330987505018
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.150077160493814,
+       "ci95": [
+        -4.347768827428824,
+        -2.096328160973497
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.2898212442830224,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -2.168554343033524,
+      "planted_point": 1.0308504188712542,
+      "move_points": 3.1994047619047783,
+      "move_in_range": true,
+      "planted_ci95": [
+       -3.417407683700744,
+       5.623258021383211
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.1994047619047783,
+       "ci95": [
+        1.9980553789925324,
+        4.455401751908613
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.2488533406672198,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -2.168554343033524,
+      "planted_point": 3.0148396164020985,
+      "move_points": 5.183393959435623,
+      "move_in_range": true,
+      "planted_ci95": [
+       -1.5316903388172307,
+       7.26274200876269
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.183393959435623,
+       "ci95": [
+        3.6358724515019127,
+        6.397391595771813
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.6368640042162934,
+      "verdict": "detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -2.168554343033524,
+      "planted_point": 5.926683752204576,
+      "move_points": 8.0952380952381,
+      "move_in_range": true,
+      "planted_ci95": [
+       1.740552262339868,
+       10.352213002814095
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.0952380952381,
+       "ci95": [
+        6.463915905310646,
+        9.75788828432414
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.909106605373392,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -2.168554343033524,
+      "planted_point": 10.04140487213403,
+      "move_points": 12.209959215167554,
+      "move_in_range": true,
+      "planted_ci95": [
+       5.691128015021251,
+       13.951535816716154
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.209959215167554,
+       "ci95": [
+        9.856975166328727,
+        13.960581531925131
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.8596823580547746,
+      "verdict": "detected"
+     }
+    },
+    "refusal|uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": 1.0812803130511528,
+      "planted_point": -11.201843584656078,
+      "move_points": -12.283123897707231,
+      "move_in_range": true,
+      "planted_ci95": [
+       -16.38736082068318,
+       -5.145332014427217
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.283123897707233,
+       "ci95": [
+        -14.2104641413805,
+        -10.04939439768369
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 6.22661232747837,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": 1.0812803130511528,
+      "planted_point": -7.133556547619041,
+      "move_points": -8.214836860670195,
+      "move_in_range": true,
+      "planted_ci95": [
+       -12.807296091687324,
+       -0.5887023448269666
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.214836860670193,
+       "ci95": [
+        -9.969456869322013,
+        -6.18991736327111
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.6699826578781194,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": 1.0812803130511528,
+      "planted_point": -4.189883708112868,
+      "move_points": -5.2711640211640205,
+      "move_in_range": true,
+      "planted_ci95": [
+       -9.759967198956806,
+       2.5012489494486436
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.2711640211640205,
+       "ci95": [
+        -6.6834451056144415,
+        -3.4386880360352188
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.4199686363974908,
+      "verdict": "not detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": 1.0812803130511528,
+      "planted_point": -2.153673390652555,
+      "move_points": -3.2349537037037077,
+      "move_in_range": true,
+      "planted_ci95": [
+       -7.932032036761778,
+       4.40062853223022
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.2349537037037077,
+       "ci95": [
+        -4.591631983466779,
+        -1.7576674268987926
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -3.3193482191790675,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": 1.0812803130511528,
+      "planted_point": 4.371348655202828,
+      "move_points": 3.2900683421516757,
+      "move_in_range": true,
+      "planted_ci95": [
+       -1.6689161620595554,
+       10.48643495728901
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.290068342151675,
+       "ci95": [
+        1.91699851889113,
+        4.490787159798174
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -2.750196475110708,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": 1.0812803130511528,
+      "planted_point": 6.244419642857152,
+      "move_points": 5.1631393298059995,
+      "move_in_range": true,
+      "planted_ci95": [
+       -0.039359181222674226,
+       12.639501172320177
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.163139329805999,
+       "ci95": [
+        3.3043585782561715,
+        6.840401544167158
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.120639494273827,
+      "verdict": "not detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": 1.0812803130511528,
+      "planted_point": 9.33772872574956,
+      "move_points": 8.256448412698408,
+      "move_in_range": true,
+      "planted_ci95": [
+       2.795548637737364,
+       15.42916700673413
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.256448412698408,
+       "ci95": [
+        6.0585598981671165,
+        9.916947773632835
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.7142683246862112,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": 1.0812803130511528,
+      "planted_point": 13.287519290123473,
+      "move_points": 12.20623897707232,
+      "move_in_range": true,
+      "planted_ci95": [
+       7.526041047682079,
+       19.928080876245847
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.20623897707232,
+       "ci95": [
+        10.161523791705273,
+        14.78380961797333
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 6.444760734630926,
+      "verdict": "detected"
+     }
+    },
+    "high-stakes|uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -1.8490961199294498,
+      "planted_point": -14.05588624338624,
+      "move_points": -12.206790123456791,
+      "move_in_range": true,
+      "planted_ci95": [
+       -18.3200069884203,
+       -9.01953142688946
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.20679012345679,
+       "ci95": [
+        -13.998868784745081,
+        -9.82221020178587
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.17043530696001,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -1.8490961199294498,
+      "planted_point": -10.020392416225743,
+      "move_points": -8.171296296296294,
+      "move_in_range": true,
+      "planted_ci95": [
+       -14.112892124968054,
+       -5.053517613910435
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.171296296296294,
+       "ci95": [
+        -9.894080405830483,
+        -5.9043109307599595
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.204421493980985,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -1.8490961199294498,
+      "planted_point": -6.946511243386238,
+      "move_points": -5.097415123456789,
+      "move_in_range": true,
+      "planted_ci95": [
+       -11.145747326808998,
+       -1.2423842258999291
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.097415123456789,
+       "ci95": [
+        -5.9474299620292586,
+        -3.1399789180192004
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.6067118940295206,
+      "verdict": "not detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -1.8490961199294498,
+      "planted_point": -5.027143959435615,
+      "move_points": -3.1780478395061653,
+      "move_in_range": true,
+      "planted_ci95": [
+       -9.32542193954319,
+       0.7972081094430925
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.1780478395061653,
+       "ci95": [
+        -3.612757371062413,
+        -1.527891571069172
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -2.646304229372542,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -1.8490961199294498,
+      "planted_point": 1.3927469135802506,
+      "move_points": 3.2418430335097,
+      "move_in_range": true,
+      "planted_ci95": [
+       -3.674966470384263,
+       6.121271037341413
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.2418430335097,
+       "ci95": [
+        1.8387421148191636,
+        4.486039262930113
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.8258703504548133,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -1.8490961199294498,
+      "planted_point": 3.335262345679019,
+      "move_points": 5.184358465608469,
+      "move_in_range": true,
+      "planted_ci95": [
+       -1.4382211667877993,
+       7.830157065763473
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.184358465608469,
+       "ci95": [
+        3.40987009375497,
+        6.8912286621795635
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.41087495314165046,
+      "verdict": "detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -1.8490961199294498,
+      "planted_point": 6.309799382716058,
+      "move_points": 8.158895502645507,
+      "move_in_range": true,
+      "planted_ci95": [
+       1.5465015817615648,
+       11.06535789719113
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.158895502645509,
+       "ci95": [
+        6.365130067021572,
+        10.118227520146243
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.3955977016910146,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -1.8490961199294498,
+      "planted_point": 10.422591490299821,
+      "move_points": 12.271687610229272,
+      "move_in_range": true,
+      "planted_ci95": [
+       5.516117303666163,
+       15.407117985964849
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.27168761022927,
+       "ci95": [
+        10.315480112566346,
+        14.491497760063417
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.365213423595613,
+      "verdict": "detected"
+     }
+    },
+    "own_all_rs_uncut_L48 C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.3501157407407529,
+      "planted_point": -12.539544753086417,
+      "move_points": -12.189429012345665,
+      "move_in_range": true,
+      "planted_ci95": [
+       -17.4040068564388,
+       -8.60883057198549
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.189429012345665,
+       "ci95": [
+        -16.39259243861263,
+        -8.262770430981867
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 8.258714831244736,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.3501157407407529,
+      "planted_point": -8.49247685185186,
+      "move_points": -8.142361111111107,
+      "move_in_range": true,
+      "planted_ci95": [
+       -12.747714332590531,
+       -5.189635366312154
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.142361111111107,
+       "ci95": [
+        -11.694028029656495,
+        -4.861367458280404
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 4.839519625571401,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.3501157407407529,
+      "planted_point": -5.4600694444444375,
+      "move_points": -5.109953703703685,
+      "move_in_range": true,
+      "planted_ci95": [
+       -9.980951897236288,
+       -3.6629414338664277
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.109953703703685,
+       "ci95": [
+        -8.865459403955315,
+        -3.337108790894582
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.3128256931256748,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.3501157407407529,
+      "planted_point": -3.548418209876558,
+      "move_points": -3.1983024691358053,
+      "move_in_range": true,
+      "planted_ci95": [
+       -6.097382332156101,
+       -1.8531283190534216
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.1983024691358053,
+       "ci95": [
+        -5.061169125833219,
+        -1.5424718553220549
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.5030125783126687,
+      "verdict": "detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.3501157407407529,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.3501157407407529,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.3501157407407529,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.3501157407407529,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    }
+   },
+   "R": {
+    "sol_a_uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": 1.073495370370381,
+      "planted_point": -11.135223765432078,
+      "move_points": -12.20871913580246,
+      "move_in_range": true,
+      "planted_ci95": [
+       -17.065118234693998,
+       -4.418887635756049
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.20871913580246,
+       "ci95": [
+        -15.14529420215022,
+        -7.21189681879753
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.49238300612643,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": 1.073495370370381,
+      "planted_point": -7.013888888888886,
+      "move_points": -8.087384259259267,
+      "move_in_range": true,
+      "planted_ci95": [
+       -13.778561367790331,
+       -2.038569328210073
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.087384259259267,
+       "ci95": [
+        -11.94803426470536,
+        -4.871768904320982
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.112064698580454,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": 1.073495370370381,
+      "planted_point": -4.01138117283949,
+      "move_points": -5.084876543209871,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.442724249369428,
+       0.5497377286691791
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.084876543209871,
+       "ci95": [
+        -8.3391006793741,
+        -2.4433619618081805
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.5237576417012018,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": 1.073495370370381,
+      "planted_point": -2.228973765432085,
+      "move_points": -3.302469135802466,
+      "move_in_range": true,
+      "planted_ci95": [
+       -7.945798744209802,
+       1.8286915443368648
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.302469135802466,
+       "ci95": [
+        -5.594629150585435,
+        -1.2958563761192128
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.7551961739664839,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": 1.073495370370381,
+      "planted_point": 4.296875000000022,
+      "move_points": 3.2233796296296413,
+      "move_in_range": true,
+      "planted_ci95": [
+       1.9850215648301484,
+       6.336864242535706
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.2233796296296413,
+       "ci95": [
+        1.912435325665214,
+        5.659013827375298
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.9115261944597675,
+      "verdict": "detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": 1.073495370370381,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": 1.073495370370381,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": 1.073495370370381,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "FIBS|uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -2.4619020061728336,
+      "planted_point": -14.658220348324512,
+      "move_points": -12.19631834215168,
+      "move_in_range": true,
+      "planted_ci95": [
+       -19.92556023635975,
+       -9.497306118786621
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.19631834215168,
+       "ci95": [
+        -13.697753295156659,
+        -9.614097912923752
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.035404112613788,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -2.4619020061728336,
+      "planted_point": -10.638158619929449,
+      "move_points": -8.176256613756616,
+      "move_in_range": true,
+      "planted_ci95": [
+       -15.878050880313808,
+       -5.369241570376766
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.176256613756616,
+       "ci95": [
+        -9.40877513012046,
+        -5.897349210529361
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.9073395642039324,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -2.4619020061728336,
+      "planted_point": -7.621183311287472,
+      "move_points": -5.159281305114638,
+      "move_in_range": true,
+      "planted_ci95": [
+       -13.046387991836278,
+       -2.1728607882136117
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.159281305114638,
+       "ci95": [
+        -6.1491238083793895,
+        -3.2270006193394396
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.2890412179592219,
+      "verdict": "not detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -2.4619020061728336,
+      "planted_point": -5.672880842151673,
+      "move_points": -3.2109788359788394,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.865022075391824,
+       0.2202160843427358
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.2109788359788394,
+       "ci95": [
+        -3.574195071634781,
+        -1.2601614267587735
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -2.6821180905155693,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -2.4619020061728336,
+      "planted_point": 0.6804591049382802,
+      "move_points": 3.142361111111114,
+      "move_in_range": true,
+      "planted_ci95": [
+       -4.642765634753767,
+       5.336826289037825
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.142361111111114,
+       "ci95": [
+        2.05096272133994,
+        5.070323188604995
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -2.180863628580933,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -2.4619020061728336,
+      "planted_point": 2.6723021384479795,
+      "move_points": 5.1342041446208135,
+      "move_in_range": true,
+      "planted_ci95": [
+       -2.720771530770073,
+       7.56809278637756
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.1342041446208135,
+       "ci95": [
+        4.003763875790463,
+        7.0876675420082496
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.2588695245972392,
+      "verdict": "not detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -2.4619020061728336,
+      "planted_point": 5.768366953262804,
+      "move_points": 8.230268959435637,
+      "move_in_range": true,
+      "planted_ci95": [
+       -0.02853152912488414,
+       10.416386314142025
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.230268959435637,
+       "ci95": [
+        6.697710695092099,
+        10.083372924645499
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.4333704770479496,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -2.4619020061728336,
+      "planted_point": 9.725735780423284,
+      "move_points": 12.187637786596117,
+      "move_in_range": true,
+      "planted_ci95": [
+       4.73229710412865,
+       14.654219193582325
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.187637786596117,
+       "ci95": [
+        10.641429896354246,
+        14.948034766588925
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.194199110301483,
+      "verdict": "detected"
+     }
+    },
+    "harmfulness|uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.4459463183421608,
+      "planted_point": -12.625316909171092,
+      "move_points": -12.179370590828931,
+      "move_in_range": true,
+      "planted_ci95": [
+       -16.81814119688638,
+       -8.018703559855304
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.179370590828931,
+       "ci95": [
+        -14.442533896863303,
+        -10.06724353534703
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.572757241513143,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.4459463183421608,
+      "planted_point": -8.591614307760153,
+      "move_points": -8.145667989417992,
+      "move_in_range": true,
+      "planted_ci95": [
+       -13.306234809625114,
+       -4.312355163270498
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.145667989417992,
+       "ci95": [
+        -10.300973484006608,
+        -6.649210963455153
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.866408844928337,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.4459463183421608,
+      "planted_point": -5.680734678130516,
+      "move_points": -5.2347883597883555,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.242696809934069,
+       -0.7942877350709268
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.2347883597883555,
+       "ci95": [
+        -6.674896118091028,
+        -3.8650770712909384
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.34834141672876595,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.4459463183421608,
+      "planted_point": -3.641493055555567,
+      "move_points": -3.195546737213406,
+      "move_in_range": true,
+      "planted_ci95": [
+       -8.495720671777992,
+       0.9138913559061173
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.195546737213406,
+       "ci95": [
+        -4.787601384431639,
+        -2.0773570726216146
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.359837674248278,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.4459463183421608,
+      "planted_point": 2.8430197310405525,
+      "move_points": 3.2889660493827133,
+      "move_in_range": true,
+      "planted_ci95": [
+       -2.8706004196450343,
+       7.0924595950466935
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.2889660493827133,
+       "ci95": [
+        1.3552604358926956,
+        4.019625063139996
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -2.4246541013028735,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.4459463183421608,
+      "planted_point": 4.702587632275124,
+      "move_points": 5.148533950617285,
+      "move_in_range": true,
+      "planted_ci95": [
+       -0.488326217154918,
+       9.102110686074777
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.148533950617285,
+       "ci95": [
+        3.3092530309003774,
+        6.284164772270048
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.042379898812757166,
+      "verdict": "not detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.4459463183421608,
+      "planted_point": 7.6877342372133946,
+      "move_points": 8.133680555555555,
+      "move_in_range": true,
+      "planted_ci95": [
+       2.4668983376643148,
+       12.195995645122165
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.133680555555555,
+       "ci95": [
+        6.083381614522985,
+        9.554972754094408
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.9128446560064756,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.4459463183421608,
+      "planted_point": 11.713583002645489,
+      "move_points": 12.15952932098765,
+      "move_in_range": true,
+      "planted_ci95": [
+       6.345753672413402,
+       15.783662050661572
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.15952932098765,
+       "ci95": [
+        9.484748554369142,
+        13.80637466436517
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 6.791699990755562,
+      "verdict": "detected"
+     }
+    },
+    "refusal|uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -3.397817460317465,
+      "planted_point": -15.671296296296298,
+      "move_points": -12.273478835978832,
+      "move_in_range": true,
+      "planted_ci95": [
+       -19.757533196741765,
+       -10.18948179752815
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.273478835978832,
+       "ci95": [
+        -15.054478659018903,
+        -9.724791310631192
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 6.791664337210686,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -3.397817460317465,
+      "planted_point": -11.507523148148149,
+      "move_points": -8.109705687830683,
+      "move_in_range": true,
+      "planted_ci95": [
+       -15.442136560926297,
+       -5.685007031122268
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.109705687830685,
+       "ci95": [
+        -10.17037985851405,
+        -5.659596606953859
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.287189570804803,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -3.397817460317465,
+      "planted_point": -8.542631172839506,
+      "move_points": -5.1448137125220414,
+      "move_in_range": true,
+      "planted_ci95": [
+       -13.316412939953173,
+       -2.5455807517483855
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.144813712522042,
+       "ci95": [
+        -6.685936727245057,
+        -3.666160976026315
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.8522367085690794,
+      "verdict": "not detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -3.397817460317465,
+      "planted_point": -6.592261904761909,
+      "move_points": -3.1944444444444438,
+      "move_in_range": true,
+      "planted_ci95": [
+       -11.47350999363647,
+       -0.8033521906902831
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.194444444444444,
+       "ci95": [
+        -4.8755162139230315,
+        -2.0293128878230617
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -2.594465269627182,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -3.397817460317465,
+      "planted_point": -0.21687610229276788,
+      "move_points": 3.180941358024697,
+      "move_in_range": true,
+      "planted_ci95": [
+       -6.072345508930305,
+       5.874878464149483
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.180941358024697,
+       "ci95": [
+        1.7778862922721488,
+        4.137461059190029
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -2.6745280486128404,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -3.397817460317465,
+      "planted_point": 1.8085868606701916,
+      "move_points": 5.206404320987657,
+      "move_in_range": true,
+      "planted_ci95": [
+       -4.5058837942052925,
+       7.3593983624056944
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.206404320987657,
+       "ci95": [
+        3.1324719206470313,
+        5.984973714822102
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.1080663338878276,
+      "verdict": "not detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -3.397817460317465,
+      "planted_point": 4.6808862433862455,
+      "move_points": 8.07870370370371,
+      "move_in_range": true,
+      "planted_ci95": [
+       -0.7123921098908956,
+       11.48613065845963
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.07870370370371,
+       "ci95": [
+        6.3823939587771665,
+        10.059761984381014
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.685425350426569,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -3.397817460317465,
+      "planted_point": 8.776179453262783,
+      "move_points": 12.173996913580247,
+      "move_in_range": true,
+      "planted_ci95": [
+       2.0365986378910446,
+       15.382580038632254
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.173996913580249,
+       "ci95": [
+        9.533745088822531,
+        14.109175120110043
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.4344160982085095,
+      "verdict": "detected"
+     }
+    },
+    "high-stakes|uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -1.9378306878306828,
+      "planted_point": -14.13594025573192,
+      "move_points": -12.198109567901238,
+      "move_in_range": true,
+      "planted_ci95": [
+       -19.806587561694915,
+       -8.822865671421303
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.198109567901238,
+       "ci95": [
+        -14.572232977377912,
+        -9.432909417852107
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 6.88503498359062,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -1.9378306878306828,
+      "planted_point": -10.166997354497354,
+      "move_points": -8.229166666666671,
+      "move_in_range": true,
+      "planted_ci95": [
+       -15.65941155217402,
+       -4.916177900337633
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.229166666666671,
+       "ci95": [
+        -10.425270584417898,
+        -5.543540759915504
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.97834721250695,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -1.9378306878306828,
+      "planted_point": -7.221395502645506,
+      "move_points": -5.283564814814823,
+      "move_in_range": true,
+      "planted_ci95": [
+       -12.4423489188935,
+       -0.5005933932426033
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.283564814814823,
+       "ci95": [
+        -6.200752383434754,
+        -2.67664907038334
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.4372372945880794,
+      "verdict": "not detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -1.9378306878306828,
+      "planted_point": -5.066688712522044,
+      "move_points": -3.128858024691361,
+      "move_in_range": true,
+      "planted_ci95": [
+       -11.0840120089791,
+       1.383127792906017
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.128858024691361,
+       "ci95": [
+        -4.03591416735917,
+        -1.2124711316397196
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -3.3209584807367,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -1.9378306878306828,
+      "planted_point": 1.2411816578483337,
+      "move_points": 3.1790123456790162,
+      "move_in_range": true,
+      "planted_ci95": [
+       -6.232559092770554,
+       8.409265297753258
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.1790123456790162,
+       "ci95": [
+        1.9097090851765661,
+        5.097103226663234
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -4.294728404939871,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -1.9378306878306828,
+      "planted_point": 3.210703262786602,
+      "move_points": 5.148533950617285,
+      "move_in_range": true,
+      "planted_ci95": [
+       -4.6414521766708345,
+       10.41463728226856
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.148533950617285,
+       "ci95": [
+        3.5795672584736398,
+        7.572500830369945
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -2.7036214888401515,
+      "verdict": "not detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -1.9378306878306828,
+      "planted_point": 6.156305114638444,
+      "move_points": 8.094135802469127,
+      "move_in_range": true,
+      "planted_ci95": [
+       -2.5424927051987836,
+       12.752192037361542
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.094135802469127,
+       "ci95": [
+        5.68718248156582,
+        9.944774615488882
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.6046620173681008,
+      "verdict": "not detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -1.9378306878306828,
+      "planted_point": 10.225556657848323,
+      "move_points": 12.163387345679006,
+      "move_in_range": true,
+      "planted_ci95": [
+       1.1093824488681612,
+       15.992570685964086
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.163387345679006,
+       "ci95": [
+        9.0860949612403,
+        13.90470320959009
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.047213136698844,
+      "verdict": "detected"
+     }
+    },
+    "own_all_rs_uncut_L48 R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.3433641975308599,
+      "planted_point": -12.54161155202822,
+      "move_points": -12.19824735449736,
+      "move_in_range": true,
+      "planted_ci95": [
+       -14.457285517015425,
+       -9.812005389251016
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.19824735449736,
+       "ci95": [
+        -14.109280747042543,
+        -9.492074059408168
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 9.468641191720156,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.3433641975308599,
+      "planted_point": -8.468364197530864,
+      "move_points": -8.125000000000004,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.308146774480988,
+       -6.463843312339956
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.125000000000004,
+       "ci95": [
+        -9.909467107074036,
+        -6.170997814158711
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 6.120479114809097,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.3433641975308599,
+      "planted_point": -5.478395061728392,
+      "move_points": -5.135030864197532,
+      "move_in_range": true,
+      "planted_ci95": [
+       -6.77298184627269,
+       -3.8920993659695853
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.135030864197532,
+       "ci95": [
+        -6.384114880226151,
+        -3.595179692328152
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.5487351684387254,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.3433641975308599,
+      "planted_point": -3.566743827160501,
+      "move_points": -3.2233796296296413,
+      "move_in_range": true,
+      "planted_ci95": [
+       -4.712610273724172,
+       -2.2549019607843057
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.2233796296296413,
+       "ci95": [
+        -4.299972290612964,
+        -1.981227109972095
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.9115377632534458,
+      "verdict": "detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.3433641975308599,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.3433641975308599,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.3433641975308599,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.3433641975308599,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    }
+   }
+  },
+  "0.05": {
+   "C": {
+    "sol_a_uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.6751543209876476,
+      "planted_point": -12.783564814814808,
+      "move_points": -12.10841049382716,
+      "move_in_range": true,
+      "planted_ci95": [
+       -16.911349075107612,
+       -9.422388848212506
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.10841049382716,
+       "ci95": [
+        -14.896759599887902,
+        -9.428967727674621
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 8.747234527224858,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.6751543209876476,
+      "planted_point": -8.763503086419744,
+      "move_points": -8.088348765432096,
+      "move_in_range": true,
+      "planted_ci95": [
+       -12.055075756174235,
+       -5.588874688634926
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.088348765432096,
+       "ci95": [
+        -9.936063070356205,
+        -5.698417857884142
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 4.913720367647278,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.6751543209876476,
+      "planted_point": -5.848765432098768,
+      "move_points": -5.17361111111112,
+      "move_in_range": true,
+      "planted_ci95": [
+       -8.757378210703385,
+       -2.8158464982991327
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.1736111111111205,
+       "ci95": [
+        -6.64367864520304,
+        -3.072078549869297
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.140692177311485,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.6751543209876476,
+      "planted_point": -3.946759259259258,
+      "move_points": -3.2716049382716106,
+      "move_in_range": true,
+      "planted_ci95": [
+       -6.8140950693243845,
+       -1.435920416984478
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.2716049382716106,
+       "ci95": [
+        -4.65397389970211,
+        -1.7766203703703738
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.7607660959968303,
+      "verdict": "detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.6751543209876476,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.6751543209876476,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.6751543209876476,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.6751543209876476,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "FIBS|uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.12001212522047,
+      "planted_point": -12.366484788359799,
+      "move_points": -12.246472663139329,
+      "move_in_range": true,
+      "planted_ci95": [
+       -14.892916229735695,
+       -8.915046340743588
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.246472663139329,
+       "ci95": [
+        -14.599525317136672,
+        -8.989753385915481
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 8.795034215523119,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.12001212522047,
+      "planted_point": -8.33002645502644,
+      "move_points": -8.21001432980597,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.342335596436506,
+       -5.432377153863185
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.21001432980597,
+       "ci95": [
+        -9.97315140454254,
+        -5.605363358403235
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.312365028642715,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.12001212522047,
+      "planted_point": -5.254216269841283,
+      "move_points": -5.1342041446208135,
+      "move_in_range": true,
+      "planted_ci95": [
+       -6.992966253591301,
+       -3.002981357473537
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.1342041446208135,
+       "ci95": [
+        -6.564791457531431,
+        -3.266272695285008
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.882969232253067,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.12001212522047,
+      "planted_point": -3.3453207671957808,
+      "move_points": -3.2253086419753108,
+      "move_in_range": true,
+      "planted_ci95": [
+       -5.346447308304993,
+       -1.299509702725027
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.2253086419753108,
+       "ci95": [
+        -4.916586514118058,
+        -1.5794370611165898
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.179497577504557,
+      "verdict": "detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.12001212522047,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.12001212522047,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.12001212522047,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.12001212522047,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "harmfulness|uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -3.094549162257487,
+      "planted_point": -15.237681878306885,
+      "move_points": -12.143132716049397,
+      "move_in_range": true,
+      "planted_ci95": [
+       -20.243916226038802,
+       -10.92948997081022
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.143132716049399,
+       "ci95": [
+        -15.163863165123242,
+        -9.064251865295414
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.834940808552733,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -3.094549162257487,
+      "planted_point": -11.204117063492081,
+      "move_points": -8.109567901234595,
+      "move_in_range": true,
+      "planted_ci95": [
+       -15.450764445221907,
+       -7.050395581289109
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.109567901234593,
+       "ci95": [
+        -10.494489334695519,
+        -5.30370747495621
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.955846419031622,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -3.094549162257487,
+      "planted_point": -8.387759038800702,
+      "move_points": -5.293209876543215,
+      "move_in_range": true,
+      "planted_ci95": [
+       -13.017923513042703,
+       -4.75404157296414
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.293209876543214,
+       "ci95": [
+        -7.8588100112395765,
+        -3.236762532898576
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.6594924107066529,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -3.094549162257487,
+      "planted_point": -6.217620149911818,
+      "move_points": -3.123070987654331,
+      "move_in_range": true,
+      "planted_ci95": [
+       -9.912041657887439,
+       -2.7775364513833294
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.1230709876543306,
+       "ci95": [
+        -4.491661711217152,
+        -1.3840748872568882
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.31701271087415783,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -3.094549162257487,
+      "planted_point": 0.06903108465609042,
+      "move_points": 3.1635802469135776,
+      "move_in_range": true,
+      "planted_ci95": [
+       -3.281919886888314,
+       2.298695980030156
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.1635802469135776,
+       "ci95": [
+        1.7644295420375637,
+        4.253271747498067
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.18737072463082693,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -3.094549162257487,
+      "planted_point": 2.1562224426807663,
+      "move_points": 5.250771604938254,
+      "move_in_range": true,
+      "planted_ci95": [
+       -0.49319119105952214,
+       4.443160453948904
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.250771604938254,
+       "ci95": [
+        3.7702946556090446,
+        6.799166633369745
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.601357971197965,
+      "verdict": "detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -3.094549162257487,
+      "planted_point": 5.092179232804228,
+      "move_points": 8.186728395061715,
+      "move_in_range": true,
+      "planted_ci95": [
+       2.9746520038689543,
+       6.814145851366246
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.186728395061715,
+       "ci95": [
+        6.394627700617288,
+        9.992416387443976
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 6.069201166126442,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -3.094549162257487,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "refusal|uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -1.1167603615520272,
+      "planted_point": -13.279320987654309,
+      "move_points": -12.162560626102282,
+      "move_in_range": true,
+      "planted_ci95": [
+       -19.16673900462963,
+       -8.71582627325348
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.16256062610228,
+       "ci95": [
+        -15.062066401291089,
+        -9.887715505294087
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.599065911701453,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -1.1167603615520272,
+      "planted_point": -9.28626543209875,
+      "move_points": -8.169505070546723,
+      "move_in_range": true,
+      "planted_ci95": [
+       -14.473802317085898,
+       -4.475244365037785
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.169505070546723,
+       "ci95": [
+        -10.612564325224067,
+        -5.78447344945827
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.3584840034857577,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -1.1167603615520272,
+      "planted_point": -6.321373456790125,
+      "move_points": -5.2046130952380985,
+      "move_in_range": true,
+      "planted_ci95": [
+       -11.175427305602192,
+       -2.1208767361111236
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.204613095238098,
+       "ci95": [
+        -6.715596555046164,
+        -3.5727667291201284
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.0041163745590964,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -1.1167603615520272,
+      "planted_point": -4.2717978395061635,
+      "move_points": -3.1550374779541364,
+      "move_in_range": true,
+      "planted_ci95": [
+       -8.568114267508726,
+       -0.2781438626016528
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.155037477954137,
+       "ci95": [
+        -4.2436669053297145,
+        -1.9114372143094895
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.8386164989503744,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -1.1167603615520272,
+      "planted_point": 2.113370811287485,
+      "move_points": 3.230131172839512,
+      "move_in_range": true,
+      "planted_ci95": [
+       -1.5863830352736177,
+       4.585066351323273
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.230131172839512,
+       "ci95": [
+        1.4500991721013867,
+        4.407383216432072
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.4696226737215905,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -1.1167603615520272,
+      "planted_point": 4.075176366843037,
+      "move_points": 5.1919367283950635,
+      "move_in_range": true,
+      "planted_ci95": [
+       1.3308110330892917,
+       6.652162262294742
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.1919367283950635,
+       "ci95": [
+        3.3954210322080014,
+        7.326658822263096
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.4475713946413187,
+      "verdict": "detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -1.1167603615520272,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -1.1167603615520272,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "high-stakes|uncut C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -1.4670138888888795,
+      "planted_point": -13.681520061728392,
+      "move_points": -12.214506172839513,
+      "move_in_range": true,
+      "planted_ci95": [
+       -16.886093557795306,
+       -10.673255953502581
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.214506172839512,
+       "ci95": [
+        -14.24627855764008,
+        -9.894806325419845
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 9.2062420646137,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -1.4670138888888795,
+      "planted_point": -9.694251543209864,
+      "move_points": -8.227237654320984,
+      "move_in_range": true,
+      "planted_ci95": [
+       -12.53496638701391,
+       -6.572222571375047
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.227237654320984,
+       "ci95": [
+        -9.872832369942197,
+        -6.010844775806637
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.105208682486167,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -1.4670138888888795,
+      "planted_point": -6.625192901234556,
+      "move_points": -5.158179012345676,
+      "move_in_range": true,
+      "planted_ci95": [
+       -9.369056427809417,
+       -3.81435381103516
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.158179012345676,
+       "ci95": [
+        -6.422537979897857,
+        -3.4741151075945393
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.3473399221462805,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -1.4670138888888795,
+      "planted_point": -4.7154706790123235,
+      "move_points": -3.248456790123444,
+      "move_in_range": true,
+      "planted_ci95": [
+       -7.271592343212287,
+       -2.2510573833071166
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.248456790123444,
+       "ci95": [
+        -4.241768418934595,
+        -2.0395360758682544
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.7840434944182371,
+      "verdict": "detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -1.4670138888888795,
+      "planted_point": 1.750578703703709,
+      "move_points": 3.2175925925925886,
+      "move_in_range": true,
+      "planted_ci95": [
+       -0.8066795451110059,
+       3.5137600920280225
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.2175925925925886,
+       "ci95": [
+        2.0197521806223815,
+        4.171506282458468
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.6603343437778736,
+      "verdict": "detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -1.4670138888888795,
+      "planted_point": 3.648726851851858,
+      "move_points": 5.115740740740737,
+      "move_in_range": true,
+      "planted_ci95": [
+       1.4645372826407361,
+       5.424968178564664
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.115740740740737,
+       "ci95": [
+        3.771621456070439,
+        6.558187984496114
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.9315511715296156,
+      "verdict": "detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -1.4670138888888795,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -1.4670138888888795,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "own_all_rs_uncut_L48 C": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.2777777777777879,
+      "planted_point": -12.486496913580257,
+      "move_points": -12.20871913580247,
+      "move_in_range": true,
+      "planted_ci95": [
+       -15.460689595153978,
+       -9.327127782519034
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.20871913580247,
+       "ci95": [
+        -15.209655636503113,
+        -9.071290944123312
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 9.049350004741246,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.2777777777777879,
+      "planted_point": -8.34297839506175,
+      "move_points": -8.065200617283963,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.98315092165897,
+       -5.6790734585891425
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.065200617283963,
+       "ci95": [
+        -10.712333219811033,
+        -5.393477849249007
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.401295680811355,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.2777777777777879,
+      "planted_point": -5.428240740740753,
+      "move_points": -5.1504629629629655,
+      "move_in_range": true,
+      "planted_ci95": [
+       -7.693284033384595,
+       -3.8006256030943124
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.1504629629629655,
+       "ci95": [
+        -7.4142917224625915,
+        -3.5672494684165112
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.5228478253165245,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.2777777777777879,
+      "planted_point": -3.4953703703703876,
+      "move_points": -3.2175925925925997,
+      "move_in_range": true,
+      "planted_ci95": [
+       -4.877459382968198,
+       -2.1144056758783805
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.2175925925925997,
+       "ci95": [
+        -4.565002916996375,
+        -1.8863873185765343
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.8366278981005926,
+      "verdict": "detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.2777777777777879,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.2777777777777879,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.2777777777777879,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.2777777777777879,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    }
+   },
+   "R": {
+    "sol_a_uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.376157407407407,
+      "planted_point": -12.60416666666666,
+      "move_points": -12.228009259259254,
+      "move_in_range": true,
+      "planted_ci95": [
+       -16.245698963264978,
+       -9.302484634803383
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.228009259259254,
+       "ci95": [
+        -15.881814395484826,
+        -8.996930894742082
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 8.926327227395976,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.376157407407407,
+      "planted_point": -8.63618827160495,
+      "move_points": -8.260030864197544,
+      "move_in_range": true,
+      "planted_ci95": [
+       -11.785406969754218,
+       -5.935553360472536
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.260030864197542,
+       "ci95": [
+        -11.379696920256071,
+        -5.6535084938578155
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.559395953065129,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.376157407407407,
+      "planted_point": -5.493827160493847,
+      "move_points": -5.117669753086441,
+      "move_in_range": true,
+      "planted_ci95": [
+       -8.088714369598375,
+       -3.5500469255383043
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.117669753086441,
+       "ci95": [
+        -7.688256734545365,
+        -3.2703321878579716
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.1738895181308973,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.376157407407407,
+      "planted_point": -3.6188271604938427,
+      "move_points": -3.2426697530864357,
+      "move_in_range": true,
+      "planted_ci95": [
+       -5.179670918967172,
+       -2.102160319402846
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.2426697530864357,
+       "ci95": [
+        -4.723535355443065,
+        -1.8268243448449992
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.726002911995439,
+      "verdict": "detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.376157407407407,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.376157407407407,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.376157407407407,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.376157407407407,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "FIBS|uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.8593750000000067,
+      "planted_point": -13.206156305114636,
+      "move_points": -12.346781305114629,
+      "move_in_range": true,
+      "planted_ci95": [
+       -15.787659983426183,
+       -9.727204224518138
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.346781305114629,
+       "ci95": [
+        -14.523992987605993,
+        -9.682866262054425
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 8.86782922451813,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.8593750000000067,
+      "planted_point": -8.957368827160483,
+      "move_points": -8.097993827160476,
+      "move_in_range": true,
+      "planted_ci95": [
+       -11.311094163847065,
+       -6.096642258275262
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.097993827160476,
+       "ci95": [
+        -9.9473008429632,
+        -6.2103369664921955
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.237267258275255,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.8593750000000067,
+      "planted_point": -5.917245370370372,
+      "move_points": -5.057870370370365,
+      "move_in_range": true,
+      "planted_ci95": [
+       -8.03829411298549,
+       -2.9296315152558923
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.057870370370365,
+       "ci95": [
+        -6.5599988874144834,
+        -3.1864157635896793
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.0702565152558856,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.8593750000000067,
+      "planted_point": -4.075038580246904,
+      "move_points": -3.2156635802468974,
+      "move_in_range": true,
+      "planted_ci95": [
+       -6.471888250692291,
+       -1.7517303154845225
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.215663580246897,
+       "ci95": [
+        -4.935689266569189,
+        -2.0886301744538667
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.8923553154845159,
+      "verdict": "detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.8593750000000067,
+      "planted_point": 2.3562885802469236,
+      "move_points": 3.21566358024693,
+      "move_in_range": true,
+      "planted_ci95": [
+       0.6047303034298721,
+       3.812531634619152
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.21566358024693,
+       "ci95": [
+        1.8726104391413245,
+        4.007734504445309
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.4641053034298788,
+      "verdict": "detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.8593750000000067,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.8593750000000067,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.8593750000000067,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "harmfulness|uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -2.022087191358035,
+      "planted_point": -14.250096450617288,
+      "move_points": -12.228009259259252,
+      "move_in_range": true,
+      "planted_ci95": [
+       -17.336603314055854,
+       -9.18685482019936
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.228009259259254,
+       "ci95": [
+        -14.393957032490198,
+        -9.587747753059507
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.164767628841324,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -2.022087191358035,
+      "planted_point": -10.19724151234569,
+      "move_points": -8.175154320987655,
+      "move_in_range": true,
+      "planted_ci95": [
+       -14.247976966350748,
+       -6.0166467402103585
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.175154320987655,
+       "ci95": [
+        -11.188336751889448,
+        -6.399019297690602
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.9945595488523233,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -2.022087191358035,
+      "planted_point": -7.155189043209875,
+      "move_points": -5.13310185185184,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.463396563569285,
+       -3.1895742723151423
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.1331018518518405,
+       "ci95": [
+        -7.261361713840708,
+        -3.598593047766785
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.1674870809571072,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -2.022087191358035,
+      "planted_point": -5.241608796296305,
+      "move_points": -3.2195216049382696,
+      "move_in_range": true,
+      "planted_ci95": [
+       -8.092956827072499,
+       -1.814004150613714
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.219521604938269,
+       "ci95": [
+        -4.880334627491195,
+        -2.2031226219370543
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.20808304074432127,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -2.022087191358035,
+      "planted_point": 1.2070794753086367,
+      "move_points": 3.229166666666672,
+      "move_in_range": true,
+      "planted_ci95": [
+       -0.9220014579332825,
+       3.4079875333477108
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.229166666666672,
+       "ci95": [
+        1.4789101224445989,
+        3.9482929429461313
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.1000857334247527,
+      "verdict": "detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -2.022087191358035,
+      "planted_point": 3.1534529320987548,
+      "move_points": 5.1755401234567895,
+      "move_in_range": true,
+      "planted_ci95": [
+       0.8780200022196153,
+       4.9277747496770035
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.1755401234567895,
+       "ci95": [
+        2.720288877425491,
+        5.997680479575979
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.9001071935776506,
+      "verdict": "detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -2.022087191358035,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -2.022087191358035,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "refusal|uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -1.594810956790127,
+      "planted_point": -13.828882826278655,
+      "move_points": -12.234071869488528,
+      "move_in_range": true,
+      "planted_ci95": [
+       -20.6898004292441,
+       -8.630432710681688
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.234071869488528,
+       "ci95": [
+        -15.102841277720183,
+        -9.842778571879487
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 7.0356217538915615,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -1.594810956790127,
+      "planted_point": -9.692804783950615,
+      "move_points": -8.097993827160488,
+      "move_in_range": true,
+      "planted_ci95": [
+       -15.292889863301957,
+       -4.706529288099942
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.097993827160488,
+       "ci95": [
+        -10.021200105393886,
+        -6.3507451797694126
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.111718331309815,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -1.594810956790127,
+      "planted_point": -6.739486882716051,
+      "move_points": -5.144675925925924,
+      "move_in_range": true,
+      "planted_ci95": [
+       -12.279905577114828,
+       -2.3631838634945876
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.144675925925924,
+       "ci95": [
+        -6.844264273819241,
+        -3.6444758513391995
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.7683729067044607,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -1.594810956790127,
+      "planted_point": -4.806616512345685,
+      "move_points": -3.211805555555558,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.079701729086182,
+       -0.6999036142641688
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.211805555555558,
+       "ci95": [
+        -4.63051687985181,
+        -2.210458908031996
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.8949073425259582,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -1.594810956790127,
+      "planted_point": 1.547550154320998,
+      "move_points": 3.142361111111125,
+      "move_in_range": true,
+      "planted_ci95": [
+       -3.565323596621627,
+       4.5507976377845765
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.142361111111125,
+       "ci95": [
+        1.168224299065423,
+        4.1278188865398056
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -1.9705126398315,
+      "verdict": "not detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -1.594810956790127,
+      "planted_point": 3.5035686728395077,
+      "move_points": 5.098379629629635,
+      "move_in_range": true,
+      "planted_ci95": [
+       -0.39565668202765464,
+       6.371753963634337
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.098379629629635,
+       "ci95": [
+        2.805191889456983,
+        6.848214737997093
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.1991542747624724,
+      "verdict": "detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -1.594810956790127,
+      "planted_point": 6.561053240740755,
+      "move_points": 8.155864197530882,
+      "move_in_range": true,
+      "planted_ci95": [
+       3.6385476448270495,
+       9.090473193012356
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.155864197530882,
+       "ci95": [
+        5.5444815885389716,
+        11.128371038469194
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.2333586016171765,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -1.594810956790127,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    },
+    "high-stakes|uncut R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.6274112654320985,
+      "planted_point": -12.88532021604938,
+      "move_points": -12.257908950617281,
+      "move_in_range": true,
+      "planted_ci95": [
+       -16.45155986952862,
+       -9.191129363217835
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.25790895061728,
+       "ci95": [
+        -13.883472251842752,
+        -9.665875136698752
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 8.563718097785737,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.6274112654320985,
+      "planted_point": -8.776523919753087,
+      "move_points": -8.149112654320989,
+      "move_in_range": true,
+      "planted_ci95": [
+       -11.721141975616947,
+       -5.098168843209978
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.149112654320989,
+       "ci95": [
+        -9.224036330203598,
+        -5.721603978893385
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 4.47075757777788,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.6274112654320985,
+      "planted_point": -5.720003858024681,
+      "move_points": -5.092592592592583,
+      "move_in_range": true,
+      "planted_ci95": [
+       -9.062804282823453,
+       -2.3119342350418437
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.092592592592582,
+       "ci95": [
+        -6.197921011736807,
+        -3.2011418110069365
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.6845229696097452,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.6274112654320985,
+      "planted_point": -3.848861882716037,
+      "move_points": -3.2214506172839386,
+      "move_in_range": true,
+      "planted_ci95": [
+       -6.7504330254041705,
+       -0.4156817292749289
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.2214506172839386,
+       "ci95": [
+        -3.822110275297826,
+        -1.503263256803871
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": false,
+      "margin_points": -0.21172953615716955,
+      "verdict": "not detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.6274112654320985,
+      "planted_point": 2.6645860890652573,
+      "move_points": 3.2919973544973558,
+      "move_in_range": true,
+      "planted_ci95": [
+       -0.00039500734207188347,
+       5.26307690460442
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 3.2919973544973558,
+       "ci95": [
+        2.4575438589481333,
+        4.944019808822417
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 0.6270162580900266,
+      "verdict": "detected"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.6274112654320985,
+      "planted_point": 4.568521274250448,
+      "move_points": 5.195932539682547,
+      "move_in_range": true,
+      "planted_ci95": [
+       1.5982854407070388,
+       6.820804519912301
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 5.195932539682547,
+       "ci95": [
+        3.9388972180576625,
+        6.638771615629613
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 2.2256967061391375,
+      "verdict": "detected"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.6274112654320985,
+      "planted_point": 7.544160604056449,
+      "move_points": 8.171571869488547,
+      "move_in_range": true,
+      "planted_ci95": [
+       4.894464466046262,
+       9.713908811232296
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 8.171571869488547,
+       "ci95": [
+        6.63413357182383,
+        10.0426024778292
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 5.52187573147836,
+      "verdict": "detected"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.6274112654320985,
+      "planted_point": 11.541074184303357,
+      "move_points": 12.168485449735455,
+      "move_in_range": true,
+      "planted_ci95": [
+       9.440011771743746,
+       13.46694117285294
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": 12.168485449735456,
+       "ci95": [
+        10.264240428117862,
+        14.706657949220887
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 10.067423037175844,
+      "verdict": "detected"
+     }
+    },
+    "own_all_rs_uncut_L48 R": {
+     "-12": {
+      "delta": -12,
+      "readable": true,
+      "unplanted_point": -0.3067129629629739,
+      "planted_point": -12.49531525573192,
+      "move_points": -12.188602292768946,
+      "move_in_range": true,
+      "planted_ci95": [
+       -14.456226918754018,
+       -10.093757574637147
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -12.188602292768946,
+       "ci95": [
+        -14.149561233421995,
+        -9.80150677065458
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 9.787044611674173,
+      "verdict": "detected"
+     },
+     "-8": {
+      "delta": -8,
+      "readable": true,
+      "unplanted_point": -0.3067129629629739,
+      "planted_point": -8.476080246913586,
+      "move_points": -8.169367283950612,
+      "move_in_range": true,
+      "planted_ci95": [
+       -10.398776741223633,
+       -6.707126303592112
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -8.169367283950614,
+       "ci95": [
+        -10.053592247578806,
+        -6.415372075182205
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 6.400413340629138,
+      "verdict": "detected"
+     },
+     "-5": {
+      "delta": -5,
+      "readable": true,
+      "unplanted_point": -0.3067129629629739,
+      "planted_point": -5.526620370370383,
+      "move_points": -5.219907407407408,
+      "move_in_range": true,
+      "planted_ci95": [
+       -6.628466838236329,
+       -3.8514847854495007
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -5.219907407407409,
+       "ci95": [
+        -6.293557113162677,
+        -3.5695080582718237
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 3.544771822486527,
+      "verdict": "detected"
+     },
+     "-3": {
+      "delta": -3,
+      "readable": true,
+      "unplanted_point": -0.3067129629629739,
+      "planted_point": -3.559027777777801,
+      "move_points": -3.2523148148148273,
+      "move_in_range": true,
+      "planted_ci95": [
+       -4.55158379419649,
+       -2.267657331442217
+      ],
+      "finite_draws": 10000,
+      "draws": 10000,
+      "paired_change": {
+       "point": -3.2523148148148273,
+       "ci95": [
+        -4.2072904791921015,
+        -2.005027068832177
+       ]
+      },
+      "mechanism_mismatch": null,
+      "interval_excludes_unplanted": true,
+      "margin_points": 1.9609443684792431,
+      "verdict": "detected"
+     },
+     "+3": {
+      "delta": 3,
+      "readable": true,
+      "unplanted_point": -0.3067129629629739,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+5": {
+      "delta": 5,
+      "readable": true,
+      "unplanted_point": -0.3067129629629739,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+8": {
+      "delta": 8,
+      "readable": true,
+      "unplanted_point": -0.3067129629629739,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     },
+     "+12": {
+      "delta": 12,
+      "readable": true,
+      "unplanted_point": -0.3067129629629739,
+      "verdict": "unavailable",
+      "reason": "unattainable (ceiling) in a member: S_old (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_new (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_newmains (all-origins draws) [pooled: pooled_all_origins] (unattainable), S_paper493 (all-origins draws) [pooled: pooled_all_origins] (unattainable)"
+     }
+    }
+   }
+  }
+ },
+ "counts": {
+  "0.01": {
+   "-12": {
+    "C": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "R": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "C+R": {
+     "detected": 12,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {}
+    }
+   },
+   "-8": {
+    "C": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "R": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "C+R": {
+     "detected": 12,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {}
+    }
+   },
+   "-5": {
+    "C": {
+     "detected": 3,
+     "not_detected": 3,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut C": "not detected",
+      "refusal|uncut C": "not detected",
+      "high-stakes|uncut C": "not detected"
+     }
+    },
+    "R": {
+     "detected": 3,
+     "not_detected": 3,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "FIBS|uncut R": "not detected",
+      "refusal|uncut R": "not detected",
+      "high-stakes|uncut R": "not detected"
+     }
+    },
+    "C+R": {
+     "detected": 6,
+     "not_detected": 6,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "sol_a_uncut C (C)": "not detected",
+      "refusal|uncut C (C)": "not detected",
+      "high-stakes|uncut C (C)": "not detected",
+      "FIBS|uncut R (R)": "not detected",
+      "refusal|uncut R (R)": "not detected",
+      "high-stakes|uncut R (R)": "not detected"
+     }
+    }
+   },
+   "-3": {
+    "C": {
+     "detected": 1,
+     "not_detected": 5,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut C": "not detected",
+      "FIBS|uncut C": "not detected",
+      "harmfulness|uncut C": "not detected",
+      "refusal|uncut C": "not detected",
+      "high-stakes|uncut C": "not detected"
+     }
+    },
+    "R": {
+     "detected": 1,
+     "not_detected": 5,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut R": "not detected",
+      "FIBS|uncut R": "not detected",
+      "harmfulness|uncut R": "not detected",
+      "refusal|uncut R": "not detected",
+      "high-stakes|uncut R": "not detected"
+     }
+    },
+    "C+R": {
+     "detected": 2,
+     "not_detected": 10,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "sol_a_uncut C (C)": "not detected",
+      "FIBS|uncut C (C)": "not detected",
+      "harmfulness|uncut C (C)": "not detected",
+      "refusal|uncut C (C)": "not detected",
+      "high-stakes|uncut C (C)": "not detected",
+      "sol_a_uncut R (R)": "not detected",
+      "FIBS|uncut R (R)": "not detected",
+      "harmfulness|uncut R (R)": "not detected",
+      "refusal|uncut R (R)": "not detected",
+      "high-stakes|uncut R (R)": "not detected"
+     }
+    }
+   },
+   "+3": {
+    "C": {
+     "detected": 0,
+     "not_detected": 5,
+     "unavailable": 1,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut C": "not detected",
+      "FIBS|uncut C": "not detected",
+      "harmfulness|uncut C": "not detected",
+      "refusal|uncut C": "not detected",
+      "high-stakes|uncut C": "not detected",
+      "own_all_rs_uncut_L48 C": "unavailable"
+     }
+    },
+    "R": {
+     "detected": 1,
+     "not_detected": 4,
+     "unavailable": 1,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "FIBS|uncut R": "not detected",
+      "harmfulness|uncut R": "not detected",
+      "refusal|uncut R": "not detected",
+      "high-stakes|uncut R": "not detected",
+      "own_all_rs_uncut_L48 R": "unavailable"
+     }
+    },
+    "C+R": {
+     "detected": 1,
+     "not_detected": 9,
+     "unavailable": 2,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "sol_a_uncut C (C)": "not detected",
+      "FIBS|uncut C (C)": "not detected",
+      "harmfulness|uncut C (C)": "not detected",
+      "refusal|uncut C (C)": "not detected",
+      "high-stakes|uncut C (C)": "not detected",
+      "own_all_rs_uncut_L48 C (C)": "unavailable",
+      "FIBS|uncut R (R)": "not detected",
+      "harmfulness|uncut R (R)": "not detected",
+      "refusal|uncut R (R)": "not detected",
+      "high-stakes|uncut R (R)": "not detected",
+      "own_all_rs_uncut_L48 R (R)": "unavailable"
+     }
+    }
+   },
+   "+5": {
+    "C": {
+     "detected": 3,
+     "not_detected": 2,
+     "unavailable": 1,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut C": "not detected",
+      "refusal|uncut C": "not detected",
+      "own_all_rs_uncut_L48 C": "unavailable"
+     }
+    },
+    "R": {
+     "detected": 0,
+     "not_detected": 4,
+     "unavailable": 2,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut R": "unavailable",
+      "FIBS|uncut R": "not detected",
+      "harmfulness|uncut R": "not detected",
+      "refusal|uncut R": "not detected",
+      "high-stakes|uncut R": "not detected",
+      "own_all_rs_uncut_L48 R": "unavailable"
+     }
+    },
+    "C+R": {
+     "detected": 3,
+     "not_detected": 6,
+     "unavailable": 3,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "sol_a_uncut C (C)": "not detected",
+      "refusal|uncut C (C)": "not detected",
+      "own_all_rs_uncut_L48 C (C)": "unavailable",
+      "sol_a_uncut R (R)": "unavailable",
+      "FIBS|uncut R (R)": "not detected",
+      "harmfulness|uncut R (R)": "not detected",
+      "refusal|uncut R (R)": "not detected",
+      "high-stakes|uncut R (R)": "not detected",
+      "own_all_rs_uncut_L48 R (R)": "unavailable"
+     }
+    }
+   },
+   "+8": {
+    "C": {
+     "detected": 5,
+     "not_detected": 0,
+     "unavailable": 1,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "own_all_rs_uncut_L48 C": "unavailable"
+     }
+    },
+    "R": {
+     "detected": 3,
+     "not_detected": 1,
+     "unavailable": 2,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut R": "unavailable",
+      "high-stakes|uncut R": "not detected",
+      "own_all_rs_uncut_L48 R": "unavailable"
+     }
+    },
+    "C+R": {
+     "detected": 8,
+     "not_detected": 1,
+     "unavailable": 3,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "own_all_rs_uncut_L48 C (C)": "unavailable",
+      "sol_a_uncut R (R)": "unavailable",
+      "high-stakes|uncut R (R)": "not detected",
+      "own_all_rs_uncut_L48 R (R)": "unavailable"
+     }
+    }
+   },
+   "+12": {
+    "C": {
+     "detected": 5,
+     "not_detected": 0,
+     "unavailable": 1,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "own_all_rs_uncut_L48 C": "unavailable"
+     }
+    },
+    "R": {
+     "detected": 4,
+     "not_detected": 0,
+     "unavailable": 2,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut R": "unavailable",
+      "own_all_rs_uncut_L48 R": "unavailable"
+     }
+    },
+    "C+R": {
+     "detected": 9,
+     "not_detected": 0,
+     "unavailable": 3,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "own_all_rs_uncut_L48 C (C)": "unavailable",
+      "sol_a_uncut R (R)": "unavailable",
+      "own_all_rs_uncut_L48 R (R)": "unavailable"
+     }
+    }
+   }
+  },
+  "0.05": {
+   "-12": {
+    "C": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "R": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "C+R": {
+     "detected": 12,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {}
+    }
+   },
+   "-8": {
+    "C": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "R": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "C+R": {
+     "detected": 12,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {}
+    }
+   },
+   "-5": {
+    "C": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "R": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {}
+    },
+    "C+R": {
+     "detected": 12,
+     "not_detected": 0,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {}
+    }
+   },
+   "-3": {
+    "C": {
+     "detected": 4,
+     "not_detected": 2,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "harmfulness|uncut C": "not detected",
+      "refusal|uncut C": "not detected"
+     }
+    },
+    "R": {
+     "detected": 3,
+     "not_detected": 3,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "harmfulness|uncut R": "not detected",
+      "refusal|uncut R": "not detected",
+      "high-stakes|uncut R": "not detected"
+     }
+    },
+    "C+R": {
+     "detected": 7,
+     "not_detected": 5,
+     "unavailable": 0,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "harmfulness|uncut C (C)": "not detected",
+      "refusal|uncut C (C)": "not detected",
+      "harmfulness|uncut R (R)": "not detected",
+      "refusal|uncut R (R)": "not detected",
+      "high-stakes|uncut R (R)": "not detected"
+     }
+    }
+   },
+   "+3": {
+    "C": {
+     "detected": 1,
+     "not_detected": 2,
+     "unavailable": 3,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut C": "unavailable",
+      "FIBS|uncut C": "unavailable",
+      "harmfulness|uncut C": "not detected",
+      "refusal|uncut C": "not detected",
+      "own_all_rs_uncut_L48 C": "unavailable"
+     }
+    },
+    "R": {
+     "detected": 3,
+     "not_detected": 1,
+     "unavailable": 2,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut R": "unavailable",
+      "refusal|uncut R": "not detected",
+      "own_all_rs_uncut_L48 R": "unavailable"
+     }
+    },
+    "C+R": {
+     "detected": 4,
+     "not_detected": 3,
+     "unavailable": 5,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "sol_a_uncut C (C)": "unavailable",
+      "FIBS|uncut C (C)": "unavailable",
+      "harmfulness|uncut C (C)": "not detected",
+      "refusal|uncut C (C)": "not detected",
+      "own_all_rs_uncut_L48 C (C)": "unavailable",
+      "sol_a_uncut R (R)": "unavailable",
+      "refusal|uncut R (R)": "not detected",
+      "own_all_rs_uncut_L48 R (R)": "unavailable"
+     }
+    }
+   },
+   "+5": {
+    "C": {
+     "detected": 3,
+     "not_detected": 0,
+     "unavailable": 3,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut C": "unavailable",
+      "FIBS|uncut C": "unavailable",
+      "own_all_rs_uncut_L48 C": "unavailable"
+     }
+    },
+    "R": {
+     "detected": 3,
+     "not_detected": 0,
+     "unavailable": 3,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut R": "unavailable",
+      "FIBS|uncut R": "unavailable",
+      "own_all_rs_uncut_L48 R": "unavailable"
+     }
+    },
+    "C+R": {
+     "detected": 6,
+     "not_detected": 0,
+     "unavailable": 6,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "sol_a_uncut C (C)": "unavailable",
+      "FIBS|uncut C (C)": "unavailable",
+      "own_all_rs_uncut_L48 C (C)": "unavailable",
+      "sol_a_uncut R (R)": "unavailable",
+      "FIBS|uncut R (R)": "unavailable",
+      "own_all_rs_uncut_L48 R (R)": "unavailable"
+     }
+    }
+   },
+   "+8": {
+    "C": {
+     "detected": 1,
+     "not_detected": 0,
+     "unavailable": 5,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut C": "unavailable",
+      "FIBS|uncut C": "unavailable",
+      "refusal|uncut C": "unavailable",
+      "high-stakes|uncut C": "unavailable",
+      "own_all_rs_uncut_L48 C": "unavailable"
+     }
+    },
+    "R": {
+     "detected": 2,
+     "not_detected": 0,
+     "unavailable": 4,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut R": "unavailable",
+      "FIBS|uncut R": "unavailable",
+      "harmfulness|uncut R": "unavailable",
+      "own_all_rs_uncut_L48 R": "unavailable"
+     }
+    },
+    "C+R": {
+     "detected": 3,
+     "not_detected": 0,
+     "unavailable": 9,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "sol_a_uncut C (C)": "unavailable",
+      "FIBS|uncut C (C)": "unavailable",
+      "refusal|uncut C (C)": "unavailable",
+      "high-stakes|uncut C (C)": "unavailable",
+      "own_all_rs_uncut_L48 C (C)": "unavailable",
+      "sol_a_uncut R (R)": "unavailable",
+      "FIBS|uncut R (R)": "unavailable",
+      "harmfulness|uncut R (R)": "unavailable",
+      "own_all_rs_uncut_L48 R (R)": "unavailable"
+     }
+    }
+   },
+   "+12": {
+    "C": {
+     "detected": 0,
+     "not_detected": 0,
+     "unavailable": 6,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut C": "unavailable",
+      "FIBS|uncut C": "unavailable",
+      "harmfulness|uncut C": "unavailable",
+      "refusal|uncut C": "unavailable",
+      "high-stakes|uncut C": "unavailable",
+      "own_all_rs_uncut_L48 C": "unavailable"
+     }
+    },
+    "R": {
+     "detected": 1,
+     "not_detected": 0,
+     "unavailable": 5,
+     "mechanism_mismatch": 0,
+     "cases": 6,
+     "misses": {
+      "sol_a_uncut R": "unavailable",
+      "FIBS|uncut R": "unavailable",
+      "harmfulness|uncut R": "unavailable",
+      "refusal|uncut R": "unavailable",
+      "own_all_rs_uncut_L48 R": "unavailable"
+     }
+    },
+    "C+R": {
+     "detected": 1,
+     "not_detected": 0,
+     "unavailable": 11,
+     "mechanism_mismatch": 0,
+     "cases": 12,
+     "misses": {
+      "sol_a_uncut C (C)": "unavailable",
+      "FIBS|uncut C (C)": "unavailable",
+      "harmfulness|uncut C (C)": "unavailable",
+      "refusal|uncut C (C)": "unavailable",
+      "high-stakes|uncut C (C)": "unavailable",
+      "own_all_rs_uncut_L48 C (C)": "unavailable",
+      "sol_a_uncut R (R)": "unavailable",
+      "FIBS|uncut R (R)": "unavailable",
+      "harmfulness|uncut R (R)": "unavailable",
+      "refusal|uncut R (R)": "unavailable",
+      "own_all_rs_uncut_L48 R (R)": "unavailable"
+     }
+    }
+   }
+  }
+ },
+ "aggregate": {
+  "rule": "09 item 35: S = the six-probe mean of the run-mean Delta_full, item 24's delta rule (|(planted - unplanted) - delta| <= 0.5|delta| AND the planted 95% interval excludes the unplanted point); the EXCESS (mean G - mean Y; the plant shifts each probe's signed gaps, G = 0.5|sim - run1| + 0.5|sim - run2| is recomputed, Y = |run2@B - run1@B| at the pooled tau_B (RULE 45.1; gap run2_minus_run1_at_tauB) is unchanged): Delta_exp = excess(planted, draw 0) - excess(unplanted, draw 0); DETECTED iff |bootstrap-mean move - Delta_exp| <= 0.5|Delta_exp| AND the planted 95% interval excludes the unplanted point; |Delta_exp| < 0.5 points -> 'not testable at this delta'",
+  "group": "headline_six_full",
+  "comparator": "(A) run-mean Delta_full",
+  "rule47": {
+   "rule": "09 RULE item 47 @ 1ce4a94c8 (experiments/2026-10-14_priority1_spec_09/RULE.md)",
+   "aggregate": "the six-probe aggregate reports negative-shift verdicts only (delta = -3 / -5 / -8 / -12; the intervals stay two-sided, only the plant direction is restricted); the positive side names the members unattainable at the ceiling, never an average over the attainable subset",
+   "per_probe": "per-probe x readout verdicts (item 24) wherever attainable, positive delta included; 'unavailable' where not; never combined into subset means",
+   "caption": "the six-probe planted check tests detection of a simulator that UNDER-catches. Over-catching is testable only per probe, where the ceiling allows."
+  },
+  "caption": "the six-probe planted check tests detection of a simulator that UNDER-catches. Over-catching is testable only per probe, where the ceiling allows.",
+  "by_level": {
+   "0.01": {
+    "C": {
+     "-12": {
+      "S": {
+       "unplanted_point": -1.0051876653439216,
+       "planted": {
+        "point": -13.215766920194005,
+        "ci95": [
+         -15.076626546762565,
+         -10.803054105439548
+        ]
+       },
+       "delta_exp_points": -12.210579254850083,
+       "bootstrap_mean_move_points": -11.960341376072366,
+       "shift": {
+        "point": -12.210579254850083,
+        "ci95": [
+         -13.149077727873745,
+         -10.89569311240128
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 1.0338702417695502,
+       "planted": {
+        "point": 12.164202583039389,
+        "ci95": [
+         8.980945560035774,
+         13.774622333467049
+        ]
+       },
+       "delta_exp_points": 11.130332341269838,
+       "bootstrap_mean_move_points": 10.265380686590534,
+       "shift": {
+        "point": 11.130332341269838,
+        "ci95": [
+         7.786631047229407,
+         12.18328270167935
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-8": {
+      "S": {
+       "unplanted_point": -1.0051876653439216,
+       "planted": {
+        "point": -9.16419799015285,
+        "ci95": [
+         -10.910891814480316,
+         -6.625663817014943
+        ]
+       },
+       "delta_exp_points": -8.159010324808929,
+       "bootstrap_mean_move_points": -7.773095723676829,
+       "shift": {
+        "point": -8.159010324808929,
+        "ci95": [
+         -8.76760702157607,
+         -6.8770883027171745
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 1.0338702417695502,
+       "planted": {
+        "point": 8.112633652998236,
+        "ci95": [
+         4.882093506284986,
+         9.551005588626344
+        ]
+       },
+       "delta_exp_points": 7.078763411228685,
+       "bootstrap_mean_move_points": 6.0907510856097495,
+       "shift": {
+        "point": 7.078763411228685,
+        "ci95": [
+         3.7303232099072616,
+         7.918889751111474
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-5": {
+      "S": {
+       "unplanted_point": -1.0051876653439216,
+       "planted": {
+        "point": -6.158429324661965,
+        "ci95": [
+         -7.9623539257328275,
+         -3.794360347628766
+        ]
+       },
+       "delta_exp_points": -5.153241659318043,
+       "bootstrap_mean_move_points": -4.873085275951107,
+       "shift": {
+        "point": -5.153241659318043,
+        "ci95": [
+         -5.662140911143791,
+         -4.199883545904299
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 1.0338702417695502,
+       "planted": {
+        "point": 5.10686498750735,
+        "ci95": [
+         2.2971760621472552,
+         6.634379389963498
+        ]
+       },
+       "delta_exp_points": 4.0729947457378,
+       "bootstrap_mean_move_points": 3.3079116243317954,
+       "shift": {
+        "point": 4.072994745737801,
+        "ci95": [
+         1.4025442685059815,
+         4.93570120366081
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-3": {
+      "S": {
+       "unplanted_point": -1.0051876653439216,
+       "planted": {
+        "point": -4.181949496619636,
+        "ci95": [
+         -5.945378353183442,
+         -1.831237913422264
+        ]
+       },
+       "delta_exp_points": -3.176761831275715,
+       "bootstrap_mean_move_points": -2.8933623295476814,
+       "shift": {
+        "point": -3.176761831275715,
+        "ci95": [
+         -3.4781780169663943,
+         -2.377129251939964
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 1.0338702417695502,
+       "planted": {
+        "point": 3.1303851594650234,
+        "ci95": [
+         0.8727128326241498,
+         4.802165128078297
+        ]
+       },
+       "delta_exp_points": 2.0965149176954734,
+       "bootstrap_mean_move_points": 1.6406641264475579,
+       "shift": {
+        "point": 2.096514917695473,
+        "ci95": [
+         0.32778922753507156,
+         2.8753751213941405
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": false,
+       "verdict": "not detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "+3": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 C"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 4
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 C"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 4
+      }
+     },
+     "+5": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 C"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 4
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 C"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 4
+      }
+     },
+     "+8": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 C"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 4
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 C"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 4
+      }
+     },
+     "+12": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 C"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 4
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 C"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 4
+      }
+     }
+    },
+    "R": {
+     "-12": {
+      "S": {
+       "unplanted_point": -1.2522275499706035,
+       "planted": {
+        "point": -13.461268187830688,
+        "ci95": [
+         -15.728353061629303,
+         -10.620401694592667
+        ]
+       },
+       "delta_exp_points": -12.209040637860085,
+       "bootstrap_mean_move_points": -11.795933975312305,
+       "shift": {
+        "point": -12.209040637860085,
+        "ci95": [
+         -12.84204040479779,
+         -10.765960604580888
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.628283913874191,
+       "planted": {
+        "point": 12.355990042621988,
+        "ci95": [
+         8.948732552216672,
+         14.394525694731165
+        ]
+       },
+       "delta_exp_points": 11.727706128747798,
+       "bootstrap_mean_move_points": 10.65878034294062,
+       "shift": {
+        "point": 11.727706128747798,
+        "ci95": [
+         8.280265574691288,
+         12.333860786751062
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-8": {
+      "S": {
+       "unplanted_point": -1.2522275499706035,
+       "planted": {
+        "point": -9.397757752792476,
+        "ci95": [
+         -11.867167484781739,
+         -6.810642138339033
+        ]
+       },
+       "delta_exp_points": -8.145530202821872,
+       "bootstrap_mean_move_points": -7.979047081217237,
+       "shift": {
+        "point": -8.14553020282187,
+        "ci95": [
+         -8.86670253655851,
+         -7.1170137569216765
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.628283913874191,
+       "planted": {
+        "point": 8.292479607583777,
+        "ci95": [
+         5.128159240931556,
+         10.536010992308318
+        ]
+       },
+       "delta_exp_points": 7.664195693709586,
+       "bootstrap_mean_move_points": 6.842301075991679,
+       "shift": {
+        "point": 7.664195693709587,
+        "ci95": [
+         4.522982259190887,
+         8.457910504136953
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-5": {
+      "S": {
+       "unplanted_point": -1.2522275499706035,
+       "planted": {
+        "point": -6.425953483245148,
+        "ci95": [
+         -8.890500148659763,
+         -3.6807199523878604
+        ]
+       },
+       "delta_exp_points": -5.173725933274544,
+       "bootstrap_mean_move_points": -4.906037135694691,
+       "shift": {
+        "point": -5.173725933274544,
+        "ci95": [
+         -5.629357330846869,
+         -4.231845492578232
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.628283913874191,
+       "planted": {
+        "point": 5.320675338036446,
+        "ci95": [
+         2.202838092228695,
+         7.5279158362272796
+        ]
+       },
+       "delta_exp_points": 4.692391424162255,
+       "bootstrap_mean_move_points": 3.8012956138691387,
+       "shift": {
+        "point": 4.692391424162255,
+        "ci95": [
+         1.5555291683099333,
+         5.332060627898806
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-3": {
+      "S": {
+       "unplanted_point": -1.2522275499706035,
+       "planted": {
+        "point": -4.4615070179306295,
+        "ci95": [
+         -6.864132246271976,
+         -1.7796938231903734
+        ]
+       },
+       "delta_exp_points": -3.209279467960026,
+       "bootstrap_mean_move_points": -2.9253748160036928,
+       "shift": {
+        "point": -3.2092794679600267,
+        "ci95": [
+         -3.562020482131372,
+         -2.3494778719591087
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.628283913874191,
+       "planted": {
+        "point": 3.3562288727219296,
+        "ci95": [
+         0.6977690534582781,
+         5.523006163695872
+        ]
+       },
+       "delta_exp_points": 2.7279449588477385,
+       "bootstrap_mean_move_points": 1.9586852246116702,
+       "shift": {
+        "point": 2.727944958847738,
+        "ci95": [
+         0.24663051102718248,
+         3.2576275789810225
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "+3": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 4
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R"
+       ],
+       "unattainable_arm_rows": {
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 4
+      }
+     },
+     "+5": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 2,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 6
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 2,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 6
+      }
+     },
+     "+8": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 3,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 7
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 3,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 7
+      }
+     },
+     "+12": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 8
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 8
+      }
+     }
+    }
+   },
+   "0.05": {
+    "C": {
+     "-12": {
+      "S": {
+       "unplanted_point": -1.1252112727807164,
+       "planted": {
+        "point": -13.305844907407408,
+        "ci95": [
+         -15.059508157954799,
+         -11.479960127216673
+        ]
+       },
+       "delta_exp_points": -12.180633634626691,
+       "bootstrap_mean_move_points": -12.011736489151986,
+       "shift": {
+        "point": -12.180633634626691,
+        "ci95": [
+         -13.232231192871089,
+         -10.81774596472824
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.46824478248089485,
+       "planted": {
+        "point": 12.631655092592597,
+        "ci95": [
+         10.54649459370263,
+         14.242422800442057
+        ]
+       },
+       "delta_exp_points": 12.163410310111702,
+       "bootstrap_mean_move_points": 11.724294888515972,
+       "shift": {
+        "point": 12.163410310111702,
+        "ci95": [
+         10.293269525890393,
+         13.077781193193177
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-8": {
+      "S": {
+       "unplanted_point": -1.1252112727807164,
+       "planted": {
+        "point": -9.270190329218105,
+        "ci95": [
+         -10.67368467631698,
+         -7.417594830675352
+        ]
+       },
+       "delta_exp_points": -8.14497905643739,
+       "bootstrap_mean_move_points": -7.820807693632426,
+       "shift": {
+        "point": -8.144979056437387,
+        "ci95": [
+         -8.876018870409203,
+         -6.810217682149378
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.46824478248089485,
+       "planted": {
+        "point": 8.596000514403292,
+        "ci95": [
+         6.4608009631330425,
+         9.904866378242733
+        ]
+       },
+       "delta_exp_points": 8.127755731922397,
+       "bootstrap_mean_move_points": 7.533366092996409,
+       "shift": {
+        "point": 8.127755731922397,
+        "ci95": [
+         6.2281900024356185,
+         8.717487824823758
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-5": {
+      "S": {
+       "unplanted_point": -1.1252112727807164,
+       "planted": {
+        "point": -6.3109246399176975,
+        "ci95": [
+         -7.743702822841771,
+         -4.76409869440244
+        ]
+       },
+       "delta_exp_points": -5.185713367136981,
+       "bootstrap_mean_move_points": -5.004845192719301,
+       "shift": {
+        "point": -5.185713367136981,
+        "ci95": [
+         -5.822430406113773,
+         -4.239631640838052
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.46824478248089485,
+       "planted": {
+        "point": 5.636734825102885,
+        "ci95": [
+         3.790259875548272,
+         6.969711693349108
+        ]
+       },
+       "delta_exp_points": 5.168490042621991,
+       "bootstrap_mean_move_points": 4.717820966534644,
+       "shift": {
+        "point": 5.168490042621991,
+        "ci95": [
+         3.6125199418283316,
+         5.682743322072347
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-3": {
+      "S": {
+       "unplanted_point": -1.1252112727807164,
+       "planted": {
+        "point": -4.3320565108759554,
+        "ci95": [
+         -5.591821889845338,
+         -2.9341143645542966
+        ]
+       },
+       "delta_exp_points": -3.206845238095239,
+       "bootstrap_mean_move_points": -3.0234441324044328,
+       "shift": {
+        "point": -3.206845238095239,
+        "ci95": [
+         -3.627735915560261,
+         -2.448022867105226
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.46824478248089485,
+       "planted": {
+        "point": 3.6578666960611432,
+        "ci95": [
+         1.9983448621304911,
+         4.829351285218228
+        ]
+       },
+       "delta_exp_points": 3.1896219135802486,
+       "bootstrap_mean_move_points": 2.7435558481920244,
+       "shift": {
+        "point": 3.1896219135802486,
+        "ci95": [
+         1.8370716153154338,
+         3.503096609675553
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "+3": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut C",
+        "own_all_rs_uncut_L48 C",
+        "sol_a_uncut C"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut C": 1,
+        "FIBS|uncut C": 4,
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 9
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut C",
+        "own_all_rs_uncut_L48 C",
+        "sol_a_uncut C"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut C": 1,
+        "FIBS|uncut C": 4,
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 9
+      }
+     },
+     "+5": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut C",
+        "own_all_rs_uncut_L48 C",
+        "sol_a_uncut C"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut C": 3,
+        "FIBS|uncut C": 4,
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 11
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut C",
+        "own_all_rs_uncut_L48 C",
+        "sol_a_uncut C"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut C": 3,
+        "FIBS|uncut C": 4,
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 11
+      }
+     },
+     "+8": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut C",
+        "high-stakes|uncut C",
+        "own_all_rs_uncut_L48 C",
+        "refusal|uncut C",
+        "sol_a_uncut C"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut C": 4,
+        "FIBS|uncut C": 4,
+        "refusal|uncut C": 2,
+        "high-stakes|uncut C": 1,
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 15
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut C",
+        "high-stakes|uncut C",
+        "own_all_rs_uncut_L48 C",
+        "refusal|uncut C",
+        "sol_a_uncut C"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut C": 4,
+        "FIBS|uncut C": 4,
+        "refusal|uncut C": 2,
+        "high-stakes|uncut C": 1,
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 15
+      }
+     },
+     "+12": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut C",
+        "harmfulness|uncut C",
+        "high-stakes|uncut C",
+        "own_all_rs_uncut_L48 C",
+        "refusal|uncut C",
+        "sol_a_uncut C"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut C": 4,
+        "FIBS|uncut C": 4,
+        "harmfulness|uncut C": 3,
+        "refusal|uncut C": 4,
+        "high-stakes|uncut C": 4,
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 23
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut C",
+        "harmfulness|uncut C",
+        "high-stakes|uncut C",
+        "own_all_rs_uncut_L48 C",
+        "refusal|uncut C",
+        "sol_a_uncut C"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut C": 4,
+        "FIBS|uncut C": 4,
+        "harmfulness|uncut C": 3,
+        "refusal|uncut C": 4,
+        "high-stakes|uncut C": 4,
+        "own_all_rs_uncut_L48 C": 4
+       },
+       "unattainable_arm_rows_total": 23
+      }
+     }
+    },
+    "R": {
+     "-12": {
+      "S": {
+       "unplanted_point": -0.964425797325108,
+       "planted": {
+        "point": -13.21165628674309,
+        "ci95": [
+         -15.205064226706508,
+         -10.78009923555047
+        ]
+       },
+       "delta_exp_points": -12.247230489417982,
+       "bootstrap_mean_move_points": -12.002969420827377,
+       "shift": {
+        "point": -12.247230489417982,
+        "ci95": [
+         -13.336208872548697,
+         -10.780035982901264
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.4961580504115327,
+       "planted": {
+        "point": 12.715739362874782,
+        "ci95": [
+         9.87960297665719,
+         14.420411907520833
+        ]
+       },
+       "delta_exp_points": 12.21958131246325,
+       "bootstrap_mean_move_points": 11.653703793670237,
+       "shift": {
+        "point": 12.219581312463248,
+        "ci95": [
+         9.822358475813173,
+         13.222345583371672
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-8": {
+      "S": {
+       "unplanted_point": -0.964425797325108,
+       "planted": {
+        "point": -9.122701260288068,
+        "ci95": [
+         -10.982353317522353,
+         -7.044857517840346
+        ]
+       },
+       "delta_exp_points": -8.15827546296296,
+       "bootstrap_mean_move_points": -8.072836576094,
+       "shift": {
+        "point": -8.15827546296296,
+        "ci95": [
+         -9.15258701219755,
+         -7.0873938216827606
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.4961580504115327,
+       "planted": {
+        "point": 8.626784336419762,
+        "ci95": [
+         6.131612867667974,
+         10.242851732712731
+        ]
+       },
+       "delta_exp_points": 8.13062628600823,
+       "bootstrap_mean_move_points": 7.723570948936864,
+       "shift": {
+        "point": 8.130626286008228,
+        "ci95": [
+         6.081585221454173,
+         9.020700875044312
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-5": {
+      "S": {
+       "unplanted_point": -0.964425797325108,
+       "planted": {
+        "point": -6.092062114197535,
+        "ci95": [
+         -7.797490244987697,
+         -4.106236309412556
+        ]
+       },
+       "delta_exp_points": -5.127636316872428,
+       "bootstrap_mean_move_points": -4.9908025469713815,
+       "shift": {
+        "point": -5.127636316872427,
+        "ci95": [
+         -5.88444227760887,
+         -4.209669656681078
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.4961580504115327,
+       "planted": {
+        "point": 5.596145190329227,
+        "ci95": [
+         3.2060549304957378,
+         7.076092449510172
+        ]
+       },
+       "delta_exp_points": 5.099987139917694,
+       "bootstrap_mean_move_points": 4.6418625908205415,
+       "shift": {
+        "point": 5.099987139917694,
+        "ci95": [
+         3.175277125197979,
+         5.7938172897885405
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "-3": {
+      "S": {
+       "unplanted_point": -0.964425797325108,
+       "planted": {
+        "point": -4.191663451646096,
+        "ci95": [
+         -5.697504180291923,
+         -2.454655208219835
+        ]
+       },
+       "delta_exp_points": -3.2272376543209877,
+       "bootstrap_mean_move_points": -3.1160542396210342,
+       "shift": {
+        "point": -3.2272376543209877,
+        "ci95": [
+         -3.7492132212688825,
+         -2.568321471004278
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      },
+      "excess": {
+       "unplanted_point": 0.4961580504115327,
+       "planted": {
+        "point": 3.695746527777788,
+        "ci95": [
+         1.6028272340475178,
+         4.96370877934448
+        ]
+       },
+       "delta_exp_points": 3.1995884773662553,
+       "bootstrap_mean_move_points": 2.7775285137347883,
+       "shift": {
+        "point": 3.1995884773662553,
+        "ci95": [
+         1.5729551378088438,
+         3.6343229195802205
+        ]
+       },
+       "move_in_range": true,
+       "interval_excludes_unplanted": true,
+       "verdict": "detected",
+       "mechanism_mismatch": null
+      }
+     },
+     "+3": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 8
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 8
+      }
+     },
+     "+5": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut R",
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "FIBS|uncut R": 2,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 10
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut R",
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "FIBS|uncut R": 2,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 10
+      }
+     },
+     "+8": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut R",
+        "harmfulness|uncut R",
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "FIBS|uncut R": 4,
+        "harmfulness|uncut R": 1,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 13
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut R",
+        "harmfulness|uncut R",
+        "own_all_rs_uncut_L48 R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "FIBS|uncut R": 4,
+        "harmfulness|uncut R": 1,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 13
+      }
+     },
+     "+12": {
+      "S": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut R",
+        "harmfulness|uncut R",
+        "own_all_rs_uncut_L48 R",
+        "refusal|uncut R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "FIBS|uncut R": 4,
+        "harmfulness|uncut R": 3,
+        "refusal|uncut R": 1,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 16
+      },
+      "excess": {
+       "verdict": "positive shifts unattainable (ceiling) for >= 1 member",
+       "unattainable_members": [
+        "FIBS|uncut R",
+        "harmfulness|uncut R",
+        "own_all_rs_uncut_L48 R",
+        "refusal|uncut R",
+        "sol_a_uncut R"
+       ],
+       "unattainable_arm_rows": {
+        "sol_a_uncut R": 4,
+        "FIBS|uncut R": 4,
+        "harmfulness|uncut R": 3,
+        "refusal|uncut R": 1,
+        "own_all_rs_uncut_L48 R": 4
+       },
+       "unattainable_arm_rows_total": 16
+      }
+     }
+    }
+   }
+  }
+ },
+ "meta": {
+  "git": "fd12eca3546816a5f65ddfdda50f32f2c5044ec0",
+  "stamp_pt": "2026-10-20_004833",
+  "script_sha256": "199b1ab31983da827b7db210fef2380a0ad3019d398312f9919fa1f79040ef5b",
+  "config": {
+   "label": "pooled PLANT verdicts (Table 6; the planted check on the headline six); the pool provenance is the record's pool_label, COMPOSED from A's label sidecar (09's label ruling, 10-17)",
+   "record": {
+    "git": "b90a38f9867a5afc0db63e33e5cbbdb35ba59f4e:experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/routec_PLANT_alltasks_CRD_FULL_plant_r2_allorigins_pooledworld_scored_e12_2026-10-19_230620.json.gz",
+    "sha256": "df2c36a66dd79e50f9fb71216b906fbca6120f2c0f8a2ca4d766acf12c980261",
+    "decompressed_sha256": "66fda847576f30bd23fa6d6b3bde80290257115e6f2afca59e1ee7a92a86851b"
+   },
+   "base_record": {
+    "git": "a936a5d9762763f9feed351aebdeeec2d8114f21:experiments/2026-10-15_fpr_sweep_507_prep/results/routec_records/routec_A_alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json.gz",
+    "sha256": "191c467ab095b0f9ddfe2271822655bc5b49ee02a1a2c5a5b0e11bc855a00865",
+    "decompressed_sha256": "54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a"
+   },
+   "combo": "pooled_all_origins",
+   "mode": "joint",
+   "readouts": [
+    "C",
+    "R"
+   ],
+   "deltas": [
+    -12,
+    -8,
+    -5,
+    -3,
+    3,
+    5,
+    8,
+    12
+   ],
+   "probes": [
+    "sol_a_uncut",
+    "FIBS|uncut",
+    "harmfulness|uncut",
+    "refusal|uncut",
+    "high-stakes|uncut",
+    "own_all_rs_uncut_L48"
+   ],
+   "coheadline_group": "headline_six_full",
+   "calibration_field": [
+    "meta",
+    "window"
+   ],
+   "calibration_expected": "full",
+   "labels_pin": {
+    "git": "7b059dc6c9429e1a376fb29ca9824b64f5397f1e:experiments/2026-10-15_fpr_sweep_507_prep/full_override.py",
+    "sha256": "fe6bf1c9cd6d1748c4adf37c87e47dd7ec5b1fa0c6f87b5afba9afaf0a117c38"
+   },
+   "deltas_note": "PRE-STATED before any full-length planted record exists (10-16, PANEL): delta = +-12 added to 09 RULE item 24's +-3/5/8 (Aswin 'all by 12', via 0d / 2e); the same rule (DETECTED iff |(planted - unplanted) - delta| <= 0.5|delta| AND the planted 95% interval excludes the unplanted point; a move outside the range is flagged 'mechanism mismatch'), the same plant, draws and comparator (A); an arm unattainable in a member reads 'unavailable'; Stage A's --plant record must state +-12 (meta.plant.deltas, per-origin solve_draw0 arms, pooled arrays, coheadline_signed_plant), else the run STOPs",
+   "aggregate": {
+    "group": "headline_six_full"
+   },
+   "aggregate_note": "09 item 35 (via 2e): the aggregate (a) runs here on the same planted arrays: six-probe S (item 24 delta rule) and the registered excess (Delta_exp rule; |Delta_exp| < 0.5 points -> not testable), +-3/5/8/12, pooled_all_origins; group = Stage A panel_groups name of the six-probe headline group",
+   "plant_coheadline_group": "headline_six",
+   "plant_coheadline_group_source": "Stage A @ 20c6fbd20 run_peraction311.py:2679/2689 writes coheadline_signed_plant[...][\"headline_six|<ro>\"] in PLANT records (full length too); the base record's coheadline_signed uses FULL_GROUPS (run_peraction311.py:2429/2659: headline_six_full)",
+   "aggregate_base_note": "Stage A @ 20c6fbd20 run_peraction311.py:3021-3022: a PLANT record withholds panel_groups; the aggregate reads coheadline_signed and panel_groups from base_record (the unplanted record)",
+   "pooled_world": {
+    "y_gap": "run2_minus_run1_at_tauB",
+    "note": "pooled calibration (09 RULE 42-46): the aggregate excess yardstick at the pooled tau_B (RULE 45.1; the producer fix confirmed by the coordinator 10-16 and enforced per record (y1_def, no run1@B2))",
+    "y1_def": "run1@B on every set's pooled row (pooled calibration: no B2, item 45(1)); Y = |run2@B - run1@B| at the pooled tau_B"
+   },
+   "a_label_sidecar": "git:095a9db4c0fedaa52fdcf103d167c8dff8675e3f:experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json@ffe923311b75313e9bd31b967326efe4c6e594da073f2c35a3ca72a07ad6e479"
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "job": "nano_311",
+ "model": "openai/gpt-5.4-nano",
+ "ping_ok": true,
+ "chars": 2,
+ "provider_requests": 2,
+ "ping_cost_usd_logged_all_pings": 1.2050000000000002e-05,
+ "carried_reserve_usd": 0.0,
+ "runner_file_sha256": "f38ca10a864f3387be7c422011e7c71025de551cef7f289f6684ea116f76a374"
+}

@@ -1,0 +1,4 @@
+{
+ "provenance": {"git": "6712bca59e2da82bb6e740add48ef933b4389938", "stamp": "2026-10-12_150739", "phase": "time", "script_sha256": "0cd102f86930d58f82e1cd01842326c3c701cb94c637cef2375ab5b8b0cf29b5", "roster_sha256": "93dc8804078fce00106178dd7b26db6fcbe392336e4ffa57a0cff9c2a41a45ed", "dry": "results/dry_2026-10-12_150605.json"},
+ "result": {"load_s": 65, "rows": [{"tokens": 38029, "seconds": 43.61}, {"tokens": 24981, "seconds": 11.02}], "gpu": "NVIDIA H200"}
+}

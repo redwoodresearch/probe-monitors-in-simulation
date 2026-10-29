@@ -1,0 +1,21 @@
+{
+ "git": "5fc544a502c29c90c94c4b0f509466ea9a4f6b4d",
+ "inputs sha256": {
+  "refit rows": "41a68be0b1d7ae045d573dce15ce2a4b3cfa349f915cc6babc7fd478f28ed8e4",
+  "on-policy per-call": "31f459580c74bb017186aca56291857f294ad0e1cdb71c84b2fc72b72a350c76"
+ },
+ "off-policy refit rows (threshold-in-sim off-policy, per-task false alarms, TPR at 1%)": {
+  "real-attack-e1": 11225,
+  "sim-attack": 11517
+ },
+ "on-policy per-call (threshold-in-sim on-policy)": {
+  "config worlds": {
+   "real": "attack",
+   "sim": "sim_attack@september"
+  },
+  "calls by world": {
+   "real": 1147,
+   "sim": 1230
+  }
+ }
+}

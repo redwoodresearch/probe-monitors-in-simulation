@@ -1,0 +1,26 @@
+{
+ "plan": "PLAN.md (this folder)",
+ "git": "897fe9708b7b69ddb28eeae1e18c1f1cf92834ac",
+ "which": "placebo",
+ "pair": "P4",
+ "reader": "Qwen/Qwen3-32B (#36)",
+ "frozen run": "2026-10-06_181548",
+ "extract run": "2026-10-13_q2_placebo_reply_qwen3-32b_l48-63_v2",
+ "stage file": "stage_placebo_2026-10-13_015900.json",
+ "stage sha256": "ad6da74d4a94102316e5de471049c59cca5c3b89f3627ad68296c7fb97e6f58f",
+ "probes sha256": {
+  "48": "9fd9989b88eacf8652cc6ccf653e105b03496cff19f8fca0f5a13843015bd104",
+  "63": "52180c44f8509b180f06f303c25927a97914446d499a34b95b3925d190e4e7d4"
+ },
+ "stored scores sha256": {
+  "runs.json": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96",
+  "scores_L48.npz": "f6cf939e20134218cc2f0f7d9ecc1bdaf21aadfdb05b921d7361551017e70fc4",
+  "scores_L63.npz": "60f8e0d4b7b45baf46c6cf96f61677c7a0e966a3698a99a913763a4d763e6f10"
+ },
+ "runs": 845,
+ "runs with no meta": 0,
+ "gate record": "placebo_scores_controls_2026-10-13_024126.json",
+ "gate record sha256": "f29370f33fe9104926bc63c614da55301567415ead0f633ef1d06468d97a410b",
+ "scores file": "placebo_scores_placebo_2026-10-13_102123.npz",
+ "scores sha256": "5affba498ad85312622e4e8d14653883a07a32e150a4a037d01b1705156df13b"
+}

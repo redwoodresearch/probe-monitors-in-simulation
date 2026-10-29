@@ -1,0 +1,14 @@
+# F11 (PLAN_F11.md): d9's mean-pool36 settings (mean_final, the 7 layers, cut, model, revision; as fxavg_qwen3.yaml) on the F11
+# arms (sim-attack-fx-fullF9F11 427, sim-honest-fx-fullF9F11 226) plus 20 as-is reproduction runs copied byte-identically from
+# d9's two mean-pool dumps' inputs, one per shard (stage_f11.py --mode stage). 20 shards (about 0.9M tokens each) so no
+# container runs past about 15 min; chunks of 10.
+run: 2026-10-13_q2_f11_qwen3-32b_l7_v1
+inputs_from: 2026-10-13_q2_f11q_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 20
+chunk_size: 10
+layers: [16, 24, 32, 40, 48, 56, 63]
+mean_final: true

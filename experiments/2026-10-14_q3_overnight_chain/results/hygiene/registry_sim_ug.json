@@ -1,0 +1,21 @@
+{
+ "stratum": "sim_ug",
+ "written": "2026-10-15 14:17:23 PT",
+ "entries": {
+  "ug__ug_sim.json": {
+   "batch": "ug",
+   "target": "ug_sim",
+   "extraction_root": "ug_sim_extract_v1_try2",
+   "honest_manifests": [
+    {
+     "target": "ug_sim",
+     "batch": "ug",
+     "manifest": "experiments/2026-10-14_q3_overnight_chain/config/manifest_ug_sim.json @ 37a58956c0",
+     "sha256": "3aef395f5e47f5dd6c5ea13d05bd83ce2123aa59d2a3950a838859c36db3e9bc",
+     "extraction_root": "ug_sim_extract_v1_try2"
+    }
+   ],
+   "main_family_complete": true
+  }
+ }
+}

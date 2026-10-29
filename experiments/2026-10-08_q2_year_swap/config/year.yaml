@@ -1,0 +1,6 @@
+# Year swap (2026-10-08; prepared, not launched: waits for Aswin's OK): 2025 -> 2026 in date-shaped strings of the
+# simulated tool outputs only (assistant messages untouched), on the swap's 100 runs and the extension's 117.
+base: 2026-10-06_la_segment-end_qwen3-32b_v1
+runs_files: [../2026-10-07_q2_rendering_swap/config/swap_runs.json, ../2026-10-07_q2_rendering_swap/config/swap_runs_ext.json]
+staged_run: 2026-10-08_q2_year_swap_inputs_v1
+arm: sim-attack-year2026

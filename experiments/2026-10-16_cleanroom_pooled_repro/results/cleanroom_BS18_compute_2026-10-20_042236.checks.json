@@ -1,0 +1,24 @@
+{
+  "rows": 22386,
+  "rows_expected_from_A": 22386,
+  "rows_passed": 22386,
+  "record_consistency": 1080,
+  "thresholds": 540,
+  "thresholds_passed": 540,
+  "cells": 54,
+  "cells_passed": 54,
+  "controls": 3,
+  "controls_passed": 3,
+  "groups": 300,
+  "groups_equal": 300,
+  "ge_control": {
+    "differs": 1576,
+    "detected": 784,
+    "owner_in_allowance": 792,
+    "near_slack": 0,
+    "vacuous": false,
+    "ok": true
+  },
+  "PASS": true,
+  "OK": true
+}

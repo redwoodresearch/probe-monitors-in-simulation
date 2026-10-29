@@ -1,0 +1,54 @@
+{
+  "decision_rule": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/experiments/2026-10-12_destructive_transfer_labels/config/label_decision_rule_v2.md",
+  "decision_rule_sha256": "3fb916c6f9a305440809b8fe25f02d4b28f05d69767fe994dd71401f8c098adf",
+  "approved_by_user": "Upgrade verification and allow corrections",
+  "primary": {
+    "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/experiments/2026-10-12_destructive_transfer_labels/config/panel_full_v3.json",
+    "repairs": [
+      "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/repairs_v1/m0/config.json",
+      "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/repairs_v1/m2/config.json",
+      "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/repairs_v1/m3/config.json"
+    ]
+  },
+  "high_stages": [
+    {
+      "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/adjudication_v1/config.json",
+      "repairs": [
+        "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/adjudication_repairs_v1/m0/config.json",
+        "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/adjudication_repairs_v1/m1/config.json"
+      ]
+    },
+    {
+      "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/final_review_v1/config.json"
+    },
+    {
+      "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/audit_v2/config_long.json"
+    },
+    {
+      "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/audit_diagnostic_v1/config.json"
+    },
+    {
+      "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/verification_pair_v1/config.json",
+      "repairs": [
+        "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/verification_repairs_v1/m0/config.json",
+        "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/verification_repairs_v1/m1/config.json"
+      ]
+    },
+    {
+      "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/verification_next_v1/m0/config.json"
+    },
+    {
+      "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/verification_next_v1/m1/config.json"
+    },
+    {
+      "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/verification_next_v2/m1/config.json"
+    },
+    {
+      "config": "/Users/aswinsurya/Documents/ChatGPT/Probe Distribution Shift from Sims/.run_cache/dt_labels_20261012/verification_next_v3/m2/config.json"
+    }
+  ],
+  "verification_pair": [
+    "deepseek/deepseek-v4-pro",
+    "moonshotai/kimi-k3"
+  ]
+}

@@ -1,0 +1,2435 @@
+{
+ "stamp": "2026-10-07_130053",
+ "provenance": {
+  "git": "ff89138e61a4fb0e53d44751a55ab01c537cdc63",
+  "git_dirty": false,
+  "source_sha": "21a0709646ad4723",
+  "files": [
+   "experiments/2026-10-07_what_each_method_sees/analyze_adds_up.py"
+  ]
+ },
+ "args": {
+  "ks": [
+   1,
+   2,
+   3,
+   5,
+   10,
+   20,
+   0
+  ],
+  "draws": 20,
+  "levels": [
+   "L0",
+   "L7"
+  ],
+  "splits": [
+   "env",
+   "task"
+  ],
+  "bootstrap": 1000
+ },
+ "joined_sha256": "4fff418491863159bf2080855575d5c778d0448dd01fe6d6eb7ac78aa43156a7",
+ "results": {
+  "L0|env|real_vs_sim": {
+   "outputs": 46115,
+   "runs": 1878,
+   "outputs_per_run": {
+    "mean": 24.56,
+    "median": 24.0
+   },
+   "by_method": {
+    "tfidf": {
+     "per_output_auroc": 0.7916,
+     "per_output_auroc_run_balanced": 0.7653,
+     "per_output_d": 1.0233,
+     "icc_within_arm": 0.1233,
+     "first_k": {
+      "1": {
+       "auroc": 0.6258,
+       "ci95": [
+        0.6045,
+        0.6462
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.6258,
+       "independent_from_these_outputs": 0.6258,
+       "independent": 0.7653,
+       "equicorrelated": 0.7653
+      },
+      "2": {
+       "auroc": 0.6609,
+       "ci95": [
+        0.6368,
+        0.6809
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.596,
+       "independent_from_these_outputs": 0.6345,
+       "independent": 0.8469,
+       "equicorrelated": 0.8329
+      },
+      "3": {
+       "auroc": 0.688,
+       "ci95": [
+        0.6667,
+        0.7077
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 1,
+       "per_output_auroc_of_these_outputs": 0.5917,
+       "independent_from_these_outputs": 0.656,
+       "independent": 0.8949,
+       "equicorrelated": 0.8692
+      },
+      "5": {
+       "auroc": 0.7245,
+       "ci95": [
+        0.704,
+        0.7431
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 9,
+       "per_output_auroc_of_these_outputs": 0.587,
+       "independent_from_these_outputs": 0.6884,
+       "independent": 0.947,
+       "equicorrelated": 0.9072
+      },
+      "10": {
+       "auroc": 0.8954,
+       "ci95": [
+        0.8804,
+        0.9098
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.88,
+       "runs_with_fewer_than_k": 76,
+       "per_output_auroc_of_these_outputs": 0.6556,
+       "independent_from_these_outputs": 0.8959,
+       "independent": 0.9885,
+       "equicorrelated": 0.942
+      },
+      "20": {
+       "auroc": 0.9651,
+       "ci95": [
+        0.9544,
+        0.9744
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 18.04,
+       "runs_with_fewer_than_k": 653,
+       "per_output_auroc_of_these_outputs": 0.7587,
+       "independent_from_these_outputs": 0.9986,
+       "independent": 0.9989,
+       "equicorrelated": 0.9595
+      },
+      "all": {
+       "auroc": 0.9709,
+       "ci95": [
+        0.9614,
+        0.9788
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 24.56,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.7916,
+       "independent_from_these_outputs": 1.0,
+       "independent": 0.9998,
+       "equicorrelated": 0.9652
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.7689,
+       "auroc_sd": 0.0089,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.8619,
+       "auroc_sd": 0.0061,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.9073,
+       "auroc_sd": 0.0045,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.9412,
+       "auroc_sd": 0.004,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.9644,
+       "auroc_sd": 0.0015,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.9702,
+       "auroc_sd": 0.0008,
+       "draws": 20
+      }
+     }
+    },
+    "probe": {
+     "per_output_auroc": 0.8039,
+     "per_output_auroc_run_balanced": 0.7727,
+     "per_output_d": 1.0577,
+     "icc_within_arm": 0.1192,
+     "first_k": {
+      "1": {
+       "auroc": 0.5364,
+       "ci95": [
+        0.513,
+        0.559
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5364,
+       "independent_from_these_outputs": 0.5364,
+       "independent": 0.7727,
+       "equicorrelated": 0.7727
+      },
+      "2": {
+       "auroc": 0.5707,
+       "ci95": [
+        0.5473,
+        0.5925
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5519,
+       "independent_from_these_outputs": 0.5732,
+       "independent": 0.8549,
+       "equicorrelated": 0.8413
+      },
+      "3": {
+       "auroc": 0.5852,
+       "ci95": [
+        0.5616,
+        0.608
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 1,
+       "per_output_auroc_of_these_outputs": 0.5554,
+       "independent_from_these_outputs": 0.5953,
+       "independent": 0.9024,
+       "equicorrelated": 0.8778
+      },
+      "5": {
+       "auroc": 0.6311,
+       "ci95": [
+        0.6079,
+        0.6526
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 9,
+       "per_output_auroc_of_these_outputs": 0.5713,
+       "independent_from_these_outputs": 0.656,
+       "independent": 0.9526,
+       "equicorrelated": 0.9155
+      },
+      "10": {
+       "auroc": 0.8251,
+       "ci95": [
+        0.8058,
+        0.845
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.88,
+       "runs_with_fewer_than_k": 76,
+       "per_output_auroc_of_these_outputs": 0.6479,
+       "independent_from_these_outputs": 0.8836,
+       "independent": 0.9906,
+       "equicorrelated": 0.9493
+      },
+      "20": {
+       "auroc": 0.9629,
+       "ci95": [
+        0.9541,
+        0.9707
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 18.04,
+       "runs_with_fewer_than_k": 653,
+       "per_output_auroc_of_these_outputs": 0.7696,
+       "independent_from_these_outputs": 0.9991,
+       "independent": 0.9993,
+       "equicorrelated": 0.9659
+      },
+      "all": {
+       "auroc": 0.9706,
+       "ci95": [
+        0.9628,
+        0.9772
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 24.56,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.8039,
+       "independent_from_these_outputs": 1.0,
+       "independent": 0.9999,
+       "equicorrelated": 0.9712
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.7758,
+       "auroc_sd": 0.0088,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.8468,
+       "auroc_sd": 0.0064,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.8854,
+       "auroc_sd": 0.0051,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.9245,
+       "auroc_sd": 0.0036,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.9565,
+       "auroc_sd": 0.0022,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.9692,
+       "auroc_sd": 0.0005,
+       "draws": 20
+      }
+     }
+    }
+   }
+  },
+  "L0|env|null_e1_vs_e2": {
+   "outputs": 45556,
+   "runs": 1878,
+   "outputs_per_run": {
+    "mean": 24.26,
+    "median": 23.0
+   },
+   "by_method": {
+    "tfidf": {
+     "per_output_auroc": 0.5435,
+     "per_output_auroc_run_balanced": 0.5417,
+     "per_output_d": 0.1482,
+     "icc_within_arm": 0.1005,
+     "first_k": {
+      "1": {
+       "auroc": 0.5605,
+       "ci95": [
+        0.5442,
+        0.5768
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5605,
+       "independent_from_these_outputs": 0.5605,
+       "independent": 0.5417,
+       "equicorrelated": 0.5417
+      },
+      "2": {
+       "auroc": 0.5626,
+       "ci95": [
+        0.5448,
+        0.581
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5357,
+       "independent_from_these_outputs": 0.5504,
+       "independent": 0.5589,
+       "equicorrelated": 0.5562
+      },
+      "3": {
+       "auroc": 0.5705,
+       "ci95": [
+        0.5539,
+        0.5888
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 2,
+       "per_output_auroc_of_these_outputs": 0.5303,
+       "independent_from_these_outputs": 0.5524,
+       "independent": 0.572,
+       "equicorrelated": 0.5657
+      },
+      "5": {
+       "auroc": 0.581,
+       "ci95": [
+        0.5629,
+        0.5994
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 6,
+       "per_output_auroc_of_these_outputs": 0.5262,
+       "independent_from_these_outputs": 0.5583,
+       "independent": 0.5926,
+       "equicorrelated": 0.5784
+      },
+      "10": {
+       "auroc": 0.5913,
+       "ci95": [
+        0.5745,
+        0.6093
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.9,
+       "runs_with_fewer_than_k": 70,
+       "per_output_auroc_of_these_outputs": 0.522,
+       "independent_from_these_outputs": 0.569,
+       "independent": 0.6291,
+       "equicorrelated": 0.5946
+      },
+      "20": {
+       "auroc": 0.6287,
+       "ci95": [
+        0.6096,
+        0.6509
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 18.05,
+       "runs_with_fewer_than_k": 666,
+       "per_output_auroc_of_these_outputs": 0.5294,
+       "independent_from_these_outputs": 0.6232,
+       "independent": 0.6719,
+       "equicorrelated": 0.6065
+      },
+      "all": {
+       "auroc": 0.676,
+       "ci95": [
+        0.6536,
+        0.7002
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 24.26,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5435,
+       "independent_from_these_outputs": 0.7048,
+       "independent": 0.6971,
+       "equicorrelated": 0.6112
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.5489,
+       "auroc_sd": 0.0111,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.5721,
+       "auroc_sd": 0.0109,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.5962,
+       "auroc_sd": 0.0094,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.6172,
+       "auroc_sd": 0.0089,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.6513,
+       "auroc_sd": 0.0069,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.6697,
+       "auroc_sd": 0.0029,
+       "draws": 20
+      }
+     }
+    },
+    "probe": {
+     "per_output_auroc": 0.5014,
+     "per_output_auroc_run_balanced": 0.501,
+     "per_output_d": 0.0034,
+     "icc_within_arm": 0.0306,
+     "first_k": {
+      "1": {
+       "auroc": 0.5074,
+       "ci95": [
+        0.4875,
+        0.527
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5074,
+       "independent_from_these_outputs": 0.5074,
+       "independent": 0.501,
+       "equicorrelated": 0.501
+      },
+      "2": {
+       "auroc": 0.4987,
+       "ci95": [
+        0.478,
+        0.5194
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5017,
+       "independent_from_these_outputs": 0.5024,
+       "independent": 0.5014,
+       "equicorrelated": 0.5013
+      },
+      "3": {
+       "auroc": 0.5007,
+       "ci95": [
+        0.4814,
+        0.5203
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 2,
+       "per_output_auroc_of_these_outputs": 0.4994,
+       "independent_from_these_outputs": 0.4989,
+       "independent": 0.5017,
+       "equicorrelated": 0.5016
+      },
+      "5": {
+       "auroc": 0.5104,
+       "ci95": [
+        0.4908,
+        0.5312
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 6,
+       "per_output_auroc_of_these_outputs": 0.5048,
+       "independent_from_these_outputs": 0.5108,
+       "independent": 0.5021,
+       "equicorrelated": 0.502
+      },
+      "10": {
+       "auroc": 0.5105,
+       "ci95": [
+        0.4915,
+        0.5312
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.9,
+       "runs_with_fewer_than_k": 70,
+       "per_output_auroc_of_these_outputs": 0.5027,
+       "independent_from_these_outputs": 0.5086,
+       "independent": 0.503,
+       "equicorrelated": 0.5027
+      },
+      "20": {
+       "auroc": 0.4985,
+       "ci95": [
+        0.4801,
+        0.5183
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 18.05,
+       "runs_with_fewer_than_k": 666,
+       "per_output_auroc_of_these_outputs": 0.5001,
+       "independent_from_these_outputs": 0.5003,
+       "independent": 0.5041,
+       "equicorrelated": 0.5033
+      },
+      "all": {
+       "auroc": 0.5018,
+       "ci95": [
+        0.4837,
+        0.5208
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 24.26,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5014,
+       "independent_from_these_outputs": 0.5068,
+       "independent": 0.5047,
+       "equicorrelated": 0.5036
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.4963,
+       "auroc_sd": 0.0119,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.4965,
+       "auroc_sd": 0.0139,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.5019,
+       "auroc_sd": 0.0121,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.503,
+       "auroc_sd": 0.0114,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.5051,
+       "auroc_sd": 0.0083,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.5016,
+       "auroc_sd": 0.003,
+       "draws": 20
+      }
+     }
+    }
+   }
+  },
+  "L0|task|real_vs_sim": {
+   "outputs": 46115,
+   "runs": 1878,
+   "outputs_per_run": {
+    "mean": 24.56,
+    "median": 24.0
+   },
+   "by_method": {
+    "tfidf": {
+     "per_output_auroc": 0.81,
+     "per_output_auroc_run_balanced": 0.7851,
+     "per_output_d": 1.1167,
+     "icc_within_arm": 0.1273,
+     "first_k": {
+      "1": {
+       "auroc": 0.6693,
+       "ci95": [
+        0.6471,
+        0.6916
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.6693,
+       "independent_from_these_outputs": 0.6693,
+       "independent": 0.7851,
+       "equicorrelated": 0.7851
+      },
+      "2": {
+       "auroc": 0.6892,
+       "ci95": [
+        0.6657,
+        0.7126
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.6221,
+       "independent_from_these_outputs": 0.6699,
+       "independent": 0.8679,
+       "equicorrelated": 0.8535
+      },
+      "3": {
+       "auroc": 0.7265,
+       "ci95": [
+        0.7033,
+        0.7482
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 1,
+       "per_output_auroc_of_these_outputs": 0.6127,
+       "independent_from_these_outputs": 0.69,
+       "independent": 0.9143,
+       "equicorrelated": 0.8889
+      },
+      "5": {
+       "auroc": 0.7629,
+       "ci95": [
+        0.7404,
+        0.7828
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 9,
+       "per_output_auroc_of_these_outputs": 0.6047,
+       "independent_from_these_outputs": 0.7236,
+       "independent": 0.9612,
+       "equicorrelated": 0.9246
+      },
+      "10": {
+       "auroc": 0.9168,
+       "ci95": [
+        0.9035,
+        0.93
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.88,
+       "runs_with_fewer_than_k": 76,
+       "per_output_auroc_of_these_outputs": 0.6734,
+       "independent_from_these_outputs": 0.9211,
+       "independent": 0.9935,
+       "equicorrelated": 0.9555
+      },
+      "20": {
+       "auroc": 0.9713,
+       "ci95": [
+        0.9623,
+        0.9792
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 18.04,
+       "runs_with_fewer_than_k": 653,
+       "per_output_auroc_of_these_outputs": 0.7757,
+       "independent_from_these_outputs": 0.9994,
+       "independent": 0.9996,
+       "equicorrelated": 0.9702
+      },
+      "all": {
+       "auroc": 0.9767,
+       "ci95": [
+        0.969,
+        0.9834
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 24.56,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.81,
+       "independent_from_these_outputs": 1.0,
+       "independent": 1.0,
+       "equicorrelated": 0.9748
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.7844,
+       "auroc_sd": 0.0102,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.8784,
+       "auroc_sd": 0.0064,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.9202,
+       "auroc_sd": 0.0034,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.9525,
+       "auroc_sd": 0.0038,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.9707,
+       "auroc_sd": 0.0014,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.9761,
+       "auroc_sd": 0.0008,
+       "draws": 20
+      }
+     }
+    },
+    "probe": {
+     "per_output_auroc": 0.8056,
+     "per_output_auroc_run_balanced": 0.7761,
+     "per_output_d": 1.0736,
+     "icc_within_arm": 0.1141,
+     "first_k": {
+      "1": {
+       "auroc": 0.5942,
+       "ci95": [
+        0.5712,
+        0.6179
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5942,
+       "independent_from_these_outputs": 0.5942,
+       "independent": 0.7761,
+       "equicorrelated": 0.7761
+      },
+      "2": {
+       "auroc": 0.648,
+       "ci95": [
+        0.6228,
+        0.6716
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.603,
+       "independent_from_these_outputs": 0.644,
+       "independent": 0.8585,
+       "equicorrelated": 0.8455
+      },
+      "3": {
+       "auroc": 0.6626,
+       "ci95": [
+        0.6388,
+        0.6869
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 1,
+       "per_output_auroc_of_these_outputs": 0.6013,
+       "independent_from_these_outputs": 0.6716,
+       "independent": 0.9057,
+       "equicorrelated": 0.8823
+      },
+      "5": {
+       "auroc": 0.6749,
+       "ci95": [
+        0.6485,
+        0.6988
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 9,
+       "per_output_auroc_of_these_outputs": 0.5931,
+       "independent_from_these_outputs": 0.7006,
+       "independent": 0.9551,
+       "equicorrelated": 0.9201
+      },
+      "10": {
+       "auroc": 0.8615,
+       "ci95": [
+        0.8433,
+        0.8786
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.88,
+       "runs_with_fewer_than_k": 76,
+       "per_output_auroc_of_these_outputs": 0.6597,
+       "independent_from_these_outputs": 0.9022,
+       "independent": 0.9915,
+       "equicorrelated": 0.9537
+      },
+      "20": {
+       "auroc": 0.9739,
+       "ci95": [
+        0.9668,
+        0.9801
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 18.04,
+       "runs_with_fewer_than_k": 653,
+       "per_output_auroc_of_these_outputs": 0.7758,
+       "independent_from_these_outputs": 0.9994,
+       "independent": 0.9994,
+       "equicorrelated": 0.9699
+      },
+      "all": {
+       "auroc": 0.9795,
+       "ci95": [
+        0.9734,
+        0.9844
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 24.56,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.8056,
+       "independent_from_these_outputs": 1.0,
+       "independent": 0.9999,
+       "equicorrelated": 0.9749
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.7759,
+       "auroc_sd": 0.0087,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.8539,
+       "auroc_sd": 0.0071,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.8944,
+       "auroc_sd": 0.0038,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.9323,
+       "auroc_sd": 0.0029,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.9649,
+       "auroc_sd": 0.0018,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.978,
+       "auroc_sd": 0.0005,
+       "draws": 20
+      }
+     }
+    }
+   }
+  },
+  "L0|task|null_e1_vs_e2": {
+   "outputs": 45556,
+   "runs": 1878,
+   "outputs_per_run": {
+    "mean": 24.26,
+    "median": 23.0
+   },
+   "by_method": {
+    "tfidf": {
+     "per_output_auroc": 0.5477,
+     "per_output_auroc_run_balanced": 0.5476,
+     "per_output_d": 0.169,
+     "icc_within_arm": 0.0775,
+     "first_k": {
+      "1": {
+       "auroc": 0.5704,
+       "ci95": [
+        0.5499,
+        0.5902
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5704,
+       "independent_from_these_outputs": 0.5704,
+       "independent": 0.5476,
+       "equicorrelated": 0.5476
+      },
+      "2": {
+       "auroc": 0.5888,
+       "ci95": [
+        0.5656,
+        0.6123
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5501,
+       "independent_from_these_outputs": 0.5706,
+       "independent": 0.5671,
+       "equicorrelated": 0.5647
+      },
+      "3": {
+       "auroc": 0.5981,
+       "ci95": [
+        0.5756,
+        0.6203
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 2,
+       "per_output_auroc_of_these_outputs": 0.5428,
+       "independent_from_these_outputs": 0.5738,
+       "independent": 0.582,
+       "equicorrelated": 0.5764
+      },
+      "5": {
+       "auroc": 0.5969,
+       "ci95": [
+        0.5758,
+        0.6201
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 6,
+       "per_output_auroc_of_these_outputs": 0.5328,
+       "independent_from_these_outputs": 0.5729,
+       "independent": 0.6053,
+       "equicorrelated": 0.5923
+      },
+      "10": {
+       "auroc": 0.6295,
+       "ci95": [
+        0.6089,
+        0.6507
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.9,
+       "runs_with_fewer_than_k": 70,
+       "per_output_auroc_of_these_outputs": 0.5314,
+       "independent_from_these_outputs": 0.5979,
+       "independent": 0.6465,
+       "equicorrelated": 0.6138
+      },
+      "20": {
+       "auroc": 0.6619,
+       "ci95": [
+        0.6392,
+        0.6861
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 18.05,
+       "runs_with_fewer_than_k": 666,
+       "per_output_auroc_of_these_outputs": 0.5346,
+       "independent_from_these_outputs": 0.644,
+       "independent": 0.6942,
+       "equicorrelated": 0.6305
+      },
+      "all": {
+       "auroc": 0.7086,
+       "ci95": [
+        0.6849,
+        0.7329
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 24.26,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5477,
+       "independent_from_these_outputs": 0.7225,
+       "independent": 0.722,
+       "equicorrelated": 0.6374
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.5503,
+       "auroc_sd": 0.0142,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.5737,
+       "auroc_sd": 0.0123,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.6052,
+       "auroc_sd": 0.0145,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.6326,
+       "auroc_sd": 0.0086,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.6724,
+       "auroc_sd": 0.0047,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.7007,
+       "auroc_sd": 0.0026,
+       "draws": 20
+      }
+     }
+    },
+    "probe": {
+     "per_output_auroc": 0.5025,
+     "per_output_auroc_run_balanced": 0.5041,
+     "per_output_d": 0.0145,
+     "icc_within_arm": 0.0069,
+     "first_k": {
+      "1": {
+       "auroc": 0.4962,
+       "ci95": [
+        0.4724,
+        0.5173
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4962,
+       "independent_from_these_outputs": 0.4962,
+       "independent": 0.5041,
+       "equicorrelated": 0.5041
+      },
+      "2": {
+       "auroc": 0.5021,
+       "ci95": [
+        0.4799,
+        0.5251
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5022,
+       "independent_from_these_outputs": 0.5031,
+       "independent": 0.5058,
+       "equicorrelated": 0.5058
+      },
+      "3": {
+       "auroc": 0.5003,
+       "ci95": [
+        0.4771,
+        0.5234
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 2,
+       "per_output_auroc_of_these_outputs": 0.5043,
+       "independent_from_these_outputs": 0.5074,
+       "independent": 0.5071,
+       "equicorrelated": 0.507
+      },
+      "5": {
+       "auroc": 0.5166,
+       "ci95": [
+        0.4928,
+        0.5412
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 6,
+       "per_output_auroc_of_these_outputs": 0.5061,
+       "independent_from_these_outputs": 0.5137,
+       "independent": 0.5092,
+       "equicorrelated": 0.509
+      },
+      "10": {
+       "auroc": 0.5084,
+       "ci95": [
+        0.4858,
+        0.5308
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.9,
+       "runs_with_fewer_than_k": 70,
+       "per_output_auroc_of_these_outputs": 0.5024,
+       "independent_from_these_outputs": 0.5075,
+       "independent": 0.5129,
+       "equicorrelated": 0.5125
+      },
+      "20": {
+       "auroc": 0.5192,
+       "ci95": [
+        0.4964,
+        0.5441
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 18.05,
+       "runs_with_fewer_than_k": 666,
+       "per_output_auroc_of_these_outputs": 0.5035,
+       "independent_from_these_outputs": 0.5149,
+       "independent": 0.5174,
+       "equicorrelated": 0.5165
+      },
+      "all": {
+       "auroc": 0.5214,
+       "ci95": [
+        0.4979,
+        0.5445
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 24.26,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5025,
+       "independent_from_these_outputs": 0.5124,
+       "independent": 0.5202,
+       "equicorrelated": 0.5187
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.5099,
+       "auroc_sd": 0.0149,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.5134,
+       "auroc_sd": 0.0097,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.5073,
+       "auroc_sd": 0.0124,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.5109,
+       "auroc_sd": 0.013,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.5137,
+       "auroc_sd": 0.008,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.5226,
+       "auroc_sd": 0.006,
+       "draws": 20
+      }
+     }
+    }
+   }
+  },
+  "L7|env|real_vs_sim": {
+   "outputs": 45015,
+   "runs": 1878,
+   "outputs_per_run": {
+    "mean": 23.97,
+    "median": 23.0
+   },
+   "by_method": {
+    "tfidf": {
+     "per_output_auroc": 0.5088,
+     "per_output_auroc_run_balanced": 0.5085,
+     "per_output_d": 0.0301,
+     "icc_within_arm": 0.0709,
+     "first_k": {
+      "1": {
+       "auroc": 0.5177,
+       "ci95": [
+        0.5023,
+        0.5352
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5177,
+       "independent_from_these_outputs": 0.5177,
+       "independent": 0.5085,
+       "equicorrelated": 0.5085
+      },
+      "2": {
+       "auroc": 0.516,
+       "ci95": [
+        0.5008,
+        0.5321
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5098,
+       "independent_from_these_outputs": 0.5139,
+       "independent": 0.512,
+       "equicorrelated": 0.5116
+      },
+      "3": {
+       "auroc": 0.5259,
+       "ci95": [
+        0.51,
+        0.5421
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 1,
+       "per_output_auroc_of_these_outputs": 0.5103,
+       "independent_from_these_outputs": 0.5178,
+       "independent": 0.5147,
+       "equicorrelated": 0.5138
+      },
+      "5": {
+       "auroc": 0.516,
+       "ci95": [
+        0.5008,
+        0.5314
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 10,
+       "per_output_auroc_of_these_outputs": 0.5025,
+       "independent_from_these_outputs": 0.5055,
+       "independent": 0.519,
+       "equicorrelated": 0.5167
+      },
+      "10": {
+       "auroc": 0.5307,
+       "ci95": [
+        0.5144,
+        0.547
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.87,
+       "runs_with_fewer_than_k": 81,
+       "per_output_auroc_of_these_outputs": 0.5073,
+       "independent_from_these_outputs": 0.5229,
+       "independent": 0.5266,
+       "equicorrelated": 0.5209
+      },
+      "20": {
+       "auroc": 0.5512,
+       "ci95": [
+        0.5348,
+        0.5675
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 17.88,
+       "runs_with_fewer_than_k": 697,
+       "per_output_auroc_of_these_outputs": 0.5074,
+       "independent_from_these_outputs": 0.5312,
+       "independent": 0.5358,
+       "equicorrelated": 0.5242
+      },
+      "all": {
+       "auroc": 0.5551,
+       "ci95": [
+        0.5384,
+        0.5715
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 23.97,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5088,
+       "independent_from_these_outputs": 0.5432,
+       "independent": 0.5415,
+       "equicorrelated": 0.5256
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.5094,
+       "auroc_sd": 0.0074,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.5146,
+       "auroc_sd": 0.013,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.5184,
+       "auroc_sd": 0.0122,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.5269,
+       "auroc_sd": 0.0076,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.5401,
+       "auroc_sd": 0.0098,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.5522,
+       "auroc_sd": 0.0035,
+       "draws": 20
+      }
+     }
+    },
+    "probe": {
+     "per_output_auroc": 0.5109,
+     "per_output_auroc_run_balanced": 0.5116,
+     "per_output_d": 0.041,
+     "icc_within_arm": 0.0177,
+     "first_k": {
+      "1": {
+       "auroc": 0.5017,
+       "ci95": [
+        0.4827,
+        0.5219
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5017,
+       "independent_from_these_outputs": 0.5017,
+       "independent": 0.5116,
+       "equicorrelated": 0.5116
+      },
+      "2": {
+       "auroc": 0.4933,
+       "ci95": [
+        0.4734,
+        0.5131
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4969,
+       "independent_from_these_outputs": 0.4957,
+       "independent": 0.5164,
+       "equicorrelated": 0.5162
+      },
+      "3": {
+       "auroc": 0.4876,
+       "ci95": [
+        0.4658,
+        0.5074
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 1,
+       "per_output_auroc_of_these_outputs": 0.4942,
+       "independent_from_these_outputs": 0.4899,
+       "independent": 0.52,
+       "equicorrelated": 0.5197
+      },
+      "5": {
+       "auroc": 0.4866,
+       "ci95": [
+        0.4649,
+        0.506
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 10,
+       "per_output_auroc_of_these_outputs": 0.495,
+       "independent_from_these_outputs": 0.4888,
+       "independent": 0.5259,
+       "equicorrelated": 0.525
+      },
+      "10": {
+       "auroc": 0.5114,
+       "ci95": [
+        0.4879,
+        0.5319
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.87,
+       "runs_with_fewer_than_k": 81,
+       "per_output_auroc_of_these_outputs": 0.5049,
+       "independent_from_these_outputs": 0.5155,
+       "independent": 0.5363,
+       "equicorrelated": 0.5338
+      },
+      "20": {
+       "auroc": 0.5304,
+       "ci95": [
+        0.5101,
+        0.5501
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 17.88,
+       "runs_with_fewer_than_k": 697,
+       "per_output_auroc_of_these_outputs": 0.5099,
+       "independent_from_these_outputs": 0.5419,
+       "independent": 0.5488,
+       "equicorrelated": 0.5429
+      },
+      "all": {
+       "auroc": 0.536,
+       "ci95": [
+        0.5143,
+        0.5569
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 23.97,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5109,
+       "independent_from_these_outputs": 0.5531,
+       "independent": 0.5565,
+       "equicorrelated": 0.5477
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.515,
+       "auroc_sd": 0.0121,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.5147,
+       "auroc_sd": 0.0123,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.5162,
+       "auroc_sd": 0.0135,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.522,
+       "auroc_sd": 0.0121,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.5286,
+       "auroc_sd": 0.0077,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.5326,
+       "auroc_sd": 0.0052,
+       "draws": 20
+      }
+     }
+    }
+   }
+  },
+  "L7|env|null_e1_vs_e2": {
+   "outputs": 44369,
+   "runs": 1878,
+   "outputs_per_run": {
+    "mean": 23.63,
+    "median": 23.0
+   },
+   "by_method": {
+    "tfidf": {
+     "per_output_auroc": 0.4993,
+     "per_output_auroc_run_balanced": 0.4975,
+     "per_output_d": -0.0088,
+     "icc_within_arm": 0.1284,
+     "first_k": {
+      "1": {
+       "auroc": 0.5022,
+       "ci95": [
+        0.4875,
+        0.5167
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5022,
+       "independent_from_these_outputs": 0.5022,
+       "independent": 0.4975,
+       "equicorrelated": 0.4975
+      },
+      "2": {
+       "auroc": 0.4868,
+       "ci95": [
+        0.4745,
+        0.4995
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4911,
+       "independent_from_these_outputs": 0.4874,
+       "independent": 0.4965,
+       "equicorrelated": 0.4967
+      },
+      "3": {
+       "auroc": 0.4922,
+       "ci95": [
+        0.4799,
+        0.5052
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 2,
+       "per_output_auroc_of_these_outputs": 0.4944,
+       "independent_from_these_outputs": 0.4903,
+       "independent": 0.4957,
+       "equicorrelated": 0.4962
+      },
+      "5": {
+       "auroc": 0.4957,
+       "ci95": [
+        0.4846,
+        0.507
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 8,
+       "per_output_auroc_of_these_outputs": 0.497,
+       "independent_from_these_outputs": 0.4934,
+       "independent": 0.4945,
+       "equicorrelated": 0.4955
+      },
+      "10": {
+       "auroc": 0.494,
+       "ci95": [
+        0.4831,
+        0.5053
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.89,
+       "runs_with_fewer_than_k": 75,
+       "per_output_auroc_of_these_outputs": 0.4968,
+       "independent_from_these_outputs": 0.49,
+       "independent": 0.4922,
+       "equicorrelated": 0.4947
+      },
+      "20": {
+       "auroc": 0.4941,
+       "ci95": [
+        0.4842,
+        0.5052
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 17.86,
+       "runs_with_fewer_than_k": 715,
+       "per_output_auroc_of_these_outputs": 0.497,
+       "independent_from_these_outputs": 0.4874,
+       "independent": 0.4896,
+       "equicorrelated": 0.4941
+      },
+      "all": {
+       "auroc": 0.4968,
+       "ci95": [
+        0.4862,
+        0.5085
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 23.63,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4993,
+       "independent_from_these_outputs": 0.4967,
+       "independent": 0.488,
+       "equicorrelated": 0.4939
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.4986,
+       "auroc_sd": 0.0132,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.4977,
+       "auroc_sd": 0.0097,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.5,
+       "auroc_sd": 0.0095,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.501,
+       "auroc_sd": 0.0098,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.4995,
+       "auroc_sd": 0.0053,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.4969,
+       "auroc_sd": 0.0029,
+       "draws": 20
+      }
+     }
+    },
+    "probe": {
+     "per_output_auroc": 0.4966,
+     "per_output_auroc_run_balanced": 0.4986,
+     "per_output_d": -0.005,
+     "icc_within_arm": 0.0188,
+     "first_k": {
+      "1": {
+       "auroc": 0.4881,
+       "ci95": [
+        0.4687,
+        0.5091
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4881,
+       "independent_from_these_outputs": 0.4881,
+       "independent": 0.4986,
+       "equicorrelated": 0.4986
+      },
+      "2": {
+       "auroc": 0.499,
+       "ci95": [
+        0.479,
+        0.5194
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4977,
+       "independent_from_these_outputs": 0.4967,
+       "independent": 0.498,
+       "equicorrelated": 0.498
+      },
+      "3": {
+       "auroc": 0.5005,
+       "ci95": [
+        0.4809,
+        0.5203
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 2,
+       "per_output_auroc_of_these_outputs": 0.4953,
+       "independent_from_these_outputs": 0.4919,
+       "independent": 0.4976,
+       "equicorrelated": 0.4976
+      },
+      "5": {
+       "auroc": 0.495,
+       "ci95": [
+        0.4739,
+        0.5167
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 8,
+       "per_output_auroc_of_these_outputs": 0.495,
+       "independent_from_these_outputs": 0.4888,
+       "independent": 0.4968,
+       "equicorrelated": 0.497
+      },
+      "10": {
+       "auroc": 0.5112,
+       "ci95": [
+        0.4914,
+        0.5312
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.89,
+       "runs_with_fewer_than_k": 75,
+       "per_output_auroc_of_these_outputs": 0.5017,
+       "independent_from_these_outputs": 0.5052,
+       "independent": 0.4956,
+       "equicorrelated": 0.4959
+      },
+      "20": {
+       "auroc": 0.4988,
+       "ci95": [
+        0.4819,
+        0.5186
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 17.86,
+       "runs_with_fewer_than_k": 715,
+       "per_output_auroc_of_these_outputs": 0.4968,
+       "independent_from_these_outputs": 0.4864,
+       "independent": 0.494,
+       "equicorrelated": 0.4948
+      },
+      "all": {
+       "auroc": 0.5035,
+       "ci95": [
+        0.4862,
+        0.5227
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 23.63,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4966,
+       "independent_from_these_outputs": 0.4837,
+       "independent": 0.4931,
+       "equicorrelated": 0.4942
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.5027,
+       "auroc_sd": 0.0132,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.4915,
+       "auroc_sd": 0.0118,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.4981,
+       "auroc_sd": 0.0106,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.501,
+       "auroc_sd": 0.011,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.5044,
+       "auroc_sd": 0.0082,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.5046,
+       "auroc_sd": 0.0048,
+       "draws": 20
+      }
+     }
+    }
+   }
+  },
+  "L7|task|real_vs_sim": {
+   "outputs": 45015,
+   "runs": 1878,
+   "outputs_per_run": {
+    "mean": 23.97,
+    "median": 23.0
+   },
+   "by_method": {
+    "tfidf": {
+     "per_output_auroc": 0.537,
+     "per_output_auroc_run_balanced": 0.5358,
+     "per_output_d": 0.127,
+     "icc_within_arm": 0.0472,
+     "first_k": {
+      "1": {
+       "auroc": 0.5576,
+       "ci95": [
+        0.5371,
+        0.5768
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5576,
+       "independent_from_these_outputs": 0.5576,
+       "independent": 0.5358,
+       "equicorrelated": 0.5358
+      },
+      "2": {
+       "auroc": 0.5347,
+       "ci95": [
+        0.5144,
+        0.5557
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5246,
+       "independent_from_these_outputs": 0.5348,
+       "independent": 0.5505,
+       "equicorrelated": 0.5494
+      },
+      "3": {
+       "auroc": 0.5468,
+       "ci95": [
+        0.5233,
+        0.5697
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 1,
+       "per_output_auroc_of_these_outputs": 0.5213,
+       "independent_from_these_outputs": 0.5368,
+       "independent": 0.5618,
+       "equicorrelated": 0.5591
+      },
+      "5": {
+       "auroc": 0.5386,
+       "ci95": [
+        0.5182,
+        0.5592
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 10,
+       "per_output_auroc_of_these_outputs": 0.5152,
+       "independent_from_these_outputs": 0.534,
+       "independent": 0.5795,
+       "equicorrelated": 0.573
+      },
+      "10": {
+       "auroc": 0.5883,
+       "ci95": [
+        0.5689,
+        0.609
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.87,
+       "runs_with_fewer_than_k": 81,
+       "per_output_auroc_of_these_outputs": 0.523,
+       "independent_from_these_outputs": 0.5719,
+       "independent": 0.6111,
+       "equicorrelated": 0.5937
+      },
+      "20": {
+       "auroc": 0.6243,
+       "ci95": [
+        0.6065,
+        0.6431
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 17.88,
+       "runs_with_fewer_than_k": 697,
+       "per_output_auroc_of_these_outputs": 0.5271,
+       "independent_from_these_outputs": 0.613,
+       "independent": 0.648,
+       "equicorrelated": 0.6116
+      },
+      "all": {
+       "auroc": 0.6661,
+       "ci95": [
+        0.6479,
+        0.6862
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 23.97,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.537,
+       "independent_from_these_outputs": 0.6752,
+       "independent": 0.6699,
+       "equicorrelated": 0.6197
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.5369,
+       "auroc_sd": 0.0126,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.5522,
+       "auroc_sd": 0.012,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.5737,
+       "auroc_sd": 0.0108,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.5931,
+       "auroc_sd": 0.0127,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.626,
+       "auroc_sd": 0.0073,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.6564,
+       "auroc_sd": 0.0046,
+       "draws": 20
+      }
+     }
+    },
+    "probe": {
+     "per_output_auroc": 0.5352,
+     "per_output_auroc_run_balanced": 0.5355,
+     "per_output_d": 0.126,
+     "icc_within_arm": 0.0148,
+     "first_k": {
+      "1": {
+       "auroc": 0.5236,
+       "ci95": [
+        0.5019,
+        0.5454
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5236,
+       "independent_from_these_outputs": 0.5236,
+       "independent": 0.5355,
+       "equicorrelated": 0.5355
+      },
+      "2": {
+       "auroc": 0.5309,
+       "ci95": [
+        0.5079,
+        0.5523
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5213,
+       "independent_from_these_outputs": 0.5301,
+       "independent": 0.5501,
+       "equicorrelated": 0.5498
+      },
+      "3": {
+       "auroc": 0.5537,
+       "ci95": [
+        0.5288,
+        0.5782
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 1,
+       "per_output_auroc_of_these_outputs": 0.5307,
+       "independent_from_these_outputs": 0.5531,
+       "independent": 0.5613,
+       "equicorrelated": 0.5604
+      },
+      "5": {
+       "auroc": 0.5516,
+       "ci95": [
+        0.5265,
+        0.5764
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 10,
+       "per_output_auroc_of_these_outputs": 0.5231,
+       "independent_from_these_outputs": 0.5515,
+       "independent": 0.5789,
+       "equicorrelated": 0.5767
+      },
+      "10": {
+       "auroc": 0.5763,
+       "ci95": [
+        0.5538,
+        0.5975
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.87,
+       "runs_with_fewer_than_k": 81,
+       "per_output_auroc_of_these_outputs": 0.5242,
+       "independent_from_these_outputs": 0.5757,
+       "independent": 0.6102,
+       "equicorrelated": 0.6038
+      },
+      "20": {
+       "auroc": 0.6332,
+       "ci95": [
+        0.6113,
+        0.6549
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 17.88,
+       "runs_with_fewer_than_k": 697,
+       "per_output_auroc_of_these_outputs": 0.5336,
+       "independent_from_these_outputs": 0.6391,
+       "independent": 0.6468,
+       "equicorrelated": 0.6319
+      },
+      "all": {
+       "auroc": 0.6521,
+       "ci95": [
+        0.6304,
+        0.6739
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 23.97,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5352,
+       "independent_from_these_outputs": 0.6675,
+       "independent": 0.6686,
+       "equicorrelated": 0.6468
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.5347,
+       "auroc_sd": 0.013,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.5521,
+       "auroc_sd": 0.0106,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.5674,
+       "auroc_sd": 0.0091,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.5803,
+       "auroc_sd": 0.0116,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.6132,
+       "auroc_sd": 0.0093,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.64,
+       "auroc_sd": 0.0043,
+       "draws": 20
+      }
+     }
+    }
+   }
+  },
+  "L7|task|null_e1_vs_e2": {
+   "outputs": 44369,
+   "runs": 1878,
+   "outputs_per_run": {
+    "mean": 23.63,
+    "median": 23.0
+   },
+   "by_method": {
+    "tfidf": {
+     "per_output_auroc": 0.4981,
+     "per_output_auroc_run_balanced": 0.4977,
+     "per_output_d": -0.0081,
+     "icc_within_arm": 0.0678,
+     "first_k": {
+      "1": {
+       "auroc": 0.4959,
+       "ci95": [
+        0.4776,
+        0.5139
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4959,
+       "independent_from_these_outputs": 0.4959,
+       "independent": 0.4977,
+       "equicorrelated": 0.4977
+      },
+      "2": {
+       "auroc": 0.5006,
+       "ci95": [
+        0.4824,
+        0.5183
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.501,
+       "independent_from_these_outputs": 0.5014,
+       "independent": 0.4968,
+       "equicorrelated": 0.4969
+      },
+      "3": {
+       "auroc": 0.5018,
+       "ci95": [
+        0.4828,
+        0.5199
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 2,
+       "per_output_auroc_of_these_outputs": 0.5032,
+       "independent_from_these_outputs": 0.5056,
+       "independent": 0.496,
+       "equicorrelated": 0.4963
+      },
+      "5": {
+       "auroc": 0.4803,
+       "ci95": [
+        0.4613,
+        0.4996
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 8,
+       "per_output_auroc_of_these_outputs": 0.4947,
+       "independent_from_these_outputs": 0.4883,
+       "independent": 0.4949,
+       "equicorrelated": 0.4955
+      },
+      "10": {
+       "auroc": 0.4989,
+       "ci95": [
+        0.482,
+        0.5154
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.89,
+       "runs_with_fewer_than_k": 75,
+       "per_output_auroc_of_these_outputs": 0.4998,
+       "independent_from_these_outputs": 0.4993,
+       "independent": 0.4928,
+       "equicorrelated": 0.4943
+      },
+      "20": {
+       "auroc": 0.4951,
+       "ci95": [
+        0.4809,
+        0.5105
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 17.86,
+       "runs_with_fewer_than_k": 715,
+       "per_output_auroc_of_these_outputs": 0.4971,
+       "independent_from_these_outputs": 0.4876,
+       "independent": 0.4904,
+       "equicorrelated": 0.4934
+      },
+      "all": {
+       "auroc": 0.4973,
+       "ci95": [
+        0.4831,
+        0.5112
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 23.63,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4981,
+       "independent_from_these_outputs": 0.4907,
+       "independent": 0.4889,
+       "equicorrelated": 0.493
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.5001,
+       "auroc_sd": 0.0122,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.4968,
+       "auroc_sd": 0.0119,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.4983,
+       "auroc_sd": 0.0096,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.4962,
+       "auroc_sd": 0.0094,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.4948,
+       "auroc_sd": 0.0086,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.4976,
+       "auroc_sd": 0.0039,
+       "draws": 20
+      }
+     }
+    },
+    "probe": {
+     "per_output_auroc": 0.4963,
+     "per_output_auroc_run_balanced": 0.4998,
+     "per_output_d": -0.0008,
+     "icc_within_arm": 0.0114,
+     "first_k": {
+      "1": {
+       "auroc": 0.497,
+       "ci95": [
+        0.4754,
+        0.5166
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 1.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.497,
+       "independent_from_these_outputs": 0.497,
+       "independent": 0.4998,
+       "equicorrelated": 0.4998
+      },
+      "2": {
+       "auroc": 0.5107,
+       "ci95": [
+        0.4892,
+        0.532
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 2.0,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.5036,
+       "independent_from_these_outputs": 0.5052,
+       "independent": 0.4997,
+       "equicorrelated": 0.4997
+      },
+      "3": {
+       "auroc": 0.5053,
+       "ci95": [
+        0.4829,
+        0.5265
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 3.0,
+       "runs_with_fewer_than_k": 2,
+       "per_output_auroc_of_these_outputs": 0.501,
+       "independent_from_these_outputs": 0.5018,
+       "independent": 0.4996,
+       "equicorrelated": 0.4996
+      },
+      "5": {
+       "auroc": 0.5015,
+       "ci95": [
+        0.478,
+        0.523
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 4.99,
+       "runs_with_fewer_than_k": 8,
+       "per_output_auroc_of_these_outputs": 0.5027,
+       "independent_from_these_outputs": 0.5059,
+       "independent": 0.4995,
+       "equicorrelated": 0.4995
+      },
+      "10": {
+       "auroc": 0.5135,
+       "ci95": [
+        0.4895,
+        0.5363
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 9.89,
+       "runs_with_fewer_than_k": 75,
+       "per_output_auroc_of_these_outputs": 0.5034,
+       "independent_from_these_outputs": 0.5106,
+       "independent": 0.4993,
+       "equicorrelated": 0.4993
+      },
+      "20": {
+       "auroc": 0.5043,
+       "ci95": [
+        0.4816,
+        0.5258
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 17.86,
+       "runs_with_fewer_than_k": 715,
+       "per_output_auroc_of_these_outputs": 0.498,
+       "independent_from_these_outputs": 0.4915,
+       "independent": 0.499,
+       "equicorrelated": 0.4991
+      },
+      "all": {
+       "auroc": 0.5043,
+       "ci95": [
+        0.4818,
+        0.5253
+       ],
+       "n": 1878,
+       "n_main_tasks": 536,
+       "k_eff": 23.63,
+       "runs_with_fewer_than_k": 0,
+       "per_output_auroc_of_these_outputs": 0.4963,
+       "independent_from_these_outputs": 0.4818,
+       "independent": 0.4989,
+       "equicorrelated": 0.499
+      }
+     },
+     "random_k": {
+      "1": {
+       "auroc_mean": 0.5022,
+       "auroc_sd": 0.0186,
+       "draws": 20
+      },
+      "2": {
+       "auroc_mean": 0.4946,
+       "auroc_sd": 0.0091,
+       "draws": 20
+      },
+      "3": {
+       "auroc_mean": 0.4991,
+       "auroc_sd": 0.0105,
+       "draws": 20
+      },
+      "5": {
+       "auroc_mean": 0.5027,
+       "auroc_sd": 0.013,
+       "draws": 20
+      },
+      "10": {
+       "auroc_mean": 0.5061,
+       "auroc_sd": 0.0096,
+       "draws": 20
+      },
+      "20": {
+       "auroc_mean": 0.5031,
+       "auroc_sd": 0.0048,
+       "draws": 20
+      }
+     }
+    }
+   }
+  }
+ }
+}

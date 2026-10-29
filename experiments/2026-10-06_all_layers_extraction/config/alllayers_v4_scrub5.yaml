@@ -1,0 +1,9 @@
+# All 64 layers at the segment-end positions, five arms (splits v4: real and simulated honest added), level-5 text.
+run: 2026-10-06_la_segment-end-v4-scrub5_qwen3-32b_alllayers_v1
+inputs_from: 2026-10-06_la_segment-end-v4-scrub5_qwen3-32b_v1   # staged only (segment_end_v4_scrub5.yaml)
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 64                                              # speed over cost
+chunk_size: 25                                          # transcripts per per-layer chunk file

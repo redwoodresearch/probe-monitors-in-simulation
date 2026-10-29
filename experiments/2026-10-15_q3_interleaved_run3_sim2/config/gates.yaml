@@ -1,0 +1,17 @@
+# In-launch gates for every interleaved launch (RULE.md, "Stages and gates"). Every gate PAUSES new starts; none kills a
+# run. Thresholds sit below each arm's own baseline (real attack 99.4%, simulated attack 96.2% usable tonight).
+real_attack_usable:          # world run3
+  min_ended: 20
+  pause_if_usable_at_or_below: 0.90
+  action: pause new real starts by the on-box pause-drain (health_monitor.py pattern); run_pilot.py has no PAUSE_REAL
+sim_attack_usable:           # world sim2
+  min_ended: 20
+  pause_if_usable_at_or_below: 0.75
+  action: touch <run>/PAUSE_SIMS (the new-mains gate1_nm pattern)
+sim_cap_stop:
+  bound: cap_usd + 100       # fresh readings only; a stale reading never stops anything
+  action: touch <run>/PAUSE_SIMS, latched until a person lifts it
+before_launch:
+  - freeze: every harness file hashes as that harness's manifest says, plus this branch's config and task files
+  - settings equality: gate_settings.py against the main's recorded settings
+  - one launcher per harness: no other run_pilot.py of the same harness directory is running on the box

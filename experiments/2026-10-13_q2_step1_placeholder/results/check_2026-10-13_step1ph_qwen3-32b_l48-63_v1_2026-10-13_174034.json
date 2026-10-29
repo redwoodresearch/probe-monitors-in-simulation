@@ -1,0 +1,102 @@
+{
+ "git": "2667a3fcc4fc896bb343378738b1995426004540",
+ "run": "2026-10-13_step1ph_qwen3-32b_l48-63_v1",
+ "staged": "2026-10-13_q2_step1_placeholder_inputs_v1",
+ "metas by arm": {
+  "real-attack-e1-ph": 939,
+  "real-attack-e2-ph": 939,
+  "real-honest-ph": 990,
+  "sim-attack-ph": 939,
+  "sim-honest-ph": 437
+ },
+ "expected by arm": {
+  "real-attack-e1-ph": 939,
+  "real-attack-e2-ph": 939,
+  "real-honest-ph": 990,
+  "sim-attack-ph": 939,
+  "sim-honest-ph": 437
+ },
+ "rows": 638112,
+ "non-finite by layer": {
+  "48": 0,
+  "63": 0
+ },
+ "problems": {
+  "metas not exactly the staged (arm, key) set": 0,
+  "chunk without its done marker": 0,
+  "index entry without its meta, or meta in another chunk": 0,
+  "row_start or n_rows differ": 0,
+  "offsets not cumulative from 0": 0,
+  "layer file with the wrong row count": 0,
+  "meta without exactly one matching chunk-index entry": 0,
+  "meta rows != kept positions": 0,
+  "reproduction: step-0 positions differ from the reference": 1
+ },
+ "output_end span lengths": {
+  "4": 127622
+ },
+ "output_end last tokens": {
+  "\u0120withheld": 127622
+ },
+ "call_end coverage": {
+  "real-attack-e1-ph|kept": 26807,
+  "real-attack-e1-ph|on a fixed-slot token": 16624,
+  "real-attack-e2-ph|kept": 26487,
+  "real-attack-e2-ph|on a fixed-slot token": 16416,
+  "real-honest-ph|kept": 33696,
+  "real-honest-ph|on a fixed-slot token": 16487,
+  "sim-attack-ph|kept": 26384,
+  "sim-attack-ph|on a fixed-slot token": 16012,
+  "sim-honest-ph|kept": 14249,
+  "sim-honest-ph|on a fixed-slot token": 6830
+ },
+ "reproduction (step-0 rows vs the all-layers run)": {
+  "NVIDIA H100 80GB HBM3 L48": {
+   "rows": 561,
+   "bit-exact": 561,
+   "max abs diff": 0.0,
+   "min cosine": 0.9999998807907104
+  },
+  "NVIDIA H100 80GB HBM3 L63": {
+   "rows": 561,
+   "bit-exact": 561,
+   "max abs diff": 0.0,
+   "min cosine": 0.9999998807907104
+  }
+ },
+ "GPU by shard": {
+  "0": "NVIDIA H100 80GB HBM3",
+  "1": "NVIDIA H100 80GB HBM3",
+  "2": "NVIDIA H100 80GB HBM3",
+  "3": "NVIDIA H100 80GB HBM3",
+  "4": "NVIDIA H100 80GB HBM3",
+  "5": "NVIDIA H100 80GB HBM3",
+  "6": "NVIDIA H100 80GB HBM3",
+  "7": "NVIDIA H100 80GB HBM3",
+  "8": "NVIDIA H100 80GB HBM3",
+  "9": "NVIDIA H100 80GB HBM3",
+  "10": "NVIDIA H100 80GB HBM3",
+  "11": "NVIDIA H100 80GB HBM3",
+  "12": "NVIDIA H100 80GB HBM3",
+  "13": "NVIDIA H100 80GB HBM3",
+  "14": "NVIDIA H100 80GB HBM3",
+  "15": "NVIDIA H100 80GB HBM3",
+  "16": "NVIDIA H100 80GB HBM3",
+  "17": "NVIDIA H100 80GB HBM3",
+  "18": "NVIDIA H100 80GB HBM3",
+  "19": "NVIDIA H100 80GB HBM3",
+  "20": "NVIDIA H100 80GB HBM3",
+  "21": "NVIDIA H100 80GB HBM3",
+  "22": "NVIDIA H100 80GB HBM3",
+  "23": "NVIDIA H100 80GB HBM3",
+  "24": "NVIDIA H100 80GB HBM3",
+  "25": "NVIDIA H100 80GB HBM3",
+  "26": "NVIDIA H100 80GB HBM3",
+  "27": "NVIDIA H100 80GB HBM3",
+  "28": "NVIDIA H100 80GB HBM3",
+  "29": "NVIDIA H100 80GB HBM3",
+  "30": "NVIDIA H100 80GB HBM3",
+  "31": "NVIDIA H100 NVL"
+ },
+ "clean": false
+}

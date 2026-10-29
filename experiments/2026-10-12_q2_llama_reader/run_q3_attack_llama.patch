@@ -1,0 +1,51 @@
+Llama reader: run_q3_attack_llama.py as run (first committed at 380ef089 on aswin/q2-llama-reader, reachable from this
+stack's top merge), kept here as a patch against its root source on main for the PR size cap (733 lines). The full copy
+(sha256 433ebe3e368bc8f061c29861bb824d13cbb92d5314d9a4e1cd0b4074014c54fc, 46113 bytes) is on S3 via results/s3_manifest_v3.json.
+Source on main: experiments/2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py, sha256 7f1f06c2079fbd9f4d1d1ff32bb16cd7d383b7399374ac83ee1cb164fc35dc77.
+(The copy's own docstring names its direct parent, the Olmo runner: that source plus run_q3_attack_olmo.patch.)
+Rebuild, from the repository root:
+  patch -o experiments/2026-10-12_q2_llama_reader/run_q3_attack_llama.py experiments/2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py experiments/2026-10-12_q2_llama_reader/run_q3_attack_llama.patch
+
+--- experiments/2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py
++++ experiments/2026-10-12_q2_llama_reader/run_q3_attack_llama.py
+@@ -1,3 +1,8 @@
++"""Q3 attack detector #36's recipe on Llama-3.3-70B as the reader (PLAN.md step C here): the Olmo runner
++(../2026-10-12_q2_olmo_reader: run_q3_attack_qwen35.py at 02336e38 plus run_q3_attack_olmo.patch) with only its app,
++activations Volume (the Llama extraction, run_extract_llama.py), work Volume, S3 prefix, default config and H (8192)
++changed. The rest below, the earlier copies' text included, is unchanged:
++"""
+ """Q3 attack detector #36's recipe on Qwen3.5-27B as the reader (PLAN.md here): a copy of
+ experiments/2026-10-06_q3_attack_detector/run_q3_attack.py at main with only these changes: the activations Volume is
+ the Qwen3.5 one (read-only), the staged inputs come from a second, read-only Volume (/inputs, the Qwen3-32B dump's
+@@ -49,16 +54,16 @@
+ 
+ HERE = Path(__file__).parent
+ REPO = HERE.parent.parent
+-APP = "probe-shift_aswin-surya_sub-q2-qwen35-reply_probe_kill-2026-11-12"
+-ACTS = "probe-shift_aswin-surya_sub-qwen35_acts_kill-2026-11-06"
+-INPUTS = "probe-shift_aswin-surya_sub-la-activations"  # the staged reader inputs (the Qwen3.5 dump read these)
+-WORK = "probe-shift_aswin-surya_sub-q2-qwen35-reply_work_kill-2026-11-12"
++APP = "probe-shift_aswin-surya_sub-q2-llama_probe_kill-2026-11-12"
++ACTS = "probe-shift_aswin-surya_sub-q2-llama_acts_kill-2026-11-12"
++INPUTS = "probe-shift_aswin-surya_sub-la-activations"  # the staged reader inputs (the Qwen3.5 dump read these)
++WORK = "probe-shift_aswin-surya_sub-q2-llama_work_kill-2026-11-12"
+ GPU = "H100!"
+-H = 5120
++H = 8192
+ MANIFEST_VERSION = 2  # part of data_id: bump when the manifest's outputs change (2: a tool column in the tables)
+ # Durable home of each run's raw scores and trained probes (the work Volume is kill-dated): the project bucket
+ # (private, versioned), one prefix per run. Archives are written from the laptop with the user's own AWS session.
+-S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-12_q2_qwen35_reply_readout/"
++S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-12_q2_llama_reader/"
+ S3_ARCHIVE_REGION = "us-east-2"
+ ARCHIVE_MAX_BYTES = 1_000_000_000  # a run's archive is ~350 MB; refuse anything over ~1 GB rather than fetch it
+ 
+@@ -628,7 +633,7 @@
+ 
+ 
+ @app.local_entrypoint()
+-def main(test: bool = False, resume: str = "", config: str = "q3_attack_qwen35.yaml", pack_only: bool = False,
++def main(test: bool = False, resume: str = "", config: str = "q3_attack_llama.yaml", pack_only: bool = False,
+          check_data: str = ""):
+     """`--test`: a few main tasks per fold, one layer, a small null, under a separate run id. `--resume <run_id>`:
+     spawn only the fits whose outputs are not on the work Volume yet (a fit still running from the first launch is

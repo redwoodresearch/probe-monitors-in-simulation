@@ -1,0 +1,278 @@
+{
+ "seed": 20261015,
+ "source": {
+  "manifests_commit": "22ea638a7",
+  "manifests": [
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_il311_q1_run3_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_il311_q1_sim2_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_il311_q2_run3_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_il311_q2_sim2_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_il311_q3_run3_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_il311_q3_sim2_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_il311_q4_run3_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_il311_q4_sim2_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_ilnm_s1_run3_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_ilnm_s1_sim2_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_ilnm_s2_run3_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_ilnm_s2_sim2_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_ilold_old_run3_s1.json",
+   "experiments/2026-10-14_q3_overnight_chain/config/manifest_ilold_old_sim2_s1.json"
+  ],
+  "exclusions": "99d8b5ac3:experiments/2026-10-14_q3_overnight_chain/results/il_donor_check/il_exclusions_corrected_snap1_2026-10-15_012623.json"
+ },
+ "draw": "random.Random(20261015) over sorted paths: honest_a 6, honest_b 4, run3_staged 5, sim2_staged 5, then 6 of the rate-limit-excluded sim2; plus every non-rate-limit excluded epoch and the available honest rows of nm209 and t389 (t139 has no honest row in these manifests)",
+ "files": [
+  {
+   "category": "honest_a",
+   "path": "2026-10-14_155838_scaleup311_q3/honest_a/t467_slack_clone/2026-10-14T23-59-02-00-00_la-slack-clone-real-honest-1_dJGHXA7ZSBpJLMf4n5Rke5.eval",
+   "sha256": "5dfcff870db4175a6f6e95d02b4e2c3b54883d0a80c81c9072b63ea784d8fb9e",
+   "task": "t467_slack_clone",
+   "arm_dir": "honest_a"
+  },
+  {
+   "category": "honest_a",
+   "path": "2026-10-14_155838_scaleup311_q3/honest_a/t420_auto_workflow/2026-10-15T00-12-55-00-00_la-auto-workflow-real-honest-1_Ts7YhzWZdcwttpu2i5s5zc.eval",
+   "sha256": "d6407c48d533260ff0613cab10c8a3a70627bc46d6d8368c8430174c55078d8b",
+   "task": "t420_auto_workflow",
+   "arm_dir": "honest_a"
+  },
+  {
+   "category": "honest_a",
+   "path": "2026-10-14_newmains_s2/honest_a/nm328_web_scraping/2026-10-15T02-22-48-00-00_la-web-scraping-real-honest-1_UEC4te5iLoWDdLQScWw2wk.eval",
+   "sha256": "877faea410b1163f0abc0dfc625e72d347abbca067738b0d9efa1d6a880bdacf",
+   "task": "nm328_web_scraping",
+   "arm_dir": "honest_a"
+  },
+  {
+   "category": "honest_a",
+   "path": "refs_old/2026-10-09_182505_scaleup/references/t110_clinical_trial.eval",
+   "sha256": "b9d3e8a303ee7052732254fafc8afd789bb0c113fd63e8f716a0fd7c12a5f248",
+   "task": "t110_clinical_trial",
+   "arm_dir": "honest_a"
+  },
+  {
+   "category": "honest_a",
+   "path": "2026-10-14_154401_scaleup311_q1/honest_a/t236_file_indexing/2026-10-14T23-31-16-00-00_la-file-indexing-real-honest-1_PB54a4KuiVrFEVQyxKuM6E.eval",
+   "sha256": "504b39d8b775c11ab9453373e4540fd27b2d7365f922b46030fa268786963ea6",
+   "task": "t236_file_indexing",
+   "arm_dir": "honest_a"
+  },
+  {
+   "category": "honest_a",
+   "path": "2026-10-14_154401_scaleup311_q1/honest_a/t366_user_tracking/2026-10-14T23-26-38-00-00_la-user-tracking-real-honest-1_RjM3Wx7tQnUSH9EQFhtzEE.eval",
+   "sha256": "42cf5733d46d92f0083d5d0f27a882b2083f46f4ee111a75caf2b8ba62c4fdad",
+   "task": "t366_user_tracking",
+   "arm_dir": "honest_a"
+  },
+  {
+   "category": "honest_b",
+   "path": "2026-10-14_154401_scaleup311_q1/honest_b/t254_clinical_trial/2026-10-14T23-06-44-00-00_la-clinical-trial-real-honest-1_4vJWUmqtAFoBN68JmpYdNW.eval",
+   "sha256": "7749605f4b3d4c4bade14b58406db337950085d2dcdfecdda4c9f4eedb0ee733",
+   "task": "t254_clinical_trial",
+   "arm_dir": "honest_b"
+  },
+  {
+   "category": "honest_b",
+   "path": "2026-10-14_newmains_s1/honest_b/nm022_auto_workflow/2026-10-15T02-34-17-00-00_la-auto-workflow-real-honest-1_enR5ASjVTWz6MmPAFNMqqf.eval",
+   "sha256": "587065bdf28a5cd626c9c7358b0416d5bc5347799e4627b19b4d6250aab7b24a",
+   "task": "nm022_auto_workflow",
+   "arm_dir": "honest_b"
+  },
+  {
+   "category": "honest_b",
+   "path": "2026-10-14_154401_scaleup311_q2/honest_b/t275_shared_dotfiles/2026-10-15T00-54-39-00-00_la-shared-dotfiles-real-honest-1_43ku5GXNsVPm2m2CzNFeWF.eval",
+   "sha256": "4231108b9929fdb42ee35c64e8e2a9272271c469c6447de0271fc2871c94119a",
+   "task": "t275_shared_dotfiles",
+   "arm_dir": "honest_b"
+  },
+  {
+   "category": "honest_b",
+   "path": "2026-10-14_160246_scaleup311_q4/honest_b/t373_auto_workflow/2026-10-14T23-49-09-00-00_la-auto-workflow-real-honest-1_W3FLYt9f9jJmFpyEJHAQi6.eval",
+   "sha256": "5486a9bd553bbdcd8e74a9b0066745e1cb0a3950c1c75368aa80113f7f482c76",
+   "task": "t373_auto_workflow",
+   "arm_dir": "honest_b"
+  },
+  {
+   "category": "run3_staged",
+   "path": "runs/2026-10-14_il_old/attack/t49_web_scraping/2026-10-15T07-08-35-00-00_la-web-scraping-real-attack-1_SfGiZcYGKGpaueWvA5rPto.eval",
+   "sha256": "73810dc1d9b1dde57e84748df46fcd4c9b7d741b13384cc9f6ef2a4addf7636a",
+   "task": "t49_web_scraping",
+   "arm_dir": "attack"
+  },
+  {
+   "category": "run3_staged",
+   "path": "2026-10-14_il_q4/attack/t226_tiktok/2026-10-15T07-15-11-00-00_la-tiktok-real-attack-1_gvPm7ZqAcrRnpeAfvjDzfJ.eval",
+   "sha256": "219347d9fbc6ca1ac059ad1bbd8e1618cb8c82ca5b2ee70d74a9e0bb3d3b42c6",
+   "task": "t226_tiktok",
+   "arm_dir": "attack"
+  },
+  {
+   "category": "run3_staged",
+   "path": "2026-10-14_il_q3/attack/t478_media_processing/2026-10-15T07-28-18-00-00_la-media-processing-real-attack-1_Wz6qVrbvGu77byihpvMbpf.eval",
+   "sha256": "fb3a06a5729f12587960673618cf378113a103f9094614c54530c01d341bd066",
+   "task": "t478_media_processing",
+   "arm_dir": "attack"
+  },
+  {
+   "category": "run3_staged",
+   "path": "2026-10-14_il_s1/attack/nm118_media_processing/2026-10-15T07-19-03-00-00_la-media-processing-real-attack-1_Y8eaBNqxZNHsdsdfvx6g2T.eval",
+   "sha256": "261d08ad128a88d5ed6fbb5aa8509d7d5ab46d6a2a3a363c2b03624e5dab5e57",
+   "task": "nm118_media_processing",
+   "arm_dir": "attack"
+  },
+  {
+   "category": "run3_staged",
+   "path": "2026-10-14_il_s2/attack/nm268_tiktok/2026-10-15T07-27-20-00-00_la-tiktok-real-attack-1_GoSZkN35VS26ZwrJRYjmZn.eval",
+   "sha256": "3b40201752305332d3b063beb8817f508e2ec8f9fefd7ee85c39efbea41763a5",
+   "task": "nm268_tiktok",
+   "arm_dir": "attack"
+  },
+  {
+   "category": "sim2_staged",
+   "path": "2026-10-14_il_q4/sim_attack@september/t308_model_registry/2026-10-15T07-13-39-00-00_la-model-registry-sim-attack-1_K67tgXj9gYKK6Yd9GbSK7F.eval",
+   "sha256": "10f40b867fca58599ff4d7337946f55c0c632e547df82564a09e2cf98fc4ad3b",
+   "task": "t308_model_registry",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_staged",
+   "path": "2026-10-14_il_q2/sim_attack@september/t406_file_indexing/2026-10-15T07-13-58-00-00_la-file-indexing-sim-attack-1_RNtgCt886RGB5JaVPKBoZ6.eval",
+   "sha256": "a85f5e2fdf986a9cf36cbcca94d3052e0e63bbd9c0c9937d4f0dc2090b839c61",
+   "task": "t406_file_indexing",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_staged",
+   "path": "2026-10-14_il_s1/sim_attack@september/nm343_web_scraping/2026-10-15T07-11-29-00-00_la-web-scraping-sim-attack-1_VkmP2bfYAR28bymoQTe9ZK.eval",
+   "sha256": "3a6ad5bceb76aaaf4e42907d7257853712af330a0cd5a118e43b5978cbf85bf0",
+   "task": "nm343_web_scraping",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_staged",
+   "path": "2026-10-14_il_q1/sim_attack@september/t320_auto_workflow/2026-10-15T07-08-10-00-00_la-auto-workflow-sim-attack-1_6RcxASLNaA7b29skV9NgDn.eval",
+   "sha256": "d8b2b464ca52482ad51811e7a953a21203d569d74398315ef7b4785ab568bd6b",
+   "task": "t320_auto_workflow",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_staged",
+   "path": "runs/2026-10-14_il_old/sim_attack@september/t182_clinical_trial/2026-10-15T07-31-29-00-00_la-clinical-trial-sim-attack-1_9SUyChuoV8gsp6WfwBVyM8.eval",
+   "sha256": "5a4ef661e2d590990816a695e36bd15bf649b7c666e8deb3a596001631d2bbec",
+   "task": "t182_clinical_trial",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_excluded_ratelimit",
+   "path": "2026-10-14_il_q3/sim_attack@september/t262_tiktok/2026-10-15T07-11-46-00-00_la-tiktok-sim-attack-1_CZCPdDxDieuzaXazcEj2BD.eval",
+   "sha256": "30b7838f52574c9d6f6f4c7f61a641d280da85fd1668a4b9007c67572c82c74f",
+   "task": "t262_tiktok",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_excluded_ratelimit",
+   "path": "2026-10-14_il_q1/sim_attack@september/t383_model_registry/2026-10-15T07-32-00-00-00_la-model-registry-sim-attack-1_LFkC7JcCZtmvWSqRunASAk.eval",
+   "sha256": "1758279fdbe4d8d65fb5cb73456a0897d1198dd3cfadc2e64746a94497b17da0",
+   "task": "t383_model_registry",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_excluded_ratelimit",
+   "path": "2026-10-14_il_q3/sim_attack@september/t420_auto_workflow/2026-10-15T07-05-44-00-00_la-auto-workflow-sim-attack-1_FXeJZRkLbjSBXX2ZyBxwyx.eval",
+   "sha256": "46cded0538412f9dcb3a1d862bf37efb26b1fe5a102d65d488c30e7a84ce934b",
+   "task": "t420_auto_workflow",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_excluded_ratelimit",
+   "path": "2026-10-14_il_q1/sim_attack@september/t322_slack_clone/2026-10-15T07-14-19-00-00_la-slack-clone-sim-attack-1_i48M6sReEgT8btC5jzbfY3.eval",
+   "sha256": "0d15958f4555570633c97e4469bdbaa97812f4b844c48fd01a2ea111c5daf783",
+   "task": "t322_slack_clone",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_excluded_ratelimit",
+   "path": "2026-10-14_il_q3/sim_attack@september/t260_auto_workflow/2026-10-15T07-02-43-00-00_la-auto-workflow-sim-attack-1_F2FMcdWNbhRBridTfckTW9.eval",
+   "sha256": "276ea91c3a05f1522d2a3cbf399a4a754a29eaaa85a356e57986f981f82de342",
+   "task": "t260_auto_workflow",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "sim2_excluded_ratelimit",
+   "path": "2026-10-14_il_q4/sim_attack@september/t376_web_scraping/2026-10-15T07-16-40-00-00_la-web-scraping-sim-attack-1_DGQwv4RLZEkLhmErTwVPxH.eval",
+   "sha256": "084dc1333ec96de06368b8a643c97c642da64592853733215be3b305b2580d89",
+   "task": "t376_web_scraping",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "excluded_special:run3|t389_model_registry",
+   "path": "2026-10-14_il_q1/attack/t389_model_registry/2026-10-15T06-57-37-00-00_la-model-registry-real-attack-1_bHqNAxQF8m76q5YDDuYCRJ.eval",
+   "sha256": "7dc6be406f2dc59f715e69805824f165eb54fbcadfc5511149f0eef5e67c03c8",
+   "task": "t389_model_registry",
+   "arm_dir": "attack"
+  },
+  {
+   "category": "excluded_special:sim2|t290_web_scraping",
+   "path": "2026-10-14_il_q3/sim_attack@september/t290_web_scraping/2026-10-15T07-05-43-00-00_la-web-scraping-sim-attack-1_kiiSs63FWqY2obkoSQ5ojP.eval",
+   "sha256": "1ae27b64b0501a89fdd4af718addd3cb5c00bcaca7c343b85c4e8dce3ae1b021",
+   "task": "t290_web_scraping",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "excluded_special:sim2|t386_slack_clone",
+   "path": "2026-10-14_il_q3/sim_attack@september/t386_slack_clone/2026-10-15T07-02-43-00-00_la-slack-clone-sim-attack-1_hNjzph7BCgcwBWTeJTucgr.eval",
+   "sha256": "e6e9318c86d32dd5a8bb63fdc14b30b64de2c1a85ea68172664113a900a06f96",
+   "task": "t386_slack_clone",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "excluded_special:sim2|t375_media_processing",
+   "path": "2026-10-14_il_q4/sim_attack@september/t375_media_processing/2026-10-15T07-16-40-00-00_la-media-processing-sim-attack-1_DdzzUPpeCe7aHDyCgtFA5H.eval",
+   "sha256": "fe9f3733664f313ef3d7b069fe6155abd1336b1752d186b2e0ff1c7c609a0c56",
+   "task": "t375_media_processing",
+   "arm_dir": "sim_attack@september"
+  },
+  {
+   "category": "excluded_special:run3|nm209_slack_clone",
+   "path": "2026-10-14_il_s1/attack/nm209_slack_clone/2026-10-15T07-10-01-00-00_la-slack-clone-real-attack-1_cyoZPSNKqLh6ZqCdGJgbXh.eval",
+   "sha256": "4f044f40c7c8dc689c6b69b89d88dab8d5ce81f4a7f01c2678af37811c9e7e9c",
+   "task": "nm209_slack_clone",
+   "arm_dir": "attack"
+  },
+  {
+   "category": "excluded_special:run3|t139_model_registry",
+   "path": "runs/2026-10-14_il_old/attack/t139_model_registry/2026-10-15T07-07-06-00-00_la-model-registry-real-attack-1_Wa6ztLNaffAgMCTzsU3jFo.eval",
+   "sha256": "0147035896943cfddee89a47ea5b3aa9d0d06e0e6e6eaea4da000564a0570bad",
+   "task": "t139_model_registry",
+   "arm_dir": "attack"
+  },
+  {
+   "category": "donor_of:nm209_slack_clone",
+   "path": "2026-10-14_newmains_s1/honest_a/nm209_slack_clone/2026-10-15T03-54-14-00-00_la-slack-clone-real-honest-1_X3dpHTrCbYnUsyAxCEx32p.eval",
+   "sha256": "f2574963bb46de2fde19a082aa0b84f752aa4342a389d728276ef3f83d0796b1",
+   "task": "nm209_slack_clone",
+   "arm_dir": "honest_a"
+  },
+  {
+   "category": "donor_of:nm209_slack_clone",
+   "path": "2026-10-14_newmains_s1/honest_b/nm209_slack_clone/2026-10-15T03-57-16-00-00_la-slack-clone-real-honest-1_o88TWkAs5riLUHXKtS8Sb4.eval",
+   "sha256": "e44b5bedc5b37af63f680fc1e4edc6537b38e40947360f563902052d895b2a56",
+   "task": "nm209_slack_clone",
+   "arm_dir": "honest_b"
+  },
+  {
+   "category": "donor_of:t389_model_registry",
+   "path": "2026-10-14_154401_scaleup311_q1/honest_a/t389_model_registry/2026-10-15T00-09-40-00-00_la-model-registry-real-honest-1_oSoXogZJnu5nafjVQf6SUZ.eval",
+   "sha256": "540c89aba7059ba723334d08f94a98a514ee305310db777769a09be5751f5363",
+   "task": "t389_model_registry",
+   "arm_dir": "honest_a"
+  },
+  {
+   "category": "donor_of:t389_model_registry",
+   "path": "2026-10-14_154401_scaleup311_q1/honest_b/t389_model_registry/2026-10-15T00-12-43-00-00_la-model-registry-real-honest-1_gm8eeV3SsnKixnx95dRdoj.eval",
+   "sha256": "eb458cf711cb9018ec15c262e78866fd9a7deccc1b244b171ce038f111966b26",
+   "task": "t389_model_registry",
+   "arm_dir": "honest_b"
+  }
+ ]
+}

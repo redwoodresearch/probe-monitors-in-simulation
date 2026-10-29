@@ -1,0 +1,27 @@
+{
+ "plan": "PLAN.md (this folder), POST HOC",
+ "git": "66bb2214e5069935e9cc319b36287a172e3e32fc",
+ "run": "2026-10-12_011944",
+ "layer": 63,
+ "extraction": "2026-10-13_q2_q35fix_repaired_qwen35-27b_l63_v1",
+ "which": "repaired",
+ "inputs sha256": {
+  "fix939_frozen_runs_POSTHOC_2026-10-11_020458.jsonl": "5f6ecbc42b1c6bb9586cb58e474d74c5c1d914bedb95d80a5a07dd078b0e5ebd",
+  "runs.json": "3c028aca246181950e460349067ca27d0fb85bff60bc4c01b518c9b27a234ec1",
+  "scores_L16.npz": "bf575a9cfa820780e0283aa6c9bf99a4249ed103972bfaeee5e5c9f356064ce6",
+  "scores_L24.npz": "2261737b926415efbb840be636c76741c5ff1d0f2f424dbe0a0508cf00a688de",
+  "scores_L32.npz": "a6d06adf41cd85d783fa79be3ea9f049b0437de603dc85c5efeb24738a245e0e",
+  "scores_L40.npz": "ff3b7643994b82d3fce229d8c89686fe644c96b433a58b455c8eeea8833602a8",
+  "scores_L48.npz": "86c658ee466585df421dc11417dc5520cf1cdbc65b1ff992406ba33e189d5b20",
+  "scores_L56.npz": "c9cfd57a14afb780427123e7c2b7b30e5825b37788048c385135e38f2f4bec3f",
+  "scores_L63.npz": "ebd678cde2edf64ed8ae1da55ed733bf2d12054d45de342f86d2bd1c1452b872"
+ },
+ "probe sha256": "6cf38abe14c5f3badc1ded160ae6f6c5eab0ea8c34012a86522f07496f1ef4a9",
+ "gate record": "q35fix_scores_controls_2026-10-13_001821.json",
+ "gate record sha256": "ffe6f7cf9be3fc9ef914b94749f875c8dfae3ef1fd0cb2b516bc46c12f7b11bf",
+ "as-simulated runs": 939,
+ "with re-rendered scores": 823,
+ "unchanged (as-simulated scores stand)": 116,
+ "scores file": "q35fix_scores_repaired_2026-10-13_003323.npz",
+ "scores sha256": "37b1b0779b59da72bdce44840d7ec06d246358a93cf36978e0464969fdd3628e"
+}

@@ -1,0 +1,16 @@
+{
+ "MATCH": true,
+ "has_rev6s_key": true,
+ "leaves": 394790,
+ "numeric": 117241,
+ "n_missing": 0,
+ "n_type_mismatch": 0,
+ "n_value_mismatch": 0,
+ "missing": [],
+ "type_mismatch": [],
+ "value_mismatch": [],
+ "sha256_a": "7dceb8bb25752aa3619cfde64add702fd4f7d13a1309a56dbc8880a6b27af9f5",
+ "sha256_b": "d0933874561627c947f67af2cc0900c50d077ed0e6752eaf93620cd035a0890b",
+ "new_top_level_keys_in_b": 0,
+ "float_max_abs_diff_within_1e-12": true
+}

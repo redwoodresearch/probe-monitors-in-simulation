@@ -1,0 +1,688 @@
+{
+ "cutoff_pt": "reproduction of the e0b803833 pins",
+ "freeze_pt": "reproduction of the e0b803833 pins",
+ "mappings": {
+  "S_new": {
+   "simh311_q1": {
+    "commit": "54329db37",
+    "file": "simh311_q1__2026-10-15_144827"
+   },
+   "simh311_q2": {
+    "commit": "7a27f18a7",
+    "file": "simh311_q2__2026-10-15_152611"
+   },
+   "simh311_q3": {
+    "commit": "4d23fdd9b",
+    "file": "simh311_q3__2026-10-15_144301"
+   },
+   "simh311_q4": {
+    "commit": "817d22bbe",
+    "file": "simh311_q4__2026-10-15_145131"
+   }
+  },
+  "S_newmains": {
+   "simh_nm360_s1": {
+    "commit": "54329db37",
+    "file": "simh_nm360_s1__2026-10-15_144824"
+   },
+   "simh_nm360_s2": {
+    "commit": "54329db37",
+    "file": "simh_nm360_s2__2026-10-15_144826"
+   },
+   "simh_nm360_s3": {
+    "commit": "d542431d7",
+    "file": "simh_nm360_s3__2026-10-15_140926"
+   },
+   "simh_nm360_s4d": {
+    "commit": "817d22bbe",
+    "file": "simh_nm360_s4d__2026-10-15_145133"
+   },
+   "simh_nm360_s4r": {
+    "commit": "6af551c67",
+    "file": "simh_nm360_s4r__2026-10-15_160334"
+   },
+   "simh_nm360_s5": {
+    "commit": "a0a15a0b2",
+    "file": "simh_nm360_s5__2026-10-15_154401"
+   }
+  }
+ },
+ "file_maps_commit": "fb48e6a36",
+ "honest_a_25f": [
+  {
+   "cell_prefix": "t389_",
+   "kind": "p2",
+   "commit": "8d84def89",
+   "record": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-15_141942.json",
+   "sha256": "4081f2772813d4094d68df8d50069fd9e131af1b9b8d8579fe8c904d0080bf61",
+   "folder": "/scaleup/su311_q1_main_ha25f_v1__honest_a/p2",
+   "copy": null,
+   "copy_sha256": null
+  },
+  {
+   "cell_prefix": "t309_",
+   "kind": "p2",
+   "commit": "8d84def89",
+   "record": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-15_141945.json",
+   "sha256": "adbf1cf7db405a448739b16217ec6c6a8377f95f4fe92e5534322ca039c2df66",
+   "folder": "/scaleup/su311_q2_main_ha25f_v1__honest_a/p2",
+   "copy": null,
+   "copy_sha256": null
+  },
+  {
+   "cell_prefix": "t325_",
+   "kind": "p2",
+   "commit": "8d84def89",
+   "record": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-15_141947.json",
+   "sha256": "a2759893eed6a4f11301c43b54f456c308648dcfa77f341e6c8061c9d0ceb79b",
+   "folder": "/scaleup/su311_q4_main_ha25f_v1__honest_a/p2",
+   "copy": null,
+   "copy_sha256": null
+  },
+  {
+   "cell_prefix": "t325_",
+   "kind": "famexp",
+   "commit": "1a0c610c2",
+   "record": "experiments/2026-10-14_p2_family_expansion/results/pass2_su311_q4_main_ha25f_2026-10-15_153105.json",
+   "sha256": "da00272f3e9c50c291fd5d62abd4d8a7c886c6e5cb63b831cb562abf282ace3f",
+   "folder": "su311_q4_main_ha25f_v1__honest_a",
+   "copy": "ha25f_q4_t325__famexp.json",
+   "copy_sha256": "4c2e5c3f3a0dc0d2301f4e81248ab7874804bf4f83bd5096df5ee22829a88a2e"
+  },
+  {
+   "cell_prefix": "t309_",
+   "kind": "famexp",
+   "commit": "bbdd602e4",
+   "record": "experiments/2026-10-14_p2_family_expansion/results/pass2_su311_q2_main_ha25f_2026-10-15_155427.json",
+   "sha256": "f742ed11bcb45dd273b40ab33e39cb02e7b78b1712b68abd10b721257f6d1707",
+   "folder": "su311_q2_main_ha25f_v1__honest_a",
+   "copy": "ha25f_q2_t309__famexp.json",
+   "copy_sha256": "2d0e7f83bca017735e7dbb2003c82cd5e79e6c7e8d64c895de4341dec460d575"
+  },
+  {
+   "cell_prefix": "t325_",
+   "kind": "sol",
+   "commit": "df0c2e9f9",
+   "record": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_su311_q4_main_ha25f_v1__honest_a_2026-10-15_025917.json",
+   "sha256": "81888b95ac87f42d5521321a61bba6fbf1825164e7883cbfa0edd903595c6089",
+   "folder": "su311_q4_main_ha25f_v1__honest_a",
+   "copy": "ha25f_q4_t325__sol.json",
+   "copy_sha256": "953315cb8796ba8fe5056591518ee3ded3fea82ad4cfff0246d2320c90961f3f"
+  },
+  {
+   "cell_prefix": "t309_",
+   "kind": "sol",
+   "commit": "df0c2e9f9",
+   "record": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_su311_q2_main_ha25f_v1__honest_a_2026-10-15_025913.json",
+   "sha256": "9bae84f753144a9d965afd012638285c163ddd243d0162c4fd8bfcab05b32f68",
+   "folder": "su311_q2_main_ha25f_v1__honest_a",
+   "copy": "ha25f_q2_t309__sol.json",
+   "copy_sha256": "25a29e9d9a8cddde564c2e2d5caebde2f7e660eb9fd09a93fcebbbbf5e555dcf"
+  }
+ ],
+ "dt": {
+  "S_new": [
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh311_q1_sim_s1_2026-10-15_133419"
+   ],
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh311_q1_sim_s2_2026-10-15_133537"
+   ],
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh311_q3_sim_s1_2026-10-15_133209"
+   ],
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh311_q3_sim_s2_2026-10-15_133307"
+   ],
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh311_q4_sim_s1_2026-10-15_133653"
+   ],
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh311_q4_sim_s2_2026-10-15_133814"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh311_q1_sim_s3_2026-10-15_140238"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh311_q1_sim_s4_2026-10-15_140351"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh311_q1_sim_s5_2026-10-15_140559"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh311_q2_sim_s1_2026-10-15_141039"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh311_q2_sim_s2_2026-10-15_141130"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh311_q3_sim_s3_2026-10-15_140708"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh311_q3_sim_s4_2026-10-15_140746"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh311_q3_sim_s5_2026-10-15_140835"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh311_q4_sim_s3_2026-10-15_140935"
+   ],
+   [
+    "31517c5b2",
+    "dt_q4b_arm_simh311_q1_sim_s6_2026-10-15_142507"
+   ],
+   [
+    "31517c5b2",
+    "dt_q4b_arm_simh311_q2_sim_s3_2026-10-15_142856"
+   ],
+   [
+    "31517c5b2",
+    "dt_q4b_arm_simh311_q3_sim_2026-10-15_142730"
+   ],
+   [
+    "31517c5b2",
+    "dt_q4b_arm_simh311_q3_sim_s6_2026-10-15_142632"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh311_q1_sim_2026-10-15_144922"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh311_q1_sim_s7_2026-10-15_144837"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh311_q2_sim_s4_2026-10-15_145024"
+   ]
+  ],
+  "S_newmains": [
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh_nm360_s1_sim_s1_2026-10-15_131326"
+   ],
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh_nm360_s1_sim_s2_2026-10-15_131449_recovered"
+   ],
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh_nm360_s4d_sim_2026-10-15_134213"
+   ],
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh_nm360_s4d_sim_s1_2026-10-15_133923"
+   ],
+   [
+    "e2a46027b",
+    "dt_q4b_arm_simh_nm360_s4d_sim_s2_2026-10-15_134111"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh_nm360_s1_sim_s3_2026-10-15_141250"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh_nm360_s1_sim_s4_2026-10-15_141331"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh_nm360_s1_sim_s5_2026-10-15_141409"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh_nm360_s2_sim_s1_2026-10-15_141500"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh_nm360_s2_sim_s2_2026-10-15_141605"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh_nm360_s3_sim_s2_2026-10-15_141709"
+   ],
+   [
+    "900f554c6",
+    "dt_q4b_arm_simh_nm360_s3_sim_s3_2026-10-15_141810"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh_nm360_s1_sim_2026-10-15_145311"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh_nm360_s1_sim_s6_2026-10-15_145141"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh_nm360_s1_sim_s7_2026-10-15_145218"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh_nm360_s2_sim_2026-10-15_145452"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh_nm360_s2_sim_s3_2026-10-15_145406"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh_nm360_s3_sim_2026-10-15_145557"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh_nm360_s4r_sim_s1_2026-10-15_145659"
+   ],
+   [
+    "1525d4bda",
+    "dt_q4b_arm_simh_nm360_s5_sim_s1_2026-10-15_145805"
+   ]
+  ],
+  "S_old": [
+   [
+    "e2a46027b",
+    "dt_q4b_simh_primary_primary_v3_2026-10-15_132958"
+   ]
+  ]
+ },
+ "s_old_e2e_config": {
+  "commit": "51d0ffb97",
+  "path": "experiments/2026-10-15_e2e_sim_pipeline/config/inputs_e2e.json"
+ },
+ "notes": [],
+ "ledger_extra": [
+  {
+   "set": "S_new",
+   "batch": "simh311_q1",
+   "cell_prefix": "t237",
+   "class": "terminal",
+   "m_r": 22,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q1",
+   "cell_prefix": "t300",
+   "class": "terminal",
+   "m_r": 73,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q1",
+   "cell_prefix": "t389",
+   "class": "terminal",
+   "m_r": 40,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q1",
+   "cell_prefix": "t320",
+   "class": "standing",
+   "m_r": 23,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q1",
+   "cell_prefix": "t242",
+   "class": "RL",
+   "m_r": 63,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q1",
+   "cell_prefix": "t462",
+   "class": "RL",
+   "m_r": 90,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q2",
+   "cell_prefix": "t293",
+   "class": "terminal",
+   "m_r": 27,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q2",
+   "cell_prefix": "t271",
+   "class": "RL",
+   "m_r": 3,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q2",
+   "cell_prefix": "t410",
+   "class": "RL",
+   "m_r": 5,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q2",
+   "cell_prefix": "t240",
+   "class": "RL",
+   "m_r": 125,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q2",
+   "cell_prefix": "t275",
+   "class": "RL",
+   "m_r": 58,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q2",
+   "cell_prefix": "t457",
+   "class": "RL",
+   "m_r": 114,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q3",
+   "cell_prefix": "t298",
+   "class": "RL",
+   "m_r": 193,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q3",
+   "cell_prefix": "t310",
+   "class": "RL",
+   "m_r": 86,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q4",
+   "cell_prefix": "t361",
+   "class": "terminal",
+   "m_r": 124,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q4",
+   "cell_prefix": "t411",
+   "class": "terminal",
+   "m_r": 17,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_new",
+   "batch": "simh311_q4",
+   "cell_prefix": "t413",
+   "class": "terminal",
+   "m_r": 27,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_newmains",
+   "batch": "simh_nm360_s2",
+   "cell_prefix": "nm150",
+   "class": "standing",
+   "m_r": 54,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_newmains",
+   "batch": "simh_nm360_s3",
+   "cell_prefix": "nm134",
+   "class": "terminal",
+   "m_r": 55,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_newmains",
+   "batch": "simh_nm360_s3",
+   "cell_prefix": "nm103",
+   "class": "RL",
+   "m_r": 75,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_newmains",
+   "batch": "simh_nm360_s4d",
+   "cell_prefix": "nm107",
+   "class": "terminal",
+   "m_r": 16,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_newmains",
+   "batch": "simh_nm360_s4d",
+   "cell_prefix": "nm258",
+   "class": "terminal",
+   "m_r": 129,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  },
+  {
+   "set": "S_newmains",
+   "batch": "simh_nm360_s4r",
+   "cell_prefix": "nm353",
+   "class": "standing",
+   "m_r": 53,
+   "status": "excluded",
+   "reason": "exclusion constant at e0b803833 (as the 16:13 record read it)",
+   "ruling": "run_peraction311.py @ e0b803833"
+  }
+ ],
+ "coverage_records": [],
+ "epoch2_honest": {
+  "status": "epoch-2 not in this build (second refresh)",
+  "note": null,
+  "artifact": {
+   "commit": "e4e1b3845",
+   "path": "experiments/2026-10-15_epoch2_poolkeys/results/epoch2_poolkeys_2026-10-15_180156.json"
+  },
+  "verified_09": null,
+  "roots": [],
+  "release_gate": "09 @ d9013b2e7: no epoch-2 score is read until the pool-key artifact is committed and 09 has verified it by key",
+  "artifact_note": "E2E fork's pool-key artifact (origin/aswin/epoch2-poolkeys-2e); with 09 for verification; OFF until 09's verification sha",
+  "deferred": "epoch 1 + 2 rows deferred to the second refresh (2e 18:2x); the artifact pointer is pinned for the record only"
+ },
+ "nm360_fold_extension": {
+  "gates": {
+   "Sol (a)": "held-out gate pending (c6023b805)",
+   "c_asis": "held-out gate pending (c6023b805)",
+   "own_frac100_L48": "held-out gate pending (c6023b805)",
+   "own_frac25_L48": "held-out gate pending (c6023b805)",
+   "own_frac10_L48": "held-out gate pending (c6023b805)"
+  },
+  "files": null
+ },
+ "gapfill_sim2": {
+  "status": "second refresh",
+  "note": null,
+  "role": "second refresh (needs S4-inclusive RMS pools); descriptive interleaved-run rows, never a lead",
+  "files": [],
+  "root": "ilnm_s4rgap_sim2_v1__sim_attack",
+  "spec_note": "9e17531cc (unreadable until committed)",
+  "ruling": "09 via 2e 17:3x"
+ },
+ "sel97": {
+  "status": "pending routing",
+  "note": null,
+  "role": "RMS input (stage B)",
+  "cells": {
+   "commit": "46f6afeed",
+   "path": "experiments/2026-10-15_q3_interleaved_run3_sim2/config/il_keys_selection.json"
+  },
+  "arms": [],
+  "cells_vendored": {
+   "commit": "9c1a231fa",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/config/il_keys_selection_46f6afeed.json"
+  },
+  "rule": "tonight only if scored and passing before the freeze; else second refresh (09 via 2e 17:3x)"
+ },
+ "rms": {
+  "five_arm_cells": {
+   "commit": "668a3eb91",
+   "path": "experiments/2026-10-15_il_analysis_09/results/il_five_arm_cells_2026-10-15_v2.json",
+   "lists": {
+    "S_new": {
+     "key": "S_new_on_M.cells",
+     "n": 257
+    },
+    "S_newmains": {
+     "key": "S_newmains_five_arm.cells",
+     "n": 239
+    },
+    "S_old": {
+     "key": "S_old_five_arm.cells",
+     "n": 88
+    }
+   }
+  },
+  "arm_pin_sources": [
+   {
+    "kind": "il311",
+    "commit": "d851974f5",
+    "path": "experiments/2026-10-15_il_analysis_09/results/il_final_result_il_2026-10-15_130350.json",
+    "key": "result_il.inputs"
+   },
+   {
+    "kind": "ilnm",
+    "commit": "4d92cc2ca",
+    "path": "experiments/2026-10-15_il_analysis_09/results/il_ext_final_result_il_2026-10-15_134705.json",
+    "key": "result_il.inputs"
+   },
+   {
+    "kind": "su311",
+    "commit": "3ce6ea55e",
+    "path": "experiments/2026-10-14_xerr_scaleup_09/specs/final_spec_3_launch.json",
+    "key": "arms"
+   },
+   {
+    "kind": "nm360",
+    "commit": "1a7e95259",
+    "path": "experiments/2026-10-14_xerr_scaleup_09/results/xerr_scaleup_final_2026-10-15_113025.json",
+    "key": "result.scale_up_inputs"
+   }
+  ],
+  "H_B": {
+   "S_new": {
+    "commit": "3ce6ea55e",
+    "path": "experiments/2026-10-14_xerr_scaleup_09/results/xerr_scaleup_final_2026-10-15_013255.json",
+    "key": "result.calibration_records.primary[\"sol_a|R|0.01|primary|BuC|B\"].schemes[<primary>].pool_keys_new",
+    "n": 306
+   },
+   "S_newmains": {
+    "commit": "1a7e95259",
+    "path": "experiments/2026-10-14_xerr_scaleup_09/results/xerr_scaleup_final_2026-10-15_113025.json",
+    "key": "result.calibration_records.extended[\"sol_a|R|0.01|primary|BuC|B\"].schemes[<primary>].pool_keys_newmains",
+    "n": 268
+   }
+  },
+  "r36": {
+   "commit": "c24106ca0",
+   "path": "experiments/2026-10-06_q3_attack_detector/results/run_scores_2026-10-06_181548/runs.json"
+  },
+  "S_old_rms_inputs": {
+   "commit": "1ed465a10",
+   "path": "experiments/2026-10-15_il_z_e2e/config/inputs_z.json"
+  },
+  "s4_source_map": {
+   "commit": "b68ab0a53",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/s4_source_map/s4_source_map_4r_2026-10-15.json"
+  }
+ },
+ "extensions": {
+  "S_paper493": "not in this build; second refresh",
+  "own_all_L48": {
+   "status": "not in this build",
+   "pointer": null
+  }
+ },
+ "s4_source_map": {
+  "commit": "b68ab0a53",
+  "path": "experiments/2026-10-14_q3_overnight_chain/results/s4_source_map/s4_source_map_4r_2026-10-15.json"
+ },
+ "dt_note": "every DT record pinned at the head of origin/aswin/p2-dt-simh (362aad1b9: waves 1-6, Q2 s5/s6 @ 0bc257cd9, routing 57 Q2 _rlr @ 362aad1b9, checks)",
+ "empty_replacement_roots": [],
+ "dt_roots_pending": {
+  "S_new": [
+   "simh311_q2_sim_s5_v1__sim_honest",
+   "simh311_q2_sim_s6_v1__sim_honest"
+  ],
+  "S_newmains": [
+   "simh_nm360_s4r_sim_s2_v1__sim_honest",
+   "simh_nm360_s4r_sim_s3_v1__sim_honest",
+   "simh_nm360_s4r_sim_s4_v1__sim_honest",
+   "simh_nm360_s4r_sim_s5_v1__sim_honest",
+   "simh_nm360_s5_sim_s2_v1__sim_honest",
+   "simh_nm360_s5_sim_s3_v1__sim_honest",
+   "simh_nm360_s5_sim_s4_v1__sim_honest"
+  ]
+ }
+}

@@ -1,0 +1,11 @@
+# RULE.md amendments 11-17: Qwen3.5-27B extraction of the t43 RERUN (world simh_full, key simh_full|t43_auto_workflow; a labelled
+# sensitivity only: "selected on failure: rerun of one counted failure"; results/t43/registry_t43_rerun.json), CORRECTED staged
+# (shared cut-think patch ef3e9f7f); counts only after format_check_simh passes
+run: simh_full_t43rerun
+inputs: simh_q4f_v1_full_t43rerun
+inputs_sha256:
+  sim_honest@september.jsonl: 80bfe4b2bee09a588743f17bf1cb637557c4e46e51b21e4b265c37d98c4eff6d
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 8
+pad_to: 4096

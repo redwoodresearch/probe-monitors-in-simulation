@@ -1,0 +1,7 @@
+{
+ "rule": "experiments/2026-10-15_q3_interleaved_run3_sim2/RULE.md",
+ "seed": "q3-interleaved-run3-sim2-2026-10-14",
+ "launch": "q1",
+ "stage": "sel",
+ "cells": []
+}

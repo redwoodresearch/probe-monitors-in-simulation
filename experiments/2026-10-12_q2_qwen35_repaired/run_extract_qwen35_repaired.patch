@@ -1,0 +1,131 @@
+Qwen3.5 repaired arm: run_extract_qwen35_repaired.py as run (first committed at 3b7f1dd9 on aswin/q2-qwen35-repaired,
+reachable from this stack's top merge), kept here as a patch against its root source on main for the PR size cap (490 lines).
+The full copy (sha256 6268ef7283eb63de4b8d1ef6edf4316243be09aef1e83ea2912530e44ccc9795, 29870 bytes) is on S3 via results/s3_manifest_v2.json.
+Source on main: experiments/2026-10-06_qwen35_replication/run_extract_qwen35.py, sha256 53f979fba370f17ab9e4ccecd42f8cf005f8e530d5691971cd643e4b4234cbd8.
+(The copy's own docstring names its direct parent, P6's q2_reply_extract_qwen35.py at ee60bf09, itself a copy of this source.)
+Rebuild, from the repository root:
+  patch -o experiments/2026-10-12_q2_qwen35_repaired/run_extract_qwen35_repaired.py experiments/2026-10-06_qwen35_replication/run_extract_qwen35.py experiments/2026-10-12_q2_qwen35_repaired/run_extract_qwen35_repaired.patch
+
+--- experiments/2026-10-06_qwen35_replication/run_extract_qwen35.py
++++ experiments/2026-10-12_q2_qwen35_repaired/run_extract_qwen35_repaired.py
+@@ -1,4 +1,22 @@
+-"""All-layers extraction with Qwen3.5-27B as the reader: the segment-end positions at every one of its 64 layers.
++"""Qwen3.5-27B on fix939's repaired runs, a POST-HOC extension (PLAN.md here): a copy of
++../2026-10-12_plantslip_transfer/q2_reply_extract_qwen35.py (P6's extractor, as run at ee60bf09). Changes:
++  - its app, output Volume and lease Dict renamed (sub-q2-q35fix);
++  - each shard records the sha256 of every staged shard file it read (`inputs_sha256_seen` in its stats), since neither inputs
++    run has an earlier hash record;
++  - `--remote` is refused: this copy runs with local orchestration only, so a restarted orchestrator can't re-spawn running
++    shards (the 10-12 Llama incident). The per-shard lease and the temp-then-rename chunk writes are kept.
++The forward pass, positions, template and layout are unchanged. P6's docstring follows:
++Planted-slip transfer, q2's pair P6 (RULE.md, Amendment 1): a copy of
++../2026-10-12_q2_template_slips/run_extract_qwen35_plants.py (at c7d98317) with only its app, its inputs Volume (the shared
++activations Volume, where q2_reply_stage.py staged the runs), its output Volume and its lease Dict renamed; the saved layer
++is the detector's 63 (config `layers`). One addition: `--remote` spawns one orchestrator function that runs the shards and
++writes stats/summary.json, so the laptop client can exit (as the Olmo extractor does). The template slips copy's
++docstring follows:
++Template slips, step 2 (PLAN.md addendum 3): a copy of ../2026-10-06_qwen35_replication/run_extract_qwen35.py (the extractor of
++Qwen3.5's dump) with only its app, Volumes and lease Dict renamed, and the saved layers limited to config `layers`
++(the detector's seven). The forward pass and positions are unchanged. The original docstring:
++
++All-layers extraction with Qwen3.5-27B as the reader: the segment-end positions at every one of its 64 layers.
+ 
+ The qwen35 track's copy of the main session's prepared script (experiments/2026-10-06_qwen35_reader at a0a4cda), with
+ four changes: this track's app name; inputs read only from the shared Volume and outputs written to this track's own
+@@ -58,15 +76,15 @@
+ import modal
+ 
+ HERE = Path(__file__).parent
+-APP = "probe-shift_aswin-surya_sub-qwen35_extract_kill-2026-11-06"
++APP = "probe-shift_aswin-surya_sub-q2-q35fix_extract_kill-2026-11-13"
+ HF_CACHE = "probe-shift_aswin-surya_hf-cache"
+-INPUTS = "probe-shift_aswin-surya_sub-la-activations"  # the main session's Volume: staged inputs, mounted read only
++INPUTS = "probe-shift_aswin-surya_sub-la-activations"  # the staged runs (q2_reply_stage.py), mounted read only
+ # The output Volume; QWEN35_OUTPUT_VOLUME overrides it for a run (claim B reader run, 2026-10-10). The image carries the
+ # same value, so containers resolve the same Volume. Unset, every earlier run's path is unchanged.
+-OUTPUT = os.environ.get("QWEN35_OUTPUT_VOLUME", "probe-shift_aswin-surya_sub-qwen35_acts_kill-2026-11-06")
++OUTPUT = os.environ.get("QWEN35_OUTPUT_VOLUME", "probe-shift_aswin-surya_sub-q2-q35fix_acts_kill-2026-11-13")
+ GPU = "H200"
+ TIMEOUT_S = 3 * 3600
+-LEASES = "probe-shift_aswin-surya_sub-qwen35_leases_kill-2026-11-06"  # Modal Dict: (run/shard) -> its writer
++LEASES = "probe-shift_aswin-surya_sub-q2-q35fix_leases_kill-2026-11-13"  # Modal Dict: (run/shard) -> its writer
+ LEASE_STALE_S, HEARTBEAT_S, RPC_TIMEOUT_S = 600, 60, 30
+ THROUGHPUT_DEFAULTS = {"shard_by": "round_robin", "prefetch": False}  # the options' defaults, recorded with every run
+ PIP = ["torch==2.8.0", "transformers==5.19.0", "accelerate>=1.1.0", "numpy", "huggingface_hub", "flash-linear-attention==0.5.2"]
+@@ -223,6 +241,7 @@
+ 
+     src = Path("/in") / cfg["inputs_from"] / "inputs"
+     raw = {p.name: p.read_bytes() for p in sorted(src.glob("shard_*.jsonl"))}
++    seen = {n: hashlib.sha256(b).hexdigest() for n, b in raw.items()}  # the copy's change: recorded in the stats
+     if cfg.get("inputs_sha256") and {n: hashlib.sha256(b).hexdigest() for n, b in raw.items()} != cfg["inputs_sha256"]:
+         raise ValueError(f"the staged inputs in {src} differ from the sha256s the transcript list was made from")
+     items = [json.loads(l) for b in raw.values() for l in b.decode().splitlines()]
+@@ -253,7 +272,7 @@
+     lm = AutoModelForCausalLM.from_pretrained(cfg["model"], revision=cfg["revision"], dtype=getattr(torch, cfg["dtype"]),
+                                               device_map="cuda", attn_implementation=cfg["attn_implementation"]).eval()
+     base = lm.model
+-    layers = list(range(lm.config.num_hidden_layers))
++    layers = sorted(cfg["layers"]) if cfg.get("layers") else list(range(lm.config.num_hidden_layers))  # the copy's one change to reading
+     load_s = round(time.time() - t_load)
+ 
+     def read(ids, idx):
+@@ -360,6 +379,7 @@
+     if pool:
+         pool.shutdown()
+     summary = {"shard": shard, "transcripts": len(mine), "chunks": stats, "load_seconds": load_s, "seconds": round(time.time() - t_all),
++               "inputs_from": cfg["inputs_from"], "inputs_sha256_seen": seen,
+                "max_rss_gib": round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 2**20, 1)}  # Linux: KiB
+     lease.check()
+     (run_dir / "stats").mkdir(exist_ok=True)
+@@ -368,8 +388,37 @@
+     return [summary]
+ 
+ 
++@app.function(image=image, cpu=2, memory=8192, volumes={"/out": out_vol}, timeout=24 * 3600)
++def orchestrate(cfg: dict, n: int) -> dict:
++    """Run every shard from inside Modal (the laptop client can go away) and write <run>/stats/summary.json."""
++    started = time.time()
++    calls = [extract_shard.spawn(cfg, i) for i in range(n)]
++    stats = []
++    for shard, call in enumerate(calls):
++        for _ in range(120):
++            try:
++                stats.extend(call.get())
++                break
++            except (socket.gaierror, ConnectionError, TimeoutError, modal.exception.ConnectionError, modal.exception.ServiceError):
++                time.sleep(30)
++            except Exception as e:  # recorded by type only (a message may quote staged text)
++                stats.append({"shard": shard, "crashed": type(e).__name__})
++                break
++        else:
++            stats.append({"shard": shard, "unreachable": True})
++    ok = [x for x in stats if "chunks" in x]
++    summary = {"wall_seconds": round(time.time() - started), "shards": stats, "n_ok": len(ok), "n_crashed": len(stats) - len(ok),
++               "transcripts": sum(c["transcripts"] for x in ok for c in x["chunks"]), "rows": sum(c["rows"] for x in ok for c in x["chunks"]),
++               "nonfinite": sum(c["nonfinite"] for x in ok for c in x["chunks"])}
++    out_vol.reload()
++    (Path("/out") / cfg["run"] / "stats").mkdir(parents=True, exist_ok=True)
++    (Path("/out") / cfg["run"] / "stats" / "summary.json").write_text(json.dumps(summary))
++    out_vol.commit()
++    return summary
++
++
+ @app.local_entrypoint()
+-def main(config: str = "qwen35_alllayers.yaml", test: bool = False, no_wait: bool = False):
++def main(config: str = "qwen35_alllayers.yaml", test: bool = False, no_wait: bool = False, remote: bool = False):
+     """`--test` (the pilot): one shard, 8 transcripts spread over its lengths, each read twice, chunks of 4, under a
+     separate run name. `--no-wait` (with `modal run --detach`): spawn the shards and return, so a laptop outage cannot
+     stop them; shards resume past finished transcripts, and their stats are on the Volume."""
+@@ -402,6 +451,12 @@
+ 
+         batch.put_file(io.BytesIO(json.dumps(cfg, indent=1).encode()), f"{cfg['run']}/config.json")
+     n = 1 if test else cfg["shards"]
++    if remote:  # the copy's change: local orchestration only (10-12: a restarted remote orchestrator re-spawned running shards)
++        raise SystemExit("this copy runs with local orchestration only; drop --remote")
++    if remote:  # one orchestrator owns the shards (with modal run --detach, the last triggered function is kept alive)
++        call = orchestrate.spawn(cfg, n)
++        print(f"{cfg['run']}: orchestrating {n} shards (function call {call.object_id}); summary at {cfg['run']}/stats/summary.json", flush=True)
++        return
+     started = time.time()
+     calls = [extract_shard.spawn(cfg, i) for i in range(n)]
+     print(f"{cfg['run']}: git {git['commit'][:7]}{' (dirty)' if git['dirty'] else ''}, spawned {n} shards reading inputs of {cfg['inputs_from']}", flush=True)

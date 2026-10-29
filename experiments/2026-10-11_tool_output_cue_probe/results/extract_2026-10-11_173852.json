@@ -1,0 +1,54 @@
+{
+ "job": {
+  "kind": "runs",
+  "source": "planted",
+  "layers": [
+   6
+  ],
+  "file": "toc/planted_2026-10-11_154759.jsonl",
+  "sha256": "a89caddd7c183d5120fd01db424228f243b4cd1d3743992e28896138339b1aae",
+  "shards": 2
+ },
+ "provenance": {
+  "git": "ae0049edbd4b1a21180b40a38500687221b91522",
+  "stamp": "2026-10-11_173852",
+  "build": "results/build_2026-10-11_154759.json",
+  "extractor_sha256": "7ef96dade56c28afe279387d76a3622f944aa68842fba00edeadc8f8537ebe91",
+  "probe_shift_sha256": "c8e9952963ffa687a904eb05099060ba2ebd6b62ea282a86c3947b1cd90680e1",
+  "selection_sha256": "311dc66a52f70a85a7080df6613316d250bfb20ba5c34fb784df6291738c893c"
+ },
+ "shards": [
+  {
+   "shard": 0,
+   "dialogues": 400,
+   "skipped (no readable output)": 0,
+   "chunks resumed": 0,
+   "tokens (this attempt)": 9767991,
+   "forward_s": 219.8,
+   "load_s": 44.3,
+   "tokens_per_s": 44433,
+   "gpu": "NVIDIA H200"
+  },
+  {
+   "shard": 1,
+   "dialogues": 400,
+   "skipped (no readable output)": 0,
+   "chunks resumed": 0,
+   "tokens (this attempt)": 9785292,
+   "forward_s": 222.4,
+   "load_s": 33.9,
+   "tokens_per_s": 43999,
+   "gpu": "NVIDIA H200"
+  }
+ ],
+ "assembled": {
+  "toc_runs_planted_C_2026-10-11_173852": {
+   "dialogues": 800,
+   "rows": 19476
+  },
+  "toc_runs_planted_M_2026-10-11_173852": {
+   "dialogues": 800,
+   "rows": 19476
+  }
+ }
+}

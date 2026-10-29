@@ -1,0 +1,74 @@
+{
+ "git": "ff28794b5e120b18a6779fb6740b907fae9d9bb1",
+ "run": "2026-10-13_step1ph_qwen3-32b_l48-63_v1",
+ "GPU types": [
+  "NVIDIA H100 80GB HBM3",
+  "NVIDIA H100 NVL"
+ ],
+ "reproduction": {
+  "check_ph sample | NVIDIA H100 80GB HBM3 L48": {
+   "runs": 74,
+   "rows": 561,
+   "bit-exact": 561,
+   "max abs diff": 0.0,
+   "min cosine": 0.9999998807907104
+  },
+  "check_ph sample | NVIDIA H100 80GB HBM3 L63": {
+   "runs": 74,
+   "rows": 561,
+   "bit-exact": 561,
+   "max abs diff": 0.0,
+   "min cosine": 0.9999998807907104
+  },
+  "per GPU type: NVIDIA H100 80GB HBM3 | NVIDIA H100 80GB HBM3 L48": {
+   "runs": 15,
+   "rows": 96,
+   "bit-exact": 96,
+   "max abs diff": 0.0,
+   "min cosine": 0.9999998807907104
+  },
+  "per GPU type: NVIDIA H100 80GB HBM3 | NVIDIA H100 80GB HBM3 L63": {
+   "runs": 15,
+   "rows": 96,
+   "bit-exact": 96,
+   "max abs diff": 0.0,
+   "min cosine": 0.9999998807907104
+  },
+  "per GPU type: NVIDIA H100 NVL | NVIDIA H100 NVL L48": {
+   "runs": 14,
+   "rows": 108,
+   "bit-exact": 108,
+   "max abs diff": 0.0,
+   "min cosine": 0.9999998807907104
+  },
+  "per GPU type: NVIDIA H100 NVL | NVIDIA H100 NVL L63": {
+   "runs": 14,
+   "rows": 108,
+   "bit-exact": 108,
+   "max abs diff": 0.0,
+   "min cosine": 0.9999998807907104
+  }
+ },
+ "flagged runs": [
+  {
+   "sample": "check_ph sample",
+   "arm": "real-attack-e2-ph",
+   "key": "0314_missing_completion_c10c8f3bab0deb5e__random_video_exclude_logic_inverted:become_admin:fd0205__1",
+   "reason": "no kept step-0 call position in either",
+   "only here": [],
+   "only in the reference": [],
+   "step-0 positions here (kind, step, action, kept)": [],
+   "step-0 positions in the reference (kind, step, action, kept)": []
+  },
+  {
+   "sample": "per GPU type: NVIDIA H100 NVL",
+   "arm": "real-attack-e2-ph",
+   "key": "0793_retained_overlap_f051b1975fa6113d__nginx_reverse_proxy_with_caching_and_rate_limiting:ws_rce:108a42__1",
+   "reason": "no kept step-0 call position in either",
+   "only here": [],
+   "only in the reference": [],
+   "step-0 positions here (kind, step, action, kept)": [],
+   "step-0 positions in the reference (kind, step, action, kept)": []
+  }
+ ]
+}

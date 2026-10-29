@@ -1,0 +1,22 @@
+# SIMULATED-HONEST launch simh_q2 (experiments/2026-10-15_q3_simhonest_311/RULE.md): per cell one
+# sim_honest@september forked at 0 from the main's honest_a. From experiments/2026-10-14_q3_scaleup_311/config/pilot_311_fu_q2_iii.yaml @ d46f2df7be84.
+# FOLLOW-UP (simulated-only) launch, variant (iii), RULE.md Amendment 7. Derived from pilot_311_q2.yaml.
+# Scale-up +311, quarter Q2 (experiments/2026-10-14_q3_scaleup_311/RULE.md; Aswin via 0d: "i approve scale up, just run things
+# and get me results quickly, ensure correctness and speed"). The canary's launch A config (pilot_canary_a.yaml) on this
+# box's cells: per cell honest_a (real; the fork source), attack and honest_b (real) and sim_attack@september; plus each
+# cell's `<key>_r2` entry (real_arms [attack]): its second real attack, in this same launch (scaleup_r2_arms.patch).
+tasks: config/tasks_311_q2_fu.json   # make_fu_tasks.py: the quarter's r1 entries, simulated attacks only
+real_simulator: september
+real_arms: []   # follow-up: no real arm; references from the main launch (--references-from)
+simulators: [september]
+sim_arms: [sim_honest]   # simulated honest only (was [sim_attack])
+simulator_confirmed: true
+max_runs_per_server: 10   # 8 servers (servers_september_scaleup.yaml): 80 runs at once (6 servers: 60)
+max_real_runs: 60         # the 64-vCPU box's cap, as the canary and the real-honest launch
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json   # tag form for every task, as launch 2 and the canary
+spend:
+  cap_usd: 4120   # 75 runnable cells x $19.6 = $1470 expected + K 25 x $106 (Aswin ~12:06 via 0d: 'ignore spending cap... increase caps'; was $2060)
+  worst_case_limit_usd: 4120   # = cap: the box-side admission bound
+  worst_per_sim_run_usd: 106   # the simulated-honest continuation's value
+  prior_per_sim_run_usd: 21.13   # tonight's continuation mean

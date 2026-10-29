@@ -1,0 +1,125 @@
+{
+ "wall_seconds": 308,
+ "config": {
+  "run": "2026-10-13_q2_step2_simrewrite_qwen3-32b_l48-63_v1",
+  "inputs_from": "2026-10-13_q2_step2_simrewrite_inputs_v1",
+  "model": "Qwen/Qwen3-32B",
+  "dtype": "bfloat16",
+  "attn_implementation": "sdpa",
+  "max_tokens": 32768,
+  "shards": 2,
+  "chunk_size": 5,
+  "layers": [
+   48,
+   63
+  ],
+  "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+  "provenance": {
+   "git": "adcb2f744c9335a538a8b4aef5d488bee56950f2",
+   "git_dirty": false,
+   "source_sha": "20c455c848a5ac37",
+   "files": [
+    "experiments/2026-10-13_step2_sim_rewrite/run_extract_qwen3_simrewrite.py",
+    "experiments/2026-10-13_step2_sim_rewrite/config/simrewrite_qwen3.yaml",
+    "src/probe_shift/__init__.py",
+    "src/probe_shift/apollo.py",
+    "src/probe_shift/apollo_sweep.py",
+    "src/probe_shift/attack_eval.py",
+    "src/probe_shift/awareness_sets.py",
+    "src/probe_shift/calls.py",
+    "src/probe_shift/cohorts.py",
+    "src/probe_shift/eligibility.py",
+    "src/probe_shift/eval_awareness.py",
+    "src/probe_shift/fake_env_ratings.py",
+    "src/probe_shift/labels.py",
+    "src/probe_shift/margins.py",
+    "src/probe_shift/models.py",
+    "src/probe_shift/needham.py",
+    "src/probe_shift/offpolicy.py",
+    "src/probe_shift/planted.py",
+    "src/probe_shift/probes.py",
+    "src/probe_shift/provenance.py",
+    "src/probe_shift/q1_eval.py",
+    "src/probe_shift/reader.py",
+    "src/probe_shift/refit_bootstrap.py",
+    "src/probe_shift/results_text_guard.py",
+    "src/probe_shift/scoring.py",
+    "src/probe_shift/scrub.py",
+    "src/probe_shift/shell_paths.py",
+    "src/probe_shift/torch_probe.py",
+    "src/probe_shift/transcripts.py",
+    "src/probe_shift/transfer.py",
+    "src/probe_shift/vuln.py"
+   ],
+   "source_matches_commit": "adcb2f744c9335a538a8b4aef5d488bee56950f2"
+  },
+  "modal": {
+   "app": "probe-shift_aswin-surya_sub-q2-step2_qwen3_kill-2026-11-13",
+   "gpu": [
+    "H100!",
+    "B200"
+   ],
+   "pip": [
+    "torch==2.8.0",
+    "transformers==4.56.2",
+    "accelerate==1.10.1",
+    "numpy",
+    "huggingface_hub[hf_transfer]"
+   ]
+  }
+ },
+ "shards": [
+  {
+   "shard": 0,
+   "transcripts": 15,
+   "chunks": [
+    {
+     "chunk": "shard000_chunk000",
+     "transcripts": 5,
+     "rows": 696,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk001",
+     "transcripts": 5,
+     "rows": 624,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard000_chunk002",
+     "transcripts": 5,
+     "rows": 411,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 231,
+   "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  {
+   "shard": 1,
+   "transcripts": 15,
+   "chunks": [
+    {
+     "chunk": "shard001_chunk000",
+     "transcripts": 5,
+     "rows": 905,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard001_chunk001",
+     "transcripts": 5,
+     "rows": 585,
+     "nonfinite": 0
+    },
+    {
+     "chunk": "shard001_chunk002",
+     "transcripts": 5,
+     "rows": 361,
+     "nonfinite": 0
+    }
+   ],
+   "seconds": 218,
+   "gpu": "NVIDIA H100 80GB HBM3"
+  }
+ ]
+}

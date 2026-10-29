@@ -1,0 +1,11 @@
+# Honest arms, from the extraction's honest reader inputs (same render and 32k cut as the probe): real honest split by
+# key into its first run per main task (real-honest) and its second (real-honest-2, the real-vs-real control, on the
+# tasks that have one); September simulated honest (sim-honest). Cells: main tasks with both real-honest and sim-honest.
+volume: probe-shift_aswin-surya_sub-la-activations
+inputs: [2026-10-06_la_segment-end-honest_qwen3-32b_v1]   # main session's honest staging, scrub level 0
+arms: [real-honest, sim-honest]
+split_by_key: {real-honest: [real-honest, real-honest-2]}
+paired_arms: [real-honest, sim-honest]
+max_tokens: 32768
+tokenizer: {name: Qwen/Qwen3-32B, revision: 9216db5781bf21249d130ec9da846c4624c16137}
+workers: 8

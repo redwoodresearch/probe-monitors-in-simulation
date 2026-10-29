@@ -1,0 +1,14 @@
+# Q4 RULE.md Amendment 8 test 1 (chat deleted): set main, Qwen3.5-27B reading its own runs in #36's reader format with the agent's chat
+# removed, L48 and L63 only, output_end rows (last token and span mean). Staged by run_q4c_stage_nochat.py (results/q4c_stage_nochat_2026-10-14_094536.json).
+run: q4c_extract_main_nochat_v1
+inputs: q4c_main_nochat_v1
+inputs_sha256:
+  attack.jsonl: 55d110f12380e8a3f2e891b7e1267d19558bf4f8f86078d63064154e9dacf228
+  honest_a.jsonl: 099a9df425bf14861a638e9fa4ee94795c63fead0b35907a5e769ed6fb585967
+  sim_attack@september.jsonl: 39b4d531a46616ff520982bc6da2f2809663600a5ce5ecbf0f46fd879ef0424a
+model: Qwen/Qwen3.5-27B
+layers: [48, 63]
+kinds: [output_end]
+shards: 48
+chunk_size: 8
+pad_to: 4096

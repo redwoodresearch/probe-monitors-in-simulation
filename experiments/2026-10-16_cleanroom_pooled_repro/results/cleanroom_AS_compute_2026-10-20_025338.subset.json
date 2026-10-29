@@ -1,0 +1,24 @@
+{
+  "rows_old": 760,
+  "rows_new": 1072,
+  "rows_lost": 0,
+  "rows_equal_on_old": true,
+  "rows_added": 312,
+  "added_all_sensitivity": true,
+  "thresholds_equal_on_old": true,
+  "thresholds_added_all_sensitivity": true,
+  "added_labels": [
+    "c_asis_uncut C",
+    "c_asis_uncut R",
+    "own_all_rs10_uncut_L48 C",
+    "own_all_rs10_uncut_L48 R",
+    "own_all_rs25_uncut_L48 C",
+    "own_all_rs25_uncut_L48 R"
+  ],
+  "n_levels": 2,
+  "thresholds_added": 24,
+  "cells_equal_on_old": true,
+  "controls_equal": true,
+  "group_membership_equal": true,
+  "EQUAL": true
+}

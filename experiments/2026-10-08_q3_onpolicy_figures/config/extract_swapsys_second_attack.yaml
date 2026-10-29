@@ -1,0 +1,10 @@
+# Amendment 8, claim C: real attack run 2 (second_attack) with the honest system turn swapped in (run_read_tests.swap_stage;
+# span checks passed: only the system turn changed; its only differing tool definition is submit).
+run: 2026-10-10_second_attack_segends_v1_scrub1_swapsys
+inputs: second_attack_segends_v1_scrub1_swapsys
+inputs_sha256:
+  attack.jsonl: 08dc7273d3ec7acc9890fd99be3f2ad2565f15ce5a4c6c07327636a10265e304
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 10
+pad_to: 4096

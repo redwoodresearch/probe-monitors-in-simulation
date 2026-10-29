@@ -1,0 +1,13 @@
+Realism rows for F10 and F11 (Amendment 3): summary (ii) [95% main-task bootstrap], label-shuffle null (100 within-task shuffles)
+L48 full + F9 (q2)   0.8080 [0.7835, 0.8323] | null mean 0.5342, 95th 0.5646, max 0.5775 | p 0.0099 | runs (sim, real) [437, 885] | runs swapped in 0, new runs without rows 0
+    loader gate: as run 0.8080, passes True | runs bit-exact to d9's full + F9 rows 437 of 437 (same row count 437; max |diff| where counts match 0.0)
+L48 full + F9 + F10  0.8064 [0.7823, 0.8307] | null mean 0.5349, 95th 0.5615, max 0.5795 | p 0.0099 | runs (sim, real) [437, 885] | runs swapped in 36, new runs without rows 0
+    minus full + F9 (q2): -0.0016 [-0.0039, +0.0006] (paired, same bootstrap draws)
+L48 full + F9 + F11  0.7207 [0.6954, 0.7468] | null mean 0.5367, 95th 0.5754, max 0.5831 | p 0.0099 | runs (sim, real) [437, 885] | runs swapped in 226, new runs without rows 0
+    minus full + F9 (q2): -0.0873 [-0.1022, -0.0731] (paired, same bootstrap draws)
+L63 full + F9 (q2)   0.8545 [0.8319, 0.8770] | null mean 0.5277, 95th 0.5567, max 0.5758 | p 0.0099 | runs (sim, real) [437, 885] | runs swapped in 0, new runs without rows 0
+    loader gate: as run 0.8552, passes True | runs bit-exact to d9's full + F9 rows 437 of 437 (same row count 437; max |diff| where counts match 0.0)
+L63 full + F9 + F10  0.8519 [0.8293, 0.8748] | null mean 0.5295, 95th 0.5576, max 0.5733 | p 0.0099 | runs (sim, real) [437, 885] | runs swapped in 36, new runs without rows 0
+    minus full + F9 (q2): -0.0026 [-0.0050, -0.0003] (paired, same bootstrap draws)
+L63 full + F9 + F11  0.7670 [0.7434, 0.7908] | null mean 0.5276, 95th 0.5511, max 0.5693 | p 0.0099 | runs (sim, real) [437, 885] | runs swapped in 226, new runs without rows 0
+    minus full + F9 (q2): -0.0875 [-0.1026, -0.0736] (paired, same bootstrap draws)

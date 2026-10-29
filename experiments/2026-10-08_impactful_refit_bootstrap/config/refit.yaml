@@ -1,0 +1,27 @@
+# Impactful-command probe, off-policy 2x2 with a bootstrap that refits (2026-10-08; Aswin's OK via the orchestrator,
+# about $30, cap $45; after the pilot, option A: about $60, stop $75). Attack runs, the matched calls (probe_shift.eligibility.matched_call: the last argument is the
+# non-empty command parameter, so call_end reads the on-policy readout's token), call_end
+# readout, 16 candidate layers. Each replicate resamples main tasks and redoes layer and C choice, fitting and
+# calibration. Folds per outer fold f: test f, calibration f+1, validation f+2, inner training f+3 and f+4 (mod 5);
+# the final probe is refit on the validation and inner-training folds.
+labels_file: .run_cache/q2_call_labels/2026-10-06_212047.jsonl
+arms: {real: real-attack-e1, sim: sim-attack}
+readers:
+  qwen3.5:
+    volume: probe-shift_aswin-surya_sub-qwen35_q2feats_kill-2026-11-06
+    features_run: 2026-10-06_q2_qwen35_matched_eb014307fd1aab31_as_labeled
+  qwen3-32b:
+    volume: probe-shift_aswin-surya_sub-q2_probe-features_kill-2026-11-06
+    features_run: 2026-10-06_q2_features_eb014307fd1aab31_as_labeled
+readout: call_end
+layers: [3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 59, 63]
+C_grid: [0.001, 0.01, 0.1]
+layer_tolerance: 0.005
+max_iter: 500
+fpr: 0.01
+n_boot: 500
+n_null: 20  # label-shuffle draws per reader (within transcripts), each with the full selection
+seed: 0
+out_volume: probe-shift_aswin-surya_sub-q2-refit_boot_kill-2026-11-08
+out_run: 2026-10-08_impactful_refit_bootstrap_v1
+gpu: T4

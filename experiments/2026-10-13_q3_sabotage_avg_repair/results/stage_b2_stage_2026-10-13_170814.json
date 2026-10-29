@@ -1,0 +1,52 @@
+{
+ "git": "4ae1697894f9d77d304d6a8096341cbba5fe1f59",
+ "mode": "stage",
+ "evals": 211,
+ "evals_sha256_digest": "589523e0fa502e3fd73dfb3e747fa81aa4c547ac8941e2b6e372acfde9d999d8",
+ "tool_errors_sha256": "59ac3381a8e717a22c643679f717d047ee63e8db4063d3b40100f64688e0a6ff",
+ "counts": {
+  "F8|templates (14, all strip)": 14,
+  "blocks": 17224,
+  "blocks re-rendered|bash": 13,
+  "blocks re-rendered|text_editor:str_replace": 1093,
+  "changed outputs|stripped": 1583,
+  "epochs": 256,
+  "epochs changed": 149,
+  "epochs kept unrepaired|blocks do not align with consecutive tool messages": 1,
+  "first block at tool message 0": 255,
+  "output_end readouts dropped (inside a changed block)": 991,
+  "outputs changed": 1443,
+  "outputs changed|bash": 17,
+  "outputs changed|rust_worker_bash": 2,
+  "outputs changed|text_editor:create": 103,
+  "outputs changed|text_editor:str_replace": 1321,
+  "render gate|pass": 17224,
+  "runs changed": 161,
+  "runs read": 211,
+  "tokens after": 13799263,
+  "tokens before": 13641690
+ },
+ "staged": {
+  "2026-10-13_b2fx_rerun_strict_segends_v2/inputs/sim_attack@september.jsonl": {
+   "epochs": 26,
+   "sha256": "1efece8bcd18c3edcf892c6f37785348491f70a202b8b7c26d068611615400ad"
+  },
+  "2026-10-13_b2fx_rerun_strict_segends_v2/inputs/sim_honest@september.jsonl": {
+   "epochs": 27,
+   "sha256": "471219594771dfef29077a238a187f3af294d35ca6040b60d3c9da3453495c4a"
+  },
+  "2026-10-13_b2fx_scaleup_canary_segends_v1/inputs/sim_attack@september.jsonl": {
+   "epochs": 5,
+   "sha256": "0a8129bfa1cd37ec53016a214ea3a023e74557e23b77d4b45cf46c878cdfc13f"
+  },
+  "2026-10-13_b2fx_scaleup_l2_segends_v1/inputs/sim_attack@september.jsonl": {
+   "epochs": 186,
+   "sha256": "3a9d3d8e8b3c05d203b53213c0553c58be1045b05b64e3be3f1a6badcea00822"
+  },
+  "2026-10-13_b2fx_scaleup_topup_segends_v1/inputs/sim_attack@september.jsonl": {
+   "epochs": 12,
+   "sha256": "ef4dd8bd6ab07230f84f353c730e2c4d828d10e13dd03c4ee96c0c0be5475202"
+  }
+ },
+ "record_sha256": "fefdebc5a4f72022609aebac436e78bcffb0d2b85727ce047a61dc9fe2e0e4e0"
+}

@@ -1,0 +1,10 @@
+# Q2 follow-ups with Qwen3.5-27B as the reader (2026-10-06), merged over the --probes-config file (same features, labels, folds, selection, threshold rule).
+adapt_positions: [pre_call, prev_content]
+directions:                             # [source, target]
+  - [real-attack-e1, sim-attack]
+  - [sim-attack, real-attack-e1]
+n_shots: 32                             # labeled target calls for the update, drawn from target validation calls
+n_draws: 5                              # random draws of the shots
+update_C_multipliers: [1, 10, 100]      # update strength: the source probe's C times this (1 = same prior strength per call)
+env_positions: [call_end, pre_call, prev_content]   # pre_call only next to its content-token control (as q2)
+env_train_sets: [real-attack-e1, sim-attack]

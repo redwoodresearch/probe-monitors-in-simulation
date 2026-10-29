@@ -1,0 +1,26 @@
+{
+ "git": "4fa74c54501e36f42d262da846279dbdff7fa082",
+ "stage-1 sentence result sha256": "9b7f79cb1770995a9fc7142d1aa8bee4a884971bc166e9b257e3e17e3d25b31e",
+ "per-run SD of D (from stage 1's primary interval)": 0.9730447570889171,
+ "index summary sha256": "6bf5e60dec1c8345cd8a96eee4b42a869730ec2234761767d1183d6ae7fdc2b6",
+ "index sha256": "a4217da0379df98b118584e6015f5fe7eb49d7739d5ccd5f5127937304d2a127",
+ "eligible runs": 216,
+ "eligible tasks": 159,
+ "projected usable pairs": 50.4,
+ "design effect (rho 0.5, used; rho 1, beside)": [
+  1.061574074074074,
+  1.1231481481481482
+ ],
+ "projected SE": 0.1412188597455602,
+ "margin m (honest SD)": 0.4,
+ "P(clear) if true D = 0": 0.8085274931692986,
+ "P(clear) if true D = m": 0.8085274931692986,
+ "beside: at rho 1, P(clear) if true D = 0 / m": [
+  0.7863284174456819,
+  0.7863284174456819
+ ],
+ "launch allowed (both >= 0.80)": true,
+ "price raw ($)": 34.969256666666666,
+ "price with 30% ($)": 45.46003366666667,
+ "watcher stop ($, the buffered estimate, never below)": 46
+}

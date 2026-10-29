@@ -1,0 +1,14 @@
+{
+ "label": "POST HOC (Bugbot on #951; no verdict)",
+ "git": "666ca50d070fbe6ca0119e3dd61f235acf567e91",
+ "inputs sha256": {
+  "fix939 per-run file": "5f6ecbc42b1c6bb9586cb58e474d74c5c1d914bedb95d80a5a07dd078b0e5ebd",
+  "d9 scoring record": "bcb57de46be2a724fd78174cf08824fda1aec4d30e2d1cc3535ba1fe488afffd",
+  "d9 scores": "5ac082adb364862f9849ae8f72b3b9451d7abbc72ac9526b7be3b516b8c022db"
+ },
+ "copies": 200,
+ "seed": 20261017,
+ "fired": 7,
+ "rate": 0.035,
+ "registered per-cell null (for comparison)": "fired 11 of 200 (own_world_auroc_2026-10-12_033546.json)"
+}

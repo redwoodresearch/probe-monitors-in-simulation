@@ -1,0 +1,116 @@
+{
+ "reader": "qwen3",
+ "model": {
+  "name": "Qwen/Qwen3-32B",
+  "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+  "render": "qwen3"
+ },
+ "stamp": "2026-10-13_164525",
+ "cut": 32768,
+ "scrub_level": 1,
+ "labeler_fingerprint": "eb014307fd1aab31",
+ "inputs_sha256": {
+  "flagrate_rows_2026-10-13_122417.csv": "44c75f78e78f86b4bcab409b1379762a8d4dccadfd456f28ee651832eb2b13a7",
+  "scaled_rows_2026-10-13_152021.csv": "a95453ac2688e61ba99184726ce27a4dd54276a04730a56d67825f204d1ee1f3",
+  "rows_v2.json": "727c417916b8fb2df9a31aca5f8ca0cc4dd17002a8a2edcb7bd79444bc0bf4b5"
+ },
+ "tasks": {
+  "attack": 156,
+  "honest_b": 51
+ },
+ "counted_attempts_without_an_eval": [
+  "2026-10-09_182505_scaleup/attack/t88_model_registry_redraw2",
+  "2026-10-09_182505_scaleup/attack/t169_clinical_trial_redraw2",
+  "2026-10-10_001314_second_attack/attack/t88_model_registry_redraw2",
+  "2026-10-10_001314_second_attack/attack/t169_clinical_trial_redraw2"
+ ],
+ "gate": 100000,
+ "limit": 0,
+ "summary": {
+  "honest_b": {
+   "runs": 51,
+   "runs excluded": {},
+   "runs staged": 51,
+   "rows": 4154,
+   "rows read": 1909,
+   "forward tokens": 1483180,
+   "counters": {
+    "calls excluded: tool not offered": 4,
+    "calls excluded: text_editor without command": 0,
+    "value encoding: JSON-escaped": 2487,
+    "value encoding: verbatim": 1671,
+    "calls with a command value": 4158,
+    "values with no whole token inside": 0,
+    "values whose first token crosses the value's start": 635,
+    "values whose last token crosses the value's end": 106,
+    "values read past the cut": 2245
+   }
+  },
+  "real1": {
+   "runs": 156,
+   "runs excluded": {},
+   "runs staged": 156,
+   "rows": 10888,
+   "rows read": 6931,
+   "forward tokens": 4641105,
+   "counters": {
+    "calls excluded: tool not offered": 29,
+    "calls excluded: text_editor without command": 0,
+    "value encoding: verbatim": 5087,
+    "value encoding: JSON-escaped": 5830,
+    "calls with a command value": 10917,
+    "values with no whole token inside": 0,
+    "values whose first token crosses the value's start": 1938,
+    "values whose last token crosses the value's end": 489,
+    "values read past the cut": 3965
+   }
+  },
+  "real2": {
+   "runs": 156,
+   "runs excluded": {
+    "no honest donor": 1
+   },
+   "runs staged": 155,
+   "rows": 10331,
+   "rows read": 6387,
+   "forward tokens": 4559628,
+   "counters": {
+    "calls excluded: tool not offered": 41,
+    "calls excluded: text_editor without command": 0,
+    "value encoding: verbatim": 4746,
+    "value encoding: JSON-escaped": 5625,
+    "calls with a command value": 10371,
+    "values with no whole token inside": 0,
+    "values whose first token crosses the value's start": 1854,
+    "values whose last token crosses the value's end": 521,
+    "values read past the cut": 3949
+   }
+  },
+  "sim": {
+   "runs": 156,
+   "runs excluded": {},
+   "runs staged": 156,
+   "rows": 10541,
+   "rows read": 6961,
+   "forward tokens": 4534874,
+   "counters": {
+    "calls excluded: tool not offered": 3,
+    "calls excluded: text_editor without command": 0,
+    "value encoding: verbatim": 5013,
+    "value encoding: JSON-escaped": 5531,
+    "calls with a command value": 10544,
+    "values with no whole token inside": 0,
+    "values whose first token crosses the value's start": 1884,
+    "values whose last token crosses the value's end": 558,
+    "values read past the cut": 3580
+   }
+  }
+ },
+ "gate_result": {
+  "calls": 35991,
+  "mismatches": 0,
+  "readouts": 22251,
+  "runs": 518,
+  "passes": true
+ }
+}

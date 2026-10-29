@@ -1,0 +1,54 @@
+{
+ "provenance": {
+  "git": "7cd9bb832c14ca29be59daed7583e6e3c2e4462f",
+  "stamp": "2026-10-13_121721",
+  "phase": "score",
+  "code_sha256": "d3cdae7b7dc1823ad559bba843c05ab04596458dd80af627a4f18d7e399e6207",
+  "shared prefix": 180,
+  "check": "results/check_2026-10-13_121629_check.json"
+ },
+ "result": [
+  {
+   "worlds": [
+    "real2"
+   ],
+   "epochs": 223,
+   "resumed": 0,
+   "seconds": 800,
+   "gpu": "NVIDIA H200"
+  },
+  {
+   "worlds": [
+    "real1",
+    "sim_sept"
+   ],
+   "epochs": 464,
+   "resumed": 0,
+   "seconds": 1414,
+   "gpu": "NVIDIA H200"
+  },
+  {
+   "worlds": [
+    "honest_a"
+   ],
+   "epochs": 293,
+   "resumed": 0,
+   "seconds": 1425,
+   "gpu": "NVIDIA H200"
+  },
+  {
+   "worlds": [
+    "honest_b"
+   ],
+   "epochs": 276,
+   "resumed": 0,
+   "seconds": 1388,
+   "gpu": "NVIDIA H200"
+  }
+ ],
+ "rows": {
+  "file": "rows_2026-10-13_121721.json",
+  "n": 1256,
+  "sha256": "1abd1dc0e7437db5708ffc306a831b1a3ba6a918ec1390d9287593618decfab1"
+ }
+}

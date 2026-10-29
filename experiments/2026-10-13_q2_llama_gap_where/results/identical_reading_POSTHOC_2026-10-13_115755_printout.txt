@@ -1,0 +1,18 @@
+POST HOC (PLAN_identical_POSTHOC.md). Llama-3.3-70B, real e2 vs repaired-plus by cell, R2J readout, registered conventions (thresholds redrawn, 2,000 draws, seed 20261011). Identical = the output's raw content equals some tool output of the same cell's other-arm run.
+identical rows: {"real e2": {"rows": 22720, "identical": 1905, "share": 0.0838468309859155}, "repaired-plus": {"rows": 23041, "identical": 1903, "share": 0.0825919013931687}, "main tasks with an identical row": 449, "main tasks": 536}
+
+== 1%: G = catch(real e2) - catch(repaired-plus) = {f2(e['G (points)'])} points
+rows             rows % e2/rep        mean shift rep-e2                       A                    A/G
+identical          8.4/  8.3   -0.054 [-0.131, +0.027]    +0.24 [-0.16, +0.59]   +0.04 [-0.03, +0.10]
+non-identical     91.6/ 91.7   -0.130 [-0.192, -0.066]    +4.74 [+2.09, +7.42]   +0.75 [+0.49, +1.19]
+all rows         100.0/100.0   -0.124 [-0.183, -0.064]    +5.09 [+2.27, +7.68]   +0.81 [+0.54, +1.23]
+== 5% (beside 1%: the registered RULE's primary rate): G = catch(real e2) - catch(repaired-plus) = {f2(e['G (points)'])} points
+rows             rows % e2/rep        mean shift rep-e2                       A                    A/G
+identical          8.4/  8.3   -0.054 [-0.131, +0.027]    +0.24 [-0.14, +0.56]   +0.04 [-0.03, +0.12]
+non-identical     91.6/ 91.7   -0.130 [-0.192, -0.066]    +4.63 [+2.09, +6.75]   +0.84 [+0.52, +1.32]
+all rows         100.0/100.0   -0.124 [-0.183, -0.064]    +4.74 [+2.22, +6.91]   +0.86 [+0.56, +1.37]
+M (matched-pair shift, logits) = -0.036 [-0.113, +0.044]; valid draws 2000
+R_M = M / shift(all rows) = +0.295 [-0.431, +0.921]; valid draws 2000
+R = shift(identical) / shift(all rows) = +0.433 [-0.258, +1.117]; valid draws 2000
+matched groups: {"groups with kept rows in both arms": 1867, "their rows (real e2, repaired-plus)": [1876, 1876], "main tasks with a matched group": 442}; draws left out of the ratios: {"a fold without rows or groups": 0, "|all-rows shift| < 0.02": 0}
+reading (PLAN, Amendment 1): output text (descriptive)

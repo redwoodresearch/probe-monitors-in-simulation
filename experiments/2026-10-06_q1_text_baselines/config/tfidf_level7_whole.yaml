@@ -1,0 +1,24 @@
+# Level 7 on WHOLE transcripts (no 32k cut: every output with a content token counts), main-task folds,
+# for the long-context reader comparison. Staged from the extraction's reader inputs (config/stage_reader_inputs_whole.yaml).
+name: tfidf_level7_whole
+cells_file: config/paired_cells_v3.json       # the 939 paired cells (the reader inputs hold one more, excluded by the splits)
+examples: examples_2026-10-06_184456         # whole transcripts, real e1 / e2 / simulated attack
+folds_file: folds_v3.json
+baselines:
+  harness_normalized_editor_format_whole: {text: readout_text, scrub: 7}
+output_variants: [all, no_editor]
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true
+C: 1.0
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 0}
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

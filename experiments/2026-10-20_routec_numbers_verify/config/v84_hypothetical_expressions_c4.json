@@ -1,0 +1,123 @@
+{
+ "what": "09's hypothetical check (b): per-row committed relations (a row's own relation field, else 09's list assigned by the row's literal numbers); the container evaluates each in exact arithmetic and requires every number of the row's literal to be an operand or result",
+ "source": {
+  "path": "post/constants_v84_final4_0141.jsonl",
+  "sha256": "a0d7dd96ba2894e85e3a34f9d3e76a6013cf16395d7aca3c4781f30d66f2c16b"
+ },
+ "relations_09": [
+  [
+   "62 - 60",
+   2
+  ],
+  [
+   "62 - 57",
+   5
+  ],
+  [
+   "(2 + 5) / 2",
+   3.5
+  ],
+  [
+   "60 - 57",
+   3
+  ],
+  [
+   "3.5 - 3",
+   0.5
+  ]
+ ],
+ "rows": {
+  "18": {
+   "expressions": [
+    [
+     "62 - 60",
+     2
+    ],
+    [
+     "62 - 57",
+     5
+    ]
+   ],
+   "from": "09's list",
+   "text_sha256": "a07d2aca66292cf69add96e55f2196366033c82ed76fb661e0d519490f5f2955"
+  },
+  "19": {
+   "expressions": [
+    [
+     "62 - 60",
+     2
+    ],
+    [
+     "62 - 57",
+     5
+    ],
+    [
+     "60 - 57",
+     3
+    ]
+   ],
+   "from": "09's list",
+   "text_sha256": "e124359ba78b3bfcf528664ad63f020c8f1b3403e7cdf8001a010689494a9a89"
+  },
+  "20": {
+   "expressions": [
+    [
+     "62 - 60",
+     2
+    ],
+    [
+     "62 - 57",
+     5
+    ],
+    [
+     "(2 + 5) / 2",
+     3.5
+    ],
+    [
+     "3.5 - 3",
+     0.5
+    ]
+   ],
+   "from": "09's list",
+   "text_sha256": "cf1687c3fdc61d2434a567dffaa4ce05a223db81292b47757f1bbbd677e461b0"
+  },
+  "21": {
+   "expressions": [
+    [
+     "(0.90)*(0.90) + (1-(0.90))*(1-(0.90))",
+     0.82
+    ],
+    [
+     "0.82 > 0.5",
+     true
+    ]
+   ],
+   "from": "relation field",
+   "text_sha256": "b6256907dc060406e5b0c853ba9509c112f21ea886ef618b7ea90f87700c5a36"
+  },
+  "26": {
+   "expressions": [
+    [
+     "60 - 57",
+     3
+    ],
+    [
+     "3.5 - 3",
+     0.5
+    ]
+   ],
+   "from": "09's list",
+   "text_sha256": "7e1a773e4df3f1f2c5506129e59038cd7fba210b6e54008dea9fa1d8b3c265af"
+  },
+  "27": {
+   "expressions": [
+    [
+     "3.5 - 3",
+     0.5
+    ]
+   ],
+   "from": "09's list",
+   "text_sha256": "dde69b3eddab8fd9b29cd34da70d6be8bd313a38f593d108881551ced90214c9"
+  }
+ }
+}

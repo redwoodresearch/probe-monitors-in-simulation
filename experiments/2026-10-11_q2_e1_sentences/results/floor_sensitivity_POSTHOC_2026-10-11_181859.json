@@ -1,0 +1,38 @@
+{
+ "label": "POST HOC (after the result was read; no verdict)",
+ "git": "24a20181cc5d2e402063d3d35136e49ecb2453be",
+ "honest SD (as run)": 0.5396148830137296,
+ "runs in the check": 28,
+ "honest part under 10 scored tokens": 0,
+ "honest part with 0 scored tokens": 0,
+ "honest scored tokens, median": 63.5,
+ "appended share of the readout tokens, median": 0.1911525974025974,
+ "check as run (result file)": {
+  "runs": 28,
+  "mean D": 0.2944012207823365,
+  "95%": [
+   0.2292971316839252,
+   0.3690882650255535
+  ],
+  "swap p": 9.999000099990002e-05
+ },
+ "check recomputed, all runs (fresh generator)": {
+  "runs": 28,
+  "mean D": 0.2944012207823365,
+  "95%": [
+   0.2264623306415973,
+   0.36751754146921317
+  ],
+  "swap p": 9.999000099990002e-05
+ },
+ "check with the floor (honest part >= 10; fresh generator)": {
+  "runs": 28,
+  "mean D": 0.2944012207823365,
+  "95%": [
+   0.2264623306415973,
+   0.36751754146921317
+  ],
+  "swap p": 9.999000099990002e-05
+ },
+ "floored interval above 0": true
+}

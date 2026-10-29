@@ -1,0 +1,20 @@
+# SIM-HONEST REPLACEMENT launch simh_nm_s4d_rlr (RULE.md; 09's rulings in results/simh_rlr_plan_2026-10-15.json), from config_nm/pilot_simh_nm_s4d.yaml:
+# SIMULATED-HONEST launch simh_nm_s4d (experiments/2026-10-15_q3_simhonest_311/RULE.md, nm360 amendment): per cell one
+# sim_honest@september forked at 0 from the nm main's honest_a (--references-from ~/phase2/nm/runs/2026-10-14_newmains_s4). Derived from
+# experiments/2026-10-14_q3_new_mains_launch/config/pilot_nm_fu_s4d.yaml (the nm follow-up, sim_attack) with the +311
+# simulated-honest settings (experiments/2026-10-15_q3_simhonest_311/config/pilot_simh_q1.yaml).
+tasks: config/tasks_simh_nm_s4d_rlr.json   # make_rlr.py: the replacement cells only (nm258_tiktok)
+real_simulator: september
+real_arms: []   # follow-up: no real arm; references from the main launch (--references-from)
+simulators: [september]
+sim_arms: [sim_honest]
+simulator_confirmed: true
+max_runs_per_server: 10
+max_real_runs: 60
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+spend:
+  cap_usd: 126   # 1 cells: expected $20 + 1 x $106 (one admission per cell at the $106 reserve)
+  worst_case_limit_usd: 126   # = cap: the box-side admission bound
+  worst_per_sim_run_usd: 106   # the simulated-honest continuation's value (as +311)
+  prior_per_sim_run_usd: 21.13

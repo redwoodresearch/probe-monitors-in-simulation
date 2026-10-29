@@ -1,0 +1,13 @@
+# 1e-4 real honest runs, RULE.md Amendment 6: the 980-run launch (2026-10-14_135334_honest_rh980, honest_b) staged by run_rh_stage.py
+# --target rh (2e's corrected render, B's counted-attempt rule), plus the per-shard reference arm repro-c (--repro-shards 32: batch C's
+# longest staged epoch and one seeded, once per shard), every layer, last-token rows (command, call_end, output_end) and output_end
+# span-mean rows, exactly as q4b_extract_c.yaml (chunk 8, pad 4096); 32 shards on H200. Then compare_repro.py --arm repro-c.
+run: rh1e4_extract_v1
+inputs: rh1e4_stage_v1
+inputs_sha256:
+  honest_b.jsonl: 8a150d13903df37c974e6d2ffd3f6fe4b114fb1ad1a328858a21d50ff4eabb78
+  repro-c.jsonl: 5a1d3049467a60241af3d272de833145912f31cb6f522dfeada4d511bacf0809
+model: Qwen/Qwen3.5-27B
+shards: 32   # Amendment 13: 32 shards x the 30 min timeout bounds the worst case
+chunk_size: 8
+pad_to: 4096

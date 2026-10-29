@@ -1,0 +1,24 @@
+{
+ "target": "ep2_nm",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "ep2_nm",
+   "arm": "honest_a",
+   "staged_file": "/ev/ep2_nm_v1/inputs/honest_a.jsonl",
+   "staged_sha": "28cdba2ca3319e4ea1b07384a85d97eb5664be3fe24adfd7ff9876d3948e9168",
+   "epochs": 336,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  },
+  {
+   "target": "ep2_nm",
+   "arm": "honest_b",
+   "staged_file": "/ev/ep2_nm_v1/inputs/honest_b.jsonl",
+   "staged_sha": "d07307aeb656ec978c6d12ab68ab6a2fb6f7d0dacd9c96657a439be189bf478c",
+   "epochs": 346,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "git": "d8264df10f17b9cdff4f1ea5ffd028b57fda9a0c",
+ "stamp (PT)": "2026-10-14_232441",
+ "app": "probe-shift_aswin-surya_sub-p2probes_owns_kill-2026-11-13",
+ "job": "g2",
+ "spec_owns": [
+  "2026-10-14_231856",
+  "0521496e4a05be415ad4aacf18653eeb511021a2d0c448711169fdd328e57a8a"
+ ],
+ "g2_stamp": "2026-10-14_232441",
+ "resume": false,
+ "call": "fc-01M4Z3R27TXQN7JACXDWVVJ5Z3",
+ "result": {
+  "completion_sha256": "6f4975218c47b6003a895e6124d402ec783d1025900a9d28d7238bc597de3e5d",
+  "attempt": 1,
+  "failed_blocks": [],
+  "perms_done": {
+   "R|L16": 201,
+   "R|L32": 201,
+   "R|L48": 201,
+   "C|L16": 197,
+   "C|L32": 201,
+   "C|L48": 191
+  },
+  "cells_complete": {
+   "R|L16": true,
+   "R|L32": true,
+   "R|L48": true,
+   "C|L16": false,
+   "C|L32": true,
+   "C|L48": false
+  },
+  "mains": {
+   "R": {
+    "mains": 191,
+    "mixed_class_mains": 169,
+    "single_class_mains": 22
+   },
+   "C": {
+    "mains": 191,
+    "mixed_class_mains": 169,
+    "single_class_mains": 22
+   }
+  }
+ },
+ "sealed": "AUROCs stay on the Volume until 09's phase 2"
+}

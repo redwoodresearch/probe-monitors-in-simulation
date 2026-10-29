@@ -1,0 +1,10 @@
+{
+ "batch": "ep2-nm",
+ "original_target": "ep2_nm",
+ "revision": 1,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/ep2-nm__ep2_nm_cutfull.json @ 16609a1b5502",
+ "commit": "16609a1b5502",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_ep2-nm__ep2_nm_cutfull.json",
+ "sets": 1,
+ "failing": {}
+}

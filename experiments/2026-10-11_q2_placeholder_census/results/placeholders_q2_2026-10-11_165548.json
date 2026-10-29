@@ -1,0 +1,74 @@
+{
+ "git": "9f2ef4d93e77cc583e25a7cb03d4f3318423b0d4",
+ "sources": {
+  "Sol Phase 1 real honest n1000": {
+   "samples": 1000,
+   "sample-message contents": 63731,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 35237,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "logs": 815
+  },
+  "Sol Phase 1 simulated honest n437 (Astra)": {
+   "samples": 437,
+   "sample-message contents": 26691,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 14686,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "logs": 437
+  },
+  "Qwen 196-task scale-up honest_a (all batches)": {
+   "samples": 207,
+   "sample-message contents": 34348,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 16973,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "call-record messages (last model call)": 35057,
+   "refs in call records (last model call)": 28007,
+   "logs": 207
+  },
+  "Qwen 196-task scale-up honest_b (all batches)": {
+   "samples": 196,
+   "sample-message contents": 35056,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 17351,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "call-record messages (last model call)": 34722,
+   "refs in call records (last model call)": 26443,
+   "logs": 196
+  }
+ },
+ "indexes": {
+  "E1 stage 1 index (build_e1_index.py)": {
+   "runs": 70,
+   "message contents": 11109,
+   "refs in message contents": 3993,
+   "tool-call arguments": 5479,
+   "refs in tool-call arguments": 2516,
+   "refs in tools": 210,
+   "sha256": "a4531eb4d35c0825d56377fd3511d471ea81c32903ec25962733153cfde92fd2"
+  },
+  "E1 real-vs-sim pilot index (build_realsim_index.py)": {
+   "runs": 102,
+   "message contents": 7144,
+   "refs in message contents": 0,
+   "tool-call arguments": 3955,
+   "refs in tool-call arguments": 0,
+   "refs in tools": 0,
+   "sha256": "c288eca8b29da7f1d7b8538217ba562b66fb8c74fae9000be39b27ac4db893ee"
+  },
+  "E1 fresh confirmation index (build_confirm_index.py)": {
+   "runs": 216,
+   "message contents": 37701,
+   "refs in message contents": 0,
+   "tool-call arguments": 18667,
+   "refs in tool-call arguments": 0,
+   "refs in tools": 0,
+   "sha256": "a4217da0379df98b118584e6015f5fe7eb49d7739d5ccd5f5127937304d2a127"
+  }
+ }
+}

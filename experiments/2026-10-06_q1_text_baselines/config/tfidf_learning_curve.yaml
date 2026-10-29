@@ -1,0 +1,23 @@
+# TF-IDF learning curve (run_tfidf_modal.py::curve): per fold, train on random subsets of the training main tasks,
+# score the held-out fold. Step 0 text (the probe read unscrubbed text), all outputs and no editor outputs. The task
+# subsets are written to results/ and shared with the probe's learning curve.
+name: tfidf_learning_curve
+examples: examples_2026-10-06_142532     # .run_cache/ staging (v3, 939 cells; leading-content fix; with calls)
+folds_file: folds_v3.json
+variants:                                # name -> text, scrub level, which outputs
+  cleaned_all: {text: readout_text, scrub: 0, outputs: all}
+  cleaned_no_editor: {text: readout_text, scrub: 0, outputs: no_editor}
+train_main_tasks: [10, 30, 100, 300, all]
+seeds: [0, 1, 2]                         # nested subsets: one permutation of a fold's training main tasks per
+                                         # (seed, fold) from numpy default_rng([seed, fold]); subset n = its first n
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer; sklearn "char" collapses whitespace runs)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true                       # TfidfTransformer: tf -> 1 + log(tf); smooth_idf true; l2 row norm
+C: 1.0                                   # fixed a priori (sklearn default); c_sensitivity is reported, not used to choose
+solver: liblinear
+max_iter: 1000
+seed: 0
+n_jobs: 16

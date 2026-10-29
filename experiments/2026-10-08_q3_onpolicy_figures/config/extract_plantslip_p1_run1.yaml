@@ -1,0 +1,10 @@
+# Planted-slip transfer (experiments/2026-10-12_plantslip_transfer, RULE.md Amendment 1): P1 (impactful-command monitor), real run 1: the four run-1 attack stagings' changed epochs,
+# with plant_both() spliced in by run_plant_splice.py (gate passed: every unplanted epoch reproduced exactly).
+run: 2026-10-12_plantslip_p1_run1
+inputs: plantslip_p1_run1
+inputs_sha256:
+  attack.jsonl: 75e78f8993cfd909ca49585cbffc6e8a20cd9fa478d88c37856ea2b15bb6fbd3
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 10
+pad_to: 4096

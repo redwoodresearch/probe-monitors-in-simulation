@@ -1,0 +1,10 @@
+# Amendment 7, test (b): real attack run 1 of 2026-10-10_scaleup_topup_segends_v1_scrub1 with the honest system turn swapped in (run_read_tests.swap_stage;
+# span checks passed: only the system turn changed, readouts shifted by its length change with identical tokens).
+run: 2026-10-10_scaleup_topup_segends_v1_scrub1_swapsys
+inputs: scaleup_topup_segends_v1_scrub1_swapsys
+inputs_sha256:
+  attack.jsonl: 74cf530a9452f5c941ee5615e78fb7b062563ca972594d141710f7360960970a
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 10
+pad_to: 4096

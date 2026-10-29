@@ -1,0 +1,19 @@
+{
+ "label": "POST HOC (Codex on #723; no verdict)",
+ "git": "3c991fd6f1fed9fc7cae6cf0097cf599f3971447",
+ "post hoc result": "e1_control_POSTHOC_2026-10-11_134120.json",
+ "post hoc result sha256": "89253695bad0cd9c9ed36a485e8c3b28b65efbcf5460d736665784d391722d8d",
+ "reproduces the post hoc mean and interval": true,
+ "runs": 28,
+ "runs positive": 28,
+ "analyze_e1.stats (bootstrap + within-run label swap)": {
+  "runs": 28,
+  "mean D": 1.8846894607239126,
+  "95%": [
+   1.6313130426338858,
+   2.134462132225284
+  ],
+  "swap p": 9.999000099990002e-05
+ },
+ "smallest possible swap p at these draws": 9.999000099990002e-05
+}

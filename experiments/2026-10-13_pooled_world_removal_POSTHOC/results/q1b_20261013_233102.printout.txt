@@ -1,0 +1,56 @@
+== averaged, full + F9, L48 (primary): gate passes True | gate {"refit_a": {"same_missing": true, "max_abs_diff": 0.0}, "refit_b": {"same_missing": true, "max_abs_diff": 0.0}, "metrics": {"a_m_e2": 0.6201277955271565, "b_e2": 0.6959531416400426}} | expected {"a_m_e2": 0.6201, "b_e2": 0.696}
+primary k k10 | room True | reading: if not
+held-out honest realism after removal (mean of 20 models) vs its label-shuffle null:
+  k0   0.7947 | null mean 0.5192, 95th 0.5379 | p above 0.0099
+  k1   0.7540 | null mean 0.5164, 95th 0.5342 | p above 0.0099
+  k2   0.7030 | null mean 0.5149, 95th 0.5312 | p above 0.0099
+  k3   0.6696 | null mean 0.5137, 95th 0.5295 | p above 0.0099
+  k5   0.6289 | null mean 0.5123, 95th 0.5287 | p above 0.0099
+  k10  0.5392 | null mean 0.5101, 95th 0.5266 | p above 0.0099
+  md1  0.4975 | null mean 0.5105, 95th 0.5262 | p above 0.9010
+fpr_0.01: a_m real catch (draw mean) 62.0, fake/fake real 69.6 sim 71.9  (points)
+  k0   real 69.7, sim 83.0 | gap +13.3 [+9.2, +15.8] | D vs a_m +7.7 [+0.6, +17.3]
+  k1   real 70.4, sim 83.0 | gap +12.6 [+8.7, +15.3] | D vs a_m +8.4 [+1.0, +17.4] | gap − plain -0.7 [-1.0, +0.2] | D − plain +0.7 [-0.4, +0.8]
+  k2   real 70.2, sim 82.2 | gap +11.9 [+8.3, +14.8] | D vs a_m +8.2 [+1.0, +17.5] | gap − plain -1.4 [-1.6, -0.2] | D − plain +0.6 [-0.5, +1.2]
+  k3   real 70.5, sim 82.2 | gap +11.7 [+7.9, +14.4] | D vs a_m +8.5 [+1.1, +17.6] | gap − plain -1.7 [-2.1, -0.6] | D − plain +0.9 [-0.5, +1.4]
+  k5   real 71.0, sim 81.6 | gap +10.7 [+7.3, +13.6] | D vs a_m +8.9 [+1.4, +18.3] | gap − plain -2.6 [-3.0, -1.1] | D − plain +1.3 [-0.3, +2.2]
+  k10  real 70.8, sim 81.2 | gap +10.4 [+6.8, +13.3] | D vs a_m +8.8 [+1.2, +18.3] | gap − plain -2.9 [-3.4, -1.4] | D − plain +1.1 [-0.7, +2.4]
+  md1  real 71.0, sim 81.7 | gap +10.7 [+7.1, +13.3] | D vs a_m +8.9 [+1.4, +18.2] | gap − plain -2.6 [-3.2, -1.4] | D − plain +1.3 [-0.4, +2.1]
+fpr_0.05: a_m real catch (draw mean) 87.2, fake/fake real 88.1 sim 89.0  (points)
+  k0   real 87.8, sim 94.3 | gap +6.5 [+4.2, +8.8] | D vs a_m +0.6 [-1.4, +3.8]
+  k1   real 88.0, sim 94.4 | gap +6.4 [+4.1, +8.6] | D vs a_m +0.8 [-1.3, +3.9] | gap − plain -0.1 [-0.6, +0.2] | D − plain +0.2 [-0.3, +0.5]
+  k2   real 88.3, sim 94.2 | gap +5.9 [+3.7, +8.1] | D vs a_m +1.0 [-1.1, +4.0] | gap − plain -0.6 [-1.2, -0.1] | D − plain +0.4 [-0.2, +0.9]
+  k3   real 88.6, sim 94.1 | gap +5.5 [+3.5, +7.9] | D vs a_m +1.4 [-1.0, +4.2] | gap − plain -1.0 [-1.4, -0.2] | D − plain +0.8 [-0.2, +1.2]
+  k5   real 88.9, sim 93.9 | gap +5.0 [+3.1, +7.3] | D vs a_m +1.6 [-0.5, +4.7] | gap − plain -1.5 [-2.0, -0.6] | D − plain +1.0 [+0.1, +1.8]
+  k10  real 89.2, sim 94.1 | gap +4.8 [+2.8, +7.1] | D vs a_m +2.0 [-0.2, +5.0] | gap − plain -1.7 [-2.4, -0.7] | D − plain +1.4 [+0.2, +2.1]
+  md1  real 89.2, sim 94.2 | gap +5.0 [+3.2, +7.3] | D vs a_m +2.0 [-0.4, +4.9] | gap − plain -1.5 [-2.0, -0.5] | D − plain +1.4 [+0.2, +1.8]
+== last token, fix-full, L48 (secondary): gate passes True | gate {"refit_a": {"same_missing": true, "max_abs_diff": 0.0}, "metrics": {"p_e2": 0.2590521831735889, "p_gap": 0.17838125665601706}} | expected {"p_e2": 0.2591, "p_gap": 0.1784}
+primary k k10 | room True | reading: if not
+held-out honest realism after removal (mean of 20 models) vs its label-shuffle null:
+  k0   0.7839 | null mean 0.5164, 95th 0.5389 | p above 0.0099
+  k1   0.7863 | null mean 0.5153, 95th 0.5367 | p above 0.0099
+  k2   0.7747 | null mean 0.5141, 95th 0.5366 | p above 0.0099
+  k3   0.7366 | null mean 0.5128, 95th 0.5354 | p above 0.0099
+  k5   0.6713 | null mean 0.5107, 95th 0.5338 | p above 0.0099
+  k10  0.5831 | null mean 0.5095, 95th 0.5325 | p above 0.0099
+  md1  0.5002 | null mean 0.5102, 95th 0.5327 | p above 0.7525
+fpr_0.01: a_m real catch (draw mean) 28.6  (points)
+  k0   real 25.9, sim 43.7 | gap +17.8 [+14.0, +21.8] | D vs a_m -2.7 [-8.7, +4.0]
+  k1   real 25.9, sim 44.1 | gap +18.2 [+14.3, +22.2] | D vs a_m -2.7 [-8.5, +4.0] | gap − plain +0.4 [-0.4, +1.0] | D − plain +0.0 [-0.7, +0.7]
+  k2   real 26.0, sim 44.1 | gap +18.1 [+14.2, +22.1] | D vs a_m -2.6 [-8.6, +4.1] | gap − plain +0.2 [-0.5, +0.9] | D − plain +0.1 [-0.8, +0.6]
+  k3   real 25.6, sim 43.3 | gap +17.7 [+14.0, +21.8] | D vs a_m -3.0 [-8.4, +4.2] | gap − plain -0.2 [-0.8, +0.8] | D − plain -0.3 [-0.8, +0.9]
+  k5   real 25.3, sim 41.8 | gap +16.6 [+13.2, +20.8] | D vs a_m -3.3 [-8.0, +4.3] | gap − plain -1.3 [-1.9, +0.1] | D − plain -0.6 [-0.7, +1.4]
+  k10  real 25.2, sim 42.2 | gap +17.0 [+13.3, +21.0] | D vs a_m -3.4 [-8.1, +4.2] | gap − plain -0.9 [-1.8, +0.2] | D − plain -0.7 [-0.8, +1.5]
+  md1  real 25.9, sim 42.8 | gap +16.9 [+13.4, +21.0] | D vs a_m -2.7 [-8.7, +4.3] | gap − plain -1.0 [-1.4, +0.0] | D − plain +0.0 [-0.7, +0.9]
+fpr_0.05: a_m real catch (draw mean) 56.3  (points)
+  k0   real 54.0, sim 74.6 | gap +20.5 [+16.2, +23.1] | D vs a_m -2.2 [-7.3, +4.5]
+  k1   real 54.3, sim 74.8 | gap +20.4 [+16.5, +23.4] | D vs a_m -1.9 [-7.5, +4.4] | gap − plain -0.1 [-0.5, +1.1] | D − plain +0.3 [-1.1, +0.7]
+  k2   real 54.1, sim 74.5 | gap +20.4 [+16.3, +23.2] | D vs a_m -2.1 [-7.3, +4.5] | gap − plain -0.1 [-0.7, +0.8] | D − plain +0.1 [-0.9, +0.8]
+  k3   real 54.6, sim 74.1 | gap +19.5 [+16.0, +22.8] | D vs a_m -1.7 [-7.2, +4.5] | gap − plain -1.0 [-1.2, +0.5] | D − plain +0.5 [-1.1, +1.0]
+  k5   real 54.4, sim 73.9 | gap +19.5 [+15.2, +22.1] | D vs a_m -1.9 [-6.7, +5.1] | gap − plain -1.0 [-2.1, -0.1] | D − plain +0.3 [-0.7, +1.9]
+  k10  real 55.2, sim 74.2 | gap +19.0 [+15.1, +21.9] | D vs a_m -1.1 [-6.4, +5.3] | gap − plain -1.6 [-2.3, -0.2] | D − plain +1.2 [-0.5, +2.1]
+  md1  real 54.2, sim 73.8 | gap +19.6 [+15.4, +22.1] | D vs a_m -2.1 [-7.0, +5.1] | gap − plain -0.9 [-1.9, -0.1] | D − plain +0.2 [-0.6, +1.6]
+
+Last-token fake/fake (b″) beside it (Codex's review item 1; read by key from d9's sce_fixfull_metrics_POSTHOC_2026-10-13_153447.json, sha256 9d3e6f8a…, layers["48"]["b_full (b″)"]):
+  fpr_0.01: real 20.9 [16.3, 29.6], sim 24.3 [19.3, 34.0], gap +3.4 [+1.1, +6.4] (points)
+  fpr_0.05: real 53.0 [46.1, 59.3], sim 58.5 [50.7, 64.1], gap +5.5 [+2.0, +7.8] (points)

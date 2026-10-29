@@ -1,0 +1,90 @@
+Gate row 1, Llama: run_q3_attack_mpllama.py as run (first committed at ddf96e51 on aswin/q2-meanpool-olmo, reachable
+from this stack's top merge), kept here as a patch against its source on main for the PR size cap (743 lines). The full
+copy (sha256 55de10b9a0e9142863f2950c4ad35ecc7f4a669c777a4d1c1fd9547605aee741, 46991 bytes) is on S3 via results/s3_manifest_v1.json.
+Source on main: experiments/2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py, sha256 7f1f06c2079fbd9f4d1d1ff32bb16cd7d383b7399374ac83ee1cb164fc35dc77.
+(The copy's own docstring names its direct parent, the Llama runner: that source plus ../2026-10-12_q2_llama_reader/run_q3_attack_llama.patch.)
+Rebuild, from the repository root:
+  patch -o experiments/2026-10-12_q2_meanpool_readers/run_q3_attack_mpllama.py experiments/2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py experiments/2026-10-12_q2_meanpool_readers/run_q3_attack_mpllama.patch
+
+--- experiments/2026-10-12_q2_qwen35_reply_readout/run_q3_attack_qwen35.py
++++ experiments/2026-10-12_q2_meanpool_readers/run_q3_attack_mpllama.py
+@@ -1,3 +1,13 @@
++"""Gate row 1 for Llama (PLAN.md here): #36's recipe on Llama-3.3-70B's mean-pooled readout. A copy of
++../2026-10-12_q2_llama_reader/run_q3_attack_llama.py with only its app, activations Volume (the mean-pooled extraction,
++run_extract_llama_meanpool.py), work Volume, S3 prefix, default config and layer guards changed; it fits and writes scores,
++and computes no metric. The Llama runner's text follows:
++"""
++"""Q3 attack detector #36's recipe on Llama-3.3-70B as the reader (PLAN.md step C here): the Olmo runner
++(../2026-10-12_q2_olmo_reader: run_q3_attack_qwen35.py at 02336e38 plus run_q3_attack_olmo.patch) with only its app,
++activations Volume (the Llama extraction, run_extract_llama.py), work Volume, S3 prefix, default config and H (8192)
++changed. The rest below, the earlier copies' text included, is unchanged:
++"""
+ """Q3 attack detector #36's recipe on Qwen3.5-27B as the reader (PLAN.md here): a copy of
+ experiments/2026-10-06_q3_attack_detector/run_q3_attack.py at main with only these changes: the activations Volume is
+ the Qwen3.5 one (read-only), the staged inputs come from a second, read-only Volume (/inputs, the Qwen3-32B dump's
+@@ -49,16 +59,17 @@
+ 
+ HERE = Path(__file__).parent
+ REPO = HERE.parent.parent
+-APP = "probe-shift_aswin-surya_sub-q2-qwen35-reply_probe_kill-2026-11-12"
+-ACTS = "probe-shift_aswin-surya_sub-qwen35_acts_kill-2026-11-06"
++APP = "probe-shift_aswin-surya_sub-q2-mpllama_probe_kill-2026-11-12"
++ACTS = "probe-shift_aswin-surya_sub-q2-mpllama_acts_kill-2026-11-12"
+ INPUTS = "probe-shift_aswin-surya_sub-la-activations"  # the staged reader inputs (the Qwen3.5 dump read these)
+-WORK = "probe-shift_aswin-surya_sub-q2-qwen35-reply_work_kill-2026-11-12"
++WORK = "probe-shift_aswin-surya_sub-q2-mpllama_work_kill-2026-11-12"
+ GPU = "H100!"
+-H = 5120
++H = 8192
++ALLOWED_LAYERS, ROW2_LAYERS = (60, 70), (20, 30, 40, 50, 79)  # PLAN.md: never fit row 2's held-out layers
+ MANIFEST_VERSION = 2  # part of data_id: bump when the manifest's outputs change (2: a tool column in the tables)
+ # Durable home of each run's raw scores and trained probes (the work Volume is kill-dated): the project bucket
+ # (private, versioned), one prefix per run. Archives are written from the laptop with the user's own AWS session.
+-S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-12_q2_qwen35_reply_readout/"
++S3_ARCHIVE = "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-12_q2_meanpool_readers/llama/"
+ S3_ARCHIVE_REGION = "us-east-2"
+ ARCHIVE_MAX_BYTES = 1_000_000_000  # a run's archive is ~350 MB; refuse anything over ~1 GB rather than fetch it
+ 
+@@ -158,7 +169,7 @@
+                         "n_steps": len(turns), "n_actions": len(calls), "n_nudges": n_nudges, "n_step_limit_messages": n_limit,
+                         **{f"n_{pos}_kept": sum(p["kind"] == pos and p["kept"] for p in m["positions"]) for pos in cfg["positions"]},
+                         "n_call_end_none": sum(p["kind"] == "call_end" and p["token"] is None for p in m["positions"]),
+-                        "n_output_end_none": sum(p["kind"] == "output_end" and p["token"] is None for p in m["positions"]),
++                        "n_output_end_none": sum(p["kind"] in ("output_end", "output_end_mean") and p["token"] is None for p in m["positions"]),
+                         "call_end_kinds": {k: kinds[k] for k in CALL_END_KINDS.values()}, "kept_call_tools": dict(tools),
+                         **({"chunk": m["chunk"], "row_start": m["row_start"]} if by_layer else {})})
+         # the exclusions file's truncation is at original text; cleaned text is shorter, so it can be cut less often
+@@ -196,6 +207,7 @@
+ 
+ @app.function(image=image, volumes={"/acts": acts_vol, "/work": work_vol}, cpu=8, memory=65536, timeout=3600)
+ def pack_layer(cfg: dict, data_id: str, layer: int) -> dict:
++    assert layer in ALLOWED_LAYERS and layer not in ROW2_LAYERS, layer
+     """L<layer>_<position>.npy: [rows, 5120] float16, in table order."""
+     import numpy as np
+     from concurrent.futures import ThreadPoolExecutor
+@@ -268,6 +280,7 @@
+ 
+ @app.function(image=image, gpu=GPU, cpu=8, memory=65536, volumes={"/work": work_vol}, timeout=2 * 3600)
+ def probe_layer(cfg: dict, data_id: str, run_id: str, layer: int) -> dict:
++    assert layer in ALLOWED_LAYERS and layer not in ROW2_LAYERS, layer
+     import numpy as np
+     import torch
+ 
+@@ -628,7 +641,7 @@
+ 
+ 
+ @app.local_entrypoint()
+-def main(test: bool = False, resume: str = "", config: str = "q3_attack_qwen35.yaml", pack_only: bool = False,
++def main(test: bool = False, resume: str = "", config: str = "q3_attack_mpllama.yaml", pack_only: bool = False,
+          check_data: str = ""):
+     """`--test`: a few main tasks per fold, one layer, a small null, under a separate run id. `--resume <run_id>`:
+     spawn only the fits whose outputs are not on the work Volume yet (a fit still running from the first launch is
+@@ -697,6 +710,8 @@
+         done = {e.path.removeprefix(f"runs/{run_id}/") for e in work_vol.listdir(f"runs/{run_id}", recursive=True)}
+     except (FileNotFoundError, modal.exception.NotFoundError):
+         done = set()
++    if not set(cfg["layers"]) <= set(ALLOWED_LAYERS) or set(cfg["layers"]) & set(ROW2_LAYERS):
++        raise SystemExit(f"layers {cfg['layers']} outside {ALLOWED_LAYERS} (PLAN.md)")
+     calls = [(f"L{layer}", probe_layer.spawn(cfg, data_id, run_id, layer)) for layer in cfg["layers"]
+              if f"fits_L{layer}.json" not in done]
+     calls += [(f"tfidf {'/'.join(map(str, j))}", tfidf_model.spawn(cfg, data_id, run_id, *j)) for j in tfidf_jobs(cfg)

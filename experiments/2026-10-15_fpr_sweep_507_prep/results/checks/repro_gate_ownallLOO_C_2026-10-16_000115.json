@@ -1,0 +1,20 @@
+{
+ "new": "results/pooled455v2_ownallLOO_C_2026-10-16_000115.json",
+ "old": "results/pooled455v2_C_2026-10-15_221159.json",
+ "leaves_compared": 33406,
+ "mismatch": [],
+ "n_mismatch": 0,
+ "threshold_diffs": 37,
+ "threshold_max_abs_diff": 1.3322676295501878e-15,
+ "new_only_fields": 5670,
+ "new_only_unexpected": [],
+ "old_only": [],
+ "leaves_actually_compared": 32998,
+ "nan_pairs": 240,
+ "pass": true,
+ "expected_change": null,
+ "allowed_new_label": {
+  "substring": "own_all_LOO_L48",
+  "new_leaves": 3190
+ }
+}

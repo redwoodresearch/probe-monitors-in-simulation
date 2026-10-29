@@ -1,0 +1,14 @@
+{
+  "what": "S_paper493 REGISTERED (attempt-filtered) cohort: WITHHELD (2e 10-16, from the full fork code read: pooled_all_origins_registered_cohort names S_paper493 but its rows are withheld because no pinned S_paper493 attempt-label list exists); data only",
+  "withheld": "S_paper493 registered cohort: attempt labels not pinned at freeze",
+  "how_it_binds": "an EMPTY pinned cohort: it can only pass PANEL gates while the record lists the origin as a withheld member (stub rows carry no coverage); if a record ever made it a member, the cohort gate (record cohort_cells == pinned keys minus drops) STOPs",
+  "registered_cohort_keys": {
+    "S_paper493": {
+      "cells": [],
+      "n": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "withheld": "S_paper493 registered cohort: attempt labels not pinned at freeze"
+    }
+  },
+  "stamp_pt": "2026-10-16 10:23:26 PDT"
+}

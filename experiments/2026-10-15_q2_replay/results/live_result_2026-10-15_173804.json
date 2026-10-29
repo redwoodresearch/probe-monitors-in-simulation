@@ -1,0 +1,17 @@
+{
+ "app_id": "ap-ksxFNh1pgs06w5wFDv9mcx",
+ "call_id": "fc-01M50Y13FXADNJ57N124WNAQF0",
+ "label": "t196_v1",
+ "app_stopped_at": "2026-10-15 17:35:27-07:00",
+ "result": {
+  "spent_usd": 1305.8197,
+  "crash_resumes": [],
+  "overrun": null,
+  "max_committed_exposure_usd": 1328.8171,
+  "suppressed_print_lines": {
+   "batch_fallback": 0,
+   "coalesce_short": 0,
+   "other": 5
+  }
+ }
+}

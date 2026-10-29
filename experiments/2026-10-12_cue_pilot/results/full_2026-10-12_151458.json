@@ -1,0 +1,5 @@
+{
+ "provenance": {"git": "644f856dee7321c2f615f1a7f3fe55141d63d9a8", "stamp": "2026-10-12_151458", "phase": "full", "script_sha256": "289f39db10377a66ce59aec72189340ce606a81f9183c536903234e0bba9533a", "roster_sha256": "93dc8804078fce00106178dd7b26db6fcbe392336e4ffa57a0cff9c2a41a45ed", "dry": "results/dry_2026-10-12_150605.json", "time": "results/time_2026-10-12_151232.json", "projected $": 5.55},
+ "result": {"load_s": 33, "fit_done_s": 195, "resumed rows": 0, "seconds": 926, "fits": {"2": {"max final gradient": 6.498623694728423e-07, "rows": 23485}, "4": {"max final gradient": 5.449755830482655e-07, "rows": 23485}, "positives (cue tokens)": 3485, "neutral line tokens": 3485, "negatives": 20000}, "gpu": "NVIDIA H200"},
+ "rows": {"file": "rows_2026-10-12_151458.json", "n": 280, "sha256": "15f19361acea5039aadd689df4df03f83543586da6aec78d1a373c82a78615a1"}
+}

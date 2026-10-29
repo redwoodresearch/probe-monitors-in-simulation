@@ -1,0 +1,17 @@
+{
+ "batch": "simh-nm-s5",
+ "original_target": "simh_nm360_s5_sim",
+ "revision": 1,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/simh-nm-s5__simh_nm360_s5_sim_cutfull.json @ a574075760db",
+ "commit": "a574075760db",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_simh-nm-s5__simh_nm360_s5_sim_cutfull.json",
+ "sets": 1,
+ "failing": {
+  "routing authority": [
+   [
+    "",
+    "simh-nm-s5__simh_nm360_s5_sim.json: 0 authority entries in routing_authority_2026-10-15_v2.json"
+   ]
+  ]
+ }
+}

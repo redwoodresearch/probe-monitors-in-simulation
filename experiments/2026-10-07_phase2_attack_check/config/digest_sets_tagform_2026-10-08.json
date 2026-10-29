@@ -1,0 +1,7 @@
+{
+ "from_run": null,
+ "note": "Tag form for every task (no lookup answered), for runs with fresh references: a reference and its forks then see the same generated compose file. fixed_digest_lookup also blocks image downloads. Derived from no run.",
+ "images_json": "~/phase2/attack_check_strict/results/devbox_setup_2026-10-08_163146/images.json",
+ "images_json_sha256": "20d4df7e120b9d3a06e92b49d5c68a884c93331cdc3b18f9ab613b32c0e874ce",
+ "sets": {}
+}

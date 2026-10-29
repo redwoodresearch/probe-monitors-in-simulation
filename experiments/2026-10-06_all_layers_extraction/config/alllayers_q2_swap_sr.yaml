@@ -1,0 +1,11 @@
+# str_replace tell swap (2026-10-08): layers 9, 16 and 17 only (the forward pass stops after layer 17) at the segment-end
+# positions, for the 100 swap runs under the three str_replace variants (staged by run_swap.py --config swap_sr.yaml).
+run: 2026-10-08_q2_swap_sr_qwen3-32b_l9-17_v1
+inputs_from: 2026-10-08_q2_swap_sr_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 25
+layers: [9, 16, 17]

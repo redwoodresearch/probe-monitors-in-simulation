@@ -1,0 +1,28 @@
+# Scrub ladder (run_tfidf_modal.py::ladder): TF-IDF (cleaned text) with confounds removed step by step, each step
+# applied cumulatively to every arm. Which tells carry the real-vs-simulated separation, and does the e1-vs-e2 null
+# fall to 0.5? Not the probe's comparison baseline (the probe read unscrubbed text) unless activations are re-extracted
+# on scrubbed text.
+name: tfidf_ladder
+examples: examples_2026-10-06_142532     # .run_cache/ staging (v3, 939 cells; leading-content fix; with calls)
+folds_file: folds_v3.json
+baselines:                               # step -> text and cumulative scrub level (analyze_tfidf.scrub)
+  ladder_step0: {text: readout_text, scrub: 0}   # 0: as the probe reads it
+  ladder_step1: {text: readout_text, scrub: 1}   # 1: + clock times and dates masked
+  ladder_step2: {text: readout_text, scrub: 2}   # 2: + digit runs, hex (6+, digit and letter), UUIDs, IPv4 masked
+  ladder_step3: {text: readout_text, scrub: 3}   # 3: + whitespace normalized (trailing stripped, blank-line runs collapsed)
+# step 4 = step 3 with editor outputs dropped: the no_editor variant of ladder_step3
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer; sklearn "char" collapses whitespace runs)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true                       # TfidfTransformer: tf -> 1 + log(tf); smooth_idf true; l2 row norm
+C: 1.0                                   # fixed a priori (sklearn default); c_sensitivity is reported, not used to choose
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []                        # not run for the ladder
+shuffle_null: {draws: 0}                 # not run for the ladder
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16                               # one Modal container per step, 16 CPUs each

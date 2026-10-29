@@ -1,0 +1,1064 @@
+{
+ "git": {
+  "commit": "04c19fa0a32fcff16c0693e137c97f2e85c0135c",
+  "dirty": false
+ },
+ "config": {
+  "run": "rh1e4_extract_v1",
+  "inputs": "rh1e4_stage_v1",
+  "inputs_sha256": {
+   "honest_b.jsonl": "8a150d13903df37c974e6d2ffd3f6fe4b114fb1ad1a328858a21d50ff4eabb78",
+   "repro-c.jsonl": "5a1d3049467a60241af3d272de833145912f31cb6f522dfeada4d511bacf0809"
+  },
+  "model": "Qwen/Qwen3.5-27B",
+  "shards": 32,
+  "chunk_size": 8,
+  "pad_to": 4096,
+  "attempt": 1,
+  "test": false,
+  "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654"
+ },
+ "app": "probe-shift_aswin-surya_sub-q3realhonest_extr_kill-2026-11-14",
+ "volume": "probe-shift_aswin-surya_sub-q3realhonest_data_kill-2026-11-14",
+ "shards": [
+  {
+   "shard": 0,
+   "epochs": 33,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard000_a1_chunk000",
+     "epochs": 8,
+     "rows": 1170
+    },
+    {
+     "chunk": "shard000_a1_chunk001",
+     "epochs": 8,
+     "rows": 1429
+    },
+    {
+     "chunk": "shard000_a1_chunk002",
+     "epochs": 8,
+     "rows": 1046
+    },
+    {
+     "chunk": "shard000_a1_chunk003",
+     "epochs": 8,
+     "rows": 1050
+    },
+    {
+     "chunk": "shard000_a1_chunk004",
+     "epochs": 1,
+     "rows": 0
+    }
+   ],
+   "load_s": 33,
+   "seconds": 295,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 1,
+   "epochs": 33,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard001_a1_chunk000",
+     "epochs": 8,
+     "rows": 1070
+    },
+    {
+     "chunk": "shard001_a1_chunk001",
+     "epochs": 8,
+     "rows": 967
+    },
+    {
+     "chunk": "shard001_a1_chunk002",
+     "epochs": 8,
+     "rows": 1013
+    },
+    {
+     "chunk": "shard001_a1_chunk003",
+     "epochs": 8,
+     "rows": 890
+    },
+    {
+     "chunk": "shard001_a1_chunk004",
+     "epochs": 1,
+     "rows": 0
+    }
+   ],
+   "load_s": 29,
+   "seconds": 293,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 2,
+   "epochs": 33,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard002_a1_chunk000",
+     "epochs": 8,
+     "rows": 1065
+    },
+    {
+     "chunk": "shard002_a1_chunk001",
+     "epochs": 8,
+     "rows": 1195
+    },
+    {
+     "chunk": "shard002_a1_chunk002",
+     "epochs": 8,
+     "rows": 1030
+    },
+    {
+     "chunk": "shard002_a1_chunk003",
+     "epochs": 8,
+     "rows": 1042
+    },
+    {
+     "chunk": "shard002_a1_chunk004",
+     "epochs": 1,
+     "rows": 0
+    }
+   ],
+   "load_s": 29,
+   "seconds": 301,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 3,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard003_a1_chunk000",
+     "epochs": 8,
+     "rows": 1027
+    },
+    {
+     "chunk": "shard003_a1_chunk001",
+     "epochs": 8,
+     "rows": 1102
+    },
+    {
+     "chunk": "shard003_a1_chunk002",
+     "epochs": 8,
+     "rows": 1080
+    },
+    {
+     "chunk": "shard003_a1_chunk003",
+     "epochs": 8,
+     "rows": 1130
+    }
+   ],
+   "load_s": 27,
+   "seconds": 276,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 4,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard004_a1_chunk000",
+     "epochs": 8,
+     "rows": 1330
+    },
+    {
+     "chunk": "shard004_a1_chunk001",
+     "epochs": 8,
+     "rows": 1152
+    },
+    {
+     "chunk": "shard004_a1_chunk002",
+     "epochs": 8,
+     "rows": 1112
+    },
+    {
+     "chunk": "shard004_a1_chunk003",
+     "epochs": 8,
+     "rows": 1352
+    }
+   ],
+   "load_s": 29,
+   "seconds": 279,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 5,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard005_a1_chunk000",
+     "epochs": 8,
+     "rows": 1582
+    },
+    {
+     "chunk": "shard005_a1_chunk001",
+     "epochs": 8,
+     "rows": 1184
+    },
+    {
+     "chunk": "shard005_a1_chunk002",
+     "epochs": 8,
+     "rows": 953
+    },
+    {
+     "chunk": "shard005_a1_chunk003",
+     "epochs": 8,
+     "rows": 1028
+    }
+   ],
+   "load_s": 29,
+   "seconds": 278,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 6,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard006_a1_chunk000",
+     "epochs": 8,
+     "rows": 1172
+    },
+    {
+     "chunk": "shard006_a1_chunk001",
+     "epochs": 8,
+     "rows": 1256
+    },
+    {
+     "chunk": "shard006_a1_chunk002",
+     "epochs": 8,
+     "rows": 1096
+    },
+    {
+     "chunk": "shard006_a1_chunk003",
+     "epochs": 8,
+     "rows": 1292
+    }
+   ],
+   "load_s": 43,
+   "seconds": 311,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 7,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard007_a1_chunk000",
+     "epochs": 8,
+     "rows": 1570
+    },
+    {
+     "chunk": "shard007_a1_chunk001",
+     "epochs": 8,
+     "rows": 1088
+    },
+    {
+     "chunk": "shard007_a1_chunk002",
+     "epochs": 8,
+     "rows": 1105
+    },
+    {
+     "chunk": "shard007_a1_chunk003",
+     "epochs": 8,
+     "rows": 1138
+    }
+   ],
+   "load_s": 44,
+   "seconds": 303,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 8,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard008_a1_chunk000",
+     "epochs": 8,
+     "rows": 1182
+    },
+    {
+     "chunk": "shard008_a1_chunk001",
+     "epochs": 8,
+     "rows": 926
+    },
+    {
+     "chunk": "shard008_a1_chunk002",
+     "epochs": 8,
+     "rows": 840
+    },
+    {
+     "chunk": "shard008_a1_chunk003",
+     "epochs": 8,
+     "rows": 1122
+    }
+   ],
+   "load_s": 30,
+   "seconds": 282,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 9,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard009_a1_chunk000",
+     "epochs": 8,
+     "rows": 1066
+    },
+    {
+     "chunk": "shard009_a1_chunk001",
+     "epochs": 8,
+     "rows": 1256
+    },
+    {
+     "chunk": "shard009_a1_chunk002",
+     "epochs": 8,
+     "rows": 913
+    },
+    {
+     "chunk": "shard009_a1_chunk003",
+     "epochs": 8,
+     "rows": 882
+    }
+   ],
+   "load_s": 33,
+   "seconds": 278,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 10,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard010_a1_chunk000",
+     "epochs": 8,
+     "rows": 1210
+    },
+    {
+     "chunk": "shard010_a1_chunk001",
+     "epochs": 8,
+     "rows": 854
+    },
+    {
+     "chunk": "shard010_a1_chunk002",
+     "epochs": 8,
+     "rows": 1020
+    },
+    {
+     "chunk": "shard010_a1_chunk003",
+     "epochs": 8,
+     "rows": 1066
+    }
+   ],
+   "load_s": 34,
+   "seconds": 303,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 11,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard011_a1_chunk000",
+     "epochs": 8,
+     "rows": 910
+    },
+    {
+     "chunk": "shard011_a1_chunk001",
+     "epochs": 8,
+     "rows": 1108
+    },
+    {
+     "chunk": "shard011_a1_chunk002",
+     "epochs": 8,
+     "rows": 1045
+    },
+    {
+     "chunk": "shard011_a1_chunk003",
+     "epochs": 8,
+     "rows": 1376
+    }
+   ],
+   "load_s": 29,
+   "seconds": 280,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 12,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard012_a1_chunk000",
+     "epochs": 8,
+     "rows": 1030
+    },
+    {
+     "chunk": "shard012_a1_chunk001",
+     "epochs": 8,
+     "rows": 975
+    },
+    {
+     "chunk": "shard012_a1_chunk002",
+     "epochs": 8,
+     "rows": 1061
+    },
+    {
+     "chunk": "shard012_a1_chunk003",
+     "epochs": 8,
+     "rows": 842
+    }
+   ],
+   "load_s": 36,
+   "seconds": 303,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 13,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard013_a1_chunk000",
+     "epochs": 8,
+     "rows": 1256
+    },
+    {
+     "chunk": "shard013_a1_chunk001",
+     "epochs": 8,
+     "rows": 1006
+    },
+    {
+     "chunk": "shard013_a1_chunk002",
+     "epochs": 8,
+     "rows": 1014
+    },
+    {
+     "chunk": "shard013_a1_chunk003",
+     "epochs": 8,
+     "rows": 948
+    }
+   ],
+   "load_s": 41,
+   "seconds": 294,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 14,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard014_a1_chunk000",
+     "epochs": 8,
+     "rows": 1223
+    },
+    {
+     "chunk": "shard014_a1_chunk001",
+     "epochs": 8,
+     "rows": 1146
+    },
+    {
+     "chunk": "shard014_a1_chunk002",
+     "epochs": 8,
+     "rows": 928
+    },
+    {
+     "chunk": "shard014_a1_chunk003",
+     "epochs": 8,
+     "rows": 954
+    }
+   ],
+   "load_s": 46,
+   "seconds": 305,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 15,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard015_a1_chunk000",
+     "epochs": 8,
+     "rows": 1170
+    },
+    {
+     "chunk": "shard015_a1_chunk001",
+     "epochs": 8,
+     "rows": 900
+    },
+    {
+     "chunk": "shard015_a1_chunk002",
+     "epochs": 8,
+     "rows": 908
+    },
+    {
+     "chunk": "shard015_a1_chunk003",
+     "epochs": 8,
+     "rows": 994
+    }
+   ],
+   "load_s": 33,
+   "seconds": 317,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 16,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard016_a1_chunk000",
+     "epochs": 8,
+     "rows": 1036
+    },
+    {
+     "chunk": "shard016_a1_chunk001",
+     "epochs": 8,
+     "rows": 992
+    },
+    {
+     "chunk": "shard016_a1_chunk002",
+     "epochs": 8,
+     "rows": 960
+    },
+    {
+     "chunk": "shard016_a1_chunk003",
+     "epochs": 8,
+     "rows": 1036
+    }
+   ],
+   "load_s": 33,
+   "seconds": 289,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 17,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard017_a1_chunk000",
+     "epochs": 8,
+     "rows": 1288
+    },
+    {
+     "chunk": "shard017_a1_chunk001",
+     "epochs": 8,
+     "rows": 1028
+    },
+    {
+     "chunk": "shard017_a1_chunk002",
+     "epochs": 8,
+     "rows": 1120
+    },
+    {
+     "chunk": "shard017_a1_chunk003",
+     "epochs": 8,
+     "rows": 905
+    }
+   ],
+   "load_s": 44,
+   "seconds": 361,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 18,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard018_a1_chunk000",
+     "epochs": 8,
+     "rows": 1186
+    },
+    {
+     "chunk": "shard018_a1_chunk001",
+     "epochs": 8,
+     "rows": 864
+    },
+    {
+     "chunk": "shard018_a1_chunk002",
+     "epochs": 8,
+     "rows": 1308
+    },
+    {
+     "chunk": "shard018_a1_chunk003",
+     "epochs": 8,
+     "rows": 1020
+    }
+   ],
+   "load_s": 37,
+   "seconds": 309,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 19,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard019_a1_chunk000",
+     "epochs": 8,
+     "rows": 1172
+    },
+    {
+     "chunk": "shard019_a1_chunk001",
+     "epochs": 8,
+     "rows": 963
+    },
+    {
+     "chunk": "shard019_a1_chunk002",
+     "epochs": 8,
+     "rows": 1106
+    },
+    {
+     "chunk": "shard019_a1_chunk003",
+     "epochs": 8,
+     "rows": 1056
+    }
+   ],
+   "load_s": 38,
+   "seconds": 309,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 20,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard020_a1_chunk000",
+     "epochs": 8,
+     "rows": 1094
+    },
+    {
+     "chunk": "shard020_a1_chunk001",
+     "epochs": 8,
+     "rows": 826
+    },
+    {
+     "chunk": "shard020_a1_chunk002",
+     "epochs": 8,
+     "rows": 942
+    },
+    {
+     "chunk": "shard020_a1_chunk003",
+     "epochs": 8,
+     "rows": 938
+    }
+   ],
+   "load_s": 35,
+   "seconds": 289,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 21,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard021_a1_chunk000",
+     "epochs": 8,
+     "rows": 1324
+    },
+    {
+     "chunk": "shard021_a1_chunk001",
+     "epochs": 8,
+     "rows": 791
+    },
+    {
+     "chunk": "shard021_a1_chunk002",
+     "epochs": 8,
+     "rows": 1094
+    },
+    {
+     "chunk": "shard021_a1_chunk003",
+     "epochs": 8,
+     "rows": 956
+    }
+   ],
+   "load_s": 43,
+   "seconds": 308,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 22,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard022_a1_chunk000",
+     "epochs": 8,
+     "rows": 900
+    },
+    {
+     "chunk": "shard022_a1_chunk001",
+     "epochs": 8,
+     "rows": 947
+    },
+    {
+     "chunk": "shard022_a1_chunk002",
+     "epochs": 8,
+     "rows": 1182
+    },
+    {
+     "chunk": "shard022_a1_chunk003",
+     "epochs": 8,
+     "rows": 1020
+    }
+   ],
+   "load_s": 29,
+   "seconds": 294,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 23,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard023_a1_chunk000",
+     "epochs": 8,
+     "rows": 1408
+    },
+    {
+     "chunk": "shard023_a1_chunk001",
+     "epochs": 8,
+     "rows": 1006
+    },
+    {
+     "chunk": "shard023_a1_chunk002",
+     "epochs": 8,
+     "rows": 1474
+    },
+    {
+     "chunk": "shard023_a1_chunk003",
+     "epochs": 8,
+     "rows": 938
+    }
+   ],
+   "load_s": 42,
+   "seconds": 316,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 24,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard024_a1_chunk000",
+     "epochs": 8,
+     "rows": 1368
+    },
+    {
+     "chunk": "shard024_a1_chunk001",
+     "epochs": 8,
+     "rows": 1093
+    },
+    {
+     "chunk": "shard024_a1_chunk002",
+     "epochs": 8,
+     "rows": 1692
+    },
+    {
+     "chunk": "shard024_a1_chunk003",
+     "epochs": 8,
+     "rows": 1014
+    }
+   ],
+   "load_s": 41,
+   "seconds": 298,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 25,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard025_a1_chunk000",
+     "epochs": 8,
+     "rows": 1274
+    },
+    {
+     "chunk": "shard025_a1_chunk001",
+     "epochs": 8,
+     "rows": 1188
+    },
+    {
+     "chunk": "shard025_a1_chunk002",
+     "epochs": 8,
+     "rows": 1386
+    },
+    {
+     "chunk": "shard025_a1_chunk003",
+     "epochs": 8,
+     "rows": 904
+    }
+   ],
+   "load_s": 27,
+   "seconds": 298,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 26,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard026_a1_chunk000",
+     "epochs": 8,
+     "rows": 1378
+    },
+    {
+     "chunk": "shard026_a1_chunk001",
+     "epochs": 8,
+     "rows": 1040
+    },
+    {
+     "chunk": "shard026_a1_chunk002",
+     "epochs": 8,
+     "rows": 1253
+    },
+    {
+     "chunk": "shard026_a1_chunk003",
+     "epochs": 8,
+     "rows": 948
+    }
+   ],
+   "load_s": 32,
+   "seconds": 297,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 27,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard027_a1_chunk000",
+     "epochs": 8,
+     "rows": 1442
+    },
+    {
+     "chunk": "shard027_a1_chunk001",
+     "epochs": 8,
+     "rows": 1176
+    },
+    {
+     "chunk": "shard027_a1_chunk002",
+     "epochs": 8,
+     "rows": 1428
+    },
+    {
+     "chunk": "shard027_a1_chunk003",
+     "epochs": 8,
+     "rows": 906
+    }
+   ],
+   "load_s": 28,
+   "seconds": 292,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 28,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard028_a1_chunk000",
+     "epochs": 8,
+     "rows": 1142
+    },
+    {
+     "chunk": "shard028_a1_chunk001",
+     "epochs": 8,
+     "rows": 1002
+    },
+    {
+     "chunk": "shard028_a1_chunk002",
+     "epochs": 8,
+     "rows": 1176
+    },
+    {
+     "chunk": "shard028_a1_chunk003",
+     "epochs": 8,
+     "rows": 922
+    }
+   ],
+   "load_s": 33,
+   "seconds": 285,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 29,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard029_a1_chunk000",
+     "epochs": 8,
+     "rows": 1175
+    },
+    {
+     "chunk": "shard029_a1_chunk001",
+     "epochs": 8,
+     "rows": 1174
+    },
+    {
+     "chunk": "shard029_a1_chunk002",
+     "epochs": 8,
+     "rows": 1002
+    },
+    {
+     "chunk": "shard029_a1_chunk003",
+     "epochs": 8,
+     "rows": 688
+    }
+   ],
+   "load_s": 30,
+   "seconds": 283,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 30,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard030_a1_chunk000",
+     "epochs": 8,
+     "rows": 1233
+    },
+    {
+     "chunk": "shard030_a1_chunk001",
+     "epochs": 8,
+     "rows": 1148
+    },
+    {
+     "chunk": "shard030_a1_chunk002",
+     "epochs": 8,
+     "rows": 961
+    },
+    {
+     "chunk": "shard030_a1_chunk003",
+     "epochs": 8,
+     "rows": 878
+    }
+   ],
+   "load_s": 41,
+   "seconds": 289,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  },
+  {
+   "shard": 31,
+   "epochs": 32,
+   "done_before": 0,
+   "chunks": [
+    {
+     "chunk": "shard031_a1_chunk000",
+     "epochs": 8,
+     "rows": 1017
+    },
+    {
+     "chunk": "shard031_a1_chunk001",
+     "epochs": 8,
+     "rows": 1055
+    },
+    {
+     "chunk": "shard031_a1_chunk002",
+     "epochs": 8,
+     "rows": 833
+    },
+    {
+     "chunk": "shard031_a1_chunk003",
+     "epochs": 8,
+     "rows": 914
+    }
+   ],
+   "load_s": 31,
+   "seconds": 286,
+   "max_peak_gib": 56.4,
+   "device": "NVIDIA H200",
+   "device_count": 1
+  }
+ ]
+}

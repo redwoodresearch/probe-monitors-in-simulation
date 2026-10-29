@@ -1,0 +1,15 @@
+{
+ "target": "ilold_oldsel_sim2",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "ilold_oldsel_sim2",
+   "arm": "sim_attack@september",
+   "staged_file": "/ev/ilold_oldsel_sim2_v1/inputs/sim_attack@september.jsonl",
+   "staged_sha": "23013b269412e5e4f0228e7748254c56dacead32278917ca469a966b378589ea",
+   "epochs": 93,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

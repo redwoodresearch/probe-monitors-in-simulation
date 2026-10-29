@@ -1,0 +1,129 @@
+{
+ "label": "POST HOC (after stage 1's labels check; no verdict)",
+ "git": "58be2822d3ce5c2a6ed01f1430663aefd1229892",
+ "inputs sha256": {
+  "per_task_catch_196.json": "b608295b3563fc10ba8dc89a3f652b8a46b68bb917d32673267b193709d86935",
+  "recal_2026-10-10_225753.json": "c9ba6dfe3bd028027e162ae386dc5c4ec5343eff5825d63c4ed94534b2edb9e7",
+  "stage1_labels_real_2026-10-11_190808.json": "40c005d24ba6a7b8a4434dad1cbdc98e97a9c1c156fbbf11b46c20f34b81eb87",
+  "screening_labels_v1.csv": "edfeb7d43a104113453d5a768964b87b0ee8fc1bd9a6e286276e9b8fd58ae224",
+  "batch_spec_2026-10-11_151207.json": "ce22799937e35d7db7634c618d0e1ab2a0d72963982797761b958cf7eacc6c4a"
+ },
+ "task mix": {
+  "transfer": {
+   "real positives a run": {
+    "163 first two": 0.8282208588957055,
+    "274 unpaired, overlap800 runs": 0.7827380952380952,
+    "first 50, overlap800 runs": 0.3389830508474576,
+    "first 50, new runs (stage 1)": 0.31
+   },
+   "simulated positives a task": {
+    "163": 0.8588957055214724,
+    "274 unpaired": 0.6605839416058394,
+    "first 50": 0.56
+   },
+   "first 50 vs random 50 of the 274 (task means of original runs)": {
+    "observed": 0.4,
+    "random-50 median": 0.5946666666666667,
+    "share of random 50s at or below": 0.1014
+   }
+  },
+  "destructive_raw": {
+   "real positives a run": {
+    "163 first two": 1.1196319018404908,
+    "274 unpaired, overlap800 runs": 0.6994047619047619,
+    "first 50, overlap800 runs": 0.4406779661016949,
+    "first 50, new runs (stage 1)": 0.3
+   },
+   "simulated positives a task": {
+    "163": 1.1717791411042944,
+    "274 unpaired": 0.6058394160583942,
+    "first 50": 0.4
+   },
+   "first 50 vs random 50 of the 274 (task means of original runs)": {
+    "observed": 0.33,
+    "random-50 median": 0.5433333333333333,
+    "share of random 50s at or below": 0.0424
+   }
+  }
+ },
+ "thinning f": {
+  "unpaired": {
+   "transfer": {
+    "real": 0.9450837742504409,
+    "simulated": 0.7691084462982273
+   },
+   "destructive_raw": {
+    "real": 0.6246738421395955,
+    "simulated": 0.5170252608247029
+   }
+  },
+  "stage 1": {
+   "transfer": {
+    "real": 0.3742962962962963,
+    "simulated": 0.652
+   },
+   "destructive_raw": {
+    "real": 0.26794520547945205,
+    "simulated": 0.34136125654450267
+   }
+  }
+ },
+ "pooled lean, re-priced": {
+  "none (f = 1, must reproduce)": {
+   "230": {
+    "SE G_RS": 0.013303261358871464,
+    "SE G_RR": 0.014659419916749794,
+    "P(both pass)": 0.80536,
+    "P(plants testable)": 1.0,
+    "P(clear)": 0.80536
+   },
+   "274": {
+    "SE G_RS": 0.013038944201931064,
+    "SE G_RR": 0.014124520715155351,
+    "P(both pass)": 0.844065,
+    "P(plants testable)": 1.0,
+    "P(clear)": 0.844065
+   }
+  },
+  "unpaired": {
+   "230": {
+    "SE G_RS": 0.015292883419205242,
+    "SE G_RR": 0.01593028242996807,
+    "P(both pass)": 0.641455,
+    "P(plants testable)": 1.0,
+    "P(clear)": 0.641455
+   },
+   "274": {
+    "SE G_RS": 0.014849778553629121,
+    "SE G_RR": 0.015406672892625022,
+    "P(both pass)": 0.695625,
+    "P(plants testable)": 1.0,
+    "P(clear)": 0.695625
+   }
+  },
+  "stage 1": {
+   "230": {
+    "SE G_RS": 0.01763531551364081,
+    "SE G_RR": 0.01906762964071364,
+    "P(both pass)": 0.336145,
+    "P(plants testable)": 1.0,
+    "P(clear)": 0.336145
+   },
+   "274": {
+    "SE G_RS": 0.017203474826450096,
+    "SE G_RR": 0.018690362876139704,
+    "P(both pass)": 0.379125,
+    "P(plants testable)": 1.0,
+    "P(clear)": 0.379125
+   }
+  }
+ },
+ "zoo C preview (credential positives a run, original runs)": {
+  "today's 800 matched runs": 3.57375,
+  "163 first two": 3.4478527607361964,
+  "274 unpaired, overlap800 runs": 3.5,
+  "first 50, overlap800 runs": 3.0,
+  "today (C sizing)": 3.57,
+  "stage-1 floor (80%)": 2.856
+ }
+}

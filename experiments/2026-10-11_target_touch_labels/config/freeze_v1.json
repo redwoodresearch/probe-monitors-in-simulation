@@ -1,0 +1,17 @@
+{
+  "created_at_pt": "2026-10-11T10:49:28.968634-07:00",
+  "before_first_command_scan": true,
+  "outside_human_review": false,
+  "synthetic_boundary_checks_passed": 19,
+  "files": {
+    "experiments/2026-10-11_target_touch_labels/config/side_task_targets_v1.csv": "6eb0e53853642c196831bba809d51a533a918280f39a6928fa5019404a148111",
+    "experiments/2026-10-11_target_touch_labels/config/rule_v1.md": "40dcfe552919d348974bbfc2148aa7e28b11e7b9bc815347cc52b2d98b4f193c",
+    "experiments/2026-10-11_target_touch_labels/config/targets_curated_v1.json": "b7ce6eaea6dbbf7441ba5d77fa1bafbb81d025e6028a4461f9b1ed83fb0b36bf",
+    "experiments/2026-10-11_target_touch_labels/config/target_sources_v1.json": "217f0a603e40771c6d7205abb3435fd2656360d64f0552efa43fb02173eb976f",
+    "experiments/2026-10-11_target_touch_labels/config/runs_phase2_196.csv": "a56dbc133913b05eb57f6d3829fee7ee99ccee97171f6f484994dc0160d30900",
+    "experiments/2026-10-11_target_touch_labels/analyze_target_inventory.py": "306e2e796d7531cb6c5bc1ed2d09da69be40df9a68b217336996c658da7cef30",
+    "experiments/2026-10-11_target_touch_labels/analyze_target_labels.py": "a1d11406e423dbc2bb22187f0727b369a5349c6a809aca7270b4d622e5a22606",
+    "src/probe_shift/target_touch.py": "77eb1e5bebff38557cffd287742fa0472bec114dddb3b75ee13902ec4e90d37f",
+    "src/probe_shift/target_label_pipeline.py": "2d453a9c8bb6669f6d511371e1515df17e08caa5e348578762201d04e03e3129"
+  }
+}

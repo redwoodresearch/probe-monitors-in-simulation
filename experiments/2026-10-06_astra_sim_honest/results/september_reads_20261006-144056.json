@@ -1,0 +1,135 @@
+[
+ {
+  "environment": "auto_workflow",
+  "cohort": "base200",
+  "identical": 780,
+  "missing in both": 1,
+  "differing_paths": []
+ },
+ {
+  "environment": "auto_workflow",
+  "cohort": "overlap800",
+  "identical": 3791,
+  "missing in both": 15,
+  "differing_paths": []
+ },
+ {
+  "environment": "clinical_trial",
+  "cohort": "base200",
+  "identical": 554,
+  "differing_paths": []
+ },
+ {
+  "environment": "clinical_trial",
+  "cohort": "overlap800",
+  "identical": 2539,
+  "missing in both": 1,
+  "differing_paths": []
+ },
+ {
+  "environment": "file_indexing",
+  "cohort": "base200",
+  "identical": 929,
+  "missing in both": 1,
+  "differing_paths": []
+ },
+ {
+  "environment": "file_indexing",
+  "cohort": "overlap800",
+  "identical": 3755,
+  "missing in both": 4,
+  "differing_paths": []
+ },
+ {
+  "environment": "media_processing",
+  "cohort": "base200",
+  "identical": 510,
+  "missing in both": 3,
+  "differing_paths": []
+ },
+ {
+  "environment": "media_processing",
+  "cohort": "overlap800",
+  "identical": 2019,
+  "missing in both": 2,
+  "differing_paths": []
+ },
+ {
+  "environment": "model_registry",
+  "cohort": "base200",
+  "identical": 661,
+  "differing_paths": []
+ },
+ {
+  "environment": "model_registry",
+  "cohort": "overlap800",
+  "identical": 2996,
+  "missing in both": 2,
+  "differing_paths": []
+ },
+ {
+  "environment": "shared_dotfiles",
+  "cohort": "base200",
+  "identical": 672,
+  "differing_paths": []
+ },
+ {
+  "environment": "shared_dotfiles",
+  "cohort": "overlap800",
+  "identical": 3761,
+  "differing_paths": []
+ },
+ {
+  "environment": "slack_clone",
+  "cohort": "base200",
+  "identical": 842,
+  "missing in both": 2,
+  "differing_paths": []
+ },
+ {
+  "environment": "slack_clone",
+  "cohort": "overlap800",
+  "identical": 3017,
+  "missing in both": 10,
+  "differing_paths": []
+ },
+ {
+  "environment": "tiktok",
+  "cohort": "base200",
+  "identical": 884,
+  "differing_paths": []
+ },
+ {
+  "environment": "tiktok",
+  "cohort": "overlap800",
+  "identical": 3879,
+  "differing_paths": []
+ },
+ {
+  "environment": "user_tracking",
+  "cohort": "base200",
+  "identical": 593,
+  "differing_paths": []
+ },
+ {
+  "environment": "user_tracking",
+  "cohort": "overlap800",
+  "identical": 2879,
+  "missing in both": 1,
+  "differing_paths": []
+ },
+ {
+  "environment": "web_scraping",
+  "cohort": "base200",
+  "identical": 823,
+  "missing in both": 1,
+  "differing_paths": []
+ },
+ {
+  "environment": "web_scraping",
+  "cohort": "overlap800",
+  "identical": 4678,
+  "missing in both": 2,
+  "differing_paths": []
+ }
+]

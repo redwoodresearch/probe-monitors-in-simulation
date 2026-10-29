@@ -1,0 +1,99 @@
+{
+ "plan": "PLAN.md (this folder)",
+ "git": "28b5fd19c70dfe5e4122e8844cf8cb57e6f5bb19",
+ "seed": 20261021,
+ "splits sha256": "a0ede1850566593776c9db8781553cadae95fd92d3b55c86f9bf753a304e6606",
+ "tasks with an e1 and a simulated run": 437,
+ "eligible pairs by command and tier": {
+  "str_replace": {
+   "1": 0,
+   "2": 130,
+   "3": 259
+  },
+  "insert": {
+   "1": 0,
+   "2": 9,
+   "3": 139
+  }
+ },
+ "pairs": {
+  "str_replace": {
+   "tier": 2,
+   "tier name": "same command",
+   "pool size": 130,
+   "draw index": 99,
+   "main task": "prometheus_grafana_monitoring",
+   "environment": "user_tracking",
+   "real": {
+    "arm": "real-honest",
+    "cohort": "la_public10_real_honest_n1000",
+    "file": "overlap800_228_4e6151c16f4d1bb9.eval",
+    "sample_id": "prometheus_grafana_monitoring:e7f9b5",
+    "epoch": 1,
+    "key": "overlap800_228_4e6151c16f4d1bb9__prometheus_grafana_monitoring:e7f9b5__1",
+    "position k": 11,
+    "agent turn": 7,
+    "assistant message index": 20,
+    "tool message index": 21,
+    "reply bytes": 372,
+    "reply sha256": "68b2e7ca17cef91f54f86b68aabb2aaec1f98fda2870128b16b2f627b571e916"
+   },
+   "simulated": {
+    "arm": "sim-honest",
+    "cohort": "s3://rr-sce-sim-transcripts/transcripts/2026-10-06_la-public10_sim-astra-medium-honest-origtraj-read-nocritic-fork0/",
+    "file": "prometheus_grafana_monitoring.eval",
+    "sample_id": "prometheus_grafana_monitoring:c14bc9",
+    "epoch": 1,
+    "key": "prometheus_grafana_monitoring__prometheus_grafana_monitoring:c14bc9__1",
+    "position k": 21,
+    "agent turn": 15,
+    "assistant message index": 38,
+    "tool message index": 39,
+    "reply bytes": 373,
+    "reply sha256": "17534fb54a8bb9e2cf7adaad652c03fbe1fd385ac637e70c596c9319791ee237"
+   },
+   "same arguments": true
+  },
+  "insert": {
+   "tier": 2,
+   "tier name": "same command",
+   "pool size": 9,
+   "draw index": 1,
+   "main task": "content_summarization",
+   "environment": "file_indexing",
+   "real": {
+    "arm": "real-honest",
+    "cohort": "la_public10_real_honest_n1000",
+    "file": "base200_003_003_2026-09-17T06-28-58-00-00_la-file-indexing-real-honest-20_eXAcoJpdnDTSmPcHZhvB5d.eval",
+    "sample_id": "content_summarization:a0ce86",
+    "epoch": 1,
+    "key": "base200_003_003_2026-09-17T06-28-58-00-00_la-file-indexing-real-honest-20_eXAcoJpdnDTSmPcHZhvB5d__content_summarization:a0ce86__1",
+    "position k": 15,
+    "agent turn": 8,
+    "assistant message index": 25,
+    "tool message index": 26,
+    "reply bytes": 630,
+    "reply sha256": "948fede2b6003ad6da4725d79f4c4c39f98ff293015e6097182b912aba04f82e"
+   },
+   "simulated": {
+    "arm": "sim-honest",
+    "cohort": "s3://rr-sce-sim-transcripts/transcripts/2026-10-06_la-public10_sim-astra-medium-honest-origtraj-read-nocritic-fork0/",
+    "file": "content_summarization.eval",
+    "sample_id": "content_summarization:db793d",
+    "epoch": 1,
+    "key": "content_summarization__content_summarization:db793d__1",
+    "position k": 13,
+    "agent turn": 6,
+    "assistant message index": 21,
+    "tool message index": 22,
+    "reply bytes": 364,
+    "reply sha256": "d80622d93c713521adef1a3a50632bd75177cc12fb72c9aeffd2f5b3bd593383"
+   },
+   "same arguments": true
+  }
+ },
+ "data file": {
+  "path": "data/figure1_pairs/figure1_pairs_2026-10-12_150044.json",
+  "sha256": "8d21a1d2cdf1d9c142c0c0e38297dd54dc795dc036b2c50c55b8846a499fe6dd"
+ }
+}

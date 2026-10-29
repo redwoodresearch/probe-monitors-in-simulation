@@ -1,0 +1,24 @@
+{
+ "box_json_sha256": "c6d0ebce607d4726278f918e5c6064d5b16dd768f3d38894d8b9ac3a4f92c60d",
+ "cells": [
+  {
+   "cell": "sim_honest@september/nm258_tiktok",
+   "census": {
+    "ref": "experiments/2026-10-14_q3_new_mains_launch/results/sim_error_census_2026-10-15_1306.json @ 8ae72ad1f",
+    "census_time_pt": "2026-10-15 13:06:32",
+    "box": "box4",
+    "launch": "2026-10-15_simh_nm_s4d",
+    "launch_sim_ended": 19,
+    "error_row_present": true,
+    "rows": [
+     {
+      "class": "EmptyPolicyCompletionError",
+      "attempts": 1,
+      "end": "2026-10-15T12:45:25-07:00",
+      "bin": "12:40"
+     }
+    ]
+   }
+  }
+ ]
+}

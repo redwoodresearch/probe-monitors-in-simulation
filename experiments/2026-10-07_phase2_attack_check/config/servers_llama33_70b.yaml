@@ -1,0 +1,43 @@
+# Llama-3.3-70B-Instruct for the 20-task honest check, "like the old-vs-new Qwen check" (Aswin, 2026-10-12 about 12:18 PT,
+# via 0d: "Do the $0 prep, then launch (stop $160)"; price in experiments/2026-10-12_q3_llama70b_price/PRICE.md).
+# As servers_qwen3_32b_native_fast.yaml except what Llama needs:
+# - two H200s per server, tensor parallel 2 (bf16 weights are 141.1 GB: model.safetensors.index.json's total_size);
+# - the weights come from the Apollo sweep's Volume, whose root is a hub folder (run_vllm_tunnel.py's hf_cache);
+# - Llama's tool calls: vLLM's llama3_json parser, the model's OWN chat template (tokenizer_config.json of the pinned
+#   snapshot: tools in the first user message, each tool result as an `ipython` turn, one tool call per turn), no
+#   reasoning parser. PRICE.md named vLLM's example llama3.1 JSON template (a repo file, not part of the pinned
+#   snapshot); the model's own Meta template is used instead, so no file from outside the snapshot enters the server
+#   (the canary and the delivery check test what it renders);
+# - the same 40,960-token window and the same repetition guard as the Qwen check.
+# KV cache: 80 layers x 8 KV heads x 128 dims x 2 (K, V) x 2 bytes = 0.33 MB a token, about 13.4 GB per full 40,960-token
+# run. Two H200s at 0.92 hold about 2 x (141 x 0.92 - 70.6) = 118 GB of cache, about 8.8 full-length runs at once; 10 runs
+# per server rely on most runs being shorter than the window, and vLLM preempts (recomputes) when it fills.
+vllm_version: "0.30.0"
+gpu: "H200:2"
+hard_timeout_h: 3.0        # PRICE.md's bound: 8 H200s x 3.0 h x $4.67 = $112.08 for the main servers; the job's $160
+                           # stop (watcher) binds first
+idle_exit_min: 20          # exit once no request has run for this long, after the first request was served
+startup_idle_min: 45       # ...or if no request ever arrives within this long of the server coming up
+startup_wait_min: 40       # vLLM must answer /v1/models within this long: 141 GB from a Volume plus TP-2 CUDA graphs
+repetition_settings:
+  d: {min_pattern_size: 1, max_pattern_size: 1, min_count: 256}
+  multi_token: {min_pattern_size: 64, max_pattern_size: 512, min_count: 4}
+repetition_setting: multi_token  # as every arm since Aswin, 10-08 12:10 (#82)
+hf_cache:
+  volume: probe-shift_aswin-surya_sub-apollo_llama-cache   # root: models--meta-llama--Llama-3.3-70B-Instruct/...
+  mount: /hf/hub                                         # HF_HOME is /hf, so the hub folder is /hf/hub
+model:
+  hf_id: meta-llama/Llama-3.3-70B-Instruct
+  revision: 6f6073b423013f6a7d4d9f39144961bfbfbc386b     # refs/main and the one snapshot on that Volume
+  args:
+    - --dtype=bfloat16
+    - --max-model-len=40960          # the Qwen check's window; Llama's own is 131,072 (config.json)
+    - --tensor-parallel-size=2
+    - --enable-auto-tool-choice
+    - --tool-call-parser=llama3_json # Llama 3.x emits {"name": ..., "parameters": {...}}
+    - --chat-template-content-format=string  # what vLLM detects for this template, pinned (Codex 10-12): each tool
+                                             # result reaches the template as a string, rendered through tojson
+    - --gpu-memory-utilization=0.92
+    # Aswin's fix A (2026-10-12 about 13:38 PT, via 0d): the tool list goes into the system turn, not the empty first
+    # user turn (the smoke of 13:16 PT failed on that); vLLM 0.30.0's server-wide default for chat_template_kwargs
+    - '--default-chat-template-kwargs={"tools_in_user_message": false}'

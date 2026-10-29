@@ -1,0 +1,481 @@
+{
+ "POST HOC": true,
+ "status": "preliminary until Aswin reviews",
+ "plan": "PLAN.md Amendment 4",
+ "app": "probe-shift_aswin-surya_sub-q2-mixta_null_kill-2026-11-13",
+ "git": "e4ebd937bddc96947468c5101accf4ef00bf32c0",
+ "permutations": 2000,
+ "permutation seed": 20261014,
+ "inputs": {
+  "asis": {
+   "path": "results/mixed_textalone_POSTHOC_2026-10-13_173607.json",
+   "sha256": "347950cbdef8f9edacc92e26c2358019b96c1d31af817394067c809dcce0d446",
+   "scores": {
+    "volume": "probe-shift_aswin-surya_sub-q2-mixta_work_kill-2026-11-13",
+    "path": "mixed_scores/2026-10-13_173607/scores.npz",
+    "sha256": "3099ce37fb202645e822418cd3befc8abb162d11801083a512a414b8688ec45c"
+   }
+  },
+  "fx": {
+   "path": "results/mixed_textalone_fx_POSTHOC_2026-10-13_182320.json",
+   "sha256": "3240220a31cdc9c3c1c5b221e9756e7487383bde331fcc04aeb3e320ba4f0804",
+   "scores": {
+    "volume": "probe-shift_aswin-surya_sub-q2-mixta_work_kill-2026-11-13",
+    "path": "mixed_scores_fx/2026-10-13_182320/scores.npz",
+    "sha256": "69cce9b2d87738f856c19f39b3104859e06739d195b97525c45bfbf0e4c4d7b7"
+   }
+  }
+ },
+ "results": {
+  "asis": {
+   "groups": {
+    "main tasks": 536,
+    "min simulated per task": 1,
+    "min e2 per task": 1,
+    "tasks with equal simulated and e2 counts": 536,
+    "max runs per task": 16,
+    "every permutation keeps each task's simulated count": true,
+    "share of labels moved, mean": 0.5007806176783812
+   },
+   "cells": {
+    "c | g3 layer per fold": {
+     "role": "primary",
+     "recorded": {
+      "text share (vs 0.5)": {
+       "point": 0.8040460557801749,
+       "95%": [
+        0.7736961595543052,
+        0.8330772717511794
+       ],
+       "valid draws": 2000
+      },
+      "reading": "text (firm)"
+     },
+     "gate": {
+      "A_text point |diff|": 0.0,
+      "A_text 95% |diff|": 0.0,
+      "run AUROC history |diff|": 0.0,
+      "run AUROC text |diff|": 0.0
+     },
+     "null": {
+      "history": {
+       "observed run AUROC": 0.9680318377355195,
+       "null center": 0.49919796908545905,
+       "null 95%": [
+        0.4698324923643647,
+        0.5283534417349707
+       ],
+       "null sd": 0.015049794087243714,
+       "p (null >= observed)": 0.0004997501249375312
+      },
+      "text": {
+       "observed run AUROC": 0.8763191531107912,
+       "null center": 0.49898808239794673,
+       "null 95%": [
+        0.4719255864383405,
+        0.5254631283591975
+       ],
+       "null sd": 0.013915085316248372,
+       "p (null >= observed)": 0.0004997501249375312
+      }
+     },
+     "text share vs the null": {
+      "point": 0.8048289510297431,
+      "95%": [
+       0.774532530051715,
+       0.8338135085652173
+      ],
+      "valid draws": 2000
+     },
+     "reading vs the null": "text (firm)",
+     "share change (point)": 0.0007828952495682051,
+     "reading changed": false
+    },
+    "c | L63 in every fold": {
+     "role": "beside",
+     "recorded": {
+      "text share (vs 0.5)": {
+       "point": 0.8088674532729142,
+       "95%": [
+        0.7785035255205803,
+        0.8387437223404741
+       ],
+       "valid draws": 2000
+      },
+      "reading": "text (firm)"
+     },
+     "gate": {
+      "A_text point |diff|": 0.0,
+      "A_text 95% |diff|": 0.0,
+      "run AUROC history |diff|": 0.0,
+      "run AUROC text |diff|": 0.0
+     },
+     "null": {
+      "history": {
+       "observed run AUROC": 0.9706585189646157,
+       "null center": 0.4992161091773928,
+       "null 95%": [
+        0.4706808049258212,
+        0.5287385408763089
+       ],
+       "null sd": 0.014994470655094617,
+       "p (null >= observed)": 0.0004997501249375312
+      },
+      "text": {
+       "observed run AUROC": 0.8807003575961103,
+       "null center": 0.4990176087447163,
+       "null 95%": [
+        0.4716630033763515,
+        0.5257212882533137
+       ],
+       "null sd": 0.013906579122696145,
+       "p (null >= observed)": 0.0004997501249375312
+      }
+     },
+     "text share vs the null": {
+      "point": 0.8096063080613806,
+      "95%": [
+       0.7792917005173753,
+       0.8394296879430583
+      ],
+      "valid draws": 2000
+     },
+     "reading vs the null": "text (firm)",
+     "share change (point)": 0.0007388547884663588,
+     "reading changed": false
+    },
+    "c_ff | g3 layer per fold": {
+     "role": "beside",
+     "recorded": {
+      "text share (vs 0.5)": {
+       "point": 0.6254744514757885,
+       "95%": [
+        0.5736064239886907,
+        0.6771460137966971
+       ],
+       "valid draws": 2000
+      },
+      "reading": "text"
+     },
+     "gate": {
+      "A_text point |diff|": 0.0,
+      "A_text 95% |diff|": 0.0,
+      "run AUROC history |diff|": 0.0,
+      "run AUROC text |diff|": 0.0
+     },
+     "null": {
+      "history": {
+       "observed run AUROC": 0.845268514643521,
+       "null center": 0.4993793184011723,
+       "null 95%": [
+        0.4722947791875208,
+        0.5257878626005279
+       ],
+       "null sd": 0.013315768086789132,
+       "p (null >= observed)": 0.0004997501249375312
+      },
+      "text": {
+       "observed run AUROC": 0.7159566348085166,
+       "null center": 0.49908814409546787,
+       "null 95%": [
+        0.4751411727746079,
+        0.5231765490444256
+       ],
+       "null sd": 0.012017951235904403,
+       "p (null >= observed)": 0.0004997501249375312
+      }
+     },
+     "text share vs the null": {
+      "point": 0.6269883334578015,
+      "95%": [
+       0.5752293809158693,
+       0.6785271757721785
+      ],
+      "valid draws": 2000
+     },
+     "reading vs the null": "text",
+     "share change (point)": 0.0015138819820129656,
+     "reading changed": false
+    },
+    "c_ff | L63 in every fold": {
+     "role": "beside",
+     "recorded": {
+      "text share (vs 0.5)": {
+       "point": 0.638758553941981,
+       "95%": [
+        0.5924863102588965,
+        0.6843550810035944
+       ],
+       "valid draws": 2000
+      },
+      "reading": "text"
+     },
+     "gate": {
+      "A_text point |diff|": 0.0,
+      "A_text 95% |diff|": 0.0,
+      "run AUROC history |diff|": 0.0,
+      "run AUROC text |diff|": 0.0
+     },
+     "null": {
+      "history": {
+       "observed run AUROC": 0.8738138254617958,
+       "null center": 0.4994154953777895,
+       "null 95%": [
+        0.4730391473039658,
+        0.5261716007671361
+       ],
+       "null sd": 0.013618193918954326,
+       "p (null >= observed)": 0.0004997501249375312
+      },
+      "text": {
+       "observed run AUROC": 0.7387767785954967,
+       "null center": 0.49918384443605174,
+       "null 95%": [
+        0.47566920261624707,
+        0.5229474516315251
+       ],
+       "null sd": 0.012000180492669318,
+       "p (null >= observed)": 0.0004997501249375312
+      }
+     },
+     "text share vs the null": {
+      "point": 0.6399412468150858,
+      "95%": [
+       0.593795406763162,
+       0.68547500691331
+      ],
+      "valid draws": 2000
+     },
+     "reading vs the null": "text",
+     "share change (point)": 0.0011826928731047959,
+     "reading changed": false
+    }
+   }
+  },
+  "fx": {
+   "groups": {
+    "main tasks": 536,
+    "min simulated per task": 1,
+    "min e2 per task": 1,
+    "tasks with equal simulated and e2 counts": 536,
+    "max runs per task": 16,
+    "every permutation keeps each task's simulated count": true,
+    "share of labels moved, mean": 0.5007806176783812
+   },
+   "cells": {
+    "c | g3 layer per fold": {
+     "role": "beside",
+     "recorded": {
+      "text share (vs 0.5)": {
+       "point": 0.8730157412671867,
+       "95%": [
+        0.7361476759266228,
+        1.027494201204929
+       ],
+       "valid draws": 2000
+      },
+      "reading": "text (firm)"
+     },
+     "gate": {
+      "A_text point |diff|": 0.0,
+      "A_text 95% |diff|": 0.0,
+      "run AUROC history |diff|": 0.0,
+      "run AUROC text |diff|": 0.0
+     },
+     "null": {
+      "history": {
+       "observed run AUROC": 0.6366412958294063,
+       "null center": 0.4997737237743005,
+       "null 95%": [
+        0.48005820435262403,
+        0.5193985115473034
+       ],
+       "null sd": 0.010180865920608682,
+       "p (null >= observed)": 0.0004997501249375312
+      },
+      "text": {
+       "observed run AUROC": 0.6192900021662181,
+       "null center": 0.4993864414026659,
+       "null 95%": [
+        0.47789969843068275,
+        0.5204447041637887
+       ],
+       "null sd": 0.010891127053716407,
+       "p (null >= observed)": 0.0004997501249375312
+      }
+     },
+     "text share vs the null": {
+      "point": 0.8760552917185997,
+      "95%": [
+       0.7393340171768888,
+       1.0307647353833047
+      ],
+      "valid draws": 2000
+     },
+     "reading vs the null": "text (firm)",
+     "share change (point)": 0.00303955045141302,
+     "reading changed": false
+    },
+    "c | L63 in every fold": {
+     "role": "beside",
+     "recorded": {
+      "text share (vs 0.5)": {
+       "point": 1.0112983909243256,
+       "95%": [
+        0.8631746520584093,
+        1.175650096931678
+       ],
+       "valid draws": 2000
+      },
+      "reading": "text (firm)"
+     },
+     "gate": {
+      "A_text point |diff|": 0.0,
+      "A_text 95% |diff|": 0.0,
+      "run AUROC history |diff|": 0.0,
+      "run AUROC text |diff|": 0.0
+     },
+     "null": {
+      "history": {
+       "observed run AUROC": 0.635012662735718,
+       "null center": 0.499729895284336,
+       "null 95%": [
+        0.48042855960105296,
+        0.5185507944122915
+       ],
+       "null sd": 0.009898571465043337,
+       "p (null >= observed)": 0.0004997501249375312
+      },
+      "text": {
+       "observed run AUROC": 0.6365380885790403,
+       "null center": 0.4993467457392985,
+       "null 95%": [
+        0.4760629496178497,
+        0.5203182752820903
+       ],
+       "null sd": 0.011296488673891963,
+       "p (null >= observed)": 0.0004997501249375312
+      }
+     },
+     "text share vs the null": {
+      "point": 1.0141080451288496,
+      "95%": [
+       0.8665010347512946,
+       1.178393690110676
+      ],
+      "valid draws": 2000
+     },
+     "reading vs the null": "text (firm)",
+     "share change (point)": 0.002809654204523948,
+     "reading changed": false
+    },
+    "c_ff | g3 layer per fold": {
+     "role": "primary",
+     "recorded": {
+      "text share (vs 0.5)": {
+       "point": 0.5695957539779811,
+       "95%": [
+        0.4973732103449634,
+        0.6400382348417953
+       ],
+       "valid draws": 2000
+      },
+      "reading": "mixed"
+     },
+     "gate": {
+      "A_text point |diff|": 0.0,
+      "A_text 95% |diff|": 0.0,
+      "run AUROC history |diff|": 0.0,
+      "run AUROC text |diff|": 0.0
+     },
+     "null": {
+      "history": {
+       "observed run AUROC": 0.7660393707306506,
+       "null center": 0.4994759288936069,
+       "null 95%": [
+        0.4742678806561259,
+        0.5250749953783567
+       ],
+       "null sd": 0.01256145342847072,
+       "p (null >= observed)": 0.0004997501249375312
+      },
+      "text": {
+       "observed run AUROC": 0.6515348959591526,
+       "null center": 0.49916047933529994,
+       "null 95%": [
+        0.47705399440412555,
+        0.5217155143180212
+       ],
+       "null sd": 0.011403116974376015,
+       "p (null >= observed)": 0.0004997501249375312
+      }
+     },
+     "text share vs the null": {
+      "point": 0.5716253345685812,
+      "95%": [
+       0.49951746194526353,
+       0.6418600090389213
+      ],
+      "valid draws": 2000
+     },
+     "reading vs the null": "mixed",
+     "share change (point)": 0.0020295805906000997,
+     "reading changed": false
+    },
+    "c_ff | L63 in every fold": {
+     "role": "beside",
+     "recorded": {
+      "text share (vs 0.5)": {
+       "point": 0.6027477510345762,
+       "95%": [
+        0.5318958938995795,
+        0.6755078139690938
+       ],
+       "valid draws": 2000
+      },
+      "reading": "text"
+     },
+     "gate": {
+      "A_text point |diff|": 0.0,
+      "A_text 95% |diff|": 0.0,
+      "run AUROC history |diff|": 0.0,
+      "run AUROC text |diff|": 0.0
+     },
+     "null": {
+      "history": {
+       "observed run AUROC": 0.7720049766309297,
+       "null center": 0.4994892052020991,
+       "null 95%": [
+        0.47491822810163303,
+        0.5244349119506058
+       ],
+       "null sd": 0.012552972086920449,
+       "p (null >= observed)": 0.0004997501249375312
+      },
+      "text": {
+       "observed run AUROC": 0.6639503879345053,
+       "null center": 0.4992221105088798,
+       "null 95%": [
+        0.4771636379308194,
+        0.5214259669441921
+       ],
+       "null sd": 0.011220109812281222,
+       "p (null >= observed)": 0.0004997501249375312
+      }
+     },
+     "text share vs the null": {
+      "point": 0.6044724551608033,
+      "95%": [
+       0.533744217781544,
+       0.677220753160341
+      ],
+      "valid draws": 2000
+     },
+     "reading vs the null": "text",
+     "share change (point)": 0.0017247041262270502,
+     "reading changed": false
+    }
+   }
+  }
+ }
+}

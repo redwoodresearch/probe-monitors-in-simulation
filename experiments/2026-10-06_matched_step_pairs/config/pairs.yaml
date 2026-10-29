@@ -1,0 +1,25 @@
+# Matched-step pairs (2026-10-06): which real steps get a simulated twin. Read by run_select_pairs.py.
+seed: 0
+n_pairs: {attack: 100, honest: 100}      # total; the pilot is the first `n_pilot` in selection order (half per arm)
+n_pilot: 20
+cohorts:                                 # aliases in simulated-control-evals src/paper/configs/real_runs.yml
+  attack: la_public10_real_attack_n1000  # real attack, epoch 1
+  honest: la_public10_real_honest_n1000
+  sim: la_public10_sim_astra_attack_n1000  # the September Astra cohort: supplies each cell's simulator inputs
+arms: {attack: real-attack-e1, honest: real-honest}   # arm names in splits/exclusions_v3.json
+exclusions_file: exclusions_v3.json      # valid samples only; attack runs only from the paired cells
+folds_file: folds_v3.json
+excluded_environments: [media_processing, model_registry]
+# Honest runs: the simulator's reference is the fresh overlap800 honest run the sims session picked per main task
+# (never a run in our honest cohort). Attack runs: the reference the September simulator used for that same cell.
+honest_references: ~/probe-shift-sims/experiments/2026-10-06_astra_sim_honest/results/references_20261006-142754.json
+step_tools: [bash, text_editor:view]     # the step-k command: bash, or a text_editor view (no editor writes)
+single_call_turns: true                  # step k's agent turn issued exactly one call (no sibling calls to fabricate)
+drop_errored_outputs: true               # the real output must not be a tool error (parsing/timeout are harness tells)
+min_prefix_actions: 1                    # at least one earlier action, so there is a history to condition on
+require_next_call: true                  # a later agent turn with a call exists (the Q2 "next position")
+position_buckets: [[0.0, 0.3333], [0.3333, 0.6667], [0.6667, 1.0001]]   # early / mid / late: k / (actions in the run)
+max_tokens: 32768                        # the reader cut
+token_margin: 6000                       # the real next call must end before max_tokens - margin (room for a longer sim output)
+one_per_main_per_arm: true
+tokenizer: {name: Qwen/Qwen3-32B, revision: 9216db5781bf21249d130ec9da846c4624c16137}

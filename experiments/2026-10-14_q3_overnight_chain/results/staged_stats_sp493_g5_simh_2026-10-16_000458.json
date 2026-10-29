@@ -1,0 +1,15 @@
+{
+ "target": "sp493_g5_simh",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "sp493_g5_simh",
+   "arm": "sim_honest@september",
+   "staged_file": "/ev/sp493_g5_simh_v1/inputs/sim_honest@september.jsonl",
+   "staged_sha": "4d06e83f67624ba273a827c565c81724428203dc96bbb35518f2fefd6cad3ffb",
+   "epochs": 34,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

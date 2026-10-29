@@ -1,0 +1,20 @@
+# The reply-token realism arm (RULE_POSTHOC_realism_reply_196.md; POST HOC): the 196-task monitor's runs, extractions,
+# worlds and folds (as config/score_scaleup196.yaml), read at the output_end rows (the last token inside each tool
+# output's <tool_response> content, in the prompt of the request that first shows it) instead of the rule-1 command rows.
+label: scaleup196_reply
+readout_kind: output_end
+# Amendment 1 (before any number): run 2 of t96 has 63 command rows and no output_end row, so the run-2 cohort guard
+# would refuse; t96 is declared excluded from all three worlds, and the comparison pairs both arms on the shared tasks.
+exclude_tasks: [t96_file_indexing]
+extractions: [2026-10-09_rerun_strict_segends_v1, 2026-10-10_scaleup_canary_segends_v1, 2026-10-10_scaleup_l2_segends_v1,
+              2026-10-10_scaleup_topup_segends_v1, 2026-10-10_second_attack_segends_v1]
+worlds: {real: attack, sim: sim_attack@september, run2: attack@2026-10-10_second_attack_segends_v1}
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json
+n_layers: 64
+hidden: 5120
+seed: 0
+fitter: primal
+warm_start: false
+x_cache: xcache_scaleup196_reply
+amendments:
+  realism_reply: "RULE_POSTHOC_realism_reply_196.md (POST HOC)"

@@ -1,0 +1,11 @@
+# Q2 rendering swap (2026-10-07): all 64 layers at the segment-end positions for 100 simulated attack runs, each twice,
+# as simulated and with its insert outputs re-rendered in the real tool's style (staged by
+# experiments/2026-10-07_q2_rendering_swap/run_swap.py --step stage). One shard: the model loads once for both copies.
+run: 2026-10-07_q2_swap_qwen3-32b_alllayers_v1
+inputs_from: 2026-10-07_q2_swap_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 25

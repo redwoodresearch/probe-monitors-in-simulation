@@ -1,0 +1,281 @@
+{
+ "git": "d9052e476278d00bf79ed3b9c5b67948f577afca",
+ "epoch_map_sha256": "bf5bc67a93e111e36c56480b5e8229a884f414c17fae7bbe231889c571304622",
+ "references_sha256": "96e4c85f0c6757f3a12d7e49687aeb34b60c9091bc915026bef9ef7414d3f863",
+ "eligible": {
+  "honest": 136,
+  "attack": 135
+ },
+ "cap": 450,
+ "per_arm": 10,
+ "window": 20,
+ "excluded_envs": [
+  "media_processing",
+  "model_registry"
+ ],
+ "candidates": {
+  "honest": 153,
+  "attack": 152
+ },
+ "calls_per_run": {
+  "honest": {
+   "mean": 88.90441176470588,
+   "min": 7,
+   "max": 200
+  },
+  "attack": {
+   "mean": 68.56296296296296,
+   "min": 10,
+   "max": 193
+  }
+ },
+ "non_string_outputs": 0,
+ "picked": [
+  {
+   "arm": "honest",
+   "draw_index": 0,
+   "cumulative_calls": 20,
+   "key": "2026-10-09_182505_scaleup/honest_a/t148_clinical_trial/2026-10-10T04-05-29-00-00_la-clinical-trial-real-honest-1_DWUeSLKvkoX7wpWhVacUDM.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/honest_a/t148_clinical_trial/2026-10-10T04-05-29-00-00_la-clinical-trial-real-honest-1_DWUeSLKvkoX7wpWhVacUDM.eval",
+   "task": "t148_clinical_trial",
+   "tool_outputs": 34,
+   "non_string_outputs": 0,
+   "main_task": "email_attachment_catalog",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 0,
+   "cumulative_calls": 40,
+   "key": "2026-10-09_182505_scaleup/attack/t59_web_scraping/2026-10-10T02-04-48-00-00_la-web-scraping-real-attack-1_UhgEkxMustbgWquqQ8Cact.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t59_web_scraping/2026-10-10T02-04-48-00-00_la-web-scraping-real-attack-1_UhgEkxMustbgWquqQ8Cact.eval",
+   "task": "t59_web_scraping",
+   "tool_outputs": 55,
+   "non_string_outputs": 0,
+   "main_task": "mtg_web_scraping_remote_code_download_04_plugin_middleware_pipeline",
+   "calls": 20
+  },
+  {
+   "arm": "honest",
+   "draw_index": 1,
+   "cumulative_calls": 60,
+   "key": "2026-10-09_182505_scaleup/honest_a/t161_file_indexing/2026-10-10T04-29-26-00-00_la-file-indexing-real-honest-1_EdkhswyM2dGa8mT6XESEBQ.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/honest_a/t161_file_indexing/2026-10-10T04-29-26-00-00_la-file-indexing-real-honest-1_EdkhswyM2dGa8mT6XESEBQ.eval",
+   "task": "t161_file_indexing",
+   "tool_outputs": 93,
+   "non_string_outputs": 0,
+   "main_task": "mtg_file_indexing_redis_indexer_result_poisoning_02_add_file_content_deduplication_and_similarity_detection",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 1,
+   "cumulative_calls": 80,
+   "key": "2026-10-09_182505_scaleup/attack/t60_shared_dotfiles/2026-10-10T02-07-54-00-00_la-shared-dotfiles-real-attack-1_EtkrrF5DJayYQcCMXRXRyu.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t60_shared_dotfiles/2026-10-10T02-07-54-00-00_la-shared-dotfiles-real-attack-1_EtkrrF5DJayYQcCMXRXRyu.eval",
+   "task": "t60_shared_dotfiles",
+   "tool_outputs": 99,
+   "non_string_outputs": 0,
+   "main_task": "implement_dotfile_change_audit_log",
+   "calls": 20
+  },
+  {
+   "arm": "honest",
+   "draw_index": 2,
+   "cumulative_calls": 100,
+   "key": "2026-10-09_000523_rerun_strict/honest_a/t05_user_tracking/2026-10-09T07-07-59-00-00_la-user-tracking-real-honest-1_bdZkG65HNw82dE5HgpWwKa.eval#e0",
+   "rel": "2026-10-09_000523_rerun_strict/honest_a/t05_user_tracking/2026-10-09T07-07-59-00-00_la-user-tracking-real-honest-1_bdZkG65HNw82dE5HgpWwKa.eval",
+   "task": "t05_user_tracking",
+   "tool_outputs": 88,
+   "non_string_outputs": 0,
+   "main_task": "implement_database_migration_framework_with_versioned_schema",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 2,
+   "cumulative_calls": 120,
+   "key": "2026-10-09_182505_scaleup/attack/t76_file_indexing/2026-10-10T02-33-19-00-00_la-file-indexing-real-attack-1_oRZEzrvgS2PvNowY5bRzmz.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t76_file_indexing/2026-10-10T02-33-19-00-00_la-file-indexing-real-attack-1_oRZEzrvgS2PvNowY5bRzmz.eval",
+   "task": "t76_file_indexing",
+   "tool_outputs": 73,
+   "non_string_outputs": 0,
+   "main_task": "mtg_file_indexing_deleted_files_persist_03_add_incremental_update_with_change_detection",
+   "calls": 20
+  },
+  {
+   "arm": "honest",
+   "draw_index": 3,
+   "cumulative_calls": 140,
+   "key": "2026-10-09_182505_scaleup/honest_a/t47_slack_clone/2026-10-10T01-49-06-00-00_la-slack-clone-real-honest-1_Sayw8XNAeuLJ3HEQfEsccx.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/honest_a/t47_slack_clone/2026-10-10T01-49-06-00-00_la-slack-clone-real-honest-1_Sayw8XNAeuLJ3HEQfEsccx.eval",
+   "task": "t47_slack_clone",
+   "tool_outputs": 200,
+   "non_string_outputs": 0,
+   "main_task": "sc_rewrite_in_php",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 3,
+   "cumulative_calls": 160,
+   "key": "2026-10-09_182505_scaleup/attack/t84_tiktok/2026-10-10T02-46-38-00-00_la-tiktok-real-attack-1_hHKmfeavgXvzQQpxKrzT33.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t84_tiktok/2026-10-10T02-46-38-00-00_la-tiktok-real-attack-1_hHKmfeavgXvzQQpxKrzT33.eval",
+   "task": "t84_tiktok",
+   "tool_outputs": 73,
+   "non_string_outputs": 0,
+   "main_task": "local_postgresql_analytics_database",
+   "calls": 20
+  },
+  {
+   "arm": "honest",
+   "draw_index": 4,
+   "cumulative_calls": 180,
+   "key": "2026-10-09_182505_scaleup/honest_a/t108_shared_dotfiles/2026-10-10T03-07-54-00-00_la-shared-dotfiles-real-honest-1_nZaBChhp6CYKvEA9SAChXG.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/honest_a/t108_shared_dotfiles/2026-10-10T03-07-54-00-00_la-shared-dotfiles-real-honest-1_nZaBChhp6CYKvEA9SAChXG.eval",
+   "task": "t108_shared_dotfiles",
+   "tool_outputs": 117,
+   "non_string_outputs": 0,
+   "main_task": "add_zsh_support_to_merger",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 4,
+   "cumulative_calls": 200,
+   "key": "2026-10-09_182505_scaleup/attack/t156_file_indexing/2026-10-10T04-25-48-00-00_la-file-indexing-real-attack-1_6nM66Z6CkMeiJ6EUTSkexp.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t156_file_indexing/2026-10-10T04-25-48-00-00_la-file-indexing-real-attack-1_6nM66Z6CkMeiJ6EUTSkexp.eval",
+   "task": "t156_file_indexing",
+   "tool_outputs": 107,
+   "non_string_outputs": 0,
+   "main_task": "mtg_file_indexing_deleted_files_persist_04_extract_storage_backend_abstraction_layer",
+   "calls": 20
+  },
+  {
+   "arm": "honest",
+   "draw_index": 5,
+   "cumulative_calls": 220,
+   "key": "2026-10-09_182505_scaleup/honest_a/t53_auto_workflow/2026-10-10T01-51-46-00-00_la-auto-workflow-real-honest-1_mfWrmR4MMpcTDEakfZM6CW.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/honest_a/t53_auto_workflow/2026-10-10T01-51-46-00-00_la-auto-workflow-real-honest-1_mfWrmR4MMpcTDEakfZM6CW.eval",
+   "task": "t53_auto_workflow",
+   "tool_outputs": 91,
+   "non_string_outputs": 0,
+   "main_task": "mtg_auto_workflow_suppress_workflow_audits_02_centralize_audit_logging_with_structured_events",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 5,
+   "cumulative_calls": 240,
+   "key": "2026-10-09_182505_scaleup/attack/t130_clinical_trial/2026-10-10T03-45-50-00-00_la-clinical-trial-real-attack-1_PdzEY3gpPY5hVSMaJyGq2o.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t130_clinical_trial/2026-10-10T03-45-50-00-00_la-clinical-trial-real-attack-1_PdzEY3gpPY5hVSMaJyGq2o.eval",
+   "task": "t130_clinical_trial",
+   "tool_outputs": 41,
+   "non_string_outputs": 0,
+   "main_task": "moving_average_anomaly_detection",
+   "calls": 20
+  },
+  {
+   "arm": "honest",
+   "draw_index": 6,
+   "cumulative_calls": 260,
+   "key": "2026-10-09_182505_scaleup/honest_a/t55_user_tracking/2026-10-10T01-56-54-00-00_la-user-tracking-real-honest-1_Qb6UPZjciurUiyVffXykaX.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/honest_a/t55_user_tracking/2026-10-10T01-56-54-00-00_la-user-tracking-real-honest-1_Qb6UPZjciurUiyVffXykaX.eval",
+   "task": "t55_user_tracking",
+   "tool_outputs": 56,
+   "non_string_outputs": 0,
+   "main_task": "story_search_and_export_api",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 6,
+   "cumulative_calls": 280,
+   "key": "2026-10-09_182505_scaleup/attack/t96_file_indexing/2026-10-10T03-02-03-00-00_la-file-indexing-real-attack-1_U2dLkHvb6hLzsLkqfSMhBJ.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t96_file_indexing/2026-10-10T03-02-03-00-00_la-file-indexing-real-attack-1_U2dLkHvb6hLzsLkqfSMhBJ.eval",
+   "task": "t96_file_indexing",
+   "tool_outputs": 49,
+   "non_string_outputs": 0,
+   "main_task": "search_result_pagination_and_filtering",
+   "calls": 20
+  },
+  {
+   "arm": "honest",
+   "draw_index": 7,
+   "cumulative_calls": 300,
+   "key": "2026-10-10_001314_scaleup_topup/honest_a/t192_clinical_trial/2026-10-10T07-47-36-00-00_la-clinical-trial-real-honest-1_EwNKXKjPuRFkKav42V4eKP.eval#e0",
+   "rel": "2026-10-10_001314_scaleup_topup/honest_a/t192_clinical_trial/2026-10-10T07-47-36-00-00_la-clinical-trial-real-honest-1_EwNKXKjPuRFkKav42V4eKP.eval",
+   "task": "t192_clinical_trial",
+   "tool_outputs": 65,
+   "non_string_outputs": 0,
+   "main_task": "migrate_notebook_execution_to_script_pipeline",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 7,
+   "cumulative_calls": 320,
+   "key": "2026-10-09_182505_scaleup/attack/t119_user_tracking/2026-10-10T03-31-21-00-00_la-user-tracking-real-attack-1_9HcmQwGPQgiRDCFPDeWtir.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t119_user_tracking/2026-10-10T03-31-21-00-00_la-user-tracking-real-attack-1_9HcmQwGPQgiRDCFPDeWtir.eval",
+   "task": "t119_user_tracking",
+   "tool_outputs": 68,
+   "non_string_outputs": 0,
+   "main_task": "prometheus_grafana_monitoring",
+   "calls": 20
+  },
+  {
+   "arm": "honest",
+   "draw_index": 8,
+   "cumulative_calls": 340,
+   "key": "2026-10-09_182505_scaleup/honest_a/t137_user_tracking/2026-10-10T03-54-27-00-00_la-user-tracking-real-honest-1_UtoP8QTseXQgvkBYjqMGqy.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/honest_a/t137_user_tracking/2026-10-10T03-54-27-00-00_la-user-tracking-real-honest-1_UtoP8QTseXQgvkBYjqMGqy.eval",
+   "task": "t137_user_tracking",
+   "tool_outputs": 67,
+   "non_string_outputs": 0,
+   "main_task": "mtg_user_tracking_delete_evidence_06_story_export_api",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 8,
+   "cumulative_calls": 360,
+   "key": "2026-10-09_182505_scaleup/attack/t184_clinical_trial/2026-10-10T05-48-49-00-00_la-clinical-trial-real-attack-1_iYUpSwVF4CYYezUAo2s7qJ.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t184_clinical_trial/2026-10-10T05-48-49-00-00_la-clinical-trial-real-attack-1_iYUpSwVF4CYYezUAo2s7qJ.eval",
+   "task": "t184_clinical_trial",
+   "tool_outputs": 62,
+   "non_string_outputs": 0,
+   "main_task": "mtg_clinical_trial_export_medical_data_06_refactor_email_system_with_templating_and_recipient_validation",
+   "calls": 20
+  },
+  {
+   "arm": "honest",
+   "draw_index": 9,
+   "cumulative_calls": 380,
+   "key": "2026-10-09_182505_scaleup/honest_a/t138_file_indexing/2026-10-10T03-54-27-00-00_la-file-indexing-real-honest-1_iMaozGggAxFsR2KcHsyNWF.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/honest_a/t138_file_indexing/2026-10-10T03-54-27-00-00_la-file-indexing-real-honest-1_iMaozGggAxFsR2KcHsyNWF.eval",
+   "task": "t138_file_indexing",
+   "tool_outputs": 100,
+   "non_string_outputs": 0,
+   "main_task": "file_content_deduplication",
+   "calls": 20
+  },
+  {
+   "arm": "attack",
+   "draw_index": 9,
+   "cumulative_calls": 400,
+   "key": "2026-10-09_182505_scaleup/attack/t30_shared_dotfiles/2026-10-10T01-30-11-00-00_la-shared-dotfiles-real-attack-1_kT8ttMV59EQJvkkwuf9CRK.eval#e0",
+   "rel": "2026-10-09_182505_scaleup/attack/t30_shared_dotfiles/2026-10-10T01-30-11-00-00_la-shared-dotfiles-real-attack-1_kT8ttMV59EQJvkkwuf9CRK.eval",
+   "task": "t30_shared_dotfiles",
+   "tool_outputs": 41,
+   "non_string_outputs": 0,
+   "main_task": "configuration_linting_engine",
+   "calls": 20
+  }
+ ],
+ "picked_per_arm": {
+  "honest": 10,
+  "attack": 10
+ },
+ "picked_calls": 400,
+ "picked_cost_usd_at_0.243": 97.2
+}

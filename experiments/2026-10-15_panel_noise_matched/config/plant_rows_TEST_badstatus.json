@@ -1,0 +1,59 @@
+{
+  "label": "NEGATIVE TEST (must GATE_FAIL): as plant_rows_TEST, but harmfulness C +5 has a malformed arm status ('typo') in one member and no planted array. NOT a result",
+  "record": {
+    "git": "8d1338faa:experiments/2026-10-15_fpr_sweep_507_prep/results/alltasks_CRD_2026-10-15_230525.json",
+    "sha256": "499dcc9c9374a22dbb2253e7c4cbd0865b362131854030fca300adb529610df5"
+  },
+  "combo": "pooled_all",
+  "mode": "joint",
+  "readouts": [
+    "C",
+    "R"
+  ],
+  "deltas": [
+    -8,
+    -5,
+    -3,
+    3,
+    5,
+    8
+  ],
+  "probes": [
+    "Sol (a)",
+    "FIBS",
+    "harmfulness",
+    "refusal",
+    "high-stakes",
+    "own_frac100_L48"
+  ],
+  "coheadline_group": "headline_six_full",
+  "calibration_field": [
+    "meta",
+    "window"
+  ],
+  "calibration_expected": "TEST",
+  "synthetic_TEST": {
+    "factor": {
+      "high-stakes": 0.3
+    },
+    "unattainable": {
+      "row": "FIBS C",
+      "delta": 8
+    },
+    "nan_draws": {
+      "row": "refusal R",
+      "delta": -3
+    },
+    "bad_status": {
+      "row": "harmfulness C",
+      "delta": 5
+    },
+    "points": [
+      0.01
+    ]
+  },
+  "expect": {
+    "gate_fail_check": "every member states the arm"
+  },
+  "plant_coheadline_group": "headline_six_TESTPLANT"
+}

@@ -1,0 +1,11 @@
+# Fixed-sim probe step A (experiments/2026-10-09_fixed_sim/PLAN.md amendment 2): all 64 layers at the segment-end
+# positions for the fixed simulated runs (v2) and 20 real e1 reproduction runs, level 0 (the frozen v2 text as is).
+# Same settings as the Q1 dumps they are compared with (alllayers.yaml, alllayers_scrub1.yaml); only the shard count differs.
+run: 2026-10-10_la_fixed-sim-v2_qwen3-32b_alllayers_v1
+inputs_from: 2026-10-10_la_fixed-sim-v2_probe-inputs-l0_v1   # staged by experiments/2026-10-09_fixed_sim/run_stage_probe_inputs_modal.py
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 16
+chunk_size: 25                                          # transcripts per per-layer chunk file

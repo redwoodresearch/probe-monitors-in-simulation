@@ -1,0 +1,5 @@
+{
+  "labels_sha256": "6aca0a5a8f7954e2de4a84c72c17d45e65a178abad276b35aecf309d1dadc767",
+  "labels_source": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-11_sabotage_test/stage1_labels_returned/labels_stage1_filled_2026-10-11_2009.csv",
+  "labels_hash_source": "69d6e93a173a3f28e32bbb9b1cc980c16101ac93:experiments/2026-10-11_sabotage_test/stage_gate.py LABELS_SHA"
+}

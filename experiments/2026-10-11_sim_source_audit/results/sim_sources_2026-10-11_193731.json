@@ -1,0 +1,163 @@
+{
+ "written": "2026-10-11_193731",
+ "git": "e93e7b491855e7f414dc8888d972cfd079406c46",
+ "phase1": {
+  "file": "splits/exclusions_v3.json",
+  "kept_real_honest_runs": 1000,
+  "kept_real_honest_runs_by_file_prefix": {
+   "base200": 200,
+   "overlap800": 800
+  },
+  "paired_939": {
+   "cells": 939,
+   "by_sim_reference": {
+    "overlap800": 743,
+    "base200": 196
+   },
+   "base200_main_tasks": 196,
+   "base200_mains_with_a_kept_real_honest_run": 196,
+   "kept_real_honest_runs_on_base200_mains": 344,
+   "kept_base200_named_real_honest_runs_on_base200_mains": 196,
+   "kept_real_honest_runs_on_all_cell_mains": 990
+  },
+  "under_32k_591": {
+   "cells": 591,
+   "by_sim_reference": {
+    "overlap800": 449,
+    "base200": 142
+   },
+   "base200_main_tasks": 142,
+   "base200_mains_with_a_kept_real_honest_run": 142,
+   "kept_real_honest_runs_on_base200_mains": 236,
+   "kept_base200_named_real_honest_runs_on_base200_mains": 142,
+   "kept_real_honest_runs_on_all_cell_mains": 740
+  }
+ },
+ "phase2": {
+  "2026-10-09_000523_rerun_strict": {
+   "arms": {
+    "honest_a": 20,
+    "honest_b": 20,
+    "attack": 20,
+    "sim_honest": 40,
+    "sim_attack": 40
+   },
+   "sim_runs_with_eval_by_reference": {
+    "sim_honest@september: reference = the kept honest_a run": 20,
+    "sim_attack@september: reference = the kept honest_a run": 20,
+    "sim_honest@today: reference = the kept honest_a run": 20,
+    "sim_attack@today: no local .eval (not in the laptop cache)": 20
+   },
+   "simulators": {
+    "sim_honest@september": 20,
+    "sim_attack@september": 20,
+    "sim_honest@today": 20,
+    "sim_attack@today": 20
+   },
+   "references": 20,
+   "reference_source_arm": {
+    "honest_a": 20
+   },
+   "reference_is_the_kept_honest_a_run": {
+    "True": 20
+   },
+   "reference_found_among_kept_runs_of": {
+    "honest_b": 0,
+    "attack": 0
+   },
+   "sim_config_fork_fraction": "0"
+  },
+  "2026-10-09_173815_scaleup_canary": {
+   "arms": {
+    "honest_a": 5,
+    "honest_b": 5,
+    "attack": 5,
+    "sim_attack": 5
+   },
+   "sim_runs_with_eval_by_reference": {
+    "sim_attack@september: reference = the kept honest_a run": 5
+   },
+   "simulators": {
+    "sim_attack@september": 5
+   },
+   "references": 5,
+   "reference_source_arm": {
+    "honest_a": 5
+   },
+   "reference_is_the_kept_honest_a_run": {
+    "True": 5
+   },
+   "reference_found_among_kept_runs_of": {
+    "honest_b": 0,
+    "attack": 0
+   },
+   "sim_config_fork_fraction": "0"
+  },
+  "2026-10-09_182505_scaleup": {
+   "arms": {
+    "honest_a": 171,
+    "honest_b": 171,
+    "attack": 171,
+    "sim_attack": 171
+   },
+   "sim_runs_with_eval_by_reference": {
+    "sim_attack@september: reference = the kept honest_a run": 152,
+    "sim_attack@september: reference = another honest_a attempt (not the kept one)": 3
+   },
+   "simulators": {
+    "sim_attack@september": 171
+   },
+   "references": 157,
+   "reference_source_arm": {
+    "honest_a": 157
+   },
+   "reference_is_the_kept_honest_a_run": {
+    "True": 154,
+    "False": 3
+   },
+   "reference_found_among_kept_runs_of": {
+    "honest_b": 0,
+    "attack": 0
+   },
+   "sim_config_fork_fraction": "0"
+  },
+  "2026-10-10_001314_scaleup_topup": {
+   "arms": {
+    "honest_a": 11,
+    "honest_b": 11,
+    "attack": 11,
+    "sim_attack": 11
+   },
+   "sim_runs_with_eval_by_reference": {
+    "sim_attack@september: reference = the kept honest_a run": 11
+   },
+   "simulators": {
+    "sim_attack@september": 11
+   },
+   "references": 11,
+   "reference_source_arm": {
+    "honest_a": 11
+   },
+   "reference_is_the_kept_honest_a_run": {
+    "True": 11
+   },
+   "reference_found_among_kept_runs_of": {
+    "honest_b": 0,
+    "attack": 0
+   },
+   "sim_config_fork_fraction": "0"
+  },
+  "2026-10-10_001314_second_attack": {
+   "arms": {
+    "attack": 196
+   },
+   "sim_runs_with_eval_by_reference": {},
+   "simulators": {},
+   "references": 0,
+   "reference_source_arm": {},
+   "reference_is_the_kept_honest_a_run": {},
+   "reference_found_among_kept_runs_of": {},
+   "sim_config_fork_fraction": "0"
+  }
+ }
+}

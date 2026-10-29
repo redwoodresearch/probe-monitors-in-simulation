@@ -1,0 +1,97 @@
+{
+ "note": "interleaved launch 2026-10-15_sim2gap_s4r of 2026-10-14_newmains_s4r: sim_attack@september (world sim2); honest donors from the main launch",
+ "counts": {
+  "files": 3,
+  "by_arm": {
+   "honest_a": 1,
+   "honest_b": 1,
+   "sim_attack@september": 1
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-14_newmains_s4r",
+   "rel": "honest_a/nm145_model_registry/2026-10-15T12-50-45-00-00_la-model-registry-real-honest-1_fnW8Bsnrb8HpfvfLLLV2we.eval",
+   "sha256": "10313ba6cc06a9bc24081bbd2a7675e88963b7fbb59504c713e676037929e58f",
+   "bytes": 63372,
+   "arm_dir": "honest_a",
+   "task": "nm145_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-14_newmains_s4r/honest_a/nm145_model_registry/2026-10-15T12-50-45-00-00_la-model-registry-real-honest-1_fnW8Bsnrb8HpfvfLLLV2we.eval",
+   "state": "done",
+   "launch_id": "2026-10-14_newmains_s4r",
+   "stratum": "S_newmains",
+   "launch_task": "nm145_model_registry",
+   "first_start": "2026-10-15T05:50:42-07:00",
+   "world": "honest_a",
+   "donor_supplied_from": "config/manifest_nm360_s4r_main.json @ 699539b031bf798d7735f4a0fea45949e612f3fb (sha256 8b8200551edc53f13e2df880f3b26f06002f5c910b898cea2c1672c285be3a8d)"
+  },
+  {
+   "launch": "2026-10-14_newmains_s4r",
+   "rel": "honest_b/nm145_model_registry/2026-10-15T12-53-45-00-00_la-model-registry-real-honest-1_DfY3tzxpT9vMiebgDgf6Aq.eval",
+   "sha256": "21b87f01b4d55f6bd8ec6fd52aa3af955e396c85cadb3bee4d5a8d9ef4ea2da0",
+   "bytes": 184925,
+   "arm_dir": "honest_b",
+   "task": "nm145_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-14_newmains_s4r/honest_b/nm145_model_registry/2026-10-15T12-53-45-00-00_la-model-registry-real-honest-1_DfY3tzxpT9vMiebgDgf6Aq.eval",
+   "state": "done",
+   "launch_id": "2026-10-14_newmains_s4r",
+   "stratum": "S_newmains",
+   "launch_task": "nm145_model_registry",
+   "first_start": "2026-10-15T05:53:42-07:00",
+   "world": "honest_b",
+   "donor_supplied_from": "config/manifest_nm360_s4r_main.json @ 699539b031bf798d7735f4a0fea45949e612f3fb (sha256 8b8200551edc53f13e2df880f3b26f06002f5c910b898cea2c1672c285be3a8d)"
+  },
+  {
+   "launch": "2026-10-15_sim2gap_s4r",
+   "rel": "sim_attack@september/nm145_model_registry/2026-10-15T23-57-27-00-00_la-model-registry-sim-attack-1_GjQ2qehiwsau7DVSkT4wdM.eval",
+   "sha256": "5f4d3106b1ecfde555a9d7ef1a558ed7a6cd7ea917e6a765280889bdc462191c",
+   "bytes": 665170,
+   "arm_dir": "sim_attack@september",
+   "task": "nm145_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_sim2gap_s4r/sim_attack@september/nm145_model_registry/2026-10-15T23-57-27-00-00_la-model-registry-sim-attack-1_GjQ2qehiwsau7DVSkT4wdM.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_sim2gap_s4r",
+   "stratum": "S_sim2gap",
+   "launch_task": "nm145_model_registry",
+   "first_start": "2026-10-15T16:57:25-07:00",
+   "interleaved_launch": true,
+   "sim_attempt_timeout_s": 300,
+   "main_launch": "2026-10-14_newmains_s4r",
+   "snapshot_id": "final",
+   "world": "sim2",
+   "sim_launch": "2026-10-15_sim2gap_s4r",
+   "run1_launch": "2026-10-14_newmains_s4r",
+   "sim_launch_ne_run1_launch": true,
+   "il_order": 4,
+   "stage": "gap"
+  }
+ ],
+ "only_cells": [
+  "nm145_model_registry"
+ ],
+ "donors_supplied": {
+  "rule": "09 @ 65ef3a9ff section 2 (option b): the main's counted honest rows for this family's cells, by key",
+  "sources": [
+   {
+    "path": "config/manifest_nm360_s4r_main.json",
+    "commit": "699539b031bf798d7735f4a0fea45949e612f3fb",
+    "sha256": "8b8200551edc53f13e2df880f3b26f06002f5c910b898cea2c1672c285be3a8d"
+   }
+  ],
+  "rows": 2,
+  "cells": 1,
+  "cells_without_a_donor_row": []
+ }
+}

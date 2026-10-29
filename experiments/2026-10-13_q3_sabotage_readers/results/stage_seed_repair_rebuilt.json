@@ -1,0 +1,20 @@
+{
+ "reader": "seed",
+ "rebuilt_from_volume": true,
+ "counters": "missing (the staging client lost its connection)",
+ "gate": 0,
+ "limit": 0,
+ "repair": "B2 fix-full minus F7 (repair_b2.py)",
+ "staged_dir": "/v/sabreaders_seed_repair_v1",
+ "staged_inputs_sha256": {
+  "sim.jsonl": "b6d61c547527f5450d8aebf780a9f733d8e72fd7c2922e9498591cbc1e45d180"
+ },
+ "summary": {
+  "sim": {
+   "runs staged": 156,
+   "rows": 10541,
+   "rows read": 6394,
+   "forward tokens": 4613617
+  }
+ }
+}

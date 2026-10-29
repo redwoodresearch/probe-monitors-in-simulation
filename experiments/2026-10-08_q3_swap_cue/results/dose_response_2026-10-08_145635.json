@@ -1,0 +1,88 @@
+{
+ "inputs": {
+  "calls": [
+   "swap_frozen_calls_2026-10-08_140611.jsonl.gz",
+   "swap_frozen_calls_2026-10-08_140503.jsonl.gz"
+  ],
+  "stage_reports": [
+   "stage_report_comb.json",
+   "stage_report_ext.json"
+  ]
+ },
+ "readouts": {
+  "output_end": {
+   "runs": 217,
+   "changed_outputs_outside_the_common_set": 301,
+   "spearman_rho": 0.44689956698376826,
+   "ci95": [
+    0.32206112981382123,
+    0.5579884896579825
+   ],
+   "mean_change_logits": 0.3205160492188311,
+   "n_changed_median": 9.0,
+   "terciles": [
+    {
+     "n_changed": [
+      1.0,
+      7.0
+     ],
+     "runs": 89,
+     "mean_change_logits": 0.22442954573557342
+    },
+    {
+     "n_changed": [
+      8.0,
+      12.0
+     ],
+     "runs": 66,
+     "mean_change_logits": 0.3252082419107094
+    },
+    {
+     "n_changed": [
+      13.0,
+      34.0
+     ],
+     "runs": 62,
+     "mean_change_logits": 0.45345176038570145
+    }
+   ]
+  },
+  "output_end@48": {
+   "runs": 217,
+   "changed_outputs_outside_the_common_set": 301,
+   "spearman_rho": -0.30378485057669546,
+   "ci95": [
+    -0.42641218430477046,
+    -0.17295325908949782
+   ],
+   "mean_change_logits": -0.0659534237022199,
+   "n_changed_median": 9.0,
+   "terciles": [
+    {
+     "n_changed": [
+      1.0,
+      7.0
+     ],
+     "runs": 89,
+     "mean_change_logits": -0.022568170842236716
+    },
+    {
+     "n_changed": [
+      8.0,
+      12.0
+     ],
+     "runs": 66,
+     "mean_change_logits": -0.0610088540562666
+    },
+    {
+     "n_changed": [
+      13.0,
+      34.0
+     ],
+     "runs": 62,
+     "mean_change_logits": -0.13349582855982345
+    }
+   ]
+  }
+ }
+}

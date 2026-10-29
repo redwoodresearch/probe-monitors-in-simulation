@@ -1,0 +1,12 @@
+# q2 (2026-10-12; ../../2026-10-12_q2_meanpool_36/PLAN.md): the same as alllayers_meanpool36.yaml on fix939's 823
+# re-rendered simulated runs (staged by ../../2026-10-08_q3_swap_cue/run_fix939_stage.py), the repaired arm.
+run: 2026-10-12_la_mean-pool36-fix939_qwen3-32b_l7_v1
+inputs_from: 2026-10-11_q3_fix939_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 10
+chunk_size: 25
+layers: [16, 24, 32, 40, 48, 56, 63]
+mean_final: true

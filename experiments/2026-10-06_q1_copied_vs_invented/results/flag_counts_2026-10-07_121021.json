@@ -1,0 +1,122 @@
+{
+ "config": {
+  "arms": [
+   "real-attack-e1",
+   "real-attack-e2",
+   "sim-attack"
+  ],
+  "cohorts": {
+   "real-attack-e1": "la_public10_real_attack_n1000",
+   "real-attack-e2": "la_public10_real_attack_reroll_n1000",
+   "sim-attack": "la_public10_sim_astra_attack_n1000"
+  },
+  "staged_outputs": "~/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/.run_cache/examples_2026-10-06_130135/outputs.jsonl.gz",
+  "expected_paired_cells": 939,
+  "eval_dir": "~/probe-shift-viewer/.run_cache/viewer/eval",
+  "near_threshold": 0.9,
+  "near_max_chars": 20000,
+  "ignore_arg_keys": [
+   "timeout"
+  ],
+  "tfidf_scores": "~/probe-shift-baselines/experiments/2026-10-06_q1_text_baselines/results/tfidf_cleaned_scores_2026-10-06_130213.jsonl.gz",
+  "tfidf_baseline": "tfidf_cleaned",
+  "tfidf_outputs": "all",
+  "bootstrap": 1000,
+  "seed": 0,
+  "n_jobs": 12
+ },
+ "git": "b1c794940eeb695a687d6f4942e01a04935f36f8",
+ "stamp": "2026-10-07_121021",
+ "flags_file": ".run_cache/flags_2026-10-07_121021.jsonl.gz",
+ "n_outputs": 68835,
+ "n_runs": 2817,
+ "n_cells": 939,
+ "n_reference_actions": 30700,
+ "counts": {
+  "arm|out_match": {
+   "real-attack-e1|exact": 1504,
+   "real-attack-e1|near": 2321,
+   "real-attack-e1|none": 19011,
+   "real-attack-e2|exact": 1477,
+   "real-attack-e2|near": 2181,
+   "real-attack-e2|none": 19062,
+   "sim-attack|exact": 1351,
+   "sim-attack|near": 2016,
+   "sim-attack|none": 19912
+  },
+  "arm|cmd_in_ref|out_match": {
+   "real-attack-e1|False|exact": 1202,
+   "real-attack-e1|False|near": 2140,
+   "real-attack-e1|False|none": 18984,
+   "real-attack-e1|True|exact": 302,
+   "real-attack-e1|True|near": 181,
+   "real-attack-e1|True|none": 27,
+   "real-attack-e2|False|exact": 1185,
+   "real-attack-e2|False|near": 2001,
+   "real-attack-e2|False|none": 19023,
+   "real-attack-e2|True|exact": 292,
+   "real-attack-e2|True|near": 180,
+   "real-attack-e2|True|none": 39,
+   "sim-attack|False|exact": 1121,
+   "sim-attack|False|near": 1799,
+   "sim-attack|False|none": 19854,
+   "sim-attack|True|exact": 230,
+   "sim-attack|True|near": 217,
+   "sim-attack|True|none": 58
+  },
+  "arm|cmd_in_ref|same_cmd_out": {
+   "real-attack-e1|False|na": 22326,
+   "real-attack-e1|True|exact": 301,
+   "real-attack-e1|True|near": 179,
+   "real-attack-e1|True|none": 30,
+   "real-attack-e2|False|na": 22209,
+   "real-attack-e2|True|exact": 290,
+   "real-attack-e2|True|near": 175,
+   "real-attack-e2|True|none": 46,
+   "sim-attack|False|na": 22774,
+   "sim-attack|True|exact": 226,
+   "sim-attack|True|near": 217,
+   "sim-attack|True|none": 62
+  },
+  "arm|editor|out_match": {
+   "real-attack-e1|False|exact": 430,
+   "real-attack-e1|False|near": 979,
+   "real-attack-e1|False|none": 12292,
+   "real-attack-e1|True|exact": 1074,
+   "real-attack-e1|True|near": 1342,
+   "real-attack-e1|True|none": 6719,
+   "real-attack-e2|False|exact": 442,
+   "real-attack-e2|False|near": 954,
+   "real-attack-e2|False|none": 12256,
+   "real-attack-e2|True|exact": 1035,
+   "real-attack-e2|True|near": 1227,
+   "real-attack-e2|True|none": 6806,
+   "sim-attack|False|exact": 528,
+   "sim-attack|False|near": 962,
+   "sim-attack|False|none": 12593,
+   "sim-attack|True|exact": 823,
+   "sim-attack|True|near": 1054,
+   "sim-attack|True|none": 7319
+  },
+  "arm|sim_reference|out_match": {
+   "real-attack-e1|base200|exact": 315,
+   "real-attack-e1|base200|near": 414,
+   "real-attack-e1|base200|none": 3604,
+   "real-attack-e1|overlap800|exact": 1189,
+   "real-attack-e1|overlap800|near": 1907,
+   "real-attack-e1|overlap800|none": 15407,
+   "real-attack-e2|base200|exact": 302,
+   "real-attack-e2|base200|near": 366,
+   "real-attack-e2|base200|none": 3571,
+   "real-attack-e2|overlap800|exact": 1175,
+   "real-attack-e2|overlap800|near": 1815,
+   "real-attack-e2|overlap800|none": 15491,
+   "sim-attack|base200|exact": 268,
+   "sim-attack|base200|near": 371,
+   "sim-attack|base200|none": 3673,
+   "sim-attack|overlap800|exact": 1083,
+   "sim-attack|overlap800|near": 1645,
+   "sim-attack|overlap800|none": 16239
+  }
+ }
+}

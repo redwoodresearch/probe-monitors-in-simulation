@@ -1,0 +1,49 @@
+{
+ "inputs_run": "2026-10-12_q2_tplslips_plants_inputs_v1",
+ "affected": [
+  [
+   "e2-gutter-stripped",
+   "0270_guidance_correction_a6bbcece59bd38c3__implement_database_migration_framework_with_versioned_schema:exfiltrate_server_secrets:f7b50e__1"
+  ],
+  [
+   "e2-gutter-stripped",
+   "0828_random_2026-09-17T17-46-31-00-00_la-user-tracking-real-attack-20_kMmPzVVM2PqNX8kBru7hiU__window_screenshot_reference:malicious_stories:63b7c6__1"
+  ],
+  [
+   "e2-note-dropped",
+   "0270_guidance_correction_a6bbcece59bd38c3__implement_database_migration_framework_with_versioned_schema:exfiltrate_server_secrets:f7b50e__1"
+  ],
+  [
+   "e2-note-dropped",
+   "0793_retained_overlap_f051b1975fa6113d__nginx_reverse_proxy_with_caching_and_rate_limiting:ws_rce:108a42__1"
+  ]
+ ],
+ "controls": [
+  [
+   "e2-control",
+   "0270_guidance_correction_a6bbcece59bd38c3__implement_database_migration_framework_with_versioned_schema:exfiltrate_server_secrets:f7b50e__1"
+  ],
+  [
+   "e2-control",
+   "0828_random_2026-09-17T17-46-31-00-00_la-user-tracking-real-attack-20_kMmPzVVM2PqNX8kBru7hiU__window_screenshot_reference:malicious_stories:63b7c6__1"
+  ],
+  [
+   "e2-control",
+   "0793_retained_overlap_f051b1975fa6113d__nginx_reverse_proxy_with_caching_and_rate_limiting:ws_rce:108a42__1"
+  ],
+  [
+   "e2-control",
+   "0072_guidance_correction_30c38fae6c9cd2b5__ct_rewrite_in_rust:delete_blood_tests_and_backups:1078fb__1"
+  ]
+ ],
+ "inputs_sha256": {
+  "shard_0.jsonl": "e6f280b4f270fc457ec36333934a515bd61ceec153ace5db3df24f7f4164761e",
+  "shard_1.jsonl": "76dd5f850f80d478064b6bb2ecf8eed0d6408a2cd617566e56ce6cd7c1c8a0e6",
+  "shard_2.jsonl": "168949bc5e89532dd15bfc133a7d2b7e60f23755706bf80973b36d3884717d3f",
+  "shard_3.jsonl": "a2be6fd7e96fd30dc2b120d94a3dae30daec4c5e41ddef5fb57fff05f2ee5027",
+  "shard_4.jsonl": "762caf14fcd7c4199bda65d6b0ca1c5cc93fb3a400497705fcc3efe3e76321ad",
+  "shard_5.jsonl": "c32a50441ac510636e0461479a947d5f0713ec6a5988dbb66465d59753d10041",
+  "shard_6.jsonl": "53839bb1cd2e6e0042bc57afa07f45ea6a895a6f39a152ee05ac604403c592d7",
+  "shard_7.jsonl": "5d9a8d3098035dd12d1be7aac3fe2d5ca45904fc31b82e1a32d4b0a49ee8c34f"
+ }
+}

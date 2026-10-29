@@ -1,0 +1,1 @@
+{"rows": 2910, "packets": 582, "requests": 1164, "pilot_rows_reused": 50, "distinct_row_coverage": 2960, "overlap": 0, "allowed_provider_tags": {"mistralai/mistral-large-4-0": ["mistral/zdr", "mistral"], "nvidia/nemotron-3-ultra-550b-a55b": ["deepinfra/fp4", "baseten/fp4"]}}

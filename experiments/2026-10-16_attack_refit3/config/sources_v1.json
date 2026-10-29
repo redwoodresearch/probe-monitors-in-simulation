@@ -1,0 +1,995 @@
+{
+  "label": "attack refit3: committed files 4f's build_inputs reads, and 4f's record (make_sources.sh; git + jq)",
+  "files": [
+    {
+      "commit": "09b070617981342cd31ce95475da369f9c445b9b",
+      "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_b_fix_v1_2026-10-16_025058.json",
+      "sha256": "4a5d0fb3cad32740f849df5def3c7a03a40a18aa4c42bc360709f0c740973d03",
+      "role": "config_dep"
+    },
+    {
+      "commit": "0caadbfb5938b1187b9ffce56d7cebc43384116c",
+      "path": "experiments/2026-10-14_q2_scaleup_cohort/results/scaleup_tasks_plus311_2026-10-14_125135.json",
+      "sha256": "69f1f75313c9610f7d16b18225c1166268c0b6e084859c641d0213f293896a8b",
+      "role": "fold_pin"
+    },
+    {
+      "commit": "102b3741ea1ddb46ddb5ddb2e27148de1bde5a85",
+      "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w23_v1_2026-10-16_033210.json",
+      "sha256": "b11a63f5914c1c5d199c3401104acd9697b6d3e7095802f24e67635895dc98f5",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s1_main_s1_cutfull_extract_v1_a1_2026-10-15_215539.json",
+      "sha256": "83498a2dd4895cf19514559caf0ebd361e2014e93275286ca36e656d271e7865",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s1_run2_s1_cutfull_extract_v1_a1_2026-10-15_215539.json",
+      "sha256": "cc598540405ed8c24f2a1fdee75f8a3e45c591dacf0319247d4763f3228b4975",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s1_sim_cutfull_extract_v1_a1_2026-10-15_215538.json",
+      "sha256": "331cd3bfab86e49db5c611640b672ca34b2a152b144d2af820a03c04c226a57d",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s2_main_s1_cutfull_extract_v1_a1_2026-10-15_215549.json",
+      "sha256": "4d63a70924b33ed97360e6593da7e6a08b73dc06705863741a62266bfb21e9b2",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s2_sim_cutfull_extract_v1_a1_2026-10-15_215541.json",
+      "sha256": "e9136269fe1e26b42e87b45a74d909aa021e1471dceffc40119ce9042c005650",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s3_main_cutfull_extract_v1_a1_2026-10-15_215539.json",
+      "sha256": "8b24281010a8470a287bb52864093bfa38fde2ce0343afd2bbf647d7adc525d1",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s3_run2_cutfull_extract_v1_a1_2026-10-15_215539.json",
+      "sha256": "49b5ad4bb7a8220ff41179564a267a64407966d0dca73300ccf7dae6ebf1741c",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s3_sim_s1_cutfull_extract_v1_a1_2026-10-15_215538.json",
+      "sha256": "4c2c1027b1f573e80fe638e420a3ed46e85505f424d975d1fd8c3dca956c25e0",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s4_main_cutfull_extract_v1_a1_2026-10-15_215543.json",
+      "sha256": "ff3a889b53e5875cd97e1b21788fd3f442ede91cbd8898527df454c64cfb5c2c",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s4_main_s1_cutfull_extract_v1_a1_2026-10-15_215546.json",
+      "sha256": "6e2ef23ab0d21d45c905d4e9883577e37ed3874a093841e50ab305a39063d3c5",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s4_run2_s1_cutfull_extract_v1_a1_2026-10-15_215541.json",
+      "sha256": "820b3abb3df8b59cf8c68c382832336ebfea657eaeca02147762181b0c28520c",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s4d_sim_cutfull_extract_v1_a1_2026-10-15_215552.json",
+      "sha256": "3bc6ab9dabd7582afb750ec4ac721e0080c2e383fbea1ff186b860304468ae1d",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s4r_main_cutfull_extract_v1_a1_2026-10-15_215544.json",
+      "sha256": "7fb7c915d7988a3cdefbc61936148d0ce515c1a9b5a39065b488b9e5ce455bc8",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s4r_run2_cutfull_extract_v1_a1_2026-10-15_215538.json",
+      "sha256": "2349171f1defa657d2726531c6d0313cc84bd139fe52e431c689a51a5fa741b5",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s4r_sim_cutfull_extract_v1_a1_2026-10-15_215538.json",
+      "sha256": "f9c3addd760038f4437489c2162b1b10c8e1bb8a4aea21b70858024e0066c032",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s5_main_s1_cutfull_extract_v1_a1_2026-10-15_215541.json",
+      "sha256": "b9c6d36fb83411716512dd5afda05ef60644086e3fbaf0f13d28507cd32a9a33",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s5_main_s2_cutfull_extract_v1_a1_2026-10-15_215538.json",
+      "sha256": "10f8bec202a100c450fa4d433583a0b73cbaa5fbc61dfb30446ff889506d1062",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s5_run2_s1_cutfull_extract_v1_a1_2026-10-15_215540.json",
+      "sha256": "aaf8cb7bd4df4b6530657ef0ae52b05e6b6fdb4b5bc6710fb378b68ee6c8c747",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s5_run2_s2_cutfull_extract_v1_a1_2026-10-15_215539.json",
+      "sha256": "b20e7cfa61e7cdee6314f70c6e8803608fa718f9cc6f824e5d31db4d91ce393d",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s5_sim_cutfull_extract_v1_a1_2026-10-15_215539.json",
+      "sha256": "b04dd5e565010dcaf96db2003cd32e0cebf32e3b948cf707e73af667273ca348",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s5_sim_s1_cutfull_extract_v1_a1_2026-10-15_215540.json",
+      "sha256": "3630a6d4b7f6f069678031fd5ac59f126ba212fc0052fd10707a4a096bf785e9",
+      "role": "config_dep"
+    },
+    {
+      "commit": "19657f7ad2b4f6e340cadef55cf3bc3f59c761e8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s5r_sim_cutfull_extract_v1_a1_2026-10-15_215541.json",
+      "sha256": "f8ba3a7f46cf6c34137167f670f21ea2a913fa8307f790d18380327af17a7a28",
+      "role": "config_dep"
+    },
+    {
+      "commit": "1e16ca609e604aa515c3d0917bf9606d53b4e3a9",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_q4f_c_cutfull_extract_v1_a1_2026-10-15_224700.json",
+      "sha256": "85c1cf5af3815806996be2de2d8decb64b7bdc13c4c225f458e914ef79a7be8e",
+      "role": "config_dep"
+    },
+    {
+      "commit": "1e16ca609e604aa515c3d0917bf9606d53b4e3a9",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_simh_q4f_v1_full_b2_cutfull_extract_v1_try2_a1_2026-10-15_225005.json",
+      "sha256": "ad6f3077785e6fc38a33800e96a97cc3be99613736aa8d02da57f2e5519478e8",
+      "role": "config_dep"
+    },
+    {
+      "commit": "372b6f86c5d1e0e06fbddb8d9d261c6165b493ca",
+      "path": "experiments/2026-10-16_cmd_sim_detector_uncut_all/results/inventory_S_new_derived_v1_2026-10-16_032518.json",
+      "sha256": "32b7b9bd6a98055aa9c048d8bb23686ffc46b1dcea8db57fd948e9e329df9df7",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s3_sim_cutfull_extract_v1_a1_2026-10-15_215551.json",
+      "sha256": "35a47f7173f867d4f09cb3bbc4e3018a9447839cc7906d5b344442cca9a8a504",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s4_run2_cutfull_extract_v1_a1_2026-10-15_215542.json",
+      "sha256": "9e0fcc90825ef29508338057b785b937e3c9741f9a1ead12998b0d0f40b4b68c",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q1_main_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "1f86bd27ce74adfaa78f00cbae090dcfab8986ffdbf5026c24073c2a2837fd53",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q1_run2_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "fa074c4942bf4c27e16b2f3b5e3758e5b690ba37de3b0ef19dd598cfe3d89860",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q1_sim_s1_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "aa42ccdac80444bffae63cd20f7515b936411bd2e012a10ac63a9ac404bb85bf",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q1_sim_s2_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "28befc48bf7c5e35f62b7d7e8b8ac750520a656c91e67f46e024ba24c51eabcf",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q2_main_cutfull_extract_v1_a1_2026-10-15_214859.json",
+      "sha256": "167af6cc190400c9e6058a6001a076b6cc83449af8ed66655271e51a1b4fb669",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q2_run2_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "cf332f85b00e591ea4632c7543f08fa31b9814102e0c1bb066d95e3bb74796de",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q2_sim_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "c4ee09077f80c9e11b32e216f308444286b11c30247480e07955f46d10cfa0da",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q2r_sim_cutfull_extract_v1_a1_2026-10-15_214858.json",
+      "sha256": "b4988e164e14e7b7332504933b0355e30b8faabf35e0f13e8f2010ffa7d81075",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q3_main_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "321349bd849f606a91584d5125f50d926ad2d58d1020aa4197db9a2ae06b6768",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q3_run2_cutfull_extract_v1_a1_2026-10-15_214900.json",
+      "sha256": "467326f38f577438ccf0d212501ea05203f0974af546e7e8240c493921863ee7",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q3_sim_s1_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "426ef837ba65a13353d55d5629814846bcf93ba99891cd8f901487d1b099af57",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q3_sim_s2_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "389a534e4058f72f7fcc283b613f064dbfccba74ee7fe961c8dfb1cff2256715",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q4_main_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "37e7f59a3e2e27dd59b42dcd374a37ac58e3ceec0515545e18c2f4ec8fe9961b",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q4_run2_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "67d672341b7fe7228e3456f59025eca1b517fce0b42d6a233987e2a7011bd3e1",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q4_sim_s1_cutfull_extract_v1_a1_2026-10-15_214857.json",
+      "sha256": "942af4af6404c61283699c0387290413bdcf198ca87493521463296fa35a5f98",
+      "role": "config_dep"
+    },
+    {
+      "commit": "37e399ffc0d4d8bb1c15e21fed41cb90cd533d8b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_su311_q4_sim_s2_cutfull_extract_v1_a1_2026-10-15_214858.json",
+      "sha256": "29a2b3e4f9059dfdf0c6ddf092baff564489f6d4285c730114b93188c13384cc",
+      "role": "config_dep"
+    },
+    {
+      "commit": "4b1f38d236c1b8a0d09cde17d3d48dd4f948c8e2",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_nm360_s2_run2_s1_cutfull_extract_v1_try2_a1_2026-10-16_021649.json",
+      "sha256": "4ae08f799ccb0f59877b6192b9cd1adc80617f0a4cb746b63cd5ec82e940067b",
+      "role": "config_dep"
+    },
+    {
+      "commit": "4d1eec57209ee896c7238d019936f88799d5f61c",
+      "path": "experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json",
+      "sha256": "55d9a8ec68f4685410d65c97bb84f470efb7cd8f05287384f92465ed5eadedbb",
+      "role": "fold_pin"
+    },
+    {
+      "commit": "4e69ae2d96edaaafd320189ec705ec9d7b9df106",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_q4f_main_cutfull_extract_v1_try2_a1_2026-10-15_225005.json",
+      "sha256": "38b7c7aa2a89d169da3bd1452b9b608d5bc569a216ae7a6c12c72b9bc3c5c689",
+      "role": "config_dep"
+    },
+    {
+      "commit": "4e69ae2d96edaaafd320189ec705ec9d7b9df106",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_q4f_run2_cutfull_extract_v1_try2_a1_2026-10-15_225005.json",
+      "sha256": "c9f6e34dfa0596226d9c1eab3d1cd269dae682a918f07af93b9f3bb69fa5bf48",
+      "role": "config_dep"
+    },
+    {
+      "commit": "4e69ae2d96edaaafd320189ec705ec9d7b9df106",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_simh_q4f_v1_full_b1_cutfull_extract_v1_try2_a1_2026-10-15_225005.json",
+      "sha256": "dd22c80d91efb3aa9d6e3b8e19ce4a33c1c180227174c84cc69d5fba8fbf8eba",
+      "role": "config_dep"
+    },
+    {
+      "commit": "59acf625e16f9f5165b874191ea2709f43d779a9",
+      "path": "experiments/2026-10-16_cmd_sim_detector_uncut_all/results/attack_all_2026-10-16_042630.json",
+      "sha256": "46e8f7d56bfe5f204efe09d9c2f80f69caed5a0beb8abd954bbf92a5a69bde87",
+      "role": "record"
+    },
+    {
+      "commit": "703ccbe0f3fb6c39ea830527dbb339278dea0ac2",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sold__q4f_c_cutfull_r2.json",
+      "sha256": "41d4bbb62bd19e324cb97acb66a71161fc1463c5e2013d42c9711a1cd068f546",
+      "role": "config_dep"
+    },
+    {
+      "commit": "703ccbe0f3fb6c39ea830527dbb339278dea0ac2",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sold__q4f_main_cutfull_r3.json",
+      "sha256": "764df967aaf8905fd8dc52f595e33d157848570c5b240875e6e35262bd616f41",
+      "role": "config_dep"
+    },
+    {
+      "commit": "703ccbe0f3fb6c39ea830527dbb339278dea0ac2",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sold__q4f_run2_cutfull_r2.json",
+      "sha256": "0e718de39509ff6551ec3fffa544b50dc8f655052be171d24063bf184f6a9f28",
+      "role": "config_dep"
+    },
+    {
+      "commit": "703ccbe0f3fb6c39ea830527dbb339278dea0ac2",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sold__simh_q4f_v1_full_b1_cutfull_r2.json",
+      "sha256": "76339b3173882caab7784cbe2338e5fe03055e8f22390f2a1b4ede5c7f5a9710",
+      "role": "config_dep"
+    },
+    {
+      "commit": "703ccbe0f3fb6c39ea830527dbb339278dea0ac2",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sold__simh_q4f_v1_full_b2_cutfull_r2.json",
+      "sha256": "72ab3a14bafa258696b3807e66a92bb1da562f5c318e6a5cde2ae8bab90c9cca",
+      "role": "config_dep"
+    },
+    {
+      "commit": "85447113f648435c8bce85c8f3df6ac8edcf75bb",
+      "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w1_v1_2026-10-16_025411.json",
+      "sha256": "3dc8a91a52d694c8959db640b1de5688d2a6a657641d8ee7f79d4cff8aa2d067",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s1_m1__nm360_s1_main_s1_cutfull_r2.json",
+      "sha256": "eb7178003ac9307db2d9b7e3d38e0a4559bdee94b54c7c76bc63eef49ba72b44",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s1_m1__nm360_s1_run2_s1_cutfull_r2.json",
+      "sha256": "dc44cb3142616590507a0702d42a2cddd3935d61d0222b18b54b5e75c03af96a",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s1fu__nm360_s1_sim_cutfull_r2.json",
+      "sha256": "c389ff9cfb8da3f4a230208e56ab8f04a4eb47a7cfb725f19f281fac3564c6d4",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s2_m1__nm360_s2_main_s1_cutfull_r2.json",
+      "sha256": "6832d47dc2e7becb7883a7795f2ee63e6734dd05f8381a8c84eb13ef1b5ebb56",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s2_m1__nm360_s2_run2_s1_cutfull_r4.json",
+      "sha256": "fa864d2c2fc402b8f815892619d722c4447ed90a0b8fac908b8a94d59b351614",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s2fu__nm360_s2_sim_cutfull_r2.json",
+      "sha256": "b6ef9858287d9b579bf431208daa3b8cbb4e8e47fe7cfaf27cc8755479fb0a72",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s3__nm360_s3_main_cutfull_r2.json",
+      "sha256": "3bc65eb701b037a5e13f3fa8e18c9d3df215e1375931e68834a66a6b52992af3",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s3__nm360_s3_run2_cutfull_r2.json",
+      "sha256": "76f386f8c13bba4653cf42f6a4a5236411e8e6dd179fcd5903fb8cbd519f4c5c",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s3fu__nm360_s3_sim_cutfull_r2.json",
+      "sha256": "8234e1fc5deacf2b756a40cc65cd2d2c4ecf7e89826af05e2fe05073415d4797",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s3fu_s1__nm360_s3_sim_s1_cutfull_r2.json",
+      "sha256": "8c44b1bad6519f6998fb175784040c86cca1f072d1fa2599f623fd4a8be34e6f",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s4__nm360_s4_main_cutfull_r2.json",
+      "sha256": "2397005b4ccbbb959a09c4f248d733c2488860adfdb3f3ed0aa4f278e536b3c1",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s4__nm360_s4_run2_cutfull_r2.json",
+      "sha256": "db526c8500001efa61b3d8e690be9a4c7d5d9174f497febcbec0c010cc684979",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s4_m1__nm360_s4_main_s1_cutfull_r2.json",
+      "sha256": "40c354de57a4a7f5656fb7b97bf103798085fc2d7ea7b5be4a8d52a4aea5d49f",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s4_m1__nm360_s4_run2_s1_cutfull_r2.json",
+      "sha256": "705f18c53107d1972d0f289a091b2a5d0c3dd5682b5fdec019ece68adc58ff79",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s4dfu__nm360_s4d_sim_cutfull_r2.json",
+      "sha256": "f03107061d17983261ea291b8338a0a96144b13b4381d7cda6854de71a6f4e71",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s4r__nm360_s4r_main_cutfull_r2.json",
+      "sha256": "4812700fd9c9461f949221cc2d02a1d6794190462be4b6f42e29b3b26ad71286",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s4r__nm360_s4r_run2_cutfull_r2.json",
+      "sha256": "3872f67cb40f3bba9a0286cc4f3c879fc48377ffc15b0aa3e4fa46645c2f01e2",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s4rfu__nm360_s4r_sim_cutfull_r2.json",
+      "sha256": "3b6a1f8537835cd9291b0c1b4d35afda1abacb830e251b52b6f93f8855ef8645",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s5_m1__nm360_s5_main_s1_cutfull_r2.json",
+      "sha256": "12703f37f3f9769896e2b5f303814e6f951f9231b0345bbbf062393fcccf5c75",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s5_m1__nm360_s5_run2_s1_cutfull_r2.json",
+      "sha256": "6a4b86cc242ac1a34f5cd0fa3b9a85f03d2697411ff40c477cc64f024af748ab",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s5_m2__nm360_s5_main_s2_cutfull_r2.json",
+      "sha256": "68f40bf7edc161b965a5a496482373403a7ab201e623057a85809b8e111fcd43",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s5_m2__nm360_s5_run2_s2_cutfull_r2.json",
+      "sha256": "68d96ba78a29bd9b3983b94629059a8217a49f36bfffe49c89aaeba349207fac",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s5fu__nm360_s5_sim_cutfull_r2.json",
+      "sha256": "a2dfea0bc9a4a405f708755a0e667b89762340a2d0c5fc86766dad1fbd3dff90",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s5fu_s1__nm360_s5_sim_s1_cutfull_r2.json",
+      "sha256": "1aead2bf332b3e30b0c0852a066cd79493b1d3c934bfcca7289c3a7ecd3f110f",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s5rfu__nm360_s5r_sim_cutfull_r2.json",
+      "sha256": "5b6041f8270a6a5a75fbad207ef6bd8afb4bfa74d6a0623167ecb2490282a3b4",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q1__su311_q1_main_cutfull_r3.json",
+      "sha256": "1b59de5de9184946b8e7275d692f1660bb415d6241596ee587bd00c4e127e3b4",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q1__su311_q1_run2_cutfull_r3.json",
+      "sha256": "336dc4168080d8b1e1f739f5955b17f466656ad3a840885e8c3b09d303d8ebd6",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q1fu_s1__su311_q1_sim_s1_cutfull_r3.json",
+      "sha256": "15dd34d077383b5de083cffd3dc2f6ee99d4064c27573f793927768014bf86f4",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q1fu_s2__su311_q1_sim_s2_cutfull_r3.json",
+      "sha256": "b801b69e10e2e6c319c422fe6e96b9b80027b57bc38631e83604654d0ea4c624",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q2__su311_q2_main_cutfull_r3.json",
+      "sha256": "2652a41a50c8309a3b67057beacde2c82ded52da43dfbbded71cff91475a926f",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q2__su311_q2_run2_cutfull_r3.json",
+      "sha256": "55cffe2009e001866b303d085cb3162b87e33a933a482c653fcfb69605b06e96",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q2fu__su311_q2_sim_cutfull_r3.json",
+      "sha256": "b5859d828f934324db62d113b2ad3ded45d1761275f5d19c5252eabf92a5b191",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q2rfu__su311_q2r_sim_cutfull_r3.json",
+      "sha256": "07fcb510bcc6e2a5cf16003f3aecca5419f7c9d88923c0b7c54115193549182b",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q3__su311_q3_main_cutfull_r3.json",
+      "sha256": "ffedf004b894a7663b4525a71891011d4e35adf3fcaa034617fe98bb7dd4d4ab",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q3__su311_q3_run2_cutfull_r3.json",
+      "sha256": "fdf74221e2711c29186fa676f866e12967843878f9723e95adcbd9f7d5f4a69a",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q3fu_s1__su311_q3_sim_s1_cutfull_r3.json",
+      "sha256": "d349f6f7c9d639ce6185949c1dadefd90b11c674abc3e30fb45c0a7b666d2177",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q3fu_s2__su311_q3_sim_s2_cutfull_r3.json",
+      "sha256": "3ca019a6d1dba6d0d8ba71c67966dc7d375b59c564226ab11870db578a0ec2d8",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q4__su311_q4_main_cutfull_r3.json",
+      "sha256": "9553b0dfd7d808b7373f0b66d491f97c6e8e5da956bdb4ef1361a638e1fdd33a",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q4__su311_q4_run2_cutfull_r3.json",
+      "sha256": "08c0d7958f14db14a57c7999e3a37a661ee79857d34992fe727bb5acfcf90c9e",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q4fu_s1__su311_q4_sim_s1_cutfull_r3.json",
+      "sha256": "51c718d6a8071ad9e145a3b37a694eaa02a30f4997f2470e2adb90afb5c3ffcd",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q4fu_s2__su311_q4_sim_s2_cutfull_r3.json",
+      "sha256": "18c4e7f7cd0cc943bbc35327faf39c124463391382ee92d51c2eb5d0f6bcb499",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-a__sp493_a_main_cutfull_r2.json",
+      "sha256": "ec5335da02b9b9d83763001066934b5a9f2c0170fcfdc8d59ea32eb35178892c",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-a__sp493_a_run2_cutfull_r2.json",
+      "sha256": "1d86a9c51303584bf1da0f44cd7b8c2c6640047066d6967bad8c36992eab2e1c",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-b__sp493_b_main_cutfull.json",
+      "sha256": "ec8f98fab12bee6da6b458f4dce867688767b5549b5e5a74238505dbf444ae82",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-b__sp493_b_run2_cutfull.json",
+      "sha256": "22970ca6b1238d474636c97d35ffacd46b8635ddec5e1e7f44979f2553316d2e",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-c__sp493_c_main_cutfull.json",
+      "sha256": "853bf74355041f5397259a490567e3d4714a4f81b51185073a7e8b8296e74993",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-c__sp493_c_run2_cutfull.json",
+      "sha256": "f0a74271abb7164673c8604febf095b7c1783be645b36831d9270a563ec16ac9",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1__sp493_g1_sim_cutfull_r2.json",
+      "sha256": "af939934872c6f0e9d7d3127567158fccb4c595e863636b5115df231df5c4384",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s1__sp493_g1_sim_s1_cutfull_r2.json",
+      "sha256": "5f67b57aee0b40d71a6ff22a409242941e560b4f1ce743e6d74c8576037f0dc1",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s2__sp493_g1_sim_s2_cutfull_r2.json",
+      "sha256": "e9adbb8bad11d5fe62163aac6e2941844c38c01866bf6b8b0cfc6f30f1aa5ae6",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s3__sp493_g1_sim_s3_cutfull_r2.json",
+      "sha256": "191ccf14a55737dc29be8ea3db7e38116824ae03217c866c7f5d3b3bf960aca9",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s4__sp493_g1_sim_s4_cutfull_r2.json",
+      "sha256": "7337ebe2094648ec080cba7c48195638ab5a3ca838d9c130f6dc624698dcc6bf",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g1_s5__sp493_g1_sim_s5_cutfull_r2.json",
+      "sha256": "041b78eeb57e70902caf7d088004fd8e2fb97f4a01e5ddb3bba3f38b1b9d2a38",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2__sp493_g2_sim_cutfull_r2.json",
+      "sha256": "f3534dfe704752c2413455b15aab681842f01cb9424bc4cdfb673ec269c5856e",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2_s2__sp493_g2_sim_s2_cutfull_r2.json",
+      "sha256": "85bae0c53590c3c5401afd79187b77637aed036ffb675b47c52cb2ca8ef46d49",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2_s3__sp493_g2_sim_s3_cutfull_r2.json",
+      "sha256": "8b6621c9d8f50ec68abf9b12b5b0a85131b142655cf7fcd5ba171640cf7ac848",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2_s4__sp493_g2_sim_s4_cutfull_r2.json",
+      "sha256": "e979c6080100b3923a0665bee695872f102bb8708f58935f51773968ad604831",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g2_s5__sp493_g2_sim_s5_cutfull_r2.json",
+      "sha256": "cbc17716f11c0cbe04a6f206ff9bb72972b0951a1599e157cd8d7c24cf065437",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g3x_s1__sp493_g3_sim_x_s1_cutfull.json",
+      "sha256": "6ffdfc382ff598ae317994ee7ee364c45a333bbd3a72c0b28d2b705b573908a2",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g3x_s2__sp493_g3_sim_x_s2_cutfull.json",
+      "sha256": "eaba08270c7d3b26a93d6d71734aa953efd1fb654dbd0a6842a49719f7fce15a",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g3y_s1__sp493_g3_sim_y_s1_cutfull.json",
+      "sha256": "8a5d2bb372c4842b2b8a9113ee7a85ff087e7ecf826602675ce2bf7c1919c978",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g3y_s2__sp493_g3_sim_y_s2_cutfull.json",
+      "sha256": "2f5ad7591da9d100f75f0d09e7c76ab120b98fe6e03aaa7abd03c165a69fd339",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g6x_s1__sp493_g6_sim_x_s1_cutfull.json",
+      "sha256": "640bc1b3d10ec12969fc4334aab84e45a9f1db2df94a68c6c6d6197934a52fff",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g6x_s2__sp493_g6_sim_x_s2_cutfull.json",
+      "sha256": "ecda70979065d578e302ed091ecfeaeac49a688899c7b40637b669fdbc804c21",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g6y_s1__sp493_g6_sim_y_s1_cutfull.json",
+      "sha256": "8ca62864409febbe1a3c8c493b7f393581e1914aebd1e6e4eba1ac18f53ad738",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g6y_s2__sp493_g6_sim_y_s2_cutfull.json",
+      "sha256": "51895d71c07e13f6889b8b51296afa123d4b60fc5cc40b0635942e803921e136",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g7x__sp493_g7_sim_x_cutfull.json",
+      "sha256": "2d60bf567b66c7edda3322ccd312bf051631d356b5c5f6aac6edf83943563142",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g7x_s1__sp493_g7_sim_x_s1_cutfull.json",
+      "sha256": "bf2e9a271cb6e3682ee847a06d62826d20e98fc6330f437315bc924eac3e6172",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g7x_s2__sp493_g7_sim_x_s2_cutfull.json",
+      "sha256": "a29186e407483f04125f23961044eee35f3bd915116363d52fc52f276e0a9e32",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g7y__sp493_g7_sim_y_cutfull.json",
+      "sha256": "eb0670a8f32d4b1996276fed9dc6f5783b3b766215ddfe97b0b0e1615af53398",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g7y_s1__sp493_g7_sim_y_s1_cutfull.json",
+      "sha256": "11c795a37c714895eb18d7681e0fb3513f2d5668d16df2a9d40101074fa01dc6",
+      "role": "config_dep"
+    },
+    {
+      "commit": "920911cdaba189b6321e78c0164f88bb77ea3a4b",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g7y_s2__sp493_g7_sim_y_s2_cutfull.json",
+      "sha256": "300573e65002dea23bc649c4334c54473da0e94d697db4ae5ad0bbc1f6c86ae6",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_b_main_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "bf8b85df906d837bbf38d56b3f70adec09567b786d899a7e0bce59dd1d1a1d4b",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_b_run2_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "3364da52078e97dbaf6a6a2e9b8543a5d7932eaffd1b7e23cb71f7a7169ca187",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_c_main_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "50e6ef3cb8e7c126c6d138b2492723bed320586943be4f572d7073450453ce66",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_c_run2_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "e885e70f4782ed76668ed2c72524e826492d74d061e12af8122c84c12c838d37",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g3_sim_x_s1_cutfull_extract_v1_a1_2026-10-16_030143.json",
+      "sha256": "5336338d2211a1443971b6787c0df50f356b734d916e67f57864499d691ef584",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g3_sim_x_s2_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "ac52ba8d88098b6c914b4e822f4cef9f2098df3ee9ccbda02aa08c47f3abeef3",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g3_sim_y_s1_cutfull_extract_v1_a1_2026-10-16_030143.json",
+      "sha256": "f724155f53cad6e0ae7a25c1f57826bc432d805690d3706b660fea500815378d",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g3_sim_y_s2_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "00409f940acd7f45b0df90c953c286fcd238bd40399799af068854a9ba7cee70",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g6_sim_x_s1_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "2f6655431f3c89ba0e4f56c230097b5d58803a8a4c6c1e4015655fd570ebe062",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g6_sim_x_s2_cutfull_extract_v1_a1_2026-10-16_030143.json",
+      "sha256": "93ae6288d2edb44fcc198e12cf5061c9b637dbc1ee9f4f74a0194ae9bb33d80b",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g6_sim_y_s1_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "50a003ff0b94d9fd0b05a0f66ed40ef0263f09dd0bb4c68749873dec51c8c414",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g6_sim_y_s2_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "2d628de45a9903dffc7020861d47a5206f3a53c2ef3cec2d774e6e23d6f71589",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g7_sim_x_cutfull_extract_v1_a1_2026-10-16_030142.json",
+      "sha256": "ca45693449f772dca14fe722cc9aef5170bae96bca48317083b25cbaca3571a9",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g7_sim_x_s1_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "8d2bfcce6449639e400d8688843453fb91546b4eba68a6af471a5dd3925923fe",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g7_sim_x_s2_cutfull_extract_v1_a1_2026-10-16_030143.json",
+      "sha256": "2871767e423588f8c50b012a2ef8b5f7e6f3a5be646ba6922e656fb98aad5a93",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g7_sim_y_cutfull_extract_v1_a1_2026-10-16_030143.json",
+      "sha256": "180a67be261840056cd7fc60e4bf2a34a96badb58f3a1eb3e48f1741d7909007",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g7_sim_y_s1_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "af936b655cefab78512984413f454080cecf322c68e23a18dbf13a44fa9e7418",
+      "role": "config_dep"
+    },
+    {
+      "commit": "a275cf98bb3e7fd70d3db0ed68e687097edbe61d",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g7_sim_y_s2_cutfull_extract_v1_a1_2026-10-16_030144.json",
+      "sha256": "2715f16b18879541e74801a02bcfc7710611ae4edbfe4641653636c5fa3a0344",
+      "role": "config_dep"
+    },
+    {
+      "commit": "adbc791b690a831870bcf223e09550aef5dfb6bd",
+      "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/exclusions_2026-10-16_033635.json",
+      "sha256": "4511f6c928c91f10dc2074a5d06bac4ab47ff57dca178f57fe14f8c106353477",
+      "role": "cohort"
+    },
+    {
+      "commit": "d800edc6ab4e2744a05105847bec702c8b5d479a",
+      "path": "experiments/2026-10-15_q3_sp493/results/sp493_facts_2026-10-15_165730.json",
+      "sha256": "07caa527db89ec519314486d8c529c37430ca41d773a8bce26c041eb141b0a57",
+      "role": "fold_pin"
+    },
+    {
+      "commit": "ec56720adde66baabe642a7fc842172c83737679",
+      "path": "experiments/2026-10-16_own_all_rs/results/own_all_rs_folds_2026-10-16.json",
+      "sha256": "c2fc5d40eb84a34a64cbb9ce7155572d1414f12ea1fbc2ec05708bd73061e299",
+      "role": "folds"
+    },
+    {
+      "commit": "ef171c8139aa6c4581d25e8e1f356b1d9fc37651",
+      "path": "experiments/2026-10-14_q3_new_mains_mode/config/new_mains_cells_v1.json",
+      "sha256": "98bfb97e26e7ec580b08643a3a38a5e66a0f6b63333f4013aa57559383402e8e",
+      "role": "fold_pin"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_a_main_cutfull_extract_v1_a1_2026-10-16_015334.json",
+      "sha256": "d5f2a1a7ce7c8d049a8cdf12087d3e9545822e478a8bdc80a173fae04b78ca0e",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_a_run2_cutfull_extract_v1_a1_2026-10-16_015334.json",
+      "sha256": "7d478d24a07ae16621d238256efec325d42b33ce2ccd9c558c44680f10084b53",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_cutfull_extract_v1_a1_2026-10-16_015333.json",
+      "sha256": "f80ac77fe828d78fd8dc77df062b607743924c149a5f6cee7e7a06f191f2957c",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s1_cutfull_extract_v1_a1_2026-10-16_015333.json",
+      "sha256": "98b6ecea88f9f69e2c8bc15c15d122349471b777f57aeab32b83a2dc5b9bd579",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s2_cutfull_extract_v1_a1_2026-10-16_015333.json",
+      "sha256": "0e584ca7763e213107ef98f66aa59599f7d16ded2d1555225d6ec327e640f6cd",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s3_cutfull_extract_v1_a1_2026-10-16_015334.json",
+      "sha256": "9bb66526e638b2a24ebbdd92385f580fa1d026a98bfa784c2ad425fd921ce590",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s4_cutfull_extract_v1_a1_2026-10-16_015335.json",
+      "sha256": "8e692d778280c06329e0d6b53f4bfee8dba113b4b61c4d281c3f6a85c2e4417e",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g1_sim_s5_cutfull_extract_v1_a1_2026-10-16_015334.json",
+      "sha256": "a2c221075a041aa4aaddb381104b8c40e8dca5e3fc0bbe6aca78e6de438a288d",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_cutfull_extract_v1_a1_2026-10-16_015333.json",
+      "sha256": "1989b4d3349fb130f1e752f3c0184fbc8231cf02b979243736506bd639e76430",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_s2_cutfull_extract_v1_a1_2026-10-16_015333.json",
+      "sha256": "6c0dbc7a636289e3bd5364ccf925058259612855bc0c8cced5cc92d57739c961",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_s3_cutfull_extract_v1_a1_2026-10-16_015333.json",
+      "sha256": "07f3e38cf5874b30adc41959f699115a4a33356285739efd22d96c621c0ab436",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_s4_cutfull_extract_v1_a1_2026-10-16_015333.json",
+      "sha256": "53cfd22b145801d3a4b921c52cb365f01f1569f6d24a80a2ad4e7e2c72bf3508",
+      "role": "config_dep"
+    },
+    {
+      "commit": "fe737d8b833827341393afdbdb40d3866e3dc7c8",
+      "path": "experiments/2026-10-14_q3_overnight_chain/results/extract_chain_sp493_g2_sim_s5_cutfull_extract_v1_a1_2026-10-16_015334.json",
+      "sha256": "712b559463c5379744760e9982c9213e0d399d1ab7e273ab3524f0fb300d927a",
+      "role": "config_dep"
+    }
+  ]
+}

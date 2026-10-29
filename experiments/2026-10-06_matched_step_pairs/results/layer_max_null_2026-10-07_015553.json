@@ -1,0 +1,22 @@
+{
+ "probes_file": "probe_scores_2026-10-06_191958.json",
+ "pairs_file": "pairs_2026-10-06_175844.jsonl",
+ "readouts": {
+  "output_end": {
+   "best_layer": 50,
+   "observed_auroc": 0.5494,
+   "null_mean": 0.5298,
+   "null_p95": 0.5469,
+   "p_value": 0.0396,
+   "n_draws": 100
+  },
+  "call_end": {
+   "best_layer": 62,
+   "observed_auroc": 0.5187,
+   "null_mean": 0.5109,
+   "null_p95": 0.5177,
+   "p_value": 0.0396,
+   "n_draws": 100
+  }
+ }
+}

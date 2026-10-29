@@ -1,0 +1,10 @@
+{
+ "batch": "il-s4d",
+ "original_target": "ilnm_s4d_run3",
+ "revision": 1,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/il-s4d__ilnm_s4d_run3_cutfull.json @ 4192293c3cfa",
+ "commit": "4192293c3cfa",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_il-s4d__ilnm_s4d_run3_cutfull.json",
+ "sets": 1,
+ "failing": {}
+}

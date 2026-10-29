@@ -1,0 +1,24 @@
+{
+ "n_rows": 16,
+ "n_values_checked_against_records": 204,
+ "n_plotted_values_compared": 140,
+ "n_plotted_values_seen": 188,
+ "e6_largest_gap_points": {
+  "simulated_minus_real = sim - real_mean": 0.0,
+  "real_mean = (run1 + run2) / 2": 1.1102230246251565e-14,
+  "run2_minus_run1 = run2 - run1": 0.0,
+  "average rows: simulated_minus_real = mean of the members' values": 0.0
+ },
+ "e7_numbers_checked": 12,
+ "e7_deferred": {
+  "L50.2": "planted-error size; comes with the planted-error table"
+ },
+ "inputs": {
+  "A": "191c467ab095b0f9ddfe2271822655bc5b49ee02a1a2c5a5b0e11bc855a00865",
+  "group_catch": "f9dfda2349e2ead23b543eccd7a722aa125513e50e766e141eb61b30c3a7fae1",
+  "pw_shares": "32a6549f1a40319442f703b3fe694728bdcb62cb2de8781c634f1f888b436bae"
+ },
+ "output": "release/data/catch_rates.csv",
+ "output_sha256": "34bd3655c7e60bf368deeaa5e7db82df8ddb7be36917d68b9e1d83f4cc66bbcb",
+ "stamp_pt": "2026-10-26_214245"
+}

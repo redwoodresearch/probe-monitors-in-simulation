@@ -1,0 +1,10 @@
+{
+ "batch": "q2",
+ "original_target": "su311_q2_run2",
+ "revision": 3,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/q2__su311_q2_run2_cutfull_r3.json @ 3767cf3a78c7",
+ "commit": "3767cf3a78c7",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_q2__su311_q2_run2_cutfull_r3.json",
+ "sets": 1,
+ "failing": {}
+}

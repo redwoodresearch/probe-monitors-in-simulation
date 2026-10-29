@@ -1,0 +1,22 @@
+--- prelaunch_gates.sh
++++ prelaunch_gates.sh
+@@ -25,8 +25,8 @@
+ log "freeze: every harness file matches $MAN"
+ 
+ TASKS=$("$PY" -c "import yaml,sys; print(yaml.safe_load(open(sys.argv[1]))['tasks'])" "$CFG")
+-[[ $TASKS =~ ^config/tasks_311_q[1-4]_launch\.json$ ]] || fail "$CFG reads $TASKS"
+-PATH=$C/no_digest_lookup:$PATH "$PY" build_real_samples.py --approaches /home/aswin/phase2/approaches \
++[[ $TASKS =~ ^config/tasks_nm_s[1-5]_launch\.json$ ]] || fail "$CFG reads $TASKS"
++PATH=$C/no_digest_lookup:$PATH "$PY" build_real_samples.py --approaches /home/aswin/phase2/nm/approaches \
+   config/pilot_tasks_amendment9_all196.json "$TASKS" "results/preflight_$S.json" > "results/preflight_$S.log" 2>&1 ||
+   fail "preflight crashed (results/preflight_$S.log)"
+ "$PY" - "results/preflight_$S.json" "$TASKS" <<'PY' || fail "preflight or approach/template gate"
+@@ -52,7 +52,7 @@
+     assert c["template_sha256"] == T[c["approach_chars"] > 0], c["key"]
+     assert c["sol_system_sha256"] is None and c["sol_input_sha256"] is None, c["key"]
+     assert c["attack_pair_launch"] == "same", c["key"]
+-    f = Path("/home/aswin/phase2/approaches") / f"{c['approach_sha256']}.txt"
++    f = Path("/home/aswin/phase2/nm/approaches") / f"{c['approach_sha256']}.txt"
+     assert hashlib.sha256(f.read_bytes()).hexdigest() == c["approach_sha256"], c["key"]
+     d = r2[c["key"] + "_r2"]
+     assert d["real_arms"] == ["attack"] and canon(d) == canon(c), f"{c['key']}_r2 differs from its cell's entry"

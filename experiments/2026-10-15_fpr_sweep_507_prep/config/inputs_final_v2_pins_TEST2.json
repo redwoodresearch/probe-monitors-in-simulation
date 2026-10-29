@@ -1,0 +1,425 @@
+{
+ "what": "TEST2 pins (02:4x): the re-staged sets and the tail first snapshots; own_all_rs slot ON (dry runs only)",
+ "base": {
+  "commit": "32abe4120",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/INPUTS_FINAL_2026-10-15_203213.json",
+  "sha256": "d8be69e672acaca11be3f76807929660c61db30a3cf50b083f8fef8c4d6dee9a"
+ },
+ "registered_fixes": [],
+ "S_paper493": {
+  "status": "in",
+  "origin_mode": "separate",
+  "label": "TEST2: S_paper493 re-staged b/c sets (try5 / try3 / try4), tail x/y first snapshots, names record r3; TEST, values never read",
+  "facts": {
+   "commit": "d800edc6a",
+   "path": "experiments/2026-10-15_q3_sp493/results/sp493_facts_2026-10-15_165730.json",
+   "sha256": "07caa527db89ec519314486d8c529c37430ca41d773a8bce26c041eb141b0a57"
+  },
+  "names_record": {
+   "commit": "69a1d211f",
+   "path": "experiments/2026-10-14_q3_overnight_chain/results/hygiene/sp493_staged_set_names_2026-10-16__r3.json",
+   "sha256": "88313a80728988fef4c5582d4be8d298789309d1368ae8eeb3323a3d2b14c215"
+  },
+  "routing": [
+   {
+    "commit": "1e515fad2",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/hygiene/sp493_routing_real_arms_2026-10-16_a.json",
+    "sha256": "830bed3572461513ac278f01f869dedf1eb3a9a81aa3bc3c8681b5c9f46ae4b3",
+    "sets": [
+     "sp493_a_main_v1_try3",
+     "sp493_a_run2_v1_try3"
+    ]
+   },
+   {
+    "commit": "cd2684e5e",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/hygiene/sp493_routing_real_b_restage_2026-10-16_a.json",
+    "sha256": "d6f3162883c120a30832893fd1e4e3a3427b410fe2fae4c43a83e24de64621d3",
+    "sets": [
+     "sp493_b_main_v1_try5",
+     "sp493_b_run2_v1_try3"
+    ]
+   },
+   {
+    "commit": "69a1d211f",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/hygiene/sp493_routing_real_c_restage_2026-10-16_a.json",
+    "sha256": "31e1dd39091b7b8801f75f7beb0810ae234017c26450cd4b3fa8e85d8f2ea870",
+    "sets": [
+     "sp493_c_main_v1_try4",
+     "sp493_c_run2_v1_try4"
+    ]
+   },
+   {
+    "commit": "69c2580fc",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/hygiene/sp493_routing_sim_and_t2_2026-10-16_a.json",
+    "sha256": "42b76aa53785b49f800ca9c833a01c5072ef19e5528d9e7d6a2e6e18e9cb19e8"
+   },
+   {
+    "commit": "7f2e5c7c3",
+    "path": "experiments/2026-10-14_q3_overnight_chain/results/hygiene/sp493_routing_tail_xy_s1_2026-10-16_a.json",
+    "sha256": "cc448eb89d7744ead166fed17d52f85998d387232775b7cf49ed7ae35e34c950"
+   }
+  ],
+  "held_sets": [],
+  "cohort_exclusions": [
+   {
+    "cell": "t987_model_registry",
+    "class": "no usable reference",
+    "detail": "refindex_L3 @ 627400b22",
+    "ruling": "09 Q2 (a); not-in-build addendum 1 @ 6ce710f2c"
+   },
+   {
+    "key": "run2|t615_media_processing",
+    "class": "invalid measurement (malformed text_editor call)",
+    "detail": "b_run2 (launch task t615_media_processing_r2)",
+    "ruling": "09 ~00:2x via 4f (A45c \u00a75)"
+   }
+  ],
+  "pool_exclusions": [
+   {
+    "key": "honest_a|t987_model_registry",
+    "class": "unusable honest attempt (EmptyPolicyCompletionError)",
+    "detail": "recheck record @ a380be4eb",
+    "ruling": "not-in-build addendum 1 @ 6ce710f2c"
+   },
+   {
+    "key": "honest_b|t987_model_registry",
+    "class": "unusable honest attempt (EmptyPolicyCompletionError)",
+    "detail": "recheck record @ a380be4eb",
+    "ruling": "not-in-build addendum 1 @ 6ce710f2c"
+   },
+   {
+    "key": "honest_a|t619_model_registry",
+    "class": "unusable honest attempt (EmptyPolicyCompletionError)",
+    "detail": "recheck record @ a380be4eb",
+    "ruling": "not-in-build addendum 1 @ 6ce710f2c"
+   },
+   {
+    "key": "honest_a|t699_model_registry",
+    "class": "unusable honest attempt (EmptyPolicyCompletionError)",
+    "detail": "recheck record @ a380be4eb",
+    "ruling": "not-in-build addendum 1 @ 6ce710f2c"
+   },
+   {
+    "key": "honest_b|t699_model_registry",
+    "class": "unusable honest attempt (EmptyPolicyCompletionError)",
+    "detail": "recheck record @ a380be4eb",
+    "ruling": "not-in-build addendum 1 @ 6ce710f2c"
+   },
+   {
+    "key": "sp493_new|t699_model_registry",
+    "class": "errored run (EmptyPolicyCompletionError)",
+    "detail": "g5 sim-honest",
+    "ruling": "09 @ e3a459bd0 item 2"
+   }
+  ],
+  "families": {
+   "p2": {
+    "kind": "p2",
+    "records": [
+     {
+      "commit": "b317ae412",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/simh_manifest_2026-10-16_004457.json",
+      "sha256": "8f0d0cdf255afd40d8e36c25211894a47fd8317e2bcd8ce7b677335499ed2313"
+     },
+     {
+      "commit": "b317ae412",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/simh_manifest_2026-10-16_004458.json",
+      "sha256": "72e13a432db18efc523dcc5f02278629acb42aca238e369b82d287014fdea262"
+     },
+     {
+      "commit": "b317ae412",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_004459.json",
+      "sha256": "89bfa2f7731f301dbbf0260d4ca86a49f7e442f25e85a742178799224a6c09b7"
+     },
+     {
+      "commit": "b317ae412",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_004500.json",
+      "sha256": "a9565f13da4b3a9ad56672ea0c6da0869c04f11213d81490f70dab3d3e814d06"
+     },
+     {
+      "commit": "b317ae412",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_004501.json",
+      "sha256": "d478a1add03b2eea57cc814469c51a4d946f3869405c1bf8bfef17fb3d7d7d62"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005012.json",
+      "sha256": "314280f9c28bddbe30df97f42fc53bfe255a3023fc435eb1b3dd224a1edf4493"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005013.json",
+      "sha256": "7cf17f780b87d6c9bfae98bc6484f3a54106c7918dbced13aa3a7da48187765c"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005101.json",
+      "sha256": "2cdf76673190b056b0346fb0e24b89d72f98d9a4985f6de8ff89b319eb91b4dd"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005108.json",
+      "sha256": "d10082fbdf11700ec958750199edaa381d70a13aaec6cebb9dfe6d261216e83e"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005143.json",
+      "sha256": "66c7d2668c91fd8a659d8a9a430fb5c50e447782fd2b7d20ab305cc25de775e3"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005154.json",
+      "sha256": "3a28b1135c7ef38edb132cf1e4c85a37d6f6ead8e7ae1c6636280e72910ef8f8"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005227.json",
+      "sha256": "a6764f9d8fdfa8b143616babd47537334eea0e12b1ac46660bee1676a0a078c6"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005237.json",
+      "sha256": "93f795ed52e619c42715a07d6379b01ec93abd1c893d0d99f82f800a8d772f01"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005317.json",
+      "sha256": "d6c39ff6f2525e37fafc0449a7291f9b2d4927771e60f5447e958c7fd0eb266b"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005324.json",
+      "sha256": "1c6bed6beec2787ec92e119934a58c97eb2a31599be9991bf4eaa8febe222ff5"
+     },
+     {
+      "commit": "ddeb8347f",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_005403.json",
+      "sha256": "734f78953df1fb0c1c875295a6842d98b6e6619e350a91d8e2be94f26709ef87"
+     },
+     {
+      "commit": "99437e7cc",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_020734.json",
+      "sha256": "8c48d678431c32dd8ccf183462340f256694653d42196ff9fc5ef229897ab107"
+     },
+     {
+      "commit": "99437e7cc",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_020735.json",
+      "sha256": "62ecd0f917e41f7b1aac2cc4f11d80b7e6da1dd4e7999691d66715de018b8adf"
+     },
+     {
+      "commit": "99437e7cc",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_020736.json",
+      "sha256": "cad7cffa55b1afd138df910896142eb13e64a5d9a62719a614bf0fcebf3704c6"
+     },
+     {
+      "commit": "99437e7cc",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_020831.json",
+      "sha256": "066349e5e8401e297818d9ae8537327f23f870c4879c04619974a5c3ceb662a6"
+     },
+     {
+      "commit": "99437e7cc",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_020849.json",
+      "sha256": "5683a45360eddcf6a71cda7250e458fcbe8f7b0ca325533482eee48daaba37ac"
+     },
+     {
+      "commit": "99437e7cc",
+      "path": "experiments/2026-10-14_p2_simh_scores/results/scaleup_manifest_2026-10-16_020852.json",
+      "sha256": "433ed8adfef27284898b81f39044db068808e750bc9fc56d9c1cd20aaf30923e"
+     }
+    ],
+    "scaleup_dir": "scaleup/{folder}/p2",
+    "simh_dir": "simh/{batch}/p2/{folder}",
+    "vol": "conv"
+   },
+   "sol": {
+    "kind": "sol",
+    "records": [
+     {
+      "commit": "7e60a3929",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_sp493_a_main_v1_try3__attack_2026-10-16_004622.json",
+      "sha256": "368d244808d072b2fce9ff2fee3e7fc1421060cde1695a1abdc7b3e449a1935a"
+     },
+     {
+      "commit": "7e60a3929",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_sp493_a_main_v1_try3__honest_a_2026-10-16_004634.json",
+      "sha256": "1d55d36effafa3f30ba18dbb15eb104853e3f84d1f5225ac55969dc8051050e4"
+     },
+     {
+      "commit": "7e60a3929",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_sp493_a_main_v1_try3__honest_b_2026-10-16_004643.json",
+      "sha256": "873e05d2a1e22e612fba9699ad1899a75b191015409ca2b4d15210a49f76cb07"
+     },
+     {
+      "commit": "7e60a3929",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_sp493_a_run2_v1_try3__attack_2026-10-16_004654.json",
+      "sha256": "1c0058dc34689d9065cb980e103f3d3177bfba265c2a91311a768e77332cae40"
+     },
+     {
+      "commit": "7e60a3929",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_sp493_b_main_v1_try4__attack_2026-10-16_004707.json",
+      "sha256": "8645fb5ea197b5c588d942acc1e777de17751c0be24ed9f85d97bb11e647a8a7"
+     },
+     {
+      "commit": "7e60a3929",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_sp493_b_main_v1_try4__honest_a_2026-10-16_004715.json",
+      "sha256": "11c5442667664912a53a86f33aa138bf5558ddafaecefa697c08695ab9b26a17"
+     },
+     {
+      "commit": "7e60a3929",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/scaleup507_sp493_b_main_v1_try4__honest_b_2026-10-16_004732.json",
+      "sha256": "4c4405cd6bd2121349842135b84b3396d29a3176093ae4bd14cd6846d882696f"
+     }
+    ],
+    "scaleup_dir": "scaleup/{folder}/sol",
+    "simh_dir": "scaleup/{folder}/sol",
+    "vol": "conv"
+   },
+   "own_a": {
+    "kind": "own_a",
+    "records": [
+     {
+      "commit": "6cc5bac06",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/owna_sp493_2026-10-16_005214.json",
+      "sha256": "c32be57888323bff365a1b832301c69b99daa134cf21b04578e4e16a04ba239c"
+     },
+     {
+      "commit": "cb3f42763",
+      "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/owna_sp493_2026-10-16_005942.json",
+      "sha256": "638024fcc5ba0ae13c8f18fc90fa5847706d1cd3fe9db00b83dcdbc88ac75ae1"
+     }
+    ],
+    "scaleup_dir": "scaleup/{folder}/own_a",
+    "simh_dir": "simh/{batch}/own_a/{folder}",
+    "vol": "conv"
+   },
+   "own_all_rs": {
+    "kind": "own_all_rs",
+    "records": [
+     {
+      "commit": "7b29e42f6",
+      "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_score_2026-10-16_012323.json",
+      "sha256": "e6d77f629f39f231b0756edf31524557ae5fc2a74e2336e549b90a1f49bc9194"
+     }
+    ],
+    "manifest_copies": "ownall_rs_man",
+    "copy_suffix": "own_all",
+    "scaleup_dir": "scaleup/{folder}/own_all_rs",
+    "simh_dir": "simh/{batch}/own_all_rs/{folder}",
+    "vol": "conv"
+   }
+  },
+  "probe_files": [
+   "famexp/own_frac100_L48__C.npz",
+   "famexp/own_frac100_L48__R.npz",
+   "famexp/own_frac10_L48__C.npz",
+   "famexp/own_frac10_L48__R.npz",
+   "famexp/own_frac25_L48__C.npz",
+   "famexp/own_frac25_L48__R.npz",
+   "own_a/own_a_tight__avg_top2.npz",
+   "own_a/own_a_tight__cmd_A.npz",
+   "own_all_rs/own_all_rs10_L48__C.npz",
+   "own_all_rs/own_all_rs10_L48__R.npz",
+   "own_all_rs/own_all_rs25_L48__C.npz",
+   "own_all_rs/own_all_rs25_L48__R.npz",
+   "own_all_rs/own_all_rs_L48__C.npz",
+   "own_all_rs/own_all_rs_L48__R.npz",
+   "p2/fibs__command.npz",
+   "p2/fibs__reply_mean.npz",
+   "p2/harmfulness__command.npz",
+   "p2/harmfulness__reply_mean.npz",
+   "p2/highstakes__command.npz",
+   "p2/highstakes__reply_mean.npz",
+   "p2/refusal__command.npz",
+   "p2/refusal__reply_mean.npz",
+   "sol/a_tight__avg_top2.npz",
+   "sol/a_tight__cmd_A.npz",
+   "sol/c_asis_tight__avg_top2.npz",
+   "sol/c_asis_tight__cmd_A.npz"
+  ],
+  "t196_cells": [
+   "4d1eec572",
+   "experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json",
+   "55d9a8ec68f4685410d65c97bb84f470efb7cd8f05287384f92465ed5eadedbb"
+  ],
+  "p311_cells": [
+   "d75f997f3",
+   "experiments/2026-10-14_q35_sol_avg_POSTHOC/config/scaleup_tasks_plus311_2026-10-14_125135.json",
+   "69f1f75313c9610f7d16b18225c1166268c0b6e084859c641d0213f293896a8b"
+  ],
+  "heldout_gates": {},
+  "structural_zero_keys": {
+   "C": [],
+   "R": []
+  },
+  "registered_cohort": null,
+  "simh_zero_unit_keys": {
+   "C": [],
+   "R": []
+  },
+  "refused_sets": [
+   "sp493_b_main_v1_try4",
+   "sp493_b_run2_v1_try2",
+   "sp493_c_main_v1_try3",
+   "sp493_c_run2_v1_try3"
+  ]
+ },
+ "own_all_rs_L48": {
+  "status": "in",
+  "fit_stamp": "2026-10-16_003049",
+  "pointer": {
+   "fold_list": {
+    "commit": "ec56720ad",
+    "path": "experiments/2026-10-16_own_all_rs/results/own_all_rs_folds_2026-10-16.json",
+    "sha256": "c2fc5d40eb84a34a64cbb9ce7155572d1414f12ea1fbc2ec05708bd73061e299"
+   },
+   "score": {
+    "commit": "25bf8bf37",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_score_2026-10-16_004019.json",
+    "sha256": "ba12e35737f36b66de6b3040a8f9bc365b9d7ba061474c2b40f1f4b0b3860bfc"
+   },
+   "fit": {
+    "commit": "52067c020",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_fit_2026-10-16_003049.json",
+    "sha256": "d6080ea3d83aa4ef3b59efd87abd40671c02b4522b2b919b4fb8ab7b3dc18faf"
+   },
+   "verify": {
+    "commit": "98971cf35",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_verify_2026-10-16_004620.json",
+    "sha256": "4a2505ba68730a800807a2cf24782dc0de2b6f485c05e399a5b0a27b5bcc1955"
+   },
+   "label_note": {
+    "commit": "ded8201fd",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_verify_2026-10-16_004620_LABEL_NOTE.json",
+    "sha256": "2624fac6660155858d72e8b09f6998ddfb7b09905a1f2bf4b178b805273d89f2"
+   },
+   "score_sp493": {
+    "commit": "7b29e42f6",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_score_2026-10-16_012323.json",
+    "sha256": "e6d77f629f39f231b0756edf31524557ae5fc2a74e2336e549b90a1f49bc9194"
+   }
+  },
+  "loo_companion": {
+   "record": {
+    "commit": "0a9c2bdd3",
+    "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/alltasks_CRD_ownallLOO_2026-10-16_002812.json",
+    "sha256": "b8520a2ab981a5bdd5261d2daa19a3418029f197f62cf06f06d81bb34843b7f1"
+   },
+   "version": "LOO3 (own_all_LOO3_L48; S_old + S_new + S_newmains without S4; no S_paper493 model)",
+   "cohort_counts": {
+    "own_all_LOO_L48 C": {
+     "S_old": 183,
+     "S_new": 272,
+     "S_newmains without S4": 244,
+     "S_newmains": "unavailable: the S4 cells were not in the deciding eligibility file"
+    },
+    "own_all_LOO_L48 R": {
+     "S_old": 183,
+     "S_new": 272,
+     "S_newmains without S4": 244,
+     "S_newmains": "unavailable: the S4 cells were not in the deciding eligibility file"
+    }
+   }
+  },
+  "hold": "UNBLOCKED (\u00a7c four-set coverage assert @ efe1d3ba8 passes; values usable, PRELIMINARY); TEST dry runs only here"
+ }
+}

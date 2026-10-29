@@ -1,0 +1,42 @@
+diff --git a/experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py b/experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py
+index 0478ff6e3..30589eecd 100644
+--- a/experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py
++++ b/experiments/2026-10-15_fpr_sweep_507_prep/run_peraction311.py
+@@ -633,0 +634,8 @@ def row(label: str, cfg: dict, blobs: dict) -> dict:
++    """The row as before; a draws replay row (cfg draws_only) returns only its keys, status and draws hash (no score leaves the container)."""
++    o = _row(label, cfg, blobs)
++    if cfg.get("draws_only"):
++        return {k_: o[k_] for k_ in ("label", "origin", "withheld", "unavailable_rule", "merge_mains", "draws_sha256") if k_ in o} | {"draws_only": True}
++    return o
++
++
++def _row(label: str, cfg: dict, blobs: dict) -> dict:
+@@ -981,0 +990,4 @@ def row(label: str, cfg: dict, blobs: dict) -> dict:
++    import hashlib as hl_  # draws attestation (32k vs full length): this row's per-draw main multiplicities and their column map, by content
++
++    out["draws_sha256"] = hl_.sha256(json.dumps(sorted((str(k_), int(v_)) for k_, v_ in ucol.items())).encode()
++                                     + np.ascontiguousarray(W, dtype=np.float64).tobytes()).hexdigest()
+@@ -2067,0 +2080,5 @@ def finish_rows(mode, outs, meta, IN, cfg, label):
++    elif mode == "draws":  # draws replay: per-row draws hashes only (make_draws_attestation.py)
++        meta.pop("_submit_unix", None)
++        if not all(o.get("draws_only") for o in outs):
++            raise SystemExit("draws replay: a row returned more than its draws hash")
++        rec = {"meta": meta, "label": label, "rows": rows_}
+@@ -2120 +2137 @@ def run_rows(jobs):
+-    co = list(row.starmap([(jobs[i][0], jobs[i][1] | {"cohort_only": True}, jobs[i][2]) for i in mi]))
++    co = list(row.starmap([(jobs[i][0], {k_: v_ for k_, v_ in jobs[i][1].items() if k_ != "draws_only"} | {"cohort_only": True}, jobs[i][2]) for i in mi]))
+@@ -2184,2 +2201,2 @@ def main(readouts: str = "C", roots: str = "s1", repro: bool = False, pooled: bo
+-         remote_driver: bool = False, keys_only: bool = False, own_all_loo: bool = False, cohort_list: str = "", levels: str = "",
+-         all_origins: bool = False, test: bool = False, only_labels: str = "", fold_drops: str = ""):
++         remote_driver: bool = False, keys_only: bool = False, draws_only: bool = False, own_all_loo: bool = False, cohort_list: str = "",
++         levels: str = "", all_origins: bool = False, test: bool = False, only_labels: str = "", fold_drops: str = ""):
+@@ -2188,0 +2206,3 @@ def main(readouts: str = "C", roots: str = "s1", repro: bool = False, pooled: bo
++    if draws_only and (not alltasks or keys_only):  # the replay is of a 32k all-tasks job only
++        raise SystemExit("--draws-only needs --alltasks and excludes --keys-only")
++
+@@ -2960,0 +2981,5 @@ def main(readouts: str = "C", roots: str = "s1", repro: bool = False, pooled: bo
++        if draws_only:  # draws replay of this job (every row, the same variants): only each row's draws hash leaves it; no score value
++            jobs = [(lb_, v_ | {"draws_only": True}, b_) for lb_, v_, b_ in jobs]
++            dispatch("draws", jobs, meta, IN, cfg, "draws replay: per-row draws_sha256 (column map + per-draw multiplicities); no scores",
++                     f"results/draws_replay{'_TEST' if test else ''}_{stamp}.json", stamp, remote_driver)
++            return

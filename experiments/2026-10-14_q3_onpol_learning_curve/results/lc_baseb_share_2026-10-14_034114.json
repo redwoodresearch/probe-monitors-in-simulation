@@ -1,0 +1,589 @@
+{
+ "git": "86da435050cc35ecdccc6377dc3e2967fe21d172",
+ "stamp": "2026-10-14_034114",
+ "result": "lc/results/lc_2026-10-14_032758.json",
+ "result_sha256": "cbf27cba58fd815115cad1434e4dcebf502977249ea08a8214b0e22567bf4ba0",
+ "label": "POST HOC (RULE.md Amendment 1); preliminary",
+ "qwen": {
+  "cohort_tasks": 183,
+  "k0h": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.2459016393442623,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8743169398907104,
+    "share_of_gap_closed": 0.11538461538461539,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.017398999615236655,
+      0.311604347826087
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.4644808743169399,
+    "catch_k0": 0.30601092896174864,
+    "catch_onp_from_base_a": 0.912568306010929,
+    "share_of_gap_closed": 0.26126126126126126,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.04311195445920301,
+      0.43940909090909075
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  },
+  "k10": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.3191256830601093,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8743169398907104,
+    "share_of_gap_closed": 0.21846153846153848,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.011901260504201682,
+      0.41067768393698195
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.5879781420765028,
+    "catch_k0": 0.30601092896174864,
+    "catch_onp_from_base_a": 0.912568306010929,
+    "share_of_gap_closed": 0.46486486486486495,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.22975683890577503,
+      0.6129047192353642
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  },
+  "k30": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.419672131147541,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8743169398907104,
+    "share_of_gap_closed": 0.36000000000000004,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.07108142246404973,
+      0.6710117302052785
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.7377049180327869,
+    "catch_k0": 0.30601092896174864,
+    "catch_onp_from_base_a": 0.912568306010929,
+    "share_of_gap_closed": 0.7117117117117118,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.5313209939148075,
+      0.8174110671936757
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   }
+  },
+  "k100": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.5978142076502733,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8743169398907104,
+    "share_of_gap_closed": 0.6107692307692308,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.015655699721964785,
+      0.8711956688093044
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.8185792349726775,
+    "catch_k0": 0.30601092896174864,
+    "catch_onp_from_base_a": 0.912568306010929,
+    "share_of_gap_closed": 0.8450450450450449,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.6979502040816327,
+      0.9396141581632652
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   }
+  },
+  "k100noh": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.15081967213114753,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8743169398907104,
+    "share_of_gap_closed": -0.018461538461538467,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.10613605442176877,
+      0.05410249078663104
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.31803278688524594,
+    "catch_k0": 0.30601092896174864,
+    "catch_onp_from_base_a": 0.912568306010929,
+    "share_of_gap_closed": 0.019819819819819878,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.2975894836870446,
+      0.14915579878900775
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  },
+  "S_k10": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.3595628415300547,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8743169398907104,
+    "share_of_gap_closed": 0.27538461538461545,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.04048462516833757,
+      0.4946006066734074
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.6098360655737706,
+    "catch_k0": 0.30601092896174864,
+    "catch_onp_from_base_a": 0.912568306010929,
+    "share_of_gap_closed": 0.500900900900901,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.3113402061855671,
+      0.6304894795127352
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   }
+  },
+  "S_k30": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.4273224043715847,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8743169398907104,
+    "share_of_gap_closed": 0.37076923076923074,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.022222222222222223,
+      0.6481104651162787
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.7377049180327868,
+    "catch_k0": 0.30601092896174864,
+    "catch_onp_from_base_a": 0.912568306010929,
+    "share_of_gap_closed": 0.7117117117117115,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.5412608225108225,
+      0.8062516447368419
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   }
+  },
+  "S_k100": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.5431693989071038,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8743169398907104,
+    "share_of_gap_closed": 0.5338461538461539,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.01782971150243537,
+      0.7967368595041318
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.8327868852459016,
+    "catch_k0": 0.30601092896174864,
+    "catch_onp_from_base_a": 0.912568306010929,
+    "share_of_gap_closed": 0.8684684684684684,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.5937432065217391,
+      0.9673097826086959
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   }
+  },
+  "S_k100noh": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.13114754098360656,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8743169398907104,
+    "share_of_gap_closed": -0.04615384615384613,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.13560545168617855,
+      0.04273536895674298
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.2918032786885246,
+    "catch_k0": 0.30601092896174864,
+    "catch_onp_from_base_a": 0.912568306010929,
+    "share_of_gap_closed": -0.023423423423423375,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.3560992315402606,
+      0.11004527559055091
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  }
+ },
+ "seed": {
+  "cohort_tasks": 183,
+  "k0h": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.1366120218579235,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8469945355191257,
+    "share_of_gap_closed": -0.03999999999999996,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.18349091930350123,
+      0.2542410050550104
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.43169398907103823,
+    "catch_k0": 0.4644808743169399,
+    "catch_onp_from_base_a": 0.9562841530054644,
+    "share_of_gap_closed": -0.06666666666666675,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.31508651766402285,
+      0.23779066387629297
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  },
+  "k10": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.2579234972677596,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8469945355191257,
+    "share_of_gap_closed": 0.13760000000000006,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.03010864090941795,
+      0.38476126498553126
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.551912568306011,
+    "catch_k0": 0.4644808743169399,
+    "catch_onp_from_base_a": 0.9562841530054644,
+    "share_of_gap_closed": 0.1777777777777779,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.002369505494505488,
+      0.4629649758454104
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  },
+  "k30": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.439344262295082,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8469945355191257,
+    "share_of_gap_closed": 0.40319999999999995,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.25196425536735967,
+      0.5776346579153881
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.7136612021857924,
+    "catch_k0": 0.4644808743169399,
+    "catch_onp_from_base_a": 0.9562841530054644,
+    "share_of_gap_closed": 0.5066666666666668,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.29108052434456944,
+      0.7093333333333335
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   }
+  },
+  "k100": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.5508196721311476,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8469945355191257,
+    "share_of_gap_closed": 0.5664,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.12500000000000003,
+      0.8017555713608344
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.8174863387978142,
+    "catch_k0": 0.4644808743169399,
+    "catch_onp_from_base_a": 0.9562841530054644,
+    "share_of_gap_closed": 0.7177777777777777,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.5618665768194069,
+      0.9289494906621389
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   }
+  },
+  "k100noh": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.1278688524590164,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8469945355191257,
+    "share_of_gap_closed": -0.052799999999999944,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.3316095798769066,
+      0.2200263157894736
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.4284153005464481,
+    "catch_k0": 0.4644808743169399,
+    "catch_onp_from_base_a": 0.9562841530054644,
+    "share_of_gap_closed": -0.07333333333333333,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.29650531537916375,
+      0.20158914728682148
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  },
+  "S_k10": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.32131147540983607,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8469945355191257,
+    "share_of_gap_closed": 0.2304,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.09858577695682298,
+      0.4295267943242869
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.5956284153005464,
+    "catch_k0": 0.4644808743169399,
+    "catch_onp_from_base_a": 0.9562841530054644,
+    "share_of_gap_closed": 0.26666666666666666,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.06314871481028152,
+      0.4915759590084474
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  },
+  "S_k30": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.42622950819672134,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8469945355191257,
+    "share_of_gap_closed": 0.38400000000000006,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.2672410170964938,
+      0.5968292682926825
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.7038251366120218,
+    "catch_k0": 0.4644808743169399,
+    "catch_onp_from_base_a": 0.9562841530054644,
+    "share_of_gap_closed": 0.48666666666666664,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.3267623089983021,
+      0.6718145161290321
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  },
+  "S_k100": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.560655737704918,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8469945355191257,
+    "share_of_gap_closed": 0.5807999999999999,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.44394000000000006,
+      0.8351890221737547
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.8349726775956284,
+    "catch_k0": 0.4644808743169399,
+    "catch_onp_from_base_a": 0.9562841530054644,
+    "share_of_gap_closed": 0.7533333333333334,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      0.596221744815991,
+      0.9128235294117645
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "closes most of the gap"
+   }
+  },
+  "S_k100noh": {
+   "at_0.01": {
+    "catch_mean_over_draws": 0.1005464480874317,
+    "catch_k0": 0.16393442622950818,
+    "catch_onp_from_base_a": 0.8469945355191257,
+    "share_of_gap_closed": -0.09279999999999997,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.31351881293057765,
+      0.20588914027149322
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   },
+   "at_0.05": {
+    "catch_mean_over_draws": 0.39234972677595625,
+    "catch_k0": 0.4644808743169399,
+    "catch_onp_from_base_a": 0.9562841530054644,
+    "share_of_gap_closed": -0.14666666666666678,
+    "share_of_gap_closed_interval": {
+     "ci95": [
+      -0.33578296703296695,
+      0.18839166666666646
+     ],
+     "failed": 0,
+     "invalid": false
+    },
+    "R_L1": "does not close most of the gap"
+   }
+  }
+ }
+}

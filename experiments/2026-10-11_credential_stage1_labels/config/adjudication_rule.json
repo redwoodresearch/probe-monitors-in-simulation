@@ -1,0 +1,8 @@
+{
+  "frozen_before_adjudication_requests": true,
+  "eligibility": "Only outputs without three confident agreeing votes in the frozen five-judge pass",
+  "reviewers": ["openai/gpt-5.4", "google/gemini-3.1-pro-preview"],
+  "independent_review": "Same credential definition; high reasoning; no original votes, origin, run IDs, baseline labels or target rate",
+  "decision": "Accept matching best binary decisions from both reviewers, retaining confidence and reasons. If they disagree or a review fails, require an explicit evidence-based final adjudication; never silently default to zero.",
+  "scope": "Do not change any output that already meets the original consensus rule. Keep initial consensus and the separate adjudication records."
+}

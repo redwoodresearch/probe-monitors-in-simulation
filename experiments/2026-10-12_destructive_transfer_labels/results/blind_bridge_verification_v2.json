@@ -1,0 +1,16 @@
+{
+  "rows": 74873,
+  "one_to_one_bridge_verified": true,
+  "fields_cross_checked": [
+    "task",
+    "tool",
+    "existing_label"
+  ],
+  "sha256": {
+    "original": "9d43c790e5dc7415d2e6e23f67673dba5e4946de11e7b61c7f1d253d3d9bf87b",
+    "blind": "1b5879e8439128bb9ff78817d364764b270cccd4868787125bf2e91c47a48d17",
+    "private_join": "3c3e752a690f98a5d82922d79763b202022f83c4dd5a1275335410e11c856fac"
+  },
+  "raw_key_displayed": false,
+  "task_and_existing_label_sent_to_judges": false
+}

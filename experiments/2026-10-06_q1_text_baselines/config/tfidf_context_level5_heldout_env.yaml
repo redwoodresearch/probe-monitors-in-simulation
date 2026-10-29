@@ -1,0 +1,12 @@
+# Running mean of output scores up to each output ("all text up to this output") at scrub level 5, to match the main
+# session's scrubbed (level-5) probe columns (analyze_tfidf_context.py). Held-out environment folds (from the scores).
+name: tfidf_context_level5_heldout_env
+examples: examples_2026-10-06_142532     # the staging the level-5 scores were fitted on
+folds_file: folds_v3.json
+output_variants: [all, no_editor, no_errors, no_insert_undo]
+variants:
+  level5_running_mean:
+    outputs: harness_normalized_diff_lines_scores_2026-10-06_162757.jsonl.gz   # tfidf_heldout_env_level5_probe_match, environment folds
+    calls: null
+bootstrap: 1000
+seed: 0

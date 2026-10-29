@@ -1,0 +1,16 @@
+# The Apollo port (probe_shift.apollo) on Apollo's own model and settings, to check it against their code.
+run: 2026-10-06_apollo_port_llama-70b-3.3
+model: meta-llama/Llama-3.3-70B-Instruct
+tokenizer: meta-llama/Meta-Llama-3.1-70B-Instruct   # as in Apollo's models.py
+dtype: float16                                        # as Apollo loads Llama
+chat_template: {date_string: 26 Jul 2024}             # the Llama 3.1 template's default, which Apollo's prompts carry
+readout: apollo                # layer L = Apollo's hidden_states[L]: final norm of block L-1's output
+primary_layer: 22
+layers: [22]
+train_data: repe_honesty__plain
+eval_data: roleplaying__plain__llama-70b-3.3
+reg_coeff: 10
+max_iter: 2000
+val_fraction: 0.2            # held-out instructed pairs, split by pair (Apollo splits its shuffled dialogues)
+split_seed: 0
+reference_probe: deception-detection/example_results/instructed_pairs/detector.pt   # Apollo's shipped layer-22 probe

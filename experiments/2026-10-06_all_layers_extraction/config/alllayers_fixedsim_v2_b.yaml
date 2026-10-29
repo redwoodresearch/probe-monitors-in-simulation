@@ -1,0 +1,15 @@
+# Fixed-sim probe step B (experiments/2026-10-09_fixed_sim/PLAN.md amendment 2; conditional, launched only if its trigger
+# fires): every-token readouts per tool call and tool output, the plain mean and the moving-average finals (decays 0.8
+# and 0.95) over its own content tokens, at d9's 8 layers, for real e1, real e2 and fixed sim, level 0, in one run.
+run: 2026-10-10_la_fixed-sim-v2-b_qwen3-32b_l8_v1
+inputs_from: 2026-10-10_la_fixed-sim-v2_probe-inputs-b-l0_v1   # staged by experiments/2026-10-09_fixed_sim/run_stage_probe_inputs_b_modal.py
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 48
+chunk_size: 25
+layers: [19, 32, 41, 44, 47, 52, 58, 63]
+ema_final_decays: [0.8, 0.95]
+mean_final: true
+ema_only: true                                          # pooled rows only; the last-token rows are in A's and Q1's dumps

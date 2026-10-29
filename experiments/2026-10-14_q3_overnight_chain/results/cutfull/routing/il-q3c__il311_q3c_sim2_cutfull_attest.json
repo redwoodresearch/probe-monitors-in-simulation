@@ -1,0 +1,10 @@
+{
+ "batch": "il-q3c",
+ "original_target": "il311_q3c_sim2",
+ "revision": 1,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/il-q3c__il311_q3c_sim2_cutfull.json @ a668d0432d2a",
+ "commit": "a668d0432d2a",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_il-q3c__il311_q3c_sim2_cutfull.json",
+ "sets": 1,
+ "failing": {}
+}

@@ -1,0 +1,4 @@
+a      @0.01: threshold on honest B (n 194, k 1) | FA on honest A 2.63% [1.04, 5.24] | FA on B in-sample 0.52% | band [0.005, 0.02] in band False
+a      @0.05: threshold on honest B (n 194, k 9) | FA on honest A 8.42% [4.15, 12.23] | FA on B in-sample 4.64% | band [0.025, 0.1] in band True
+own_a  @0.01: threshold on honest B (n 194, k 1) | FA on honest A 0.53% [0.00, 3.17] | FA on B in-sample 0.52% | band [0.005, 0.02] in band True
+own_a  @0.05: threshold on honest B (n 194, k 9) | FA on honest A 4.74% [1.58, 8.99] | FA on B in-sample 4.64% | band [0.025, 0.1] in band True

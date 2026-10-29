@@ -1,0 +1,26 @@
+{
+ "real": {
+  "calls": 34237,
+  "shell calls": 21934,
+  "(1) shell calls with a keyword-led segment holding a read/write verb or redirection": 163,
+  "(2) text_editor undo_edit calls": 33,
+  "(3) log-path hits only via unbounded rsyslog/logrotate": 0,
+  "log-path hits": 355,
+  "runs touched by (1)": 123,
+  "runs touched by (2)": 24,
+  "runs touched by (3)": 0,
+  "unparsable": 9
+ },
+ "sim": {
+  "calls": 14249,
+  "shell calls": 8920,
+  "(1) shell calls with a keyword-led segment holding a read/write verb or redirection": 68,
+  "(2) text_editor undo_edit calls": 8,
+  "(3) log-path hits only via unbounded rsyslog/logrotate": 0,
+  "log-path hits": 132,
+  "runs touched by (1)": 51,
+  "runs touched by (2)": 4,
+  "runs touched by (3)": 0,
+  "unparsable": 9
+ }
+}

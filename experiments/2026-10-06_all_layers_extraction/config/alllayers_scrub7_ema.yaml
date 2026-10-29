@@ -1,0 +1,14 @@
+# James's smoothed readout, level-7 text (protocol_level7.md, amendment 4): per tool call and tool output, the final
+# value of the moving average ema_t = d*ema_{t-1} + (1-d)*x_t over its own content tokens (ema_0 = the first token),
+# read at its last content token, at every layer. Saved as kinds output_end_ema<d> and call_end_ema<d>, nothing else.
+# Same staged inputs, transcripts, cells and 32k cut as the level-7 run (alllayers_scrub7.yaml).
+run: 2026-10-06_la_segment-end-scrub7-ema_qwen3-32b_alllayers_v1
+inputs_from: 2026-10-06_la_segment-end-scrub7_qwen3-32b_v1   # staged only (segment_end_scrub7.yaml)
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 64                                              # speed over cost
+chunk_size: 25                                          # transcripts per per-layer chunk file
+ema_final_decays: [0.95, 0.8]                           # 0.95 primary (amendment 4); 0.8 saved, not analyzed tonight
+ema_only: true                                          # the plain segment-end rows are in the level-7 run already

@@ -1,0 +1,15 @@
+{
+ "target": "nm360_s5_sim_s1",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "nm360_s5_sim_s1",
+   "arm": "sim_attack@september",
+   "staged_file": "/ev/nm360_s5_sim_s1_v1/inputs/sim_attack@september.jsonl",
+   "staged_sha": "43fb4df20977d267f61a81e01c286a508868d94463bb1d87f40bae94b19f5381",
+   "epochs": 53,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

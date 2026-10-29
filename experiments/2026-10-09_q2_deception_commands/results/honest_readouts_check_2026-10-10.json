@@ -1,0 +1,11 @@
+{
+ "staging sha256": "eb79ce85289cfc0643e2616cb5243636948642a1a0eee593f404a9757dedc0be",
+ "honest rows": 1782,
+ "counts": {
+  "matched": 1782
+ },
+ "by arm": {
+  "honest_a | matched": 820,
+  "honest_b | matched": 962
+ }
+}

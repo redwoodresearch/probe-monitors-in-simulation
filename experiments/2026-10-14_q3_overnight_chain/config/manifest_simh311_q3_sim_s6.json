@@ -1,0 +1,36 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_q3 of 2026-10-14_155838_scaleup311_q3: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 1,
+  "by_arm": {
+   "sim_honest@september": 1
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_q3",
+   "rel": "sim_honest@september/t260_auto_workflow/2026-10-15T20-32-18-00-00_la-auto-workflow-sim-honest-1_2sKRKgFZMYTUtrCMHbUbbG.eval",
+   "sha256": "2a2d5db8c00498442137e0f945cf31685a5cd1a3c30365ba182ef7078c7aa65d",
+   "bytes": 790888,
+   "arm_dir": "sim_honest@september",
+   "task": "t260_auto_workflow",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q3/sim_honest@september/t260_auto_workflow/2026-10-15T20-32-18-00-00_la-auto-workflow-sim-honest-1_2sKRKgFZMYTUtrCMHbUbbG.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q3",
+   "stratum": "simh_311",
+   "launch_task": "t260_auto_workflow",
+   "first_start": "2026-10-15T13:32:17-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q3",
+   "run1_launch": "2026-10-14_155838_scaleup311_q3",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "6"
+  }
+ ]
+}

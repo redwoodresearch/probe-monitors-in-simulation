@@ -1,0 +1,165 @@
+# Side-by-side (2026-10-06): Qwen3-32B (main session, first 32k tokens) vs Qwen3.5-27B (this track) for every Q1 number
+# available. Qwen3-32B files are the main session's results (its checkout); Qwen3.5 files are in results/q1/. Columns:
+# Qwen3.5 matched = only the positions Qwen3-32B read; Qwen3.5 whole = whole transcripts. Empty = not landed yet.
+note: "Qwen3-32B reads the first 32k tokens; Qwen3.5 matched reads the same positions; Qwen3.5 whole reads whole transcripts. Headlines come from full-mode runs (inner CV picks the layer per outer fold); best_layer and L<n> are per-layer values (best_layer is selected on the test numbers, so optimistic; for comparison only)."
+exclude_readouts:  # call_end where either side ran before amendment 3's > filter; its '> filter' row compares filtered runs
+  "2 attack (Qwen3.5 lite)": [call_end]
+  "3 attack (Qwen3.5 lite)": [call_end]
+  "4 attack (Qwen3.5 lite)": [call_end]
+  "5 attack": [call_end]
+  "6 attack (Qwen3.5 lite)": [call_end]
+  "7 attack (frozen protocol)": [call_end]
+  "5 honest": [call_end]
+  "5 honest, every real run": [call_end]
+  "5 pooled": [call_end]
+  "2 attack call_end, > filter": [output_end]
+  "3 attack call_end, > filter": [output_end]
+  "4 attack call_end, > filter": [output_end]
+  "5 attack call_end, > filter": [output_end]
+  "6 attack call_end, > filter": [output_end]
+  "7 attack call_end, > filter": [output_end]
+  "5 honest call_end, > filter": [output_end]
+  "5 honest, every real run, call_end, > filter": [output_end]
+  "5 pooled call_end, > filter": [output_end]
+protocol:
+  Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_protocol_2026-10-06_200037.json
+  Qwen3.5 matched (primary): results/q1/q1_protocol_2026-10-06_222630.json
+  Qwen3.5 whole (secondary; TF-IDF on whole transcripts): results/q1/q1_protocol_2026-10-06_224803.json
+levels:
+  "0 attack":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_190522.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_215818_q1_qwen35_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_220326_q1_qwen35.json
+  "1 attack (Qwen3.5 lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_190523.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222410_q1_qwen35_lite_scrub1_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222632_q1_qwen35_lite_scrub1.json
+  "2 attack (Qwen3.5 lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_190526.json
+    Qwen3.5 matched: 
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222704_q1_qwen35_lite_scrub2.json
+  "2 attack call_end, > filter":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_213405_q1_alllayers_callend_scrub2.json
+    Qwen3.5 matched: 
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222704_q1_qwen35_lite_scrub2.json
+  "3 attack (Qwen3.5 lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_190528.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222507_q1_qwen35_lite_scrub3_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222732_q1_qwen35_lite_scrub3.json
+  "3 attack call_end, > filter":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_213442_q1_alllayers_callend_scrub3.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222507_q1_qwen35_lite_scrub3_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222732_q1_qwen35_lite_scrub3.json
+  "4 attack (Qwen3.5 lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_190531.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222536_q1_qwen35_lite_scrub4_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222755_q1_qwen35_lite_scrub4.json
+  "4 attack call_end, > filter":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_213517_q1_alllayers_callend_scrub4.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222536_q1_qwen35_lite_scrub4_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222755_q1_qwen35_lite_scrub4.json
+  "5 attack":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_190535.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_220235_q1_qwen35_scrub5_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_220603_q1_qwen35_scrub5.json
+  "5 attack call_end, > filter":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_213558_q1_alllayers_callend_scrub5.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_220235_q1_qwen35_scrub5_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_220603_q1_qwen35_scrub5.json
+  "6 attack (Qwen3.5 lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_190537.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222606_q1_qwen35_lite_scrub6_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222824_q1_qwen35_lite_scrub6.json
+  "6 attack call_end, > filter":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_213644_q1_alllayers_callend_scrub6.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222606_q1_qwen35_lite_scrub6_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222824_q1_qwen35_lite_scrub6.json
+  "7 attack (frozen protocol)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_181139.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_190337.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_190336.json
+  "7 attack call_end, > filter":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_213733_q1_alllayers_callend_scrub7.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_215927_q1_qwen35_callend_scrub7_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_220420_q1_qwen35_callend_scrub7.json
+  "0 honest":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_214854_q1_alllayers_v4_honest.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222326_q1_qwen35_v4_honest_matched.json
+    Qwen3.5 whole: 
+  "0 honest, every real run":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_214953_q1_alllayers_v4_honest_allruns.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222424_q1_qwen35_v4_honest_allruns_matched.json
+    Qwen3.5 whole: 
+  "0 pooled":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_214920_q1_alllayers_v4_pooled.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222350_q1_qwen35_v4_pooled_matched.json
+    Qwen3.5 whole: 
+  "1 honest (lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_222204_q1_alllayers_v4_scrub1_honest_lite.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222607_q1_qwen35_v4_scrub1_honest_lite_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222638_q1_qwen35_v4_scrub1_honest_lite.json
+  "1 honest, every real run (lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_222309_q1_alllayers_v4_scrub1_honest_allruns_lite.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222809_q1_qwen35_v4_scrub1_honest_allruns_lite_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_222837_q1_qwen35_v4_scrub1_honest_allruns_lite.json
+  "2 honest (lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_222336_q1_alllayers_v4_scrub2_honest_lite.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222906_q1_qwen35_v4_scrub2_honest_lite_matched.json
+    Qwen3.5 whole: 
+  "2 honest, every real run (lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_222435_q1_alllayers_v4_scrub2_honest_allruns_lite.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_223113_q1_qwen35_v4_scrub2_honest_allruns_lite_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_223138_q1_qwen35_v4_scrub2_honest_allruns_lite.json
+  "4 honest (lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_222633_q1_alllayers_v4_scrub4_honest_lite.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_223232_q1_qwen35_v4_scrub4_honest_lite_matched.json
+    Qwen3.5 whole: 
+  "4 honest, every real run (lite)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_222726_q1_alllayers_v4_scrub4_honest_allruns_lite.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_223408_q1_qwen35_v4_scrub4_honest_allruns_lite_matched.json
+    Qwen3.5 whole: 
+  "5 honest":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_213942_q1_alllayers_v4_scrub5_honest.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_211925_q1_qwen35_v4_scrub5_honest_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_211926_q1_qwen35_v4_scrub5_honest.json
+  "5 honest call_end, > filter":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_213942_q1_alllayers_v4_scrub5_honest.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_225236_q1_qwen35_v4_scrub5_honest_callend_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_225300_q1_qwen35_v4_scrub5_honest_callend.json
+  "5 honest, every real run":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_214157_q1_alllayers_v4_scrub5_honest_allruns.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_211926_q1_qwen35_v4_scrub5_honest_allruns_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_211926_q1_qwen35_v4_scrub5_honest_allruns.json
+  "5 honest, every real run, call_end, > filter":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_214157_q1_alllayers_v4_scrub5_honest_allruns.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_225428_q1_qwen35_v4_scrub5_honest_allruns_callend_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_225453_q1_qwen35_v4_scrub5_honest_allruns_callend.json
+  "5 pooled":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_214035_q1_alllayers_v4_scrub5_pooled.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_211927_q1_qwen35_v4_scrub5_pooled_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_211926_q1_qwen35_v4_scrub5_pooled.json
+  "5 pooled call_end, > filter":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_214035_q1_alllayers_v4_scrub5_pooled.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_225330_q1_qwen35_v4_scrub5_pooled_callend_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_225359_q1_qwen35_v4_scrub5_pooled_callend.json
+  "7 honest":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_221021_q1_alllayers_v4_scrub7_honest.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_222943_q1_qwen35_v4_scrub7_honest_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_223007_q1_qwen35_v4_scrub7_honest.json
+  "7 honest, every real run":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_221114_q1_alllayers_v4_scrub7_honest_allruns.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_223145_q1_qwen35_v4_scrub7_honest_allruns_matched.json
+    Qwen3.5 whole: results/q1/q1_gpu_2026-10-06_223208_q1_qwen35_v4_scrub7_honest_allruns.json
+  "7 pooled":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q1_gpu_2026-10-06_221044_q1_alllayers_v4_scrub7_pooled.json
+    Qwen3.5 matched: results/q1/q1_gpu_2026-10-06_223046_q1_qwen35_v4_scrub7_pooled_matched.json
+    Qwen3.5 whole: 
+q2:  # Qwen3-32B: q2 session's 64-layer runs on labeler eb014307 (its results/, archived under qwen3_32b_sources/)
+  "Q2 attack only (64 layers)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q2_alllayers_2026-10-06_224627.json
+    Qwen3.5 matched: results/q2_alllayers_q2_alllayers_qwen35_matched_2026-10-06_235812.json
+    Qwen3.5 whole: results/q2_alllayers_q2_alllayers_qwen35_whole_2026-10-06_235814.json
+  "Q2 three-way views (64 layers)":
+    Qwen3-32B: ../../.run_cache/qwen3_32b_sources/q2_threeway_2026-10-06_233225.json   # final, 437 tasks (224442 was a 2-layer pilot)
+    Qwen3.5 matched: results/q2_q2_threeway_q2_alllayers_qwen35_matched_2026-10-06_235327.json
+    Qwen3.5 whole: results/q2_q2_threeway_q2_alllayers_qwen35_whole_2026-10-07_002445.json

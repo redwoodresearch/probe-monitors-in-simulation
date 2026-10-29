@@ -1,0 +1,10 @@
+# Qwen3-32B cross-read (RULE.md), set run2: staged by stage_crossread.py (stage_run2_2026-10-13_013233.json), uploaded to the job's Volume as
+# xread_run2_v1/inputs/. Epochs: {'attack': 192}.
+run: 2026-10-13_xread_run2_v1
+inputs: xread_run2_v1
+inputs_sha256:
+  attack.jsonl: b0a5b546557191613f8d72e45ebee19e1b798b09672ffb78a11ce9d400d0e56d
+model: Qwen/Qwen3-32B
+shards: 2
+chunk_size: 10
+pad_to: 1024

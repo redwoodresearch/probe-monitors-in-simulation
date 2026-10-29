@@ -1,0 +1,10 @@
+# Amendment 8, claim C: September simulated attack of 2026-10-09_rerun_strict_segends_v1_scrub1, its own tool definitions kept, with the honest system
+# prompt and honest submit definition swapped in (run_read_tests.swap_stage keep_own_tools; span checks passed).
+run: 2026-10-09_rerun_strict_segends_v1_scrub1_swapsys2
+inputs: rerun_strict_segends_v2_scrub1_swapsys2
+inputs_sha256:
+  sim_attack@september.jsonl: 198132a49eb37d6d5eef098120542d50fc847436490cf2ccdfb7e97017e64e8a
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 10
+pad_to: 4096

@@ -1,0 +1,10 @@
+{
+ "batch": "il-oldr",
+ "original_target": "ilold_oldr_run3",
+ "revision": 2,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/il-oldr__ilold_oldr_run3_cutfull_r2.json @ ec4336cdae59",
+ "commit": "ec4336cdae59",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_il-oldr__ilold_oldr_run3_cutfull_r2.json",
+ "sets": 1,
+ "failing": {}
+}

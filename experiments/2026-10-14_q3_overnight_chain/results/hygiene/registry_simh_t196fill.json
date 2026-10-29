@@ -1,0 +1,21 @@
+{
+ "stratum": "simh_t196fill",
+ "written": "2026-10-15 19:20:52 PT",
+ "entries": {
+  "simh-t196fill__simh_t196fill.json": {
+   "batch": "simh-t196fill",
+   "target": "simh_t196fill",
+   "extraction_root": "simh_t196fill_extract_v1",
+   "honest_manifests": [
+    {
+     "target": "simh_t196fill",
+     "batch": "simh-t196fill",
+     "manifest": "experiments/2026-10-14_q3_overnight_chain/config/manifest_simh_t196fill.json @ 61482c1c02",
+     "sha256": "a6a81e598d48ba45facc55c00a14835c3dfc884bc6076bccd7b87f88350ba65c",
+     "extraction_root": "simh_t196fill_extract_v1"
+    }
+   ],
+   "main_family_complete": true
+  }
+ }
+}

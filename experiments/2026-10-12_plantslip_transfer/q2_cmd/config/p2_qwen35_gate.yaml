@@ -1,0 +1,13 @@
+# Planted slips P2 (PINS.md): the gate. Qwen3.5-27B reads the 40 unplanted controls (20 e1, 20 e2) exactly as its dump read
+# them (../../2026-10-06_qwen35_replication/config/qwen35_alllayers_v4.yaml), saving P2's probe layers only.
+run: 2026-10-12_q2_plantP2_gate_qwen35-27b_v1
+inputs_from: 2026-10-12_q2_plantcmd_e1_inputs_v1   # staged by run_stage_cmd.py
+transcripts: gate_transcripts.json                   # the 40 controls, and the staged inputs' sha256s
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null                                        # whole transcripts, as the dump
+pad_to: 4096
+shards: 4
+chunk_size: 10
+layers: [3, 7, 11]                                      # the real-trained fold probes' layers (7, 11, 3, 7, 7)

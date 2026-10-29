@@ -1,0 +1,84 @@
+Sol (a) C	S_old	190	190	true	190	123
+Sol (a) C	S_new	303	303	true	303	129
+Sol (a) C	S_newmains	335	335	true	335	0
+Sol (a) C	S_paper493	485	485	true	288	252
+Sol (a) C	S_old (registered cohort)	183	183	true	183	0
+Sol (a) C	S_new (registered cohort)	272	272	true	272	0
+Sol (a) C	S_newmains (registered cohort)	312	312	true	312	0
+Sol (a) R	S_old	190	190	true	190	123
+Sol (a) R	S_new	303	303	true	303	129
+Sol (a) R	S_newmains	335	335	true	335	0
+Sol (a) R	S_paper493	485	485	true	288	252
+Sol (a) R	S_old (registered cohort)	183	183	true	183	0
+Sol (a) R	S_new (registered cohort)	272	272	true	272	0
+Sol (a) R	S_newmains (registered cohort)	312	312	true	312	0
+FIBS C	S_old	190	190	true	190	123
+FIBS C	S_new	303	303	true	303	129
+FIBS C	S_newmains	335	335	true	335	0
+FIBS C	S_paper493	485	485	true	288	252
+FIBS C	S_old (registered cohort)	183	183	true	183	0
+FIBS C	S_new (registered cohort)	272	272	true	272	0
+FIBS C	S_newmains (registered cohort)	312	312	true	312	0
+FIBS R	S_old	190	190	true	190	123
+FIBS R	S_new	303	303	true	303	129
+FIBS R	S_newmains	335	335	true	335	0
+FIBS R	S_paper493	485	485	true	288	252
+FIBS R	S_old (registered cohort)	183	183	true	183	0
+FIBS R	S_new (registered cohort)	272	272	true	272	0
+FIBS R	S_newmains (registered cohort)	312	312	true	312	0
+harmfulness C	S_old	190	190	true	190	123
+harmfulness C	S_new	303	303	true	303	129
+harmfulness C	S_newmains	335	335	true	335	0
+harmfulness C	S_paper493	485	485	true	288	252
+harmfulness C	S_old (registered cohort)	183	183	true	183	0
+harmfulness C	S_new (registered cohort)	272	272	true	272	0
+harmfulness C	S_newmains (registered cohort)	312	312	true	312	0
+harmfulness R	S_old	190	190	true	190	123
+harmfulness R	S_new	303	303	true	303	129
+harmfulness R	S_newmains	335	335	true	335	0
+harmfulness R	S_paper493	485	485	true	288	252
+harmfulness R	S_old (registered cohort)	183	183	true	183	0
+harmfulness R	S_new (registered cohort)	272	272	true	272	0
+harmfulness R	S_newmains (registered cohort)	312	312	true	312	0
+refusal C	S_old	190	190	true	190	123
+refusal C	S_new	303	303	true	303	129
+refusal C	S_newmains	335	335	true	335	0
+refusal C	S_paper493	485	485	true	288	252
+refusal C	S_old (registered cohort)	183	183	true	183	0
+refusal C	S_new (registered cohort)	272	272	true	272	0
+refusal C	S_newmains (registered cohort)	312	312	true	312	0
+refusal R	S_old	190	190	true	190	123
+refusal R	S_new	303	303	true	303	129
+refusal R	S_newmains	335	335	true	335	0
+refusal R	S_paper493	485	485	true	288	252
+refusal R	S_old (registered cohort)	183	183	true	183	0
+refusal R	S_new (registered cohort)	272	272	true	272	0
+refusal R	S_newmains (registered cohort)	312	312	true	312	0
+high-stakes C	S_old	190	190	true	190	123
+high-stakes C	S_new	303	303	true	303	129
+high-stakes C	S_newmains	335	335	true	335	0
+high-stakes C	S_paper493	485	485	true	288	252
+high-stakes C	S_old (registered cohort)	183	183	true	183	0
+high-stakes C	S_new (registered cohort)	272	272	true	272	0
+high-stakes C	S_newmains (registered cohort)	312	312	true	312	0
+high-stakes R	S_old	190	190	true	190	123
+high-stakes R	S_new	303	303	true	303	129
+high-stakes R	S_newmains	335	335	true	335	0
+high-stakes R	S_paper493	485	485	true	288	252
+high-stakes R	S_old (registered cohort)	183	183	true	183	0
+high-stakes R	S_new (registered cohort)	272	272	true	272	0
+high-stakes R	S_newmains (registered cohort)	312	312	true	312	0
+own_all_rs_L48 C	S_old	190	190	true	190	123
+own_all_rs_L48 C	S_new	303	303	true	303	129
+own_all_rs_L48 C	S_newmains	335	335	true	335	0
+own_all_rs_L48 C	S_paper493	485	485	true	288	252
+own_all_rs_L48 C	S_old (registered cohort)	183	183	true	183	0
+own_all_rs_L48 C	S_new (registered cohort)	272	272	true	272	0
+own_all_rs_L48 C	S_newmains (registered cohort)	312	312	true	312	0
+own_all_rs_L48 R	S_old	190	190	true	190	123
+own_all_rs_L48 R	S_new	303	303	true	303	129
+own_all_rs_L48 R	S_newmains	335	335	true	335	0
+own_all_rs_L48 R	S_paper493	485	485	true	288	252
+own_all_rs_L48 R	S_old (registered cohort)	183	183	true	183	0
+own_all_rs_L48 R	S_new (registered cohort)	272	272	true	272	0
+own_all_rs_L48 R	S_newmains (registered cohort)	312	312	true	312	0

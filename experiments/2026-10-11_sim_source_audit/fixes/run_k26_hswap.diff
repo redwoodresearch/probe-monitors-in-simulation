@@ -1,0 +1,74 @@
+--- run_k26.py
++++ run_k26_hswap.py
+@@ -1,4 +1,10 @@
+-"""POST-HOC #590 redo (plan Amendment 15): the matched-length checks at the corrected k = 26. Deployed Modal app; no new
++"""FIX (b) COPY (experiments/2026-10-11_sim_source_audit/fixes/PLAN_b_honest_swap_POSTHOC.md): run_k26.py as run (d8cc9ac5 on
++aswin/q3-590-redo), claim C refits only, with the honest arms' roles swapped: refit_claimc() relabels the world
++honest_a <-> honest_b in the cached rows and in the v2 inventory's run keys, and its source records (validation fields
++and gates) are the swapped grids (claim C hswap_2619f4eacb05; stripped hswap_c2bdaa3014a8). Own app; tag prefix hswap_;
++refit_retrain and refit_qwen are not spawned. Original docstring follows.
++
++POST-HOC #590 redo (plan Amendment 15): the matched-length checks at the corrected k = 26. Deployed Modal app; no new
+ extraction. The retrain cache's level-0 inventory kept only each run's last context epoch's tool-output count (#590);
+ summed over every counted epoch, k_match (Amendment 3's rule) is 26, not 11.
+ - inventory_v2 (CPU): run_retrain_grid.cache's inventory loop over level 0's on-policy metas, unchanged except that a
+@@ -34,11 +40,13 @@
+ 
+ HERE = Path(__file__).parent
+ REPO = HERE.parents[1] if len(HERE.parents) > 1 else HERE
+-APP = "probe-shift_aswin-surya_sub-q3onpol_k26_kill-2026-11-11"
++APP = "probe-shift_aswin-surya_sub-q3onpol_k26hs_kill-2026-11-11"
++HSWAP = {"honest_a": "honest_b", "honest_b": "honest_a"}  # fix (b): the honest arms swap roles
++hsw = lambda u: HSWAP.get(u.split("|", 1)[0], u.split("|", 1)[0]) + u[len(u.split("|", 1)[0]):]  # "honest_a|t" -> "honest_b|t"
+ ON_VOL = "probe-shift_aswin-surya_sub-q3onpol_acts_kill-2026-11-08"
+ SCORE_VOL, CACHE = "probe-shift_aswin-surya_sub-q3onpol_score_kill-2026-11-08", "retrain_cache_v1"
+ INV2 = f"{CACHE}/level0/inventory_v2_summed.json"
+-SRC = {"retrain": "227c3e8ca45d", "qwen": "a38485ea5b9f", "claimc": "fb82f67348ac", "claimcna": "e3aec9083cb5"}
++SRC = {"retrain": "227c3e8ca45d", "qwen": "a38485ea5b9f", "claimc": "hswap_2619f4eacb05", "claimcna": "hswap_c2bdaa3014a8"}  # fix (b): the swapped grids
+ CLAIMC_IO = {"claimc": ("claimc_cache_v1", "claimck26"), "claimcna": ("claimcna_cache_v1", "claimcnad3")}  # cache, output prefix
+ ON_RUNS = ["2026-10-09_rerun_strict_segends_v1", "2026-10-10_scaleup_canary_segends_v1", "2026-10-10_scaleup_l2_segends_v1",
+            "2026-10-10_scaleup_topup_segends_v1", "2026-10-10_second_attack_segends_v1"]
+@@ -121,9 +129,8 @@
+     if p.exists():
+         if json.loads(p.read_text()) != v2:
+             raise ValueError("an existing v2 inventory differs from the recomputation")
+-    else:
+-        p.write_text(json.dumps(v2))
+-        score_vol.commit()
++    else:  # fix (b): never create the shared inventory; it must already exist from the #590 redo
++        raise ValueError("the v2 inventory is missing; fix (b) only reads it")
+     return st | {"sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
+ 
+ 
+@@ -351,11 +358,11 @@
+     score_vol.reload()
+     fold_of = frozen_folds(json.loads((Path("/root") / TASKS).read_text()))
+     att = set(attempted)
+-    counts0 = json.loads((Path("/score") / INV2).read_text())
++    counts0 = {hsw(u): v for u, v in json.loads((Path("/score") / INV2).read_text()).items()}  # fix (b): keys follow the relabel
+     k_len = k_match(counts0)
+     t0, out = time.time(), {"k": k_len}
+     d = Path("/score") / CLAIMC_IO[variant][0]
+-    rows = json.loads((d / f"on_rows.L{layer}.json").read_text())
++    rows = [r | {"world": HSWAP.get(r["world"], r["world"])} for r in json.loads((d / f"on_rows.L{layer}.json").read_text())]
+     kn = np.flatnonzero([r["kind"] == kind for r in rows])
+     X = torch.from_numpy(np.load(d / f"on_L{layer}.npy")[kn]).cuda()
+     runs, n_run = np.unique([f"{r['world']}|{r['task']}" for r in rows], return_inverse=True)
+@@ -445,15 +452,13 @@
+         if not inv.get("passed"):
+             raise SystemExit(f"inventory gate failed: {inv}")
+         inv_sha = inv["sha256"]
+-        tag = hashlib.sha256((HERE / "run_k26.py").read_bytes() + inv_sha.encode() + json.dumps(att).encode()).hexdigest()[:12]
++        tag = "hswap_" + hashlib.sha256((HERE / "run_k26_hswap.py").read_bytes() + inv_sha.encode() + json.dumps(att).encode()).hexdigest()[:12]
+         fns = {n: modal.Function.from_name(APP, n) for n in ("refit_retrain", "refit_qwen", "refit_claimc")}
+         if sys.argv[1] == "stripped":  # D3 Amendment 3: the stripped-input detector only
+             calls = {f"claimcna L{l} {k}": fns["refit_claimc"].spawn(tag, l, k, att, "claimcna").object_id for l in LAYERS for k in KINDS}
+             print(json.dumps({"tag": tag, "inventory_v2_sha256": inv_sha, "attempted_run1": len(att), "calls": calls}, indent=1))
+             raise SystemExit(0)
+-        calls = {f"retrain L{l} {k}": fns["refit_retrain"].spawn(tag, l, k).object_id for l in LAYERS for k in KINDS}
+-        calls |= {f"qwen L{l} {k}": fns["refit_qwen"].spawn(tag, l, k, att).object_id for l in LAYERS for k in KINDS}
+-        calls |= {f"claimc L{l} {k}": fns["refit_claimc"].spawn(tag, l, k, att).object_id for l in LAYERS for k in KINDS}
++        calls = {f"claimc L{l} {k}": fns["refit_claimc"].spawn(tag, l, k, att).object_id for l in LAYERS for k in KINDS}  # fix (b): claim C only
+         print(json.dumps({"tag": tag, "inventory_v2_sha256": inv_sha, "attempted_run1": len(att), "calls": calls}, indent=1))
+     else:
+         raise SystemExit("usage: run_k26.py inventory | grids <labels> | stripped <labels>")

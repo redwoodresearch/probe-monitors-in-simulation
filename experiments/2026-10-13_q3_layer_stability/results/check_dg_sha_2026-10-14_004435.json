@@ -1,0 +1,20 @@
+{
+ "label": "Codex required change 2 (like-for-like): D_G_rows digests",
+ "git": "3fe66dd42ee41480e9dd8db5a2fc70bb05ca5f88",
+ "written": "2026-10-14_004435",
+ "results": {
+  "fpr_0.01": {
+   "file": "recipe1_amsplits/2026-10-13_184928/D_G_rows_fpr_0.01_2026-10-13_185609.npz",
+   "sha256": "31445ede38b5cb69a107e92fd09921479a41ff940c145e9c826de78b6faf8ce2",
+   "recorded_by_version_2": "31445ede38b5cb69a107e92fd09921479a41ff940c145e9c826de78b6faf8ce2",
+   "match": true
+  },
+  "fpr_0.05": {
+   "file": "recipe1_amsplits/2026-10-13_184928/D_G_rows_fpr_0.05_2026-10-13_185609.npz",
+   "sha256": "4bc6680339ea9ffb0390cf6ec178e1340286d1c657c938f8d885e7a83239aed1",
+   "recorded_by_version_2": "4bc6680339ea9ffb0390cf6ec178e1340286d1c657c938f8d885e7a83239aed1",
+   "match": true
+  }
+ },
+ "all_match": true
+}

@@ -1,0 +1,15 @@
+{
+ "target": "simh311_q2_sim_rlr2",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "simh311_q2_sim_rlr2",
+   "arm": "sim_honest@september",
+   "staged_file": "/ev/simh311_q2_sim_rlr2_v1/inputs/sim_honest@september.jsonl",
+   "staged_sha": "ac834215a5e43a7a5840faf463c6048e82141fe92371f4f816a9778c3bebbb6b",
+   "epochs": 1,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

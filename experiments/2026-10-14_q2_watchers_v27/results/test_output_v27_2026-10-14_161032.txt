@@ -1,0 +1,103 @@
+exit 0
+2026-10-14 16:10:32 PDT ALERT: bill read failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT state=None tasks=None bill=n/a stop=5.0 left=3600s fails=1
+2026-10-14 16:10:32 PDT ALERT: bill read failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT state=None tasks=None bill=n/a stop=5.0 left=3360s fails=2
+2026-10-14 16:10:32 PDT ALERT: bill read failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT state=None tasks=None bill=n/a stop=5.0 left=2880s fails=3
+2026-10-14 16:10:32 PDT ALERT: bill read failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT state=None tasks=None bill=n/a stop=5.0 left=2280s fails=4
+2026-10-14 16:10:32 PDT ALERT: bill read failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT state=None tasks=None bill=n/a stop=5.0 left=1680s fails=5
+2026-10-14 16:10:32 PDT ALERT: bill read failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT state=None tasks=None bill=n/a stop=5.0 left=1080s fails=6
+2026-10-14 16:10:32 PDT ALERT: bill read failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT state=None tasks=None bill=n/a stop=5.0 left=480s fails=7
+2026-10-14 16:10:32 PDT deadline reached; the watcher exits WITHOUT stopping ap-x (its timeout= bounds the job)
+PASS: test_failed_polls_never_stop: no stop after 3720 s of failed polls (result deadline)
+2026-10-14 16:10:32 PDT ALERT: bill read failed (ConnectionError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT state=ephemeral (detached) tasks=3 bill=n/a stop=5.0 left=3600s fails=1
+2026-10-14 16:10:32 PDT READY
+2026-10-14 16:10:32 PDT ALARM: fresh bill 6.000 >= stop 5.0, app ephemeral (detached), read in 0 s; stopping ap-x
+PASS: test_fresh_over_cap_stops_once: one stop by app ID on the fresh $6.00 >= $5 reading
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT ALERT: guard poll failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT ALERT: guard poll failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT ALERT: guard poll failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT ALARM: 9 > 5 at two consecutive fresh polls 120 s apart; stopping ap-x
+PASS: test_guard_stale_never_stops_fresh_pair_does: no stop across failed reads; one stop on two consecutive fresh over-counts
+2026-10-14 16:10:32 PDT ALERT: bill 6.000 >= stop 5.0 but state 'stopped', reads took 0 s: not fresh; no stop
+2026-10-14 16:10:32 PDT state=stopped tasks=0 bill=6.000 stop=5.0 left=3600s fails=0
+2026-10-14 16:10:32 PDT ap-x has ended (stopped); the watcher exits
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT ALERT: bill 6.000 >= stop 5.0 but state None, reads took 0 s: not fresh; no stop
+2026-10-14 16:10:32 PDT state=None tasks=None bill=6.000 stop=5.0 left=3600s fails=1
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT ALERT: bill 6.000 >= stop 5.0 but state None, reads took 0 s: not fresh; no stop
+2026-10-14 16:10:32 PDT state=None tasks=None bill=6.000 stop=5.0 left=3360s fails=2
+2026-10-14 16:10:32 PDT ALERT: state read failed (TimeoutError); polling again
+2026-10-14 16:10:32 PDT ALERT: bill 6.000 >= stop 5.0 but state None, reads took 0 s: not fresh; no stop
+2026-10-14 16:10:32 PDT state=None tasks=None bill=6.000 stop=5.0 left=2880s fails=3
+PASS: test_over_cap_needs_fresh_running_state: no stop when ended or state unread; inf/NaN/1e309 rejected; the real parser sums only this app ID
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT ALERT: guard poll failed (TimeoutError); no stop on a missing reading; polling again
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT STOP: test
+2026-10-14 16:10:32 PDT stop attempt 1: app stop failed (OSError); checking state
+2026-10-14 16:10:32 PDT stop recheck failed (TimeoutError); waiting for a fresh reading
+2026-10-14 16:10:32 PDT stop abandoned: a fresh reading no longer meets the stop condition
+PASS: test_guard_stale_timing_never_stops: no stop after a 900 s-late reading (nor a pair seeded by it), with 820 s gaps, or on a retry after recovery
+2026-10-14 16:10:32 PDT ALARM: fresh bill 6.000 >= stop 5.0, app ephemeral (detached), read in 0 s; stopping ap-x
+2026-10-14 16:10:32 PDT stop abandoned (a fresh reading no longer met the stop); the watcher keeps polling ap-x
+2026-10-14 16:10:32 PDT ALERT: bill 6.000 >= stop 5.0 but state 'ephemeral (detached)', reads took 0 s: not fresh; no stop
+2026-10-14 16:10:32 PDT state=ephemeral (detached) tasks=3 bill=6.000 stop=5.0 left=3600s fails=0
+2026-10-14 16:10:32 PDT READY
+2026-10-14 16:10:32 PDT ALARM: fresh bill 6.000 >= stop 5.0, app ephemeral (detached), read in 0 s; stopping ap-x
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT ALARM: 9 > 5 at two consecutive fresh polls 120 s apart; stopping ap-x
+2026-10-14 16:10:32 PDT stop abandoned (a fresh read no longer met the stop); the guard keeps polling ap-x
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT OVER-COUNT containers of ap-x: []
+2026-10-14 16:10:32 PDT state=ephemeral tasks=9 max=5
+2026-10-14 16:10:32 PDT OVER-COUNT: 9 tasks > 5
+2026-10-14 16:10:32 PDT ALARM: 9 > 5 at two consecutive fresh polls 120 s apart; stopping ap-x
+PASS: test_abandoned_stop_keeps_watching: after an abandoned stop both keep polling and stop again only on new fresh evidence
+ALL PASS

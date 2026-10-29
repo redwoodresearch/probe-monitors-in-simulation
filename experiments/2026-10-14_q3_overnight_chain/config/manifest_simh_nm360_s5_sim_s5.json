@@ -1,0 +1,102 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_nm_s5 of 2026-10-14_newmains_s5: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 4,
+  "by_arm": {
+   "sim_honest@september": 4
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_nm_s5",
+   "rel": "sim_honest@september/nm144_model_registry/2026-10-15T21-57-20-00-00_la-model-registry-sim-honest-1_agYZn63v79eRxQSTm4TAK4.eval",
+   "sha256": "3e6321aea04a0640c45631114cf1ab819b65ca887026093121664a5958d782c6",
+   "bytes": 741733,
+   "arm_dir": "sim_honest@september",
+   "task": "nm144_model_registry",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s5/sim_honest@september/nm144_model_registry/2026-10-15T21-57-20-00-00_la-model-registry-sim-honest-1_agYZn63v79eRxQSTm4TAK4.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s5",
+   "stratum": "simh_nm360",
+   "launch_task": "nm144_model_registry",
+   "first_start": "2026-10-15T14:57:18-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s5",
+   "run1_launch": "2026-10-14_newmains_s5",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "5"
+  },
+  {
+   "launch": "2026-10-15_simh_nm_s5",
+   "rel": "sim_honest@september/nm251_tiktok/2026-10-15T22-01-54-00-00_la-tiktok-sim-honest-1_QSkLFvUCpLLreATxzrVuBz.eval",
+   "sha256": "dd46198f123f99f991bb588b1bce4ee1551ed36593114af81246e320dd009a0a",
+   "bytes": 791383,
+   "arm_dir": "sim_honest@september",
+   "task": "nm251_tiktok",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s5/sim_honest@september/nm251_tiktok/2026-10-15T22-01-54-00-00_la-tiktok-sim-honest-1_QSkLFvUCpLLreATxzrVuBz.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s5",
+   "stratum": "simh_nm360",
+   "launch_task": "nm251_tiktok",
+   "first_start": "2026-10-15T15:01:52-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s5",
+   "run1_launch": "2026-10-14_newmains_s5",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "5"
+  },
+  {
+   "launch": "2026-10-15_simh_nm_s5",
+   "rel": "sim_honest@september/nm342_web_scraping/2026-10-15T21-57-20-00-00_la-web-scraping-sim-honest-1_B5qHL5mLuo8PdSF7BbKu3A.eval",
+   "sha256": "05884666b0c43bef9c1f849918a410ee1283f13265f8cf918abec87dd14c171a",
+   "bytes": 677806,
+   "arm_dir": "sim_honest@september",
+   "task": "nm342_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s5/sim_honest@september/nm342_web_scraping/2026-10-15T21-57-20-00-00_la-web-scraping-sim-honest-1_B5qHL5mLuo8PdSF7BbKu3A.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s5",
+   "stratum": "simh_nm360",
+   "launch_task": "nm342_web_scraping",
+   "first_start": "2026-10-15T14:57:18-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s5",
+   "run1_launch": "2026-10-14_newmains_s5",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "5"
+  },
+  {
+   "launch": "2026-10-15_simh_nm_s5",
+   "rel": "sim_honest@september/nm357_web_scraping/2026-10-15T22-00-22-00-00_la-web-scraping-sim-honest-1_nKRMgVmGC4g48VNvS4Fui8.eval",
+   "sha256": "b010098e1793f4cdc681dba16ad157a1feacf2049693cae763694687341de4e9",
+   "bytes": 1317435,
+   "arm_dir": "sim_honest@september",
+   "task": "nm357_web_scraping",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_nm_s5/sim_honest@september/nm357_web_scraping/2026-10-15T22-00-22-00-00_la-web-scraping-sim-honest-1_nKRMgVmGC4g48VNvS4Fui8.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_nm_s5",
+   "stratum": "simh_nm360",
+   "launch_task": "nm357_web_scraping",
+   "first_start": "2026-10-15T15:00:20-07:00",
+   "world": "simh_nm360",
+   "sim_launch": "2026-10-15_simh_nm_s5",
+   "run1_launch": "2026-10-14_newmains_s5",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "5"
+  }
+ ]
+}

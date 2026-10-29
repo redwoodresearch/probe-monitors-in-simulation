@@ -1,0 +1,27 @@
+# D redo at 196 tasks (plan_D_redo_196_2026-10-09.md, Amendments 1-3), variant i, primary by the label check (train and test
+# on the matched subset (b); (i) failed 0 of 500 draws, Amendment 3 item 1). Phase 2: run 1 (real), September's simulator (sim) and run 2 (D_control, evaluation only);
+# Phase 1: Sol's runs read by Qwen3.5-27B, epoch 1 (off_real), the simulated run (off_sim) and epoch 2 (off_e2, D_control,
+# evaluation only). Aswin pre-approved D at 11:03:48 PT ("pre-approved up with corrected plant check rule"); its GPU waits
+# for his OK in a1's session on its SPEND row.
+mode: D
+variant: "i"
+label: D_i_196
+extractions: [2026-10-09_rerun_strict_segends_v1, 2026-10-10_scaleup_canary_segends_v1, 2026-10-10_scaleup_l2_segends_v1,
+              2026-10-10_scaleup_topup_segends_v1, 2026-10-10_second_attack_segends_v1]
+worlds: {real: attack, sim: sim_attack@september, run2: attack@2026-10-10_second_attack_segends_v1}
+phase1_table: experiments/2026-10-08_q3_onpolicy_figures/results/phase1_calls_pilot_tasks_amendment9_all196_2026-10-10_132135.json
+variant_check: experiments/2026-10-08_q3_onpolicy_figures/results/label_check_D_ii_196_2026-10-10_132350.json   # Amendment 3 item 1: the scorer and analysis refuse a variant it does not name
+phase1_run: 2026-10-06_la_segment-end-v4_qwen35-27b_alllayers_v1
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json
+n_layers: 64
+hidden: 5120
+seed: 0
+fitter: primal
+warm_start: true
+x_cache: xcache_D_i_196
+amendments:
+  d_definition: "A15; variants recorded in A50, commit 390c08b (branch aswin/prereg-23-a50) before D was computed"
+  primary_simulator: "A46, commit 32666df, PR #258"
+  layer_selection: "A27, adopted in A42"
+  d_redo_196: "plan_D_redo_196_2026-10-09.md, Amendments 1-3 (aswin/d196-control)"
+  scaleup_scoring: "plan_scaleup_196_scoring_2026-10-10.md, Amendments 1-6 (aswin/scaleup196-scoring)"

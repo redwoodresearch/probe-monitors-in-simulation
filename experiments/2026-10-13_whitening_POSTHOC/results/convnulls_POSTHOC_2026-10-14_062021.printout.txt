@@ -1,0 +1,22 @@
+git at launch e5f573f60305b95f43c479f3c0238d6767225fea | smoke False | shards and combined.json under /out/2026-10-14_062026_e5f573f60/ on the Volume
+== design G (seed 20261017): gates {'real_label_C_differs_from_job1': [], 'plain_vs_job1_max': 0.0, 'zca_vs_job1_max': 0.0} | iterations [14, 331]
+  plain: real-label C [0.0031622776601683794] | shuffled C 1e-05 x199, 3.16e-05 x1
+    fpr_0.01: real e2 observed 67.0 | null median 1.8 (range 0.6-4.2) | exceedances 0/20, p 0.048 || fake observed 68.4 | null median 1.7 | exceedances 0/20
+    fpr_0.05: real e2 observed 86.9 | null median 5.9 (range 3.0-11.0) | exceedances 0/20, p 0.048 || fake observed 88.0 | null median 5.8 | exceedances 0/20
+  zca: real-label C [0.0001, 0.00031622776601683794] | shuffled C 1e-05 x200
+    fpr_0.01: real e2 observed 70.3 | null median 3.9 (range 1.8-6.9) | exceedances 0/20, p 0.048 || fake observed 72.8 | null median 4.6 | exceedances 0/20
+    fpr_0.05: real e2 observed 88.2 | null median 10.4 (range 5.9-16.5) | exceedances 0/20, p 0.048 || fake observed 89.1 | null median 11.5 | exceedances 0/20
+== design T (seed 20261014): gates {'real_label_C_differs_from_job1': [], 'plain_vs_job1_max': 0.0, 'zca_vs_job1_max': 0.0} | iterations [14, 329]
+  plain: real-label C [0.0031622776601683794] | shuffled C 1e-05 x200
+    fpr_0.01: real e2 observed 67.0 | null median 3.9 (range 2.2-6.2) | exceedances 0/20, p 0.048 || fake observed 68.4 | null median 4.2 | exceedances 0/20
+    fpr_0.05: real e2 observed 86.9 | null median 10.3 (range 7.2-14.2) | exceedances 0/20, p 0.048 || fake observed 88.0 | null median 10.7 | exceedances 0/20
+  zca: real-label C [0.0001, 0.00031622776601683794] | shuffled C 1e-05 x200
+    fpr_0.01: real e2 observed 70.3 | null median 6.6 (range 4.2-12.0) | exceedances 0/20, p 0.048 || fake observed 72.8 | null median 7.3 | exceedances 0/20
+    fpr_0.05: real e2 observed 88.2 | null median 18.9 (range 10.0-26.9) | exceedances 0/20, p 0.048 || fake observed 89.1 | null median 21.1 | exceedances 0/20
+== design W (seed 20261018): gates {'real_label_C_differs_from_job1': []} | iterations [14, 324]
+  plain: real-label C [0.0031622776601683794] | shuffled C 1e-05 x195, 3.16e-05 x5
+    fpr_0.01: real e2 observed 69.7 | null median 2.6 (range 1.9-5.5) | exceedances 0/20, p 0.048 || fake observed 70.6 | null median 2.7 | exceedances 0/20
+    fpr_0.05: real e2 observed 85.3 | null median 6.9 (range 5.0-11.3) | exceedances 0/20, p 0.048 || fake observed 85.5 | null median 7.9 | exceedances 0/20
+  zca: real-label C [0.0001, 0.00031622776601683794] | shuffled C 1e-05 x200
+    fpr_0.01: real e2 observed 73.1 | null median 4.5 (range 2.0-9.1) | exceedances 0/20, p 0.048 || fake observed 74.0 | null median 5.4 | exceedances 0/20
+    fpr_0.05: real e2 observed 87.5 | null median 13.2 (range 7.2-25.2) | exceedances 0/20, p 0.048 || fake observed 88.4 | null median 15.4 | exceedances 0/20

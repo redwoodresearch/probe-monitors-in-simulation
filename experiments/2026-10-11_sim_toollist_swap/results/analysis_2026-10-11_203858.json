@@ -1,0 +1,104 @@
+{
+ "written": "2026-10-11T20:38:58-07:00",
+ "git": "215a88a2f494637a512d2464a0586fbebb433375",
+ "inputs": {
+  "scores": "scores_full.json",
+  "main": "draw0.json"
+ },
+ "gates": {
+  "complete": {
+   "2026-10-09_rerun_strict_segends_v1": 191,
+   "2026-10-10_scaleup_canary_segends_v1": 20,
+   "2026-10-10_scaleup_l2_segends_v1": 862,
+   "2026-10-10_scaleup_topup_segends_v1": 56,
+   "2026-10-11_toolswap_mirror_v2": 232,
+   "2026-10-11_toolswap_noop_v2": 43,
+   "2026-10-11_toolswap_sim_v2": 229
+  },
+  "unedited real->sim": {
+   "rows": 13379,
+   "max_abs_difference": 0.0,
+   "flags_differ": 0
+  },
+  "unedited real->real": {
+   "rows": 13072,
+   "max_abs_difference": 0.0,
+   "flags_differ": 0
+  },
+  "noop sim": {
+   "rows": 1416,
+   "max_abs_difference": 4.996051572447868e-07,
+   "flags_differ": 0
+  },
+  "noop run2": {
+   "rows": 1385,
+   "max_abs_difference": 4.997598717082496e-07,
+   "flags_differ": 0
+  },
+  "noop tasks": {
+   "sim": 20,
+   "run2": 20
+  },
+  "sim coverage": {
+   "rows_found": 13379,
+   "rows": 13379
+  },
+  "mirror coverage": {
+   "rows_found": 13072,
+   "rows": 13072
+  }
+ },
+ "seed": 20261011,
+ "resamples": 2000,
+ "sim": {
+  "read_only_calls": 6466,
+  "tasks": 191,
+  "false_alarm_before": 0.02922981750695948,
+  "false_alarm_after": 0.02907516238787504,
+  "flagged_before": 189,
+  "flagged_after": 188,
+  "delta": 0.0001546551190844403,
+  "delta_ci95": [
+   -0.00043012915274501457,
+   0.0009826722544761573
+  ],
+  "catch_before": 0.8870244466946333,
+  "catch_after": 0.886735136698973,
+  "auroc_before": 0.9913931394872841,
+  "auroc_after": 0.9913899627149841,
+  "verdict": "rules out explaining half"
+ },
+ "reference": {
+  "false_alarm_real_run1": 0.011424840868287905,
+  "false_alarm_real_run2": 0.007597684515195369,
+  "gap_G": 0.017804976638671574,
+  "real_real_spread": 0.003827156353092536,
+  "half_gap": 0.008902488319335787,
+  "residual_allowance": 0.008827156353092537
+ },
+ "planted": {
+  "flips": 59,
+  "delta": 0.00912465202598206,
+  "expected": 0.00912465202598206,
+  "ci95": [
+   0.0016857604611623632,
+   0.020967310848490975
+  ],
+  "verdict": "explains the gap",
+  "zero_plant_ci95": [
+   0.0,
+   0.0
+  ],
+  "zero_plant_includes_0": true
+ },
+ "mirror": {
+  "false_alarm_before": 0.011424840868287905,
+  "false_alarm_after": 0.01109841684347968,
+  "R": -0.0003264240248082254,
+  "R_ci95": [
+   -0.0008305716847243432,
+   0.0
+  ],
+  "verdict": "rules out half"
+ }
+}

@@ -1,0 +1,28 @@
+# Text-only baselines for the Q2 2x2 (2026-10-06), scored with probe_shift.transfer like the probes. Modal CPU.
+labels_file: latest                  # newest .run_cache table from run_label_calls.py with the current labeler's fingerprint
+folds_file: folds_v3.json            # splits/: shared main-task folds (identical across v1-v3)
+tasks: paired                        # label-table flag: paired (939 tasks, v3) or paired_under_32k (591)
+within_reader_cut: {activations_run: 2026-10-06_la_segment-end_qwen3-32b_v1}   # only calls whose call_end the reader saw (32k cut)
+features_run: auto                   # the probes' features run for these labels (q2_probes.yaml naming); null = every call in the cut
+labels: read_only (0) vs impactful (1); every call kept (run_program and unknown are impactful)
+test_domains: [real-attack-e1, sim-attack]
+train_sets:                          # name -> arms whose calls (outside the test and validation folds) train it
+  real-attack-e1: [real-attack-e1]
+  sim-attack: [sim-attack]
+  real-attack-e1+real-honest: [real-attack-e1, real-honest]   # the project doc's "LA honest + attack"
+home:                                # each training set's own test domain, for the gaps
+  real-attack-e1: real-attack-e1
+  sim-attack: sim-attack
+  real-attack-e1+real-honest: real-attack-e1
+fpr: 0.01                            # threshold frozen at this false-positive rate on training-set validation
+n_boot: 1000                         # resamples of main tasks for 95% intervals
+n_boot_category: 200
+seed: 0
+command_text:                        # baseline for readout (a): the call's JSON as the reader sees it
+  text: '{"name": tool, "arguments": arguments} as JSON'
+  tfidf: {analyzer: char_wb, ngram_range: [2, 5], min_df: 2, max_features: 200000, sublinear_tf: true}
+  logistic_regression: {C: 1.0, max_iter: 2000}
+previous_calls:                      # baseline for readout (b): what the agent did just before this call
+  features: one-hot category and tool of the previous 2 calls in the transcript ("none" before the first), and whether an earlier call shares this agent turn
+  logistic_regression: {C: 1.0, max_iter: 2000}
+jitter: {previous_calls: 1.0e-5}   # uniform [0, 1e-5) on scores before thresholding: its discrete scores tie at the threshold (Aswin, 2026-10-07); not the probes or command_text, which have no ties

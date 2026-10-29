@@ -1,0 +1,9 @@
+# Whole transcripts (no 32k cut) of the three attack arms, staged from the extraction's unscrubbed reader inputs
+# (run_stage_reader_inputs.py), for level 7 on whole transcripts. Runs over 32k keep `truncated: true` so the
+# no_run_over_32k slice means the same as before.
+volume: probe-shift_aswin-surya_sub-la-activations
+inputs: [2026-10-06_la_segment-end_qwen3-32b_v1]     # the probe's reader inputs, scrub level 0, all four arms
+arms: [real-attack-e1, real-attack-e2, sim-attack]
+max_tokens: null                                     # whole transcripts
+tokenizer: {name: Qwen/Qwen3-32B, revision: 9216db5781bf21249d130ec9da846c4624c16137}
+workers: 8

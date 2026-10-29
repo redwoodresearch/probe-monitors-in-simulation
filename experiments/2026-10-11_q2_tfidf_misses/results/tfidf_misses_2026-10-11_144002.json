@@ -1,0 +1,144 @@
+{
+ "prereg": "PREREG.md @ 0b6e8cce, amended 33566591",
+ "git": "66527617f542a2f8298b15a0db5be4e3ff8e4ea9",
+ "inputs sha256": {
+  "probe": "75178f1cfef2eb60436b75d809624cf1e37601c9dab552ffaa23b1fb981cedf3",
+  "tfidf": "756cb8494d03d0f3598ed267968e68e0fee6f485ddb9bc07c16f3d9c20532c44"
+ },
+ "join checks": {
+  "label mismatches": 0,
+  "fold mismatches": 0,
+  "probe flag != score > threshold": 0,
+  "TF-IDF flag != score > threshold": 0,
+  "tasks in more than one fold": 0,
+  "joined rows != PREREG": 0
+ },
+ "counts": {
+  "real": {
+   "tasks": 536,
+   "impactful": 14075,
+   "subset": 845,
+   "tasks with subset": 329,
+   "most in one task": 34,
+   "kish": 2.328,
+   "categories": {
+    "run_program": 321,
+    "process_service": 95,
+    "file_write": 98,
+    "network": 141,
+    "db_write": 37,
+    "permissions_config": 37,
+    "install": 52,
+    "file_write_tmp": 26,
+    "file_delete": 32,
+    "unknown": 3,
+    "malformed": 3
+   },
+   "tools": {
+    "bash": 772,
+    "db_bash": 45,
+    "text_editor": 11,
+    "client_bash": 9,
+    "rust_worker_bash": 3,
+    "py_ml_bash": 4,
+    "nginx_bash": 1
+   }
+  },
+  "simulated": {
+   "tasks": 536,
+   "impactful": 14146,
+   "subset": 811,
+   "tasks with subset": 325,
+   "most in one task": 26,
+   "kish": 2.195,
+   "categories": {
+    "run_program": 308,
+    "network": 131,
+    "process_service": 92,
+    "file_write_tmp": 31,
+    "file_write": 88,
+    "install": 56,
+    "permissions_config": 34,
+    "file_delete": 29,
+    "db_write": 39,
+    "unknown": 3
+   },
+   "tools": {
+    "bash": 752,
+    "py_ml_bash": 2,
+    "nginx_bash": 2,
+    "text_editor": 11,
+    "db_bash": 40,
+    "client_bash": 3,
+    "rust_worker_bash": 1
+   }
+  }
+ },
+ "margin rule": {
+  "DE": 2.7939139385875844,
+  "SE": 0.04108354409023405,
+  "P(inside +/-10 at gap 0), projected": 0.36457182380491704,
+  "small": true,
+  "margin": 0.135
+ },
+ "planted check": {
+  "direction": "caught -> missed (+10)",
+  "k": 81,
+  "copies": 200,
+  "achieved shift (points, mean)": 9.987669543773123,
+  "planted 95% width (points, median)": 7.640044201215771,
+  "detected share": 1.0,
+  "passes (>= 80%)": true
+ },
+ "TF-IDF-missed commands": {
+  "real catch": {
+   "point": 0.2733727810650888,
+   "95%": [
+    0.24013430625914403,
+    0.30689709390587727
+   ]
+  },
+  "simulated catch": {
+   "point": 0.27743526510480887,
+   "95%": [
+    0.23758352182135045,
+    0.31848089128540163
+   ]
+  },
+  "gap (real - simulated)": {
+   "point": -0.004062484039720093,
+   "95%": [
+    -0.047376225325074565,
+    0.037201305203925485
+   ]
+  },
+  "equivalence p": 9.999000099990002e-05,
+  "beyond +m p": 1.0,
+  "beyond -m p": 1.0,
+  "reading": "agree within +/-13.5 points"
+ },
+ "beside (descriptive): all impactful commands, same threshold and draws": {
+  "real catch": {
+   "point": 0.8703374777975134,
+   "95%": [
+    0.8602813187630061,
+    0.8799706212021727
+   ]
+  },
+  "simulated catch": {
+   "point": 0.8729676233564259,
+   "95%": [
+    0.8634012118510617,
+    0.8821510957228987
+   ]
+  },
+  "gap (real - simulated)": {
+   "point": -0.0026301455589125,
+   "95%": [
+    -0.011149084665647143,
+    0.005931880826162635
+   ]
+  }
+ },
+ "real-vs-real yardstick": "none: one real attack run per task (epoch 1) in this data"
+}

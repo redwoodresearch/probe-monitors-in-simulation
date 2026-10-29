@@ -1,0 +1,8 @@
+{
+  "archive_uri": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-11_stage1_label_panel/independent_audit_2026-10-11_2125/audit.tar.gz",
+  "archive_sha256": "a060cea803a73930b792f8eb4c158332337c2acd3064b2d0379dbce5521b9f7c",
+  "s3_readback_sha256": "a060cea803a73930b792f8eb4c158332337c2acd3064b2d0379dbce5521b9f7c",
+  "prepared_inputs_archive_prefix": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-11_stage1_label_panel/2026-10-11_2009/",
+  "labels_unchanged": true,
+  "additional_api_spend_usd": 0
+}

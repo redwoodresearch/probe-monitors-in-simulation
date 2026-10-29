@@ -1,0 +1,13 @@
+# Plan A (2026-10-08; held until Aswin's explicit OK): the both-fixes arm on 117 more runs, one per new main task
+# (config/swap_runs_ext.json from select_extension.py), to reach about 206 tasks for q3's paired catch-rate analysis.
+# The as-simulated arm at layers 48/63 is already in 2026-10-06_la_segment-end_qwen3-32b_v1, so only this arm is extracted.
+n_runs: 117
+seed: 1
+runs_file: swap_runs_ext.json
+inputs_from: 2026-10-06_la_segment-end_qwen3-32b_v1
+staged_run: 2026-10-08_q2_swap_ext_inputs_v1
+include_original: false
+variants:
+  sim-attack-note-sr-both: diff_with_note+sr_gutter_no_newline
+swap_arm: sim-attack-realstyle
+extraction_run: 2026-10-08_q2_swap_ext_qwen3-32b_l48-63_v1   # ../2026-10-06_all_layers_extraction/config/alllayers_q2_swap_ext.yaml

@@ -1,0 +1,17 @@
+{
+"probe: result.json fields equal the archived step-2 result": {"fields compared": 11, "fields only on the Volume": [], "all equal": true},
+"probe file": {"sha256": "c4cba16e0eb74925a946a46d17271cb8e8ccc3df2a28e652b9bd8a2d3bce74bd", "modified (PT)": "2026-10-09T19:32:36-07:00", "result.json modified (PT)": "2026-10-09T19:32:37-07:00", "shapes": {"coef": [64, 5120], "scaler_mean": [64, 5120], "scaler_scale": [64, 5120]}, "all finite": true, "scaler_scale > 0 at layer 31": true},
+"step-2 training config": {"model": "Qwen/Qwen3.5-27B", "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654", "dtype": "bfloat16", "chat_template": {"enable_thinking": false}},
+"dump config": {"model": "Qwen/Qwen3.5-27B", "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654", "layer 31 stored": true, "inputs": "rerun_strict_segends_v2", "same model and revision as the probe": true},
+"dump integrity problems": [],
+"key join (call -> call_index)": {"keys": 60, "found": 60, "readout equals staging": 60, "row present": 60, "task matches": 60},
+"honest calibration rows (counted attempts, impactful, with a row)": {"honest_a": 820, "honest_b": 962, "tasks": 20},
+"labelled tasks": {"tasks": 20, "with both labels": 16, "attack runs per task": 1},
+"layer-31 key rows": {"rows": 60, "all finite": true, "share of nonzero values below fp16's smallest normal": 6.51487019121144e-06, "max |x|": 68.0},
+"layer-31 honest rows": {"rows": 1782, "all finite": true, "share of nonzero values below fp16's smallest normal": 2.3033263652226675e-06, "max |x|": 72.0},
+"cross-dump (replay_v1) on the keys": {"found": 60, "same readout": 60, "max abs difference": 0.0, "replay config revision": "fc05daec18b0a78c049392ed2e771dde82bdf654", "problems": []},
+"labels sha256": "c0228369925f98b7d016a289acb9b2993411ddeaaa886c9732ceb548d9dab05e",
+"staging sha256": "eb79ce85289cfc0643e2616cb5243636948642a1a0eee593f404a9757dedc0be",
+"stamp": "2026-10-10_210326",
+"step-2 result sha256": "872801ba7fb03c76b8d31109f7ac433dc6708761ae87966e82c59ecabec6b2a7"
+}

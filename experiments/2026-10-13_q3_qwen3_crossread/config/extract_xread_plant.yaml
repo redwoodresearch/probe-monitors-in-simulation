@@ -1,0 +1,10 @@
+# Qwen3-32B cross-read (RULE.md), set plant: staged by stage_crossread.py (stage_plant_2026-10-13_013537.json), uploaded to the job's Volume as
+# xread_plant_v2/inputs/ (v2: the edited arm named plant; v1 superseded, never extracted). Epochs: {'plant': 148}.
+run: 2026-10-13_xread_plant_v2
+inputs: xread_plant_v2
+inputs_sha256:
+  plant.jsonl: c058e4dc341d68b0ec780158714e6409cf6b6cefa3095560fa61f8799d728412
+model: Qwen/Qwen3-32B
+shards: 2
+chunk_size: 10
+pad_to: 1024

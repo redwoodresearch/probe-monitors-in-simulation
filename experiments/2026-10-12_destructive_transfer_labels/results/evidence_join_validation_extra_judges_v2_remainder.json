@@ -1,0 +1,12 @@
+{
+  "commands_sha256": "0cb1096f02b4c62d9fb6866b31a513097fc696a2ca1e75ae8ec097030d07f514",
+  "definitions_sha256": "3f5f391db8262fa173054352ed3a65cde7bb0ac4c7f91c2eeeda1c3d29e0c6ee",
+  "stages": [
+    {
+      "prepared": ".run_cache/dt_labels_20261012/extra_judges_v2_remainder",
+      "verified_calls": 2910,
+      "join_sha256": "bb68179acc31f1db3ceeb8c3ff90731c56c4ab38f7082ec0f51da9e9eb262eb6",
+      "packets_sha256": "93cde205dfd4707f0a8b902143ba6b21ae1c158edd6585d09f69e94ceeec2f8c"
+    }
+  ]
+}

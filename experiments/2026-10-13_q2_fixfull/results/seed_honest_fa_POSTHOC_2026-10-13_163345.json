@@ -1,0 +1,159 @@
+{
+ "POST HOC": true,
+ "status": "preliminary until Codex",
+ "plan": "PLAN.md Amendment 6",
+ "git": "c77763dc634124ccb147d92c4b5b6085bb5d9ae9",
+ "inputs sha256": {
+  "g3_scores_simh_2026-10-13_163239.json": "092c9dcb69f6f1b433fedd92e6afb35cd17a5f66484640ca61d3e08f1ab98631",
+  "g3_scores_fx_2026-10-13_161130.json": "a5a4d7d44c3ea423f53f53277d279e550626bfdcfbc385fbad3eb7d49cf53c21",
+  "forecast.json": "4243f2cd38d93d33e5b63ef08bc7e3fb3b387198af43e667c8821966504fff77",
+  "stage_record_v2.json": "8c0995c2e59d9c59e9968fe3ecbbd55bb28894d9d1891d609de4431f6acabd30"
+ },
+ "runs": 431,
+ "draws": 2000,
+ "seed": 20261012,
+ "reproduction gate (runs the fix left unchanged)": {
+  "full": {
+   "runs": 6,
+   "max abs diff, all 7 layers": 0.0
+  },
+  "N": {
+   "runs": 32,
+   "max abs diff, all 7 layers": 0.0
+  }
+ },
+ "rates": {
+  "0.01": {
+   "as simulated": {
+    "false alarms (points, 95%)": [
+     1.2761020881670533,
+     [
+      0.580046403712297,
+      2.0896171693735424
+     ]
+    ],
+    "runs caught in at least one fold": 14
+   },
+   "full": {
+    "false alarms (points, 95%)": [
+     2.262180974477958,
+     [
+      1.2180974477958237,
+      3.480278422273782
+     ]
+    ],
+    "runs caught in at least one fold": 18,
+    "paired change, full - as simulated (points, 95%)": [
+     0.9860788863109048,
+     [
+      0.40458236658932706,
+      1.6821345707656614
+     ]
+    ],
+    "runs whose catch rose / fell / stayed": [
+     11,
+     1,
+     419
+    ]
+   },
+   "N": {
+    "false alarms (points, 95%)": [
+     1.5661252900232019,
+     [
+      0.7540603248259861,
+      2.4941995359628772
+     ]
+    ],
+    "runs caught in at least one fold": 16,
+    "paired change, N - as simulated (points, 95%)": [
+     0.2900232018561485,
+     [
+      0.05800464037122954,
+      0.6380510440835265
+     ]
+    ],
+    "runs whose catch rose / fell / stayed": [
+     4,
+     0,
+     427
+    ]
+   },
+   "real honest (the fit's runs), reference": {
+    "runs": 990,
+    "false alarms (points, 95%)": [
+     1.48989898989899,
+     [
+      0.9191654179391588,
+      2.11377011121909
+     ]
+    ]
+   }
+  },
+  "0.05": {
+   "as simulated": {
+    "false alarms (points, 95%)": [
+     4.582366589327147,
+     [
+      3.0147911832946637,
+      6.380510440835267
+     ]
+    ],
+    "runs caught in at least one fold": 32
+   },
+   "full": {
+    "false alarms (points, 95%)": [
+     6.090487238979119,
+     [
+      4.234338747099768,
+      8.294663573085847
+     ]
+    ],
+    "runs caught in at least one fold": 41,
+    "paired change, full - as simulated (points, 95%)": [
+     1.5081206496519721,
+     [
+      0.4640371229698377,
+      2.494199535962877
+     ]
+    ],
+    "runs whose catch rose / fell / stayed": [
+     22,
+     5,
+     404
+    ]
+   },
+   "N": {
+    "false alarms (points, 95%)": [
+     5.046403712296984,
+     [
+      3.3642691415313224,
+      6.845997679814377
+     ]
+    ],
+    "runs caught in at least one fold": 37,
+    "paired change, N - as simulated (points, 95%)": [
+     0.46403712296983757,
+     [
+      -0.17401392111368885,
+      1.0440835266821349
+     ]
+    ],
+    "runs whose catch rose / fell / stayed": [
+     13,
+     4,
+     414
+    ]
+   },
+   "real honest (the fit's runs), reference": {
+    "runs": 990,
+    "false alarms (points, 95%)": [
+     6.186868686868687,
+     [
+      4.79805442147649,
+      7.760438012295082
+     ]
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "host": "old",
+ "rerun_reason": "infra: RateLimitError",
+ "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_old",
+ "failures_source": {
+  "commit": "36a2047fa643a37921b2e2ae59740c0f54523a0b",
+  "path": "experiments/2026-10-14_q3_new_mains_launch/results/sim_ratelimit_failures_2026-10-15.json",
+  "sha256": "e9a8832f99656d7110b277581896022eb7ae6a588f2624ed1db0f01388b75346"
+ },
+ "rerun_of": [
+  {
+   "cell": "t112_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t112_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t112_tiktok/2026-10-15T07-19-11-00-00_la-tiktok-sim-attack-1_2yxmoYNF4xdXMEbrVyQA6n.eval",
+   "eval_sha256": "6d74f0d95b77cb8c5da4a68cdbeb41801f5f7a4ba1f695e85312f9854e85c153",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t122_shared_dotfiles",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t122_shared_dotfiles",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t122_shared_dotfiles/2026-10-15T07-10-06-00-00_la-shared-dotfiles-sim-attack-1_BUg9fzj8RZtjxVNZRxWyXR.eval",
+   "eval_sha256": "fb3c398ed9aaae69b1743a4c69591a33fa6dbc8ed896d1c6fbf40fe5ef958d63",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t132_file_indexing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t132_file_indexing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t132_file_indexing/2026-10-15T07-22-15-00-00_la-file-indexing-sim-attack-1_nvNv6eiNxHKzPWvxUytTdd.eval",
+   "eval_sha256": "6d50f829c08ebebcd66b23aad9485c51063784d88c3a8fcf2aa5397736414480",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t154_clinical_trial",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t154_clinical_trial",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t154_clinical_trial/2026-10-15T07-25-19-00-00_la-clinical-trial-sim-attack-1_eNFw8aXnG3vHivPW4DRhMU.eval",
+   "eval_sha256": "47ffe1a9777806a0675c105665328da82c584a7f257e182e99ee590ff57d59a5",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t159_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t159_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t159_media_processing/2026-10-15T07-10-06-00-00_la-media-processing-sim-attack-1_54686WSq5P2jJfCJDpXL25.eval",
+   "eval_sha256": "f4e55b5550b31de5c6556e304807ad9e3176a308182721bbc66c3f5c1b12fd19",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t164_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t164_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t164_media_processing/2026-10-15T07-16-08-00-00_la-media-processing-sim-attack-1_EfXULdsCnEsqLGUfy6WNb7.eval",
+   "eval_sha256": "59deedd330017bb086f064b0acada411563f4f193a38520a431a0f6bcac08315",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t165_clinical_trial",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t165_clinical_trial",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t165_clinical_trial/2026-10-15T07-19-11-00-00_la-clinical-trial-sim-attack-1_YBUAsQZp4NYM6ufNMuKycH.eval",
+   "eval_sha256": "777bf52f5456e302addf65fcb739802031d4e77f1f942137ac2d1461fa8677a6",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t178_clinical_trial",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t178_clinical_trial",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t178_clinical_trial/2026-10-15T07-37-38-00-00_la-clinical-trial-sim-attack-1_f7dAtLkiW7poRzaeCYx4jF.eval",
+   "eval_sha256": "9f1477ef88bf5044442fd13988cf7a2518bbc60953fa41bf36e8055d9526c3c1",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t190_clinical_trial",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t190_clinical_trial",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t190_clinical_trial/2026-10-15T07-22-15-00-00_la-clinical-trial-sim-attack-1_cEeXCAQBBRwHBjsaxyppK9.eval",
+   "eval_sha256": "890232b41eb7191c83375bb8743db77d7a3f9c99a64759a31b5f09d2c09015e9",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t196_clinical_trial",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t196_clinical_trial",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t196_clinical_trial/2026-10-15T07-34-34-00-00_la-clinical-trial-sim-attack-1_Fj72hg8RzHfEH6EHo5FdAq.eval",
+   "eval_sha256": "926715b220b3764a583adf9c3bbc0158bfe3bb459600828ad640dbe7d5e0b927",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t27_slack_clone",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t27_slack_clone",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t27_slack_clone/2026-10-15T07-25-19-00-00_la-slack-clone-sim-attack-1_YTdHAZo7zMimY5aoWA9Eqj.eval",
+   "eval_sha256": "9e7a0dff2b9d41ad783763ea64c2cb25aee816321b1785829b061997d2d74b25",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t35_user_tracking",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t35_user_tracking",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t35_user_tracking/2026-10-15T07-08-35-00-00_la-user-tracking-sim-attack-1_mbE9W6PkxYRhRe53v8CTPN.eval",
+   "eval_sha256": "0710912f764e78c35a6c7e91e13278088996cec275c3790b1cb4e0ec1a01cf22",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t58_model_registry",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t58_model_registry",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t58_model_registry/2026-10-15T07-19-11-00-00_la-model-registry-sim-attack-1_j3BkGtMuZDCmtSkFffWQQm.eval",
+   "eval_sha256": "c8395f98f8a29088b7bafe780b3d889b29c9839d67522bbd267acec242926941",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t82_clinical_trial",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_old",
+   "run_key": "sim_attack@september/t82_clinical_trial",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_old/sim_attack@september/t82_clinical_trial/2026-10-15T07-08-34-00-00_la-clinical-trial-sim-attack-1_3Kgz7p8pRD3L5UAKwNokDW.eval",
+   "eval_sha256": "90a56d9e57d0543529a70b944823ec47ad7060395dbe7e3c49ec87963af5086b",
+   "pure_rate_limit": true
+  }
+ ]
+}

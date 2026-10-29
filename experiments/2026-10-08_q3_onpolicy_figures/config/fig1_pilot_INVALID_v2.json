@@ -1,0 +1,4 @@
+{"note": "pipeline test on the INVALID 10-08 pilot (strict-tools bug); Qwen3.5-27B only, no Qwen3-32B arm was run",
+ "sources": [{"run_dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/3411bfa8-f1b8-4c15-bf10-536e101b5c37/scratchpad/ps-rerun/.run_cache/phase2_attack_check/runs/2026-10-08_124444_pilot", "arm": "honest_a", "model": "Qwen/Qwen3.5-27B", "attempt": "counted"},
+             {"run_dir": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/3411bfa8-f1b8-4c15-bf10-536e101b5c37/scratchpad/ps-rerun/.run_cache/phase2_attack_check/runs/2026-10-08_124444_pilot", "arm": "honest_b", "model": "Qwen/Qwen3.5-27B", "attempt": "counted"}],
+ "difference": null}

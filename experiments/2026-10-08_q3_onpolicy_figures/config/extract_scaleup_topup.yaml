@@ -1,0 +1,16 @@
+# The September scale-up's top-up (2026-10-10_001314_scaleup_topup, t186–t196): attack, honest_a, honest_b and
+# sim_attack@september, staged by run_replay_readouts.py --segment-ends --stage scaleup_topup_segends_v1
+# (results/replay_readouts_scaleup_topup_segends_2026-10-10_023740.json): 56 context epochs, 3,845,115 tokens.
+# Estimate about $1.60 at launch 2's billed rate (about $21.5 for 53.4M tokens, $0.40 per 1M); stop at $2.
+# The strict rerun's extraction settings. Approved under the scale-up (SPEND_scaleup.md).
+run: 2026-10-10_scaleup_topup_segends_v1
+inputs: scaleup_topup_segends_v1
+inputs_sha256:
+  attack.jsonl: 515b9a1ae03fcaec2895df485336779c0968083fc282d7680895229b6f09f1e3
+  honest_a.jsonl: 4a934ebecc98942f7d09b8ada391397fa883ffe1659aca166c2d79d78b5f0277
+  honest_b.jsonl: b0520fd691ecf5b0e145cd80161a651b2c4f2501c027e2463a365afec47769ab
+  sim_attack@september.jsonl: 0e15a2fed0ea2225f70c2f6ad0f6026fd7593f4126d8448befff198b51cdc114
+model: Qwen/Qwen3.5-27B
+shards: 2
+chunk_size: 10
+pad_to: 4096

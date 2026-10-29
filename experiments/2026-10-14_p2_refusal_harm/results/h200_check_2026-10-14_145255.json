@@ -1,0 +1,44 @@
+{
+ "label": "RULE.md Amendment 2 (H200 cross-hardware check)",
+ "git": "0eb2b6c3762179db69596bb6b848b605130ee4e8",
+ "app": "probe-shift_aswin-surya_sub-p2probes_refh200_kill-2026-11-13",
+ "stamp (PT)": "2026-10-14_145255",
+ "gpu": "NVIDIA H200",
+ "h200_run_own_layer_choice (descriptive)": {
+  "harmfulness": 34,
+  "refusal": 47
+ },
+ "load_s": 29,
+ "forward_s": 85,
+ "reads": "probe-shift_aswin-surya_sub-p2probes_reads_kill-2026-11-13:/refusal/2026-10-14_145255",
+ "directions": {
+  "harmfulness": {
+   "position": "inst",
+   "layer": 34,
+   "passes": true,
+   "chosen": {
+    "cosine_h100_h200": 0.9999918017578329,
+    "val_auroc": 1.0,
+    "test_auroc": 0.999755859375
+   },
+   "file": {
+    "path": "harmfulness_direction_h200_2026-10-14_145255.safetensors",
+    "sha256": "77e6af62e1ef50ae6ce9c5d69f2ac532492f0e98144014064b5972ddb724e4f6"
+   }
+  },
+  "refusal": {
+   "position": "post",
+   "layer": 47,
+   "passes": true,
+   "chosen": {
+    "cosine_h100_h200": 0.99999606804222,
+    "val_auroc": 1.0,
+    "test_auroc": 1.0
+   },
+   "file": {
+    "path": "refusal_direction_h200_2026-10-14_145255.safetensors",
+    "sha256": "7f1f3619a4c09e65d1ed78edffd954ce1e959f81f4da80fc2b05ea2bb85528ea"
+   }
+  }
+ }
+}

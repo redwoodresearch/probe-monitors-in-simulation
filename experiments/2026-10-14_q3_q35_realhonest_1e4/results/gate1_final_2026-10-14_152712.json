@@ -1,0 +1,74 @@
+{
+ "made": "2026-10-14 15:27:12 PT",
+ "launch_finished": "2026-10-14T15:27:11-07:00",
+ "not_run": {
+  "honest_b": 699
+ },
+ "stopped_by_signal": [
+  "2"
+ ],
+ "by_arm": {
+  "honest_b": {
+   "runs": 281,
+   "steps": 20012,
+   "runs_step_limit": 6,
+   "runs_time_limit": 0,
+   "runs_with_capped_turn": 7,
+   "runs_with_timeout": 0,
+   "runs_failed_after_start": 70,
+   "runs_usable": 207,
+   "runs_ended_submit": 200,
+   "runs_out_of_context": 0,
+   "runs_with_guard_stop": 8,
+   "runs_proxy_unknown": 63,
+   "runs_without_sample": 4,
+   "runs_with_counting_errors": 0,
+   "calls_unknown_to_proxy": 1,
+   "calls_without_request_id": 0,
+   "calls_without_complete_token_record": 37,
+   "prestart_redraws": 9,
+   "reference_reruns": 0
+  }
+ },
+ "replicates": {
+  "r1": {
+   "runs": 196,
+   "state done": 192,
+   "ended": 192,
+   "usable": 188,
+   "state stopped": 4,
+   "pass": true
+  },
+  "r2": {
+   "runs": 196,
+   "state done": 37,
+   "ended": 37,
+   "usable": 19,
+   "state stopped": 48,
+   "state not run": 111,
+   "pass": false
+  },
+  "r3": {
+   "runs": 196,
+   "state not run": 196,
+   "ended": 0,
+   "usable": 0,
+   "pass": false
+  },
+  "r4": {
+   "runs": 196,
+   "state not run": 196,
+   "ended": 0,
+   "usable": 0,
+   "pass": false
+  },
+  "r5": {
+   "runs": 196,
+   "state not run": 196,
+   "ended": 0,
+   "usable": 0,
+   "pass": false
+  }
+ },
+ "all_pass": false
+}

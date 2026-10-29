@@ -1,0 +1,15 @@
+{
+ "target": "ilnm_s4rgap_sim2_try2",
+ "suffix": "_try2",
+ "sets": [
+  {
+   "target": "ilnm_s4rgap_sim2_try2",
+   "arm": "sim_attack@september",
+   "staged_file": "/ev/ilnm_s4rgap_sim2_v1_try2/inputs/sim_attack@september.jsonl",
+   "staged_sha": "258641e366dc8a97e701323ff0b51e43c465234e88a35aa639415953993e5771",
+   "epochs": 1,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

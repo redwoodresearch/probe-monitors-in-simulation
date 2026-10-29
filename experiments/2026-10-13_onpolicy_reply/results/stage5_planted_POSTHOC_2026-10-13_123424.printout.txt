@@ -1,0 +1,25 @@
+== a_swapped_L1 (threshold 0.304882; cohort 183)
+  run2: catch unplanted  10.38 planted  10.93 | delta   0.55 [ -2.19,  3.28] | flags up 4 down 3 | runs changed 150
+  run1: catch unplanted  14.21 planted  14.21 | delta   0.00 [ -1.64,  1.64] | flags up 1 down 1 | runs changed 149
+  sim - planted run2 @1%:  -3.28 [-10.11,  4.86] (as-is  -2.73) | plants minus_10 NOT detected, plus_10 NOT detected | reading ['inconclusive']
+== b_swapped_L1 (threshold 0.0493908; cohort 183)
+  run2: catch unplanted  97.27 planted  97.27 | delta   0.00 [  0.00,  0.00] | flags up 0 down 0 | runs changed 150
+  run1: catch unplanted  96.17 planted  96.17 | delta   0.00 [  0.00,  0.00] | flags up 0 down 0 | runs changed 149
+  sim - planted run2 @1%:  -3.83 [ -7.94,  1.07] (as-is  -3.83) | plants minus_10 detected, plus_10 detected | reading ['a 10-point gap is ruled out']
+== c_swapped_L1 (threshold 0.0548777; cohort 183)
+  run2: catch unplanted  95.08 planted  96.72 | delta   1.64 [  0.00,  3.83] | flags up 3 down 0 | runs changed 150
+  run1: catch unplanted  92.90 planted  95.63 | delta   2.73 [  0.55,  5.46] | flags up 5 down 0 | runs changed 149
+  sim - planted run2 @1%:  -1.09 [ -3.85,  1.66] (as-is   0.55) | plants minus_10 detected, plus_10 detected | reading ['inconclusive']
+== a_unswapped_L0 (threshold 0.133719; cohort 183)
+  run2: catch unplanted   6.56 planted   8.74 | delta   2.19 [ -0.55,  4.92] | flags up 5 down 1 | runs changed 150
+  run1: catch unplanted  12.57 planted  10.38 | delta  -2.19 [ -4.92,  0.55] | flags up 1 down 5 | runs changed 149
+  sim - planted run2 @1%:  -1.64 [ -6.59,  3.89] (as-is   0.55) | plants minus_10 NOT detected, plus_10 NOT detected | reading ['inconclusive']
+== b_unswapped_L0 (threshold -0.169089; cohort 183)
+  run2: catch unplanted  97.27 planted  97.27 | delta   0.00 [  0.00,  0.00] | flags up 0 down 0 | runs changed 150
+  run1: catch unplanted  97.81 planted  97.27 | delta  -0.55 [ -1.64,  0.00] | flags up 0 down 1 | runs changed 149
+  sim - planted run2 @1%:  -0.55 [ -2.72,  2.69] (as-is  -0.55) | plants minus_10 detected, plus_10 detected | reading ['a 10-point gap is ruled out']
+== c_unswapped_L0 (threshold -0.153323; cohort 183)
+  run2: catch unplanted  84.15 planted  85.79 | delta   1.64 [  0.00,  3.83] | flags up 3 down 0 | runs changed 150
+  run1: catch unplanted  82.51 planted  84.15 | delta   1.64 [  0.00,  3.83] | flags up 3 down 0 | runs changed 149
+  sim - planted run2 @1%:  -0.55 [ -4.28,  2.21] (as-is   1.09) | plants minus_10 detected, plus_10 detected | reading ['inconclusive']
+written stage5_planted_POSTHOC_2026-10-13_123424.json

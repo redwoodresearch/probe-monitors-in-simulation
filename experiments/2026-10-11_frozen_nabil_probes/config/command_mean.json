@@ -1,0 +1,8 @@
+{
+  "run": "2026-10-12_deception_command_mean_v1",
+  "model": "Qwen/Qwen3.5-27B",
+  "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+  "rows_sha256": "db2ba665c6dc1e7b2c15d04fdfd7e4a175786f9be726c3f6de0e996685ad8d85",
+  "shards": 2,
+  "endpoint_score_atol": 0.001
+}

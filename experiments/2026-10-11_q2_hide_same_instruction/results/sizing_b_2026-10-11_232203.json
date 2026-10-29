@@ -1,0 +1,27 @@
+{
+ "amendment": "AMENDMENT_B.md",
+ "git": "902c292029428c9d78410cdd8bdd9e5dfff95e89",
+ "readout": "readout_2026-10-11_223529.json",
+ "usable samples (B)": 212,
+ "usable named / hid (B)": [
+  125,
+  87
+ ],
+ "scored usable samples out of memory": 0,
+ "pilot runs with both groups": 17,
+ "matched length L per run: min / median / max": [
+  11,
+  40.0,
+  40
+ ],
+ "within-run, within-group SD of the matched readout (frozen honest SD units)": 0.7510787898411438,
+ "degrees of freedom": 157,
+ "SD used (upper 90% bound)": 0.8106838904147722,
+ "full-stage runs": 176,
+ "full-stage tasks": 139,
+ "k": 8,
+ "true D": 0.3,
+ "simulations": 300,
+ "P(A detects at 0.3 SD), k = 8": 0.7166666666666667,
+ "gate": "fails: row 11 closes, no further readout search"
+}

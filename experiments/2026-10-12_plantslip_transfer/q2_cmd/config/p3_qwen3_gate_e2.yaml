@@ -1,0 +1,13 @@
+# Planted slips P3 (PINS.md): the second-run gate (Aswin's matched-subset decision, 10-12). Qwen3-32B reads the 20
+# unplanted e2 controls as the P3 gate read the e1 ones (32k cut, bfloat16, sdpa, layers 8 and 16, stop after 16); their
+# scores must reproduce the dump 2026-10-06_la_segment-end_qwen3-32b_alllayers_v1's within 1e-3.
+run: 2026-10-12_q2_plantP3_gate-e2_qwen3-32b_v1
+inputs_from: 2026-10-12_q2_plantcmd_e1_inputs_v1   # staged by run_stage_cmd.py
+transcripts: gate_transcripts_p3_e2.json            # the 20 e2 controls of gate_transcripts.json, and the inputs' sha256s
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 2
+chunk_size: 10
+layers: [8, 16]

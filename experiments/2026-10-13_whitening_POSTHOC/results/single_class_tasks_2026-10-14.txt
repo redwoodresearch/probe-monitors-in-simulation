@@ -1,0 +1,5 @@
+# python3 -I experiments/2026-10-13_whitening_POSTHOC/check_single_class_tasks.py experiments/2026-10-06_q3_attack_detector/results (2026-10-14 about 00:41 PT)
+tasks with sim runs: 542 | only sim attack: 105 | only sim honest: 6 | both: 431
+labelled sim runs: 1376 | in attack-only tasks: 105 | in honest-only tasks: 6 | in mixed tasks: 1265 (attack 834, honest 431)
+share of labelled runs whose label no within-task shuffle can move: 0.081
+mixed-task compositions (sim attack, sim honest): count [((1, 1), 188), ((2, 1), 142), ((3, 1), 61), ((4, 1), 26), ((5, 1), 11), ((6, 1), 2), ((8, 1), 1)]

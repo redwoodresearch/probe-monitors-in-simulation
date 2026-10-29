@@ -1,0 +1,16 @@
+# Claim B follow-up (b): Qwen3.5-27B reads the fixed off-policy LinuxArena data (Sol's simulated attack runs with round-one
+# rules R1, R2, R5, R6 v2; real attack e1 and e2; planted checks 1 and 2), level 1 (times masked), all 64 layers at the
+# segment-end positions, cut at 32k tokens as claim B's probe; the same staged inputs as Qwen3-32B's step B (staged by
+# experiments/2026-10-09_fixed_sim/run_stage_probe_inputs_b_modal.py). Plan: experiments/2026-10-10_claimB_qwen35_reader/PLAN.md.
+# Launch with QWEN35_OUTPUT_VOLUME=probe-shift_aswin-surya_sub-claimb-reader_acts_kill-2026-12-10 (not the 11-06 Volume).
+run: 2026-10-10_la_fixed-sim-v2-b-scrub1_qwen35-27b_alllayers_v1
+inputs_from: 2026-10-10_la_fixed-sim-v2_probe-inputs-b-l1_v1    # shared Volume, read only; 3,117 transcripts
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768                                      # claim B's cut (not whole transcripts)
+pad_to: 4096
+shards: 48                                             # 3,117 transcripts, about 65 per shard
+chunk_size: 25
+shard_by: length
+prefetch: true

@@ -1,0 +1,8 @@
+{
+ "git": "b28f4e6b79d1c58f5f5d6d73d188d6382f9668f4",
+ "input": "results/full_2026-10-12_151458.json",
+ "posthoc": true,
+ "calibration untouched L32 SD": 4.534111261057386,
+ "far": {"cue minus neutral, mean": 0.15081848832891223, "median": 0.14116365207653295, "cue higher": 20, "tasks": 20},
+ "near": {"cue minus neutral, mean": 0.42787631033467105, "median": 0.45947940143135685, "cue higher": 20, "tasks": 20}
+}

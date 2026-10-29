@@ -1,0 +1,11 @@
+# On-policy title cells, Amendment 1 (RULE.md here): onpol_qwen3.yaml's settings on stage_repair_onpol.py's fix-full + F9 copy of
+# Qwen3.5-27B's simulated runs (191 attack, 19 honest), the Qwen3-32B cell's (ffavg) repair. All 64 layers.
+run: 2026-10-14_q3onpol_q35own_repair_fullF9_qwen3-32b_all_v1
+inputs_from: 2026-10-14_q3onpol_q35own_repair_fullF9_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 8
+chunk_size: 10
+mean_final: true

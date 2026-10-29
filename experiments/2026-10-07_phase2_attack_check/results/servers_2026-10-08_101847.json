@@ -1,0 +1,14 @@
+{
+ "status": "failed: KeyboardInterrupt()",
+ "mode": "deployed",
+ "stand_in": true,
+ "servers": [
+  {
+   "name": "probe-shift_aswin-surya_sub-phase2_srv0c656da_kill-2026-11-06",
+   "mode": "deployed",
+   "call_id": "fc-01M4E8CQHNTV51Y1MEQYYRKA8Y",
+   "app_id": "ap-Yn307crwg699vqIcslSFaq",
+   "stopped_after_failure": true
+  }
+ ]
+}

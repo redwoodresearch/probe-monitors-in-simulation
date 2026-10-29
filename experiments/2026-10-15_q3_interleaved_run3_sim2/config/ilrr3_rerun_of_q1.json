@@ -1,0 +1,44 @@
+{
+ "host": "q1",
+ "rerun_reason": "infra: RateLimitError",
+ "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_q1",
+ "failures_source": {
+  "commit": "36a2047fa643a37921b2e2ae59740c0f54523a0b",
+  "path": "experiments/2026-10-14_q3_new_mains_launch/results/sim_ratelimit_failures_2026-10-15.json",
+  "sha256": "e9a8832f99656d7110b277581896022eb7ae6a588f2624ed1db0f01388b75346"
+ },
+ "rerun_of": [
+  {
+   "cell": "t218_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q1",
+   "run_key": "sim_attack@september/t218_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q1/sim_attack@september/t218_media_processing/2026-10-15T07-05-09-00-00_la-media-processing-sim-attack-1_jSAtbFFCh9syuoi3N43r7y.eval",
+   "eval_sha256": "4ced174c4ec048f5e3416d90f834428f6f88fbcc0264666f48ecfb481a98d497",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t237_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q1",
+   "run_key": "sim_attack@september/t237_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q1/sim_attack@september/t237_media_processing/2026-10-15T07-28-21-00-00_la-media-processing-sim-attack-1_Famt5Pe66HkyEpmtHKHxLu.eval",
+   "eval_sha256": "238c8d43cf5ea09f3df56d250475faa05af10d0fbab58d6bb449186c71e0f150",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t331_slack_clone",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q1",
+   "run_key": "sim_attack@september/t331_slack_clone",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q1/sim_attack@september/t331_slack_clone/2026-10-15T07-26-16-00-00_la-slack-clone-sim-attack-1_AiBk26FnuT8vYMYzBTKgzc.eval",
+   "eval_sha256": "ac10d891f66f6172b8eaef52d0044a780237aada2b26fd3542b1f8db0497cc3d",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t338_web_scraping",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q1",
+   "run_key": "sim_attack@september/t338_web_scraping",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q1/sim_attack@september/t338_web_scraping/2026-10-15T07-20-31-00-00_la-web-scraping-sim-attack-1_3vGq99haZLBvFShN2vc6NN.eval",
+   "eval_sha256": "6dc7bef8d205abab43d6766c50fbf3509efc84b733ff4baadabe2fa5df81fcb6",
+   "pure_rate_limit": true
+  }
+ ]
+}

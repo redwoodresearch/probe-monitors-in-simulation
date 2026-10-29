@@ -1,0 +1,67 @@
+{
+  "what": "Addendum 18b/18c/18d: the pre-stated counts, called by path. 18c: B share_wnu / mean / median diagnostic (RULE l.3002); 18d: B #identity diagnostic (R2 P1). Keys and counts only.",
+  "verdict_counts": {
+    "rows": 2662,
+    "thresholds": 72,
+    "cells": 36,
+    "controls": 3,
+    "groups": 40,
+    "pass": true
+  },
+  "record_consistency_rows": 144,
+  "subset_add18": {
+    "all": {
+      "real_line": 72,
+      "panel_G": 72,
+      "panel_Y": 72,
+      "pool_runs": 288,
+      "pool_per_run_alarm_share": 288,
+      "pool_per_run_alarm_share_with_no_unit_runs": 288,
+      "pool_units_per_run_mean": 288,
+      "pool_units_per_run_median": 288,
+      "pool_zero_unit_sum": 288,
+      "pool_identity": 288,
+      "poolA_n_units": 144,
+      "sizes_B_after_runs": 18,
+      "sizes_S_after_runs": 18,
+      "n_mains": 18,
+      "cohort_cells": 72
+    },
+    "diagnostic": {
+      "pool_per_run_alarm_share_with_no_unit_runs": 144,
+      "pool_units_per_run_mean": 144,
+      "pool_units_per_run_median": 144,
+      "pool_identity": 144
+    }
+  },
+  "coverage_per_label": {
+    "real_line": 4,
+    "panel_G": 4,
+    "panel_Y": 4,
+    "pool_runs": 16,
+    "pool_per_run_alarm_share": 16,
+    "pool_per_run_alarm_share_with_no_unit_runs": 8,
+    "pool_units_per_run_mean": 8,
+    "pool_units_per_run_median": 8,
+    "pool_zero_unit_sum": 16,
+    "pool_identity": 8,
+    "poolA_n_units": 8,
+    "sizes_B_after_runs": 1,
+    "sizes_S_after_runs": 1,
+    "n_mains": 1,
+    "cohort_cells": 4
+  },
+  "coverage_slots": 270,
+  "membership_structural": {
+    "n_labels": 18,
+    "per_side": 1,
+    "cell": "nm014_auto_workflow",
+    "excluded_known": {
+      "B": [
+        "honest_b|nm105_media_processing",
+        "honest_b|t83_auto_workflow"
+      ],
+      "S": []
+    }
+  }
+}

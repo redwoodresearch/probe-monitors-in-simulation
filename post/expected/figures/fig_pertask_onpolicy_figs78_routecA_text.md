@@ -1,0 +1,7 @@
+# Figure 7: Per-task agreement with the anchor real run
+
+Full length (no 32k cut). Training length (each probe's FIT spec): own_all_rs: (i) trained on whole transcripts: uncut scoring is within the training length range; not OOD by length (whole-transcript retrain (uncut) of own_all_rs_L48). One point per task with all three runs scored (1,308 tasks; equal to the anchor record's n_cells by key), probes scoring commands. Each axis shows how far a run's most suspicious action sits above (or below) its own alarm line; dashed lines mark zero, so points right of or above them are caught. Anchor: real run 1. R² from the anchor record (pooled_all_origins set). Intervals (pooled_all_origins, union stream; 09's caption, verbatim): interval: bootstrap over main tasks (one draw per main across sets); thresholds fixed at the point estimate (threshold uncertainty not included, so the interval is likely somewhat narrow). Post hoc.
+
+Source: fig_pertask_onpolicy_figs78_routecA_source.json (inputs by path@sha; every plotted value with its key).
+
+Status (not in the image or the caption): label, verbatim from the anchor record's label sidecar: "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction; D1 read from route C pooled A @ a936a5d9762763f9feed351aebdeeec2d8114f21 via Stage D @ c22edd8d3cc1221225dec418ab00b40515d5ba43 (read, never recomputed; identity-guarded on the bytes read)"

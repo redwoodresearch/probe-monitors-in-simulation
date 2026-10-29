@@ -1,0 +1,90 @@
+{
+ "label": "own_a tight gap fill on nm360: the 7 folders absent from 2e's config/owna_arms.json @ 724e3dbf0 (4f's relay, about 11:2x PT 10-15)",
+ "source": "Sol manifests /scaleup/<arm>/sol/manifest_sol.json on convaudit_work, read 2026-10-15 ~11:2x PT; extraction records as each Sol manifest names them (sha-checked)",
+ "arms": [
+  {
+   "arm": "nm360_s4d_sim_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "fbbc5d250cbf3cb5a1292f8873a317d93f34a1197f2041d93065dc726ecc4185",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b16_nm360_s4d_sim/extract_chain_nm360_s4d_sim_extract_v1_a1_2026-10-15_041813.json",
+    "sha256": "b7da360449d1ad9d74935f6ae308e24cd12ab750ffc4091056e5acfa568424f4",
+    "attempt": 1,
+    "run": "nm360_s4d_sim_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s5r_sim_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "486976fef8709be61d4ebab506a446a6baf8f1b0b9b5089f242da3a70176e36a",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b15_nm360_s5r_sim/extract_chain_nm360_s5r_sim_extract_v1_a1_2026-10-15_035924.json",
+    "sha256": "f54191414581dc89632e2dd01f7e9aee86ca37a354066065c0a81b8f722cc9d2",
+    "attempt": 1,
+    "run": "nm360_s5r_sim_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4r_main_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "d1b799cd7b3834c47d2ea6caffce36c153a0ba33af295ef610f248a1e39cabf1",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b41_nm360_s4r_main/extract_chain_nm360_s4r_main_extract_v1_a1_2026-10-15_101840.json",
+    "sha256": "489d788a4192d02d5a15820ea9ca9a56be5530caa69c6a5bd7510641f5369abb",
+    "attempt": 1,
+    "run": "nm360_s4r_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4r_main_v1__honest_a",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "86f1da8a25845eb8170f1bcd90f7d74b78a05c42a520dcfdfb7e43c3a9cbdb7d",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b41_nm360_s4r_main/extract_chain_nm360_s4r_main_extract_v1_a1_2026-10-15_101840.json",
+    "sha256": "489d788a4192d02d5a15820ea9ca9a56be5530caa69c6a5bd7510641f5369abb",
+    "attempt": 1,
+    "run": "nm360_s4r_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4r_main_v1__honest_b",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "747b4667a468adb70fe90aeb6c5f9f9c690181a2477874d03f1bda795dd2520f",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b41_nm360_s4r_main/extract_chain_nm360_s4r_main_extract_v1_a1_2026-10-15_101840.json",
+    "sha256": "489d788a4192d02d5a15820ea9ca9a56be5530caa69c6a5bd7510641f5369abb",
+    "attempt": 1,
+    "run": "nm360_s4r_main_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4r_run2_v1__attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "5b3aca22b245dc39f661f231d037cd987687f22406281d45b90c91f58a4e766e",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b41_nm360_s4r_run2/extract_chain_nm360_s4r_run2_extract_v1_a1_2026-10-15_101840.json",
+    "sha256": "b7fa5bcfa26e6cb4b456b7132c8d2ef190b3c0def38b1f083b57cf0d18b2e4fd",
+    "attempt": 1,
+    "run": "nm360_s4r_run2_extract_v1",
+    "union": false
+   }
+  },
+  {
+   "arm": "nm360_s4r_sim_v1__sim_attack",
+   "sol_dir": "sol",
+   "sol_manifest_sha256": "5345ae7a53f6081a055c2400d1b6f9adbf1b335643b3e99a44c2e0826b26bf67",
+   "extract_record": {
+    "path": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/a683364c-3a60-44cd-bb15-e08d87dd4f9a/scratchpad/su311/b41_nm360_s4r_sim/extract_chain_nm360_s4r_sim_extract_v1_a1_2026-10-15_101742.json",
+    "sha256": "8ee13ced4d048e748370d7d1a94651d7f2d0ddd0aeeaaa24cb194b3c84855723",
+    "attempt": 1,
+    "run": "nm360_s4r_sim_extract_v1",
+    "union": false
+   }
+  }
+ ]
+}

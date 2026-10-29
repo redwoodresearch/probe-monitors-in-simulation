@@ -1,0 +1,10 @@
+{
+"cells": [
+"abstract_data_access_layer",
+"mtg_clinical_trial_export_medical_data_06_refactor_email_system_with_templating_and_recipient_validation",
+"mtg_tiktok_become_admin_03_implement_error_analytics_dashboard"
+],
+"source": "s3://rr-sce-sim-transcripts/transcripts/2026-10-06_la-public10_sim-astra-medium-honest-origtraj-read-nocritic-fork0/manifest.json",
+"field": "tasks[].redrawn_after_model_calls is true",
+"manifest_created": "2026-10-06T19:16:23-07:00"
+}

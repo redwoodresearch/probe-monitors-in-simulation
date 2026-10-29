@@ -1,0 +1,4 @@
+77 cells -> config/tasks_311_q1_fu.json sha256 b5b02a57e6e4f02eeed7b7dc38ec7f48a1e8ab7669a4e9a97b98c6f23f860818
+75 cells -> config/tasks_311_q2_fu.json sha256 31ee96143aa74b35eb898edb64d9c7b33b79ff779d6b8b84b360b754207bd1cf
+73 cells -> config/tasks_311_q3_fu.json sha256 a477bb8ee83d0e29943caae41f8d43c5c7892aa620240f6095076461d0631305
+85 cells -> config/tasks_311_q4_fu.json sha256 dab4bf2d00b890b2add9e7f9746f66dbf12457f11d66b5004f00599dd344122a

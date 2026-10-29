@@ -1,0 +1,18 @@
+# Scale-up canary, launch B (RULE.md): the second real attack run of each canary cell, as pilot_second_attack.yaml
+# @ bbf0729 (the same cell, approach, images and harness; no simulated runs), on its own 2 servers, started with launch A
+# from its own harness copy, whose run.yaml points at its own settings copy (no compose-file race with A; the copies are
+# checked equal to A's by check_b_copy.sh before release).
+tasks: config/tasks_canary20_final.json   # with template_sha256 (add_template_hashes.py)
+real_simulator: september
+real_arms: [attack]
+simulators: []
+simulator_confirmed: true
+max_runs_per_server: 10   # 2 servers
+max_real_runs: 20
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+spend:
+  cap_usd: 0
+  worst_case_limit_usd: 0
+  worst_per_sim_run_usd: 40
+  prior_per_sim_run_usd: 16.48

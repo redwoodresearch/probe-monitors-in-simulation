@@ -1,0 +1,38 @@
+The two Seed-OSS-36B extractors, as run (aswin/q2-fixfull @ f9f2ea34), are on S3 only (results/s3_manifest_v1.json):
+run_extract_g3_fx.py (718 lines, sha256 a8c915f630d675038d7908188c232ca15066d3d19c620cf59c479d3db7a929af) and run_extract_g3_f9.py (721 lines, sha256 d938131193a4801b345bcea44ef0630bdf83c358f2a2285a8dd517fe117ec033). Their source,
+run_extract_g3_rep.py @ 1c277bfc, is on the G3 follow-ups branch, not yet on main. This file is the diff between the two, for
+review. Rebuild the F9 copy from the fx copy:
+  patch -o /tmp/run_extract_g3_f9.py run_extract_g3_fx.py < experiments/2026-10-13_q2_fixfull/run_extract_g3_fx_to_f9.diff
+  shasum -a 256 /tmp/run_extract_g3_f9.py   # must print d938131193a4801b345bcea44ef0630bdf83c358f2a2285a8dd517fe117ec033
+
+--- a/experiments/2026-10-13_q2_fixfull/run_extract_g3_fx.py
++++ b/experiments/2026-10-13_q2_fixfull/run_extract_g3_f9.py
+@@ -1,4 +1,7 @@
+-"""Fix-full (PLAN.md here), Seed-OSS-36B: a copy of ../2026-10-13_g3_followups/run_extract_g3_rep.py (at 1c277bfc, sha256
++"""Fix-full F9 (PLAN.md Amendment 3): run_extract_g3_fx.py with the F9 re-read subset, its own run name and 8 shards; nothing
++else changed (the "fx" input set reads `FX_INPUTS`). Its docstring follows.
++
++Fix-full (PLAN.md here), Seed-OSS-36B: a copy of ../2026-10-13_g3_followups/run_extract_g3_rep.py (at 1c277bfc, sha256
+ e793a0c3...) with one more input set, "fx": every arm staged by stage_fixfull.py (the per-fix variants F1-F8 and fix-full
+ of the 939 simulated attack runs, and fix-full of the 437 simulated honest runs; only runs a variant changes), each shard
+ checked against the staging record's sha256. Keep flags: the ORIGINAL run's Qwen3-32B meta (#36's dump for attack runs,
+@@ -85,8 +88,8 @@
+ DUMP = "2026-10-06_la_segment-end_qwen3-32b_v1"
+ STAGED = "2026-10-12_q2_plantslip_reply_{which}_inputs_v1"  # on ACTS, staged by q2_reply_stage.py
+ RUN = "2026-10-13_g3_{which}_seed-oss-36b_v1"
+-FX_RUN = "2026-10-13_fixfull_seed-oss-36b_v1"
+-FX_INPUTS = "2026-10-13_q2_fixfull_inputs_v2"  # on ACTS, staged by stage_fixfull.py
++FX_RUN = "2026-10-13_fixfull_f9_seed-oss-36b_v1"
++FX_INPUTS = "2026-10-13_q2_fixfull_inputs_f9r_v1"  # on ACTS: the re-read subset (subset_f9.py)
+ V4AL = "2026-10-06_la_segment-end-v4_qwen3-32b_alllayers_v1"  # the honest runs' Qwen3-32B meta (meta/sim-honest)
+ MODEL, REVISION, CTX, H, N_LAYERS = "ByteDance-Seed/Seed-OSS-36B-Instruct", "497f1dca95ebdec98e41d517b9f060ee753c902f", 65536, 5120, 64
+ LAYERS = sorted({int(N_LAYERS * k / 8 + 0.5) for k in range(2, 8)} | {N_LAYERS - 1})  # round_half_up(n k / 8), k = 2..7, plus n - 1
+@@ -100,7 +103,7 @@
+ EXPECT = {"real-honest": 990, "real-attack-e1": 939, "real-attack-e2": 939, "real-attack-e2-planted": 845, "real-attack-e2-control": 20, "sim-attack": 939,
+           REP_LABEL: 823}
+ GPU, CHUNK, TIMEOUT_S = ["H200", "B200"], 25, 3 * 3600
+-SHARDS = {"real": 24, "planted": 8, "controls": 1, "sim": 8, "rep": 8, "fx": 48}
++SHARDS = {"real": 24, "planted": 8, "controls": 1, "sim": 8, "rep": 8, "fx": 8}
+ SENT = "G3SPAN{:06d}Q"
+ PIP_CPU = ["transformers==4.57.1", "jinja2==3.1.6", "huggingface_hub[hf_transfer]==0.35.3", "numpy"]
+ PIP_GPU = ["torch==2.8.0", "accelerate==1.10.1", *PIP_CPU]

@@ -1,0 +1,166 @@
+{
+ "seed": 909,
+ "draws": 2000,
+ "rows": {
+  "Qwen3-32B L48": {
+   "runs_kept": {
+    "sim-attack": 939,
+    "real-attack-e2": 939,
+    "sim-honest": 437,
+    "real-honest": 990
+   },
+   "cells_dropped": 0,
+   "fpr_0.01": {
+    "shared_gap": 0.6679978700745474,
+    "shared_gap_ci95": [
+     0.6111377878433312,
+     0.7003781930365497
+    ],
+    "per_world_gap": -0.07028753993610225,
+    "per_world_gap_ci95": [
+     -0.11403990295398177,
+     -0.0031919175404364225
+    ],
+    "sim_catch_shared": 0.8442492012779552,
+    "sim_catch_per_world": 0.10596379126730564,
+    "e2_catch": 0.17625133120340788,
+    "sim_honest_fa_shared": 0.42963386727688785,
+    "sim_honest_fa_per_world": 0.013729977116704805,
+    "real_honest_fa_shared": 0.011868686868686869,
+    "sim_honest_n_val_min_max": [
+     79,
+     93
+    ]
+   },
+   "fpr_0.05": {
+    "shared_gap": 0.5756123535676252,
+    "shared_gap_ci95": [
+     0.527286196078205,
+     0.6143440391432348
+    ],
+    "per_world_gap": -0.13604898828540998,
+    "per_world_gap_ci95": [
+     -0.19573297235260362,
+     -0.04333225108225109
+    ],
+    "sim_catch_shared": 0.9369009584664537,
+    "sim_catch_per_world": 0.22523961661341854,
+    "e2_catch": 0.3612886048988285,
+    "sim_honest_fa_shared": 0.5806636155606407,
+    "sim_honest_fa_per_world": 0.04862700228832952,
+    "real_honest_fa_shared": 0.05126262626262626,
+    "sim_honest_n_val_min_max": [
+     79,
+     93
+    ]
+   }
+  },
+  "Qwen3-32B L63": {
+   "runs_kept": {
+    "sim-attack": 939,
+    "real-attack-e2": 939,
+    "sim-honest": 437,
+    "real-honest": 990
+   },
+   "cells_dropped": 0,
+   "fpr_0.01": {
+    "shared_gap": 0.7894036208732694,
+    "shared_gap_ci95": [
+     0.7363983840197508,
+     0.8091743805525108
+    ],
+    "per_world_gap": -0.06256656017039404,
+    "per_world_gap_ci95": [
+     -0.11437916765392818,
+     0.007240028733666234
+    ],
+    "sim_catch_shared": 0.9387646432374867,
+    "sim_catch_per_world": 0.08679446219382321,
+    "e2_catch": 0.14936102236421725,
+    "sim_honest_fa_shared": 0.5663615560640732,
+    "sim_honest_fa_per_world": 0.012013729977116704,
+    "real_honest_fa_shared": 0.013636363636363636,
+    "sim_honest_n_val_min_max": [
+     79,
+     93
+    ]
+   },
+   "fpr_0.05": {
+    "shared_gap": 0.6709265175718849,
+    "shared_gap_ci95": [
+     0.6145422876529747,
+     0.7026957388149248
+    ],
+    "per_world_gap": -0.11794462193823219,
+    "per_world_gap_ci95": [
+     -0.19129781462919074,
+     -0.0418323554122175
+    ],
+    "sim_catch_shared": 0.981629392971246,
+    "sim_catch_per_world": 0.19275825346112885,
+    "e2_catch": 0.31070287539936103,
+    "sim_honest_fa_shared": 0.7151029748283753,
+    "sim_honest_fa_per_world": 0.05320366132723112,
+    "real_honest_fa_shared": 0.047474747474747475,
+    "sim_honest_n_val_min_max": [
+     79,
+     93
+    ]
+   }
+  },
+  "Qwen3-32B ffavg L48 (b)": {
+   "runs_kept": {
+    "sim-attack": 939,
+    "real-attack-e2": 939,
+    "sim-honest": 437,
+    "real-honest": 990
+   },
+   "cells_dropped": 0,
+   "fpr_0.01": {
+    "shared_gap": 0.02316293929712454,
+    "shared_gap_ci95": [
+     -0.005120494534256448,
+     0.05196535782242904
+    ],
+    "per_world_gap": -0.10862619808306717,
+    "per_world_gap_ci95": [
+     -0.11782079525179331,
+     0.10799640980847001
+    ],
+    "sim_catch_shared": 0.7191160809371672,
+    "sim_catch_per_world": 0.5873269435569755,
+    "e2_catch": 0.6959531416400426,
+    "sim_honest_fa_shared": 0.01887871853546911,
+    "sim_honest_fa_per_world": 0.010869565217391304,
+    "real_honest_fa_shared": 0.012121212121212121,
+    "sim_honest_n_val_min_max": [
+     79,
+     93
+    ]
+   },
+   "fpr_0.05": {
+    "shared_gap": 0.008519701810436597,
+    "shared_gap_ci95": [
+     -0.01232580146875864,
+     0.02634504386639988
+    ],
+    "per_world_gap": -0.021299254526091604,
+    "per_world_gap_ci95": [
+     -0.07367711910561114,
+     0.023837204951280402
+    ],
+    "sim_catch_shared": 0.889776357827476,
+    "sim_catch_per_world": 0.8599574014909478,
+    "e2_catch": 0.8812566560170394,
+    "sim_honest_fa_shared": 0.06521739130434782,
+    "sim_honest_fa_per_world": 0.060068649885583525,
+    "real_honest_fa_shared": 0.05757575757575758,
+    "sim_honest_n_val_min_max": [
+     79,
+     93
+    ]
+   }
+  }
+ },
+ "git": "88686b406311bc0097c10071f6eced4b18d598b5"
+}

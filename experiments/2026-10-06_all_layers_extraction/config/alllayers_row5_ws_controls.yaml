@@ -1,0 +1,12 @@
+# Gate row 5 (whitespace plant; ../../2026-10-13_q2_row5_whitespace/PLAN.md): #36's reader (Qwen3-32B, the 32k cut) at
+# layer 48 only (the forward pass stops after it), for the controls staged by stage_whitespace.py. Local orchestration
+# (no --remote): the shards are spawned from the laptop entrypoint; shard retries off.
+run: 2026-10-13_q2_row5_ws_controls_qwen3-32b_l48_v1
+inputs_from: 2026-10-13_q2_row5_ws_controls_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 25
+layers: [48]

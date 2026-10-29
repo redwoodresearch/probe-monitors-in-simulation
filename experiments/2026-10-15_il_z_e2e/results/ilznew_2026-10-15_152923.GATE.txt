@@ -1,0 +1,4 @@
+gate: public rows of results/ilznew_2026-10-15_152923.json vs results/ilznew_2026-10-15_150553.json (sha 00950ea448d2 vs 43e4ce659dc5)
+leaf values compared 6064 | numeric/structural differences 0 [] | label-text differences 3 (the (d) label now names the full scenario, code change @ 27b370f31)
+GATE PASS
+Wording fix (Codex): the sha pair in parentheses is in the order (fourth pass ilznew_150553, replay); the sentence names the replay first.

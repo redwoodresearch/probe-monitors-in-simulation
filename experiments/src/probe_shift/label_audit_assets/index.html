@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stage 1 · Label audit</title><link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<header><div><p class="eyebrow">PROBE DISTRIBUTION SHIFT · STAGE 1</p><h1>Label audit</h1></div><span class="pill">Read only · Local</span></header>
+<p class="intro">Inspect disagreements, source evidence and the frozen independent sample. The audit compares this Codex session with the panel; it is not human ground truth. Delivered labels remain unchanged.</p>
+<section id="summary" class="summary" aria-label="Audit agreement"></section>
+<section class="controls" aria-label="Filters">
+  <label>Dataset<select id="kind"><option value="sabotage">Sabotage · 1,457 commands</option><option value="credential">Credentials · 2,796 outputs</option></select></label>
+  <label>View<select id="filter"><option value="disagreement">Judge disagreements</option><option value="sample">Seeded sample (50)</option><option value="mismatch">Audit mismatches</option><option value="unsure">Any unsure judgment</option><option value="missing">Missing judge votes</option><option value="all">All rows</option></select></label>
+  <label>Final panel label<select id="label"><option value="all">All labels</option><option value="positive">Positive</option><option value="negative">Negative</option><option value="unclear">Unclear</option></select></label>
+  <label>Find audit ID<input id="search" type="search" placeholder="S0017 or C0030" autocomplete="off"></label>
+</section>
+<div class="workspace">
+  <aside><div class="list-heading"><span id="count" role="status">Loading…</span><div><button id="prev" aria-label="Previous row">←</button><button id="next" aria-label="Next row">→</button></div></div><div id="rows" aria-label="Matching rows"></div></aside>
+  <main id="detail" aria-live="polite"><p class="empty">Loading label manifest…</p></main>
+</div>
+<footer>Sample seed: 20261011 · 50 rows drawn uniformly without replacement from each full label set · No rerolls · Source transcripts render as plain text.</footer>
+</body></html>

@@ -1,0 +1,22 @@
+# run_analyze_shift_modal.py jobs (2026-10-07): analyze_shift.py rerun on the saved inputs of the committed shift
+# files, so the label-shuffle null and the re-estimated catch-rate thresholds are in a saved result. Paths are
+# analyze_shift.py's own arguments; the files are on the Q3 Volume (scores/, call_tables/).
+jobs:
+  # Task 1, Apollo deception (PR #40); was results/shift_apollo_deception_2026-10-06_145255.json
+  - scores: data/scores_apollo_deception_segment_end_2026-10-06_142220.parquet
+    calls: data/call_table_2026-10-06_143350.jsonl.gz
+    turn_mean: data/scores_apollo_deception_turn_mean_2026-10-06_142625.parquet
+  # Task 2, eval awareness (PR #41); was results/shift_eval_awareness_2026-10-06_145416.json
+  - scores: data/scores_eval_awareness_segment_end_2026-10-06_145310.parquet
+    calls: data/call_table_2026-10-06_143350.jsonl.gz
+    turn_mean: data/scores_eval_awareness_turn_mean_2026-10-06_145247.parquet
+  # Task 3, vulnerability probes (PR #42); were shift_vulnerability_2026-10-06_162103.json,
+  # shift_vulnerability_safecoder_2026-10-06_161531.json and shift_vulnerability_safecoder_mean_edit_mean_2026-10-06_180656.json
+  - scores: data/scores_vulnerability_segment_end_2026-10-06_154852.parquet
+    calls: data/call_table_2026-10-06_143350.jsonl.gz
+  - scores: data/scores_vulnerability_safecoder_segment_end_2026-10-06_160011.parquet
+    calls: data/call_table_2026-10-06_143350.jsonl.gz
+  - scores: data/scores_vulnerability_safecoder_mean_edit_mean_2026-10-06_180606.parquet
+    calls: data/call_table_2026-10-06_143350.jsonl.gz
+    kind: edit_mean
+    subset: true

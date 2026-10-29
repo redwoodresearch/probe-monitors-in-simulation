@@ -1,0 +1,14 @@
+# Claim B follow-up (c), on policy: Qwen3.5-27B reads its own September scale-up runs (real attack run 1, run 2, and the
+# simulated run with the frozen round-one + round-two fixes), level 1 (times masked, the staging scrub), plus planted checks 1 and 2, all 64 layers at the segment-end
+# positions, cut at 32k tokens as claim B's probe; staged by experiments/2026-10-10_claimB_onpolicy/stage_probe_inputs.py.
+run: 2026-10-10_la_september-onpolicy-l1_qwen35-27b_alllayers_v1
+inputs_from: 2026-10-10_la_september-onpolicy-l1_v1    # uploaded by upload_staged.py (shared Volume, read only)
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768                                      # claim B's cut (not whole transcripts)
+pad_to: 4096
+shards: 16                                             # 770 transcripts
+chunk_size: 25
+shard_by: length
+prefetch: true

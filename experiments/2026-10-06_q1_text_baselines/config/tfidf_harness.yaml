@@ -1,0 +1,26 @@
+# Harness-format normalized (scrub level 4, applied to both arms): ladder step 3 (times, numbers and IDs, whitespace)
+# plus real editor diffs' line-number gutter stripped (so editor outputs render like simulated ones and can stay in),
+# stderr-looking lines dropped, weekday and month names masked, blank lines removed and spaces collapsed. The
+# "realism beyond formatting" number. tfidf_cleaned reruns step 0 on the leading-content-fixed staging, to measure that fix.
+name: tfidf_harness
+examples: examples_2026-10-06_142532
+folds_file: folds_v3.json
+baselines:
+  tfidf_cleaned: {text: readout_text, scrub: 0}
+  harness_normalized: {text: readout_text, scrub: 4}
+output_variants: [all, no_editor]
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer; sklearn "char" collapses whitespace runs)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true                       # TfidfTransformer: tf -> 1 + log(tf); smooth_idf true; l2 row norm
+C: 1.0                                   # fixed a priori (sklearn default); c_sensitivity is reported, not used to choose
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 20}
+top_features: 25
+bootstrap: 1000
+seed: 0
+n_jobs: 16

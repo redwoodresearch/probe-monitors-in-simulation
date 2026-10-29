@@ -1,0 +1,16 @@
+{
+ "git": "c5be18d7aab7bc4f62c2772d7d24ed758f97f54e",
+ "source sha256": "9bebe38fa4708e699c622fa756a0b0ee30f1e44d3547bf9e0fcea3fd13bc60e9",
+ "made": "2026-10-13_015012",
+ "forward tokens (render)": 20666850,
+ "transcripts": 828,
+ "s per 1,000 forward tokens (smoke)": 0.3946,
+ "container seconds": 10278,
+ "extraction projection $": 14.07,
+ "scoring and checks $ (allowance)": 0.5,
+ "billed so far $": 0.4,
+ "whole job, spent + 1.3 x (projection + allowance) $": 19.34,
+ "stop $": 20.0,
+ "launch_ok": true,
+ "extraction watcher stop $ (the stop less the spend so far and the allowance)": 19.1
+}

@@ -1,0 +1,170 @@
+# stage_q4b.py (Q4 (B) staging, 567 lines) as a diff against d9's stage_crossread.py
+# (aswin/q3-qwen3-crossread-score @ 815c28b1, experiments/2026-10-13_q3_qwen3_crossread/stage_crossread.py).
+# The full as-run file is kept by the archive tag named in README.md (with its sha256); apply this diff to the original to rebuild it.
+--- a/experiments/2026-10-13_q3_qwen3_crossread/stage_crossread.py
++++ b/experiments/2026-10-13_q4_why_weaker_POSTHOC/stage_q4b.py
+@@ -1,4 +1,10 @@
+-"""POST HOC (RULE.md): stage Qwen3.5-27B's acting runs for a Qwen3-32B read, and count coverage under the 32,768 cut.
++"""Q4 (B), RULE.md Amendment 5: a copy of d9's stage_crossread.py (aswin/q3-qwen3-crossread-score @ 815c28b1) whose only
++changes are: the reader Qwen3.5-27B (tokenizer and template; rule 1's command readout from reader.command_end_positions, Qwen3.5's XML calls), the .eval files read from the Modal Volume (counted attempts from
++the committed upload manifest, sha256-checked), the simulated honest arm added to `main` (read with its own prompt), each
++output_end row's content span kept (for the averaged readout), and staging on Modal (run_q4b_stage.py drives it).
++The original docstring follows.
++
++POST HOC (RULE.md): stage Qwen3.5-27B's acting runs for a Qwen3-32B read, and count coverage under the 32,768 cut.
+ Local CPU, tokenizer only; no model. Writes token ids, positions, labels, hashes and counts; never prints or writes text
+ (an error inside a run's processing is re-raised as its type and the run's file name only).
+ 
+@@ -39,27 +45,30 @@ from pathlib import Path
+ from zoneinfo import ZoneInfo
+ 
+ HERE = Path(__file__).resolve().parent
+-REPO = HERE.parents[1]
++REPO = Path("/root/repo") if Path("/root/repo").exists() else HERE.parents[1]
+ for p in (REPO / "src", REPO / "experiments/2026-10-07_q2_rendering_swap", REPO / "experiments/2026-10-09_fixed_sim",
+           REPO / "experiments/2026-10-12_plantslip_transfer"):
+     sys.path.insert(0, str(p))
+ 
+ import numpy as np  # noqa: E402
+ 
++import evalzip  # noqa: E402,F401  (zstd .eval members on Python 3.13)
++
+ from probe_shift import reader, transcripts  # noqa: E402
+ from probe_shift.calls import fingerprint, label_call  # noqa: E402
+-from probe_shift.models import QWEN3_32B  # noqa: E402
++from probe_shift.models import QWEN3_32B, QWEN35_27B  # noqa: E402,F401
+ 
+-CACHE = Path.home() / ".cache/probe-shift/s3/individual-aswin-surya-probe-shift-kill-2027-04-06/phase2/runs"
++CACHE = Path("/ev/evals_v1")  # the uploaded .eval files (RULE.md Amendment 5)
++UPLOAD_MANIFEST = REPO / "manifest_q4b_eval_upload_v1.json"
+ MAIN = ["2026-10-09_000523_rerun_strict", "2026-10-09_173815_scaleup_canary", "2026-10-09_182505_scaleup",
+         "2026-10-10_001314_scaleup_topup"]
+ RUN2 = "2026-10-10_001314_second_attack"
+-SETS = {"main": ["attack", "sim_attack@september", "honest_a", "honest_b"], "run2": ["attack"], "plant": ["attack"],
++SETS = {"main": ["attack", "sim_attack@september", "sim_honest@september", "honest_a", "honest_b"], "run2": ["attack"], "plant": ["attack"],
+         "repair": ["sim_attack@september"]}
+ ACTING, CUT, SCRUB_LEVEL, LABELER = "vllm/Qwen/Qwen3.5-27B", 32768, 1, "eb014307"
+ T196 = REPO / "experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json"
+ RES = REPO / "experiments/2026-10-08_q3_onpolicy_figures/results"
+-LABELS_S3 = Path("/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/1faf3281-1269-46cf-883f-277091c9aa65/scratchpad/crossread_labels")
++LABELS_S3 = REPO / "labels"
+ LABELS = {  # the five 1118 label files claim C used (plan line 950); launch 2's comes from S3 (its manifest's sha256)
+     RES / "phase2_attempt_labels_2026-10-09_000523_rerun_strict_selfreport_2026-10-10_111809.jsonl": None,
+     RES / "phase2_attempt_labels_2026-10-09_173815_scaleup_canary_selfreport_2026-10-10_111817.jsonl": None,
+@@ -68,7 +77,7 @@ LABELS = {  # the five 1118 label files claim C used (plan line 950); launch 2's
+     RES / "phase2_attempt_labels_2026-10-10_001314_second_attack_2026-10-10_111840.jsonl": None,
+ }
+ COVER = re.compile(r"<cover_task>\n?(.*?)\n?</cover_task>", re.S)
+-STAGE_ROOT = Path("/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/1faf3281-1269-46cf-883f-277091c9aa65/scratchpad/crossread_stage")
++STAGE_ROOT = Path("/ev")
+ 
+ 
+ STAGE_VERSION = {"main": "v1", "run2": "v1", "plant": "v2", "repair": "v2"}  # v2: the edited arms named plant / repair (v1 superseded, never extracted)
+@@ -305,39 +314,25 @@ def load(ev: Path) -> dict:
+ 
+ 
+ def counted_attempts(set_name: str) -> dict:
+-    """{(arm_dir, task): attempt record} from the launch metadata, every counted attempt's .eval present and matching its
+-    manifest. Honest arms always come from MAIN (the donors)."""
++    """{(arm_dir, task): attempt record}: stage_crossread's selection, as listed in the committed upload manifest
++    (make_q4b_upload_list.py, the same rules over the launch metadata); each .eval is sha256-checked on the Volume."""
+     launches = [RUN2] if set_name == "run2" else MAIN
++    man = json.loads(UPLOAD_MANIFEST.read_text())
++    NO_EVAL.extend(man["counted_attempts_without_eval"][set_name])
+     counted = {}
+-    for run in sorted(set(launches) | set(MAIN)):
+-        rd = CACHE / run
+-        man = json.loads((CACHE / f"{run}.manifest_v1.json").read_text())
+-        want = {f["key"].split(f"phase2/runs/{run}/", 1)[1]: f["sha256"] for f in man["files"] if f["key"].startswith(f"phase2/runs/{run}/")}
+-        if sha_file(rd / "launch.json") != want["launch.json"]:
+-            raise ValueError(f"{run}: launch.json differs from its manifest")
+-        for r in json.loads((rd / "launch.json").read_text())["runs"]:
+-            for ai, a in enumerate(r.get("attempts") or []):
+-                if a.get("redrawn_because") or a.get("kind") == "rerun":
+-                    continue
+-                rel_dir = (a.get("log_dir") or "").split(f"/{run}/", 1)[-1]
+-                arm_dir = rel_dir.split("/", 1)[0]
+-                wanted = (run in launches and arm_dir in SETS[set_name]) or (run in MAIN and arm_dir in ("honest_a", "honest_b"))
+-                if not wanted:
+-                    continue
+-                key = (arm_dir, r["task"])
+-                if key in counted:
+-                    raise ValueError(f"several counted attempts for {key} in the launch metadata")
+-                evs = sorted(e for e in want if e.startswith(rel_dir + "/") and e.endswith(".eval"))
+-                if not evs:  # the attempt wrote no .eval (as run_replay_readouts.py's "attempts without an .eval"): counted, no run
+-                    NO_EVAL.append(f"{run}/{rel_dir}")
+-                    continue
+-                if len(evs) != 1:
+-                    raise ValueError(f"{run}/{rel_dir}: {len(evs)} .eval files in the manifest, 1 expected")
+-                ev = rd / evs[0]
+-                if not ev.exists() or sha_file(ev) != want[evs[0]]:
+-                    raise ValueError(f"{run}/{evs[0]}: missing from the cache or differs from its manifest")
+-                counted[key] = {"launch": run, "eval": ev, "rel": evs[0], "attempt_index": ai, "attempt_kind": a.get("kind"),
+-                                "redrawn_because": a.get("redrawn_because"), "policy_called": a.get("policy_called")}
++    for f in man["files"]:
++        run, arm_dir = f["launch"], f["arm_dir"]
++        wanted = (run in launches and arm_dir in SETS[set_name]) or (run in MAIN and arm_dir in ("honest_a", "honest_b"))
++        if not wanted:
++            continue
++        key = (arm_dir, f["task"])
++        if key in counted:
++            raise ValueError(f"several counted attempts for {key} in the upload manifest")
++        ev = CACHE / run / f["rel"]
++        if not ev.exists() or sha_file(ev) != f["sha256"]:
++            raise ValueError(f"{run}/{f['rel']}: missing from the Volume or differs from the upload manifest")
++        counted[key] = {"launch": run, "eval": ev, "rel": f["rel"], "attempt_index": f["attempt_index"], "attempt_kind": f["attempt_kind"],
++                        "redrawn_because": None, "policy_called": f["policy_called"]}
+     return counted
+ 
+ 
+@@ -349,7 +344,7 @@ def process(c, arm_dir, task, set_name, prompts, tok, folds, cv):
+ 
+     s = load(c["eval"])
+     own = transcripts.system_prompt(s)
+-    if arm_dir.startswith("honest"):
++    if arm_dir.startswith("honest") or arm_dir.startswith("sim_honest"):
+         system = own
+     else:
+         cover, fu = COVER.search(own), first_user_sha(s)
+@@ -393,7 +388,13 @@ def process(c, arm_dir, task, set_name, prompts, tok, folds, cv):
+     exposure_site = (lambda f, slip: f == "numbered") if real_side else (lambda f, slip: slip)
+     msgs = scrubbed(msgs, SCRUB_LEVEL)
+     seg = reader.segment_end_positions(tok, msgs, max_tokens=CUT)
+-    cmd = command_positions(tok, msgs, CUT, cv)
++    # Qwen3.5 writes XML calls: rule 1's readout from reader.command_end_positions (command_positions is Qwen3's JSON path)
++    ce = reader.command_end_positions(tok, msgs, max_tokens=CUT)
++    cmd = {}
++    for q in ce["positions"]:
++        cmd[(q["step"], q["action"])] = q["token"] if q["token"] is not None and q["kept"] else None
++        if q["param"] is None:
++            cv["commands without a command value"] += 1
+     pos = {(p["kind"], p["step"], p["action"]): p for p in seg["positions"]}
+     ids = seg["ids"]
+     n, h = len(ids), ids_sha(ids)
+@@ -420,7 +421,7 @@ def process(c, arm_dir, task, set_name, prompts, tok, folds, cv):
+                         first_exposed_turn = k
+                 rows[t["irid"]].append({"irid": t["irid"], "turn": k, "name": src["name"], "param": None, "label": src["label"],
+                                         "matched_subset": False, "kind": "output_end", "src_irid": prev["irid"],
+-                                        "call_index": j, "readout": ro})
++                                        "call_index": j, "readout": ro, "span": p.get("span") if ro is not None else None})
+                 rec["outputs shown"] += 1
+                 rec["outputs with an output_end inside"] += ro is not None
+         for ci, call in enumerate(t["calls"]):
+@@ -507,7 +508,7 @@ def main(set_name: str, coverage_only: bool, limit: int):
+ 
+     if not fingerprint().startswith(LABELER):
+         raise ValueError(f"labeler fingerprint {fingerprint()[:8]} is not {LABELER}")
+-    tok = AutoTokenizer.from_pretrained(QWEN3_32B["name"], revision=QWEN3_32B["revision"], local_files_only=True)
++    tok = AutoTokenizer.from_pretrained(QWEN35_27B["name"], revision=QWEN35_27B["revision"], local_files_only=True)
+     folds = frozen_folds(json.loads(T196.read_text()))
+     lab = attempt_labels()
+     counted = counted_attempts(set_name)
+@@ -534,7 +535,7 @@ def main(set_name: str, coverage_only: bool, limit: int):
+         if ep is not None:
+             staged[arm_dir].append(ep)
+     stamp = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d_%H%M%S")
+-    record = {"set": set_name, "stamp": stamp, "cut": CUT, "scrub_level": SCRUB_LEVEL, "model": QWEN3_32B, "limit": limit,
++    record = {"set": set_name, "stamp": stamp, "cut": CUT, "scrub_level": SCRUB_LEVEL, "model": QWEN35_27B, "limit": limit,
+               "labeler_fingerprint": fingerprint(), "counted_attempts_without_an_eval": NO_EVAL,
+               "counters": {a: dict(v) for a, v in sorted(cov.items())},
+               "coverage": summarize(per_run, lab, set_name), "per_run": per_run}

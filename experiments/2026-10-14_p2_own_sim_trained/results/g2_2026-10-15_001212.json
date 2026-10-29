@@ -1,0 +1,43 @@
+{
+ "git": "3cac44e277d707a0ee1a463490e04c15305ca4fb",
+ "stamp (PT)": "2026-10-15_001212",
+ "app": "probe-shift_aswin-surya_sub-p2probes_owns_kill-2026-11-13",
+ "job": "g2",
+ "spec_owns": [
+  "2026-10-14_231856",
+  "0521496e4a05be415ad4aacf18653eeb511021a2d0c448711169fdd328e57a8a"
+ ],
+ "g2_stamp": "2026-10-14_232441",
+ "resume": true,
+ "call": "fc-01M4Z6F0CZQPFRWS4EM4A1BY7S",
+ "result": {
+  "completion_sha256": "7fbd489adbc27111e6b00e40d444cf0f869912063017457d586bc898c28bbc08",
+  "attempt": 2,
+  "failed_blocks": [],
+  "perms_done": {
+   "R|L16": 0,
+   "R|L32": 0,
+   "R|L48": 0,
+   "C|L16": 50,
+   "C|L32": 0,
+   "C|L48": 101
+  },
+  "cells_complete": {
+   "R|L16": true,
+   "R|L32": true,
+   "R|L48": true,
+   "C|L16": true,
+   "C|L32": true,
+   "C|L48": true
+  },
+  "mains": {
+   "R": null,
+   "C": {
+    "mains": 191,
+    "mixed_class_mains": 169,
+    "single_class_mains": 22
+   }
+  }
+ },
+ "sealed": "AUROCs stay on the Volume until 09's phase 2"
+}

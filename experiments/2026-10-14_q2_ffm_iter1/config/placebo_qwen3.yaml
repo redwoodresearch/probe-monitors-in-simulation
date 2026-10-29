@@ -1,0 +1,13 @@
+# Test P (RULE.md Additions 8-9): f12_qwen3.yaml's settings (d9's mean-pool36: mean_final, the 7 layers, cut, model, revision) on
+# the placebo arm (sim-attack-fx-fullF9P, 423 runs) plus 12 reproduction runs copied byte-identically from d9's two mean-pool
+# dumps' inputs, one per shard (stage_placebo.py; results/stage_placebo_2026-10-14_112808.json). 12 shards; chunks of 5.
+run: 2026-10-14_q2_ffmP_qwen3-32b_l7_v1
+inputs_from: 2026-10-14_q2_ffmP_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 12
+chunk_size: 5
+layers: [16, 24, 32, 40, 48, 56, 63]
+mean_final: true

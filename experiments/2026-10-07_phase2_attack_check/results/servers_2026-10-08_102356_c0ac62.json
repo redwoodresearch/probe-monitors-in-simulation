@@ -1,0 +1,15 @@
+{
+ "status": "up",
+ "mode": "ephemeral",
+ "stand_in": true,
+ "servers": [
+  {
+   "name": "probe-shift_aswin-surya_sub-phase2_srvc0ac62a_kill-2026-11-06",
+   "mode": "ephemeral",
+   "launch_log": "/private/tmp/claude-501/-Users-aswinsurya-probe-distribution-shift-from-sims/3411bfa8-f1b8-4c15-bf10-536e101b5c37/scratchpad/ps-srvmode/experiments/2026-10-07_phase2_attack_check/results/server_launch_probe-shift_aswin-surya_sub-phase2_srvc0ac62a_kill-2026-11-06.log",
+   "app_id": "ap-pCuSfSrZ6LyurHIcIkdUc0",
+   "tunnel_url": "https://stand-in.invalid",
+   "base_url": "https://stand-in.invalid/v1"
+  }
+ ]
+}

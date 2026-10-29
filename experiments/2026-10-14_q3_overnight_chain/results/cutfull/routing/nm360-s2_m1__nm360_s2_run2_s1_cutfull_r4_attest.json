@@ -1,0 +1,10 @@
+{
+ "batch": "nm360-s2_m1",
+ "original_target": "nm360_s2_run2_s1",
+ "revision": 4,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s2_m1__nm360_s2_run2_s1_cutfull_r4.json @ fef0ccefbdc6",
+ "commit": "fef0ccefbdc6",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_nm360-s2_m1__nm360_s2_run2_s1_cutfull_r4.json",
+ "sets": 1,
+ "failing": {}
+}

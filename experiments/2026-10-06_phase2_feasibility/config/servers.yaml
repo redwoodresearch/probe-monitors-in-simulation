@@ -1,0 +1,49 @@
+# vLLM servers for the Phase 2 feasibility pilot: the policy model as an OpenAI-compatible endpoint on Modal.
+# Read by run_vllm_server.py at deploy time; every flag the server gets is here.
+vllm_version: "0.30.0"   # 2026-09-22; 0.31.0 (2026-10-05) was a day old
+gpu: "H200"              # 141 GB: bf16 weights plus KV cache for a handful of 100k-token runs
+max_containers: 1        # one GPU per model, never an accidental scale-out
+scaledown_window_s: 900  # idle 15 min, then the GPU is released
+request_timeout_s: 3600  # one HTTP request (one generation)
+startup_timeout_s: 1800
+max_concurrent_requests: 64
+
+models:
+  qwen3_32b:
+    hf_id: Qwen/Qwen3-32B
+    revision: 9216db5781bf21249d130ec9da846c4624c16137   # the snapshot cached on the HF-cache volume
+    args:
+      - --dtype=bfloat16
+      - --max-model-len=131072
+      # Static YaRN x4 over the native 32,768 (Qwen3 model card). Sol's honest LA runs are 33k tokens at the median
+      # and 67k at p95 before any reasoning, so the native window would cut most runs short.
+      # transformers 5 reads rope settings from `rope_parameters` (a `rope_scaling` override is ignored), so the theta is
+      # restated with the YaRN fields. Under v5 semantics YaRN's max_position_embeddings is the already-scaled length
+      # (vLLM 0.30 does not multiply it by the factor), so it is raised to 131072 = 32768 x 4 alongside.
+      - '--hf-overrides={"rope_parameters": {"rope_type": "yarn", "factor": 4.0, "original_max_position_embeddings": 32768, "rope_theta": 1000000.0}, "max_position_embeddings": 131072}'
+      - --enable-auto-tool-choice
+      - --tool-call-parser=hermes      # Qwen3 emits <tool_call>{json}</tool_call>
+      - --reasoning-parser=qwen3       # <think> goes to the reasoning field, not the content
+      - --gpu-memory-utilization=0.92
+  qwen35_27b:
+    hf_id: Qwen/Qwen3.5-27B
+    revision: fc05daec18b0a78c049392ed2e771dde82bdf654
+    args:
+      - --dtype=bfloat16
+      - --max-model-len=131072         # native context is 262,144; no YaRN needed
+      - --enable-auto-tool-choice
+      - --tool-call-parser=qwen3_coder # Qwen3.5 emits XML calls: <function=NAME><parameter=ARG>...
+      - --reasoning-parser=qwen3
+      - --gpu-memory-utilization=0.92
+  qwen3_32b_native:
+    # Control for the qwen3_32b pilot (0/5): the same model without static YaRN, which Qwen warns can hurt
+    # short-context quality. Context is capped at the native 40,960, so long runs end at the cap.
+    hf_id: Qwen/Qwen3-32B
+    revision: 9216db5781bf21249d130ec9da846c4624c16137
+    args:
+      - --dtype=bfloat16
+      - --max-model-len=40960
+      - --enable-auto-tool-choice
+      - --tool-call-parser=hermes
+      - --reasoning-parser=qwen3
+      - --gpu-memory-utilization=0.92

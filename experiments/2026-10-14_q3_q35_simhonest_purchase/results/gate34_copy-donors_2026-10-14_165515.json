@@ -1,0 +1,8 @@
+{
+ "donors_copied": 38,
+ "tasks": 19,
+ "manifest": "manifest_simh_eval_upload_atk2.json",
+ "step": "copy-donors",
+ "git": "4d0f5f15d9378ffb3782d7baa8f04e03793926dc",
+ "stamp": "2026-10-14_165515"
+}

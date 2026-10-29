@@ -1,0 +1,19 @@
+{
+ "provenance": {
+  "git": "2be48a1034cc5f082794e064ed1c45c21196afe7",
+  "stamp": "2026-10-13_005043",
+  "phase": "rescore",
+  "code_sha256": "e871e294212ed59df70d72ec603e1ae3be669b548b30d580cdd45c900c5a0df0",
+  "roster_sha256": "5fa39b44e610f0b60c34ed960d4ce2963418f804d1c109623367d64a5c1a6ec8"
+ },
+ "result": {
+  "resumed rows": 0,
+  "seconds": 1831,
+  "gpu": "NVIDIA H200"
+ },
+ "rows": {
+  "file": "rows_2026-10-13_005043.json",
+  "n": 404,
+  "sha256": "786d174e7a42f81c2283cae0675aa0588cd85b86c306bae1b0270fa8e27c4e2d"
+ }
+}

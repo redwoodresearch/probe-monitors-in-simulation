@@ -1,0 +1,62 @@
+"""Spawn run_fit.py's fit for one part 2 probe's pairs run on its deployed app, and collect it (PLAN.md section 3, "Fit").
+
+Standardized logistic regression (C = 0.1, no intercept) on the probe's "train" rows at every layer (0-63); the layer is
+the earliest within 0.01 of the best AUROC on its "dev" pairs; "heldout" rows are scored; the 50-draw task-level null is
+recorded and decides nothing (G1's own null is in the gates script). With one row per dialogue, run_fit.py's two
+readouts coincide. The result is written next to this plan's other results, with the run in its name.
+
+  PYTHONPATH=src uv run modal deploy experiments/2026-10-10_eval_awareness_probe/run_fit.py
+  PYTHONPATH=src uv run python experiments/2026-10-11_is_this_a_test/spawn_fit_itat.py launch itatA_<stamp>
+  PYTHONPATH=src uv run python experiments/2026-10-11_is_this_a_test/spawn_fit_itat.py collect <call id>
+"""
+
+import hashlib
+import json
+import subprocess
+import sys
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+import modal
+
+HERE = Path(__file__).parent
+ROOT = HERE.parent.parent
+FIT = HERE.parent / "2026-10-10_eval_awareness_probe" / "run_fit.py"
+sys.path.insert(0, str(FIT.parent))
+import run_fit  # noqa: E402  (its constants, for the result file)
+
+LAYER, NULL_UNIT = -1, "task"
+
+if __name__ == "__main__":
+    git = lambda *c: subprocess.run(["git", *c], capture_output=True, text=True, cwd=ROOT)
+    launches = ROOT / ".run_cache" / "is_this_a_test"
+    launches.mkdir(parents=True, exist_ok=True)  # before any spawn, so a failed local write can't orphan a detached job
+    if sys.argv[1] == "launch":
+        st = git("status", "--porcelain", "--untracked-files=no")
+        if st.returncode or st.stdout.strip():
+            raise SystemExit("commit first: the fit must come from committed code")
+        run = sys.argv[2]
+        stamp = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d_%H%M%S")
+        sha = hashlib.sha256(FIT.read_bytes()).hexdigest()
+        call = modal.Function.from_name(run_fit.APP, "fit").spawn(run, f"fit_{stamp}", False, NULL_UNIT, LAYER, sha)
+        rec = {"call": call.object_id, "run": run, "stamp": stamp, "git": git("rev-parse", "HEAD").stdout.strip(), "run_fit_sha256": sha,
+               "volume": run_fit.VOL}
+        (launches / f"fit_launch_{call.object_id}.json").write_text(json.dumps(rec))
+        print(json.dumps(rec, indent=1))
+    elif sys.argv[1] == "collect":
+        rec = json.loads((launches / f"fit_launch_{sys.argv[2]}.json").read_text())
+        if hashlib.sha256(FIT.read_bytes()).hexdigest() != rec["run_fit_sha256"]:
+            raise ValueError("run_fit.py changed since the launch: its constants would misrecord the fit")
+        out = modal.FunctionCall.from_id(sys.argv[2]).get()
+        st = out["settings"]  # as the worker ran them
+        if (st["layer"], st["null_unit"], st["run_fit_sha256"]) != (LAYER, NULL_UNIT, rec["run_fit_sha256"]):
+            raise ValueError(f"the fit ran other settings or code: {st}")
+        out = {"run": rec["run"], "volume": rec["volume"], "accept_grad": run_fit.ACCEPT_GRAD, "launch": rec, **out}
+        path = HERE / "results" / f"fit_{rec['stamp']}_{rec['run']}.json"
+        if path.exists():
+            raise FileExistsError(f"{path} exists")
+        tmp = path.with_name("." + path.name + ".tmp")
+        tmp.write_text(json.dumps(out, indent=1) + "\n")
+        tmp.rename(path)
+        print(json.dumps({k: out[k] for k in ("summary", "max_grad (all fits)")}, indent=1), f"\n-> {path}")

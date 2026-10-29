@@ -1,0 +1,42 @@
+# The September scale-up's servers: servers.yaml unchanged except the Modal timeout, 12 h for a launch of about 6 h.
+# The Qwen3.5-27B policy server for the attack check. vLLM version, GPU, weights and every vLLM flag are the
+# feasibility pilot's (experiments/2026-10-06_phase2_feasibility/config/servers.yaml on PR #50), unchanged. What
+# differs is the serving path: a Modal tunnel (modal.forward) to the container's port instead of a web endpoint behind
+# Modal's HTTP proxy, where the pilot lost about 1,200 s per long run to model calls that never returned. Step 1 showed
+# those were turns too long to generate inside the policy's 600 s attempt timeout, not the proxy (README).
+vllm_version: "0.30.0"
+gpu: "H200"
+hard_timeout_h: 5           # new-mains split MAIN launch (experiments/2026-10-14_q3_new_mains_launch/RULE.md): real arms about 2.5-3.5 h (S5 on 40 environments), + margin; unwatched
+                           # 2.5 for the honest reruns, 3 for step 2; the pilot's 5-8 h plus margin). It must outlast
+                           # the whole launch plus server start and the live checks; the watcher stops it as runs end
+idle_exit_min: 20          # exit once no request has run for this long, after the first request was served
+startup_idle_min: 45       # ...or if no request ever arrives within this long of the server coming up
+startup_wait_min: 30       # vLLM must answer /v1/models within this long of launch (weights load + CUDA graphs: ~5 min)
+# Aswin's decision D (2026-10-07), from step 2 on, in every arm: end a generation once one token has repeated 256
+# times in a row. The honest arm's zero-parameter submit otherwise loops on whitespace to the 32,768-token cap; across
+# the reruns' other 258 completions the longest such run is 4. request_log_proxy.py injects it into every chat request
+# (vLLM 0.30's repetition_detection) and the log header records it; a stop shows as stop_reason "repetition_detected".
+# The pilot's choice between D and a multi-token setting is this one line (`repetition_setting`).
+# - d: decision D, as approved and as step 2 ran.
+# - multi_token (Codex, overnight 10-08; needs Aswin's OK): a 64-512-token pattern repeated 4 times. A run of one
+#   repeated token is also a 64-token pattern repeated 4 times, so the whitespace tails stop at the same token as under
+#   D (278, 282 and 774 in the reruns); auto_workflow's reasoning loop (a 427-token passage, no `</think>`) stops at
+#   token 3,308 instead of running to the cap. Over all 612 saved completions it stopped none of the 608 ordinary ones
+#   (analyze_repetition_settings.py). vLLM's check cost about 23 us per generated token against D's 1 us. Check
+#   (a'), check_repetition_cut.py --setting multi_token, takes the cut through vLLM's parser and Inspect.
+repetition_settings:
+  d: {min_pattern_size: 1, max_pattern_size: 1, min_count: 256}
+  multi_token: {min_pattern_size: 64, max_pattern_size: 512, min_count: 4}
+repetition_setting: multi_token  # Aswin, 10-08 12:10 (#82): replaces D in every arm
+model:
+  hf_id: Qwen/Qwen3.5-27B
+  revision: fc05daec18b0a78c049392ed2e771dde82bdf654
+  args:
+    - --dtype=bfloat16
+    - --max-model-len=262144         # the native context, no YaRN. Raised from 131,072 for the 200-step runs: vLLM 0.30
+                                     # rejects a prompt longer than this (step 1 reached 115k tokens at 150 steps) and
+                                     # clamps a turn's max_tokens to the room left, so it never rejects prompt + cap
+    - --enable-auto-tool-choice
+    - --tool-call-parser=qwen3_coder # Qwen3.5 emits XML calls: <function=NAME><parameter=ARG>...
+    - --reasoning-parser=qwen3
+    - --gpu-memory-utilization=0.92

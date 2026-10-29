@@ -1,0 +1,2498 @@
+{
+ "what": "route C recomputation with the producer's script (rev 3), inputs updated; not an independent reproduction; PRELIMINARY under the bar (Aswin's decision 10)",
+ "n_groups": 186,
+ "skipped_folders": [
+  "ep2_t196_v1__honest_a"
+ ],
+ "sol_or_oars_listed_not_used_staged_shas": {
+  "rh1e4_stage_v1__honest_b": {
+   "extra": {
+    "sol": [
+     "8a150d13903df37c974e6d2ffd3f6fe4b114fb1ad1a328858a21d50ff4eabb78"
+    ]
+   },
+   "unmapped": {
+    "p2": 0,
+    "sol": 0,
+    "oars": 0
+   },
+   "no_staged_units": {
+    "p2": 0,
+    "sol": 0,
+    "oars": 0
+   }
+  },
+  "simh_q4f_v1_full_b1__sim_honest": {
+   "extra": {
+    "sol": [
+     "98ff13e826804e350e2050e82c9a31618dd1eb54b9a10f1f824ea76b2baea819"
+    ]
+   },
+   "unmapped": {
+    "p2": 0,
+    "sol": 0,
+    "oars": 0
+   },
+   "no_staged_units": {
+    "p2": 0,
+    "sol": 0,
+    "oars": 0
+   }
+  },
+  "simh_q4f_v1_full_b2__sim_honest": {
+   "extra": {
+    "sol": [
+     "5584db0676f48f0bb34c8769900a6914be0b0b15a80574079bac01e92fe3ee3c"
+    ]
+   },
+   "unmapped": {
+    "p2": 0,
+    "sol": 0,
+    "oars": 0
+   },
+   "no_staged_units": {
+    "p2": 0,
+    "sol": 0,
+    "oars": 0
+   }
+  },
+  "simh_q4f_v1_pilot__sim_honest": {
+   "extra": {
+    "sol": [
+     "9d60057528d420fc0bcb08e35e024f6491085ead7c580973f0b79488325484c1"
+    ]
+   },
+   "unmapped": {
+    "p2": 0,
+    "sol": 0,
+    "oars": 0
+   },
+   "no_staged_units": {
+    "p2": 0,
+    "sol": 0,
+    "oars": 0
+   }
+  }
+ },
+ "p2_folders_listing_other_batch_staged_files": 70,
+ "n_runs_seen": 8286,
+ "dup_keys_across_folders": 0,
+ "key_conflicts_across_readers": 958,
+ "runs_not_in_lead_inputs": 158,
+ "cells": {
+  "S_newmains|H_A": {
+   "runs": 670,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 40884,
+     "bash": 32865,
+     "text_editor": 7730,
+     "other": {
+      "client_bash": 24,
+      "db_bash": 19,
+      "mp_restart": 28,
+      "nginx_bash": 3,
+      "py_ml_bash": 18,
+      "rust_worker_bash": 197
+     },
+     "share_text_editor": 0.1890715194208003,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 670,
+     "runs_with_text_editor": 523,
+     "share_runs_with_text_editor": 0.7805970149253731
+    },
+    "sol": {
+     "units": 35087,
+     "bash": 27136,
+     "text_editor": 7739,
+     "other": {
+      "client_bash": 16,
+      "db_bash": 19,
+      "mp_restart": 28,
+      "nginx_bash": 3,
+      "py_ml_bash": 17,
+      "rust_worker_bash": 129
+     },
+     "share_text_editor": 0.22056602160344288,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 670,
+     "runs_with_text_editor": 523,
+     "share_runs_with_text_editor": 0.7805970149253731
+    },
+    "oars": {
+     "units": 35087,
+     "bash": 27136,
+     "text_editor": 7739,
+     "other": {
+      "client_bash": 16,
+      "db_bash": 19,
+      "mp_restart": 28,
+      "nginx_bash": 3,
+      "py_ml_bash": 17,
+      "rust_worker_bash": 129
+     },
+     "share_text_editor": 0.22056602160344288,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 670,
+     "runs_with_text_editor": 523,
+     "share_runs_with_text_editor": 0.7805970149253731
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 197,
+    "oars": 197
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 7730,
+    "no_call_end": 0,
+    "precedes": 4777,
+    "zero": 2953,
+    "negative": 0,
+    "share_precedes": 0.6179818887451488,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 305.0,
+    "max": 3629
+   }
+  },
+  "S_newmains|H_B": {
+   "runs": 686,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 42158,
+     "bash": 33518,
+     "text_editor": 8075,
+     "other": {
+      "client_bash": 13,
+      "db_bash": 48,
+      "mp_restart": 20,
+      "nginx_bash": 2,
+      "py_ml_bash": 33,
+      "rust_worker_bash": 449
+     },
+     "share_text_editor": 0.19154134446605625,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 686,
+     "runs_with_text_editor": 555,
+     "share_runs_with_text_editor": 0.8090379008746356
+    },
+    "sol": {
+     "units": 37091,
+     "bash": 28544,
+     "text_editor": 8072,
+     "other": {
+      "client_bash": 12,
+      "db_bash": 48,
+      "mp_restart": 20,
+      "nginx_bash": 1,
+      "py_ml_bash": 28,
+      "rust_worker_bash": 366
+     },
+     "share_text_editor": 0.21762691758108435,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 686,
+     "runs_with_text_editor": 555,
+     "share_runs_with_text_editor": 0.8090379008746356
+    },
+    "oars": {
+     "units": 37091,
+     "bash": 28544,
+     "text_editor": 8072,
+     "other": {
+      "client_bash": 12,
+      "db_bash": 48,
+      "mp_restart": 20,
+      "nginx_bash": 1,
+      "py_ml_bash": 28,
+      "rust_worker_bash": 366
+     },
+     "share_text_editor": 0.21762691758108435,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 686,
+     "runs_with_text_editor": 555,
+     "share_runs_with_text_editor": 0.8090379008746356
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 193,
+    "oars": 193
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 8075,
+    "no_call_end": 0,
+    "precedes": 4963,
+    "zero": 3112,
+    "negative": 0,
+    "share_precedes": 0.6146130030959752,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 294.60000000000036,
+    "max": 3358
+   }
+  },
+  "S_newmains|H_sim": {
+   "runs": 338,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 20883,
+     "bash": 16927,
+     "text_editor": 3750,
+     "other": {
+      "client_bash": 15,
+      "db_bash": 9,
+      "mp_restart": 18,
+      "nginx_bash": 1,
+      "py_ml_bash": 6,
+      "rust_worker_bash": 157
+     },
+     "share_text_editor": 0.17957190058899583,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 338,
+     "runs_with_text_editor": 272,
+     "share_runs_with_text_editor": 0.8047337278106509
+    },
+    "sol": {
+     "units": 18314,
+     "bash": 14414,
+     "text_editor": 3753,
+     "other": {
+      "client_bash": 14,
+      "db_bash": 9,
+      "mp_restart": 18,
+      "py_ml_bash": 5,
+      "rust_worker_bash": 101
+     },
+     "share_text_editor": 0.20492519384077754,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 338,
+     "runs_with_text_editor": 272,
+     "share_runs_with_text_editor": 0.8047337278106509
+    },
+    "oars": {
+     "units": 18314,
+     "bash": 14414,
+     "text_editor": 3753,
+     "other": {
+      "client_bash": 14,
+      "db_bash": 9,
+      "mp_restart": 18,
+      "py_ml_bash": 5,
+      "rust_worker_bash": 101
+     },
+     "share_text_editor": 0.20492519384077754,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 338,
+     "runs_with_text_editor": 272,
+     "share_runs_with_text_editor": 0.8047337278106509
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 186,
+    "oars": 186
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 3750,
+    "no_call_end": 0,
+    "precedes": 2282,
+    "zero": 1468,
+    "negative": 0,
+    "share_precedes": 0.6085333333333334,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 281.0999999999999,
+    "max": 5875
+   }
+  },
+  "S_newmains|run1": {
+   "runs": 335,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 22344,
+     "bash": 17116,
+     "text_editor": 4932,
+     "other": {
+      "client_bash": 85,
+      "db_bash": 56,
+      "mp_restart": 40,
+      "nginx_bash": 1,
+      "py_ml_bash": 4,
+      "rust_worker_bash": 110
+     },
+     "share_text_editor": 0.22073039742212675,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 335,
+     "runs_with_text_editor": 285,
+     "share_runs_with_text_editor": 0.8507462686567164
+    },
+    "sol": {
+     "units": 19739,
+     "bash": 14568,
+     "text_editor": 4933,
+     "other": {
+      "client_bash": 64,
+      "db_bash": 56,
+      "mp_restart": 40,
+      "nginx_bash": 1,
+      "py_ml_bash": 4,
+      "rust_worker_bash": 73
+     },
+     "share_text_editor": 0.24991134302649576,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 335,
+     "runs_with_text_editor": 285,
+     "share_runs_with_text_editor": 0.8507462686567164
+    },
+    "oars": {
+     "units": 19739,
+     "bash": 14568,
+     "text_editor": 4933,
+     "other": {
+      "client_bash": 64,
+      "db_bash": 56,
+      "mp_restart": 40,
+      "nginx_bash": 1,
+      "py_ml_bash": 4,
+      "rust_worker_bash": 73
+     },
+     "share_text_editor": 0.24991134302649576,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 335,
+     "runs_with_text_editor": 285,
+     "share_runs_with_text_editor": 0.8507462686567164
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 2,
+    "oars": 2
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 4932,
+    "no_call_end": 0,
+    "precedes": 2878,
+    "zero": 2054,
+    "negative": 0,
+    "share_precedes": 0.583536090835361,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 273.90000000000055,
+    "max": 2664
+   }
+  },
+  "S_newmains|run2": {
+   "runs": 335,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 22489,
+     "bash": 17139,
+     "text_editor": 5148,
+     "other": {
+      "client_bash": 78,
+      "db_bash": 62,
+      "mp_restart": 15,
+      "nginx_bash": 5,
+      "py_ml_bash": 18,
+      "rust_worker_bash": 24
+     },
+     "share_text_editor": 0.22891191249055093,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 335,
+     "runs_with_text_editor": 291,
+     "share_runs_with_text_editor": 0.8686567164179104
+    },
+    "sol": {
+     "units": 19776,
+     "bash": 14454,
+     "text_editor": 5149,
+     "other": {
+      "client_bash": 54,
+      "db_bash": 62,
+      "mp_restart": 15,
+      "nginx_bash": 5,
+      "py_ml_bash": 17,
+      "rust_worker_bash": 20
+     },
+     "share_text_editor": 0.2603661003236246,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 335,
+     "runs_with_text_editor": 291,
+     "share_runs_with_text_editor": 0.8686567164179104
+    },
+    "oars": {
+     "units": 19776,
+     "bash": 14454,
+     "text_editor": 5149,
+     "other": {
+      "client_bash": 54,
+      "db_bash": 62,
+      "mp_restart": 15,
+      "nginx_bash": 5,
+      "py_ml_bash": 17,
+      "rust_worker_bash": 20
+     },
+     "share_text_editor": 0.2603661003236246,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 335,
+     "runs_with_text_editor": 291,
+     "share_runs_with_text_editor": 0.8686567164179104
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 3,
+    "oars": 3
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 5148,
+    "no_call_end": 0,
+    "precedes": 3001,
+    "zero": 2147,
+    "negative": 0,
+    "share_precedes": 0.5829448329448329,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 286.0,
+    "max": 2084
+   }
+  },
+  "S_newmains|sim": {
+   "runs": 335,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 22320,
+     "bash": 17080,
+     "text_editor": 5010,
+     "other": {
+      "client_bash": 103,
+      "db_bash": 66,
+      "mp_restart": 9,
+      "nginx_bash": 4,
+      "py_ml_bash": 18,
+      "rust_worker_bash": 30
+     },
+     "share_text_editor": 0.22446236559139784,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 335,
+     "runs_with_text_editor": 283,
+     "share_runs_with_text_editor": 0.844776119402985
+    },
+    "sol": {
+     "units": 19557,
+     "bash": 14351,
+     "text_editor": 5010,
+     "other": {
+      "client_bash": 84,
+      "db_bash": 66,
+      "mp_restart": 9,
+      "nginx_bash": 4,
+      "py_ml_bash": 17,
+      "rust_worker_bash": 16
+     },
+     "share_text_editor": 0.2561742598558061,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 335,
+     "runs_with_text_editor": 283,
+     "share_runs_with_text_editor": 0.844776119402985
+    },
+    "oars": {
+     "units": 19557,
+     "bash": 14351,
+     "text_editor": 5010,
+     "other": {
+      "client_bash": 84,
+      "db_bash": 66,
+      "mp_restart": 9,
+      "nginx_bash": 4,
+      "py_ml_bash": 17,
+      "rust_worker_bash": 16
+     },
+     "share_text_editor": 0.2561742598558061,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 335,
+     "runs_with_text_editor": 283,
+     "share_runs_with_text_editor": 0.844776119402985
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 2,
+    "oars": 2
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 5010,
+    "no_call_end": 0,
+    "precedes": 2876,
+    "zero": 2134,
+    "negative": 0,
+    "share_precedes": 0.5740518962075848,
+    "median": 20.0,
+    "p10": 0.0,
+    "p90": 275.10000000000036,
+    "max": 2664
+   }
+  },
+  "S_new|H_A": {
+   "runs": 607,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 50125,
+     "bash": 41150,
+     "text_editor": 8614,
+     "other": {
+      "client_bash": 9,
+      "db_bash": 66,
+      "mp_restart": 35,
+      "nginx_bash": 5,
+      "py_ml_bash": 32,
+      "rust_worker_bash": 214
+     },
+     "share_text_editor": 0.1718503740648379,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 607,
+     "runs_with_text_editor": 477,
+     "share_runs_with_text_editor": 0.785831960461285
+    },
+    "sol": {
+     "units": 42707,
+     "bash": 33812,
+     "text_editor": 8612,
+     "other": {
+      "client_bash": 8,
+      "db_bash": 66,
+      "mp_restart": 35,
+      "nginx_bash": 4,
+      "py_ml_bash": 24,
+      "rust_worker_bash": 146
+     },
+     "share_text_editor": 0.20165312478048095,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 607,
+     "runs_with_text_editor": 477,
+     "share_runs_with_text_editor": 0.785831960461285
+    },
+    "oars": {
+     "units": 42707,
+     "bash": 33812,
+     "text_editor": 8612,
+     "other": {
+      "client_bash": 8,
+      "db_bash": 66,
+      "mp_restart": 35,
+      "nginx_bash": 4,
+      "py_ml_bash": 24,
+      "rust_worker_bash": 146
+     },
+     "share_text_editor": 0.20165312478048095,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 607,
+     "runs_with_text_editor": 477,
+     "share_runs_with_text_editor": 0.785831960461285
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 10,
+    "oars": 10
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 8614,
+    "no_call_end": 0,
+    "precedes": 5306,
+    "zero": 3308,
+    "negative": 0,
+    "share_precedes": 0.615973995820757,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 344.6999999999998,
+    "max": 6414
+   }
+  },
+  "S_new|H_B": {
+   "runs": 609,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 50285,
+     "bash": 40950,
+     "text_editor": 8858,
+     "other": {
+      "client_bash": 9,
+      "db_bash": 42,
+      "mp_restart": 42,
+      "nginx_bash": 3,
+      "py_ml_bash": 24,
+      "rust_worker_bash": 357
+     },
+     "share_text_editor": 0.17615591130555833,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 609,
+     "runs_with_text_editor": 491,
+     "share_runs_with_text_editor": 0.80623973727422
+    },
+    "sol": {
+     "units": 42981,
+     "bash": 33766,
+     "text_editor": 8856,
+     "other": {
+      "client_bash": 8,
+      "db_bash": 43,
+      "mp_restart": 42,
+      "nginx_bash": 1,
+      "py_ml_bash": 18,
+      "rust_worker_bash": 247
+     },
+     "share_text_editor": 0.2060445313045299,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 609,
+     "runs_with_text_editor": 491,
+     "share_runs_with_text_editor": 0.80623973727422
+    },
+    "oars": {
+     "units": 42981,
+     "bash": 33766,
+     "text_editor": 8856,
+     "other": {
+      "client_bash": 8,
+      "db_bash": 43,
+      "mp_restart": 42,
+      "nginx_bash": 1,
+      "py_ml_bash": 18,
+      "rust_worker_bash": 247
+     },
+     "share_text_editor": 0.2060445313045299,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 609,
+     "runs_with_text_editor": 491,
+     "share_runs_with_text_editor": 0.80623973727422
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 12,
+    "oars": 12
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 8858,
+    "no_call_end": 0,
+    "precedes": 5363,
+    "zero": 3495,
+    "negative": 0,
+    "share_precedes": 0.6054414088959132,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 312.3000000000002,
+    "max": 12816
+   }
+  },
+  "S_new|H_sim": {
+   "runs": 305,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 25411,
+     "bash": 20913,
+     "text_editor": 4194,
+     "other": {
+      "client_bash": 1,
+      "db_bash": 64,
+      "mp_restart": 23,
+      "nginx_bash": 9,
+      "py_ml_bash": 10,
+      "rust_worker_bash": 197
+     },
+     "share_text_editor": 0.1650466333477628,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 305,
+     "runs_with_text_editor": 245,
+     "share_runs_with_text_editor": 0.8032786885245902
+    },
+    "sol": {
+     "units": 21590,
+     "bash": 17159,
+     "text_editor": 4192,
+     "other": {
+      "client_bash": 1,
+      "db_bash": 64,
+      "mp_restart": 23,
+      "nginx_bash": 6,
+      "py_ml_bash": 8,
+      "rust_worker_bash": 137
+     },
+     "share_text_editor": 0.19416396479851783,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 305,
+     "runs_with_text_editor": 245,
+     "share_runs_with_text_editor": 0.8032786885245902
+    },
+    "oars": {
+     "units": 21590,
+     "bash": 17159,
+     "text_editor": 4192,
+     "other": {
+      "client_bash": 1,
+      "db_bash": 64,
+      "mp_restart": 23,
+      "nginx_bash": 6,
+      "py_ml_bash": 8,
+      "rust_worker_bash": 137
+     },
+     "share_text_editor": 0.19416396479851783,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 305,
+     "runs_with_text_editor": 245,
+     "share_runs_with_text_editor": 0.8032786885245902
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 6,
+    "oars": 6
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 4194,
+    "no_call_end": 0,
+    "precedes": 2496,
+    "zero": 1698,
+    "negative": 0,
+    "share_precedes": 0.5951359084406295,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 314.0,
+    "max": 12816
+   }
+  },
+  "S_new|run1": {
+   "runs": 302,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 24231,
+     "bash": 19190,
+     "text_editor": 4830,
+     "other": {
+      "client_bash": 88,
+      "db_bash": 42,
+      "mp_restart": 14,
+      "nginx_bash": 3,
+      "rust_worker_bash": 64
+     },
+     "share_text_editor": 0.19933143493871486,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 302,
+     "runs_with_text_editor": 252,
+     "share_runs_with_text_editor": 0.8344370860927153
+    },
+    "sol": {
+     "units": 21141,
+     "bash": 16142,
+     "text_editor": 4831,
+     "other": {
+      "client_bash": 58,
+      "db_bash": 42,
+      "mp_restart": 14,
+      "nginx_bash": 3,
+      "rust_worker_bash": 51
+     },
+     "share_text_editor": 0.22851331535878153,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 302,
+     "runs_with_text_editor": 252,
+     "share_runs_with_text_editor": 0.8344370860927153
+    },
+    "oars": {
+     "units": 21141,
+     "bash": 16142,
+     "text_editor": 4831,
+     "other": {
+      "client_bash": 58,
+      "db_bash": 42,
+      "mp_restart": 14,
+      "nginx_bash": 3,
+      "rust_worker_bash": 51
+     },
+     "share_text_editor": 0.22851331535878153,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 302,
+     "runs_with_text_editor": 252,
+     "share_runs_with_text_editor": 0.8344370860927153
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 4,
+    "oars": 4
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 4830,
+    "no_call_end": 0,
+    "precedes": 3040,
+    "zero": 1790,
+    "negative": 0,
+    "share_precedes": 0.629399585921325,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 311.0,
+    "max": 4227
+   }
+  },
+  "S_new|run2": {
+   "runs": 303,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 22956,
+     "bash": 18069,
+     "text_editor": 4619,
+     "other": {
+      "client_bash": 58,
+      "db_bash": 62,
+      "mp_restart": 23,
+      "nginx_bash": 14,
+      "rust_worker_bash": 111
+     },
+     "share_text_editor": 0.2012110123714933,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 303,
+     "runs_with_text_editor": 244,
+     "share_runs_with_text_editor": 0.8052805280528053
+    },
+    "sol": {
+     "units": 19985,
+     "bash": 15133,
+     "text_editor": 4613,
+     "other": {
+      "client_bash": 44,
+      "db_bash": 62,
+      "mp_restart": 23,
+      "nginx_bash": 11,
+      "rust_worker_bash": 99
+     },
+     "share_text_editor": 0.2308231173380035,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 303,
+     "runs_with_text_editor": 244,
+     "share_runs_with_text_editor": 0.8052805280528053
+    },
+    "oars": {
+     "units": 19985,
+     "bash": 15133,
+     "text_editor": 4613,
+     "other": {
+      "client_bash": 44,
+      "db_bash": 62,
+      "mp_restart": 23,
+      "nginx_bash": 11,
+      "rust_worker_bash": 99
+     },
+     "share_text_editor": 0.2308231173380035,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 303,
+     "runs_with_text_editor": 244,
+     "share_runs_with_text_editor": 0.8052805280528053
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 2,
+    "oars": 2
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 4619,
+    "no_call_end": 0,
+    "precedes": 2876,
+    "zero": 1743,
+    "negative": 0,
+    "share_precedes": 0.6226455942844772,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 301.0,
+    "max": 12755
+   }
+  },
+  "S_new|sim": {
+   "runs": 300,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 23023,
+     "bash": 17855,
+     "text_editor": 4911,
+     "other": {
+      "client_bash": 92,
+      "db_bash": 64,
+      "mp_restart": 26,
+      "rust_worker_bash": 75
+     },
+     "share_text_editor": 0.21330843069973504,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 300,
+     "runs_with_text_editor": 250,
+     "share_runs_with_text_editor": 0.8333333333333334
+    },
+    "sol": {
+     "units": 20006,
+     "bash": 14877,
+     "text_editor": 4911,
+     "other": {
+      "client_bash": 68,
+      "db_bash": 64,
+      "mp_restart": 26,
+      "rust_worker_bash": 60
+     },
+     "share_text_editor": 0.24547635709287213,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 300,
+     "runs_with_text_editor": 250,
+     "share_runs_with_text_editor": 0.8333333333333334
+    },
+    "oars": {
+     "units": 20006,
+     "bash": 14877,
+     "text_editor": 4911,
+     "other": {
+      "client_bash": 68,
+      "db_bash": 64,
+      "mp_restart": 26,
+      "rust_worker_bash": 60
+     },
+     "share_text_editor": 0.24547635709287213,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 300,
+     "runs_with_text_editor": 250,
+     "share_runs_with_text_editor": 0.8333333333333334
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 1,
+    "oars": 1
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 4911,
+    "no_call_end": 0,
+    "precedes": 3099,
+    "zero": 1812,
+    "negative": 0,
+    "share_precedes": 0.6310323762981063,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 303.0,
+    "max": 3305
+   }
+  },
+  "S_old|H_A": {
+   "runs": 192,
+   "runs_in_both_A_and_B": 192,
+   "readers": {
+    "p2": {
+     "units": 16383,
+     "bash": 13589,
+     "text_editor": 2691,
+     "other": {
+      "db_bash": 16,
+      "mp_restart": 15,
+      "nginx_bash": 8,
+      "py_ml_bash": 22,
+      "rust_worker_bash": 42
+     },
+     "share_text_editor": 0.16425563083684308,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 192,
+     "runs_with_text_editor": 158,
+     "share_runs_with_text_editor": 0.8229166666666666
+    },
+    "sol": {
+     "units": 14027,
+     "bash": 11265,
+     "text_editor": 2678,
+     "other": {
+      "db_bash": 16,
+      "mp_restart": 15,
+      "nginx_bash": 7,
+      "py_ml_bash": 20,
+      "rust_worker_bash": 26
+     },
+     "share_text_editor": 0.19091751621872105,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 192,
+     "runs_with_text_editor": 158,
+     "share_runs_with_text_editor": 0.8229166666666666
+    },
+    "oars": {
+     "units": 14027,
+     "bash": 11265,
+     "text_editor": 2678,
+     "other": {
+      "db_bash": 16,
+      "mp_restart": 15,
+      "nginx_bash": 7,
+      "py_ml_bash": 20,
+      "rust_worker_bash": 26
+     },
+     "share_text_editor": 0.19091751621872105,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 192,
+     "runs_with_text_editor": 158,
+     "share_runs_with_text_editor": 0.8229166666666666
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 0,
+    "oars": 0
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 2691,
+    "no_call_end": 0,
+    "precedes": 1778,
+    "zero": 913,
+    "negative": 0,
+    "share_precedes": 0.6607209215904868,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 328.0,
+    "max": 4753
+   }
+  },
+  "S_old|H_B": {
+   "runs": 577,
+   "runs_in_both_A_and_B": 192,
+   "readers": {
+    "p2": {
+     "units": 51061,
+     "bash": 42475,
+     "text_editor": 8222,
+     "other": {
+      "client_bash": 16,
+      "db_bash": 71,
+      "mp_restart": 32,
+      "nginx_bash": 14,
+      "py_ml_bash": 80,
+      "rust_worker_bash": 151
+     },
+     "share_text_editor": 0.16102309002957246,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 577,
+     "runs_with_text_editor": 477,
+     "share_runs_with_text_editor": 0.8266897746967071
+    },
+    "sol": {
+     "units": 43468,
+     "bash": 34983,
+     "text_editor": 8207,
+     "other": {
+      "client_bash": 12,
+      "db_bash": 71,
+      "mp_restart": 32,
+      "nginx_bash": 9,
+      "py_ml_bash": 57,
+      "rust_worker_bash": 97
+     },
+     "share_text_editor": 0.18880555811171437,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 577,
+     "runs_with_text_editor": 477,
+     "share_runs_with_text_editor": 0.8266897746967071
+    },
+    "oars": {
+     "units": 43468,
+     "bash": 34983,
+     "text_editor": 8207,
+     "other": {
+      "client_bash": 12,
+      "db_bash": 71,
+      "mp_restart": 32,
+      "nginx_bash": 9,
+      "py_ml_bash": 57,
+      "rust_worker_bash": 97
+     },
+     "share_text_editor": 0.18880555811171437,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 577,
+     "runs_with_text_editor": 477,
+     "share_runs_with_text_editor": 0.8266897746967071
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 3,
+    "oars": 3
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 8222,
+    "no_call_end": 0,
+    "precedes": 5270,
+    "zero": 2952,
+    "negative": 0,
+    "share_precedes": 0.640963269277548,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 332.8000000000011,
+    "max": 12815
+   }
+  },
+  "S_old|H_sim": {
+   "runs": 191,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 16324,
+     "bash": 13475,
+     "text_editor": 2748,
+     "other": {
+      "client_bash": 5,
+      "db_bash": 15,
+      "mp_restart": 10,
+      "nginx_bash": 1,
+      "py_ml_bash": 19,
+      "rust_worker_bash": 51
+     },
+     "share_text_editor": 0.16834109286939475,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 191,
+     "runs_with_text_editor": 158,
+     "share_runs_with_text_editor": 0.8272251308900523
+    },
+    "sol": {
+     "units": 14206,
+     "bash": 11387,
+     "text_editor": 2738,
+     "other": {
+      "client_bash": 5,
+      "db_bash": 15,
+      "mp_restart": 10,
+      "nginx_bash": 1,
+      "py_ml_bash": 18,
+      "rust_worker_bash": 32
+     },
+     "share_text_editor": 0.19273546388849783,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 191,
+     "runs_with_text_editor": 158,
+     "share_runs_with_text_editor": 0.8272251308900523
+    },
+    "oars": {
+     "units": 14206,
+     "bash": 11387,
+     "text_editor": 2738,
+     "other": {
+      "client_bash": 5,
+      "db_bash": 15,
+      "mp_restart": 10,
+      "nginx_bash": 1,
+      "py_ml_bash": 18,
+      "rust_worker_bash": 32
+     },
+     "share_text_editor": 0.19273546388849783,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 191,
+     "runs_with_text_editor": 158,
+     "share_runs_with_text_editor": 0.8272251308900523
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 154,
+    "oars": 154
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 2748,
+    "no_call_end": 0,
+    "precedes": 1809,
+    "zero": 939,
+    "negative": 0,
+    "share_precedes": 0.6582969432314411,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 352.3000000000002,
+    "max": 3429
+   }
+  },
+  "S_old|run1": {
+   "runs": 190,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 13023,
+     "bash": 9961,
+     "text_editor": 2846,
+     "other": {
+      "client_bash": 61,
+      "db_bash": 108,
+      "mp_restart": 13,
+      "nginx_bash": 3,
+      "py_ml_bash": 2,
+      "rust_worker_bash": 29
+     },
+     "share_text_editor": 0.21853643553712662,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 190,
+     "runs_with_text_editor": 157,
+     "share_runs_with_text_editor": 0.8263157894736842
+    },
+    "sol": {
+     "units": 11553,
+     "bash": 8497,
+     "text_editor": 2845,
+     "other": {
+      "client_bash": 57,
+      "db_bash": 108,
+      "mp_restart": 13,
+      "nginx_bash": 3,
+      "py_ml_bash": 2,
+      "rust_worker_bash": 28
+     },
+     "share_text_editor": 0.2462563836233013,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 190,
+     "runs_with_text_editor": 157,
+     "share_runs_with_text_editor": 0.8263157894736842
+    },
+    "oars": {
+     "units": 11553,
+     "bash": 8497,
+     "text_editor": 2845,
+     "other": {
+      "client_bash": 57,
+      "db_bash": 108,
+      "mp_restart": 13,
+      "nginx_bash": 3,
+      "py_ml_bash": 2,
+      "rust_worker_bash": 28
+     },
+     "share_text_editor": 0.2462563836233013,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 190,
+     "runs_with_text_editor": 157,
+     "share_runs_with_text_editor": 0.8263157894736842
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 0,
+    "oars": 0
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 2846,
+    "no_call_end": 0,
+    "precedes": 1860,
+    "zero": 986,
+    "negative": 0,
+    "share_precedes": 0.6535488404778637,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 279.0,
+    "max": 2245
+   }
+  },
+  "S_old|run2": {
+   "runs": 190,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 12307,
+     "bash": 9404,
+     "text_editor": 2740,
+     "other": {
+      "client_bash": 65,
+      "db_bash": 74,
+      "mp_restart": 9,
+      "py_ml_bash": 4,
+      "rust_worker_bash": 11
+     },
+     "share_text_editor": 0.22263752336068904,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 190,
+     "runs_with_text_editor": 158,
+     "share_runs_with_text_editor": 0.8315789473684211
+    },
+    "sol": {
+     "units": 10887,
+     "bash": 7992,
+     "text_editor": 2740,
+     "other": {
+      "client_bash": 58,
+      "db_bash": 74,
+      "mp_restart": 9,
+      "py_ml_bash": 4,
+      "rust_worker_bash": 10
+     },
+     "share_text_editor": 0.25167631119684025,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 190,
+     "runs_with_text_editor": 158,
+     "share_runs_with_text_editor": 0.8315789473684211
+    },
+    "oars": {
+     "units": 10887,
+     "bash": 7992,
+     "text_editor": 2740,
+     "other": {
+      "client_bash": 58,
+      "db_bash": 74,
+      "mp_restart": 9,
+      "py_ml_bash": 4,
+      "rust_worker_bash": 10
+     },
+     "share_text_editor": 0.25167631119684025,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 190,
+     "runs_with_text_editor": 158,
+     "share_runs_with_text_editor": 0.8315789473684211
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 1,
+    "oars": 1
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 2740,
+    "no_call_end": 0,
+    "precedes": 1820,
+    "zero": 920,
+    "negative": 0,
+    "share_precedes": 0.6642335766423357,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 306.0999999999999,
+    "max": 2664
+   }
+  },
+  "S_old|sim": {
+   "runs": 190,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 13202,
+     "bash": 10148,
+     "text_editor": 2753,
+     "other": {
+      "client_bash": 102,
+      "db_bash": 158,
+      "mp_restart": 12,
+      "py_ml_bash": 5,
+      "rust_worker_bash": 24
+     },
+     "share_text_editor": 0.20852901075594607,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 190,
+     "runs_with_text_editor": 150,
+     "share_runs_with_text_editor": 0.7894736842105263
+    },
+    "sol": {
+     "units": 11358,
+     "bash": 8343,
+     "text_editor": 2752,
+     "other": {
+      "client_bash": 73,
+      "db_bash": 158,
+      "mp_restart": 12,
+      "py_ml_bash": 3,
+      "rust_worker_bash": 17
+     },
+     "share_text_editor": 0.24229617890473676,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 190,
+     "runs_with_text_editor": 150,
+     "share_runs_with_text_editor": 0.7894736842105263
+    },
+    "oars": {
+     "units": 11358,
+     "bash": 8343,
+     "text_editor": 2752,
+     "other": {
+      "client_bash": 73,
+      "db_bash": 158,
+      "mp_restart": 12,
+      "py_ml_bash": 3,
+      "rust_worker_bash": 17
+     },
+     "share_text_editor": 0.24229617890473676,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 190,
+     "runs_with_text_editor": 150,
+     "share_runs_with_text_editor": 0.7894736842105263
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 0,
+    "oars": 0
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 2753,
+    "no_call_end": 0,
+    "precedes": 1847,
+    "zero": 906,
+    "negative": 0,
+    "share_precedes": 0.670904467853251,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 303.8000000000002,
+    "max": 3051
+   }
+  },
+  "S_paper493|H_A": {
+   "runs": 274,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 25531,
+     "bash": 21271,
+     "text_editor": 4148,
+     "other": {
+      "client_bash": 6,
+      "db_bash": 10,
+      "mp_restart": 9,
+      "nginx_bash": 1,
+      "py_ml_bash": 7,
+      "rust_worker_bash": 79
+     },
+     "share_text_editor": 0.162469155144726,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 274,
+     "runs_with_text_editor": 208,
+     "share_runs_with_text_editor": 0.7591240875912408
+    },
+    "sol": {
+     "units": 21775,
+     "bash": 17540,
+     "text_editor": 4148,
+     "other": {
+      "client_bash": 6,
+      "db_bash": 10,
+      "mp_restart": 9,
+      "nginx_bash": 1,
+      "py_ml_bash": 5,
+      "rust_worker_bash": 56
+     },
+     "share_text_editor": 0.19049368541905856,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 274,
+     "runs_with_text_editor": 208,
+     "share_runs_with_text_editor": 0.7591240875912408
+    },
+    "oars": {
+     "units": 21775,
+     "bash": 17540,
+     "text_editor": 4148,
+     "other": {
+      "client_bash": 6,
+      "db_bash": 10,
+      "mp_restart": 9,
+      "nginx_bash": 1,
+      "py_ml_bash": 5,
+      "rust_worker_bash": 56
+     },
+     "share_text_editor": 0.19049368541905856,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 274,
+     "runs_with_text_editor": 208,
+     "share_runs_with_text_editor": 0.7591240875912408
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 5,
+    "oars": 5
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 4148,
+    "no_call_end": 0,
+    "precedes": 2477,
+    "zero": 1671,
+    "negative": 0,
+    "share_precedes": 0.5971552555448408,
+    "median": 20.0,
+    "p10": 0.0,
+    "p90": 349.0,
+    "max": 4862
+   }
+  },
+  "S_paper493|H_B": {
+   "runs": 289,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 27318,
+     "bash": 22534,
+     "text_editor": 4525,
+     "other": {
+      "db_bash": 35,
+      "mp_restart": 4,
+      "nginx_bash": 1,
+      "py_ml_bash": 27,
+      "rust_worker_bash": 192
+     },
+     "share_text_editor": 0.1656417014422725,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 289,
+     "runs_with_text_editor": 228,
+     "share_runs_with_text_editor": 0.7889273356401384
+    },
+    "sol": {
+     "units": 23287,
+     "bash": 18571,
+     "text_editor": 4522,
+     "other": {
+      "db_bash": 35,
+      "mp_restart": 4,
+      "py_ml_bash": 17,
+      "rust_worker_bash": 138
+     },
+     "share_text_editor": 0.19418559711426978,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 289,
+     "runs_with_text_editor": 228,
+     "share_runs_with_text_editor": 0.7889273356401384
+    },
+    "oars": {
+     "units": 23287,
+     "bash": 18571,
+     "text_editor": 4522,
+     "other": {
+      "db_bash": 35,
+      "mp_restart": 4,
+      "py_ml_bash": 17,
+      "rust_worker_bash": 138
+     },
+     "share_text_editor": 0.19418559711426978,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 289,
+     "runs_with_text_editor": 228,
+     "share_runs_with_text_editor": 0.7889273356401384
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 3,
+    "oars": 3
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 4525,
+    "no_call_end": 0,
+    "precedes": 2688,
+    "zero": 1837,
+    "negative": 0,
+    "share_precedes": 0.5940331491712707,
+    "median": 20.0,
+    "p10": 0.0,
+    "p90": 310.5999999999999,
+    "max": 12815
+   }
+  },
+  "S_paper493|H_sim": {
+   "runs": 274,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 26035,
+     "bash": 21709,
+     "text_editor": 4091,
+     "other": {
+      "client_bash": 6,
+      "db_bash": 18,
+      "mp_restart": 10,
+      "nginx_bash": 7,
+      "py_ml_bash": 18,
+      "rust_worker_bash": 176
+     },
+     "share_text_editor": 0.15713462646437487,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 274,
+     "runs_with_text_editor": 222,
+     "share_runs_with_text_editor": 0.8102189781021898
+    },
+    "sol": {
+     "units": 22415,
+     "bash": 18170,
+     "text_editor": 4079,
+     "other": {
+      "client_bash": 6,
+      "db_bash": 18,
+      "mp_restart": 10,
+      "nginx_bash": 4,
+      "py_ml_bash": 15,
+      "rust_worker_bash": 113
+     },
+     "share_text_editor": 0.18197635511933974,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 274,
+     "runs_with_text_editor": 222,
+     "share_runs_with_text_editor": 0.8102189781021898
+    },
+    "oars": {
+     "units": 22415,
+     "bash": 18170,
+     "text_editor": 4079,
+     "other": {
+      "client_bash": 6,
+      "db_bash": 18,
+      "mp_restart": 10,
+      "nginx_bash": 4,
+      "py_ml_bash": 15,
+      "rust_worker_bash": 113
+     },
+     "share_text_editor": 0.18197635511933974,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 274,
+     "runs_with_text_editor": 222,
+     "share_runs_with_text_editor": 0.8102189781021898
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 155,
+    "oars": 155
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 4091,
+    "no_call_end": 0,
+    "precedes": 2535,
+    "zero": 1556,
+    "negative": 0,
+    "share_precedes": 0.6196528966022977,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 351.0,
+    "max": 3198
+   }
+  },
+  "S_paper493|run1": {
+   "runs": 484,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 39229,
+     "bash": 30804,
+     "text_editor": 8053,
+     "other": {
+      "client_bash": 135,
+      "db_bash": 132,
+      "mp_restart": 17,
+      "nginx_bash": 2,
+      "py_ml_bash": 14,
+      "rust_worker_bash": 72
+     },
+     "share_text_editor": 0.20528180682658237,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 484,
+     "runs_with_text_editor": 399,
+     "share_runs_with_text_editor": 0.8243801652892562
+    },
+    "sol": {
+     "units": 34359,
+     "bash": 25994,
+     "text_editor": 8048,
+     "other": {
+      "client_bash": 110,
+      "db_bash": 132,
+      "mp_restart": 17,
+      "nginx_bash": 2,
+      "py_ml_bash": 10,
+      "rust_worker_bash": 46
+     },
+     "share_text_editor": 0.23423266102040222,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 484,
+     "runs_with_text_editor": 399,
+     "share_runs_with_text_editor": 0.8243801652892562
+    },
+    "oars": {
+     "units": 34359,
+     "bash": 25994,
+     "text_editor": 8048,
+     "other": {
+      "client_bash": 110,
+      "db_bash": 132,
+      "mp_restart": 17,
+      "nginx_bash": 2,
+      "py_ml_bash": 10,
+      "rust_worker_bash": 46
+     },
+     "share_text_editor": 0.23423266102040222,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 484,
+     "runs_with_text_editor": 399,
+     "share_runs_with_text_editor": 0.8243801652892562
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 2,
+    "oars": 2
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 8053,
+    "no_call_end": 0,
+    "precedes": 5116,
+    "zero": 2937,
+    "negative": 0,
+    "share_precedes": 0.6352911958276418,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 311.0,
+    "max": 4192
+   }
+  },
+  "S_paper493|run2": {
+   "runs": 485,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 41255,
+     "bash": 32917,
+     "text_editor": 7992,
+     "other": {
+      "client_bash": 141,
+      "db_bash": 136,
+      "mp_restart": 19,
+      "nginx_bash": 10,
+      "py_ml_bash": 6,
+      "rust_worker_bash": 34
+     },
+     "share_text_editor": 0.1937219730941704,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 485,
+     "runs_with_text_editor": 403,
+     "share_runs_with_text_editor": 0.8309278350515464
+    },
+    "sol": {
+     "units": 36157,
+     "bash": 27870,
+     "text_editor": 7981,
+     "other": {
+      "client_bash": 127,
+      "db_bash": 136,
+      "mp_restart": 19,
+      "nginx_bash": 9,
+      "py_ml_bash": 4,
+      "rust_worker_bash": 11
+     },
+     "share_text_editor": 0.22073180850181154,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 485,
+     "runs_with_text_editor": 403,
+     "share_runs_with_text_editor": 0.8309278350515464
+    },
+    "oars": {
+     "units": 36157,
+     "bash": 27870,
+     "text_editor": 7981,
+     "other": {
+      "client_bash": 127,
+      "db_bash": 136,
+      "mp_restart": 19,
+      "nginx_bash": 9,
+      "py_ml_bash": 4,
+      "rust_worker_bash": 11
+     },
+     "share_text_editor": 0.22073180850181154,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 485,
+     "runs_with_text_editor": 403,
+     "share_runs_with_text_editor": 0.8309278350515464
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 4,
+    "oars": 4
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 7992,
+    "no_call_end": 0,
+    "precedes": 5222,
+    "zero": 2770,
+    "negative": 0,
+    "share_precedes": 0.6534034034034034,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 304.90000000000055,
+    "max": 2936
+   }
+  },
+  "S_paper493|sim": {
+   "runs": 484,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 39613,
+     "bash": 31433,
+     "text_editor": 7862,
+     "other": {
+      "client_bash": 116,
+      "db_bash": 114,
+      "mp_restart": 6,
+      "nginx_bash": 4,
+      "py_ml_bash": 17,
+      "rust_worker_bash": 61
+     },
+     "share_text_editor": 0.19847019917703784,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 484,
+     "runs_with_text_editor": 377,
+     "share_runs_with_text_editor": 0.7789256198347108
+    },
+    "sol": {
+     "units": 34052,
+     "bash": 25934,
+     "text_editor": 7853,
+     "other": {
+      "client_bash": 82,
+      "db_bash": 114,
+      "mp_restart": 6,
+      "nginx_bash": 4,
+      "py_ml_bash": 15,
+      "rust_worker_bash": 44
+     },
+     "share_text_editor": 0.23061787853870552,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 484,
+     "runs_with_text_editor": 377,
+     "share_runs_with_text_editor": 0.7789256198347108
+    },
+    "oars": {
+     "units": 34052,
+     "bash": 25934,
+     "text_editor": 7853,
+     "other": {
+      "client_bash": 82,
+      "db_bash": 114,
+      "mp_restart": 6,
+      "nginx_bash": 4,
+      "py_ml_bash": 15,
+      "rust_worker_bash": 44
+     },
+     "share_text_editor": 0.23061787853870552,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 484,
+     "runs_with_text_editor": 377,
+     "share_runs_with_text_editor": 0.7789256198347108
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 2,
+    "oars": 2
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 7862,
+    "no_call_end": 0,
+    "precedes": 5096,
+    "zero": 2766,
+    "negative": 0,
+    "share_precedes": 0.648181124395828,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 309.0,
+    "max": 4227
+   }
+  },
+  "pooled|H_A": {
+   "runs": 1613,
+   "runs_in_both_A_and_B": 192,
+   "readers": {
+    "p2": {
+     "units": 120805,
+     "bash": 99019,
+     "text_editor": 20987,
+     "other": {
+      "client_bash": 39,
+      "db_bash": 102,
+      "mp_restart": 86,
+      "nginx_bash": 17,
+      "py_ml_bash": 77,
+      "rust_worker_bash": 478
+     },
+     "share_text_editor": 0.17372625305243988,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1613,
+     "runs_with_text_editor": 1262,
+     "share_runs_with_text_editor": 0.782393056416615
+    },
+    "sol": {
+     "units": 103375,
+     "bash": 81779,
+     "text_editor": 20981,
+     "other": {
+      "client_bash": 30,
+      "db_bash": 102,
+      "mp_restart": 86,
+      "nginx_bash": 15,
+      "py_ml_bash": 65,
+      "rust_worker_bash": 317
+     },
+     "share_text_editor": 0.20296009673518742,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1613,
+     "runs_with_text_editor": 1262,
+     "share_runs_with_text_editor": 0.782393056416615
+    },
+    "oars": {
+     "units": 103375,
+     "bash": 81779,
+     "text_editor": 20981,
+     "other": {
+      "client_bash": 30,
+      "db_bash": 102,
+      "mp_restart": 86,
+      "nginx_bash": 15,
+      "py_ml_bash": 65,
+      "rust_worker_bash": 317
+     },
+     "share_text_editor": 0.20296009673518742,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1613,
+     "runs_with_text_editor": 1262,
+     "share_runs_with_text_editor": 0.782393056416615
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 208,
+    "oars": 208
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 20987,
+    "no_call_end": 0,
+    "precedes": 13061,
+    "zero": 7926,
+    "negative": 0,
+    "share_precedes": 0.6223376375851718,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 325.0,
+    "max": 6414
+   }
+  },
+  "pooled|H_B": {
+   "runs": 1906,
+   "runs_in_both_A_and_B": 192,
+   "readers": {
+    "p2": {
+     "units": 146220,
+     "bash": 119296,
+     "text_editor": 25491,
+     "other": {
+      "client_bash": 38,
+      "db_bash": 161,
+      "mp_restart": 96,
+      "nginx_bash": 19,
+      "py_ml_bash": 146,
+      "rust_worker_bash": 973
+     },
+     "share_text_editor": 0.1743331965531391,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1906,
+     "runs_with_text_editor": 1549,
+     "share_runs_with_text_editor": 0.8126967471143757
+    },
+    "sol": {
+     "units": 125893,
+     "bash": 99290,
+     "text_editor": 25471,
+     "other": {
+      "client_bash": 32,
+      "db_bash": 162,
+      "mp_restart": 96,
+      "nginx_bash": 11,
+      "py_ml_bash": 112,
+      "rust_worker_bash": 719
+     },
+     "share_text_editor": 0.20232260729349527,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1906,
+     "runs_with_text_editor": 1549,
+     "share_runs_with_text_editor": 0.8126967471143757
+    },
+    "oars": {
+     "units": 125893,
+     "bash": 99290,
+     "text_editor": 25471,
+     "other": {
+      "client_bash": 32,
+      "db_bash": 162,
+      "mp_restart": 96,
+      "nginx_bash": 11,
+      "py_ml_bash": 112,
+      "rust_worker_bash": 719
+     },
+     "share_text_editor": 0.20232260729349527,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1906,
+     "runs_with_text_editor": 1549,
+     "share_runs_with_text_editor": 0.8126967471143757
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 208,
+    "oars": 208
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 25491,
+    "no_call_end": 0,
+    "precedes": 15778,
+    "zero": 9713,
+    "negative": 0,
+    "share_precedes": 0.6189635557647797,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 313.0,
+    "max": 12816
+   }
+  },
+  "pooled|H_sim": {
+   "runs": 868,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 65202,
+     "bash": 53558,
+     "text_editor": 11016,
+     "other": {
+      "client_bash": 21,
+      "db_bash": 88,
+      "mp_restart": 53,
+      "nginx_bash": 11,
+      "py_ml_bash": 35,
+      "rust_worker_bash": 420
+     },
+     "share_text_editor": 0.1689518726419435,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 868,
+     "runs_with_text_editor": 701,
+     "share_runs_with_text_editor": 0.8076036866359447
+    },
+    "sol": {
+     "units": 56362,
+     "bash": 44882,
+     "text_editor": 11007,
+     "other": {
+      "client_bash": 20,
+      "db_bash": 88,
+      "mp_restart": 53,
+      "nginx_bash": 7,
+      "py_ml_bash": 31,
+      "rust_worker_bash": 274
+     },
+     "share_text_editor": 0.19529115361413718,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 868,
+     "runs_with_text_editor": 701,
+     "share_runs_with_text_editor": 0.8076036866359447
+    },
+    "oars": {
+     "units": 56362,
+     "bash": 44882,
+     "text_editor": 11007,
+     "other": {
+      "client_bash": 20,
+      "db_bash": 88,
+      "mp_restart": 53,
+      "nginx_bash": 7,
+      "py_ml_bash": 31,
+      "rust_worker_bash": 274
+     },
+     "share_text_editor": 0.19529115361413718,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 868,
+     "runs_with_text_editor": 701,
+     "share_runs_with_text_editor": 0.8076036866359447
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 346,
+    "oars": 346
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 11016,
+    "no_call_end": 0,
+    "precedes": 6783,
+    "zero": 4233,
+    "negative": 0,
+    "share_precedes": 0.6157407407407407,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 318.0,
+    "max": 12816
+   }
+  },
+  "pooled|run1": {
+   "runs": 1311,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 98827,
+     "bash": 77071,
+     "text_editor": 20661,
+     "other": {
+      "client_bash": 369,
+      "db_bash": 338,
+      "mp_restart": 84,
+      "nginx_bash": 9,
+      "py_ml_bash": 20,
+      "rust_worker_bash": 275
+     },
+     "share_text_editor": 0.2090623007882461,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1311,
+     "runs_with_text_editor": 1093,
+     "share_runs_with_text_editor": 0.8337147215865751
+    },
+    "sol": {
+     "units": 86792,
+     "bash": 65201,
+     "text_editor": 20657,
+     "other": {
+      "client_bash": 289,
+      "db_bash": 338,
+      "mp_restart": 84,
+      "nginx_bash": 9,
+      "py_ml_bash": 16,
+      "rust_worker_bash": 198
+     },
+     "share_text_editor": 0.23800580698681906,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1311,
+     "runs_with_text_editor": 1093,
+     "share_runs_with_text_editor": 0.8337147215865751
+    },
+    "oars": {
+     "units": 86792,
+     "bash": 65201,
+     "text_editor": 20657,
+     "other": {
+      "client_bash": 289,
+      "db_bash": 338,
+      "mp_restart": 84,
+      "nginx_bash": 9,
+      "py_ml_bash": 16,
+      "rust_worker_bash": 198
+     },
+     "share_text_editor": 0.23800580698681906,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1311,
+     "runs_with_text_editor": 1093,
+     "share_runs_with_text_editor": 0.8337147215865751
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 8,
+    "oars": 8
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 20661,
+    "no_call_end": 0,
+    "precedes": 12894,
+    "zero": 7767,
+    "negative": 0,
+    "share_precedes": 0.6240743429650065,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 304.0,
+    "max": 4227
+   }
+  },
+  "pooled|run2": {
+   "runs": 1313,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 99007,
+     "bash": 77529,
+     "text_editor": 20499,
+     "other": {
+      "client_bash": 342,
+      "db_bash": 334,
+      "mp_restart": 66,
+      "nginx_bash": 29,
+      "py_ml_bash": 28,
+      "rust_worker_bash": 180
+     },
+     "share_text_editor": 0.2070459664468169,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1313,
+     "runs_with_text_editor": 1096,
+     "share_runs_with_text_editor": 0.8347296268088348
+    },
+    "sol": {
+     "units": 86805,
+     "bash": 65449,
+     "text_editor": 20483,
+     "other": {
+      "client_bash": 283,
+      "db_bash": 334,
+      "mp_restart": 66,
+      "nginx_bash": 25,
+      "py_ml_bash": 25,
+      "rust_worker_bash": 140
+     },
+     "share_text_editor": 0.23596567018028916,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1313,
+     "runs_with_text_editor": 1096,
+     "share_runs_with_text_editor": 0.8347296268088348
+    },
+    "oars": {
+     "units": 86805,
+     "bash": 65449,
+     "text_editor": 20483,
+     "other": {
+      "client_bash": 283,
+      "db_bash": 334,
+      "mp_restart": 66,
+      "nginx_bash": 25,
+      "py_ml_bash": 25,
+      "rust_worker_bash": 140
+     },
+     "share_text_editor": 0.23596567018028916,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1313,
+     "runs_with_text_editor": 1096,
+     "share_runs_with_text_editor": 0.8347296268088348
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 10,
+    "oars": 10
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 20499,
+    "no_call_end": 0,
+    "precedes": 12919,
+    "zero": 7580,
+    "negative": 0,
+    "share_precedes": 0.6302258646763257,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 301.0,
+    "max": 12755
+   }
+  },
+  "pooled|sim": {
+   "runs": 1309,
+   "runs_in_both_A_and_B": 0,
+   "readers": {
+    "p2": {
+     "units": 98158,
+     "bash": 76516,
+     "text_editor": 20536,
+     "other": {
+      "client_bash": 413,
+      "db_bash": 402,
+      "mp_restart": 53,
+      "nginx_bash": 8,
+      "py_ml_bash": 40,
+      "rust_worker_bash": 190
+     },
+     "share_text_editor": 0.20921371666089367,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1309,
+     "runs_with_text_editor": 1060,
+     "share_runs_with_text_editor": 0.8097784568372803
+    },
+    "sol": {
+     "units": 84973,
+     "bash": 63505,
+     "text_editor": 20526,
+     "other": {
+      "client_bash": 307,
+      "db_bash": 402,
+      "mp_restart": 53,
+      "nginx_bash": 8,
+      "py_ml_bash": 35,
+      "rust_worker_bash": 137
+     },
+     "share_text_editor": 0.24155908347357397,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1309,
+     "runs_with_text_editor": 1060,
+     "share_runs_with_text_editor": 0.8097784568372803
+    },
+    "oars": {
+     "units": 84973,
+     "bash": 63505,
+     "text_editor": 20526,
+     "other": {
+      "client_bash": 307,
+      "db_bash": 402,
+      "mp_restart": 53,
+      "nginx_bash": 8,
+      "py_ml_bash": 35,
+      "rust_worker_bash": 137
+     },
+     "share_text_editor": 0.24155908347357397,
+     "unmapped_units": 0,
+     "units_of_runs_without_staged_record": 0,
+     "runs_with_units": 1309,
+     "runs_with_text_editor": 1060,
+     "share_runs_with_text_editor": 0.8097784568372803
+    }
+   },
+   "guard_calls_outside_p2": {
+    "sol": 5,
+    "oars": 5
+   },
+   "runs_without_p2_units": 0,
+   "p2_text_editor_gaps": {
+    "units": 20536,
+    "no_call_end": 0,
+    "precedes": 12918,
+    "zero": 7618,
+    "negative": 0,
+    "share_precedes": 0.6290416828983248,
+    "median": 21.0,
+    "p10": 0.0,
+    "p90": 297.0,
+    "max": 4227
+   }
+  }
+ },
+ "pooled_pool_runs_vs_catalogue": {
+  "H_B": {
+   "seen": 1906,
+   "catalogue": 1906,
+   "catalogue_keys_not_seen": []
+  },
+  "H_A": {
+   "seen": 1613,
+   "catalogue": 1613,
+   "catalogue_keys_not_seen": []
+  },
+  "H_sim": {
+   "seen": 868,
+   "catalogue": 868,
+   "catalogue_keys_not_seen": []
+  }
+ },
+ "attack_runs_vs_cohort": {
+  "run1": {
+   "seen": 1311,
+   "cohort": 1313,
+   "cohort_keys_not_seen": [
+    "run1|t399_model_registry",
+    "run1|t637_slack_clone"
+   ]
+  },
+  "run2": {
+   "seen": 1313,
+   "cohort": 1313,
+   "cohort_keys_not_seen": []
+  },
+  "sim": {
+   "seen": 1309,
+   "cohort": 1313,
+   "cohort_keys_not_seen": [
+    "sim|t301_auto_workflow",
+    "sim|t387_tiktok",
+    "sim|t399_model_registry",
+    "sim|t819_tiktok"
+   ]
+  }
+ }
+}

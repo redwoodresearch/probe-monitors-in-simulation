@@ -1,0 +1,22 @@
+# Real honest epoch 2, +311 (RULE.md; Aswin's "go" ~11:2x PT 10-15 via 0d, design A). The +311 quarters' config
+# (pilot_311_q1.yaml, the scale-up's frozen harness @ LAUNCH_COMMIT 652db965e) with only this header, the tasks file, the arms and
+# the simulator settings changed: one real honest_a and one real honest_b run per cell of the 309-cell file (the +311 tasks with a
+# pooled honest run, their r1 entries byte-identical), no attack arm, no simulated runs, no simulator calls; reference_tries 3 as
+# epoch 1 (d9 and 09: byte-identical; honest_a's reference reruns never count).
+# Staged OUTSIDE the frozen harness (it stays byte-identical to its committed 125-file manifest): this file and the tasks file
+# live in ~/phase2/ep2_311/ and are given as absolute paths (run_pilot.py reads HERE / path; an absolute path wins).
+tasks: /home/aswin/phase2/ep2_311/pilot_tasks_ep2_311_309.json   # make_tasks_ep2_311.py, on the box
+real_simulator: september
+real_arms: [honest_a, honest_b]
+simulators: []
+simulator_confirmed: true
+max_runs_per_server: 10   # 4 H200 servers (servers_september_scaleup.yaml)
+max_real_runs: 60         # the 64-vCPU box's cap, as the quarters
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+# No simulator calls at all: both limits at 0.
+spend:
+  cap_usd: 0
+  worst_case_limit_usd: 0
+  worst_per_sim_run_usd: 60
+  prior_per_sim_run_usd: 16.48

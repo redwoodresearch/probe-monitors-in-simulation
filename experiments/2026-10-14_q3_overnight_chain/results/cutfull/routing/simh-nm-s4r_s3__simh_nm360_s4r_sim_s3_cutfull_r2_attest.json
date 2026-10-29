@@ -1,0 +1,10 @@
+{
+ "batch": "simh-nm-s4r_s3",
+ "original_target": "simh_nm360_s4r_sim_s3",
+ "revision": 2,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/simh-nm-s4r_s3__simh_nm360_s4r_sim_s3_cutfull_r2.json @ dd00d9b6fd9b",
+ "commit": "dd00d9b6fd9b",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_simh-nm-s4r_s3__simh_nm360_s4r_sim_s3_cutfull_r2.json",
+ "sets": 1,
+ "failing": {}
+}

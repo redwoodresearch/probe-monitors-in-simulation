@@ -1,0 +1,23 @@
+# Clean-cell retrain with the protocol's headline rule (compare: q1_segment_end_scrub5_clean.yaml, fixed layers).
+# Q1 on segment-end features (2026-10-06, after James's meeting): can a linear probe on Qwen3-32B activations tell
+# real LinuxArena attack runs from simulated ones?
+extraction_run: 2026-10-06_la_segment-end-scrub5-ema_qwen3-32b_v1   # tool outputs and calls scrubbed at the text baselines' level 5
+folds_file: folds_v2.json          # main-task folds, shared by every track (folds_v3.json is identical)
+exclusions_file: exclusions_v3.json  # paired cells: valid in all three attack arms; sim_reference; under-32k pairing
+layers: [48, 63]                   # the frozen-probe confound check's layers
+positions: [output_end, call_end]  # separately trained probes: last content token of each tool output / each tool call
+sensitivity_positions: [output_marker, call_marker]   # template markers: the end-of-sequence-style check
+C: 0.01                            # L2 logistic regression on standardized features, as in the pooled pilot
+max_iter: 2000
+bootstrap: 1000                    # resamples of main tasks for 95% intervals
+shuffle_null: 100                  # refits; per main task, real and sim labels swap with probability 1/2
+random_directions: 1000            # baseline: best of this many random unit directions, picked on the training folds
+position_bands: [[0, 8192], [8192, 16384], [16384, 32768]]
+seed: 0
+n_jobs: 32
+headline_tolerance: 0.01               # headline layer: earliest within this of the best inner-CV AUROC (training folds only)
+clean_cells: true                  # retrain on cells where neither the real e1 nor the simulated run calls insert or undo_edit
+lite: false                        # inner CV for a headline chosen between layers 48 and 63, as the protocol does
+inner_cv_environment: true         # held-out-environment headline: inner CV over training environments
+variants: [all_outputs, no_editor_outputs]
+comparisons: [real_vs_sim]         # clean cells filter the e1 and simulated runs only, so an e1-vs-e2 control would be lopsided

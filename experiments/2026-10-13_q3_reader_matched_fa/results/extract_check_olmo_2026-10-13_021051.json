@@ -1,0 +1,42 @@
+{
+ "git": "dda54d3a76af81b0ee9dd5a102aeaaa2f109879c",
+ "source sha256": "9bebe38fa4708e699c622fa756a0b0ee30f1e44d3547bf9e0fcea3fd13bc60e9",
+ "run": "2026-10-13_q3rmfa_simhonest_olmo31-32b_r2_l32-40-56_v1",
+ "meta files by label": {
+  "real-honest-extra": 10,
+  "sim-honest": 437,
+  "sim-honest-edited": 381
+ },
+ "kept readouts (meta)": 20398,
+ "rows (chunks)": 20398,
+ "non-finite values: chunk indexes": 0,
+ "non-finite values: saved layers recounted": 0,
+ "expected transcripts by label": {
+  "sim-honest": 437,
+  "sim-honest-edited": 381,
+  "real-honest-extra": 10
+ },
+ "problems": {
+  "chunk without its done marker": 0,
+  "chunk index rows != its transcripts' rows": 0,
+  "chunk index offsets not cumulative from 0": 0,
+  "duplicate index entry": 0,
+  "layer file with the wrong shape": 0,
+  "meta rows != kept readouts": 0,
+  "kept rows not 0..n-1 in order": 0,
+  "unkept position with a row": 0,
+  "meta not in its chunk's index, or row_start/n_rows differ": 0,
+  "index entries with no live meta": 0,
+  "kept readouts (meta) != rows (chunks)": 0,
+  "transcripts by label != expected": 0,
+  "non-finite values": 0
+ },
+ "forward passes": 828,
+ "forward tokens": 20666850,
+ "forward seconds": 8174.4,
+ "seconds per 1,000 forward tokens": 0.3955,
+ "longest forward pass [tokens, seconds]": [
+  32152,
+  14.188
+ ]
+}

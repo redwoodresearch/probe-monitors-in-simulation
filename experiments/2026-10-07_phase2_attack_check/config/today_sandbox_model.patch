@@ -1,0 +1,57 @@
+diff -ruN --ex src/runner/arenas/sandbox.py ../today_sbm/src/runner/arenas/sandbox.py
+--- a/src/runner/arenas/sandbox.py
++++ b/src/runner/arenas/sandbox.py
+@@ -34,7 +34,9 @@
+     return config
+ 
+ 
+-def simulated_sandbox(*, codebase_exec: bool = False) -> SandboxConfig:
++def simulated_sandbox(
++    *, codebase_exec: bool = False, simulator_model: str
++) -> SandboxConfig:
+     """A simulated container: the policy's tools are wrapped and the simulator answers them.
+ 
+     ``SCE_EC2_INSTANCE_TYPE`` and ``SCE_EC2_MAX_WORKERS`` are omitted rather than defaulted, so
+@@ -62,13 +64,17 @@
+     scratch_mode = "default_image" if codebase_exec else "filesystem"
+     if not _flag(EC2_VARIABLE):
+         config = SandboxConfig(
+-            simulated=True, simulator_judge_model=cheap_judge, simulator_scratch_mode=scratch_mode
++            simulated=True,
++            simulator_model=simulator_model,
++            simulator_judge_model=cheap_judge,
++            simulator_scratch_mode=scratch_mode,
+         )
+         config.apply()
+         return config
+ 
+     arguments: dict[str, Any] = {
+         "simulated": True,
++        "simulator_model": simulator_model,
+         "simulator_judge_model": cheap_judge,
+         "simulator_scratch_mode": scratch_mode,
+         "use_ec2": True,
+diff -ruN --ex src/runner/build/arena_simulated_task.py ../today_sbm/src/runner/build/arena_simulated_task.py
+--- a/src/runner/build/arena_simulated_task.py	2026-10-08 12:00:49
++++ b/src/runner/build/arena_simulated_task.py	2026-10-08 13:46:29
+@@ -124,7 +124,7 @@
+ 
+ def sim_task(arena: Arena, settings: SimulatedTaskSettings) -> Task:
+     """A simulated cohort forked from a real one: one Inspect task, many forked samples."""
+-    sandbox = simulated_sandbox(codebase_exec=settings.codebase_exec)
++    sandbox = simulated_sandbox(codebase_exec=settings.codebase_exec, simulator_model=settings.simulator_model)
+     rows = planned_samples(
+         expand_log_patterns(settings.real_logs),
+         one_per_cell=settings.one_per_cell,
+diff -ruN --ex src/runner/scripts/real_exec_self_check.py ../today_sbm/src/runner/scripts/real_exec_self_check.py
+--- a/src/runner/scripts/real_exec_self_check.py	2026-10-08 12:00:49
++++ b/src/runner/scripts/real_exec_self_check.py	2026-10-08 13:46:29
+@@ -112,7 +112,7 @@
+ 
+ async def _run(main_id: str) -> list[tuple[str, bool, str]]:
+     assert_local_tasks_dir()
+-    sandbox_config = simulated_sandbox()
++    sandbox_config = simulated_sandbox(simulator_model="openai/gpt-5-nano-2025-08-07")
+     dataset = to_dataset([TaskCombination(mains=(BASHARENA.main_task(main_id),))], sandbox_config)
+     sample = dataset.samples[0]
+     compose_path = sample.sandbox.config.compose_path

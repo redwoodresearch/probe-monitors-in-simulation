@@ -1,0 +1,10 @@
+# RULE.md amendments 11-12, LAUNCH.md 11b: Qwen3.5-27B extraction of the pilot's 20 CORRECTED staged simulated honest epochs
+# (results/simh_stage_c_pilot_2026-10-14_165444.json @ 30065270); counts only after format_check_simh passes on all 20
+run: simh_q4b_extract_v1_pilot_c
+inputs: simh_q4f_v1_pilot
+inputs_sha256:
+  sim_honest@september.jsonl: 9d60057528d420fc0bcb08e35e024f6491085ead7c580973f0b79488325484c1
+model: Qwen/Qwen3.5-27B
+shards: 2
+chunk_size: 8
+pad_to: 4096

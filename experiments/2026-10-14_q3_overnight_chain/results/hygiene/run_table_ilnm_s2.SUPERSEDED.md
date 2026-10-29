@@ -1,0 +1,1 @@
+`run_table_ilnm_s2.json` is SUPERSEDED by `run_table_ilnm_s2_v2.json`: the final table now uses the snapshot tables' layout (world-keyed rows `run3|<cell>` / `sim2|<cell>`, each run's own first_start and pause_gate_at_start). The old file stays unchanged (append-only).

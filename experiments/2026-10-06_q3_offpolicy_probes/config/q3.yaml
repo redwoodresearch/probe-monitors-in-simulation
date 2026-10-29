@@ -1,0 +1,44 @@
+# Q3 (2026-10-06): do off-policy probes (trained outside LinuxArena, read on Qwen3-32B) score real and simulated
+# LinuxArena runs the same?
+output_volume: probe-shift_aswin-surya_sub-q3_outputs_kill-2026-11-06   # Q3's own Volume (score tables, call tables, probes)
+# Activations: Volume probe-shift_aswin-surya_sub-la-activations (ACTS in run_score_probes.py, mounted read-only).
+segment_end_run: 2026-10-06_la_segment-end_qwen3-32b_v1                 # call_end etc. per (step, action); 3,933 transcripts
+pooled_run: 2026-10-06_la_activations_qwen3-32b_v2                      # per-agent-turn mean (under-32k transcripts only)
+exclusions_file: exclusions_v3.json   # splits/: paired attack cells (939), under-32k pairing (591)
+kinds: [call_end, call_marker]        # call_end: the call's last content token (primary); call_marker: the closing
+                                      # </tool_call> template token, reported only next to call_end (AGENTS.md)
+probes:
+  apollo_deception:                   # experiments/2026-10-05_apollo_deception_probe: instructed honest/dishonest pairs
+    volume: probe-shift_aswin-surya_sub-apollo_deception-probe   # read only
+    dir: 2026-10-05_apollo_deception-probe_qwen3-32b
+    layers: [16, 24, 32, 40, 48]
+    primary_layer: 48                 # best Roleplaying AUROC of the five (0.818); 40 is close (0.802), 32 was the
+                                      # pre-registered middle layer (0.756). Every layer is reported.
+  eval_awareness:                     # experiments/2026-10-06_q3_offpolicy_probes, task 2
+    volume: probe-shift_aswin-surya_sub-q3_outputs_kill-2026-11-06
+    dir: probes/eval_awareness_v1
+    layers: [16, 24, 32, 40, 48]
+    primary_layer: 40                 # best mean cross-family transfer AUROC on held-out tasks over 5 task-grouped folds
+                                      # (0.758; layer 48: 0.757, a tie), results/eval_awareness_cv_grouped_2026-10-07_104027.json.
+                                      # Was 48 under the single 12-task split (0.800; layer 40: 0.780), fixed before reading
+                                      # LinuxArena. Not read by any code; the README reports both layers.
+  vulnerability:                      # run_vuln_probe.py: Emergent Misalignment insecure/secure, Apollo recipe
+    volume: probe-shift_aswin-surya_sub-q3_outputs_kill-2026-11-06
+    dir: probes/vuln_v3                # v1 leaky EM split; v2 missed identical prompts; v3 groups by task (same activations)
+    layers: [16, 24, 32, 40, 48, 56, 63]
+    primary_layer: 40                 # best SafeCoder-val AUROC at call_end (0.518 on 61 pairs; all layers 0.48-0.52, so
+                                      # nearly arbitrary), results/vuln_probe_2026-10-06_154345.json; fixed before LinuxArena
+  vulnerability_safecoder:            # run_vuln_safecoder_probe.py: trained on SafeCoder real fixes, call_end readout
+    volume: probe-shift_aswin-surya_sub-q3_outputs_kill-2026-11-06
+    dir: probes/vuln_sc_v1
+    layers: [16, 24, 32, 40, 48, 56, 63]
+    primary_layer: 24                 # best out-of-fold call_end AUROC (0.580), results/vuln_safecoder_probe_2026-10-06_155845.json
+batch_size: 40                      # transcripts per scoring container
+bootstrap: 1000                       # resamples of main tasks for 95% intervals
+seed: 0
+editor_tool: text_editor
+cohorts:                              # aliases in simulated-control-evals src/paper/configs/real_runs.yml
+  real-honest: la_public10_real_honest_n1000
+  real-attack-e1: la_public10_real_attack_n1000
+  real-attack-e2: la_public10_real_attack_reroll_n1000
+  sim-attack: la_public10_sim_astra_attack_n1000

@@ -1,0 +1,80 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_q4_rlr of 2026-10-14_160246_scaleup311_q4: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 3,
+  "by_arm": {
+   "sim_honest@september": 3
+  }
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": [
+  {
+   "launch": "2026-10-15_simh_q4_rlr",
+   "rel": "sim_honest@september/t361_file_indexing/2026-10-15T23-43-43-00-00_la-file-indexing-sim-honest-1_PLT4uAVEepDsA2qe949MZu.eval",
+   "sha256": "132d7f741972d613b49df2e4cd077467fdb701350be35b0abc74bef12493bb60",
+   "bytes": 715227,
+   "arm_dir": "sim_honest@september",
+   "task": "t361_file_indexing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q4_rlr/sim_honest@september/t361_file_indexing/2026-10-15T23-43-43-00-00_la-file-indexing-sim-honest-1_PLT4uAVEepDsA2qe949MZu.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q4_rlr",
+   "stratum": "simh_311",
+   "launch_task": "t361_file_indexing",
+   "first_start": "2026-10-15T16:43:41-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q4_rlr",
+   "run1_launch": "2026-10-14_160246_scaleup311_q4",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "final"
+  },
+  {
+   "launch": "2026-10-15_simh_q4_rlr",
+   "rel": "sim_honest@september/t411_media_processing/2026-10-15T23-43-43-00-00_la-media-processing-sim-honest-1_QUN5ucB5UmitfKYXZZCQde.eval",
+   "sha256": "a1a8699a244d282a6768bff8c2d8ad8fa980f81aaa2339b2060737e6e9650e2e",
+   "bytes": 127709,
+   "arm_dir": "sim_honest@september",
+   "task": "t411_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q4_rlr/sim_honest@september/t411_media_processing/2026-10-15T23-43-43-00-00_la-media-processing-sim-honest-1_QUN5ucB5UmitfKYXZZCQde.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q4_rlr",
+   "stratum": "simh_311",
+   "launch_task": "t411_media_processing",
+   "first_start": "2026-10-15T16:43:41-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q4_rlr",
+   "run1_launch": "2026-10-14_160246_scaleup311_q4",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "final"
+  },
+  {
+   "launch": "2026-10-15_simh_q4_rlr",
+   "rel": "sim_honest@september/t413_media_processing/2026-10-15T23-45-15-00-00_la-media-processing-sim-honest-1_HACY7WAK5T6MdUWAiAeSyC.eval",
+   "sha256": "73e554f1ecb897d4a444e2d32170b86638af233d38d752f564407aaa73c56aa5",
+   "bytes": 207378,
+   "arm_dir": "sim_honest@september",
+   "task": "t413_media_processing",
+   "attempt_index": 0,
+   "attempt_kind": "first",
+   "policy_called": true,
+   "path": "2026-10-15_simh_q4_rlr/sim_honest@september/t413_media_processing/2026-10-15T23-45-15-00-00_la-media-processing-sim-honest-1_HACY7WAK5T6MdUWAiAeSyC.eval",
+   "state": "done",
+   "launch_id": "2026-10-15_simh_q4_rlr",
+   "stratum": "simh_311",
+   "launch_task": "t413_media_processing",
+   "first_start": "2026-10-15T16:45:12-07:00",
+   "world": "simh_311",
+   "sim_launch": "2026-10-15_simh_q4_rlr",
+   "run1_launch": "2026-10-14_160246_scaleup311_q4",
+   "sim_launch_ne_run1_launch": true,
+   "snapshot_id": "final"
+  }
+ ]
+}

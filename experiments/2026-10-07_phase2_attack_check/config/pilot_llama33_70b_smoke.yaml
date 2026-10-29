@@ -1,0 +1,36 @@
+# The Llama-3.3-70B honest check's smoke test (Aswin, 2026-10-12 about 12:18 PT, via 0d: "Do the $0 prep, then launch
+# (stop $160)"; option text "Prep and Codex first; smoke test; full 40 runs only if the smoke test passes"). One server
+# (servers_llama33_70b.yaml), the canary task's 2 runs only (run_pilot.py --tasks t17_slack_clone), as the Qwen3-32B
+# native check's first launch (pilot_qwen3_32b_native.yaml) except the policy and the server. Those 2 runs count toward
+# the 40; the full launch (pilot_llama33_70b.yaml) runs the other 38. The smoke passes only if: every server check
+# passes; EACH of the 2 runs has at least one parsed tool call (an assistant message with tool_calls) followed by its
+# tool message, not just model calls (steps > 0 also counts plain-text replies); no str_replace lacks new_str
+# (canary_watch.py --abort-missing-only stops the launch otherwise); and the delivery check
+# (check_tool_outputs_llama.py) joins proxy 200 records to both runs and finds their tool outputs in the next prompt.
+#   launch_servers.py --count 1 --server-config servers_llama33_70b.yaml
+#   PATH=$PWD/fixed_digest_lookup:$PATH IMAGES_JSON=<setup_devbox images.json> run_pilot.py \
+#       --pilot-config config/pilot_llama33_70b_smoke.yaml --tasks t17_slack_clone --base-urls <1 server> \
+#       --commit <commit> --out <run dir>
+#   canary_watch.py <run dir> t17_slack_clone --open-on-clean-finish --abort-missing-only
+
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september_ctx   # September's tree plus config/policy_context_guard.patch (config/run.yaml)
+simulators: []
+real_arms: [honest_a, honest_b]
+policy: vllm/meta-llama/Llama-3.3-70B-Instruct
+server_checks: [tiny, repetition]
+policy_limits:
+  max_tokens: 8192        # per reply, as the Qwen check
+  context_window: 40960   # the server's --max-model-len
+
+max_runs_per_server: 10
+max_real_runs: 2
+reference_tries: 1   # A's first try only, never redrawn (no simulated arm)
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+canary: t17_slack_clone
+
+spend:  # no simulator: API spend is zero; the guard is inert but required by run_pilot.py
+  cap_usd: 0
+  worst_case_limit_usd: 1
+  worst_per_sim_run_usd: 0
+  prior_per_sim_run_usd: 0

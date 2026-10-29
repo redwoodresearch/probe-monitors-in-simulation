@@ -1,0 +1,56 @@
+{
+ "label": "STUB LOO3 eligibility (LOO3 UNAVAILABLE) for testing the required-joiner stop only",
+ "sets": {
+  "own_all_LOO3_L48": {
+   "S_old": {
+    "withheld": true,
+    "eligible_and_scored_cells": [],
+    "eligible_mains_counted": 0
+   },
+   "S_new": {
+    "withheld": true,
+    "eligible_and_scored_cells": [],
+    "eligible_mains_counted": 0
+   }
+  },
+  "own_all_L48": {
+   "S_old": {
+    "withheld": true,
+    "eligible_and_scored_cells": [],
+    "eligible_mains_counted": 0
+   },
+   "S_new": {
+    "withheld": true,
+    "eligible_and_scored_cells": [],
+    "eligible_mains_counted": 0
+   }
+  },
+  "own_frac100_L48": {
+   "S_old": {
+    "withheld": true,
+    "eligible_and_scored_cells": [],
+    "eligible_mains_counted": 0
+   },
+   "S_new": {
+    "withheld": false,
+    "eligible_and_scored_cells": [],
+    "eligible_mains_counted": 272
+   }
+  }
+ },
+ "availability": {
+  "own_all_LOO3_L48": {
+   "eligible_mains_total": 0,
+   "available": false
+  },
+  "own_all_L48": {
+   "eligible_mains_total": 0,
+   "available": false
+  },
+  "own_frac100_L48": {
+   "eligible_mains_total": 272,
+   "available": true
+  }
+ },
+ "global_choice": "own_frac100_L48"
+}

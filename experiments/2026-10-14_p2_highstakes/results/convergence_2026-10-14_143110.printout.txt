@@ -1,0 +1,3 @@
+chosen L43 refit: n 8000, max|grad G| 8.66e-07, certified True
+selection fits: as-run max|grad| max over layers 9.99e-07; tight certified 64/64
+layer by as-run held-out AUROC 43; by tight 43

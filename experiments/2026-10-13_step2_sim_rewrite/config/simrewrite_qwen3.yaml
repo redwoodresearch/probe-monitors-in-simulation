@@ -1,0 +1,12 @@
+# Step 2 pilot (PLAN.md): layers 48 and 63 (as fix939 and fix-full) at every segment-end position of the 30 rewritten
+# real honest runs, staged by stage_simrewrite.py (arm real-honest-simrewrite). Same model, revision, dtype, attention and
+# cut as fix-full v2 (../2026-10-13_q2_fixfull/config/fx_qwen3_v2.yaml) and #36's originals; 2 shards, chunks of 5.
+run: 2026-10-13_q2_step2_simrewrite_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-13_q2_step2_simrewrite_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 2
+chunk_size: 5
+layers: [48, 63]

@@ -1,0 +1,12 @@
+{
+ "label": "detAll: FAILED before the record",
+ "git": "960ab0ed35a61fe37c224d27be76c6f74248bbf2",
+ "stamp": "2026-10-16_053224",
+ "error": "RemoteError: ",
+ "failed": {},
+ "cells_done": [],
+ "watchdog_log": [
+  "skip: cancel attempted (fatal error)",
+  "skip: cancel confirmed"
+ ]
+}

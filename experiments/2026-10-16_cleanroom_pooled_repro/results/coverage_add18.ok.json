@@ -1,0 +1,7 @@
+{
+  "n_slots": 270,
+  "n_covered": 252,
+  "n_not_covered": 18,
+  "want": 270,
+  "COVERAGE_OK": false
+}

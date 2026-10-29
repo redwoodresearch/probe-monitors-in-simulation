@@ -1,0 +1,15 @@
+{
+ "target": "ilnm_s3_sim2_s3",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "ilnm_s3_sim2_s3",
+   "arm": "sim_attack@september",
+   "staged_file": "/ev/ilnm_s3_sim2_s3_v1/inputs/sim_attack@september.jsonl",
+   "staged_sha": "78afb390ee363082897256603d5d06054f3e36f6d15df1eaa311d1ce79cab658",
+   "epochs": 24,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

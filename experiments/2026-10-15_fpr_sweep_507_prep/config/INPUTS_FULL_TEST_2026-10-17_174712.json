@@ -1,0 +1,2087 @@
+{
+ "schema": "inputs_full/v1",
+ "status": "TEST 2026-10-17 17:45 PDT",
+ "test": true,
+ "built_pt": "2026-10-17 17:45:31 PDT",
+ "rules": {
+  "lead": "09 RULE @ 129b7c4f1 (lead \u00a71, \u00a73)",
+  "freeze": "09 RULE @ cfd94c2e9 (lead \u00a74)",
+  "waitlist": "09 RULE @ 07ad588be",
+  "classes": "09 RULE \u00a77(iv) (canonical earliest root cause)",
+  "estimator": "09 RULE @ 3aaf425ef (width-only adopt rule)",
+  "cohort": "no-filter (09 @ 01012e87e)",
+  "pools": "0d: the 32k headline's pools, extracted uncut; no epoch-1 fallback (09 withdrew it)"
+ },
+ "pins_file": {
+  "path": "config/pins_full_routec_TEST_2026-10-17_172606.json",
+  "sha256": "8dbe8f310f2ed4332aa27e689aa2f7112734fb54aad8ae914ad631929d3d0a99"
+ },
+ "lead_readout": "C",
+ "scope": {
+  "registered_labels": [
+   "Sol (a)",
+   "FIBS",
+   "harmfulness",
+   "refusal",
+   "high-stakes",
+   "own_all_rs_L48",
+   "own_all_rs25_L48",
+   "own_all_rs10_L48",
+   "c_asis",
+   "own_frac10_L48",
+   "own_frac25_L48",
+   "own_frac100_L48"
+  ],
+  "retrains": {
+   "sol_a_uncut": "Sol (a)",
+   "own_all_rs_uncut_L48": "own_all_rs_L48",
+   "own_all_rs25_uncut_L48": "own_all_rs25_L48",
+   "own_all_rs10_uncut_L48": "own_all_rs10_L48",
+   "c_asis_uncut": "c_asis",
+   "sol_a_uncut_pinned": "Sol (a)"
+  },
+  "headline_six": [
+   "sol_a_uncut",
+   "FIBS|uncut",
+   "harmfulness|uncut",
+   "refusal|uncut",
+   "high-stakes|uncut",
+   "own_all_rs_uncut_L48"
+  ],
+  "labels": {
+   "Sol (a)|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_all_rs_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_all_rs25_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_all_rs10_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "c_asis|uncut": "registered c_asis scored on full transcripts; appendix positive control, never in S or a co-headline group",
+   "own_frac10_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_frac25_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "own_frac100_L48|uncut": "registered probe scored on full transcripts (OOD past 32k)",
+   "FIBS|uncut": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+   "harmfulness|uncut": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+   "refusal|uncut": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+   "high-stakes|uncut": "trained on short external text; scored as is on full transcripts (OOD class per the signed table)",
+   "sol_a_uncut": "whole-transcript retrain (uncut) of Sol (a)",
+   "own_all_rs_uncut_L48": "whole-transcript retrain (uncut) of own_all_rs_L48",
+   "own_all_rs25_uncut_L48": "whole-transcript retrain (uncut) of own_all_rs25_L48",
+   "own_all_rs10_uncut_L48": "whole-transcript retrain (uncut) of own_all_rs10_L48",
+   "c_asis_uncut": "whole-transcript retrain (uncut) of c_asis; appendix positive control, never in S or a co-headline group",
+   "sol_a_uncut_pinned": "sol_a_uncut with layers pinned to the 32k fit (09 @ 2d61af835); outside every group (sol_a_uncut is the primary)"
+  },
+  "auroc_subset": {
+   "membership": "09 @ 19ba8f563: Sol (a), FIBS, harmfulness, own_all_rs",
+   "inherit": {
+    "sol_a_uncut": "Sol (a)",
+    "own_all_rs_uncut_L48": "own_all_rs_L48"
+   }
+  }
+ },
+ "base": {
+  "commit": "a6bde80a2",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/INPUTS_FINAL_V2_FROZEN_2026-10-16_044120.json",
+  "sha256": "0e065958b206dbceba8afeb3332ec68b898481da520fe3a3654ab2b6913eaadd"
+ },
+ "overrides": {
+  "S_new|R": {
+   "commit": "38b42bf2d",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new_R_2026-10-16_104459_gated.json",
+   "sha256": "5e2105dfce654f3bdd200fd994a916ac634b1b6181de35c26e5b58a558a7ef80"
+  },
+  "S_new|C": {
+   "commit": "38b42bf2d",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new_C_2026-10-16_104513_gated.json",
+   "sha256": "908a27ad834a280fb56e9cbe7747bb90a3a3aa726098afe345a9fdc4c91bbadb"
+  },
+  "S_old|R": {
+   "commit": "5df9a43edfe7366a46fbce64ec34e69ba73e06e4",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_old_R_2026-10-17_151100_gated.json",
+   "sha256": "da33c4f0e3fce682908518cf230e369ab48ebe4358811b039595f8304daab13b"
+  },
+  "S_old|C": {
+   "commit": "5df9a43edfe7366a46fbce64ec34e69ba73e06e4",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_old_C_2026-10-17_151056_gated.json",
+   "sha256": "f8ee4ddc603dd9e38f0fd650055bcc9d324df903bbfd5a51809ca6b59ffceafd"
+  },
+  "S_newmains|R": {
+   "commit": "64e9ab71a",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_newmains_R_2026-10-16_053350_gated.json",
+   "sha256": "d4b9a7a9cc47cfad59c6b41656c941055b32586d47bdff85627b28ef35fafd15"
+  },
+  "S_newmains|C": {
+   "commit": "64e9ab71a",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_newmains_C_2026-10-16_053303_gated.json",
+   "sha256": "09b766a09208cce60b0882bce7fd538582b9d06d27b30f8ae5a9dda6759c3c3f"
+  },
+  "S_paper493|R": {
+   "commit": "4d2f45e73",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_paper493_R_2026-10-16_102114_gated.json",
+   "sha256": "ebe7f622b9c398649c4acc2bf7488163a00661d00527103b92f9ecbab3e475b0"
+  },
+  "S_paper493|C": {
+   "commit": "4d2f45e73",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_paper493_C_2026-10-16_101944_gated.json",
+   "sha256": "1d3208ddc36ce08baf0349bef3d16a3fdf79cd5f8756df80bbc70ca1191b02d0"
+  },
+  "pools_ep2|R": {
+   "commit": "93ee9afe6",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_pools_ep2_R_2026-10-16_052820_gated.json",
+   "sha256": "d3d76eb591e63369b902606b0e9c01de098de0d6c2e70fafb4f16fe5428335d0"
+  },
+  "pools_ep2|C": {
+   "commit": "93ee9afe6",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_pools_ep2_C_2026-10-16_053038_gated.json",
+   "sha256": "734d2ccb0b4207a7a897b2b6b91776aa35cb8e29e029f2976b4c1f7147968e83"
+  },
+  "S_new+25f|R": {
+   "commit": "f5a2504dc",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new25f_R_2026-10-16_045058_gated.json",
+   "sha256": "49c480c8b237988054cf06879a0f6db7d33b1178df20305fdc025a0201a9aaeb"
+  },
+  "S_new+25f|C": {
+   "commit": "f5a2504dc",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/override_S_new25f_C_2026-10-16_045304_gated.json",
+   "sha256": "6ebc9d007c99ad5f48bbef7ef60ab31002d5bc30d461f4d70ac0386986b43326"
+  }
+ },
+ "gates": {
+  "S_new|R": {
+   "commit": "8c31e7ff5",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_R_2026-10-16_104643.json",
+   "sha256": "fb2a9e26ce2b0bccb2daecaca49ff22944270126cd110e77edca64646aafb57e"
+  },
+  "S_new|C": {
+   "commit": "8c31e7ff5",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_C_2026-10-16_104648.json",
+   "sha256": "0f6961332d95b6e538c5d376aaedbbabaf046d70046c2279e1fdc4cd7df538f2"
+  },
+  "S_old|R": {
+   "commit": "8d5c02f5fee482f697141962cd722738c66c2019",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_old_R_2026-10-17_151826.json",
+   "sha256": "5b89f57fe7378dca39a7ddaeebbcfd24987f5d82f226af9dffcabd74e8c5ffcb"
+  },
+  "S_old|C": {
+   "commit": "8d5c02f5fee482f697141962cd722738c66c2019",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_old_C_2026-10-17_151815.json",
+   "sha256": "8164a48b3dff9336d32a0aabee3233af1ff7758984cb8cbff8f8aadb7b566e97"
+  },
+  "S_newmains|R": {
+   "commit": "d3a6fc2e5",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_newmains_R_2026-10-16_095455.json",
+   "sha256": "34d821c5b409cfd6cf70a17e20fc49a76f6b595b8e350f78be87b849173185e3"
+  },
+  "S_newmains|C": {
+   "commit": "d3a6fc2e5",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_newmains_C_2026-10-16_095522.json",
+   "sha256": "e75940397458c315d2ec5d2a3c2d60719c4a50d2fa626f50b40bd2ab2a6d657a"
+  },
+  "S_paper493|R": {
+   "commit": "4ea8aae4f",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_paper493_R_2026-10-16_102253.json",
+   "sha256": "6ba4913c9cc29e7070ddb9c62c2cbf46e4f88f84908a965b8e89d59032e7af77"
+  },
+  "S_paper493|C": {
+   "commit": "4ea8aae4f",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_paper493_C_2026-10-16_102255.json",
+   "sha256": "f4a4df3da21d60a6ea83b28c7eef3f575ace537860f55becc84d5d86652ed275"
+  },
+  "pools_ep2|R": {
+   "commit": "82544b45b",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_pools_ep2_R_2026-10-16_053246.json",
+   "sha256": "bf58df86fa1c5fe76dbdc5046141b6ad1163bed8097070c018ad08a8e33c48c9"
+  },
+  "pools_ep2|C": {
+   "commit": "82544b45b",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_pools_ep2_C_2026-10-16_053355.json",
+   "sha256": "834093694388a352a51b81cab3fec1155ecd130cf40bb342ae491d55a8a5b8b9"
+  },
+  "S_new+25f|R": {
+   "commit": "f5a2504dc",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_R_2026-10-16_051725.json",
+   "sha256": "1ef7deed45e57cab344ff8e1cbdce1d961cc72c9a88441925725cb291793b72b"
+  },
+  "S_new+25f|C": {
+   "commit": "f5a2504dc",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/gates_S_new_C_2026-10-16_051740.json",
+   "sha256": "f28dba7ffba7466d25a45a49701ef9df2174f0475fc4123d4fc8b223d4fa5650"
+  }
+ },
+ "inventories": {
+  "S_new": {
+   "commit": "b3f8dea7b",
+   "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/cutfull/inventory_v3_2026-10-15.json",
+   "sha256": "19306ffa7c42ab35a62715c1a18822a43c6273492e5ede9b2f62cd9e428ad9a3",
+   "reattest": "bccb0f153835@3x40,4x5"
+  },
+  "S_old": {
+   "commit": "98575cc3471a224c87401111fbb8caee28ff5323",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_b_fix_v2_2026-10-17_081456.json",
+   "sha256": "f8dfc018d44c5a5bd373f88d9f7974dd9774c25a325d3ceceb385fcb9c82719f"
+  },
+  "S_newmains": {
+   "commit": "09b070617",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_b_fix_v1_2026-10-16_025058.json",
+   "sha256": "4a5d0fb3cad32740f849df5def3c7a03a40a18aa4c42bc360709f0c740973d03"
+  },
+  "S_paper493": {
+   "commit": "85447113f",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w1_v1_2026-10-16_025411.json",
+   "sha256": "3dc8a91a52d694c8959db640b1de5688d2a6a657641d8ee7f79d4cff8aa2d067"
+  },
+  "pools_ep2": {
+   "commit": "06077a8a8",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_ep2_v1_2026-10-16_025227.json",
+   "sha256": "963ee204bfbb411f14aa0162a642442532c32cf1ec4783663cda6b228520126f"
+  },
+  "pools_fill": {
+   "commit": "06077a8a8",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_fill_v1_2026-10-16_025228.json",
+   "sha256": "e55927ba25f073369cd8e9ce02530e72097f92fc31f7db7d2779f39d470e9b3a"
+  },
+  "ha25f": {
+   "commit": "b880c3c3a",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_ha25f_v2_2026-10-16_044849.json",
+   "sha256": "c01a6ef18869cd09f1c2d3e441f0deb05143cb2c2f29db84f0d2049a80f8af7f"
+  },
+  "S_paper493_w23": {
+   "commit": "102b3741e",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w23_v1_2026-10-16_033210.json",
+   "sha256": "b11a63f5914c1c5d199c3401104acd9697b6d3e7095802f24e67635895dc98f5"
+  },
+  "il": {
+   "commit": "52532a296",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_il_v2_2026-10-16_040129.json",
+   "sha256": "c0cb0f0cd30ebd452363e16a140bd62ffe439ec0c6a13c7d80df4f3270621ec6"
+  }
+ },
+ "s_old_simh_extra_roots": {
+  "simh_q4f_v1_pilot__sim_honest": {
+   "commit": "344829af6",
+   "path": "experiments/2026-10-14_q3_q35_simhonest_purchase/results/simh_counted_keys_pilot_v3.json",
+   "sha256": "2149c5cde368aef9e5012c8d9cda5b12fe5a93db3d27ad2d525225bb9f511b27"
+  }
+ },
+ "fits": {
+  "sol_a_uncut": {
+   "kind": "sola",
+   "files": {
+    "C": "sola_uncut_reselect/sol_a_uncut__cmd_A.npz",
+    "R": "sola_uncut_reselect/sol_a_uncut__avg_top2.npz"
+   },
+   "fit": {
+    "commit": "9564a41b4",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9.json",
+    "sha256": "40e7b12c3f0c24939e40f9e0a00a1b2a5b3845d2d81138c342e9d68e2515ef74"
+   },
+   "contract": {
+    "commit": "d4e70dbc9",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9_contract.json",
+    "sha256": "558259f06d67f3dce951055ce1d8b01e671ea5e21ed2326239eeed415a46586c"
+   },
+   "refit": {
+    "commit": "d4e70dbc9",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_reselect_fit_2026-10-16_030230_cutfull_491db0e7e2c9_refitmatch.json",
+    "sha256": "1f3ef44c5a773f35d68af0c5a7cb06325abb338f2bfacd53876f625f7322bbec"
+   }
+  },
+  "sol_a_uncut_pinned": {
+   "kind": "sola",
+   "files": {
+    "C": "sola_uncut_pinned/sol_a_uncut__cmd_A.npz",
+    "R": "sola_uncut_pinned/sol_a_uncut__avg_top2.npz"
+   },
+   "fit": {
+    "commit": "bc7a720d3",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_pinned_fit_2026-10-16_025318_cutfull_a9c06cb00d91.json",
+    "sha256": "88eaa43c651e161845019e83ee7d0ab5555e1a0340d9191ec6e0b195f12f8244"
+   },
+   "contract": {
+    "commit": "a94aa5d6c",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_pinned_fit_2026-10-16_025318_cutfull_a9c06cb00d91_contract.json",
+    "sha256": "a3bdb073848d7f124410255582cd24bea0757486ea69df8ee9883079d44ba5bb"
+   },
+   "refit": {
+    "commit": "a94aa5d6c",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_pinned_fit_2026-10-16_025318_cutfull_a9c06cb00d91_refitmatch.json",
+    "sha256": "c0515371ff05751a57635443cee53185f7a5f1ca1189c3069be3772b346447d4"
+   }
+  },
+  "c_asis_uncut": {
+   "kind": "sola",
+   "files": {
+    "C": "casis_uncut_inherit/c_asis_uncut__cmd_A.npz",
+    "R": "casis_uncut_inherit/c_asis_uncut__avg_top2.npz"
+   },
+   "fit": {
+    "commit": "8b6124cb3",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d.json",
+    "sha256": "f9e32638ad45a4afe1b6d75862b4745be0a23c77fb2268bf9f32bbc1c113b7df"
+   },
+   "contract": {
+    "commit": "92d4f4525",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d_contract.json",
+    "sha256": "fba86696abc6749055ef7499aa878b8df30fae7dd31d590a55568542782af38c"
+   },
+   "refit": {
+    "commit": "92d4f4525",
+    "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/casis_uncut_inherit_fit_2026-10-16_035520_cutfull_d76d0ca08a3d_refitmatch.json",
+    "sha256": "4adb1c39d5bd547290f33b5593e8b06df112ee2f899baaaf704af32cd05b1634"
+   }
+  },
+  "own_all_rs_uncut_L48": {
+   "kind": "4f",
+   "files": {
+    "C": "own_all_rs_uncut/own_all_rs_uncut_L48__C.npz",
+    "R": "own_all_rs_uncut/own_all_rs_uncut_L48__R.npz"
+   },
+   "fit": {
+    "commit": "19611550c",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+    "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+   },
+   "companion": {
+    "commit": "e452cb797",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_INPUTS_FULL_companion_2026-10-16.json",
+    "sha256": "e83f55945978e0ec2944bb23922003fbad31ac9afc54957a6b1f548684be37e7"
+   }
+  },
+  "own_all_rs25_uncut_L48": {
+   "kind": "4f",
+   "files": {
+    "C": "own_all_rs_uncut/own_all_rs25_uncut_L48__C.npz",
+    "R": "own_all_rs_uncut/own_all_rs25_uncut_L48__R.npz"
+   },
+   "fit": {
+    "commit": "19611550c",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+    "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+   },
+   "companion": {
+    "commit": "e452cb797",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_INPUTS_FULL_companion_2026-10-16.json",
+    "sha256": "e83f55945978e0ec2944bb23922003fbad31ac9afc54957a6b1f548684be37e7"
+   }
+  },
+  "own_all_rs10_uncut_L48": {
+   "kind": "4f",
+   "files": {
+    "C": "own_all_rs_uncut/own_all_rs10_uncut_L48__C.npz",
+    "R": "own_all_rs_uncut/own_all_rs10_uncut_L48__R.npz"
+   },
+   "fit": {
+    "commit": "19611550c",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_fit_2026-10-16_030614.json",
+    "sha256": "f62f4d660109fff5d3d207a024299f3c254fbfb2c603ddc7fc62b40b38760442"
+   },
+   "companion": {
+    "commit": "e452cb797",
+    "path": "experiments/2026-10-14_p2_family_expansion/results/own_all_rs_uncut_INPUTS_FULL_companion_2026-10-16.json",
+    "sha256": "e83f55945978e0ec2944bb23922003fbad31ac9afc54957a6b1f548684be37e7"
+   }
+  }
+ },
+ "ood": {
+  "commit": "321adc55f",
+  "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/training_length_table_2026-10-16_043226_r8.json",
+  "sha256": "5f6198e6ba2f20751d7a76889ca6c7f26ed414368a0e7b92cfcae497bc50e36c",
+  "signature": {
+   "commit": "dd087288b",
+   "path": "experiments/2026-10-14_priority1_spec_09/READ_LOG.md",
+   "sha256": "2903ec8fcf1f659d52fd123c8418e24b3792db7e0d60a95f09e2fbc829f75a16"
+  }
+ },
+ "cohort": {
+  "commit": "48a90b1d2",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/nofilter_exclusions_2026-10-16_012305.json",
+  "sha256": "f154cad6df7e5018485617ab5a22644fbb03549e3b315355b81312764bbcb65f"
+ },
+ "exclusions": {
+  "commit": "6414c492b",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/exclusions_2026-10-16_102159.json",
+  "sha256": "67a608c25a84e77cb6beb2c70d8c91177e2274d2c96e166469060462d4c9223d"
+ },
+ "waitlist": {
+  "pending": "re-generated on the route C TEST INPUTS_FULL after the census (09 condition 3)"
+ },
+ "census": {
+  "pending": "route C full-length census on the route C TEST INPUTS_FULL (09 ruling (a), 10-17)"
+ },
+ "e12": {
+  "commit": "22d7089f5",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/E12_BLOCK_2026-10-16_092322.json",
+  "sha256": "683d4de1040f489a768a44fe5ad53f787d35d8ca22117b897a42a75880e1f4dc"
+ },
+ "ilarms": {
+  "commit": "7b058c349",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/config/ilarms_cut32768_2026-10-16_100056.json",
+  "sha256": "40cc45f00bbf0ea07cf785c1b2ee684026ddfe324ccfab3170ccd3940ea67a1c"
+ },
+ "relaunch_members": {
+  "commit": "051899844c53cbef27f5fac4b111a93b23374427",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/honest_b_relaunch_members_2026-10-16_032731.json",
+  "sha256": "27f3cf8ec6b38b83d93e7b0a0e69231b42935319587e42b97fa688b22aac0c1c"
+ },
+ "cutmap": {
+  "commit": "7febe8184",
+  "path": "experiments/2026-10-15_fpr_sweep_507_prep/results/cutfull/cutmap_32k_2026-10-16_044814.json",
+  "sha256": "6c4ca00817a3cb11f3fe975287b2109cda73d875e5f4a61c8188415b95bb56cc"
+ },
+ "roles_old": {
+  "q4f_main_v1__attack": "real",
+  "q4f_main_v1__honest_a": "real",
+  "q4f_main_v1__honest_b": "real",
+  "q4f_main_v1__sim_attack": "real",
+  "q4f_run2_v1__attack": "real",
+  "q4f_c_v1__honest_b": "real",
+  "rh1e4_stage_v1__honest_b": "relaunch",
+  "simh_q4f_v1_full_b1__sim_honest": "simh",
+  "simh_q4f_v1_full_b2__sim_honest": "simh",
+  "simh_q4f_v1_pilot__sim_honest": "simh"
+ },
+ "pools_required": {
+  "source": "inventories",
+  "ep2": {
+   "commit": "06077a8a8",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_ep2_v1_2026-10-16_025227.json",
+   "sha256": "963ee204bfbb411f14aa0162a642442532c32cf1ec4783663cda6b228520126f"
+  },
+  "fill": {
+   "commit": "06077a8a8",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_fill_v1_2026-10-16_025228.json",
+   "sha256": "e55927ba25f073369cd8e9ce02530e72097f92fc31f7db7d2779f39d470e9b3a"
+  },
+  "S_paper493": {
+   "commit": "85447113f",
+   "path": "experiments/2026-10-15_cut_sensitivity/results/inventory_sp493_w1_v1_2026-10-16_025411.json",
+   "sha256": "3dc8a91a52d694c8959db640b1de5688d2a6a657641d8ee7f79d4cff8aa2d067"
+  },
+  "coverage": {
+   "ep2": {
+    "runs": 1674,
+    "admitted": 1665,
+    "routed_not_admitted": 9,
+    "subset_check_artifact": "experiments/2026-10-15_epoch2_poolkeys/results/epoch2_poolkeys_2026-10-15_214512.json@5b19c08d8",
+    "e12_folders": {
+     "ep2_311_l1_v1__honest_a": 261,
+     "ep2_311_l1_v1__honest_b": 261,
+     "ep2_311_l2_v1__honest_a": 44,
+     "ep2_311_l2_v1__honest_b": 43,
+     "ep2_nm_v1__honest_a": 336,
+     "ep2_nm_v1__honest_b": 346,
+     "ep2_t196_v1__honest_b": 191
+    }
+   },
+   "fill_in": {
+    "simh_t196fill_v1__sim_honest": {
+     "inventory": "pools_fill",
+     "cells": 8,
+     "runs": 8
+    },
+    "sp493_g4_simh_v1_try2__sim_honest": {
+     "inventory": "S_paper493",
+     "cells": 14,
+     "runs": 14
+    }
+   }
+  }
+ },
+ "waitlist_pending": [
+  "waitlist not checked (waitlist, exclusions or uncut census pending)"
+ ],
+ "paired_pool_exclusions": [
+  {
+   "root": "sp493_g4_simh_v1_try2__sim_honest",
+   "key": "sp493_t196|t115_model_registry",
+   "class": "H_sim cell without an admitted H_A member (paired-pool rule)"
+  }
+ ],
+ "estimator": {
+  "A": "registered",
+  "B": "computed beside (A) on the same draws from the pinned ilarms block (09 @ 36b9b47df \u00a73); lead by select_estimator.py (width only)"
+ },
+ "provisional": false,
+ "labels_provisional": [],
+ "score_records": [
+  {
+   "commit": "03157caf0",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_pointer_index_2026-10-16_043351.json",
+   "sha256": "e15c1e613d2e41959d4ba2c36b344b725954f615fe30e7d2df37101116347f36"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_casis_uncut_inherit_2026-10-16_044503_8cac2008.json",
+   "sha256": "284e98ac7db7e97ead7cfb064fc31e8832ad13e751183e27a603dbc708442407"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_casis_uncut_inherit_2026-10-16_044516_3581019f.json",
+   "sha256": "ece90183ca1652add418647a2a356ed1fb1013e9b0fea67de28e9a250a66fb59"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_sola_uncut_pinned_2026-10-16_044459_1712fe97.json",
+   "sha256": "0987f13a2043d2cf0d418849382e61cc7fbaf37432b8b4d5122868ab903d5b74"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_sola_uncut_pinned_2026-10-16_044510_39fb8119.json",
+   "sha256": "1844f099cc50d9b1c362a90e2e183dfdd11c7905ae1d5a6a8bdaa538d9017447"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_sola_uncut_reselect_2026-10-16_044455_7422dc42.json",
+   "sha256": "4a9ed451441cf6c0d351c43e3399f1d76c0d46025c6778f2ab3fce1a626e6bde"
+  },
+  {
+   "commit": "100fbaafb",
+   "path": "experiments/2026-10-14_q35_sol_avg_POSTHOC/results/cutfull/sola_uncut_score_sola_uncut_reselect_2026-10-16_044507_dec0f8c4.json",
+   "sha256": "0ac30b25d81dd7e8efcc883cec8e550a15e91cd8f3ca3c9b14cbc3c937788b40"
+  }
+ ],
+ "dryrun_counts": {
+  "pending": "the full-length dry run's substitution counts (sidecar)"
+ },
+ "pending": [
+  "waitlist: re-generated on the route C TEST INPUTS_FULL after the census (09 condition 3)",
+  "census: route C full-length census on the route C TEST INPUTS_FULL (09 ruling (a), 10-17)",
+  "dryrun_counts: the full-length dry run's substitution counts (sidecar)",
+  "waitlist_pending: ['waitlist not checked (waitlist, exclusions or uncut census pending)']"
+ ],
+ "relaxations": {
+  "reattest_skip": [
+   {
+    "override": "S_new+25f|C",
+    "files": [
+     [
+      "su311_q1_main_ha25f_v1__honest_a|casis_uncut_inherit/c_asis_uncut__cmd_A.npz",
+      "cutfull/ha25f/casis_uncut_inherit/su311_q1_main_ha25f_cutfull_v1__honest_a/c_asis_uncut__cmd_A.npz",
+      "85a0fa08a68c61799f9f91fceb7d1cdb6abed8589196e25a8fb8e11efa97181b"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|famexp/own_frac100_L48__C.npz",
+      "cutfull/ha25f/famexp/su311_q1_main_ha25f_cutfull_v1__honest_a/own_frac100_L48__C.npz",
+      "41a8313d199f8c1d8955b2dc20929b2e00889a8c4deae994a1a0c07323cae783"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|famexp/own_frac10_L48__C.npz",
+      "cutfull/ha25f/famexp/su311_q1_main_ha25f_cutfull_v1__honest_a/own_frac10_L48__C.npz",
+      "6247858e8537d805cf3e67a99d413e88050f5d7d43e61b1e5cd0a9f38ea399cf"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|famexp/own_frac25_L48__C.npz",
+      "cutfull/ha25f/famexp/su311_q1_main_ha25f_cutfull_v1__honest_a/own_frac25_L48__C.npz",
+      "757337faf560fe9bfc550c1e8aaaf874e38ecb60e862b13d773994a2c60df51a"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs/own_all_rs10_L48__C.npz",
+      "cutfull/ha25f/own_all_rs/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs10_L48__C.npz",
+      "ebafa2e536b3c7b871031ae33f718064e23ad2f01004318b130fff5ff833758a"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs/own_all_rs25_L48__C.npz",
+      "cutfull/ha25f/own_all_rs/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs25_L48__C.npz",
+      "7c2f8339a11cac3d029bd1bb1dcc7221f7db503d218126d44e8f25e4fd4c8bab"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs/own_all_rs_L48__C.npz",
+      "cutfull/ha25f/own_all_rs/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs_L48__C.npz",
+      "4c9db3e99195d68b3d19bdd70c361612397d026e38832ccd114806b8eee9de56"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs10_uncut_L48__C.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs10_uncut_L48__C.npz",
+      "52fba8ba579a452ca925509bafa84db3c6346e7357366ff6d1494165c91b4e63"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs25_uncut_L48__C.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs25_uncut_L48__C.npz",
+      "e645e73986951334963cd0317b85a65121b89cdb93b050562668efaf9faf6409"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs_uncut_L48__C.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs_uncut_L48__C.npz",
+      "f7e5b960340c98cbb090b6683961f78532b43427006200663992c9a9927f94e5"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|p2/fibs__command.npz",
+      "cutfull/ha25f/p2/su311_q1_main_ha25f_cutfull_v1__honest_a/fibs__command.npz",
+      "a904285892beee5d542d6035c50303b0fc5a4888630566d8804a2735282feae3"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|p2/harmfulness__command.npz",
+      "cutfull/ha25f/p2/su311_q1_main_ha25f_cutfull_v1__honest_a/harmfulness__command.npz",
+      "a363eda2eb6432aabbb1f3652809bc18dc69ab4481a5235b36cdc6924bcbb029"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|p2/highstakes__command.npz",
+      "cutfull/ha25f/p2/su311_q1_main_ha25f_cutfull_v1__honest_a/highstakes__command.npz",
+      "6fd5388ad346662ccc7a45fcf93a44a142f2c6844bcca77b1f6fa6698728ec92"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|p2/refusal__command.npz",
+      "cutfull/ha25f/p2/su311_q1_main_ha25f_cutfull_v1__honest_a/refusal__command.npz",
+      "4356ee1b8c935b83408347e4353465ac5e7461f7265360b6bb362671f087c72c"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|sol/a_tight__cmd_A.npz",
+      "cutfull/ha25f/sol_c/su311_q1_main_ha25f_cutfull_v1__honest_a/a_tight__cmd_A.npz",
+      "7fbe17073b753b3390a86dafef6de0d5c7adce57a1554a3b023e31d6c6c660c4"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|sol/c_asis_tight__cmd_A.npz",
+      "cutfull/ha25f/sol_c/su311_q1_main_ha25f_cutfull_v1__honest_a/c_asis_tight__cmd_A.npz",
+      "55502fb4723c6e3bbdfc580ea04c946f806aa2ae46084f9f8430d263c0449e68"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|sola_uncut_pinned/sol_a_uncut__cmd_A.npz",
+      "cutfull/ha25f/sola_uncut_pinned/su311_q1_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__cmd_A.npz",
+      "dcf0b7bcd84fadca9fad4836506db1a6683c29250317c6e3396ba8d79fd6992b"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|sola_uncut_reselect/sol_a_uncut__cmd_A.npz",
+      "cutfull/ha25f/sola_uncut_reselect/su311_q1_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__cmd_A.npz",
+      "dcf0b7bcd84fadca9fad4836506db1a6683c29250317c6e3396ba8d79fd6992b"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|casis_uncut_inherit/c_asis_uncut__cmd_A.npz",
+      "cutfull/ha25f/casis_uncut_inherit/su311_q2_main_ha25f_cutfull_v1__honest_a/c_asis_uncut__cmd_A.npz",
+      "dc88b051d757f27baf0863d4c12581112b0091e2c0a244aaaaddba9994c16664"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|famexp/own_frac100_L48__C.npz",
+      "cutfull/ha25f/famexp/su311_q2_main_ha25f_cutfull_v1__honest_a/own_frac100_L48__C.npz",
+      "1ea2c8e8dd431098e4e793e005147d4cdada8ceba7d03cd312bb84482d1b58c9"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|famexp/own_frac10_L48__C.npz",
+      "cutfull/ha25f/famexp/su311_q2_main_ha25f_cutfull_v1__honest_a/own_frac10_L48__C.npz",
+      "449aeb65ab9315dec1befa5ba81e07cc491293a118872b00d1b960fea053855b"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|famexp/own_frac25_L48__C.npz",
+      "cutfull/ha25f/famexp/su311_q2_main_ha25f_cutfull_v1__honest_a/own_frac25_L48__C.npz",
+      "0523a79c62df5aeb0bfac7a99b61a9d5589f55533cf905eac30b613a925ceb17"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs/own_all_rs10_L48__C.npz",
+      "cutfull/ha25f/own_all_rs/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs10_L48__C.npz",
+      "3ca4d2f933d1d8bf84b306b5973c78b907e6571f3566278fd7fb715fe2982573"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs/own_all_rs25_L48__C.npz",
+      "cutfull/ha25f/own_all_rs/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs25_L48__C.npz",
+      "b977766a7e75136af1e805bd262edd194a1f587314c8575d6891d8c097623441"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs/own_all_rs_L48__C.npz",
+      "cutfull/ha25f/own_all_rs/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs_L48__C.npz",
+      "bb43562299a11efa058b4239c81a58ddc202f4e3f445264b9538b44a91c56e32"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs10_uncut_L48__C.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs10_uncut_L48__C.npz",
+      "ff3d0592b277b17b37f11af5d48bd47ccee591270a4e158e3eee2786d4339a76"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs25_uncut_L48__C.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs25_uncut_L48__C.npz",
+      "0db7acef7d5550cccc3417e0d9f673e4da6a5e410cc44d0e3c610e896c4729e1"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs_uncut_L48__C.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs_uncut_L48__C.npz",
+      "656167f71f85464387f019d18e2f733a7c01ad1192af7ee6eed6c3722a7c5abd"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|p2/fibs__command.npz",
+      "cutfull/ha25f/p2/su311_q2_main_ha25f_cutfull_v1__honest_a/fibs__command.npz",
+      "c8e5c68205b3888664f117fc65ee2d216bd8c8c3c507faf0ddfa375abb2f53be"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|p2/harmfulness__command.npz",
+      "cutfull/ha25f/p2/su311_q2_main_ha25f_cutfull_v1__honest_a/harmfulness__command.npz",
+      "b808da2bab0065f96259c912ddc70db3134d033f337646811371e1632a5f036d"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|p2/highstakes__command.npz",
+      "cutfull/ha25f/p2/su311_q2_main_ha25f_cutfull_v1__honest_a/highstakes__command.npz",
+      "7c12572aa3b78cac644bbcd20c5013753a0540a9df6732b808d34a5609df061f"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|p2/refusal__command.npz",
+      "cutfull/ha25f/p2/su311_q2_main_ha25f_cutfull_v1__honest_a/refusal__command.npz",
+      "1241c6f0fa91655fa4b166a58ee752bcd61b34659f264bcc160e06a448067b7e"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|sol/a_tight__cmd_A.npz",
+      "cutfull/ha25f/sol_c/su311_q2_main_ha25f_cutfull_v1__honest_a/a_tight__cmd_A.npz",
+      "89eb11139da406aff7d3f61fc50c9cd645f5769e55af374959f17995a159cf79"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|sol/c_asis_tight__cmd_A.npz",
+      "cutfull/ha25f/sol_c/su311_q2_main_ha25f_cutfull_v1__honest_a/c_asis_tight__cmd_A.npz",
+      "71ce05f08b9ad55c845b2d9cf2e0eda6e683884c24c10d62587cc0781a08813f"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|sola_uncut_pinned/sol_a_uncut__cmd_A.npz",
+      "cutfull/ha25f/sola_uncut_pinned/su311_q2_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__cmd_A.npz",
+      "009061058d8a48399c6f02443faba5eee59a2b272155df6503d1c4f887fbc4e8"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|sola_uncut_reselect/sol_a_uncut__cmd_A.npz",
+      "cutfull/ha25f/sola_uncut_reselect/su311_q2_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__cmd_A.npz",
+      "009061058d8a48399c6f02443faba5eee59a2b272155df6503d1c4f887fbc4e8"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|casis_uncut_inherit/c_asis_uncut__cmd_A.npz",
+      "cutfull/ha25f/casis_uncut_inherit/su311_q4_main_ha25f_cutfull_v1__honest_a/c_asis_uncut__cmd_A.npz",
+      "2282b3919fc50f6aa0130db3fb7e73fcbb6f929660608030c7f7d33f63e5aec7"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|famexp/own_frac100_L48__C.npz",
+      "cutfull/ha25f/famexp/su311_q4_main_ha25f_cutfull_v1__honest_a/own_frac100_L48__C.npz",
+      "5500de186c022ec3e167209659414cffcb36734ebfe200afade4af2f2ab14f8c"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|famexp/own_frac10_L48__C.npz",
+      "cutfull/ha25f/famexp/su311_q4_main_ha25f_cutfull_v1__honest_a/own_frac10_L48__C.npz",
+      "0b7374b7d6e9e4446be7da48681c5f18db328a875e70af39646b0427433f6401"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|famexp/own_frac25_L48__C.npz",
+      "cutfull/ha25f/famexp/su311_q4_main_ha25f_cutfull_v1__honest_a/own_frac25_L48__C.npz",
+      "d91f32414d13e8a67cc770324d5e7b17c9e3e78985fdf5867f6be92eec2656b9"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs/own_all_rs10_L48__C.npz",
+      "cutfull/ha25f/own_all_rs/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs10_L48__C.npz",
+      "2b2d1d8241bf0c45f780c14183f808692f95afca065f7f8fa0158149fb86162a"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs/own_all_rs25_L48__C.npz",
+      "cutfull/ha25f/own_all_rs/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs25_L48__C.npz",
+      "3d23296549c66370951d363f580c77936e6fde778092ba1d6addb06c81adab77"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs/own_all_rs_L48__C.npz",
+      "cutfull/ha25f/own_all_rs/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs_L48__C.npz",
+      "1f8cc7bd7d96f69ab6af4ee85384973404d39a62d9201520a6c559721db610a9"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs10_uncut_L48__C.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs10_uncut_L48__C.npz",
+      "d4ccfa78fbe634919b98ad1bbdf7ebc13d17982af863faa278f198596815ca46"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs25_uncut_L48__C.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs25_uncut_L48__C.npz",
+      "6ae8fdd8bcc4a1d000c4c6cddfba17e4a68a02f02a41e07a395c2f4e34e33472"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs_uncut_L48__C.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs_uncut_L48__C.npz",
+      "1293d0d019b09eb12565c9fa733cc139ac128f2e173d9aa5127fd286b4408cf4"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|p2/fibs__command.npz",
+      "cutfull/ha25f/p2/su311_q4_main_ha25f_cutfull_v1__honest_a/fibs__command.npz",
+      "527484f541dee6c5b43ba2fc8cc5efed80e23b3cf10da0f2ada73565bb7bb6f5"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|p2/harmfulness__command.npz",
+      "cutfull/ha25f/p2/su311_q4_main_ha25f_cutfull_v1__honest_a/harmfulness__command.npz",
+      "0954d4fcf7e9cb00acbb1d6f6c8f4d4aae8cf03dc0ae9ec23a566bc0a77752f4"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|p2/highstakes__command.npz",
+      "cutfull/ha25f/p2/su311_q4_main_ha25f_cutfull_v1__honest_a/highstakes__command.npz",
+      "af725cd7a86ad538ffbc8c7e2ffbe7f45353fe24657f8b05ec6b9a45b02027cf"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|p2/refusal__command.npz",
+      "cutfull/ha25f/p2/su311_q4_main_ha25f_cutfull_v1__honest_a/refusal__command.npz",
+      "ff6a1d77790b5a9b4193a7aab34c841c8be652b3c4262235096b8fd72d255071"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|sol/a_tight__cmd_A.npz",
+      "cutfull/ha25f/sol_c/su311_q4_main_ha25f_cutfull_v1__honest_a/a_tight__cmd_A.npz",
+      "d795e0cd4132b6fe011043df6f1df927d6e708eca5956f93ac1991162b844c21"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|sol/c_asis_tight__cmd_A.npz",
+      "cutfull/ha25f/sol_c/su311_q4_main_ha25f_cutfull_v1__honest_a/c_asis_tight__cmd_A.npz",
+      "f9119e971db9bb73652884537c261c0a1af0a7e9daac8aeb768520e88f636db9"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|sola_uncut_pinned/sol_a_uncut__cmd_A.npz",
+      "cutfull/ha25f/sola_uncut_pinned/su311_q4_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__cmd_A.npz",
+      "cb11019ca5c14c951b82952ddaf8686aa1e142dc575d5a3dfb507960f1fafe7f"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|sola_uncut_reselect/sol_a_uncut__cmd_A.npz",
+      "cutfull/ha25f/sola_uncut_reselect/su311_q4_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__cmd_A.npz",
+      "cb11019ca5c14c951b82952ddaf8686aa1e142dc575d5a3dfb507960f1fafe7f"
+     ]
+    ]
+   },
+   {
+    "override": "S_new+25f|R",
+    "files": [
+     [
+      "su311_q1_main_ha25f_v1__honest_a|casis_uncut_inherit/c_asis_uncut__avg_top2.npz",
+      "cutfull/ha25f/casis_uncut_inherit/su311_q1_main_ha25f_cutfull_v1__honest_a/c_asis_uncut__avg_top2.npz",
+      "70e6040e61f06557f686ed1216fbbdf73f5f1d244c5fe6ad14999a6704f5c4a8"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|famexp/own_frac100_L48__R.npz",
+      "cutfull/ha25f/famexp/su311_q1_main_ha25f_cutfull_v1__honest_a/own_frac100_L48__R.npz",
+      "77c805bc19e026a59a891b35922dd35c87ad2fc36f5c3b23d02020a8f0be78fc"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|famexp/own_frac10_L48__R.npz",
+      "cutfull/ha25f/famexp/su311_q1_main_ha25f_cutfull_v1__honest_a/own_frac10_L48__R.npz",
+      "651c1fca7413bc31276cb8940ab1be4a8a46a9977898d2530a0706f0e6588921"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|famexp/own_frac25_L48__R.npz",
+      "cutfull/ha25f/famexp/su311_q1_main_ha25f_cutfull_v1__honest_a/own_frac25_L48__R.npz",
+      "346b3d6fccd8f33a1282d326f467625757934b920164afc090ffde59c0813670"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs/own_all_rs10_L48__R.npz",
+      "cutfull/ha25f/own_all_rs/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs10_L48__R.npz",
+      "d10910f228f269e293a6d677be408cf2bb52191e365b32c9a321feb3a80033c8"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs/own_all_rs25_L48__R.npz",
+      "cutfull/ha25f/own_all_rs/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs25_L48__R.npz",
+      "eff57f1b072bdd7d3f5d018235ef5d4a4d3acaacf34210ba79e590ed60a19535"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs/own_all_rs_L48__R.npz",
+      "cutfull/ha25f/own_all_rs/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs_L48__R.npz",
+      "bc2d70cd043fecb9303a3b90c3016bb93fc8d390645701f657682285ee2b00cc"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs10_uncut_L48__R.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs10_uncut_L48__R.npz",
+      "95ef38dc1957bb12d5f0dbdd04ca748b78eafd409193b743491c4304b828fdd0"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs25_uncut_L48__R.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs25_uncut_L48__R.npz",
+      "bd36480b1bbae4e028d93badea9fd031606505d9337e8a812766c3ae1007318b"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs_uncut_L48__R.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q1_main_ha25f_cutfull_v1__honest_a/own_all_rs_uncut_L48__R.npz",
+      "41c0c1e3e6f2103dc8043fdca44d6de6679ae88a932d22a8c709900420791205"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|p2/fibs__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q1_main_ha25f_cutfull_v1__honest_a/fibs__reply_mean.npz",
+      "174b24eb2fa99244c5a5cf62ac9da16e716c1e35f1121b90740899f10b6e5831"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|p2/harmfulness__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q1_main_ha25f_cutfull_v1__honest_a/harmfulness__reply_mean.npz",
+      "86c6a1143bb22550526744e04063e4af103a7a3e0bc90c0a46333b6fd732bb4d"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|p2/highstakes__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q1_main_ha25f_cutfull_v1__honest_a/highstakes__reply_mean.npz",
+      "306260be6a7b8e23033fb93cee185fe5a1ab94b8726ca222f24c67a4ad083036"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|p2/refusal__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q1_main_ha25f_cutfull_v1__honest_a/refusal__reply_mean.npz",
+      "d9603fbec42349851d3e0e8d7d135119be1c960d7f8dc221918b3e2b877f5985"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|sol/a_tight__avg_top2.npz",
+      "cutfull/ha25f/sol/su311_q1_main_ha25f_cutfull_v1__honest_a/a_tight__avg_top2.npz",
+      "86da5d465efcd5c1a8b39b91501d2383a603377acf8186e59212a11f08ab9a66"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|sol/c_asis_tight__avg_top2.npz",
+      "cutfull/ha25f/sol/su311_q1_main_ha25f_cutfull_v1__honest_a/c_asis_tight__avg_top2.npz",
+      "8eb82f0552b35836334168f0c81b3ad73e54e2eb69a2d0a62abee0fa1bb2cf9b"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|sola_uncut_pinned/sol_a_uncut__avg_top2.npz",
+      "cutfull/ha25f/sola_uncut_pinned/su311_q1_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__avg_top2.npz",
+      "812ddebc128c85bbb13702287cce90a7775538fb6edab9e3933b5ea8629ea134"
+     ],
+     [
+      "su311_q1_main_ha25f_v1__honest_a|sola_uncut_reselect/sol_a_uncut__avg_top2.npz",
+      "cutfull/ha25f/sola_uncut_reselect/su311_q1_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__avg_top2.npz",
+      "812ddebc128c85bbb13702287cce90a7775538fb6edab9e3933b5ea8629ea134"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|casis_uncut_inherit/c_asis_uncut__avg_top2.npz",
+      "cutfull/ha25f/casis_uncut_inherit/su311_q2_main_ha25f_cutfull_v1__honest_a/c_asis_uncut__avg_top2.npz",
+      "62d9612bb924ff70f2542b6138e58fac3da66d56550a2b30e666a2b0615e765a"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|famexp/own_frac100_L48__R.npz",
+      "cutfull/ha25f/famexp/su311_q2_main_ha25f_cutfull_v1__honest_a/own_frac100_L48__R.npz",
+      "829a5e8ecd3f7a57f8e27311026bc959e5abeaff91b9fc9c00717c35d2d2c5f5"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|famexp/own_frac10_L48__R.npz",
+      "cutfull/ha25f/famexp/su311_q2_main_ha25f_cutfull_v1__honest_a/own_frac10_L48__R.npz",
+      "6f9510ec7be76690f3792b49717c3e1574cd8c24f5b200f05391d21673303606"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|famexp/own_frac25_L48__R.npz",
+      "cutfull/ha25f/famexp/su311_q2_main_ha25f_cutfull_v1__honest_a/own_frac25_L48__R.npz",
+      "919fda06c0f881ce9e882f39b64e21434b41c68f384073b104e485f0e39d9f2d"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs/own_all_rs10_L48__R.npz",
+      "cutfull/ha25f/own_all_rs/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs10_L48__R.npz",
+      "e9113fb8ca9e7dee288d88a91a50b42015541aee9b92c090c5f3a1d9cdd6ebd5"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs/own_all_rs25_L48__R.npz",
+      "cutfull/ha25f/own_all_rs/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs25_L48__R.npz",
+      "e08701ffe7cf662615ab948798dd026116f099b6465c2518f64d011144de0a81"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs/own_all_rs_L48__R.npz",
+      "cutfull/ha25f/own_all_rs/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs_L48__R.npz",
+      "3d872393841028140ec473966e031f15501e297c4a942316f0741bbacccc7922"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs10_uncut_L48__R.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs10_uncut_L48__R.npz",
+      "045a2ac5a4d29076c66f2786e1340eab87c4fa8adb626c79f428e31734d31a74"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs25_uncut_L48__R.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs25_uncut_L48__R.npz",
+      "19be97cde73a1d967cd6dbb99c8b8bcaedba0ca6af0e304b6d0b8aaf5e41df7b"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs_uncut_L48__R.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q2_main_ha25f_cutfull_v1__honest_a/own_all_rs_uncut_L48__R.npz",
+      "a75b343c0c82b76db7035aebda9e65b007fd10dac191c083927b815c94cc99c9"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|p2/fibs__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q2_main_ha25f_cutfull_v1__honest_a/fibs__reply_mean.npz",
+      "fb8489e63d1179e86487bb2638f9eb8a10ce48db2046002a8a39fe59147bccee"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|p2/harmfulness__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q2_main_ha25f_cutfull_v1__honest_a/harmfulness__reply_mean.npz",
+      "e6e0593f90269a164a285232dc67d3cbdc4a9d1d93c73cbc66b33bd585d079d5"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|p2/highstakes__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q2_main_ha25f_cutfull_v1__honest_a/highstakes__reply_mean.npz",
+      "807362cfdb7e57967eacc66283348ae69d5b479eacc5652510c2e52658a1bd57"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|p2/refusal__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q2_main_ha25f_cutfull_v1__honest_a/refusal__reply_mean.npz",
+      "6f6d60e20c5a10a1eb26dfc0b364ea446433635a2c209b94b1efe9fc533aa00c"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|sol/a_tight__avg_top2.npz",
+      "cutfull/ha25f/sol/su311_q2_main_ha25f_cutfull_v1__honest_a/a_tight__avg_top2.npz",
+      "15e9fd70cbe52a376b196e285dfa972c3a393e1d188c562c0c353dbd306ec9b8"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|sol/c_asis_tight__avg_top2.npz",
+      "cutfull/ha25f/sol/su311_q2_main_ha25f_cutfull_v1__honest_a/c_asis_tight__avg_top2.npz",
+      "26ad708ff16f047d68ef8acbe3540f45107c93518705ef5c390b6c5e1b337c72"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|sola_uncut_pinned/sol_a_uncut__avg_top2.npz",
+      "cutfull/ha25f/sola_uncut_pinned/su311_q2_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__avg_top2.npz",
+      "98eea060dce0918826f7022485a8add2a254f999f1d3813b7088d619e844d0e3"
+     ],
+     [
+      "su311_q2_main_ha25f_v1__honest_a|sola_uncut_reselect/sol_a_uncut__avg_top2.npz",
+      "cutfull/ha25f/sola_uncut_reselect/su311_q2_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__avg_top2.npz",
+      "c0b51b4d4b7ded5dafc8e84951c923156199a5157f09a1e797eea77e617b1db8"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|casis_uncut_inherit/c_asis_uncut__avg_top2.npz",
+      "cutfull/ha25f/casis_uncut_inherit/su311_q4_main_ha25f_cutfull_v1__honest_a/c_asis_uncut__avg_top2.npz",
+      "33e2c4b76bbf0948b03aeffbc053e52cf3ac3afa5d5e09f14b84689000bad726"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|famexp/own_frac100_L48__R.npz",
+      "cutfull/ha25f/famexp/su311_q4_main_ha25f_cutfull_v1__honest_a/own_frac100_L48__R.npz",
+      "e0fc43412a27c01069f44bd7b3a68aed205ec64970b035eab1809b028d03be93"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|famexp/own_frac10_L48__R.npz",
+      "cutfull/ha25f/famexp/su311_q4_main_ha25f_cutfull_v1__honest_a/own_frac10_L48__R.npz",
+      "0c1afd3d543f296bf47054dde1a3c9e1db4c604a3e6f068b86e32ccb8241681f"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|famexp/own_frac25_L48__R.npz",
+      "cutfull/ha25f/famexp/su311_q4_main_ha25f_cutfull_v1__honest_a/own_frac25_L48__R.npz",
+      "88ac61fcd43c93bd3a44502bab8d7ddc73eaa556b2b3b07a0f1df9cee1d5008f"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs/own_all_rs10_L48__R.npz",
+      "cutfull/ha25f/own_all_rs/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs10_L48__R.npz",
+      "0b13047c9390e38080f63840637145315d9e6539ecc4405470f87cd5f68dea5b"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs/own_all_rs25_L48__R.npz",
+      "cutfull/ha25f/own_all_rs/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs25_L48__R.npz",
+      "93217dba1afa57ea6c0c52a1535e1e0078f98fd54de7b35fa4c7ceeb5f1ff92e"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs/own_all_rs_L48__R.npz",
+      "cutfull/ha25f/own_all_rs/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs_L48__R.npz",
+      "5ed9e1763130fcfa707fdce07d0f7b51aeac609e30483b1b7cf05484d74a47e6"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs10_uncut_L48__R.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs10_uncut_L48__R.npz",
+      "b3e976f87839a2add5ce76b96e0bdfe395215c050448e49115e68fff475fa37c"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs25_uncut_L48__R.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs25_uncut_L48__R.npz",
+      "27b4ab03025162bd33c0bf5ab23bcc2ca9872dac13a28d6ce8066215f6ca8b56"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|own_all_rs_uncut/own_all_rs_uncut_L48__R.npz",
+      "cutfull/ha25f/own_all_rs_uncut/su311_q4_main_ha25f_cutfull_v1__honest_a/own_all_rs_uncut_L48__R.npz",
+      "9336ca5a3fbf578f219ed516f26f099776a179f4accd17d06572d47408b5c92d"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|p2/fibs__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q4_main_ha25f_cutfull_v1__honest_a/fibs__reply_mean.npz",
+      "4b5b9feaa5a15365896d1efaefed9c9f4f749621864e22daa5db3ad5dd5af337"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|p2/harmfulness__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q4_main_ha25f_cutfull_v1__honest_a/harmfulness__reply_mean.npz",
+      "a8dc294fa6665059b38c57cb56712d3351d443d5ddab1fed6761a2662922f17b"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|p2/highstakes__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q4_main_ha25f_cutfull_v1__honest_a/highstakes__reply_mean.npz",
+      "d97ed2183cb5f696f3965e808977d9b28bf77cff9a8f9241274df5c190525cb3"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|p2/refusal__reply_mean.npz",
+      "cutfull/ha25f/p2/su311_q4_main_ha25f_cutfull_v1__honest_a/refusal__reply_mean.npz",
+      "ea21fe99c24cb6a8af4835b324abb17fe65a797ec4ca38b01b1d3daf81583697"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|sol/a_tight__avg_top2.npz",
+      "cutfull/ha25f/sol/su311_q4_main_ha25f_cutfull_v1__honest_a/a_tight__avg_top2.npz",
+      "609fe3a7d479eb17dad1955cf8b0aa35083db14fccb280d2abb4ed097bab48e1"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|sol/c_asis_tight__avg_top2.npz",
+      "cutfull/ha25f/sol/su311_q4_main_ha25f_cutfull_v1__honest_a/c_asis_tight__avg_top2.npz",
+      "9c8dba982fa47620ea7096360425ba2bb93a7f83ce230299df90f6597d6260a9"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|sola_uncut_pinned/sol_a_uncut__avg_top2.npz",
+      "cutfull/ha25f/sola_uncut_pinned/su311_q4_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__avg_top2.npz",
+      "179272212438c28a5ce96df54d4dd9fea5cc7d508208a8595c2b566218aac336"
+     ],
+     [
+      "su311_q4_main_ha25f_v1__honest_a|sola_uncut_reselect/sol_a_uncut__avg_top2.npz",
+      "cutfull/ha25f/sola_uncut_reselect/su311_q4_main_ha25f_cutfull_v1__honest_a/sol_a_uncut__avg_top2.npz",
+      "87b17a8166039ade17fc8d0c69e2d6e8b60825e499a110e2526c9b8a80a060b7"
+     ]
+    ]
+   }
+  ],
+  "union_exempt": [
+   {
+    "override": "S_old|C",
+    "file": "casis_uncut_inherit/c_asis_uncut__cmd_A.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/casu_inherit/q4f_c_cutfull_v1__honest_b/c_asis_uncut__cmd_A.npz",
+      "c498a56e6ca96cb482bf01f801e73e3aca4d5271be0e04bf16477a9e9fd8fc59"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/casu_inherit/q4f_main_cutfull_v1__attack/c_asis_uncut__cmd_A.npz",
+      "113a9f08f8985122762f85a8fd69171353994aa717e64fa6433af0fc9c9a7220"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/casu_inherit/q4f_main_cutfull_v1__honest_a/c_asis_uncut__cmd_A.npz",
+      "7111da1b57a6b9c6ccb18be5782863881b6003b0f449e35c19ae62f55ac2edc4"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/casu_inherit/q4f_main_cutfull_v1__honest_b/c_asis_uncut__cmd_A.npz",
+      "a352a38654db163873b871ceb8b547c48000cd4c2ea8b2b5ad3288b259761b2b"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/casu_inherit/q4f_main_cutfull_v1__sim_attack/c_asis_uncut__cmd_A.npz",
+      "10e6b88237a954dbfc0c37c60d547b39336ddf25c35c80d17eb0a1b4fe48f40a"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/casu_inherit/q4f_run2_cutfull_v1__attack/c_asis_uncut__cmd_A.npz",
+      "16905f72a967571708d5cc6b60405eb13589fbecc5fc1129a66e6ebb35d61044"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|C",
+    "file": "own_all_rs_uncut/own_all_rs10_uncut_L48__C.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_c_cutfull_v1__honest_b/own_all_rs10_uncut_L48__C.npz",
+      "13322714ed7f666301f694b9340bd6044e8104b4b181b729d9e17ceb8f6fd249"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__attack/own_all_rs10_uncut_L48__C.npz",
+      "a0be6c6e19ea82ae074eccd41b28aba7712244857b355e45402395c228916434"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_a/own_all_rs10_uncut_L48__C.npz",
+      "2a1adcf4ce0685df8ebd095c838384ffd044caa8a85af4757fe9531a02cd5814"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_b/own_all_rs10_uncut_L48__C.npz",
+      "eeb345f41e42e3429e87504b741b7a788febffe52dfbd488c0d2853a3258b064"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__sim_attack/own_all_rs10_uncut_L48__C.npz",
+      "cd1a43a39e5b9992539223a75857dfec62168e6d3d621ad4bdcc7ba557d20422"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_run2_cutfull_v1__attack/own_all_rs10_uncut_L48__C.npz",
+      "d310670c3a972639e8e36f250b9fd1a82405baa7c8140046b9d6868ecac89a19"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|C",
+    "file": "own_all_rs_uncut/own_all_rs25_uncut_L48__C.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_c_cutfull_v1__honest_b/own_all_rs25_uncut_L48__C.npz",
+      "d4e1b67c69dfd75bbb2bb8a9e9b676ddb6e7c5b40371847062a63cc5763a9928"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__attack/own_all_rs25_uncut_L48__C.npz",
+      "d0d82cdc4e5e072c985cb19f57ca71f8238587b9179c337147b6418126827381"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_a/own_all_rs25_uncut_L48__C.npz",
+      "a918cb000f0d897b68f16e3664c2de69ab23d66903dfe455d723deb62b9bc22f"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_b/own_all_rs25_uncut_L48__C.npz",
+      "82be3e5ea5d0b0f7c564d643dc8ec42f0b9de7aac1b522dcd12e67950be203c8"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__sim_attack/own_all_rs25_uncut_L48__C.npz",
+      "8798b62698270b5a2723c0e64203c919dbfb55ce41b523aaef2ed5682a4e5231"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_run2_cutfull_v1__attack/own_all_rs25_uncut_L48__C.npz",
+      "c465ad96626af7a9b6e10f28ca3e4f30fc3ef37f6fc427207aa02535262094e1"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|C",
+    "file": "own_all_rs_uncut/own_all_rs_uncut_L48__C.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_c_cutfull_v1__honest_b/own_all_rs_uncut_L48__C.npz",
+      "e7e86399cd74933e822ccb58057b8cb1a04b183c8fa59de29cceb2a68b0067f4"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__attack/own_all_rs_uncut_L48__C.npz",
+      "c829bf612bb212d94465635d7c987b43ccd4c37790cd3c8a5c634a38c532fab4"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_a/own_all_rs_uncut_L48__C.npz",
+      "c137bd4a12358524fe0499d81c0f0a29aeafc140c5264722b4cb62dcdc2b65df"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_b/own_all_rs_uncut_L48__C.npz",
+      "37ab57e4c7c07493be996d00dde12045701402496a795faa1b047b82f88da884"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__sim_attack/own_all_rs_uncut_L48__C.npz",
+      "6173235f2f54cb7df82ac11867398a6d19bc2dfd49cfc03122f9d24922854751"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_run2_cutfull_v1__attack/own_all_rs_uncut_L48__C.npz",
+      "aa766f928015f2a424abe972d0b7fc254be48571dd33d526a34f086b71e7a203"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|C",
+    "file": "sola_uncut_pinned/sol_a_uncut__cmd_A.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/solu_pinned/q4f_c_cutfull_v1__honest_b/sol_a_uncut__cmd_A.npz",
+      "15d217a41f2eb9124db63a993542ed83a83f1c6a58806dd5de5cf15932b6b8f5"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/solu_pinned/q4f_main_cutfull_v1__attack/sol_a_uncut__cmd_A.npz",
+      "13abb7a17f9b812706009e074fbbf7adf09d43f48977798e4121429948f42ea8"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/solu_pinned/q4f_main_cutfull_v1__honest_a/sol_a_uncut__cmd_A.npz",
+      "5a54522abd81604ff740a7741e19e0b085eb748a1e3b26dfdac3037c1ae8a616"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/solu_pinned/q4f_main_cutfull_v1__honest_b/sol_a_uncut__cmd_A.npz",
+      "c6c34284f6e65a79db8534ee21f889e3b8ffbd102d4452d16c98dc56c1ad529a"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/solu_pinned/q4f_main_cutfull_v1__sim_attack/sol_a_uncut__cmd_A.npz",
+      "6f0be608535ccd7f89e0ef7dd35b624b838a9093b520b33f9a4e970352012f1e"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/solu_pinned/q4f_run2_cutfull_v1__attack/sol_a_uncut__cmd_A.npz",
+      "3bce10c47f41949071d04f38b6664f92985b60343424815ceaf0408545df39e4"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|C",
+    "file": "sola_uncut_reselect/sol_a_uncut__cmd_A.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/solu_reselect/q4f_c_cutfull_v1__honest_b/sol_a_uncut__cmd_A.npz",
+      "15d217a41f2eb9124db63a993542ed83a83f1c6a58806dd5de5cf15932b6b8f5"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/solu_reselect/q4f_main_cutfull_v1__attack/sol_a_uncut__cmd_A.npz",
+      "13abb7a17f9b812706009e074fbbf7adf09d43f48977798e4121429948f42ea8"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/solu_reselect/q4f_main_cutfull_v1__honest_a/sol_a_uncut__cmd_A.npz",
+      "5a54522abd81604ff740a7741e19e0b085eb748a1e3b26dfdac3037c1ae8a616"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/solu_reselect/q4f_main_cutfull_v1__honest_b/sol_a_uncut__cmd_A.npz",
+      "c6c34284f6e65a79db8534ee21f889e3b8ffbd102d4452d16c98dc56c1ad529a"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/solu_reselect/q4f_main_cutfull_v1__sim_attack/sol_a_uncut__cmd_A.npz",
+      "6f0be608535ccd7f89e0ef7dd35b624b838a9093b520b33f9a4e970352012f1e"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/solu_reselect/q4f_run2_cutfull_v1__attack/sol_a_uncut__cmd_A.npz",
+      "3bce10c47f41949071d04f38b6664f92985b60343424815ceaf0408545df39e4"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|R",
+    "file": "casis_uncut_inherit/c_asis_uncut__avg_top2.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/casu_inherit/q4f_c_cutfull_v1__honest_b/c_asis_uncut__avg_top2.npz",
+      "b78726bc439bf99fd2f02ac4265017d664b29781fded79741f80249e83c6cf9d"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/casu_inherit/q4f_main_cutfull_v1__attack/c_asis_uncut__avg_top2.npz",
+      "e55e18f38cd85f535c4ea32e677d0d3d4b60d7c95f463e6fd9b54765f36b1923"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/casu_inherit/q4f_main_cutfull_v1__honest_a/c_asis_uncut__avg_top2.npz",
+      "9fd0b3855d41dfa53da9bb6ad119caa94e47f2c045c4a41257d4f18591614172"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/casu_inherit/q4f_main_cutfull_v1__honest_b/c_asis_uncut__avg_top2.npz",
+      "ceb309dcda7f152dd96267df3ee0506b5178af5fc5c25875eb0a05cd512bcf63"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/casu_inherit/q4f_main_cutfull_v1__sim_attack/c_asis_uncut__avg_top2.npz",
+      "6d9233c762a8690d922c4fe98cf09fc59afc3468a946798cb0988f0f1bbc30aa"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/casu_inherit/q4f_run2_cutfull_v1__attack/c_asis_uncut__avg_top2.npz",
+      "4bd4760c063c43491334e01bf8ef81ea7fe0685128afb9559aa47f99b4974a1b"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|R",
+    "file": "own_all_rs_uncut/own_all_rs10_uncut_L48__R.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_c_cutfull_v1__honest_b/own_all_rs10_uncut_L48__R.npz",
+      "5ca64c4921db5746e13e9b4dd3efee4b07fe45438fac4cc83cd4b6852b3a148e"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__attack/own_all_rs10_uncut_L48__R.npz",
+      "51dac982fb538c1e4d0d0d2b7efb483f3197ebb650521e7c1891821f2908241d"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_a/own_all_rs10_uncut_L48__R.npz",
+      "eecba3541f434babc9c59565e378ec80f03570427c84bb0e9984d8821be35662"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_b/own_all_rs10_uncut_L48__R.npz",
+      "c21f5d67e712fff7940b1759997814bd6cba4059fc88e407463b148003653842"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__sim_attack/own_all_rs10_uncut_L48__R.npz",
+      "caf294162c087d23b7f9059fea974b8e2b99177b6e910b22eef13e9426e7286e"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_run2_cutfull_v1__attack/own_all_rs10_uncut_L48__R.npz",
+      "de9d67c23b84570ebdb87105a38fccd1d7a77467891732bfb1e875aea8056590"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|R",
+    "file": "own_all_rs_uncut/own_all_rs25_uncut_L48__R.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_c_cutfull_v1__honest_b/own_all_rs25_uncut_L48__R.npz",
+      "ce7b84a1647706586a694a6f0ab2db4cad5da87cb5958a366546478dd8c63a34"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__attack/own_all_rs25_uncut_L48__R.npz",
+      "12051031ee3bc0c2c0584bd4c3bef48e4ceb126c4c2de24b899c4d49c651cdc4"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_a/own_all_rs25_uncut_L48__R.npz",
+      "7e0136f2248cace76ed44348664c82318349a4a060f8081900864aabc4856716"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_b/own_all_rs25_uncut_L48__R.npz",
+      "dbcf06803bdaa1251461afee5532505f132a7d170d7b20c996dc84576d269726"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__sim_attack/own_all_rs25_uncut_L48__R.npz",
+      "f0383a65409272d704c1b1455d95efede37bab39505c3340885175b6e2b5397f"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_run2_cutfull_v1__attack/own_all_rs25_uncut_L48__R.npz",
+      "b750185c1a03d1bdff784615e41cca9736e7ae6062d73cef7fba3a4ffdbe5f84"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|R",
+    "file": "own_all_rs_uncut/own_all_rs_uncut_L48__R.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_c_cutfull_v1__honest_b/own_all_rs_uncut_L48__R.npz",
+      "63b85d4c71244057b9a29d137825847ec9718d56c5aa11165425e8bb25db14e1"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__attack/own_all_rs_uncut_L48__R.npz",
+      "b600dfc69e88a0cfc8fc94aca8eab4a34fe7c6c1005a4975e81296aa8efd52f6"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_a/own_all_rs_uncut_L48__R.npz",
+      "5fc50e122c44a570b4821fe580f06766ba281c74efaba08d8bebd68b15522c39"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__honest_b/own_all_rs_uncut_L48__R.npz",
+      "16bf032aeada6cab5fdfbb9df94f28121ba3b8dad54dde6cd793aa212a2c19e4"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_main_cutfull_v1__sim_attack/own_all_rs_uncut_L48__R.npz",
+      "24ee04f2f334a7eb20e84fa9925385d312bc9cb2bd306d2b82caee9df05e59f5"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/own_all_rs_uncut/q4f_run2_cutfull_v1__attack/own_all_rs_uncut_L48__R.npz",
+      "9c2bbe9b58f3c3080503cf248ea8c08b7ecb68c62bed11c407adf73025d57c38"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|R",
+    "file": "sola_uncut_pinned/sol_a_uncut__avg_top2.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/solu_pinned/q4f_c_cutfull_v1__honest_b/sol_a_uncut__avg_top2.npz",
+      "6bc9538a71e93806d8f603e26d3c9169e249a7e6179ed34b018cec25b35c8891"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/solu_pinned/q4f_main_cutfull_v1__attack/sol_a_uncut__avg_top2.npz",
+      "a6a9fd09845658841f1e74bbf0f6ae1b96c57fe91c00e3cf83bc89fc3d5633a8"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/solu_pinned/q4f_main_cutfull_v1__honest_a/sol_a_uncut__avg_top2.npz",
+      "dbe5fdb96504cc0867fc117beaca0a39ca804f34d75cf9b71e9647f19d323f52"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/solu_pinned/q4f_main_cutfull_v1__honest_b/sol_a_uncut__avg_top2.npz",
+      "be508a78ecb393f29bf6d2538d27526b7704a568410e060cdacd1384672f2e03"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/solu_pinned/q4f_main_cutfull_v1__sim_attack/sol_a_uncut__avg_top2.npz",
+      "025d38a06a52684d0cfc6ac304a099d65f00a19d43ece4f4815bcb2ee946d187"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/solu_pinned/q4f_run2_cutfull_v1__attack/sol_a_uncut__avg_top2.npz",
+      "14ab6d8359de418aafdf11386530955490ae437222baff849972b04d4ea8f5ad"
+     ]
+    ]
+   },
+   {
+    "override": "S_old|R",
+    "file": "sola_uncut_reselect/sol_a_uncut__avg_top2.npz",
+    "entries": [
+     [
+      "q4f_c_v1__honest_b",
+      "cutfull/sold/solu_reselect/q4f_c_cutfull_v1__honest_b/sol_a_uncut__avg_top2.npz",
+      "cb2e7f804fdf0871211b4a655f2cb31a258cb383f56113dbd41edc6a65764309"
+     ],
+     [
+      "q4f_main_v1__attack",
+      "cutfull/sold/solu_reselect/q4f_main_cutfull_v1__attack/sol_a_uncut__avg_top2.npz",
+      "eb260f96a553446c0ef9eeb1adffa3f3997be03ab6d2969e196bf66c7f3d6e87"
+     ],
+     [
+      "q4f_main_v1__honest_a",
+      "cutfull/sold/solu_reselect/q4f_main_cutfull_v1__honest_a/sol_a_uncut__avg_top2.npz",
+      "c2e1cceae92023e831dda0510434d82d4f6e941a3194407eb49efa4a6b3d76c9"
+     ],
+     [
+      "q4f_main_v1__honest_b",
+      "cutfull/sold/solu_reselect/q4f_main_cutfull_v1__honest_b/sol_a_uncut__avg_top2.npz",
+      "2f8da916f2974afce5a8033b14d6e2e4a00adc7538202a12d815518ed14c3b66"
+     ],
+     [
+      "q4f_main_v1__sim_attack",
+      "cutfull/sold/solu_reselect/q4f_main_cutfull_v1__sim_attack/sol_a_uncut__avg_top2.npz",
+      "4665c6396976bbd481f3d72f5ad19cb53ec2f188c2eaab2c640ae64c6183fd03"
+     ],
+     [
+      "q4f_run2_v1__attack",
+      "cutfull/sold/solu_reselect/q4f_run2_cutfull_v1__attack/sol_a_uncut__avg_top2.npz",
+      "fbc4df9b9bffb3166d09688616ac583f3e7483935e9b89907aa8d040c3726189"
+     ]
+    ]
+   }
+  ]
+ },
+ "freeze_checks": {
+  "e12_pools": {
+   "S_new": {
+    "H_A": {
+     "n": 305,
+     "physical_members_sha256": "b019379e53e1c8d90b16aa091276cdfce5d349a4a8db54d758f0ece65f55e9ea",
+     "e2_members_sha256": "6f2bb33154aa72fa05f32dbe653459193a6982762e4fda939e8f127574352938",
+     "groups": {
+      "DT (no 25f DT honest-A roots scored)": {
+       "n": 303,
+       "physical_members_sha256": "bc19565f6a7d97e8484d64a7cb462152cafa0c25d733b0d6a23af64cfa2a47c7"
+      },
+      "Sol (a), c_asis": {
+       "n": 305,
+       "physical_members_sha256": "b019379e53e1c8d90b16aa091276cdfce5d349a4a8db54d758f0ece65f55e9ea"
+      },
+      "own family (own_frac10/25/100_L48)": {
+       "n": 305,
+       "physical_members_sha256": "b019379e53e1c8d90b16aa091276cdfce5d349a4a8db54d758f0ece65f55e9ea"
+      },
+      "public probes (FIBS, harmfulness, refusal, high-stakes)": {
+       "n": 305,
+       "physical_members_sha256": "b019379e53e1c8d90b16aa091276cdfce5d349a4a8db54d758f0ece65f55e9ea"
+      }
+     }
+    },
+    "H_B": {
+     "n": 303,
+     "physical_members_sha256": "1ce9b0a2b566b14cc1b783d937a7385871410db6eaf5f7ba799ddd8518e007c6",
+     "e2_members_sha256": "ee3ad06582dc00f9625e11cc198be83d60891d6125b4ad9f16c7edd0dad4ca73"
+    }
+   },
+   "S_newmains": {
+    "H_A": {
+     "n": 334,
+     "physical_members_sha256": "9849a3487e352b2f918b7c530dfde36acc77717202b55f7895673a3c31e0e95c",
+     "e2_members_sha256": "a8840c9145e4aa475ec40e18a02c912fde79496dc94609bbd97f4cc6e36bfa5f"
+    },
+    "H_B": {
+     "n": 342,
+     "physical_members_sha256": "b29828467b6b2fe797d38ba50eea27186dbd3e02ffc0ac5c099f402a53be5890",
+     "e2_members_sha256": "b3306f43798d7d867636eadc30626347cf8a948b2f45cdce1d067797f22eb330"
+    },
+    "H_B_coverage": {
+     "n": 286,
+     "physical_members_sha256": "add494d59d3eb9dd90c7a3b541865bc69f2fc0b79a5362d66b19d5060286dfe7",
+     "e2_members_sha256": "167046e0e02765ed3ad283a5b78ca3301a1d8d8bfb4194a9eef015ae0b0f18c4"
+    }
+   },
+   "S_old": {
+    "H_A": {
+     "n": 0,
+     "physical_members_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "e2_members_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "H_B": {
+     "n": 191,
+     "physical_members_sha256": "dce12e72ec219599f8c81f3cc916158822e83a2c048d07e372eda862f1e3b731",
+     "e2_members_sha256": "49a0eb66f892ce6202415aed05b32e4f2f3cacfb2b1994367a5c93593455e09d"
+    },
+    "H_B2": {
+     "n": 191,
+     "physical_members_sha256": "dce12e72ec219599f8c81f3cc916158822e83a2c048d07e372eda862f1e3b731",
+     "e2_members_sha256": "49a0eb66f892ce6202415aed05b32e4f2f3cacfb2b1994367a5c93593455e09d"
+    }
+   }
+  },
+  "e12_physical_keys_used": 1475,
+  "ep2_admitted": 1665,
+  "used_not_admitted": [],
+  "admitted_not_used": 190,
+  "admitted_not_used_rule": "T196 epoch-2 honest_a (09 Q4: S_old H_A gets no epoch 2) and other unpooled admits",
+  "tau_sim": {
+   "S_old": {
+    "registered": "primary_v3 (A25 b1 + b2)",
+    "fill_in_admitted": {
+     "simh_t196fill_v1__sim_honest": {
+      "n": 8,
+      "admitted": [
+       "t196fill|t04_tiktok",
+       "t196fill|t07_slack_clone",
+       "t196fill|t08_model_registry",
+       "t196fill|t11_media_processing",
+       "t196fill|t12_clinical_trial",
+       "t196fill|t13_auto_workflow",
+       "t196fill|t17_slack_clone",
+       "t196fill|t48_model_registry"
+      ]
+     },
+     "sp493_g4_simh_v1_try2__sim_honest": {
+      "n": 14,
+      "admitted": [
+       "sp493_t196|t01_media_processing",
+       "sp493_t196|t02_clinical_trial",
+       "sp493_t196|t03_auto_workflow",
+       "sp493_t196|t05_user_tracking",
+       "sp493_t196|t06_file_indexing",
+       "sp493_t196|t09_web_scraping",
+       "sp493_t196|t115_model_registry",
+       "sp493_t196|t14_tiktok",
+       "sp493_t196|t15_user_tracking",
+       "sp493_t196|t16_file_indexing",
+       "sp493_t196|t18_model_registry",
+       "sp493_t196|t19_web_scraping",
+       "sp493_t196|t20_shared_dotfiles",
+       "sp493_t196|t43_auto_workflow"
+      ]
+     }
+    },
+    "paired_rule": "not applied (09: item 26 governs S_paper493 only; t48 and t115 stay)"
+   },
+   "S_paper493": {
+    "roots": [
+     "sp493_g4_simh_v1_try2__sim_honest",
+     "sp493_g5_simh_v1__sim_honest"
+    ],
+    "paired_exclusions": [
+     {
+      "root": "sp493_g4_simh_v1_try2__sim_honest",
+      "key": "sp493_t196|t115_model_registry",
+      "class": "H_sim cell without an admitted H_A member (paired-pool rule)"
+     }
+    ]
+   }
+  },
+  "fill_in_map": {
+   "simh_t196fill_v1__sim_honest|own_all_rs/own_all_rs10_L48__C.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs/simh_t196fill_cutfull_v1__sim_honest/own_all_rs10_L48__C.npz",
+     "sha256": "126d40a4f483431f2bb970e492661dd8d040d38eabc687196a9aee1b789b6fe0"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs/own_all_rs10_L48__R.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs/simh_t196fill_cutfull_v1__sim_honest/own_all_rs10_L48__R.npz",
+     "sha256": "1b8f0992d0918ee615cde576bb77eaef3757098f10bc170a60db14eea7b50f44"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs/own_all_rs25_L48__C.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs/simh_t196fill_cutfull_v1__sim_honest/own_all_rs25_L48__C.npz",
+     "sha256": "862a1938b7cf2085edfb5dd65e288fbb13636143dee5a41fc4557a3ef273d97c"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs/own_all_rs25_L48__R.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs/simh_t196fill_cutfull_v1__sim_honest/own_all_rs25_L48__R.npz",
+     "sha256": "5a09e1c25d8eec1cfddbeb3938cf778b4749a5e7ab0fd849450591a4b11823db"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs/own_all_rs_L48__C.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs/simh_t196fill_cutfull_v1__sim_honest/own_all_rs_L48__C.npz",
+     "sha256": "335f07847d4778d7e55cf66459515778b86b2e46472e5c34e9ac06836997feb7"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs/own_all_rs_L48__R.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs/simh_t196fill_cutfull_v1__sim_honest/own_all_rs_L48__R.npz",
+     "sha256": "b741bdfe2bcc83cb549be0d808c2a75ab92cf17e07ea3906ae0c060a85516e55"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|p2/fibs__command.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/p2/simh_t196fill_cutfull_v1__sim_honest/fibs__command.npz",
+     "sha256": "aef0743992c6a746bafdadc85583cdb55c8fccd79200655ccc80f38d77945bc3"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|p2/fibs__reply_mean.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/p2/simh_t196fill_cutfull_v1__sim_honest/fibs__reply_mean.npz",
+     "sha256": "8cf10ba6bb6f075164b5659fcf171f410bcfe99c1802135dab80318637a7c6f1"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|p2/harmfulness__command.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/p2/simh_t196fill_cutfull_v1__sim_honest/harmfulness__command.npz",
+     "sha256": "50d238f414f81f9fe38a139521972c506b9d09900787516e3b38cdf70d9d97fc"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|p2/harmfulness__reply_mean.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/p2/simh_t196fill_cutfull_v1__sim_honest/harmfulness__reply_mean.npz",
+     "sha256": "a86595c3e73e6fa47816686f4f590aff02d49ec64f70d1ffaf1ca9c47eaa9489"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|p2/highstakes__command.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/p2/simh_t196fill_cutfull_v1__sim_honest/highstakes__command.npz",
+     "sha256": "dcf923e7e7e41a4b6746d0d02a3ac2419645df27ffd9ac8fa8a1c3e90e1e27cf"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|p2/highstakes__reply_mean.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/p2/simh_t196fill_cutfull_v1__sim_honest/highstakes__reply_mean.npz",
+     "sha256": "c0f958c4173d05f18b635c6c41fb04bea519ffdb0c7ca064620e7adfa38c2df7"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|p2/refusal__command.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/p2/simh_t196fill_cutfull_v1__sim_honest/refusal__command.npz",
+     "sha256": "efbab96ba5a74732a137f39ebe4540ddf14c8d166765efb1f131f137309ceaf2"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|p2/refusal__reply_mean.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/p2/simh_t196fill_cutfull_v1__sim_honest/refusal__reply_mean.npz",
+     "sha256": "19a5a7bdbd7b180cc8be924672506eab72f504eeffdb702b43e69dfb618fb21b"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|sol/a_tight__avg_top2.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/sol/simh_t196fill_cutfull_v1__sim_honest/a_tight__avg_top2.npz",
+     "sha256": "c5819c1ca1d9ae93d28098e667aa0984a4127bb5912dbbc7b8ed06778d501c65"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|sol/a_tight__cmd_A.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/sol_c/simh_t196fill_cutfull_v1__sim_honest/a_tight__cmd_A.npz",
+     "sha256": "2dee89a73f0f948d65f091354bddcafbc79c5bd37c4de391eb29e6332e56ae3f"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|sol/c_asis_tight__avg_top2.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/sol/simh_t196fill_cutfull_v1__sim_honest/c_asis_tight__avg_top2.npz",
+     "sha256": "d8f685702274a0721d3958f32925b25d5cd66c4dad3152e0ba9348d091d77009"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|sol/c_asis_tight__cmd_A.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/sol_c/simh_t196fill_cutfull_v1__sim_honest/c_asis_tight__cmd_A.npz",
+     "sha256": "97ec435ef014ac55741d9105eeef48585cf3ab5613b03aee4bb717823d3c46ed"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|casis_uncut_inherit/c_asis_uncut__avg_top2.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/casis_uncut_inherit/simh_t196fill_cutfull_v1__sim_honest/c_asis_uncut__avg_top2.npz",
+     "sha256": "2e750cef2cd89e2bc812c4a7fce89b4fbd189a0dfea751d0eb3adbaeb6a9bf83"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|casis_uncut_inherit/c_asis_uncut__cmd_A.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/casis_uncut_inherit/simh_t196fill_cutfull_v1__sim_honest/c_asis_uncut__cmd_A.npz",
+     "sha256": "706c3173312a0550be1cf2164b1c3999b824b3e6a9b9e8c2f0fb24b63b96ac0c"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs_uncut/own_all_rs10_uncut_L48__C.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs_uncut/simh_t196fill_cutfull_v1__sim_honest/own_all_rs10_uncut_L48__C.npz",
+     "sha256": "0f21e9d6afe474d899b29b3cb0504830ad15cf62a20d22e15e5f222fb0e0160f"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs_uncut/own_all_rs10_uncut_L48__R.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs_uncut/simh_t196fill_cutfull_v1__sim_honest/own_all_rs10_uncut_L48__R.npz",
+     "sha256": "a459754d31407851b36f51a73c9f935e9d300ddf79791acf461463391b7e276e"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs_uncut/own_all_rs25_uncut_L48__C.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs_uncut/simh_t196fill_cutfull_v1__sim_honest/own_all_rs25_uncut_L48__C.npz",
+     "sha256": "784c7e46ba96809dde4ee7dc7e1c124cd9731aefd95538c470774be7ffa71137"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs_uncut/own_all_rs25_uncut_L48__R.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs_uncut/simh_t196fill_cutfull_v1__sim_honest/own_all_rs25_uncut_L48__R.npz",
+     "sha256": "b02ea3996d6c25b7a2ebf50712f3179939e01cf6b5bb565e6b7f68c2510a48df"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs_uncut/own_all_rs_uncut_L48__C.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs_uncut/simh_t196fill_cutfull_v1__sim_honest/own_all_rs_uncut_L48__C.npz",
+     "sha256": "269febd71713b5d3957f0e4a6df4d398151fe134236814d6dad53b3cf71f082e"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|own_all_rs_uncut/own_all_rs_uncut_L48__R.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/own_all_rs_uncut/simh_t196fill_cutfull_v1__sim_honest/own_all_rs_uncut_L48__R.npz",
+     "sha256": "7ab1aff24d8e7a61f681bf713241d2ac83e812497de5ebb1942705ba09581331"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|sola_uncut_pinned/sol_a_uncut__avg_top2.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/sola_uncut_pinned/simh_t196fill_cutfull_v1__sim_honest/sol_a_uncut__avg_top2.npz",
+     "sha256": "d99f3d1b123b140d3a4fba41e62ed10893813b5ce9ae41e247a667ccbaad3142"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|sola_uncut_pinned/sol_a_uncut__cmd_A.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/sola_uncut_pinned/simh_t196fill_cutfull_v1__sim_honest/sol_a_uncut__cmd_A.npz",
+     "sha256": "bfe897d7dfd7d0fcde77d874112447528c7d4488d5139713a962e60dc267c9a2"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|sola_uncut_reselect/sol_a_uncut__avg_top2.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/sola_uncut_reselect/simh_t196fill_cutfull_v1__sim_honest/sol_a_uncut__avg_top2.npz",
+     "sha256": "16c6cec7ff20ee52577296041a4a5e7e6da89e3abf3aa8ccf04f71f3f21cc878"
+    }
+   ],
+   "simh_t196fill_v1__sim_honest|sola_uncut_reselect/sol_a_uncut__cmd_A.npz": [
+    {
+     "set": "pools_ep2",
+     "path": "cutfull/simh-t196fill/sola_uncut_reselect/simh_t196fill_cutfull_v1__sim_honest/sol_a_uncut__cmd_A.npz",
+     "sha256": "bfe897d7dfd7d0fcde77d874112447528c7d4488d5139713a962e60dc267c9a2"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs/own_all_rs10_L48__C.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs10_L48__C.npz",
+     "sha256": "96d05e8740c104a6d0e809ec6133d2a54ebc57ecfe712fe36669904679de7e78"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs/own_all_rs10_L48__R.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs10_L48__R.npz",
+     "sha256": "fe10e771b06cfc3a25ac351d955a949894a3f219e6436de1ed82ef0d19a1ee0a"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs/own_all_rs25_L48__C.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs25_L48__C.npz",
+     "sha256": "e011420c629b99c6d088f3c61a4889a670b6e894bdf16bce6d3c9c3b95edd147"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs/own_all_rs25_L48__R.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs25_L48__R.npz",
+     "sha256": "90419af7b10460aea9258cc0190e0080c4b9bc26a35cebdc070b4fd31aeb9308"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs/own_all_rs_L48__C.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs_L48__C.npz",
+     "sha256": "6c5660713c2cad2f7edaca68e6d27434e6f4981144bd80dbb129d0edb5e9944f"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs/own_all_rs_L48__R.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs_L48__R.npz",
+     "sha256": "4705d3808cfe6e7f567c95f98be6b0d0282867d676fa080d043fc34ee53487cb"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|p2/fibs__command.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/p2/sp493_g4_simh_cutfull_v1__sim_honest/fibs__command.npz",
+     "sha256": "52aa14b37b85adf95cae975d256f1ea7300cf3f21237e8680dd858f7e3869ab6"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|p2/fibs__reply_mean.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/p2/sp493_g4_simh_cutfull_v1__sim_honest/fibs__reply_mean.npz",
+     "sha256": "e469f286b4af4e4e0aa4f3c73f0e35e9849eb7af98f3829864627ef901e49275"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|p2/harmfulness__command.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/p2/sp493_g4_simh_cutfull_v1__sim_honest/harmfulness__command.npz",
+     "sha256": "0caf0cfeb55ed2760e21e8c16f37db7d2a0a3930b118c4720e09646e9be756e0"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|p2/harmfulness__reply_mean.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/p2/sp493_g4_simh_cutfull_v1__sim_honest/harmfulness__reply_mean.npz",
+     "sha256": "57f53997354e29886edaaa7690c3737a0fa0a97c4b7727d4bb4126a06a43e560"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|p2/highstakes__command.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/p2/sp493_g4_simh_cutfull_v1__sim_honest/highstakes__command.npz",
+     "sha256": "326d78c9eadaceb81dd61883d50ca6f714a83dc95ba7930b954456fa3f5c125f"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|p2/highstakes__reply_mean.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/p2/sp493_g4_simh_cutfull_v1__sim_honest/highstakes__reply_mean.npz",
+     "sha256": "20ab1a397ab45bb67f9537dd774e9d0507134f23bcd8c952a2e3a08292ccda47"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|p2/refusal__command.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/p2/sp493_g4_simh_cutfull_v1__sim_honest/refusal__command.npz",
+     "sha256": "5488fb91cd366227205a15a93236c6015f932e7c6d1f1d6df0acc3f11d84b3f3"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|p2/refusal__reply_mean.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/p2/sp493_g4_simh_cutfull_v1__sim_honest/refusal__reply_mean.npz",
+     "sha256": "5b8b2e8968b799396282f596561e8a867a3ae358a295be7afc88924f7c81fb7c"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|sol/a_tight__avg_top2.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/sol/sp493_g4_simh_cutfull_v1__sim_honest/a_tight__avg_top2.npz",
+     "sha256": "78fd6541e1a8322e830e10bd1ef0caa3954ccf5a4713ddff7fd781f86ad0f5b7"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|sol/a_tight__cmd_A.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/sol_c/sp493_g4_simh_cutfull_v1__sim_honest/a_tight__cmd_A.npz",
+     "sha256": "4169fb672eadad02ff8abbc675abd21df9d60016cfb4ccb16b9f257bb2e84662"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|sol/c_asis_tight__avg_top2.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/sol/sp493_g4_simh_cutfull_v1__sim_honest/c_asis_tight__avg_top2.npz",
+     "sha256": "875be219a9483297abf11d61535631d751fc2aa16b98f5db540852e505643b85"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|sol/c_asis_tight__cmd_A.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/sol_c/sp493_g4_simh_cutfull_v1__sim_honest/c_asis_tight__cmd_A.npz",
+     "sha256": "b26c0fd4fd709fdeffd5c367e9fe80be637ee7a49b0a0978cc253799354cd86f"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|casis_uncut_inherit/c_asis_uncut__avg_top2.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/casis_uncut_inherit/sp493_g4_simh_cutfull_v1__sim_honest/c_asis_uncut__avg_top2.npz",
+     "sha256": "a0143f476d31f6497623e509607e7fd66e5c19ef9d69c68fc24ddabdd3dbba67"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|casis_uncut_inherit/c_asis_uncut__cmd_A.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/casis_uncut_inherit/sp493_g4_simh_cutfull_v1__sim_honest/c_asis_uncut__cmd_A.npz",
+     "sha256": "600af8d48f1b5b0d054a59e40e416d9da92cdf67d071b1ea872831afff23194d"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs_uncut/own_all_rs10_uncut_L48__C.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs_uncut/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs10_uncut_L48__C.npz",
+     "sha256": "028ce212baa21e4fa312af28ad5ba0d37f799d42794b81f86c13ad415718cb61"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs_uncut/own_all_rs10_uncut_L48__R.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs_uncut/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs10_uncut_L48__R.npz",
+     "sha256": "e4f0a08e68336ae6b72a02a319dd892cd58c13219edfefe56875c3bd3230f84c"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs_uncut/own_all_rs25_uncut_L48__C.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs_uncut/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs25_uncut_L48__C.npz",
+     "sha256": "ee44bf9b97562cf0d14695f791e08597387f361b58546bd827403bb9be608493"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs_uncut/own_all_rs25_uncut_L48__R.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs_uncut/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs25_uncut_L48__R.npz",
+     "sha256": "4b3f2edda6b70b4fdc90d68fe3e101ff6c88d27ca1eaf04d2d555f5082b0b940"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs_uncut/own_all_rs_uncut_L48__C.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs_uncut/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs_uncut_L48__C.npz",
+     "sha256": "be725b12c92be2e5b6dad09c9f04e79ac479b962799839859617d97ec4568f9d"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|own_all_rs_uncut/own_all_rs_uncut_L48__R.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/own_all_rs_uncut/sp493_g4_simh_cutfull_v1__sim_honest/own_all_rs_uncut_L48__R.npz",
+     "sha256": "96397af4ea3a274e9898670502ab42c33206617c8ae4516e8be168dc1200bb37"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|sola_uncut_pinned/sol_a_uncut__avg_top2.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/sola_uncut_pinned/sp493_g4_simh_cutfull_v1__sim_honest/sol_a_uncut__avg_top2.npz",
+     "sha256": "b1d148dd42a7fe373f4112c42aa0dc31c5bcefd8c6e4310728d23f9e03557574"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|sola_uncut_pinned/sol_a_uncut__cmd_A.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/sola_uncut_pinned/sp493_g4_simh_cutfull_v1__sim_honest/sol_a_uncut__cmd_A.npz",
+     "sha256": "60ea854ad18f05a728a5f303b7e112738739e778234aa37d5c5b9c62f9a0559b"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|sola_uncut_reselect/sol_a_uncut__avg_top2.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/sola_uncut_reselect/sp493_g4_simh_cutfull_v1__sim_honest/sol_a_uncut__avg_top2.npz",
+     "sha256": "2ef314d7419018266127d26f5cc01434376ab42f0eb7b45a92e4d57e5368dcb2"
+    }
+   ],
+   "sp493_g4_simh_v1_try2__sim_honest|sola_uncut_reselect/sol_a_uncut__cmd_A.npz": [
+    {
+     "set": "S_paper493",
+     "path": "cutfull/sp493-g4/sola_uncut_reselect/sp493_g4_simh_cutfull_v1__sim_honest/sol_a_uncut__cmd_A.npz",
+     "sha256": "60ea854ad18f05a728a5f303b7e112738739e778234aa37d5c5b9c62f9a0559b"
+    }
+   ]
+  },
+  "fill_in_map_ok": true,
+  "problems": []
+ }
+}

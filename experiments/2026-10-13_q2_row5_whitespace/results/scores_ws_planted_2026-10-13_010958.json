@@ -1,0 +1,20 @@
+{
+ "plan": "PLAN.md (this folder)",
+ "git": "8cc9cf3b841603d79d676f6ded588df5a9cdbb6a",
+ "reader": "Qwen/Qwen3-32B (#36, last-token)",
+ "frozen run": "2026-10-06_181548",
+ "layer": 48,
+ "extract run": "2026-10-13_q2_row5_ws_planted_qwen3-32b_l48_v1",
+ "which": "planted",
+ "stage file": "stage_ws_2026-10-13_003814.json",
+ "stage sha256": "ba87cefbd87794fb6c8bcf35b714478fe1c0b4cc65d746247a39ca56ff6fb076",
+ "probes sha256": "9fd9989b88eacf8652cc6ccf653e105b03496cff19f8fca0f5a13843015bd104",
+ "stored scores sha256": {
+  "runs.json": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96",
+  "scores_L48.npz": "f6cf939e20134218cc2f0f7d9ecc1bdaf21aadfdb05b921d7361551017e70fc4"
+ },
+ "runs": 936,
+ "runs with no meta": 0,
+ "scores file": "scores_ws_planted_2026-10-13_010958.npz",
+ "scores sha256": "e2a2592aa3d77bfb19fc7e9b9956796f59af7e4ae2836fbb41c9215a1d5159c4"
+}

@@ -1,0 +1,14 @@
+{
+ "tasks": "tasks_il_s4d.json",
+ "tasks_sha256": "f51ab2049add49c42c7b48baf908958939f58ee07ddecf1d6c69039ae2e77fde",
+ "config": "pilot_il_s4d.yaml",
+ "config_sha256": "0c3f2aa77517a0a4deaa9cacc7bf3152615759476227c16e34d51a2754f6622e",
+ "cells": 19,
+ "cap_usd": 389,
+ "source": {
+  "commit": "a5ce1226670739d8638a24161071e1da2bea99ce",
+  "tasks": "experiments/2026-10-14_q3_new_mains_launch/config/tasks_nm_s4d_fu.json",
+  "tasks_sha256": "a16c73db952dd77a415bea0ad686860b7e5ffd039eec9d80408d3e5ab9d112d9"
+ },
+ "references_from": "/home/aswin/phase2/nm/runs/2026-10-14_newmains_s4"
+}

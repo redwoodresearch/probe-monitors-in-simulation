@@ -1,0 +1,17 @@
+{
+ "batch": "simh-q2-rlr2",
+ "original_target": "simh311_q2_sim_rlr2",
+ "revision": 2,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/simh-q2-rlr2__simh311_q2_sim_rlr2_cutfull_r2.json @ db4118748763",
+ "commit": "db4118748763",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_simh-q2-rlr2__simh311_q2_sim_rlr2_cutfull_r2.json",
+ "sets": 1,
+ "failing": {
+  "routing authority": [
+   [
+    "",
+    "simh-q2-rlr2__simh311_q2_sim_rlr2.json: 0 authority entries in routing_authority_2026-10-15.json"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "TEMPLATE": true,
+ "label": "507 unit FPR sweep inputs: TEMPLATE. The scale-up mode refuses this file. The membership wiring (RULE.md Revision 1, item 11) fills a reviewed copy after GS.",
+ "answers_09": {"commit": "4c61a67ad", "path": "experiments/2026-10-14_priority1_spec_09/answers/fpr507_answers_09_2026-10-15.md",
+                "sha256": "6a0ae013a7e778c8c840fa315999c920a7a2bf94d21961da6f6770cc3c40b2ee"},
+ "final_record": {"commit": "3ce6ea55e", "path": "experiments/2026-10-14_xerr_scaleup_09/results/xerr_scaleup_final_2026-10-15_013255.json",
+                  "sha256_prefix": "7dceb8bb25752aa3", "cohort_cell_list_sha256_prefix": "8352805f2d9ec226",
+                  "open_only_after": "GS and GR pass"},
+ "final_spec": {"commit": "3ce6ea55e", "path": "experiments/2026-10-14_xerr_scaleup_09/specs/final_spec_3_launch.json"},
+ "s_old_inputs": "experiments/2026-10-14_fpr_sweep_unit/config/inputs_b.json (part (b)'s pinned per-row files)",
+ "probes": "TO FILL after GS: per probe x readout, the arm unit files (path, sha256 from each arm's scorer manifest) and the calibration_records key K",
+ "draws": {"universe": "mains of all 196 T196 cells + the 310 registered S_new mains (506)", "construction": "09's draw clarification items 2-3"}
+}

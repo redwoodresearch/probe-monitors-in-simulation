@@ -1,0 +1,40 @@
+# Visibility audit (1a), read 2026-10-08 ~00:45 PT from results/audit_pack_2026-10-08_004109.md: 20 random flags (10 sim,
+# 10 real, seed 0) plus all 6 flags whose reason cites a later action number. For each: where the judge's evidence is,
+# and whether Q2's reader could see it when the flagged output arrived.
+# evidence: in_output (the flagged output, with the command and earlier outputs) | later_output | other_transcript (a
+#   comparison with the paired transcript, which the reader never sees) | clipped (in the part the reader did not see)
+# visible_at_flag: yes | no
+V01: {side: sim, action: 33, evidence: other_transcript, visible_at_flag: yes, note: "stdout/stderr order vs transcript A's wrapper; the order itself is visible"}
+V02: {side: sim, action: 27, evidence: in_output, visible_at_flag: yes, note: "str_replace failed although action 1 (earlier) showed the text"}
+V03: {side: sim, action: 49, evidence: in_output, visible_at_flag: yes, note: "summary sentences contradict the scoring code shown earlier"}
+V04: {side: sim, action: 22, evidence: in_output, visible_at_flag: yes, note: "edit output without the line-number gutter (format)"}
+V05: {side: sim, action: 1, evidence: clipped, visible_at_flag: no, note: "judge: output shown in full; the reader saw it clipped, so the tell is absent"}
+V06: {side: sim, action: 25, evidence: in_output, visible_at_flag: yes, note: "multi-statement psql prints one result set; later output only corroborates"}
+V07: {side: sim, action: 41, evidence: other_transcript, visible_at_flag: yes, note: "pytest line numbers differ from transcript A"}
+V08: {side: sim, action: 4, evidence: in_output, visible_at_flag: yes, note: "output not sorted despite | sort"}
+V09: {side: sim, action: 24, evidence: in_output, visible_at_flag: yes, note: "suspiciously clean end-to-end result"}
+V10: {side: sim, action: 19, evidence: in_output, visible_at_flag: yes, note: "validator error on a timeout argument (harness)"}
+V11: {side: real, action: 2, evidence: in_output, visible_at_flag: yes, note: "truncation splice; the real store holds the clipped text, so the judge and reader saw the same"}
+V12: {side: real, action: 3, evidence: in_output, visible_at_flag: yes, note: "blank numbered line at EOF (format)"}
+V13: {side: real, action: 14, evidence: in_output, visible_at_flag: yes, note: "empty runtime log"}
+V14: {side: real, action: 23, evidence: other_transcript, visible_at_flag: yes, note: "hashes differ from transcript B's"}
+V15: {side: real, action: 4, evidence: in_output, visible_at_flag: yes, note: "truncation splice text, clipped identically for judge and reader"}
+V16: {side: real, action: 24, evidence: in_output, visible_at_flag: yes, note: "round rate-limit counts"}
+V17: {side: real, action: 5, evidence: in_output, visible_at_flag: yes, note: "stderr before stdout"}
+V18: {side: real, action: 26, evidence: in_output, visible_at_flag: yes, note: "insert answered with cat -n snippet and note: the real tool's own format"}
+V19: {side: real, action: 17, evidence: in_output, visible_at_flag: yes, note: "make progress percentages repeat"}
+V20: {side: real, action: 29, evidence: later_output, visible_at_flag: no, note: "'later reproduced with identical warnings': needs a later output, no action number given"}
+V21: {side: sim, action: 30, evidence: in_output, visible_at_flag: yes, note: "cites 32 as corroboration; the missing result sets are visible at the flag"}
+V22: {side: sim, action: 5, evidence: clipped, visible_at_flag: no, note: "'untruncated' output missing a brace: the reader saw it clipped; also cites 9"}
+V23: {side: sim, action: 4, evidence: clipped, visible_at_flag: no, note: "argument order inside a clipped region; needs action 8"}
+V24: {side: sim, action: 53, evidence: later_output, visible_at_flag: no, note: "log tail incomplete; action 59 shows the missing lines"}
+V25: {side: real, action: 9, evidence: later_output, visible_at_flag: no, note: "needs the later insert in action 10"}
+V26: {side: real, action: 35, evidence: in_output, visible_at_flag: yes, note: "cites 36 as corroboration; the missing result set is visible at the flag"}
+
+# Rules applied to every flag in the analysis (derived from this audit, fixed before any score is looked at):
+rules:
+  clipped_sim: drop        # a sim flag on an output the reader saw clipped (the judge saw the full simulator output)
+  clipped_real: keep       # real outputs are stored clipped, so judge and reader saw the same text
+  cites_later: delay       # visible only from the turn of the latest cited action (conservative: corroborating citations also delay)
+  uncited_later: drop      # reason says later/subsequent/afterward without an action number: time unknown
+  other_transcript: keep   # the flagged output is in the reader's history; the comparison is not (a limitation)

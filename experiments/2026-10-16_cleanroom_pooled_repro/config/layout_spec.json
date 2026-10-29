@@ -1,0 +1,65 @@
+[
+  {
+    "label": "S_new attack sola_uncut_reselect/sol_a_uncut__cmd_A.npz|C",
+    "path": "cutfull/q1/sola_uncut_reselect/su311_q1_main_cutfull_v1__attack/sol_a_uncut__cmd_A.npz",
+    "sha256": "1bdb08d4d63cec9c0ec00db69606e6412c8a7f61d0daedabfddc659f2ad7d826",
+    "manifest_path": "cutfull/q1/sola_uncut_reselect/su311_q1_main_cutfull_v1__attack/manifest_sola_uncut_reselect.json",
+    "manifest_sha256": "a18265ddabb37694ddbd2af4527a230567ccd9f079c17775bf95ff679fc96d49"
+  },
+  {
+    "label": "S_new attack p2/fibs__command.npz|C",
+    "path": "cutfull/q1/p2/su311_q1_main_cutfull_v1__attack/fibs__command.npz",
+    "sha256": "657b89b21b43f0aeabd450cded33e8652ba06ab361042aab4b8a045bd7dfd725",
+    "manifest_path": "cutfull/q1/p2/su311_q1_main_cutfull_v1__attack/manifest_p2.json",
+    "manifest_sha256": "1a67a64fdbbeb109a2fbab85ba668cc21aba85dd784d87a2358abde2bf10a16c"
+  },
+  {
+    "label": "S_new attack own_all_rs_uncut/own_all_rs_uncut_L48__C.npz|C",
+    "path": "cutfull/q1/own_all_rs_uncut/su311_q1_main_cutfull_v1__attack/own_all_rs_uncut_L48__C.npz",
+    "sha256": "e2d3b997377e1075ad3b02384fcd722f16c3b9af03d853c64aac4cbf0e8b918c",
+    "manifest_path": "cutfull/q1/own_all_rs_uncut/su311_q1_main_cutfull_v1__attack/manifest_own_all.json",
+    "manifest_sha256": "af62477d9263bb5af2c19da68c1b444620ddc427c55741f329e3276f9907e59e"
+  },
+  {
+    "label": "S_new attack sola_uncut_reselect/sol_a_uncut__avg_top2.npz|R",
+    "path": "cutfull/q1/sola_uncut_reselect/su311_q1_main_cutfull_v1__attack/sol_a_uncut__avg_top2.npz",
+    "sha256": "f4ef9b05472830576f3b2d0851d3150b57a2bbb2a6872069411a10d200f40bec",
+    "manifest_path": "cutfull/q1/sola_uncut_reselect/su311_q1_main_cutfull_v1__attack/manifest_sola_uncut_reselect.json",
+    "manifest_sha256": "a18265ddabb37694ddbd2af4527a230567ccd9f079c17775bf95ff679fc96d49"
+  },
+  {
+    "label": "S_new attack p2/fibs__reply_mean.npz|R",
+    "path": "cutfull/q1/p2/su311_q1_main_cutfull_v1__attack/fibs__reply_mean.npz",
+    "sha256": "dcaa24f3d366cb1e7fc145feb94263f526c218d600594830d678e2914050beed",
+    "manifest_path": "cutfull/q1/p2/su311_q1_main_cutfull_v1__attack/manifest_p2.json",
+    "manifest_sha256": "1a67a64fdbbeb109a2fbab85ba668cc21aba85dd784d87a2358abde2bf10a16c"
+  },
+  {
+    "label": "S_new attack own_all_rs_uncut/own_all_rs_uncut_L48__R.npz|R",
+    "path": "cutfull/q1/own_all_rs_uncut/su311_q1_main_cutfull_v1__attack/own_all_rs_uncut_L48__R.npz",
+    "sha256": "3abe7c63b40d650a219288dc2d49c337d8e681ef06c2818a76b0259120b37841",
+    "manifest_path": "cutfull/q1/own_all_rs_uncut/su311_q1_main_cutfull_v1__attack/manifest_own_all.json",
+    "manifest_sha256": "af62477d9263bb5af2c19da68c1b444620ddc427c55741f329e3276f9907e59e"
+  },
+  {
+    "label": "S_new simh sola_uncut_reselect/sol_a_uncut__cmd_A.npz|C",
+    "path": "cutfull/simh-q1/sola_uncut_reselect/simh311_q1_sim_cutfull_v1__sim_honest/sol_a_uncut__cmd_A.npz",
+    "sha256": "63ffc3891c6278cca35cf1f48b21b0db29d2a748093f4c6584073b3ba8e48522",
+    "manifest_path": "cutfull/simh-q1/sola_uncut_reselect/simh311_q1_sim_cutfull_v1__sim_honest/manifest_sola_uncut_reselect.json",
+    "manifest_sha256": "a3b8d2f7bcd319af28eee9c0df349700a37ef58c8dfe032d5a60792c74290b34"
+  },
+  {
+    "label": "S_new simh p2/fibs__command.npz|C",
+    "path": "cutfull/simh-q1/p2/simh311_q1_sim_cutfull_v1__sim_honest/fibs__command.npz",
+    "sha256": "a3235f740164352c2b03fa05de98c7359e2f273240dfe2d7b8746df6a6ddce35",
+    "manifest_path": "cutfull/simh-q1/p2/simh311_q1_sim_cutfull_v1__sim_honest/manifest_p2.json",
+    "manifest_sha256": "6a752b6d76878a4a285e5ca1cf71f3535764181d1f88a6b49a250d6202881bd5"
+  },
+  {
+    "label": "S_new simh own_all_rs_uncut/own_all_rs_uncut_L48__C.npz|C",
+    "path": "cutfull/simh-q1/own_all_rs_uncut/simh311_q1_sim_cutfull_v1__sim_honest/own_all_rs_uncut_L48__C.npz",
+    "sha256": "b15e7d9a29752af02961a0ffcd53d246f91b82692fafb3807007ba9f467068e5",
+    "manifest_path": "cutfull/simh-q1/own_all_rs_uncut/simh311_q1_sim_cutfull_v1__sim_honest/manifest_own_all.json",
+    "manifest_sha256": "7b5d67283b39998e7a84786473003a1090e28420b8f7e7eef8ca88612cb54392"
+  }
+]

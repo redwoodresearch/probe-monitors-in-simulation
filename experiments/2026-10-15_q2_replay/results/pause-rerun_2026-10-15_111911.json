@@ -1,0 +1,21 @@
+{
+ "git": "e20e54d745729b0a6917f92c474a43e206059351",
+ "rule_sha": "604bc7c60",
+ "app": "probe-shift_aswin-surya_sub-q2-replay_sim_kill-2026-11-14",
+ "result": {
+  "label": "dry_pause_long",
+  "tick_s": 15.0,
+  "window_s": 75.0,
+  "gap_s": 40.0,
+  "dispatches": 113,
+  "before_first_unpause": 0,
+  "during_second_pause_after_one_tick_and_one_step": 0,
+  "dispatches_between_windows": 32,
+  "dispatches_after_second_unpause": 67,
+  "ticks_paused_window1": 5,
+  "ticks_paused_window2": 4,
+  "ticks_paused": 9,
+  "ticks": 18,
+  "pass": true
+ }
+}

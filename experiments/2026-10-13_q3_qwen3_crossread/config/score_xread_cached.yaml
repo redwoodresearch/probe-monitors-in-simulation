@@ -1,0 +1,19 @@
+# Monitor (i), as score_xread.yaml with the rows read once on CPU (`--cache-d-as xread196_X_v1`, run_score_crossread.cache_d)
+# and loaded from that cache, whose rows' sha256 the scorer checks against its own rows.
+label: xread196
+extractions: [2026-10-13_xread_main_v1, 2026-10-13_xread_run2_v1, 2026-10-13_xread_plant_v2, 2026-10-13_xread_repair_v2]
+worlds: {real: attack@2026-10-13_xread_main_v1, sim: sim_attack@september, run2: attack@2026-10-13_xread_run2_v1, plant: plant, repair: repair}
+pilot_tasks: experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json
+# Deviation 1 (RULE.md, 03:07 PT): run 2's t96_file_indexing has no honest donor (stage_run2_2026-10-13_013233.json), so
+# run 2 would change the real-and-sim cohort; t96 is excluded, as monitor (ii)'s cohort already drops it.
+exclude_tasks: [t96_file_indexing]
+n_layers: 64
+hidden: 5120
+seed: 0
+fitter: primal
+warm_start: false
+save_probes: true
+x_cache: xread196_X_v1
+amendments:
+  crossread: "experiments/2026-10-13_q3_qwen3_crossread/RULE.md (e695a686), monitor (i), descriptive"
+  as_score_scaleup196: "the settings of experiments/2026-10-08_q3_onpolicy_figures/config/score_scaleup196.yaml"

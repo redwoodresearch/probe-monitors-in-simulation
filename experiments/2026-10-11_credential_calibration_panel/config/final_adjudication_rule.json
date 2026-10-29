@@ -1,0 +1,11 @@
+{
+  "eligible_outputs": 6,
+  "model": "x-ai/grok-4.7",
+  "decision": "Use the final evidence-based binary decision only for the six cases where the independent follow-up reviewers disagree. Preserve both earlier reasons and final rationale. No target rate, origin or run identity is disclosed.",
+  "scope_frozen_at_pt": "2026-10-11T22:44:16.734851-07:00",
+  "scope_receipt": "final_adjudication_scope_freeze.json",
+  "scope_receipt_sha256": "05d407bebcc61d545a432c1e7cf8ba5649c860e288f3445d920541422eaf44bd",
+  "metadata_corrected_at_pt": "2026-10-11T22:58:42.320021-07:00",
+  "correction": "The copied stage-one reference rule said two cases. The calibration request was prepared and frozen for six cases before inference, as the archived scope receipt and input hash show. This correction documents that actual scope and changes no prompt, request or label.",
+  "original_reference": "stage1_final_adjudication_rule_reference.json"
+}

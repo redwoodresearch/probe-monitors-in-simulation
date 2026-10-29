@@ -1,0 +1,308 @@
+{
+  "source": "09 RULE @ 002c1824b item 2(b) (label), @ 36b9b47df §6 (per row, from the scoring model), @ 3685810b4 item 2 (sources), @ b0a3e0df9 (T196-run1-trained: the sim also shares on S_old), @ 4c095dec9. check_kappa_launch_share.py derives this table by key and STOPs on any difference.",
+  "label_run2": "descriptive; for probes whose run1 shares the training launch, κ(run2, run1) includes the training launch",
+  "label_sim_S_old_T196": "real run 1 AND the sim run share the probe's training launch (S_old only)",
+  "label_none": "descriptive",
+  "families": {
+    "own_frac10_L48": {
+      "run1_shares": [
+        "S_old"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "own_frac25_L48": {
+      "run1_shares": [
+        "S_old"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "own_frac100_L48": {
+      "run1_shares": [
+        "S_old"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "own_a": {
+      "run1_shares": [
+        "S_old"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "DT_destructive_primary": {
+      "excluded": "DT: no committed training key list",
+      "pertask_run1_shares": [
+        "S_old"
+      ],
+      "pertask_sim_shares": [
+        "S_old"
+      ],
+      "pertask_note": "PERTASK run2 block only (09 @ 4c095dec9 item 16): DT trains on T196 run 1 (E2E RULE.md:253); not derived by key"
+    },
+    "DT_destructive_secondary": {
+      "excluded": "DT: no committed training key list",
+      "pertask_run1_shares": [
+        "S_old"
+      ],
+      "pertask_sim_shares": [
+        "S_old"
+      ],
+      "pertask_note": "PERTASK run2 block only (09 @ 4c095dec9 item 16): DT trains on T196 run 1 (E2E RULE.md:253); not derived by key"
+    },
+    "DT_transfer_primary": {
+      "excluded": "DT: no committed training key list",
+      "pertask_run1_shares": [
+        "S_old"
+      ],
+      "pertask_sim_shares": [
+        "S_old"
+      ],
+      "pertask_note": "PERTASK run2 block only (09 @ 4c095dec9 item 16): DT trains on T196 run 1 (E2E RULE.md:253); not derived by key"
+    },
+    "DT_transfer_secondary": {
+      "excluded": "DT: no committed training key list",
+      "pertask_run1_shares": [
+        "S_old"
+      ],
+      "pertask_sim_shares": [
+        "S_old"
+      ],
+      "pertask_note": "PERTASK run2 block only (09 @ 4c095dec9 item 16): DT trains on T196 run 1 (E2E RULE.md:253); not derived by key"
+    },
+    "own_all_L48": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "own_all25_L48": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "own_all10_L48": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "own_all_rs_L48": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "own_all_rs25_L48": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "own_all_rs10_L48": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ]
+    },
+    "own_all_LOO_L48": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "per row: the held-out origin's LOO model (the eligibility file's asserts)"
+    },
+    "Sol (a)": {
+      "run1_shares": [],
+      "sim_shares": []
+    },
+    "c_asis": {
+      "run1_shares": [],
+      "sim_shares": []
+    },
+    "FIBS": {
+      "run1_shares": [],
+      "sim_shares": []
+    },
+    "harmfulness": {
+      "run1_shares": [],
+      "sim_shares": []
+    },
+    "refusal": {
+      "run1_shares": [],
+      "sim_shares": []
+    },
+    "high-stakes": {
+      "run1_shares": [],
+      "sim_shares": []
+    },
+    "Sol (a)|uncut": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "the registered Sol (a) model scored uncut (same weights)"
+    },
+    "FIBS|uncut": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "the registered FIBS model scored uncut (same weights)"
+    },
+    "harmfulness|uncut": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "the registered harmfulness model scored uncut (same weights)"
+    },
+    "refusal|uncut": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "the registered refusal model scored uncut (same weights)"
+    },
+    "high-stakes|uncut": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "the registered high-stakes model scored uncut (same weights)"
+    },
+    "own_all_rs_L48|uncut": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ],
+      "note": "the registered own_all_rs_L48 model scored uncut (same weights)"
+    },
+    "own_all_rs25_L48|uncut": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ],
+      "note": "the registered own_all_rs25_L48 model scored uncut (same weights)"
+    },
+    "own_all_rs10_L48|uncut": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ],
+      "note": "the registered own_all_rs10_L48 model scored uncut (same weights)"
+    },
+    "c_asis|uncut": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "the registered c_asis model scored uncut (same weights)"
+    },
+    "own_frac10_L48|uncut": {
+      "run1_shares": [
+        "S_old"
+      ],
+      "sim_shares": [
+        "S_old"
+      ],
+      "note": "the registered own_frac10_L48 model scored uncut (same weights)"
+    },
+    "own_frac25_L48|uncut": {
+      "run1_shares": [
+        "S_old"
+      ],
+      "sim_shares": [
+        "S_old"
+      ],
+      "note": "the registered own_frac25_L48 model scored uncut (same weights)"
+    },
+    "own_frac100_L48|uncut": {
+      "run1_shares": [
+        "S_old"
+      ],
+      "sim_shares": [
+        "S_old"
+      ],
+      "note": "the registered own_frac100_L48 model scored uncut (same weights)"
+    },
+    "sol_a_uncut": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "uncut retrain of Sol (a): inherits only with a passed manifest identity gate (09 @ 3685810b4 item 2)"
+    },
+    "own_all_rs_uncut_L48": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ],
+      "note": "uncut retrain of own_all_rs_L48: inherits only with a passed manifest identity gate (09 @ 3685810b4 item 2)"
+    },
+    "own_all_rs25_uncut_L48": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ],
+      "note": "uncut retrain of own_all_rs25_L48: inherits only with a passed manifest identity gate (09 @ 3685810b4 item 2)"
+    },
+    "own_all_rs10_uncut_L48": {
+      "run1_shares": [
+        "S_old",
+        "S_new",
+        "S_newmains"
+      ],
+      "sim_shares": [
+        "S_old"
+      ],
+      "note": "uncut retrain of own_all_rs10_L48: inherits only with a passed manifest identity gate (09 @ 3685810b4 item 2)"
+    },
+    "c_asis_uncut": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "uncut retrain of c_asis: inherits only with a passed manifest identity gate (09 @ 3685810b4 item 2)",
+      "flag_exclusion_label": "c_asis_uncut: identity gate pending"
+    },
+    "sol_a_uncut_pinned": {
+      "run1_shares": [],
+      "sim_shares": [],
+      "note": "the pinned-layers sol_a_uncut (sensitivity; outside every group): inherits Sol (a) only with a passed identity gate"
+    }
+  }
+}

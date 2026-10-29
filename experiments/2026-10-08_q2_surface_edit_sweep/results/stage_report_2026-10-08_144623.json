@@ -1,0 +1,50 @@
+{
+ "items": 514,
+ "attack runs": 100,
+ "honest runs": 89,
+ "control": 20,
+ "report": {
+  "real-attack-e1-strip-gutter": {
+   "runs": 94,
+   "outputs": 901,
+   "unchanged runs": 6
+  },
+  "real-attack-e1-add-newline": {
+   "runs": 94,
+   "outputs": 900,
+   "unchanged runs": 6
+  },
+  "real-attack-e1-no-note": {
+   "runs": 79,
+   "outputs": 237,
+   "unchanged runs": 21
+  },
+  "real-honest-strip-gutter": {
+   "runs": 78,
+   "outputs": 965,
+   "unchanged runs": 11
+  },
+  "real-honest-add-newline": {
+   "runs": 78,
+   "outputs": 964,
+   "unchanged runs": 11
+  },
+  "real-honest-no-note": {
+   "runs": 71,
+   "outputs": 255,
+   "unchanged runs": 18
+  }
+ },
+ "config": {
+  "base": "2026-10-06_la_segment-end_qwen3-32b_v1",
+  "runs_file": "../2026-10-07_q2_rendering_swap/config/swap_runs.json",
+  "staged_run": "2026-10-08_q2_surface_edits_inputs_v1",
+  "edits": [
+   "strip-gutter",
+   "add-newline",
+   "no-note"
+  ],
+  "n_control": 20
+ },
+ "pairs file (not in git)": "data/surface_edits/pairs_2026-10-08_144623.json.gz"
+}

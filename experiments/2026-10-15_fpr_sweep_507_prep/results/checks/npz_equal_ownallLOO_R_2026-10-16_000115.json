@@ -1,0 +1,18 @@
+{
+ "ref": "xfer/fpr507prep/pooled455v2_R_2026-10-15_221200_perdraw.npz@2c24ae59f8fd91fa2cdb68631515c2a0f17f63cbf24fc7eac36188d5a81e9244",
+ "new": "xfer/fpr507prep/pooled455v2_ownallLOO_R_2026-10-16_000115_perdraw.npz@fba82a10f449e3421d06a2236c9165fc385f54e59dd4bde29d3fec37127b4c85",
+ "ref_keys": 1944,
+ "new_keys": 2106,
+ "compared_equal": 1944,
+ "mismatch": [],
+ "n_mismatch": 0,
+ "missing_in_new": [],
+ "unexpected_new_keys": [],
+ "new_label_keys": 162,
+ "empty_arrays": [],
+ "expected_new_label_keys": 162,
+ "new_label_key_set_diff": [],
+ "new_label_wrong_shape": [],
+ "new_label_all_nan": [],
+ "pass": true
+}

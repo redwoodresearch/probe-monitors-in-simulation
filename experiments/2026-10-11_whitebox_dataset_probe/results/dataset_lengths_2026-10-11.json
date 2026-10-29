@@ -1,0 +1,182 @@
+{
+ "train_in_distribution_code_sabotage_safe": {
+  "rows": 100,
+  "messages_chars_total": 396279,
+  "messages_chars_median": 3918,
+  "messages_chars_max": 5672,
+  "output_chars_total": 201084,
+  "roles": {
+   "user": 100,
+   "assistant": 100
+  },
+  "last_role": {
+   "assistant": 100
+  },
+  "action_ids_unique": 1
+ },
+ "train_in_distribution_code_sabotage_unsafe": {
+  "rows": 100,
+  "messages_chars_total": 355021,
+  "messages_chars_median": 3467,
+  "messages_chars_max": 7769,
+  "output_chars_total": 159753,
+  "roles": {
+   "user": 100,
+   "assistant": 100
+  },
+  "last_role": {
+   "assistant": 100
+  },
+  "action_ids_unique": 1
+ },
+ "train_in_distribution_code_deception_safe": {
+  "rows": 100,
+  "messages_chars_total": 261987,
+  "messages_chars_median": 2652,
+  "messages_chars_max": 4123,
+  "output_chars_total": 12058,
+  "roles": {
+   "user": 100,
+   "assistant": 100
+  },
+  "last_role": {
+   "assistant": 100
+  },
+  "action_ids_unique": 1
+ },
+ "train_in_distribution_code_deception_unsafe": {
+  "rows": 100,
+  "messages_chars_total": 251505,
+  "messages_chars_median": 2524,
+  "messages_chars_max": 3986,
+  "output_chars_total": 12176,
+  "roles": {
+   "user": 100,
+   "assistant": 100
+  },
+  "last_role": {
+   "assistant": 100
+  },
+  "action_ids_unique": 1
+ },
+ "train_in_distribution_code_rule_violation_safe": {
+  "rows": 100,
+  "messages_chars_total": 347979,
+  "messages_chars_median": 3424,
+  "messages_chars_max": 5333,
+  "output_chars_total": 133708,
+  "roles": {
+   "user": 100,
+   "assistant": 100
+  },
+  "last_role": {
+   "assistant": 100
+  },
+  "action_ids_unique": 1
+ },
+ "train_in_distribution_code_rule_violation_unsafe": {
+  "rows": 100,
+  "messages_chars_total": 380125,
+  "messages_chars_median": 3777,
+  "messages_chars_max": 6274,
+  "output_chars_total": 166383,
+  "roles": {
+   "user": 100,
+   "assistant": 100
+  },
+  "last_role": {
+   "assistant": 100
+  },
+  "action_ids_unique": 1
+ },
+ "code_sabotage_safe": {
+  "rows": 209,
+  "messages_chars_total": 831998,
+  "messages_chars_median": 3918,
+  "messages_chars_max": 5815,
+  "output_chars_total": 421619,
+  "roles": {
+   "user": 209,
+   "assistant": 209
+  },
+  "last_role": {
+   "assistant": 209
+  },
+  "action_ids_unique": 1
+ },
+ "code_sabotage_unsafe": {
+  "rows": 155,
+  "messages_chars_total": 540818,
+  "messages_chars_median": 3396,
+  "messages_chars_max": 5964,
+  "output_chars_total": 232199,
+  "roles": {
+   "user": 155,
+   "assistant": 155
+  },
+  "last_role": {
+   "assistant": 155
+  },
+  "action_ids_unique": 1
+ },
+ "code_deception_safe": {
+  "rows": 229,
+  "messages_chars_total": 593565,
+  "messages_chars_median": 2531,
+  "messages_chars_max": 4726,
+  "output_chars_total": 27921,
+  "roles": {
+   "user": 229,
+   "assistant": 229
+  },
+  "last_role": {
+   "assistant": 229
+  },
+  "action_ids_unique": 1
+ },
+ "code_deception_unsafe": {
+  "rows": 391,
+  "messages_chars_total": 1004851,
+  "messages_chars_median": 2475,
+  "messages_chars_max": 5865,
+  "output_chars_total": 42406,
+  "roles": {
+   "user": 391,
+   "assistant": 391
+  },
+  "last_role": {
+   "assistant": 391
+  },
+  "action_ids_unique": 1
+ },
+ "code_rule_violation_safe": {
+  "rows": 695,
+  "messages_chars_total": 2540286,
+  "messages_chars_median": 3568,
+  "messages_chars_max": 6798,
+  "output_chars_total": 1030341,
+  "roles": {
+   "user": 695,
+   "assistant": 695
+  },
+  "last_role": {
+   "assistant": 695
+  },
+  "action_ids_unique": 1
+ },
+ "code_rule_violation_unsafe": {
+  "rows": 216,
+  "messages_chars_total": 825083,
+  "messages_chars_median": 3783,
+  "messages_chars_max": 6274,
+  "output_chars_total": 362593,
+  "roles": {
+   "user": 216,
+   "assistant": 216
+  },
+  "last_role": {
+   "assistant": 216
+  },
+  "action_ids_unique": 1
+ }
+}

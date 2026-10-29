@@ -1,0 +1,3 @@
+launch log (local, not committed): /Users/aswinsurya/probe-shift-reruns-2026-10-20/v24figs78/run_2026-10-21_033233/launch.log
+sha256 e4b0371f45a5f240e7f5e8faf565149a3c80e77069084711926e8a49c8cba694 lines 11 FIGS78_MAP 1 STOP 0 Traceback 0 Error 0 app_id_lines 2
+entrypoint_rc 0

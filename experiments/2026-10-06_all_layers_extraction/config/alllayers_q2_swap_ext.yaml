@@ -1,0 +1,12 @@
+# Plan A (2026-10-08; held until Aswin's explicit OK): layers 48 and 63 (full forward pass) for 117 extension runs under
+# the both-fixes arm (staged by run_swap.py --config swap_ext.yaml). One shard on one H100, launched without --remote so
+# exactly one container runs; shard retries are off and chunk files are written atomically, so a restart resumes.
+run: 2026-10-08_q2_swap_ext_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-08_q2_swap_ext_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 25
+layers: [48, 63]

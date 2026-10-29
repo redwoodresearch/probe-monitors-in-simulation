@@ -1,0 +1,74 @@
+Realism by repair level, label-shuffle null (Amendment 1; summary (ii), 100 within-task shuffles)
+L48 as-is           observed 0.9428 (as run 0.9418, gate True) | null mean 0.5348, 95th 0.5627, max 0.5771 | p 0.0099 | runs (sim, real) [437, 885]
+L48 fix939 (SH′)    observed 0.8149 (as run 0.8145, gate True) | null mean 0.5329, 95th 0.5619, max 0.5716 | p 0.0099 | runs (sim, real) [437, 885]
+L48 fix-full (SH″)  observed 0.8080 (as run 0.8078, gate True) | null mean 0.5356, 95th 0.5623, max 0.5783 | p 0.0099 | runs (sim, real) [437, 885]
+L48 newline-only    observed 0.9378 (as run 0.9366, gate True) | null mean 0.5339, 95th 0.5642, max 0.5712 | p 0.0099 | runs (sim, real) [437, 885]
+L48 full + F9       observed 0.8081 (as run 0.8080, gate True) | null mean 0.5322, 95th 0.5580, max 0.5650 | p 0.0099 | runs (sim, real) [437, 885]
+L48 control         observed 0.4939 (as run 0.4928, gate True) | null mean 0.5018, 95th 0.5506, max 0.5690 | p 0.6238 | runs (sim, real) [256, 256]
+L63 as-is           observed 0.9713 (as run 0.9715, gate True) | null mean 0.5317, 95th 0.5585, max 0.5758 | p 0.0099 | runs (sim, real) [437, 885]
+L63 fix939 (SH′)    observed 0.8891 (as run 0.8894, gate True) | null mean 0.5303, 95th 0.5611, max 0.5712 | p 0.0099 | runs (sim, real) [437, 885]
+L63 fix-full (SH″)  observed 0.8582 (as run 0.8583, gate True) | null mean 0.5302, 95th 0.5606, max 0.5698 | p 0.0099 | runs (sim, real) [437, 885]
+L63 newline-only    observed 0.9506 (as run 0.9507, gate True) | null mean 0.5329, 95th 0.5594, max 0.5697 | p 0.0099 | runs (sim, real) [437, 885]
+L63 full + F9       observed 0.8546 (as run 0.8552, gate True) | null mean 0.5296, 95th 0.5578, max 0.5604 | p 0.0099 | runs (sim, real) [437, 885]
+L63 control         observed 0.5412 (as run 0.5406, gate True) | null mean 0.5012, 95th 0.5468, max 0.5741 | p 0.0792 | runs (sim, real) [256, 256]
+
+World-direction realism-left null (world-direction Amendment 1; mean of the 20 models' held-out AUROC, 100 shuffles)
+L48: honest runs without output rows: 0
+  k0   observed 0.7840 (as run 0.7841, gate True) | null mean 0.5183, 5th 0.4973, 95th 0.5418 | p above 0.0099, p below 1.0000
+  k1   observed 0.7862 (as run 0.7884, gate True) | null mean 0.5171, 5th 0.4962, 95th 0.5411 | p above 0.0099, p below 1.0000
+  k2   observed 0.7744 (as run 0.7736, gate True) | null mean 0.5157, 5th 0.4956, 95th 0.5387 | p above 0.0099, p below 1.0000
+  k3   observed 0.7367 (as run 0.7368, gate True) | null mean 0.5143, 5th 0.4941, 95th 0.5383 | p above 0.0099, p below 1.0000
+  k5   observed 0.6718 (as run 0.6695, gate True) | null mean 0.5120, 5th 0.4925, 95th 0.5365 | p above 0.0099, p below 1.0000
+  k10  observed 0.5827 (as run 0.5825, gate True) | null mean 0.5106, 5th 0.4904, 95th 0.5353 | p above 0.0099, p below 1.0000
+  md1  observed 0.5085 (as run 0.4885, gate False) | null mean 0.5112, 5th 0.4917, 95th 0.5357 | p above 0.5545, p below 0.4554
+L63: honest runs without output rows: 0
+  k0   observed 0.8414 (as run 0.8419, gate True) | null mean 0.5191, 5th 0.4969, 95th 0.5421 | p above 0.0099, p below 1.0000
+  k1   observed 0.8150 (as run 0.8141, gate True) | null mean 0.5168, 5th 0.4947, 95th 0.5377 | p above 0.0099, p below 1.0000
+  k2   observed 0.7600 (as run 0.7600, gate True) | null mean 0.5152, 5th 0.4941, 95th 0.5354 | p above 0.0099, p below 1.0000
+  k3   observed 0.7159 (as run 0.7148, gate True) | null mean 0.5140, 5th 0.4939, 95th 0.5350 | p above 0.0099, p below 1.0000
+  k5   observed 0.6578 (as run 0.6591, gate True) | null mean 0.5122, 5th 0.4926, 95th 0.5332 | p above 0.0099, p below 1.0000
+  k10  observed 0.5660 (as run 0.5654, gate True) | null mean 0.5096, 5th 0.4880, 95th 0.5336 | p above 0.0099, p below 1.0000
+  md1  observed 0.4786 (as run 0.5048, gate False) | null mean 0.5101, 5th 0.4887, 95th 0.5325 | p above 0.9901, p below 0.0198
+
+Scaling diagnostic: point D with directions fit without re-standardization (alt) vs as run
+L48 k1__b_full__fpr_0.01   D as run -0.1592 | alt -0.1592 | alt - as run +0.0000
+L48 k1__c_full__fpr_0.01   D as run -0.1297 | alt -0.1286 | alt - as run +0.0011
+L48 k2__b_full__fpr_0.01   D as run -0.1656 | alt -0.1696 | alt - as run -0.0040
+L48 k2__c_full__fpr_0.01   D as run -0.1201 | alt -0.1193 | alt - as run +0.0008
+L48 k3__b_full__fpr_0.01   D as run -0.1723 | alt -0.1725 | alt - as run -0.0003
+L48 k3__c_full__fpr_0.01   D as run -0.0942 | alt -0.0950 | alt - as run -0.0008
+L48 k5__b_full__fpr_0.01   D as run -0.1728 | alt -0.1717 | alt - as run +0.0011
+L48 k5__c_full__fpr_0.01   D as run -0.0919 | alt -0.0919 | alt - as run +0.0000
+L48 k10__b_full__fpr_0.01  D as run -0.1736 | alt -0.1723 | alt - as run +0.0013
+L48 k10__c_full__fpr_0.01  D as run -0.0857 | alt -0.0868 | alt - as run -0.0011
+L48 k1__b_full__fpr_0.05   D as run -0.1163 | alt -0.1171 | alt - as run -0.0008
+L48 k1__c_full__fpr_0.05   D as run -0.1195 | alt -0.1230 | alt - as run -0.0035
+L48 k2__b_full__fpr_0.05   D as run -0.1275 | alt -0.1233 | alt - as run +0.0043
+L48 k2__c_full__fpr_0.05   D as run -0.1041 | alt -0.1044 | alt - as run -0.0003
+L48 k3__b_full__fpr_0.05   D as run -0.1371 | alt -0.1446 | alt - as run -0.0075
+L48 k3__c_full__fpr_0.05   D as run -0.0993 | alt -0.0993 | alt - as run +0.0000
+L48 k5__b_full__fpr_0.05   D as run -0.1454 | alt -0.1478 | alt - as run -0.0024
+L48 k5__c_full__fpr_0.05   D as run -0.0769 | alt -0.0780 | alt - as run -0.0011
+L48 k10__b_full__fpr_0.05  D as run -0.1438 | alt -0.1467 | alt - as run -0.0029
+L48 k10__c_full__fpr_0.05  D as run -0.0769 | alt -0.0737 | alt - as run +0.0032
+L63 k1__b_full__fpr_0.01   D as run -0.1238 | alt -0.1246 | alt - as run -0.0008
+L63 k1__c_full__fpr_0.01   D as run -0.0900 | alt -0.0884 | alt - as run +0.0016
+L63 k2__b_full__fpr_0.01   D as run -0.1283 | alt -0.1291 | alt - as run -0.0008
+L63 k2__c_full__fpr_0.01   D as run -0.0852 | alt -0.0863 | alt - as run -0.0011
+L63 k3__b_full__fpr_0.01   D as run -0.1305 | alt -0.1283 | alt - as run +0.0021
+L63 k3__c_full__fpr_0.01   D as run -0.0793 | alt -0.0796 | alt - as run -0.0003
+L63 k5__b_full__fpr_0.01   D as run -0.1281 | alt -0.1294 | alt - as run -0.0013
+L63 k5__c_full__fpr_0.01   D as run -0.1065 | alt -0.1092 | alt - as run -0.0027
+L63 k10__b_full__fpr_0.01  D as run -0.1302 | alt -0.1299 | alt - as run +0.0003
+L63 k10__c_full__fpr_0.01  D as run -0.1118 | alt -0.1113 | alt - as run +0.0005
+L63 k1__b_full__fpr_0.05   D as run -0.1278 | alt -0.1262 | alt - as run +0.0016
+L63 k1__c_full__fpr_0.05   D as run -0.1251 | alt -0.1243 | alt - as run +0.0008
+L63 k2__b_full__fpr_0.05   D as run -0.1310 | alt -0.1283 | alt - as run +0.0027
+L63 k2__c_full__fpr_0.05   D as run -0.1078 | alt -0.1070 | alt - as run +0.0008
+L63 k3__b_full__fpr_0.05   D as run -0.1355 | alt -0.1387 | alt - as run -0.0032
+L63 k3__c_full__fpr_0.05   D as run -0.0972 | alt -0.0982 | alt - as run -0.0011
+L63 k5__b_full__fpr_0.05   D as run -0.1358 | alt -0.1347 | alt - as run +0.0011
+L63 k5__c_full__fpr_0.05   D as run -0.1068 | alt -0.1036 | alt - as run +0.0032
+L63 k10__b_full__fpr_0.05  D as run -0.1339 | alt -0.1337 | alt - as run +0.0003
+L63 k10__c_full__fpr_0.05  D as run -0.1046 | alt -0.1006 | alt - as run +0.0040
+largest |alt - as run| in D: 0.0075 (L48 k3__b_full__fpr_0.05)

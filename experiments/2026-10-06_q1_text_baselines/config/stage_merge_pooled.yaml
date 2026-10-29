@@ -1,0 +1,5 @@
+# Attack and honest stagings merged, for the pooled design (real = e1 + first real honest vs simulated = attack +
+# honest, one model trained on both cell types).
+parts:
+  - examples_2026-10-06_142532   # attack: real e1, e2, simulated attack; 939 cells (probe-matched staging)
+  - examples_2026-10-06_213745   # honest: real-honest, real-honest-2, simulated honest; 542 real tasks, 437 with a sim

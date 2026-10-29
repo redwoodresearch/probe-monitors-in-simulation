@@ -1,0 +1,11 @@
+# D1 diagnostic of the attack detector: 5 tasks' attack runs (t06_file_indexing, t08_model_registry, t09_web_scraping,
+# t11_media_processing, t19_web_scraping; default_rng(20261009)) with honest_b's system turn swapped in, staged by
+# run_swap_stage.py from rerun_strict_segends_v2: 6 epochs, 253,191 tokens. Approved within the plan (Aswin, 13:35 PT).
+run: 2026-10-09_rerun_strict_segends_swap_v1
+inputs: rerun_strict_segends_swap_v1
+inputs_sha256:
+  attack.jsonl: c52e095318a963805f2d9c132439b47800d7fcb2651b953733da0e7da378fbb9
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 10
+pad_to: 4096

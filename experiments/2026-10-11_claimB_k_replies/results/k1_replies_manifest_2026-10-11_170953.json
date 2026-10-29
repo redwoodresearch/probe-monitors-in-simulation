@@ -1,0 +1,12 @@
+{
+ "label": "k = 1 simulated replies (text on the Volume and S3 only)",
+ "volume_path": "claimB/k1_v1/replies.jsonl",
+ "s3": "s3://individual-aswin-surya-probe-shift-kill-2027-04-06/experiments/2026-10-11_claimB_k_replies/data/replies.jsonl",
+ "sha256": "fd08ecbb4451376c669426466580964121f39f75b88fb5eab99a3759c5a4c898",
+ "bytes": 731551,
+ "statuses": {
+  "ok": 400
+ },
+ "git": "bc8a599eb49370922b4aee0fa94ea72a8b1c164e",
+ "script_sha256": "c1a694a5c630e8b12311a4df46ba0ccd736c02876fbb380bedf108b9a6a7114d"
+}

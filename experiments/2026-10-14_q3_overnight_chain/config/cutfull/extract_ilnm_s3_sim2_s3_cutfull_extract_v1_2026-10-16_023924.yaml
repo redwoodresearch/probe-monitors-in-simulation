@@ -1,0 +1,11 @@
+# d9's CUT fork (Append 41): ilnm_s3_sim2_s3_cutfull staged by stage_chain.py (record chain_stage_ilnm_s3_sim2_s3_cutfull_2026-10-16_022104.json); every layer, last-token rows and
+# output_end span means, as the chain's extractions (chunk 8, pad 4096), H200; no cut, no repro-c arm.
+run: ilnm_s3_sim2_s3_cutfull_extract_v1
+inputs: ilnm_s3_sim2_s3_cutfull_v1
+inputs_sha256:
+  sim_attack@september.jsonl: 0371b8c3decb50dd05e2c56a9b978dbebeb61cf0319475566ab9a1785cea2806
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 8
+pad_to: 4096
+cut: full

@@ -1,0 +1,17 @@
+{
+  "adjudicated_outputs": 8,
+  "independent_review_agreements": 2,
+  "final_adjudications": 6,
+  "adjudicated_positive_outputs": 3,
+  "primary_coverage": {
+    "5": 1700,
+    "4": 88
+  },
+  "consensus_unchanged": true,
+  "all_primary_scenarios_positive_count_range": [
+    128,
+    136
+  ],
+  "primary_consensus_sha256": "9b50efd9d9a1e417a4b5fa9be69d617ad72e11af44d56656bbd30347c6258c83",
+  "adjudication_sha256": "7e715088a47c3301f549f04b375e83d7f171ab987ed2e0471b3b03439c7a810f"
+}

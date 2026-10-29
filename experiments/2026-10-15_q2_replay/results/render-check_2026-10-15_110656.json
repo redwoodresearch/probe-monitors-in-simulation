@@ -1,0 +1,17 @@
+{
+ "git": "3b3e760cf6ae112be305f296aaa7adfb6b8c1f94",
+ "rule_sha": "604bc7c60",
+ "app": "probe-shift_aswin-surya_sub-q2-replay_sim_kill-2026-11-14",
+ "result": {
+  "runs": 135,
+  "c0_source_equals_staged": 135,
+  "c1_prefix_checks": 540,
+  "c1_ids_equal": 540,
+  "c1_positions_equal": 540,
+  "c2_replay_equals_staged_before_first_change": 132,
+  "c2_runs": 135,
+  "errors": [],
+  "first_diff_c0": [],
+  "pass": false
+ }
+}

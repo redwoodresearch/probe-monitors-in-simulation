@@ -1,0 +1,25 @@
+{
+  "n": 868,
+  "n_mapped": 868,
+  "n_paths_with_copies": 868,
+  "n_unknown": 0,
+  "n_stops": 0,
+  "pilot": {
+    "files": 20,
+    "header_read": 20,
+    "in_pool": 20,
+    "sha_ok": 20
+  },
+  "unreadable": 0,
+  "equal": {
+    "n": true,
+    "n_paths_by_number_of_sources": false,
+    "percent_0dp": true,
+    "percent_exact": true,
+    "sol_free": true,
+    "sol_using": true,
+    "unknown": true
+  },
+  "verdict_OK": true,
+  "OK": true
+}

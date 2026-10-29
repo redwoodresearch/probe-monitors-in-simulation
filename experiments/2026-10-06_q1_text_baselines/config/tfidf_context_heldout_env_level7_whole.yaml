@@ -1,0 +1,17 @@
+# Level 7 on whole transcripts (no 32k cut), held-out environments: each output's own score and the running mean of output
+# scores up to each output, from tfidf_heldout_env_level7_whole, for the long-context reader comparison.
+name: tfidf_context_heldout_env_level7_whole
+cells_file: config/paired_cells_v3.json
+examples: examples_2026-10-06_184456     # whole transcripts
+folds_file: folds_v3.json
+output_variants: [all, no_editor]
+variants:
+  level7_whole_own_output:
+    outputs: harness_normalized_editor_format_whole_scores_2026-10-06_190302.jsonl.gz   # tfidf_heldout_env_level7_whole, environment folds (this file name was also written by tfidf_level7_whole; this copy is the held-out-environment one)
+    calls: null
+    running: false
+  level7_whole_running_mean:
+    outputs: harness_normalized_editor_format_whole_scores_2026-10-06_190302.jsonl.gz
+    calls: null
+bootstrap: 1000
+seed: 0

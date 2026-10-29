@@ -1,0 +1,11 @@
+# Step 1 (PLAN.md): layers 48 and 63 at every segment-end position of #36's extractor, on the placeholder-staged runs
+# (stage_placeholder.py). Same model, revision, dtype, attention and cut as fix-full v2 (fx_qwen3_v2.yaml).
+run: 2026-10-13_step1ph_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-13_q2_step1_placeholder_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 32
+chunk_size: 10
+layers: [48, 63]

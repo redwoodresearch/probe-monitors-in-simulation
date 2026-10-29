@@ -1,0 +1,14 @@
+# A2's third real honest batch, C (2026-10-11_112714_honest_c, arm honest_b, all 196 tasks), honest arm only, staged by
+# run_replay_readouts.py --segment-ends --stage honest_c_segends_v1 at abefa135
+# (results/replay_readouts_honest_c_segends_2026-10-11_142021.json): 275 context epochs, 17,620,675 tokens; longest prompt
+# 227,128 tokens (launch 2's 224,448 in its staging summary, sha256 90ddc63d; its --test peaked at 96.5 GiB on one H200).
+# Estimate about $7.05 at launch 2's billed rate ($0.40 per 1M tokens, start-up included); whole job in
+# SPEND_honest_c_extraction.md. Launch 2's extraction settings; run as the second attack run's (spawned shards).
+run: 2026-10-11_honest_c_segends_v1
+inputs: honest_c_segends_v1
+inputs_sha256:
+  honest_b.jsonl: 9f0dc8b1745cb239bd1189e4cf39ed8859d84d91233814d6ff47db2bba05f231
+model: Qwen/Qwen3.5-27B
+shards: 4
+chunk_size: 10
+pad_to: 4096

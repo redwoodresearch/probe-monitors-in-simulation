@@ -1,0 +1,12 @@
+# Placebos and year swap (2026-10-08; about $10-12, stop $15): layers 48 and 63 (full forward pass) for the runs staged
+# by ../../2026-10-08_q2_placebo_year/run_stage_placebo_year.py. One shard on one H100, launched without --remote;
+# shard retries off, atomic chunk writes, a billing and container watcher.
+run: 2026-10-08_q2_placebo_year_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-08_q2_placebo_year_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 25
+layers: [48, 63]

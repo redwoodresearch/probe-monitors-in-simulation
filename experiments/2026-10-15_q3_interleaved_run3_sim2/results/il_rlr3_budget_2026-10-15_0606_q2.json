@@ -1,0 +1,23 @@
+{
+ "headroom_json": "results/il_headroom_2026-10-15_0606.json",
+ "usable_hard_usd": 830.16,
+ "order": "global cell-ID order (sorted keys across hosts)",
+ "requested_caps_usd": {
+  "q2": 448
+ },
+ "requested_total_usd": 448,
+ "fits": true,
+ "selected": {
+  "q2": [
+   "t410_file_indexing",
+   "t385_clinical_trial",
+   "t507_web_scraping",
+   "t271_slack_clone",
+   "t417_tiktok"
+  ]
+ },
+ "held": {},
+ "caps_usd": {
+  "q2": 448
+ }
+}

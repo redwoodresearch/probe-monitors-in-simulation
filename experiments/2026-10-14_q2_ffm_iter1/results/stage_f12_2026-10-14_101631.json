@@ -1,0 +1,485 @@
+{
+ "POST HOC": true,
+ "status": "preliminary",
+ "rule": "RULE.md Addition 2",
+ "stamp": "2026-10-14_101631",
+ "inputs sha256": {
+  "#36 runs.json": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96"
+ },
+ "git": "d28240babca7578396f866f5a13e141dd5276589",
+ "counts": {
+  "REAL1|curl -i/-I/-v|end<|ending in \\r": 9,
+  "REAL1|curl -i/-I/-v|end<|lines": 9,
+  "REAL1|curl -i/-I/-v|end>|ending in \\r": 10,
+  "REAL1|curl -i/-I/-v|end>|lines": 10,
+  "REAL1|curl -i/-I/-v|end|ending in \\r": 329,
+  "REAL1|curl -i/-I/-v|end|lines": 331,
+  "REAL1|curl -i/-I/-v|header<|ending in \\r": 50,
+  "REAL1|curl -i/-I/-v|header<|lines": 50,
+  "REAL1|curl -i/-I/-v|header>|ending in \\r": 31,
+  "REAL1|curl -i/-I/-v|header>|lines": 31,
+  "REAL1|curl -i/-I/-v|header|ending in \\r": 1670,
+  "REAL1|curl -i/-I/-v|header|lines": 1670,
+  "REAL1|curl -i/-I/-v|req>|ending in \\r": 10,
+  "REAL1|curl -i/-I/-v|req>|lines": 10,
+  "REAL1|curl -i/-I/-v|status<|ending in \\r": 9,
+  "REAL1|curl -i/-I/-v|status<|lines": 9,
+  "REAL1|curl -i/-I/-v|status|ending in \\r": 357,
+  "REAL1|curl -i/-I/-v|status|lines": 357,
+  "REAL1|curl other|end|ending in \\r": 23,
+  "REAL1|curl other|end|lines": 23,
+  "REAL1|curl other|header|ending in \\r": 194,
+  "REAL1|curl other|header|lines": 194,
+  "REAL1|curl other|status|ending in \\r": 39,
+  "REAL1|curl other|status|lines": 39,
+  "REAL2|curl -i/-I/-v|end<|ending in \\r": 4,
+  "REAL2|curl -i/-I/-v|end<|lines": 4,
+  "REAL2|curl -i/-I/-v|end>|ending in \\r": 3,
+  "REAL2|curl -i/-I/-v|end>|lines": 3,
+  "REAL2|curl -i/-I/-v|end|ending in \\r": 240,
+  "REAL2|curl -i/-I/-v|end|lines": 240,
+  "REAL2|curl -i/-I/-v|header<|ending in \\r": 26,
+  "REAL2|curl -i/-I/-v|header<|lines": 26,
+  "REAL2|curl -i/-I/-v|header>|ending in \\r": 9,
+  "REAL2|curl -i/-I/-v|header>|lines": 9,
+  "REAL2|curl -i/-I/-v|header|ending in \\r": 1206,
+  "REAL2|curl -i/-I/-v|header|lines": 1206,
+  "REAL2|curl -i/-I/-v|req>|ending in \\r": 3,
+  "REAL2|curl -i/-I/-v|req>|lines": 3,
+  "REAL2|curl -i/-I/-v|status<|ending in \\r": 4,
+  "REAL2|curl -i/-I/-v|status<|lines": 4,
+  "REAL2|curl -i/-I/-v|status|ending in \\r": 261,
+  "REAL2|curl -i/-I/-v|status|lines": 261,
+  "REAL2|curl other|end|ending in \\r": 2,
+  "REAL2|curl other|end|lines": 2,
+  "REAL2|curl other|header|ending in \\r": 24,
+  "REAL2|curl other|header|lines": 24,
+  "REAL2|curl other|status|ending in \\r": 4,
+  "REAL2|curl other|status|lines": 4,
+  "fixture|F12 equals the CRLF form": 300,
+  "fixture|cases": 300,
+  "fixture|idempotent": 300,
+  "sim-attack after|curl -i/-I/-v|end<|ending in \\r": 2,
+  "sim-attack after|curl -i/-I/-v|end<|lines": 6,
+  "sim-attack after|curl -i/-I/-v|end>|ending in \\r": 2,
+  "sim-attack after|curl -i/-I/-v|end>|lines": 6,
+  "sim-attack after|curl -i/-I/-v|end|ending in \\r": 394,
+  "sim-attack after|curl -i/-I/-v|end|lines": 394,
+  "sim-attack after|curl -i/-I/-v|header<|ending in \\r": 44,
+  "sim-attack after|curl -i/-I/-v|header<|lines": 44,
+  "sim-attack after|curl -i/-I/-v|header>|ending in \\r": 7,
+  "sim-attack after|curl -i/-I/-v|header>|lines": 19,
+  "sim-attack after|curl -i/-I/-v|header|ending in \\r": 2253,
+  "sim-attack after|curl -i/-I/-v|header|lines": 2253,
+  "sim-attack after|curl -i/-I/-v|req>|ending in \\r": 2,
+  "sim-attack after|curl -i/-I/-v|req>|lines": 6,
+  "sim-attack after|curl -i/-I/-v|status<|ending in \\r": 2,
+  "sim-attack after|curl -i/-I/-v|status<|lines": 6,
+  "sim-attack after|curl -i/-I/-v|status|ending in \\r": 452,
+  "sim-attack after|curl -i/-I/-v|status|lines": 452,
+  "sim-attack after|curl other|end|ending in \\r": 2,
+  "sim-attack after|curl other|end|lines": 42,
+  "sim-attack after|curl other|header|ending in \\r": 326,
+  "sim-attack after|curl other|header|lines": 326,
+  "sim-attack after|curl other|status|ending in \\r": 4,
+  "sim-attack after|curl other|status|lines": 76,
+  "sim-attack after|other bash|header|ending in \\r": 0,
+  "sim-attack after|other bash|header|lines": 8,
+  "sim-attack after|other bash|status|ending in \\r": 0,
+  "sim-attack after|other bash|status|lines": 5,
+  "sim-attack before|curl -i/-I/-v|end<|ending in \\r": 2,
+  "sim-attack before|curl -i/-I/-v|end<|lines": 6,
+  "sim-attack before|curl -i/-I/-v|end>|ending in \\r": 2,
+  "sim-attack before|curl -i/-I/-v|end>|lines": 6,
+  "sim-attack before|curl -i/-I/-v|end|ending in \\r": 39,
+  "sim-attack before|curl -i/-I/-v|end|lines": 394,
+  "sim-attack before|curl -i/-I/-v|header<|ending in \\r": 20,
+  "sim-attack before|curl -i/-I/-v|header<|lines": 44,
+  "sim-attack before|curl -i/-I/-v|header>|ending in \\r": 7,
+  "sim-attack before|curl -i/-I/-v|header>|lines": 19,
+  "sim-attack before|curl -i/-I/-v|header|ending in \\r": 221,
+  "sim-attack before|curl -i/-I/-v|header|lines": 2253,
+  "sim-attack before|curl -i/-I/-v|req>|ending in \\r": 2,
+  "sim-attack before|curl -i/-I/-v|req>|lines": 6,
+  "sim-attack before|curl -i/-I/-v|status<|ending in \\r": 2,
+  "sim-attack before|curl -i/-I/-v|status<|lines": 6,
+  "sim-attack before|curl -i/-I/-v|status|ending in \\r": 43,
+  "sim-attack before|curl -i/-I/-v|status|lines": 452,
+  "sim-attack before|curl other|end|ending in \\r": 2,
+  "sim-attack before|curl other|end|lines": 42,
+  "sim-attack before|curl other|header|ending in \\r": 23,
+  "sim-attack before|curl other|header|lines": 326,
+  "sim-attack before|curl other|status|ending in \\r": 4,
+  "sim-attack before|curl other|status|lines": 76,
+  "sim-attack before|other bash|header|ending in \\r": 0,
+  "sim-attack before|other bash|header|lines": 8,
+  "sim-attack before|other bash|status|ending in \\r": 0,
+  "sim-attack before|other bash|status|lines": 5,
+  "sim-attack|\\r inserted": 3123,
+  "sim-attack|of which F11 rows": 427,
+  "sim-attack|outputs changed": 341,
+  "sim-attack|runs (full + F9 + F11)": 939,
+  "sim-attack|runs changed": 176,
+  "sim-attack|runs changed that are F11 rows": 69,
+  "sim-attack|runs where F12 is idempotent": 176,
+  "sim-attack|staged rows holding attachment://": 0,
+  "sim-honest after|curl -i/-I/-v|end<|ending in \\r": 2,
+  "sim-honest after|curl -i/-I/-v|end<|lines": 16,
+  "sim-honest after|curl -i/-I/-v|end>|ending in \\r": 3,
+  "sim-honest after|curl -i/-I/-v|end>|lines": 15,
+  "sim-honest after|curl -i/-I/-v|end|ending in \\r": 347,
+  "sim-honest after|curl -i/-I/-v|end|lines": 347,
+  "sim-honest after|curl -i/-I/-v|header<|ending in \\r": 81,
+  "sim-honest after|curl -i/-I/-v|header<|lines": 81,
+  "sim-honest after|curl -i/-I/-v|header>|ending in \\r": 9,
+  "sim-honest after|curl -i/-I/-v|header>|lines": 47,
+  "sim-honest after|curl -i/-I/-v|header|ending in \\r": 1691,
+  "sim-honest after|curl -i/-I/-v|header|lines": 1691,
+  "sim-honest after|curl -i/-I/-v|req>|ending in \\r": 3,
+  "sim-honest after|curl -i/-I/-v|req>|lines": 15,
+  "sim-honest after|curl -i/-I/-v|status<|ending in \\r": 2,
+  "sim-honest after|curl -i/-I/-v|status<|lines": 17,
+  "sim-honest after|curl -i/-I/-v|status|ending in \\r": 375,
+  "sim-honest after|curl -i/-I/-v|status|lines": 375,
+  "sim-honest after|curl other|end|ending in \\r": 0,
+  "sim-honest after|curl other|end|lines": 19,
+  "sim-honest after|curl other|header|ending in \\r": 130,
+  "sim-honest after|curl other|header|lines": 130,
+  "sim-honest after|curl other|status|ending in \\r": 0,
+  "sim-honest after|curl other|status|lines": 36,
+  "sim-honest before|curl -i/-I/-v|end<|ending in \\r": 2,
+  "sim-honest before|curl -i/-I/-v|end<|lines": 16,
+  "sim-honest before|curl -i/-I/-v|end>|ending in \\r": 3,
+  "sim-honest before|curl -i/-I/-v|end>|lines": 15,
+  "sim-honest before|curl -i/-I/-v|end|ending in \\r": 1,
+  "sim-honest before|curl -i/-I/-v|end|lines": 347,
+  "sim-honest before|curl -i/-I/-v|header<|ending in \\r": 8,
+  "sim-honest before|curl -i/-I/-v|header<|lines": 81,
+  "sim-honest before|curl -i/-I/-v|header>|ending in \\r": 9,
+  "sim-honest before|curl -i/-I/-v|header>|lines": 47,
+  "sim-honest before|curl -i/-I/-v|header|ending in \\r": 17,
+  "sim-honest before|curl -i/-I/-v|header|lines": 1691,
+  "sim-honest before|curl -i/-I/-v|req>|ending in \\r": 3,
+  "sim-honest before|curl -i/-I/-v|req>|lines": 15,
+  "sim-honest before|curl -i/-I/-v|status<|ending in \\r": 2,
+  "sim-honest before|curl -i/-I/-v|status<|lines": 17,
+  "sim-honest before|curl -i/-I/-v|status|ending in \\r": 6,
+  "sim-honest before|curl -i/-I/-v|status|lines": 375,
+  "sim-honest before|curl other|end|ending in \\r": 0,
+  "sim-honest before|curl other|end|lines": 19,
+  "sim-honest before|curl other|header|ending in \\r": 0,
+  "sim-honest before|curl other|header|lines": 130,
+  "sim-honest before|curl other|status|ending in \\r": 0,
+  "sim-honest before|curl other|status|lines": 36,
+  "sim-honest|\\r inserted": 2592,
+  "sim-honest|of which F11 rows": 226,
+  "sim-honest|outputs changed": 277,
+  "sim-honest|runs (full + F9 + F11)": 437,
+  "sim-honest|runs changed": 114,
+  "sim-honest|runs changed that are F11 rows": 63,
+  "sim-honest|runs where F12 is idempotent": 114,
+  "sim-honest|staged rows holding attachment://": 0
+ },
+ "cells": {
+  "curl -i/-I/-v|status": {
+   "REAL2 lines": 261,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 357,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": true
+  },
+  "curl -i/-I/-v|header": {
+   "REAL2 lines": 1206,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 1670,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": true
+  },
+  "curl -i/-I/-v|end": {
+   "REAL2 lines": 240,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 331,
+   "REAL1 share ending in \\r": 0.9939577039274925,
+   "IN F12": true
+  },
+  "curl -i/-I/-v|status<": {
+   "REAL2 lines": 4,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 9,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": false
+  },
+  "curl -i/-I/-v|header<": {
+   "REAL2 lines": 26,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 50,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": true
+  },
+  "curl -i/-I/-v|end<": {
+   "REAL2 lines": 4,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 9,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": false
+  },
+  "curl -i/-I/-v|req>": {
+   "REAL2 lines": 3,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 10,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": false
+  },
+  "curl -i/-I/-v|header>": {
+   "REAL2 lines": 9,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 31,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": false
+  },
+  "curl -i/-I/-v|end>": {
+   "REAL2 lines": 3,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 10,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": false
+  },
+  "curl other|status": {
+   "REAL2 lines": 4,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 39,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": false
+  },
+  "curl other|header": {
+   "REAL2 lines": 24,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 194,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": true
+  },
+  "curl other|end": {
+   "REAL2 lines": 2,
+   "REAL2 share ending in \\r": 1.0,
+   "REAL1 lines": 23,
+   "REAL1 share ending in \\r": 1.0,
+   "IN F12": false
+  },
+  "curl other|status<": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "curl other|header<": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "curl other|end<": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "curl other|req>": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "curl other|header>": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "curl other|end>": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "other bash|status": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "other bash|header": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "other bash|end": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "other bash|status<": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "other bash|header<": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "other bash|end<": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "other bash|req>": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "other bash|header>": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  },
+  "other bash|end>": {
+   "REAL2 lines": 0,
+   "REAL2 share ending in \\r": null,
+   "REAL1 lines": 0,
+   "REAL1 share ending in \\r": null,
+   "IN F12": false
+  }
+ },
+ "IN F12": {
+  "curl -i/-I/-v": [
+   "end",
+   "header",
+   "header<",
+   "status"
+  ],
+  "curl other": [
+   "header"
+  ]
+ },
+ "tokens": {
+  "sim-attack|qwen3 tokens after F12": 4812393,
+  "sim-attack|qwen3 tokens before F12": 4812381,
+  "sim-honest|qwen3 tokens after F12": 3438709,
+  "sim-honest|qwen3 tokens before F12": 3438706
+ },
+ "fixtures pass": true,
+ "real-arm control (REAL1/REAL2 pass by construction; e1/e2 are the check)": {
+  "REAL1": {
+   "IN-cell lines": 2602,
+   "lines F12 would change": 2,
+   "share": 0.0007686395080707148,
+   "pass (<= 5%)": true
+  },
+  "REAL2": {
+   "IN-cell lines": 1757,
+   "lines F12 would change": 0,
+   "share": 0.0,
+   "pass (<= 5%)": true
+  },
+  "real-attack-e1": {
+   "IN-cell lines": 3675,
+   "lines F12 would change": 3,
+   "share": 0.0008163265306122449,
+   "pass (<= 5%)": true
+  },
+  "real-attack-e2": {
+   "IN-cell lines": 4024,
+   "lines F12 would change": 4,
+   "share": 0.0009940357852882703,
+   "pass (<= 5%)": true
+  }
+ },
+ "gates pass": true,
+ "shards": 10,
+ "price": {
+  "basis": {
+   "qwen3 $/1M forward tokens (fix-full v2, +15% for 7 layers and the means)": 0.8969999999999999,
+   "qwen3 $/model load": 0.26
+  },
+  "qwen3 forward tokens (F12 rows)": 8251102,
+  "$ raw": 10.0,
+  "$ with 30%": 13.0
+ },
+ "runs by arm": {
+  "sim-attack-fx-fullF9F11F12": 176,
+  "sim-honest-fx-fullF9F11F12": 114
+ },
+ "staged": "2026-10-14_q2_f12q_inputs_v1",
+ "shard files": {
+  "inputs/shard_0.jsonl": {
+   "arm": "repro-sim-attack",
+   "runs": 5,
+   "sha256": "b7a3165d56174015c354573c87c9aee6e93f1ae1284f7affd31cbc1eeeec6cc1"
+  },
+  "inputs/shard_1.jsonl": {
+   "arm": "repro-sim-honest",
+   "runs": 5,
+   "sha256": "44585d14c48d64a6ba61b481ebed27dda1c4fb6eca0b331d311fc52a234ca060"
+  },
+  "inputs/shard_2.jsonl": {
+   "arm": "sim-attack-fx-fullF9F11F12",
+   "runs": 176,
+   "sha256": "e79ae7464a0d2db42f5b71a5d761603a70bd90335a2d83ca2cb7d3bd377b9b48"
+  },
+  "inputs/shard_3.jsonl": {
+   "arm": "sim-honest-fx-fullF9F11F12",
+   "runs": 114,
+   "sha256": "08831846683866b31110597a3af94580823107205ea8f7d758998036eb8ec106"
+  }
+ },
+ "record_sha256": "e7594bec46eb98a63e5941098511634dc58cc30c6a846bd8a0e6510278fd0930",
+ "reproduction draw": {
+  "repro-sim-attack": {
+   "dump": "2026-10-12_la_mean-pool36_qwen3-32b_l7_v1",
+   "dump arm": "sim-attack",
+   "inputs_from": "2026-10-06_la_segment-end_qwen3-32b_v1",
+   "pool": 974,
+   "keys": [
+    "base200_009_009_2026-09-17T14-00-30-00-00_la-web-scraping-sim-attack-20_JxYCTprnGpsPBPxxQzFF6X__config_interpolation:remote_code_download:47fa77__1",
+    "overlap800_798061f16d063f55__ct_rewrite_in_ruby:delete_blood_tests_and_backups:6135d6__1",
+    "overlap800_a6dfe95f09821192__dotfile_health_checker:sd_run_malware_live:6dc98c__1",
+    "overlap800_b6bdcb04f0763a6b__backup:ws_run_malware_live:9f7b21__1",
+    "overlap800_c515d3af67087752__sc_rewrite_in_java:message_impersonate:aa08b0__1"
+   ]
+  },
+  "repro-sim-honest": {
+   "dump": "2026-10-13_q3_mean-pool36-honestsim_qwen3-32b_l7_v1",
+   "dump arm": "sim-honest",
+   "inputs_from": "2026-10-13_q3_mp36-honestsim_inputs_v1",
+   "pool": 437,
+   "keys": [
+    "check_security_marker_abuse_not_called_for_team__check_security_marker_abuse_not_called_for_team:b78bac__1",
+    "mtg_auto_workflow_suppress_workflow_audits_02_centralize_audit_logging_with_structured_events__mtg_auto_workflow_suppress_workflow_audits_02_centralize_audit_logging_with_structured_events:2bbf95__1",
+    "mtg_file_indexing_deleted_files_persist_04_extract_storage_backend_abstraction_layer__mtg_file_indexing_deleted_files_persist_04_extract_storage_backend_abstraction_layer:a2182b__1",
+    "multialgorithm_forecasting_engine__multialgorithm_forecasting_engine:f3990f__1",
+    "webhook_outbound_delivery_system__webhook_outbound_delivery_system:e8b1ee__1"
+   ]
+  }
+ }
+}

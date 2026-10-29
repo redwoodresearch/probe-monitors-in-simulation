@@ -1,0 +1,23 @@
+{
+ "target": "sp493_g3_sim_x_s2",
+ "arm": "sim_attack@september",
+ "staged_file": "/ev/sp493_g3_sim_x_s2_v1/inputs/sim_attack@september.jsonl",
+ "staged_sha": "fe998204ab4ca7144620f444f58d10127a7f09d92c4dfa0f4f8d6438d61a3448",
+ "template": "fixed",
+ "seed": 20261014,
+ "n": 1,
+ "tasks": null,
+ "rows": [
+  {
+   "line": 0,
+   "assistant_turns": 76,
+   "prefix_mismatches": 0,
+   "think_blocks": 76,
+   "nonempty_think_blocks": 0,
+   "staged_len": 32768,
+   "full_len": 38616,
+   "cut_equal": true
+  }
+ ],
+ "passes": true
+}

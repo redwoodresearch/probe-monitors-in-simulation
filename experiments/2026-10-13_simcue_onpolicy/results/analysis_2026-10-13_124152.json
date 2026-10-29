@@ -1,0 +1,11 @@
+{
+ "git": "5b39102b489277fac7d9180e2179f8692b533e59",
+ "inputs": ["results/check_2026-10-13_121629_check.json", "results/score_2026-10-13_121721_score.json"],
+ "rows sha256": "1abd1dc0e7437db5708ffc306a831b1a3ba6a918ec1390d9287593618decfab1",
+ "threshold, 1% of first-real runs": 6.018515315380688,
+ "at the 1% threshold": {"real1": {"above": 1, "of": 194, "share": 0.005154639175257732}, "real2": {"above": 1, "of": 194, "share": 0.005154639175257732}, "sim_sept": {"above": 2, "of": 191, "share": 0.010471204188481676}, "honest_a": {"above": 3, "of": 196, "share": 0.015306122448979591}, "honest_b": {"above": 1, "of": 196, "share": 0.00510204081632653}},
+ "at item D's frozen threshold 7.9045": {"real1": {"above": 0, "of": 194, "share": 0.0}, "real2": {"above": 0, "of": 194, "share": 0.0}, "sim_sept": {"above": 0, "of": 191, "share": 0.0}, "honest_a": {"above": 0, "of": 196, "share": 0.0}, "honest_b": {"above": 0, "of": 196, "share": 0.0}},
+ "shuffled-label null (paired tasks, simulated share at the 1% threshold)": {"tasks": 191, "draws": 1000, "95th": 0.02617801047120419, "observed on paired tasks": 0.010471204188481676},
+ "e2 - e1 yardstick": {"sim - real1 share": 0.005316565013223944, "real2 - real1 share": 0.0},
+ "run scores, quantiles (5, 50, 95, max)": {"real1": [1.8067614612978458, 2.5818401091791268, 3.7375484448306584, 7.29473566298677], "real2": [1.8235230757785317, 2.3658928100371845, 3.6200279430423734, 6.211327242507964], "sim_sept": [1.8149147244667483, 2.6608018434248137, 3.909038605894368, 7.284153557555524], "honest_a": [0.14981078462742758, 1.6621012919276748, 3.8728379242574773, 6.847243991647216], "honest_b": [0.06893723690718923, 1.6240776653666043, 3.704435529559962, 6.744770901021631]}
+}

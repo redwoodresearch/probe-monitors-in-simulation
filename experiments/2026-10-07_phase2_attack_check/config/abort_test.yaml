@@ -1,0 +1,21 @@
+# The canary's abort path, tested for real at $0 (Aswin, 10-08): no live server (a dead base URL, no server checks),
+# the canary t17_slack_clone's real arms only, a second task held behind the gate. canary_watch.py is fed the broken
+# pilot's recorded t17 str_replace; the launcher must stop on CANARY_ABORT, and the second task must never start.
+#   run_pilot.py --pilot-config config/abort_test.yaml --tasks t17_slack_clone,t01_media_processing \
+#       --base-urls http://127.0.0.1:9/v1 --commit <commit> --out <dir>
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september
+simulators: [september]
+real_arms: [honest_a, honest_b, attack]
+simulator_confirmed: true
+server_checks: []
+max_runs_per_server: 10
+max_real_runs: 10
+reference_tries: 1
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+canary: t17_slack_clone
+spend:
+  cap_usd: 1
+  worst_case_limit_usd: 1000
+  worst_per_sim_run_usd: 60
+  prior_per_sim_run_usd: 0

@@ -1,0 +1,7 @@
+output/
+.venv/
+__pycache__/
+!data/
+!data/**/*.npz
+!data/*.npz
+!weights/**

@@ -1,0 +1,256 @@
+{
+ "pooled_label": "TEST v2 of the final-build checklist features after Codex checklist r1 / dedup r1 (09 @ 1c19b1da7) on the LOO3 record: run-mean S for every member, group Y, Stage A summary gate, lead readout, per-set coverage notes, co-headline with LOO as the on-policy probe, AUROC derived membership; NOT a result",
+ "label_note": "NEGATIVE TEST: must STOP (LOO's pooled_all row is unavailable)",
+ "npz": [
+  {
+   "path": "xfer/fpr507prep/alltasks_CRD_ownallLOO_2026-10-16_002812_perdraw.npz",
+   "sha256": "31a56845e1aadd550c9a0e5bba3cc67aa73bead493a48b2950add8b2d3837011",
+   "record": {
+    "git": "0a9c2bdd3:experiments/2026-10-15_fpr_sweep_507_prep/results/alltasks_CRD_ownallLOO_2026-10-16_002812.json",
+    "sha256": "b8520a2ab981a5bdd5261d2daa19a3418029f197f62cf06f06d81bb34843b7f1"
+   },
+   "labels": [
+    "Sol (a) C",
+    "FIBS C",
+    "harmfulness C",
+    "refusal C",
+    "high-stakes C",
+    "c_asis C",
+    "own_a C",
+    "own_frac100_L48 C",
+    "own_frac25_L48 C",
+    "own_frac10_L48 C",
+    "own_all_L48 C",
+    "own_all25_L48 C",
+    "own_all10_L48 C",
+    "own_all_LOO_L48 C",
+    "Sol (a) R",
+    "FIBS R",
+    "harmfulness R",
+    "refusal R",
+    "high-stakes R",
+    "c_asis R",
+    "own_a R",
+    "own_frac100_L48 R",
+    "own_frac25_L48 R",
+    "own_frac10_L48 R",
+    "own_all_L48 R",
+    "own_all25_L48 R",
+    "own_all10_L48 R",
+    "own_all_LOO_L48 R",
+    "DT_destructive_primary C",
+    "DT_destructive_secondary C",
+    "DT_transfer_primary C",
+    "DT_transfer_secondary C"
+   ],
+   "key_format": "v2c"
+  }
+ ],
+ "origins": [
+  "S_old",
+  "S_new",
+  "S_newmains",
+  "S_newmains without S4"
+ ],
+ "combos": {
+  "pooled_all": [
+   "S_old",
+   "S_new",
+   "S_newmains"
+  ],
+  "pooled_all_without_S4": [
+   "S_old",
+   "S_new",
+   "S_newmains without S4"
+  ],
+  "pooled_455": [
+   "S_old",
+   "S_new"
+  ]
+ },
+ "headline_combo": "pooled_all",
+ "mode": "joint",
+ "pooled_recompute_tol_abs": 1e-12,
+ "panel_groups_gate": {
+  "tol_abs": 1e-12,
+  "record_index": 0,
+  "stated": "before the run: |this run - Stage A| <= 1e-12 in rate units (1e-10 points) for every point and interval end; member rows, n, draws, finite draws, degenerate flags exact"
+ },
+ "paths": {
+  "origin_catch": [
+   "rows",
+   "{label}",
+   "{origin}",
+   "points",
+   "{mode}",
+   "{f}",
+   "catch",
+   "{key}",
+   "point"
+  ],
+  "origin_readable": [
+   "rows",
+   "{label}",
+   "{origin}",
+   "readable",
+   "{f}"
+  ],
+  "pooled_gap": [
+   "pooled",
+   "{label}",
+   "{combo}",
+   "{mode}",
+   "{f}",
+   "gap",
+   "{key}",
+   "point"
+  ]
+ },
+ "f_keys": [
+  "0.01",
+  "0.05"
+ ],
+ "points": [
+  "0.01",
+  "0.05"
+ ],
+ "point_values": [
+  0.01,
+  0.05
+ ],
+ "saturation": 0.99,
+ "g_onpolicy_run2_only": false,
+ "headline_excludes_onpolicy": true,
+ "headline_group": "auto_09_rule",
+ "extra_groups": {
+  "DT": [
+   "DT_destructive_primary",
+   "DT_destructive_secondary",
+   "DT_transfer_primary",
+   "DT_transfer_secondary"
+  ]
+ },
+ "mains_name": "all tasks (S_old 183 + S_new 272 + S_newmains 312)",
+ "mix_name": "all-tasks",
+ "inputs_final": {
+  "git": "32abe4120:experiments/2026-10-15_fpr_sweep_507_prep/config/INPUTS_FINAL_2026-10-15_203213.json",
+  "sha256": "d8be69e672acaca11be3f76807929660c61db30a3cf50b083f8fef8c4d6dee9a"
+ },
+ "cohort_keys": {
+  "files": {
+   "final": {
+    "git": "3ce6ea55e:experiments/2026-10-14_xerr_scaleup_09/results/xerr_scaleup_final_2026-10-15_013255.json",
+    "sha256": "7dceb8bb25752aa3619cfde64add702fd4f7d13a1309a56dbc8880a6b27af9f5",
+    "stageA_name": "final"
+   },
+   "t196": {
+    "git": "4d1eec572:experiments/2026-10-07_phase2_attack_check/config/pilot_tasks_amendment9_all196.json",
+    "sha256": "55d9a8ec68f4685410d65c97bb84f470efb7cd8f05287384f92465ed5eadedbb",
+    "stageA_name": "t196"
+   }
+  },
+  "membership710": {
+   "git": "32abe4120:experiments/2026-10-15_fpr_sweep_507_prep/config/membership710.json",
+   "sha256": "6516d15fab77d7f344497e72db10b60c5f709b35c3a1859a2c9e016d2fc6e4ad"
+  },
+  "main_maps": {
+   "S_new": {
+    "git": "90c0c3148:experiments/2026-10-15_launch_disjoint/results/launch_disjoint_eligibility_v5_2026-10-15_224056.json",
+    "sha256": "c4d725752ed4e5c464e5fc813bbb09c690e7c4c4ee652d1e2cfee0acba7a4182",
+    "lists": [
+     "S_new|run1",
+     "S_new|run2",
+     "S_new|sim"
+    ]
+   }
+  }
+ },
+ "eligibility": {
+  "git": "71fc9f650:experiments/2026-10-15_own_all_loo/results/own_all_loo_eligibility_2026-10-15_232451.json",
+  "sha256": "9fde1eedad5ed0fb186fa1123f9e432ca44b394a6ba9eb3395a7491d89cd092b"
+ },
+ "elig_alias": {
+  "S_newmains without S4": "S_newmains"
+ },
+ "pooled_title": "Part 1 (LOO3): pooled all tasks (S_old 183 + S_new 272 + S_newmains 312)",
+ "ld_order": [
+  "own_all_LOO_L48",
+  "own_all_L48",
+  "own_frac100_L48"
+ ],
+ "required_joiner": "own_all_LOO_L48",
+ "sim_keys": {
+  "git": "90c0c3148:experiments/2026-10-15_launch_disjoint/results/launch_disjoint_eligibility_v5_2026-10-15_224056.json",
+  "sha256": "c4d725752ed4e5c464e5fc813bbb09c690e7c4c4ee652d1e2cfee0acba7a4182"
+ },
+ "supersession_labels": {
+  "own_frac100_L48": "on-policy probe trained on T196 only; superseded as headline by own_all_LOO_L48 under amendment 2"
+ },
+ "onpolicy_caveats": {
+  "own_all_LOO_L48": "launch-disjoint: trained on the other task sets (LOO3); no real arm, honest pool or sim arm of the scored set shares a training launch (eligibility @ 71fc9f650)",
+  "own_frac100_L48": "own_frac100, registered rows: launch-disjoint on S_new only; on S_old, real run 1 and the sim share its training launch; S_newmains via the fold \u22121 extension"
+ },
+ "ld_origin_excluded": {
+  "S_newmains": "no with-S4 combo (S4 cells not in the deciding eligibility file)"
+ },
+ "combo_labels": {
+  "pooled_all_without_S4": "all tasks without S4 (registered sensitivity beside pooled_all; LOO's row: no with-S4 combo, S4 cells not in the deciding eligibility file)",
+  "pooled_455": "paper tasks (S_old + S_new); record-only"
+ },
+ "onpolicy_delta_full": true,
+ "signed_runmean_all": true,
+ "stageA_summary_gate": {
+  "tol_abs": 1e-12
+ },
+ "lead_readout": "C",
+ "coheadline": {
+  "probes": [
+   "Sol (a)",
+   "FIBS",
+   "harmfulness",
+   "refusal",
+   "high-stakes",
+   "own_all_LOO_L48"
+  ],
+  "onpolicy_probe": "own_all_LOO_L48",
+  "lead_readout": "C",
+  "delta_full_tol_abs": 1e-12,
+  "launch_ref": "LOO3: launch-disjoint",
+  "onpolicy_caveat": "launch-disjoint: trained on the other task sets (LOO3); no real arm, honest pool or sim arm of the scored set shares a training launch (eligibility @ 71fc9f650)",
+  "combos": [
+   "pooled_all_without_S4",
+   "pooled_455"
+  ],
+  "auroc": {
+   "record": {
+    "git": "19ba8f563:experiments/2026-10-15_fpr_sweep_507_prep/results/pooledmetrics_2026-10-16_001557_ap-1rltASqK10jRxmheLbO9Pj.json",
+    "sha256": "ff5d690d40e790af6994a54331d3e4086f52561fb4e21355e4c9a8b603eb378e"
+   },
+   "table": {
+    "git": "19ba8f563:experiments/2026-10-15_fpr_sweep_507_prep/results/pooledmetrics_table_2026-10-16_001557_ap-1rltASqK10jRxmheLbO9Pj.json",
+    "sha256": "efd0c2d2b74a5294c79f71451fbebb6c8b02f5e9b4b9c820b08c8b548d6f9250"
+   },
+   "combo": "pooled_all",
+   "field": "auroc_real_both",
+   "readout": "C",
+   "threshold": 0.6,
+   "derived": {
+    "own_all_LOO_L48": "own_all_L48"
+   }
+  }
+ },
+ "coverage_per_set": true,
+ "required_rows": [
+  {
+   "combos": [
+    "pooled_all"
+   ],
+   "labels": [
+    "own_all_LOO_L48 C"
+   ]
+  }
+ ],
+ "group_labels": {
+  "DT": "DT rows (C only)"
+ }
+}

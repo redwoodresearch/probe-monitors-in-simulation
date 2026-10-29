@@ -1,0 +1,62 @@
+gates {'gate4_shrinkage_vs_sklearn': {'torch': 0.00396286555937267, 'sklearn': 0.003962865559372671}} | git at launch 3aefda4fdba67a2e46e7cc19110a6c00f5b1fd69 | fits 230, iterations 25-229, max final gradient 1.5e-04
+converged C, plain: 01:0.00316(A11 0.00316) 02:0.00316(A11 0.00316) 03:0.00316(A11 0.001) 04:0.00316(A11 0.00316) 12:0.00316(A11 0.00316) 13:0.00316(A11 0.001) 14:0.00316(A11 0.00316) 23:0.00316(A11 0.00316) 24:0.00316(A11 0.00316) 34:0.00316(A11 0.00316)
+converged C, zca: 01:0.0001(A11 0.0001) 02:0.000316(A11 0.000316) 03:0.0001(A11 0.0001) 04:0.000316(A11 0.000316) 12:0.000316(A11 0.000316) 13:0.0001(A11 0.0001) 14:0.000316(A11 0.000316) 23:0.000316(A11 0.000316) 24:0.000316(A11 0.000316) 34:0.000316(A11 0.000316)
+strength (median cosine, std coords): {'zca_conv_minus_plain_conv': 0.7056689644543239, 'zca_fixed_minus_plain_fixed': 0.7835905098470073, 'diag_fixed_minus_plain_fixed': 0.9997355592765809}
+== fpr_0.01: gate 2 {'b_F9_e2': 0.6959531416400426, 'a_full_e2': 0.7071352502662407, 'D_full_count': -0.011182108626198062, 'a_m_e2_draw_mean': 0.6201277955271565} | e2 runs 939
+  asrun_plain_fixed: real e2 +69.6 [+57.4, +75.4] | fake +71.9 [+60.4, +77.6] | fake-real +2.3 [-0.4, +5.3] | D vs a_m +7.6 [-4.9, +15.2] | FA real +1.2 [+0.9, +2.2] sim +1.9 [+0.9, +3.3]
+                     matched FA: fake +58.7 [+59.0, +74.7] | fake-real -10.9 [-11.3, +10.8] | achieved FA real +1.2 [+0.9, +2.2] sim +1.1 [+1.0, +3.2]
+  asrun_diag_fixed : real e2 +69.3 [+56.8, +75.6] | fake +71.3 [+59.6, +77.3] | fake-real +2.0 [-0.8, +4.9] | D vs a_m +7.3 [-5.3, +15.2] | FA real +1.2 [+0.9, +2.2] sim +1.9 [+0.9, +3.4]
+                     matched FA: fake +58.8 [+58.9, +74.4] | fake-real -10.6 [-11.6, +10.6] | achieved FA real +1.2 [+0.9, +2.2] sim +1.1 [+1.0, +3.2]
+  asrun_zca_fixed  : real e2 +64.0 [+48.2, +72.1] | fake +65.1 [+49.5, +72.2] | fake-real +1.1 [-2.0, +3.7] | D vs a_m +2.0 [-13.0, +11.1] | FA real +1.6 [+1.1, +2.3] sim +1.8 [+0.9, +2.9]
+                     matched FA: fake +53.8 [+54.4, +70.3] | fake-real -10.3 [-11.8, +15.2] | achieved FA real +1.6 [+1.1, +2.3] sim +0.9 [+1.0, +3.3]
+  asrun_plain_ret  : real e2 +66.3 [+58.7, +73.6] | fake +67.2 [+60.4, +74.9] | fake-real +0.9 [-1.4, +4.4] | D vs a_m +4.3 [-5.0, +14.1] | FA real +1.2 [+1.0, +2.4] sim +1.8 [+1.1, +3.6]
+                     matched FA: fake +57.9 [+57.5, +73.0] | fake-real -8.4 [-11.1, +8.5] | achieved FA real +1.2 [+1.0, +2.4] sim +1.4 [+1.2, +3.7]
+  asrun_zca_ret    : real e2 +69.2 [+57.0, +75.9] | fake +76.5 [+64.2, +82.1] | fake-real +7.2 [+4.2, +9.9] | D vs a_m +7.2 [-5.8, +18.0] | FA real +1.5 [+1.1, +2.4] sim +4.5 [+2.7, +6.8]
+                     matched FA: fake +56.9 [+56.5, +71.2] | fake-real -12.3 [-15.5, +8.5] | achieved FA real +1.5 [+1.1, +2.4] sim +1.8 [+1.5, +4.1]
+  asrun_plain_new  : real e2 +65.1 [+58.0, +72.6] | fake +66.0 [+59.8, +74.2] | fake-real +0.9 [-1.3, +4.4] | D vs a_m +3.1 [-6.2, +13.6] | FA real +1.2 [+1.0, +2.4] sim +1.8 [+1.1, +3.6]
+                     matched FA: fake +56.7 [+56.3, +71.6] | fake-real -8.4 [-11.4, +7.9] | achieved FA real +1.2 [+1.0, +2.4] sim +1.4 [+1.2, +3.7]
+  asrun_zca_new    : real e2 +66.3 [+56.7, +73.8] | fake +74.4 [+64.7, +81.4] | fake-real +8.1 [+5.2, +11.2] | D vs a_m +4.3 [-6.3, +15.0] | FA real +1.4 [+1.1, +2.6] sim +4.1 [+2.9, +7.0]
+                     matched FA: fake +55.9 [+55.8, +69.3] | fake-real -10.3 [-13.8, +6.9] | achieved FA real +1.4 [+1.1, +2.6] sim +2.1 [+1.6, +4.0]
+  conv_plain_fixed : real e2 +69.6 [+57.6, +75.8] | fake +71.8 [+60.3, +77.5] | fake-real +2.2 [-0.7, +5.0] | D vs a_m +7.6 [-4.6, +15.5] | FA real +1.3 [+0.9, +2.1] sim +1.8 [+0.9, +3.3]
+                     matched FA: fake +59.8 [+59.9, +75.0] | fake-real -9.8 [-10.8, +10.8] | achieved FA real +1.3 [+0.9, +2.1] sim +1.1 [+1.0, +3.3]
+  conv_diag_fixed  : real e2 +69.8 [+57.4, +76.0] | fake +71.9 [+60.3, +77.5] | fake-real +2.1 [-0.7, +5.0] | D vs a_m +7.8 [-4.7, +15.5] | FA real +1.3 [+0.9, +2.1] sim +1.8 [+0.9, +3.4]
+                     matched FA: fake +59.7 [+59.9, +75.0] | fake-real -10.1 [-11.0, +10.7] | achieved FA real +1.3 [+0.9, +2.1] sim +1.1 [+1.0, +3.3]
+  conv_zca_fixed   : real e2 +63.8 [+48.8, +72.5] | fake +66.3 [+51.7, +73.8] | fake-real +2.4 [-1.0, +4.9] | D vs a_m +1.8 [-12.2, +11.3] | FA real +1.4 [+1.1, +2.2] sim +1.8 [+1.0, +3.1]
+                     matched FA: fake +55.8 [+56.5, +71.9] | fake-real -8.0 [-10.5, +16.1] | achieved FA real +1.4 [+1.1, +2.2] sim +0.9 [+1.0, +3.4]
+  conv_plain_conv  : real e2 +67.0 [+58.8, +74.6] | fake +68.4 [+60.7, +75.9] | fake-real +1.4 [-1.2, +4.5] | D vs a_m +4.9 [-4.6, +14.8] | FA real +1.2 [+1.0, +2.3] sim +2.1 [+1.0, +3.6]
+                     matched FA: fake +59.4 [+58.8, +74.2] | fake-real -7.5 [-10.6, +9.7] | achieved FA real +1.2 [+1.0, +2.3] sim +1.1 [+1.1, +3.6]
+  conv_zca_conv    : real e2 +70.3 [+56.8, +76.7] | fake +72.8 [+58.8, +78.9] | fake-real +2.5 [-0.2, +5.1] | D vs a_m +8.3 [-5.4, +18.7] | FA real +1.3 [+1.0, +2.1] sim +2.5 [+1.1, +3.6]
+                     matched FA: fake +60.0 [+59.6, +75.9] | fake-real -10.3 [-12.2, +12.7] | achieved FA real +1.3 [+1.0, +2.1] sim +0.9 [+0.8, +3.1]
+  conv_zca_conv_minus_conv_plain_conv: D vs a_m +3.3 [-7.1, +7.2] | gap +1.1 [-1.3, +2.8] | helps {'committed': False, 'paired_D_lower_above_0': False, 'gap_upper_at_most_0': False, 'plain_V2_half_width': 0.09701668479360889}
+  conv_zca_fixed_minus_conv_plain_fixed: D vs a_m -5.8 [-11.8, -0.1] | gap +0.2 [-2.2, +1.9] | helps {'committed': False, 'paired_D_lower_above_0': False, 'gap_upper_at_most_0': False, 'plain_V2_half_width': 0.10009931344999973}
+  conv_diag_fixed_minus_conv_plain_fixed: D vs a_m +0.2 [-0.3, +0.3] | gap -0.1 [-0.4, +0.4] | helps {'committed': False, 'paired_D_lower_above_0': False, 'gap_upper_at_most_0': False, 'plain_V2_half_width': 0.10009931344999973}
+  change converged - as-run (points): plain_fixed: e2 +0.0 fake -0.1 | diag_fixed: e2 +0.5 fake +0.6 | zca_fixed: e2 -0.2 fake +1.1 | plain_conv: e2 +1.8 fake +2.4 | zca_conv: e2 +4.0 fake -1.6
+== fpr_0.05: gate 2 {'b_F9_e2': 0.8812566560170394, 'a_full_e2': 0.9033546325878594, 'D_full_count': -0.02209797657082002, 'a_m_e2_draw_mean': 0.8723642172523961} | e2 runs 939
+  asrun_plain_fixed: real e2 +88.1 [+83.9, +91.2] | fake +89.0 [+85.1, +91.6] | fake-real +0.9 [-1.3, +2.7] | D vs a_m +0.9 [-1.5, +3.9] | FA real +5.8 [+5.0, +7.6] sim +6.5 [+4.7, +9.2]
+                     matched FA: fake +86.0 [+80.5, +90.2] | fake-real -2.1 [-7.1, +2.2] | achieved FA real +5.8 [+5.0, +7.6] sim +6.0 [+5.0, +8.2]
+  asrun_diag_fixed : real e2 +87.8 [+83.9, +91.1] | fake +88.5 [+84.8, +91.3] | fake-real +0.7 [-1.6, +2.4] | D vs a_m +0.5 [-1.7, +3.7] | FA real +5.6 [+5.0, +7.5] sim +6.4 [+4.8, +9.3]
+                     matched FA: fake +86.1 [+80.0, +90.1] | fake-real -1.7 [-7.3, +2.1] | achieved FA real +5.6 [+5.0, +7.5] sim +5.7 [+5.0, +8.2]
+  asrun_zca_fixed  : real e2 +86.4 [+81.7, +89.6] | fake +85.9 [+81.8, +89.2] | fake-real -0.5 [-2.3, +1.9] | D vs a_m -0.9 [-4.4, +2.6] | FA real +5.7 [+4.8, +6.8] sim +6.2 [+4.2, +7.9]
+                     matched FA: fake +84.2 [+78.5, +89.2] | fake-real -2.2 [-7.5, +3.4] | achieved FA real +5.7 [+4.8, +6.8] sim +5.7 [+5.1, +8.4]
+  asrun_plain_ret  : real e2 +86.3 [+81.6, +89.3] | fake +87.5 [+83.3, +90.4] | fake-real +1.2 [-0.9, +3.3] | D vs a_m -0.9 [-3.5, +2.0] | FA real +6.0 [+4.9, +7.6] sim +7.0 [+5.4, +9.8]
+                     matched FA: fake +82.4 [+77.9, +87.9] | fake-real -3.9 [-7.8, +1.8] | achieved FA real +6.0 [+4.9, +7.6] sim +5.7 [+4.9, +7.9]
+  asrun_zca_ret    : real e2 +87.1 [+83.4, +89.8] | fake +91.1 [+88.0, +93.0] | fake-real +4.0 [+1.8, +6.1] | D vs a_m -0.1 [-2.8, +3.0] | FA real +5.4 [+4.8, +6.4] sim +11.6 [+8.9, +14.8]
+                     matched FA: fake +79.6 [+75.2, +86.5] | fake-real -7.5 [-12.1, +0.1] | achieved FA real +5.4 [+4.8, +6.4] sim +5.5 [+4.9, +8.1]
+  asrun_plain_new  : real e2 +85.5 [+80.7, +88.6] | fake +86.7 [+82.5, +89.6] | fake-real +1.1 [-0.9, +3.3] | D vs a_m -1.7 [-4.4, +1.2] | FA real +5.8 [+5.0, +7.5] sim +7.0 [+5.4, +9.8]
+                     matched FA: fake +82.1 [+77.0, +87.2] | fake-real -3.5 [-7.8, +2.0] | achieved FA real +5.8 [+5.0, +7.5] sim +5.9 [+5.0, +7.9]
+  asrun_zca_new    : real e2 +85.7 [+81.9, +88.8] | fake +90.3 [+87.4, +92.4] | fake-real +4.6 [+2.1, +6.9] | D vs a_m -1.5 [-4.2, +1.9] | FA real +5.2 [+4.8, +6.5] sim +13.3 [+10.6, +16.9]
+                     matched FA: fake +77.6 [+73.8, +84.2] | fake-real -8.1 [-12.2, -0.7] | achieved FA real +5.2 [+4.8, +6.5] sim +5.0 [+4.7, +7.9]
+  conv_plain_fixed : real e2 +88.3 [+84.1, +91.4] | fake +89.2 [+85.1, +91.6] | fake-real +0.9 [-1.3, +2.4] | D vs a_m +1.1 [-1.5, +4.1] | FA real +5.6 [+5.0, +7.4] sim +6.3 [+4.7, +9.1]
+                     matched FA: fake +86.6 [+80.8, +90.4] | fake-real -1.8 [-6.8, +2.3] | achieved FA real +5.6 [+5.0, +7.4] sim +6.0 [+5.0, +8.2]
+  conv_diag_fixed  : real e2 +88.3 [+84.1, +91.4] | fake +89.2 [+85.1, +91.6] | fake-real +1.0 [-1.4, +2.5] | D vs a_m +1.0 [-1.4, +4.2] | FA real +5.5 [+4.9, +7.4] sim +6.4 [+4.7, +9.1]
+                     matched FA: fake +86.4 [+80.7, +90.4] | fake-real -1.8 [-6.9, +2.2] | achieved FA real +5.5 [+4.9, +7.4] sim +5.9 [+5.0, +8.1]
+  conv_zca_fixed   : real e2 +87.2 [+82.4, +90.0] | fake +87.9 [+83.4, +90.5] | fake-real +0.7 [-1.3, +2.8] | D vs a_m -0.0 [-3.8, +2.9] | FA real +5.7 [+4.8, +6.8] sim +6.2 [+4.4, +8.2]
+                     matched FA: fake +84.8 [+79.6, +89.8] | fake-real -2.4 [-6.9, +3.7] | achieved FA real +5.7 [+4.8, +6.8] sim +5.8 [+5.1, +8.5]
+  conv_plain_conv  : real e2 +86.9 [+82.5, +90.0] | fake +88.0 [+83.7, +90.7] | fake-real +1.1 [-1.2, +2.9] | D vs a_m -0.3 [-2.7, +2.7] | FA real +5.9 [+4.9, +7.5] sim +6.9 [+5.1, +9.9]
+                     matched FA: fake +84.2 [+78.8, +88.7] | fake-real -2.7 [-7.5, +1.9] | achieved FA real +5.9 [+4.9, +7.5] sim +6.1 [+5.0, +8.0]
+  conv_zca_conv    : real e2 +88.2 [+84.8, +91.3] | fake +89.1 [+86.1, +92.1] | fake-real +0.9 [-1.0, +2.8] | D vs a_m +0.9 [-1.6, +4.5] | FA real +5.2 [+4.9, +6.4] sim +6.0 [+4.6, +9.0]
+                     matched FA: fake +86.7 [+80.7, +90.6] | fake-real -1.5 [-7.6, +2.7] | achieved FA real +5.2 [+4.9, +6.4] sim +5.5 [+5.0, +8.0]
+  conv_zca_conv_minus_conv_plain_conv: D vs a_m +1.3 [-0.9, +4.2] | gap -0.2 [-1.5, +1.7] | helps {'committed': False, 'paired_D_lower_above_0': False, 'gap_upper_at_most_0': False, 'plain_V2_half_width': 0.027070441196803987}
+  conv_zca_fixed_minus_conv_plain_fixed: D vs a_m -1.1 [-4.1, +0.6] | gap -0.2 [-1.3, +1.7] | helps {'committed': False, 'paired_D_lower_above_0': False, 'gap_upper_at_most_0': False, 'plain_V2_half_width': 0.02789799131799066}
+  conv_diag_fixed_minus_conv_plain_fixed: D vs a_m -0.1 [-0.2, +0.2] | gap +0.1 [-0.3, +0.3] | helps {'committed': False, 'paired_D_lower_above_0': False, 'gap_upper_at_most_0': False, 'plain_V2_half_width': 0.02789799131799066}
+  change converged - as-run (points): plain_fixed: e2 +0.2 fake +0.2 | diag_fixed: e2 +0.5 fake +0.7 | zca_fixed: e2 +0.8 fake +2.0 | plain_conv: e2 +1.4 fake +1.4 | zca_conv: e2 +2.5 fake -1.1

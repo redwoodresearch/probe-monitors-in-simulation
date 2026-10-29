@@ -1,0 +1,23 @@
+{
+ "target": "simh311_q1_sim",
+ "arm": "sim_honest@september",
+ "staged_file": "/ev/simh311_q1_sim_v1_try2/inputs/sim_honest@september.jsonl",
+ "staged_sha": "61903f2ba60b30feeff5a47d7e7ef8daf894c9b5c916eea554b5608a07352026",
+ "template": "fixed",
+ "seed": 20261014,
+ "n": 1,
+ "tasks": null,
+ "rows": [
+  {
+   "line": 0,
+   "assistant_turns": 100,
+   "prefix_mismatches": 0,
+   "think_blocks": 100,
+   "nonempty_think_blocks": 0,
+   "staged_len": 32768,
+   "full_len": 73651,
+   "cut_equal": true
+  }
+ ],
+ "passes": true
+}

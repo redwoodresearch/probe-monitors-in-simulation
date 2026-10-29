@@ -1,0 +1,87 @@
+{
+ "git": "856d440a5e19eb610a8c2b121912c29c878d44a8",
+ "sources": {
+  "Sol real honest n1000": {
+   "logs": 815,
+   "samples": 1000,
+   "sample-message contents": 63731,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 35237,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "refs in sample metadata": 0,
+   "tool errors": 999,
+   "refs in tool error text": 0
+  },
+  "Sol simulated honest n437": {
+   "logs": 437,
+   "samples": 437,
+   "sample-message contents": 26691,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 14686,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "refs in sample metadata": 0
+  },
+  "Sol real attack epoch 1 n1000": {
+   "logs": 812,
+   "samples": 1000,
+   "sample-message contents": 54400,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 29010,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "refs in sample metadata": 0,
+   "tool errors": 706,
+   "refs in tool error text": 0
+  },
+  "Sol real attack epoch 2 n1000": {
+   "logs": 830,
+   "samples": 1001,
+   "sample-message contents": 54513,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 29107,
+   "refs in tool-call arguments": 0,
+   "tool errors": 725,
+   "refs in tool error text": 0,
+   "refs in model-event inputs": 0,
+   "refs in sample metadata": 0
+  },
+  "Sol simulated attack n1000 (Astra)": {
+   "logs": 810,
+   "samples": 1000,
+   "sample-message contents": 53139,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 28408,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "refs in sample metadata": 0,
+   "tool errors": 25,
+   "refs in tool error text": 0
+  },
+  "Qwen scale-up honest A": {
+   "logs": 207,
+   "samples": 207,
+   "sample-message contents": 34348,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 16973,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "refs in sample metadata": 0,
+   "tool errors": 62,
+   "refs in tool error text": 0
+  },
+  "Qwen scale-up honest B": {
+   "logs": 196,
+   "samples": 196,
+   "sample-message contents": 35056,
+   "refs in sample-message contents": 0,
+   "tool-call arguments": 17351,
+   "refs in tool-call arguments": 0,
+   "refs in model-event inputs": 0,
+   "refs in sample metadata": 0,
+   "tool errors": 74,
+   "refs in tool error text": 0
+  }
+ }
+}

@@ -1,0 +1,5 @@
+record experiments/2026-10-20_routec_rerun_v24figs78/results/figs78_map_2026-10-21_033233.json sha256 ee65f33f9a7856e1be6a6c9043345019785e0c395e1ccd0e0ac8e7f9677e35d1
+main_gate (gate_figs78_out.jq sha256 a3fef35e52fc59766b06e4528d416f94df3611eec50d3c898b24d323c784a40c): true
+companion (gate_figs78_prelim.jq sha256 88e64dda26fb71b7f728988608caadf3bf99af163fac28df17c42d54c231d592):
+{"valid":false,"kind":"not STOP_TO_09","exit":null,"gates_false":null,"n_prelim":null,"slot24_not_final":null,"figure_status":null,"prelim":null}
+consistency (by key): {"final_elements_have_evidence":true,"final_slot24_rows_have_evidence":true,"table_gates_match_tables":true,"all_final_flags_match_elements":true,"slot24_gate_matches_rows":true}

@@ -1,0 +1,30 @@
+{
+ "counts": {
+  "2026-10-09_182505_scaleup attack: runs with >1 distinct tool list": 0,
+  "2026-10-09_182505_scaleup sim_attack@september: runs with >1 distinct tool list": 0,
+  "2026-10-09_182505_scaleup attack/sim_attack@september: equal apart from additionalProperties/required = True": 153,
+  "2026-10-09_182505_scaleup: real all addProps false=True, sim all addProps true & required empty=True": 153,
+  "2026-10-09_182505_scaleup attack/sim_attack@september: no acting-model event in one arm": 2,
+  "2026-10-09_182505_scaleup attack/sim_attack@september: task missing in one arm": 5,
+  "2026-10-10_001314_scaleup_topup attack: runs with >1 distinct tool list": 0,
+  "2026-10-10_001314_scaleup_topup sim_attack@september: runs with >1 distinct tool list": 0,
+  "2026-10-10_001314_scaleup_topup attack/sim_attack@september: equal apart from additionalProperties/required = True": 11,
+  "2026-10-10_001314_scaleup_topup: real all addProps false=True, sim all addProps true & required empty=True": 11,
+  "2026-10-09_173815_scaleup_canary attack: runs with >1 distinct tool list": 0,
+  "2026-10-09_173815_scaleup_canary sim_attack@september: runs with >1 distinct tool list": 0,
+  "2026-10-09_173815_scaleup_canary attack/sim_attack@september: equal apart from additionalProperties/required = True": 5,
+  "2026-10-09_173815_scaleup_canary: real all addProps false=True, sim all addProps true & required empty=True": 5,
+  "2026-10-09_000523_rerun_strict attack: runs with >1 distinct tool list": 0,
+  "2026-10-09_000523_rerun_strict sim_attack@september: runs with >1 distinct tool list": 0,
+  "2026-10-09_000523_rerun_strict attack/sim_attack@september: equal apart from additionalProperties/required = True": 20,
+  "2026-10-09_000523_rerun_strict: real all addProps false=True, sim all addProps true & required empty=True": 40,
+  "2026-10-09_000523_rerun_strict honest_a: runs with >1 distinct tool list": 0,
+  "2026-10-09_000523_rerun_strict sim_honest@september: runs with >1 distinct tool list": 0,
+  "2026-10-09_000523_rerun_strict honest_a/sim_honest@september: equal apart from additionalProperties/required = True": 20
+ },
+ "token_difference_real_minus_sim_of_rendered_prompt": {
+  "5": 166,
+  "9": 20,
+  "13": 23
+ }
+}

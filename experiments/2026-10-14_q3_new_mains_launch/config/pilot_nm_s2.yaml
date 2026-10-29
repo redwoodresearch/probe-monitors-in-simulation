@@ -1,0 +1,20 @@
+# New-mains split S2 (experiments/2026-10-14_q3_new_mains_launch/RULE.md; Aswin via 0d: "run the 360 new main tasks now,
+# it's okay, just run it"). The scale-up's quarter config (pilot_311_q1.yaml) on this split's cells: per cell honest_a (real;
+# the fork source), attack and honest_b (real) and sim_attack@september (PAUSED for good by results/PAUSE_SIMS: the
+# simulated attacks run only in the follow-up); plus each cell's `<key>_r2` entry (real_arms [attack]): its second real
+# attack, in this same launch. construction new_mains_v1.
+tasks: config/tasks_nm_s2_launch.json   # make_splits_nm.py -> add_r2.py
+real_simulator: september
+real_arms: [honest_a, attack, honest_b]
+simulators: [september]
+sim_arms: [sim_attack]
+simulator_confirmed: true
+max_runs_per_server: 10
+max_real_runs: 60
+reference_tries: 3
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+spend:   # main: the simulated entries are PAUSED for good; this only admits every cell (run_pilot.spend() reserves $75 for each paused entry; Codex r1 item 3)
+  cap_usd: 6825
+  worst_case_limit_usd: 6825
+  worst_per_sim_run_usd: 75
+  prior_per_sim_run_usd: 16.48

@@ -1,0 +1,5 @@
+{
+ "label": "own_all_L48 fold seed (09 Append 40 amendment 1 @ 01b2d13db: environment-stratified seeded hash for mains with no Sol #36 fold); committed BEFORE any fold list is computed or any training",
+ "seed": "own_all_L48|2026-10-15|env-hash|v1",
+ "rule": "for each environment e (the cell key's suffix after the first '_'), the universe mains of e with no r36 fold are ordered by sha256(seed + '|' + main); fold = (offset_e + rank) mod 5, offset_e = int(sha256(seed + '|env|' + e), 16) mod 5. Mains with an r36 fold keep it."
+}

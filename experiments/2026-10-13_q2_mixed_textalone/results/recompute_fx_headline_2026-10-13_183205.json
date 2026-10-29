@@ -1,0 +1,39 @@
+{
+ "recomputed": {
+  "history gap @ 1%": 38.63152289669862,
+  "text gap @ 1%": 14.164004259850907,
+  "history run AUROC": 0.7660393707306506,
+  "text run AUROC": 0.6515348959591526,
+  "text share": 0.5695957539779811
+ },
+ "file": {
+  "history gap @ 1%": 38.63152289669862,
+  "text gap @ 1%": 14.164004259850907,
+  "history run AUROC": 0.7660393707306506,
+  "text run AUROC": 0.6515348959591526,
+  "text share": 0.5695957539779811
+ },
+ "abs diff": {
+  "history gap @ 1%": 0.0,
+  "text gap @ 1%": 0.0,
+  "history run AUROC": 0.0,
+  "text run AUROC": 0.0,
+  "text share": 0.0
+ },
+ "max abs diff": 0.0,
+ "agree (1e-9)": true,
+ "catch @ 1%": {
+  "history": {
+   "sim-attack-fx-full": 73.3226837060703,
+   "real-attack-e2": 34.691160809371674,
+   "real-attack-e1": 34.132055378061764,
+   "real-honest": 1.4141414141414141
+  },
+  "text": {
+   "sim-attack-fx-full": 26.437699680511184,
+   "real-attack-e2": 12.273695420660276,
+   "real-attack-e1": 11.368477103301384,
+   "real-honest": 1.8686868686868685
+  }
+ }
+}

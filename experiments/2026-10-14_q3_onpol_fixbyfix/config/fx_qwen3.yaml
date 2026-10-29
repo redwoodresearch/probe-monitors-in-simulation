@@ -1,0 +1,11 @@
+# Fix-by-fix (RULE.md here): onpol_qwen3.yaml's settings (all 64 layers, mean_final, the 32k cut) on stage_fixbyfix.py's single-fix
+# copies of Qwen3.5-27B's simulated runs (changed runs only: F3, F4, F5, F6, F8, F9; 395 runs).
+run: 2026-10-14_q3onpol_q35own_fx_qwen3-32b_all_v1
+inputs_from: 2026-10-14_q3onpol_q35own_fx_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 16
+chunk_size: 10
+mean_final: true

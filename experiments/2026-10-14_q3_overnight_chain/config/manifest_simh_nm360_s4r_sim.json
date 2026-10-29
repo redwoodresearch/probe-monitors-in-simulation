@@ -1,0 +1,11 @@
+{
+ "note": "scale-up simulated follow-up 2026-10-15_simh_nm_s4r of 2026-10-14_newmains_s4r: sim_honest@september; honest donors from the main launch",
+ "counts": {
+  "files": 0,
+  "by_arm": {}
+ },
+ "counted_attempts_without_eval": {
+  "main": []
+ },
+ "files": []
+}

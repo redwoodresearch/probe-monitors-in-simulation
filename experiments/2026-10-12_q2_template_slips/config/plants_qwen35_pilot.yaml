@@ -1,0 +1,14 @@
+# The step-2 pilot (PLAN.md addendum 3): one H200, the fixed list in plants_pilot_transcripts.json (4 controls, 2 runs per
+# plant), each read twice; otherwise as plants_qwen35.yaml.
+run: 2026-10-12_q2_tplslips_plants_qwen35-27b_v1_pilot
+inputs_from: 2026-10-12_q2_tplslips_plants_inputs_v1
+transcripts: plants_pilot_transcripts.json
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null
+pad_to: 4096
+shards: 1
+chunk_size: 4
+repeat_forward: true
+layers: [16, 24, 32, 40, 48, 56, 63]

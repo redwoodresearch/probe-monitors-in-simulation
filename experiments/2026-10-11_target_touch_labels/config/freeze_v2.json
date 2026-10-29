@@ -1,0 +1,11 @@
+{
+  "created_at_pt": "2026-10-11T11:57:50.017553-07:00",
+  "before_v2_scan": true,
+  "rule_sha256": "835d1c0439c2588ce77093d51f50eec93a73eb06399af8ceee2333e24dcb631b",
+  "targets_sha256": "6eb0e53853642c196831bba809d51a533a918280f39a6928fa5019404a148111",
+  "runs_sha256": "a56dbc133913b05eb57f6d3829fee7ee99ccee97171f6f484994dc0160d30900",
+  "files": {
+    "target_touch.py": "d2e4fda3f04c082ebbec1b4a554485fbd5dffc59521a9bba57cec0f7e6c797bf",
+    "target_label_pipeline.py": "ffc1cfcc62d99a5003775f508e57b3868c11bbff892f8ce5848d98057f79cc9f"
+  }
+}

@@ -1,0 +1,7 @@
+# Placebos and year swap (2026-10-08; Aswin's choice X via the orchestrator, about $10-12, stop $15; launch approved by
+# Aswin in session): three arms staged into one run, extracted in one H100 container with one model load.
+base: 2026-10-06_la_segment-end_qwen3-32b_v1
+swap_runs: ../2026-10-07_q2_rendering_swap/config/swap_runs.json
+ext_runs: ../2026-10-07_q2_rendering_swap/config/swap_runs_ext.json   # fetch from S3 first: ../manifest_inputs_v1.json (sha256 and command)
+staged_run: 2026-10-08_q2_placebo_year_inputs_v1
+note_placebo: "The text shown above is the current content of the edited region, listed with line numbers so that you can refer back to it later, too."

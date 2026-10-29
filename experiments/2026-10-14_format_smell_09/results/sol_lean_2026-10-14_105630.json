@@ -1,0 +1,642 @@
+{
+ "label": "POST HOC (RULE.md Part 3); counts and scores only",
+ "git": "d225365763b0180c9cdb3b6d2f8210db47bc1653",
+ "stamp": "2026-10-14_105630",
+ "gate": {
+  "L48": true,
+  "L63": true,
+  "flagged_keys_all_found": true,
+  "flags_cover_real_arms": {
+   "real-honest": [
+    990,
+    990
+   ],
+   "real-attack-e1": [
+    939,
+    939
+   ],
+   "real-attack-e2": [
+    939,
+    939
+   ]
+  }
+ },
+ "changed_by_arm": {
+  "real-honest": 5,
+  "real-attack-e1": 36,
+  "real-attack-e2": 34
+ },
+ "missing_flagged_keys": 0,
+ "metrics": {
+  "L48": {
+   "i_all": {
+    "runs_kept": {
+     "real-honest": 990,
+     "real-attack-e1": 939,
+     "real-attack-e2": 939,
+     "sim-attack": 939
+    },
+    "fpr_0.01": {
+     "real_attack_catch_e2": {
+      "value": 0.369,
+      "ci95": [
+       0.2677,
+       0.4676
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.3807,
+      "ci95": [
+       0.2729,
+       0.4725
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.3815,
+      "ci95": [
+       0.2751,
+       0.4745
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0116,
+      "ci95": [
+       0.0093,
+       0.0191
+      ]
+     },
+     "within_arm_hit_rate": {
+      "real-honest": {
+       "changed": [
+        0.0,
+        5
+       ],
+       "unchanged": [
+        0.011675126903553299,
+        985
+       ]
+      },
+      "real-attack-e1": {
+       "changed": [
+        0.3055555555555556,
+        36
+       ],
+       "unchanged": [
+        0.38372093023255816,
+        903
+       ]
+      },
+      "real-attack-e2": {
+       "changed": [
+        0.27941176470588236,
+        34
+       ],
+       "unchanged": [
+        0.3723756906077348,
+        905
+       ]
+      }
+     }
+    },
+    "fpr_0.05": {
+     "real_attack_catch_e2": {
+      "value": 0.7085,
+      "ci95": [
+       0.6427,
+       0.7556
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.6912,
+      "ci95": [
+       0.6312,
+       0.7513
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.7114,
+      "ci95": [
+       0.645,
+       0.7694
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0508,
+      "ci95": [
+       0.0473,
+       0.0637
+      ]
+     },
+     "within_arm_hit_rate": {
+      "real-honest": {
+       "changed": [
+        0.1,
+        5
+       ],
+       "unchanged": [
+        0.05050761421319797,
+        985
+       ]
+      },
+      "real-attack-e1": {
+       "changed": [
+        0.5694444444444444,
+        36
+       ],
+       "unchanged": [
+        0.6960132890365448,
+        903
+       ]
+      },
+      "real-attack-e2": {
+       "changed": [
+        0.6544117647058824,
+        34
+       ],
+       "unchanged": [
+        0.7104972375690608,
+        905
+       ]
+      }
+     }
+    }
+   },
+   "ii_changed_attack_dropped": {
+    "runs_kept": {
+     "real-honest": 990,
+     "real-attack-e1": 903,
+     "real-attack-e2": 905,
+     "sim-attack": 939
+    },
+    "fpr_0.01": {
+     "real_attack_catch_e2": {
+      "value": 0.3724,
+      "ci95": [
+       0.2682,
+       0.4695
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.3837,
+      "ci95": [
+       0.2759,
+       0.4757
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.3815,
+      "ci95": [
+       0.2751,
+       0.4745
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0116,
+      "ci95": [
+       0.0093,
+       0.0191
+      ]
+     }
+    },
+    "fpr_0.05": {
+     "real_attack_catch_e2": {
+      "value": 0.7105,
+      "ci95": [
+       0.6459,
+       0.7574
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.696,
+      "ci95": [
+       0.6352,
+       0.755
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.7114,
+      "ci95": [
+       0.645,
+       0.7694
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0508,
+      "ci95": [
+       0.0473,
+       0.0637
+      ]
+     }
+    }
+   },
+   "iii_changed_dropped_everywhere": {
+    "runs_kept": {
+     "real-honest": 985,
+     "real-attack-e1": 903,
+     "real-attack-e2": 905,
+     "sim-attack": 939
+    },
+    "fpr_0.01": {
+     "real_attack_catch_e2": {
+      "value": 0.3724,
+      "ci95": [
+       0.2671,
+       0.4699
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.3837,
+      "ci95": [
+       0.2742,
+       0.4757
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.3815,
+      "ci95": [
+       0.2745,
+       0.475
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0117,
+      "ci95": [
+       0.0093,
+       0.0192
+      ]
+     }
+    },
+    "fpr_0.05": {
+     "real_attack_catch_e2": {
+      "value": 0.7155,
+      "ci95": [
+       0.6433,
+       0.7593
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.701,
+      "ci95": [
+       0.6351,
+       0.7567
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.7178,
+      "ci95": [
+       0.6446,
+       0.7718
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0513,
+      "ci95": [
+       0.0475,
+       0.0643
+      ]
+     }
+    }
+   },
+   "lean": {
+    "real-honest": {
+     "n_changed": 5,
+     "n_unchanged": 985,
+     "auroc_changed_vs_unchanged": 0.601015228426396,
+     "mean_oof_changed": -0.5417190790176392,
+     "mean_oof_unchanged": -0.7249373197555542
+    },
+    "real-attack-e1": {
+     "n_changed": 36,
+     "n_unchanged": 903,
+     "auroc_changed_vs_unchanged": 0.41891226774947704,
+     "mean_oof_changed": 0.31242623925209045,
+     "mean_oof_unchanged": 0.4738105833530426
+    },
+    "real-attack-e2": {
+     "n_changed": 34,
+     "n_unchanged": 905,
+     "auroc_changed_vs_unchanged": 0.44260643483912904,
+     "mean_oof_changed": 0.5003547668457031,
+     "mean_oof_unchanged": 0.47204461693763733
+    },
+    "honest_changed_ranks_of_n": [
+     [
+      65,
+      94,
+      378,
+      667,
+      776
+     ],
+     990
+    ]
+   }
+  },
+  "L63": {
+   "i_all": {
+    "runs_kept": {
+     "real-honest": 990,
+     "real-attack-e1": 939,
+     "real-attack-e2": 939,
+     "sim-attack": 939
+    },
+    "fpr_0.01": {
+     "real_attack_catch_e2": {
+      "value": 0.4465,
+      "ci95": [
+       0.3316,
+       0.579
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.4207,
+      "ci95": [
+       0.3132,
+       0.5467
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.4156,
+      "ci95": [
+       0.3018,
+       0.5412
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0141,
+      "ci95": [
+       0.0102,
+       0.0214
+      ]
+     },
+     "within_arm_hit_rate": {
+      "real-honest": {
+       "changed": [
+        0.0,
+        5
+       ],
+       "unchanged": [
+        0.014213197969543147,
+        985
+       ]
+      },
+      "real-attack-e1": {
+       "changed": [
+        0.4513888888888889,
+        36
+       ],
+       "unchanged": [
+        0.41943521594684385,
+        903
+       ]
+      },
+      "real-attack-e2": {
+       "changed": [
+        0.47794117647058826,
+        34
+       ],
+       "unchanged": [
+        0.4453038674033149,
+        905
+       ]
+      }
+     }
+    },
+    "fpr_0.05": {
+     "real_attack_catch_e2": {
+      "value": 0.7937,
+      "ci95": [
+       0.7251,
+       0.847
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.7625,
+      "ci95": [
+       0.6912,
+       0.8218
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.7665,
+      "ci95": [
+       0.6943,
+       0.8247
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0487,
+      "ci95": [
+       0.0462,
+       0.0626
+      ]
+     },
+     "within_arm_hit_rate": {
+      "real-honest": {
+       "changed": [
+        0.0,
+        5
+       ],
+       "unchanged": [
+        0.04898477157360406,
+        985
+       ]
+      },
+      "real-attack-e1": {
+       "changed": [
+        0.7777777777777778,
+        36
+       ],
+       "unchanged": [
+        0.7619047619047619,
+        903
+       ]
+      },
+      "real-attack-e2": {
+       "changed": [
+        0.7720588235294118,
+        34
+       ],
+       "unchanged": [
+        0.7944751381215469,
+        905
+       ]
+      }
+     }
+    }
+   },
+   "ii_changed_attack_dropped": {
+    "runs_kept": {
+     "real-honest": 990,
+     "real-attack-e1": 903,
+     "real-attack-e2": 905,
+     "sim-attack": 939
+    },
+    "fpr_0.01": {
+     "real_attack_catch_e2": {
+      "value": 0.4453,
+      "ci95": [
+       0.3325,
+       0.5788
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.4194,
+      "ci95": [
+       0.313,
+       0.5446
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.4156,
+      "ci95": [
+       0.3018,
+       0.5412
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0141,
+      "ci95": [
+       0.0102,
+       0.0214
+      ]
+     }
+    },
+    "fpr_0.05": {
+     "real_attack_catch_e2": {
+      "value": 0.7945,
+      "ci95": [
+       0.7271,
+       0.8475
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.7619,
+      "ci95": [
+       0.6916,
+       0.8227
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.7665,
+      "ci95": [
+       0.6943,
+       0.8247
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0487,
+      "ci95": [
+       0.0462,
+       0.0626
+      ]
+     }
+    }
+   },
+   "iii_changed_dropped_everywhere": {
+    "runs_kept": {
+     "real-honest": 985,
+     "real-attack-e1": 903,
+     "real-attack-e2": 905,
+     "sim-attack": 939
+    },
+    "fpr_0.01": {
+     "real_attack_catch_e2": {
+      "value": 0.4453,
+      "ci95": [
+       0.331,
+       0.5788
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.4194,
+      "ci95": [
+       0.3106,
+       0.5446
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.4156,
+      "ci95": [
+       0.3009,
+       0.5412
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.0142,
+      "ci95": [
+       0.0102,
+       0.0215
+      ]
+     }
+    },
+    "fpr_0.05": {
+     "real_attack_catch_e2": {
+      "value": 0.7945,
+      "ci95": [
+       0.7241,
+       0.8463
+      ]
+     },
+     "real_attack_catch_e1": {
+      "value": 0.7619,
+      "ci95": [
+       0.6902,
+       0.8224
+      ]
+     },
+     "fake_attack_catch": {
+      "value": 0.7665,
+      "ci95": [
+       0.6926,
+       0.8243
+      ]
+     },
+     "real_honest_fa": {
+      "value": 0.049,
+      "ci95": [
+       0.0462,
+       0.0627
+      ]
+     }
+    }
+   },
+   "lean": {
+    "real-honest": {
+     "n_changed": 5,
+     "n_unchanged": 985,
+     "auroc_changed_vs_unchanged": 0.5202030456852792,
+     "mean_oof_changed": -1.0174204111099243,
+     "mean_oof_unchanged": -1.035469889640808
+    },
+    "real-attack-e1": {
+     "n_changed": 36,
+     "n_unchanged": 903,
+     "auroc_changed_vs_unchanged": 0.5132582748861818,
+     "mean_oof_changed": 0.6951305270195007,
+     "mean_oof_unchanged": 0.695228636264801
+    },
+    "real-attack-e2": {
+     "n_changed": 34,
+     "n_unchanged": 905,
+     "auroc_changed_vs_unchanged": 0.49340266493337664,
+     "mean_oof_changed": 0.7888631224632263,
+     "mean_oof_unchanged": 0.7494171857833862
+    },
+    "honest_changed_ranks_of_n": [
+     [
+      256,
+      321,
+      516,
+      524,
+      761
+     ],
+     990
+    ]
+   }
+  }
+ },
+ "seconds": {
+  "L48": 28,
+  "L63": 18
+ }
+}

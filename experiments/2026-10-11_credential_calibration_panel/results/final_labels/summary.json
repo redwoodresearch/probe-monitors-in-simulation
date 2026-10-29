@@ -1,0 +1,206 @@
+{
+  "valid_judge_packets": 445,
+  "expected_judge_packets": 450,
+  "failed_attempts": [
+    {
+      "packet": "bd3eb80bbe02ca77bf118eb9855dd21f",
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "transport_error"
+    },
+    {
+      "packet": "087c48b887ea813e24291f7dbfb6791f",
+      "model": "openai/gpt-5.4",
+      "status": "transport_error"
+    },
+    {
+      "packet": "58f74ee9dfc04cf43839ee52c3865ac3",
+      "model": "x-ai/grok-4.7",
+      "status": "transport_error"
+    },
+    {
+      "packet": "4d38e6cf136b2a7a1159f652c3289e0e",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "transport_error"
+    },
+    {
+      "packet": "9ddcfc2563bf41af5ad0bd89d7711227",
+      "model": "moonshotai/kimi-k3",
+      "status": "invalid_response"
+    },
+    {
+      "packet": "1c9baac8248d5f3f04829b3cbb98ae45",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "transport_error"
+    },
+    {
+      "packet": "49f78882e852f6358c65a4b7ee73c4c1",
+      "model": "moonshotai/kimi-k3",
+      "status": "invalid_response"
+    },
+    {
+      "packet": "eca2b7e72361b769c5bb211609abe8e6",
+      "model": "moonshotai/kimi-k3",
+      "status": "transport_error"
+    },
+    {
+      "packet": "eca2b7e72361b769c5bb211609abe8e6",
+      "model": "x-ai/grok-4.7",
+      "status": "transport_error"
+    },
+    {
+      "packet": "0f886acff5384670bdd90bfb92dcc048",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "transport_error"
+    },
+    {
+      "packet": "a65020625f78d793cf8e89c6586195fb",
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "transport_error"
+    },
+    {
+      "packet": "4bb107e9fe4a298cc14a631c7c6b459c",
+      "model": "openai/gpt-5.4",
+      "status": "transport_error"
+    },
+    {
+      "packet": "ccd5ae5cf0917753eb617da7cadace06",
+      "model": "moonshotai/kimi-k3",
+      "status": "transport_error"
+    },
+    {
+      "packet": "b658c27ccd6574a814fa81d43da65d85",
+      "model": "openai/gpt-5.4",
+      "status": "transport_error"
+    },
+    {
+      "packet": "a26ccaa3a45b8e1ee299a869fcbaffe0",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "invalid_response"
+    },
+    {
+      "packet": "52f6813b4b248c551ec80775f72ea5e2",
+      "model": "openai/gpt-5.4",
+      "status": "transport_error"
+    },
+    {
+      "packet": "2d5e2724608044686759ee3c67c7b539",
+      "model": "moonshotai/kimi-k3",
+      "status": "transport_error"
+    },
+    {
+      "packet": "3a8ba0a4c9585f5d2e83a7e79c190d00",
+      "model": "moonshotai/kimi-k3",
+      "status": "transport_error"
+    },
+    {
+      "packet": "a26ccaa3a45b8e1ee299a869fcbaffe0",
+      "model": "x-ai/grok-4.7",
+      "status": "transport_error"
+    },
+    {
+      "packet": "eb813698950a7f97b6b7e3e032aa089d",
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "transport_error"
+    },
+    {
+      "packet": "eca2b7e72361b769c5bb211609abe8e6",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "transport_error"
+    },
+    {
+      "packet": "4d38e6cf136b2a7a1159f652c3289e0e",
+      "model": "openai/gpt-5.4",
+      "status": "transport_error"
+    },
+    {
+      "packet": "bd6fdb72f12ca40e5ddb5cef6dff4fa2",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "transport_error"
+    },
+    {
+      "packet": "6d405158853a9d61ee15e5efbb801e59",
+      "model": "moonshotai/kimi-k3",
+      "status": "invalid_response"
+    },
+    {
+      "packet": "a87abfc33a49a909d0fdd93c9f857e36",
+      "model": "openai/gpt-5.4",
+      "status": "transport_error"
+    },
+    {
+      "packet": "432e8de2e004284d97dcccf13e607f62",
+      "model": "moonshotai/kimi-k3",
+      "status": "invalid_response"
+    },
+    {
+      "packet": "8e7bb9af375b7dc93455d75c6002bceb",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "transport_error"
+    },
+    {
+      "packet": "f8c28da7b0ded16cf22438bd0d0b9614",
+      "model": "openai/gpt-5.4",
+      "status": "transport_error"
+    },
+    {
+      "packet": "e3e664f0032ca8ad8953ed03919939de",
+      "model": "openai/gpt-5.4",
+      "status": "transport_error"
+    },
+    {
+      "packet": "449abf29b122dac61799090e2c7f0140",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "transport_error"
+    },
+    {
+      "packet": "bd3eb80bbe02ca77bf118eb9855dd21f",
+      "model": "moonshotai/kimi-k3",
+      "status": "transport_error"
+    },
+    {
+      "packet": "53df41adb400c119ba8302af90a20cf6",
+      "model": "moonshotai/kimi-k3",
+      "status": "transport_error"
+    },
+    {
+      "packet": "09b3f99801d100882ae51174de011d81",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "transport_error"
+    },
+    {
+      "packet": "48319aa88e2c513dee813d8bbfd12527",
+      "model": "x-ai/grok-4.7",
+      "status": "transport_error"
+    },
+    {
+      "packet": "3742dc109ad9971db0e9777146d67021",
+      "model": "moonshotai/kimi-k3",
+      "status": "transport_error"
+    },
+    {
+      "packet": "6ff82cbb5f7349c5ce816d4b0b3006cf",
+      "model": "x-ai/grok-4.7",
+      "status": "transport_error"
+    },
+    {
+      "packet": "00ad24db9df63a934e21cc7b833ad801",
+      "model": "deepseek/deepseek-v4-pro",
+      "status": "transport_error"
+    },
+    {
+      "packet": "3609d6681fba4a4efd3a59da458cb81a",
+      "model": "moonshotai/kimi-k3",
+      "status": "transport_error"
+    }
+  ],
+  "blind_consensus_sha256": "9b50efd9d9a1e417a4b5fa9be69d617ad72e11af44d56656bbd30347c6258c83",
+  "ledger_sha256": "c291b0f8220c5b068a37a42b9702debfbc6c01a3a8f3047ded800c50ec5a6a2b",
+  "items_sha256": "63a80fa0c6ea441ba088aaee5463d13256c829a3d9c087c40b51e7cc52601ed8",
+  "adjudicated_outputs": 8,
+  "adjudication_sha256": "7e715088a47c3301f549f04b375e83d7f171ab987ed2e0471b3b03439c7a810f",
+  "unresolved_items": 0,
+  "rows": 1788,
+  "complete_runs": 59,
+  "positives": 131,
+  "labels_sha256": "2854d11678f8b76a4e6acb3df63316ea0a7ed028eb5fccdef601ef7efd4775b3"
+}

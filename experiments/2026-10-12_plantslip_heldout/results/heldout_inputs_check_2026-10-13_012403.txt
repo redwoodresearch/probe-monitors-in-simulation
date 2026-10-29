@@ -1,0 +1,63 @@
+# check_heldout_inputs.py @ 3d3ad20f5789c129587489878320d0a469b0d418, run 2026-10-13_012403 PT, as-run results folder: wt_row2 (aswin/q2-heldout-step2 @ 62edb8e8)
+match    [all] manifest part 2 sha256 2ff64db39ebd = 09's 2ff64db39ebd; supplement 0911c962646e = 09's 0911c962646e
+match    [all] manifest part 1 sha256 9cdd5d47289a = results_manifest_v1's pin = q2_prepare_real_only.py's PART1_SHA
+match    [all] the supplement keeps manifest part 2's real-only record and score-level gate
+match    [rwbMV] olmo: manifest part 1's probe pins equal the fit record's archive receipt (549.json@09e0e57fc9ee951f35df385cc3f47e23696006a6)
+match    [rwbMV] llama: manifest part 1's probe pins equal the fit record's archive receipt (129.json@1d6c881d1f7277d0b4333aedd40292edef00f785)
+match    [rwSMq] qwen3-32b: the results manifests list exactly one gate and one planted record (q2_frozen_scores_gate_2026-10-12_193504.json, q2_frozen_scores_planted_2026-10-12_202420.json)
+match    [rwSMq] qwen3-32b: the gate record is manifest part 2's score-level gate (record and npz sha256)
+match    [rwSMq] the manifest-pinned gate's staging sha256 f1a68c90a5d2 starts with the scripts' pinned STAGE_SHA f1a68c90a5d2
+match    [rwSMq] qwen3-32b: gate is mode gate, planted is mode planted, same frozen detector (2026-10-12_192842)
+match    [rwSMq] qwen3-32b: gate and planted staging sha256 equal the manifest-pinned gate's
+match    [rwSMq] qwen3-32b: gate failed no layer and passed every planted layer ['20', '28', '36', '44', '52', '60']
+match    [rwbMV] qwen3-32b: gate and planted probe sha256 equal the frozen-artifact pins (manifest part 2) at every scored layer
+match    [rwSMq] qwen3-32b: gate and planted score npz sha256 equal their manifest entries
+match    [rwSMq] olmo: the results manifests list exactly one gate and one planted record (q2_olmo_scores_gate_2026-10-12_201619.json, q2_olmo_scores_planted_2026-10-12_203343.json)
+match    [rwSMq] olmo: gate is mode gate, planted is mode planted, same frozen detector (2026-10-12_110549)
+match    [rwSMq] olmo: gate and planted staging sha256 equal the manifest-pinned gate's
+match    [rwSMq] olmo: gate and planted real-only record sha256 equal manifest part 2's (415e2c422cb7)
+match    [rwSMq] olmo: gate failed no layer and passed every planted layer ['16', '24', '48', '63']
+match    [rwbMV] olmo: gate and planted probe sha256 equal the frozen-artifact pins (manifest part 1) at every scored layer
+match    [rwSMq] olmo: gate and planted score npz sha256 equal their manifest entries
+match    [rwSMq] llama: the results manifests list exactly one gate and one planted record (q2_llama_scores_gate_2026-10-12_204411.json, q2_llama_scores_planted_2026-10-12_212315.json)
+match    [rwSMq] llama: gate is mode gate, planted is mode planted, same frozen detector (2026-10-12_143129)
+match    [rwSMq] llama: gate and planted staging sha256 equal the manifest-pinned gate's
+match    [rwSMq] llama: gate and planted real-only record sha256 equal manifest part 2's (415e2c422cb7)
+match    [rwSMq] llama: gate failed no layer and passed every planted layer ['20', '30', '40', '50', '79']
+match    [rwbMV] llama: gate and planted probe sha256 equal the frozen-artifact pins (manifest part 1) at every scored layer
+match    [rwSMq] llama: gate and planted score npz sha256 equal their manifest entries
+match    [rwS2y] q2_step2d_2026-10-12_200953.json: sha256 7c96a21ec129 = its manifest's frozen thresholds and masks
+match    [rwS2y] q2_step2d_2026-10-12_200953.json: records manifest part 2's real-only record and score-level gate, and the pinned staging record
+match    [rwS2y] q2_step2d_2026-10-12_211734.json: sha256 be3739a7789e = its manifest's frozen thresholds and masks
+match    [rwS2y] q2_step2d_2026-10-12_211734.json: records manifest part 2's real-only record and score-level gate, and the pinned staging record
+match    [rwbQz] the real-only record step 2(d) read (415e2c422cb7) is the S3 copy, and it records manifest part 1's pinned sha256
+match    [rwbQz] olmo: the real-only record's source score files equal manifest part 1's pins at layers ['16', '24', '48', '63']
+match    [rwbQs] olmo: the real-only record's source runs.json equals the fit record's archived data/runs.json (e2c86cf48983)
+match    [rwbQs] olmo: the real-only runs file and score files (each sha256 = the record's and manifest part 2's) share one source_index order
+match    [rwbQz] llama: the real-only record's source score files equal manifest part 1's pins at layers ['20', '30', '40', '50', '79']
+match    [rwbQs] llama: the real-only record's source runs.json equals the fit record's archived data/runs.json (ad10475afccc)
+match    [rwbQs] llama: the real-only runs file and score files (each sha256 = the record's and manifest part 2's) share one source_index order
+match    [rwbQs] qwen3-32b: the fit record's S3 copy is manifest part 2's run record and the one step 2(d) records
+match    [rwbQs] qwen3-32b: manifest part 2's archived data/runs.json (49a7eaf0ec19) and scores equal the fit record's receipt
+match    [rwbQs] qwen3-32b: the archived data/runs.json on S3 hashes to that receipt
+match    [rwbQs] qwen3-32b: the 6 score files step 2(d) recorded equal the fit's archived ones
+match    [rwbQs] qwen3-32b, as-run folder: its six score files are the ones step 2(d) hashed (the folder it read)
+match    [rwbQs] qwen3-32b, as-run folder: its runs.json equals the fit's archived data/runs.json, last written before step 2(d)'s output stamp (corroboration, not a recorded input hash: it assumes the folder is untouched since)
+match    [rweqe] the results manifests list two manifest_part2 files ['manifest_part2_2026-10-12_201334.json', 'manifest_part2_2026-10-12_212356.json']
+match    [rweqe] the as-run results folder holds the same two
+match    [rweqe] the Llama run's recorded --step2d input is the step-2(d) record manifest part 2 (2ff64db3..., 09-checked) pins
+match    [rweqe] the supplement pins the Llama run's own output (be3739a7...), so it postdates that run (chronology, assuming no manifest_part2 file was written and later removed; it can't prove the folder's past contents)
+match    [rweqe] the Llama run carried over every field of the 15 configurations except Llama's masks (thresholds, false-alarm and convergence gates unchanged)
+match    [rweqe] y v2 records the supplement (sha256), its step-2(d) record and manifest part 1
+match    [rwzoc] the results manifests list one simulated scoring record ['q2_sim_scores_qwen3_2026-10-12_215648.json']
+match    [rwzoc] its fit run is the preregistered 2026-10-12_192842 (manifest part 2's), and the fit record it hashed is manifest part 2's run record
+match    [rwzoc] its probe sha256 equal the frozen fit's archived probes_L20.npz, probes_L28.npz, probes_L36.npz, probes_L44.npz, probes_L52.npz, probes_L60.npz
+match    [rwzoc] its score npz sha256 equals its manifest entry
+match    [rwzoc] q2_y_2026-10-12_215741.json (y) records this simulated scoring record and, for thresholds, the step-2(d) record the supplement pins, built from the same fit record
+match    [rwzoc] q2_y_2026-10-12_220622.json (y) records this simulated scoring record and, for thresholds, the step-2(d) record the supplement pins, built from the same fit record
+match    [rwS2y] q2_x_2026-10-12_203432.json: its step-2 record is q2_step2d_2026-10-12_200953.json with the checked sha256
+match    [rwS2y] q2_x_2026-10-12_203432.json: its staging record and planted records (qwen3-32b, olmo) have the checked sha256
+match    [rwS2y] q2_x_2026-10-12_212448.json: its step-2 record is q2_step2d_2026-10-12_211734.json with the checked sha256
+match    [rwS2y] q2_x_2026-10-12_212448.json: its staging record and planted records (qwen3-32b, olmo, llama) have the checked sha256
+0 mismatches or checks not run
+exit 0

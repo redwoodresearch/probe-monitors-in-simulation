@@ -1,0 +1,12 @@
+# The call_end fix (2026-10-07): the v4 run's settings (qwen35_alllayers_v4.yaml), re-reading only the transcripts whose
+# Qwen3.5 call_end the fixed reader moves, plus 20 unaffected controls to compare with the stored activations.
+run: 2026-10-07_la_segment-end-v4_qwen35-27b_alllayers_callend-fix_v1
+inputs_from: 2026-10-06_la_segment-end-v4_qwen3-32b_v1   # the v4 run's staged inputs (shared Volume, read only)
+transcripts: callend_fix_transcripts_v4.json            # affected + controls, and the inputs' sha256s, from the committed audit
+model: Qwen/Qwen3.5-27B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: null                                        # whole transcripts
+pad_to: 4096                                            # as the v4 run
+shards: 8                                               # 268 transcripts; one transcript per forward pass, as before
+chunk_size: 25

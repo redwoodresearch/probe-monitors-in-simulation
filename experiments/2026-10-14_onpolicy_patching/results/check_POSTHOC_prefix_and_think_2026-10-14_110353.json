@@ -1,0 +1,35 @@
+{
+ "git": "128c5e8c1a64141bf432309776d2c8e1e52d4b3e",
+ "reply_map_sha256": "b0c2ca05e2ec762fb4ffb64b0c8252143bb9f6f31347483e66c9a262090e2d10",
+ "dump": "2026-10-14_q2_onpolicy_patching_qwen3-32b_l7_v1",
+ "inputs": "2026-10-14_q2_onpolicy_patching_inputs_v1",
+ "prefix_gate": {
+  "pairs_with_changes": 83,
+  "pairs_checked": 83,
+  "positions": {
+   "min": 2,
+   "max": 40,
+   "total": 608
+  },
+  "min_cosine": {
+   "L48": 0.9999998807907104,
+   "L63": 0.9999998807907104
+  },
+  "non_finite": 0,
+  "pass": true
+ },
+ "think_counts": {
+  "honest": {
+   "runs": 10,
+   "runs_with_late_user_message": 1,
+   "runs_with_think_blocks": 0,
+   "assistant_messages_with_think": 0
+  },
+  "attack": {
+   "runs": 10,
+   "runs_with_late_user_message": 0,
+   "runs_with_think_blocks": 0,
+   "assistant_messages_with_think": 0
+  }
+ }
+}

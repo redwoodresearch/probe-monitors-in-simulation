@@ -1,0 +1,8 @@
+    shares of full variance: sim threshold 0.94, real threshold 0.50, attacks 0.13 | ROUGH projected width with simulated honest 1,000: 18.3 (from 26.7)
+cell b_fixed @0.01 POOLED (sim honest n=437, k=4; real honest n=990, k=9): matched gap -2.4 [-18.1, +8.6] width 26.7 | sim catch 68.2, real catch 70.6
+    shares of full variance: sim threshold 0.93, real threshold 0.48, attacks 0.23 | ROUGH projected width with simulated honest 1,000: 7.4 (from 10.7)
+cell b_fixed @0.05 POOLED (sim honest n=437, k=21; real honest n=990, k=49): matched gap -0.6 [-5.5, +5.2] width 10.7 | sim catch 88.4, real catch 89.0
+    shares of full variance: sim threshold 0.85, real threshold 0.73, attacks 0.10 | ROUGH projected width with simulated honest 1,000: 24.4 (from 33.9)
+cell b @0.01 POOLED (sim honest n=437, k=4; real honest n=990, k=9): matched gap +2.9 [-13.6, +20.2] width 33.9 | sim catch 70.4, real catch 67.5
+    shares of full variance: sim threshold 1.04, real threshold 0.24, attacks 0.25 | ROUGH projected width with simulated honest 1,000: 8.1 (from 12.6)
+cell b @0.05 POOLED (sim honest n=437, k=21; real honest n=990, k=49): matched gap +1.7 [-6.8, +5.8] width 12.6 | sim catch 90.6, real catch 88.9

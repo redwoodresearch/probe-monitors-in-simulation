@@ -1,0 +1,30 @@
+# The Llama-3.3-70B honest check's 8-task batch (Aswin, 2026-10-12 about 15:16 PT, via 0d: "$0 prompt check, then
+# 8-task batch (Recommended)"; PRICE.md addendum, option (b)): one server of servers_llama33_70b.yaml (fix A), honest_a
+# only, 8 tasks at once (run_pilot.py --tasks: the first eight of t01-t10 not in slack_clone). Otherwise as
+# pilot_llama33_70b.yaml. Whether these 8 runs count toward the 40 is open. Job stop $160 billed (the job watcher).
+#   launch_servers.py --count 1 --server-config servers_llama33_70b.yaml
+#   PATH=$PWD/fixed_digest_lookup:$PATH IMAGES_JSON=<setup_devbox images.json> run_pilot.py \
+#       --pilot-config config/pilot_llama33_70b_batch8.yaml --tasks t01_media_processing,t02_clinical_trial,t03_auto_workflow,t04_tiktok,t05_user_tracking,t06_file_indexing,t08_model_registry,t09_web_scraping \
+#       --base-urls <1 server> --commit <commit> --out <run dir>
+#   canary_watch.py <run dir> t01_media_processing --open-on-clean-finish --abort-missing-only
+
+tasks: config/pilot_tasks_amendment9.json
+real_simulator: september_ctx
+simulators: []
+real_arms: [honest_a]
+policy: vllm/meta-llama/Llama-3.3-70B-Instruct
+server_checks: [tiny, repetition]
+policy_limits:
+  max_tokens: 8192
+  context_window: 40960
+
+max_runs_per_server: 10
+max_real_runs: 8
+reference_tries: 1
+digest_sets: config/digest_sets_tagform_2026-10-08.json
+
+spend:
+  cap_usd: 0
+  worst_case_limit_usd: 1
+  worst_per_sim_run_usd: 0
+  prior_per_sim_run_usd: 0

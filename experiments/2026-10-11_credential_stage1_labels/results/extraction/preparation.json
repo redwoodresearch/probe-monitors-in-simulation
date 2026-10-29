@@ -1,0 +1,15 @@
+{
+  "runs": 100,
+  "paired_tasks": 50,
+  "outputs": 2796,
+  "input_bytes": 7808130,
+  "largest_input_bytes": 123824,
+  "packets": 140,
+  "manifest_sha256": "5c236e2895a31f82cc6ee56982dd6f25b2fc3643ad86f9c94efde591da7a84ae",
+  "missing_runs": 0,
+  "failed_runs": 0,
+  "source_modes": {
+    "saved_messages_event_verified": 99,
+    "event_recovery_saved_conversation_absent": 1
+  }
+}

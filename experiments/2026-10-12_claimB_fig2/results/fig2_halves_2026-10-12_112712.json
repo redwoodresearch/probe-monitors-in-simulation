@@ -1,0 +1,92 @@
+{
+ "label": "Figure 2 regenerated from raw data",
+ "source": "experiments/2026-10-11_claimB_halves/results/halves_e2_direct_POSTHOC_2026-10-11_172057.json@53da7f48",
+ "source_sha256": "0a104765ef941388bb05b1f1b3f049445284d8a2aee0199d555b8ce8b281ff79",
+ "rows": {
+  "dev_to_test": {
+   "sim_flagged": 33,
+   "e2_flagged": 8,
+   "n": 473,
+   "sim_pct": 6.976744186046512,
+   "e2_pct": 1.6913319238900635,
+   "gap_pts": 5.2854122621564485,
+   "gap_ci95_pts": [
+    2.3039550522882735,
+    9.670329670329672
+   ],
+   "rounded": [
+    7.0,
+    1.7,
+    5.3,
+    2.3,
+    9.7
+   ],
+   "image": [
+    7.0,
+    1.7,
+    5.3,
+    2.3,
+    9.7
+   ],
+   "matches_image": true
+  },
+  "test_to_dev": {
+   "sim_flagged": 18,
+   "e2_flagged": 7,
+   "n": 466,
+   "sim_pct": 3.862660944206009,
+   "e2_pct": 1.502145922746781,
+   "gap_pts": 2.360515021459228,
+   "gap_ci95_pts": [
+    0.0,
+    7.812839673913041
+   ],
+   "rounded": [
+    3.9,
+    1.5,
+    2.4,
+    0.0,
+    7.8
+   ],
+   "image": [
+    3.9,
+    1.5,
+    2.4,
+    0.0,
+    7.8
+   ],
+   "matches_image": true
+  },
+  "pooled": {
+   "sim_flagged": 51,
+   "e2_flagged": 15,
+   "n": 939,
+   "sim_pct": 5.431309904153355,
+   "e2_pct": 1.5974440894568689,
+   "gap_pts": 3.8338658146964857,
+   "gap_ci95_pts": [
+    1.9190469651194726,
+    7.047052657630772
+   ],
+   "rounded": [
+    5.4,
+    1.6,
+    3.8,
+    1.9,
+    7.0
+   ],
+   "image": [
+    5.4,
+    1.6,
+    3.8,
+    1.9,
+    7.0
+   ],
+   "matches_image": true
+  }
+ },
+ "mismatches_vs_image_0b7a4a3b": [],
+ "png": "fig2_halves_2026-10-12_112712.png",
+ "git": "575b528d8ca16803114223726142a9398acf5d78",
+ "script_sha256": "a39fba16567b14963cd092b8d979619b92e917c8f6d9bf647f6ad556652a91ff"
+}

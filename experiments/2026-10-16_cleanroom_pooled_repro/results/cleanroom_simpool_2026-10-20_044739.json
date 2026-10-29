@@ -1,0 +1,30 @@
+{
+ "equal": {
+  "n": true,
+  "n_paths_by_number_of_sources": false,
+  "percent_0dp": true,
+  "percent_exact": true,
+  "sol_free": true,
+  "sol_using": true,
+  "unknown": true
+ },
+ "n": 868,
+ "n_mapped": 868,
+ "n_paths_with_copies": 868,
+ "n_stops": 0,
+ "n_unknown": 0,
+ "pilot": {
+  "files": 20,
+  "header_read": 20,
+  "in_pool": 20,
+  "sha_ok": 20
+ },
+ "pilot_header_unreadable": [],
+ "stamp": "2026-10-20_044739",
+ "stops": [],
+ "values_file": {
+  "path": "cleanroom_simpool_values_2026-10-20_044739.json",
+  "volume": "probe-shift_aswin-surya_sub-repro_cleanroom_kill-2026-11-16"
+ },
+ "verdict_OK": true
+}

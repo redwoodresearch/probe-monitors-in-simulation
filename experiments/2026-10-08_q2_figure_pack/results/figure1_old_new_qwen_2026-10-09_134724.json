@@ -1,0 +1,71 @@
+{
+ "matched tasks": 19,
+ "inputs sha256": {
+  "honest_success_2026-10-08_173215.json": "f274f2fc941eee75cc08c39a523eda76c4a37bb46022dff8d011918ab59b1585",
+  "honest_success_qwen3.5-27b_2026-10-09_100002.json": "527cdad29d72dbaeb201b28d1225d6d0301190fd1771b6c625e848d2ac32c080",
+  "report_relaunch.json": "52563cbeb12bc7cca3901483404ae558acb27028e47572d41cc84ea046042b33",
+  "report_first.json": "fe7cfd21825221bd492d74c3344910c5fac0e109478d7b949359f7f459225832"
+ },
+ "Qwen3-32B runs read (all tasks)": {
+  "C": 0,
+  "I": 40,
+  "N": 0
+ },
+ "Qwen3-32B": {
+  "rate": 0.0,
+  "successes": 0,
+  "scored runs": 38,
+  "task interval": [
+   0.0,
+   0.0
+  ],
+  "exact interval over runs": [
+   0.0,
+   0.0925
+  ],
+  "task-averaged rate (each task equal; not drawn)": 0.0
+ },
+ "Qwen3.5-27B": {
+  "rate": 0.6053,
+  "successes": 23,
+  "scored runs": 38,
+  "task interval": [
+   0.3947,
+   0.8158
+  ],
+  "exact interval over runs": [
+   0.4339,
+   0.7596
+  ],
+  "task-averaged rate (each task equal; not drawn)": 0.6053
+ },
+ "Sol": {
+  "rate": 0.6216,
+  "successes": 23,
+  "scored runs": 37,
+  "task interval": [
+   0.4,
+   0.8421
+  ],
+  "exact interval over runs": [
+   0.4476,
+   0.7754
+  ],
+  "task-averaged rate (each task equal; not drawn)": 0.6842
+ },
+ "Qwen3.5-27B minus Qwen3-32B (points)": [
+  60.5,
+  39.5,
+  81.6
+ ],
+ "Qwen3.5-27B minus Sol (points)": [
+  -1.6,
+  -24.2,
+  17.9
+ ],
+ "Qwen3-32B minus Sol (points)": [
+  -62.2,
+  -84.2,
+  -40.0
+ ]
+}

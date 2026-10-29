@@ -1,0 +1,154 @@
+{
+ "plan": "PLAN.md addendum 3 (this folder)",
+ "git": "c7d983173799736485a600ba1c65c5a63c0aa46a",
+ "mode": "full",
+ "extraction run": "2026-10-12_q2_tplslips_plants_qwen35-27b_v1",
+ "inputs sha256": {
+  "runs.json": "3c028aca246181950e460349067ca27d0fb85bff60bc4c01b518c9b27a234ec1",
+  "plant_stage_2026-10-12_124505.json": "0233df15e5e45b31f3680b26ec3c88b9c37bd461060c95b99e1d51ee6ed63801",
+  "scores_L16.npz": "bf575a9cfa820780e0283aa6c9bf99a4249ed103972bfaeee5e5c9f356064ce6",
+  "scores_L24.npz": "2261737b926415efbb840be636c76741c5ff1d0f2f424dbe0a0508cf00a688de",
+  "scores_L32.npz": "a6d06adf41cd85d783fa79be3ea9f049b0437de603dc85c5efeb24738a245e0e",
+  "scores_L40.npz": "ff3b7643994b82d3fce229d8c89686fe644c96b433a58b455c8eeea8833602a8",
+  "scores_L48.npz": "86c658ee466585df421dc11417dc5520cf1cdbc65b1ff992406ba33e189d5b20",
+  "scores_L56.npz": "c9cfd57a14afb780427123e7c2b7b30e5825b37788048c385135e38f2f4bec3f",
+  "scores_L63.npz": "ebd678cde2edf64ed8ae1da55ed733bf2d12054d45de342f86d2bd1c1452b872"
+ },
+ "G1: max |re-scored - stored| e2 score by layer [nested, outer] (tolerance 1e-3)": {
+  "16": [
+   1.6838312149047852e-06,
+   3.814697265625e-06
+  ],
+  "24": [
+   1.6689300537109375e-06,
+   1.1920928955078125e-06
+  ],
+  "32": [
+   2.5033950805664062e-06,
+   1.2218952178955078e-06
+  ],
+  "40": [
+   2.6226043701171875e-06,
+   1.4901161193847656e-06
+  ],
+  "48": [
+   2.2649765014648438e-06,
+   1.2772423878537609e-06
+  ],
+  "56": [
+   2.384185791015625e-06,
+   1.2020270029333702e-06
+  ],
+  "63": [
+   2.046426137436441e-06,
+   1.6440947849805099e-06
+  ]
+ },
+ "G1 passes": true,
+ "missing metas by arm": {},
+ "G2: max |control row - dump row| by layer (tolerance 0.01)": {
+  "16": 0.0,
+  "24": 0.0,
+  "32": 0.0,
+  "40": 0.0,
+  "48": 0.0,
+  "56": 0.0,
+  "63": 0.0
+ },
+ "G3: max |planted prefix row - dump row| by layer (tolerance 0.01)": {
+  "16": 0.0,
+  "24": 0.0,
+  "32": 0.0,
+  "40": 0.0,
+  "48": 0.0,
+  "56": 0.0,
+  "63": 0.0
+ },
+ "rows compared by layer": {
+  "16": {
+   "nonfinite row scores (new runs)": 0,
+   "G3 rows compared (e2-gutter-stripped)": 8551,
+   "G3 rows compared (e2-note-dropped)": 6104,
+   "G2 rows compared (e2-control)": 225
+  },
+  "24": {
+   "nonfinite row scores (new runs)": 0,
+   "G3 rows compared (e2-gutter-stripped)": 8551,
+   "G3 rows compared (e2-note-dropped)": 6104,
+   "G2 rows compared (e2-control)": 225
+  },
+  "32": {
+   "nonfinite row scores (new runs)": 0,
+   "G3 rows compared (e2-gutter-stripped)": 8551,
+   "G3 rows compared (e2-note-dropped)": 6104,
+   "G2 rows compared (e2-control)": 225
+  },
+  "40": {
+   "nonfinite row scores (new runs)": 0,
+   "G3 rows compared (e2-gutter-stripped)": 8551,
+   "G3 rows compared (e2-note-dropped)": 6104,
+   "G2 rows compared (e2-control)": 225
+  },
+  "48": {
+   "nonfinite row scores (new runs)": 0,
+   "G3 rows compared (e2-gutter-stripped)": 8551,
+   "G3 rows compared (e2-note-dropped)": 6104,
+   "G2 rows compared (e2-control)": 225
+  },
+  "56": {
+   "nonfinite row scores (new runs)": 0,
+   "G3 rows compared (e2-gutter-stripped)": 8551,
+   "G3 rows compared (e2-note-dropped)": 6104,
+   "G2 rows compared (e2-control)": 225
+  },
+  "63": {
+   "nonfinite row scores (new runs)": 0,
+   "G3 rows compared (e2-gutter-stripped)": 8551,
+   "G3 rows compared (e2-note-dropped)": 6104,
+   "G2 rows compared (e2-control)": 225
+  }
+ },
+ "row sets by layer": {
+  "16": {
+   "runs compared": 1307
+  },
+  "24": {
+   "runs compared": 1307
+  },
+  "32": {
+   "runs compared": 1307
+  },
+  "40": {
+   "runs compared": 1307
+  },
+  "48": {
+   "runs compared": 1307
+  },
+  "56": {
+   "runs compared": 1307
+  },
+  "63": {
+   "runs compared": 1307
+  }
+ },
+ "expected runs absent": 0,
+ "rows compared for the controls and both plants": true,
+ "no nonfinite row score or difference": true,
+ "G2 and G3 pass": true,
+ "runs scored vs staged": {
+  "e2-gutter-stripped": [
+   836,
+   836
+  ],
+  "e2-note-dropped": [
+   463,
+   463
+  ],
+  "e2-control": [
+   8,
+   8
+  ]
+ },
+ "scores file": "plant_scores_2026-10-12_134312.npz",
+ "scores sha256": "f36fdd1927d0a8a0f46c0ef4d8de797303f9a638478928ad2c7eda6a4c89ae28"
+}

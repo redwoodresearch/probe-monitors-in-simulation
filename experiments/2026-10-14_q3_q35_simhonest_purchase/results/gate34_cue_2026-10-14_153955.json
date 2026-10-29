@@ -1,0 +1,16 @@
+{
+ "runs": 20,
+ "cue": 1,
+ "rate": 0.05,
+ "baseline_runs": 191,
+ "baseline_cue": 5,
+ "baseline_rate": 0.02617801047120419,
+ "cue_stop": false,
+ "cue_tasks": [
+  "t40_shared_dotfiles"
+ ],
+ "manifest": "experiments/2026-10-14_q3_q35_simhonest_purchase/results/manifest_simh_eval_upload_pilot.json",
+ "step": "cue",
+ "git": "5619117ab914f97eab6d9e443c7b764f82fc4ad1",
+ "stamp": "2026-10-14_153955"
+}

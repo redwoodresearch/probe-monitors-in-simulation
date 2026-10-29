@@ -1,0 +1,388 @@
+{
+  "label": "LORO mapping (09), built by jq from the cross-recipe record row METADATA only (rows[*].recipe, .family, .readout, .aggregator; design.registered_comparator); no gap or catch value read",
+  "source": {
+    "record": "experiments/2026-10-14_fpr_sweep_unit/results/crossrecipe_2026-10-15_103328.json",
+    "commit": "bfe8867e6",
+    "sha256": "84dac40da0958aa5bdf7383ec339a0736f73aaa2cb299d4011a9911b03455ec4",
+    "npz": {
+      "volume": "probe-shift_aswin-surya_sub-q35solavg_kill-2026-11-13",
+      "path": "xfer/fprsweep_unit/crossrecipe_2026-10-15_103328/crossrecipe_2026-10-15_103328_perdraw.npz",
+      "sha256": "9a7b16be0398c7ed2ab4b59acddf46ff528484bc00b60b5cee179457fba0d32e",
+      "arrays": {
+        "gaps": [
+          32,
+          7,
+          4,
+          10001
+        ],
+        "catches": [
+          32,
+          7,
+          4,
+          10001
+        ],
+        "row_labels": [
+          32
+        ],
+        "row_recipe": [
+          32
+        ],
+        "row_family": [
+          32
+        ],
+        "row_readout": [
+          32
+        ],
+        "row_registered": [
+          32
+        ],
+        "points": [
+          7
+        ],
+        "comparators": [
+          4
+        ],
+        "arms": [
+          4
+        ],
+        "task_multiplicities": [
+          10001,
+          183
+        ],
+        "cohort_tasks": [
+          183
+        ]
+      },
+      "axes": "gaps[row, point, comparator, draw]; catches[row, point, arm, draw]; draw 0 = the point estimates; draws 1..10,000 shared by every row (A24's generator)"
+    }
+  },
+  "registered_comparator_by_recipe": {
+    "own-real": "sim_minus_run2",
+    "other-model-real": "sim_minus_run1",
+    "public direction": "sim_minus_run1",
+    "stress test": "sim_minus_run1"
+  },
+  "rows": [
+    {
+      "label": "Sol (a) R",
+      "recipe": "other-model-real",
+      "family": "Sol (a)",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "other-model-real",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "Sol (a) C",
+      "recipe": "other-model-real",
+      "family": "Sol (a)",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "other-model-real",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "FIBS R",
+      "recipe": "public direction",
+      "family": "FIBS",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "public: FIBS",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "FIBS C",
+      "recipe": "public direction",
+      "family": "FIBS",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "public: FIBS",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "harmfulness R",
+      "recipe": "public direction",
+      "family": "harmfulness",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "public: harmfulness",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "harmfulness C",
+      "recipe": "public direction",
+      "family": "harmfulness",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "public: harmfulness",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "refusal R",
+      "recipe": "public direction",
+      "family": "refusal",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "public: refusal",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "refusal C",
+      "recipe": "public direction",
+      "family": "refusal",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "public: refusal",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "high-stakes R",
+      "recipe": "public direction",
+      "family": "high-stakes",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "public: high-stakes",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "high-stakes C",
+      "recipe": "public direction",
+      "family": "high-stakes",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "public: high-stakes",
+      "registered_comparator": "sim_minus_run1",
+      "role": "fit member"
+    },
+    {
+      "label": "c_asis R",
+      "recipe": "stress test",
+      "family": "c_asis",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "STRESS",
+      "registered_comparator": "sim_minus_run1",
+      "role": "stress test (never in any fit)"
+    },
+    {
+      "label": "c_asis C",
+      "recipe": "stress test",
+      "family": "c_asis",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "STRESS",
+      "registered_comparator": "sim_minus_run1",
+      "role": "stress test (never in any fit)"
+    },
+    {
+      "label": "own_a R",
+      "recipe": "own-real",
+      "family": "own_a",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_a C",
+      "recipe": "own-real",
+      "family": "own_a",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac10_L16 R",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac10_L16 C",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac10_L32 R",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac10_L32 C",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac10_L48 R",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac10_L48 C",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac25_L16 R",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac25_L16 C",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac25_L32 R",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac25_L32 C",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac25_L48 R",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac25_L48 C",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac100_L16 R",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac100_L16 C",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac100_L32 R",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac100_L32 C",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac100_L48 R",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "R",
+      "aggregator": "mean",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    },
+    {
+      "label": "own_frac100_L48 C",
+      "recipe": "own-real",
+      "family": "own_frac",
+      "readout": "C",
+      "aggregator": "max",
+      "group": "own-real",
+      "registered_comparator": "sim_minus_run2",
+      "role": "fit member"
+    }
+  ],
+  "excluded_rows_no_pinned_training_world": []
+}

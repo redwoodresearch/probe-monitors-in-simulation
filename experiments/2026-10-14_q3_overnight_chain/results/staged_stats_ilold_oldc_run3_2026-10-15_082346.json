@@ -1,0 +1,15 @@
+{
+ "target": "ilold_oldc_run3",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "ilold_oldc_run3",
+   "arm": "attack",
+   "staged_file": "/ev/ilold_oldc_run3_v1/inputs/attack.jsonl",
+   "staged_sha": "0b839d05851b6a7e7b823470fb3fb16fccff87f5029a46bb3790519e8b968f7b",
+   "epochs": 62,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

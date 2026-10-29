@@ -1,0 +1,114 @@
+{
+ "n_main": 5620,
+ "n_fixfull": 9748,
+ "same_order_first_n_main": true,
+ "masks": {
+  "L48|b|draw0": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L48|b|draw1": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L48|b|draw2": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L48|b|draw3": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L48|b|draw4": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L48|b_fixed|draw0": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L48|b_fixed|draw1": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L48|b_fixed|draw2": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L48|b_fixed|draw3": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L48|b_fixed|draw4": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b|draw0": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b|draw1": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b|draw2": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b|draw3": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b|draw4": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b_fixed|draw0": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b_fixed|draw1": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b_fixed|draw2": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b_fixed|draw3": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  },
+  "L63|b_fixed|draw4": {
+   "n_d9": 939,
+   "n_mine": 939,
+   "n_differ": 0
+  }
+ },
+ "recipe_refs": {
+  "n": 18,
+  "all_finite": true
+ },
+ "pairs_checked": 20,
+ "app": "ap-N0lUgdpM0HY3wfctudrERm",
+ "git": "2d4b899ca"
+}

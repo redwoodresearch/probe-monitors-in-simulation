@@ -1,0 +1,5 @@
+SUPERSEDED. fx_20261013_223852 (app ap-DuzorFrudkQ6h6mt8gaOY2, runner b0cf6b8e) had a loader bug found by Codex: the feature
+cache keyed readings by (extraction run, key), and q2's F9 and F10 arms share an extraction run and keys. 26 of the 36 F10
+readings (the ones whose keys F11 also changes) entered both the "full + F9 (q2)" baseline and the "full + F9 + F10" row.
+The F10 row is invalid; the F11 row is built correctly, but its paired difference and the loader gate used that baseline.
+Do not cite fx_20261013_223852.printout.txt. The rerun with the fixed loader is the next fx_* folder in results/.

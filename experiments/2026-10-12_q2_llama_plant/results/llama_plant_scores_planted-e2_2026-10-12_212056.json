@@ -1,0 +1,35 @@
+{
+ "plan": "PLAN.md (this folder)",
+ "git": "bd6aeeda0a1978d4981666a33921e5a8d39ea4fc",
+ "reader": "meta-llama/Llama-3.3-70B-Instruct",
+ "frozen run": "2026-10-12_143129",
+ "extract run": "2026-10-12_q2_plantslip_reply_planted-e2_llama33-70b_v1",
+ "which": "planted",
+ "arms list": [
+  "real-attack-e2-planted"
+ ],
+ "stage sha256": "f1a68c90a5d26799925bda1c0d574728a547cde6c2ec3b76bfa18c3691c75157",
+ "probes sha256": {
+  "20": "f272fea0da8d1d53ce3127b4b49a5aa0d02648ec582b7300081d6c9c48aedb3b",
+  "30": "0ab983077b2e9fac1df1d9f3618f1860b686df9c8573ae332189c2fa672ed197",
+  "40": "735363402381f3c6a98e491907de399f36f306a1b417ffcdd39be830053939d8",
+  "50": "6a481ed1a466ef274de069a540addb0fc82661f4f35fe602292fd1e7dfa1592d",
+  "60": "7f08e5462bcf302e11fec341f30042aeb374cdebae21a590d14fd339a99aa99c",
+  "70": "c108606d8d0cf655be817958b85a1cff7e38a4a0273ecaddab0bec96b103cae2",
+  "79": "19a5904420fd44aac8d0b28f050991cf3d4e6b7f432bd8871b4348c95d3c598a"
+ },
+ "stored scores sha256": {
+  "runs.json": "ad10475afccc285bde39a389a17cb8b278a15d670c5d673933a094c6ffbc5254",
+  "scores_L20.npz": "a2855046fb03d643e66b339d0d3b4655af819bf29c5e68b7217b38f3acab4fb0",
+  "scores_L30.npz": "70e68ec851edad4184da44974d217804a0a7a5e043e6898b4cd03c0021851353",
+  "scores_L40.npz": "6fa1b3bf568b92bc7bf755580fd4640f1c05558188fe63ef552f1f03b1b162b4",
+  "scores_L50.npz": "1accda0f05c3b6495422d5d351a42db3899d83d7603d329cf3f60bb75b2b44c4",
+  "scores_L60.npz": "6d21272535104de7cf6aa179cde98070dea0cbc823fc0aee9639763c8938906b",
+  "scores_L70.npz": "f58f71edc48333cc362d3814fb83880b1abab74d3270b5a358ce3385f8b16c0c",
+  "scores_L79.npz": "ed03295de16f97290de6fc4825fd4cacbdff9dc37463c09a86664109dde28676"
+ },
+ "runs": 845,
+ "runs with no meta": [],
+ "scores file": "llama_plant_scores_planted-e2_2026-10-12_212056.npz",
+ "scores sha256": "69c77771a5da9b06d9f2cb64aeb5a9a63ac6bd6589435ee9aeda91e79663c9df"
+}

@@ -1,0 +1,36 @@
+--- orig_sim_cap_stop.py
++++ sim_cap_stop_nm.py
+@@ -1,5 +1,5 @@
+ """sim_cap_stop.py (RULE.md Amendment 7, variant iii; Codex round 12: the launcher's admission guard reserves but never
+-enforces a per-run ceiling). ON THE DEVBOX, tmux -L guards sc311q<N>, every 120 s, no laptop: reads the follow-up run's
++enforces a per-run ceiling). ON THE DEVBOX, tmux -L nmguards scnms<N>, every 120 s, no laptop: reads the follow-up run's
+ simulator spend with spend_now.py (the canary's, reviewed: priced spend; running attempts at max(a fresh reading, the
+ estimate); a running attempt without a fresh read for 300 s at the worst case) and, ONLY on a fresh reading (the
+ launcher's last snapshot <= 300 s old) whose total WITHOUT the worst-case charges of unread attempts is at or above CAP
+@@ -14,7 +14,7 @@
+ from datetime import datetime
+ from pathlib import Path
+ from zoneinfo import ZoneInfo
+-HARNESS, CHECKS = Path("/home/aswin/phase2/attack_check_311"), Path("/home/aswin/phase2/s311_checks")
++HARNESS, CHECKS = Path("/home/aswin/phase2/nm/attack_check_nm"), Path("/home/aswin/phase2/nm/checks")
+ PY, TREE = "/home/aswin/sims/simulated-control-evals-sept/.venv/bin/python", "/home/aswin/phase2/sims-sept-strict-off/src"
+ run, session, cap = Path(sys.argv[1]), sys.argv[2], float(sys.argv[3])
+ log_f = CHECKS / f"sim_cap_stop_{session}.log"
+@@ -38,7 +38,7 @@
+         time.sleep(120)
+         continue
+     if out == "absent":
+-        live = subprocess.run(["tmux", "-L", "phase2", "has-session", "-t", f"={session}"], stderr=subprocess.DEVNULL).returncode == 0
++        live = subprocess.run(["tmux", "-L", "nm", "has-session", "-t", f"={session}"], stderr=subprocess.DEVNULL).returncode == 0
+         if seen and not live:
+             note("the follow-up session is gone; done")
+             break
+@@ -71,7 +71,7 @@
+                                                f"in-flight runs finish\n")
+         note(f"SIM CAP PAUSE: ${known:.2f} >= ${cap:.0f}: pause files written; no Ctrl+C, in-flight runs finish")
+         break
+-    if not subprocess.run(["tmux", "-L", "phase2", "has-session", "-t", f"={session}"], stderr=subprocess.DEVNULL).returncode == 0:
++    if not subprocess.run(["tmux", "-L", "nm", "has-session", "-t", f"={session}"], stderr=subprocess.DEVNULL).returncode == 0:
+         note("the follow-up session is gone; done")
+         break
+     time.sleep(120)

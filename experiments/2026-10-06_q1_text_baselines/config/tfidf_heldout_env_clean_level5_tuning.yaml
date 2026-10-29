@@ -1,0 +1,30 @@
+# Is TF-IDF under-tuned on the 368 clean cells? Level 5, held-out environments, retrained on the clean cells as in
+# tfidf_heldout_env_clean_level5, three variants: C picked per held-out environment by inner cross-validation over
+# the training environments; word 1-2-grams only; character 3-5-grams only. (Trained on all 939 cells and scored on
+# the clean cells: config/tfidf_context_heldout_env_clean_level5_all_cells_model.yaml, from the existing scores.)
+name: tfidf_heldout_env_clean_level5_tuning
+cells_file: config/clean_cells_2026-10-06_180321.json   # the main session's 368 clean cells (analysis 2026-10-06_180321)
+examples: examples_2026-10-06_142532
+folds_file: folds_v3.json
+fold_scheme: environment
+baselines:
+  level5_inner_cv_C: {text: readout_text, scrub: 5, settings: {C: inner_cv}}
+  level5_words_1_2: {text: readout_text, scrub: 5, settings: {char_ngrams: null}}
+  level5_chars_3_5: {text: readout_text, scrub: 5, settings: {word_ngrams: null, char_ngrams: [3, 5]}}
+output_variants: [all, no_editor]
+word_ngrams: [1, 2]
+token_pattern: "(?u)\\b\\w+\\b|[^\\w\\s]" # words and single punctuation marks
+char_ngrams: [2, 5]                      # every character n-gram, whitespace untouched (custom analyzer)
+lowercase: false
+n_features: 1048576                      # 2^20 hashed columns per analyzer (word, char); alternate_sign false
+sublinear_tf: true
+C: 1.0                                   # the default; level5_inner_cv_C picks it from c_grid instead
+c_grid: [0.01, 0.1, 1.0, 10.0, 100.0]
+solver: liblinear
+max_iter: 1000
+c_sensitivity: []
+shuffle_null: {draws: 0}
+top_features: 15
+bootstrap: 1000
+seed: 0
+n_jobs: 16

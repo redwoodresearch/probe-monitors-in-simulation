@@ -1,0 +1,157 @@
+diff --git a/src/runner/build/arena_policy.py b/src/runner/build/arena_policy.py
+index c0ae9da3..40e8ec0c 100644
+--- a/src/runner/build/arena_policy.py
++++ b/src/runner/build/arena_policy.py
+@@ -28,6 +28,7 @@ from inspect_ai.solver import Generate, Solver, TaskState, solver
+ from inspect_ai.tool import Tool
+ 
+ from runner.policy.agent import (
++    PolicyTimeout,
+     attacker_agent,
+     build_policy_model,
+     dedupe_tools,
+@@ -100,8 +101,12 @@ def arena_policy(
+         # This used to be replaced with the synthetic "Begin working on the task." — a thing the
+         # policy was told that no real deployment would say. An arena task IS its description; there
+         # is no prior conversation to continue and nothing to frame, on either run.
+-        result = await agent(AgentState(messages=list(state.messages)))
+-        state.messages = result.messages
++        try:
++            result = await agent(AgentState(messages=list(state.messages)))
++            state.messages = result.messages
++        except PolicyTimeout as timeout:  # only raised with PT_POLICY_TIMEOUT_ENDS_EPISODE set (runner.policy.agent)
++            state.messages = timeout.messages
++            state.store.set("policy_ended_by", "policy_timeout")
+         return state
+ 
+     return solve
+diff --git a/src/runner/policy/agent.py b/src/runner/policy/agent.py
+index c062b341..30d4b200 100644
+--- a/src/runner/policy/agent.py
++++ b/src/runner/policy/agent.py
+@@ -12,6 +12,7 @@ the code here does not change across that seam, which is the whole basis for com
+ 
+ from __future__ import annotations
+ 
++import os
+ from collections.abc import Sequence
+ 
+ from control_tower.protocols.agent_helpers import make_react_system_prompt
+@@ -33,6 +34,69 @@ from runner.policy.step_limit import step_limit
+ from runner.policy.step_size import capture_step_size
+ from sim.types import ReasoningEffort
+ 
++# Opt-in limits on every policy model call, read here because `build_policy_model` is the one function every
++# path that builds a policy goes through (real and simulated arms, both arenas), so the arms cannot differ in
++# them. Unset, a run is configured exactly as before: a 600 s attempt, retried until the run's time limit, and
++# no output cap.
++#   PT_POLICY_ATTEMPT_TIMEOUT  seconds one attempt may take. An attempt that runs out is not retried: Inspect's
++#                              `timeout` is set to the same value, and Inspect starts no retry once that much time
++#                              has passed since the call began, so the call fails with AttemptTimeoutError and the
++#                              sample with it. A retry after a fast transient error still gets a full attempt.
++#   PT_POLICY_MAX_RETRIES      Inspect's retries for transient errors (connection resets, 5xx).
++#   PT_POLICY_MAX_TOKENS       output tokens per call.
++# Providers built on the OpenAI SDK also retry connection errors and 5xx twice inside each Inspect attempt. An eval's
++# own --timeout or --max-retries still wins over these (Inspect merges them over every model's config), so a run
++# that sets these variables must not pass those flags.
++POLICY_LIMIT_VARIABLES = ("PT_POLICY_ATTEMPT_TIMEOUT", "PT_POLICY_MAX_RETRIES", "PT_POLICY_MAX_TOKENS")
++# The OpenAI SDK's own read timeout. A non-streamed completion sends nothing until it is done, so the SDK aborts
++# any call longer than this and resends it, inside one Inspect attempt. An attempt timeout above it is only real
++# if the client's timeout is raised with it, which `build_policy_model` does for these providers.
++OPENAI_SDK_READ_TIMEOUT = 600
++OPENAI_SDK_PROVIDERS = ("openai", "openai-api", "vllm")
++
++
++def _policy_limit(name: str) -> int | None:
++    value = os.environ.get(name, "").strip()
++    return int(value) if value else None
++
++
++# Opt-in, with PT_POLICY_ATTEMPT_TIMEOUT: a policy call that times out ends the episode where it is, without an error,
++# instead of failing the sample. The sample keeps the conversation up to that call and records
++# `policy_ended_by = "policy_timeout"` in its store (`runner.build.arena_policy`), so a run that hit a timeout is kept
++# and counted rather than redrawn or lost. Unset, a timed-out call fails the sample, as before.
++POLICY_TIMEOUT_ENDS_EPISODE = "PT_POLICY_TIMEOUT_ENDS_EPISODE"
++
++
++class PolicyTimeout(Exception):
++    """A policy call ran out its attempt timeout under PT_POLICY_TIMEOUT_ENDS_EPISODE. Carries the conversation the call
++    was given, which is the episode's transcript up to the call that never answered."""
++
++    def __init__(self, messages: list) -> None:
++        super().__init__("policy call timed out; the episode ends here")
++        self.messages = messages
++
++
++def _is_attempt_timeout(error: BaseException) -> bool:
++    """Inspect's AttemptTimeoutError (not exported), raised directly or as the last attempt of tenacity's RetryError."""
++    last = getattr(error, "last_attempt", None)
++    error = last.exception() if last is not None and last.failed else error
++    return type(error).__name__ == "AttemptTimeoutError"
++
++
++def _end_episode_on_timeout(model: Model) -> Model:
++    generate = model.generate
++
++    async def guarded(input, *args, **kwargs):  # noqa: A002 — Model.generate's own parameter name
++        try:
++            return await generate(input, *args, **kwargs)
++        except Exception as error:
++            if _is_attempt_timeout(error):
++                raise PolicyTimeout([input] if isinstance(input, str) else list(input)) from error
++            raise
++
++    model.generate = guarded
++    return model
++
+ 
+ def dedupe_tools(tools: Sequence[Tool]) -> list[Tool]:
+     """Keep the first tool of each name.
+@@ -65,17 +129,45 @@ def build_policy_model(
+     swallowed exactly that 400, so the real samples ran with no extended thinking while the
+     simulated ones ran at effort ``high`` — a real-versus-simulated confound in the attacker, invisible
+     in the logs. Nothing is caught here; a rejected setting must fail the run.
++
++    The ``PT_POLICY_*`` limits above, when set, override ``attempt_timeout`` and add to this.
+     """
+-    resolved = model if isinstance(model, Model) else get_model(model)
++    call_budget, max_retries, max_tokens = (_policy_limit(name) for name in POLICY_LIMIT_VARIABLES)
++    if call_budget is not None:
++        attempt_timeout = call_budget
++    client_args = {}
++    # Only under PT_POLICY_ATTEMPT_TIMEOUT: a caller passing a long attempt_timeout itself keeps today's behaviour.
++    if call_budget is not None and attempt_timeout > OPENAI_SDK_READ_TIMEOUT:
++        assert isinstance(model, str) and model.split("/", 1)[0] in OPENAI_SDK_PROVIDERS, (
++            f"an attempt timeout over {OPENAI_SDK_READ_TIMEOUT} s needs the client's own timeout raised, which "
++            f"is only done here for a model named by one of {OPENAI_SDK_PROVIDERS}, not {model!r}"
++        )
++        client_args["client_timeout"] = attempt_timeout + 60  # the attempt timeout, not the client, ends a call
++    ends_episode = os.environ.get(POLICY_TIMEOUT_ENDS_EPISODE, "").strip() == "1"
++    if ends_episode:  # the wrapper below must stay private to the policy, never reach a shared or caller's model
++        assert isinstance(model, str), f"{POLICY_TIMEOUT_ENDS_EPISODE} needs the policy model built here, by name"
++    # Unmemoized under the flag: get_model's cache would hand the same instance, wrapped, to any other caller of this
++    # model name (a simulator or monitor on the same model), whose own timeouts would then read as the policy's.
++    resolved = model if isinstance(model, Model) else get_model(model, memoize=not ends_episode, **client_args)
+     resolved.config.attempt_timeout = attempt_timeout
+     resolved.config.max_connections = max_connections
+     resolved.config.reasoning_effort = reasoning_effort
++    if call_budget is not None:
++        resolved.config.timeout = call_budget
++    if max_retries is not None:
++        resolved.config.max_retries = max_retries
++    if max_tokens is not None:
++        resolved.config.max_tokens = max_tokens
+     # Publish each generation's tool-call count for the simulator's coalescer. Non-invasive: it reads
+     # the output and changes nothing, so a run with no simulator is byte-identical to before and
+     # nothing reads what it stashes. Wrapped HERE, on the seam both arms share, rather than on the
+     # simulated path only — one code path is what keeps the arms comparable, and the real arm pays
+     # nothing for a value it never looks at.
+-    return capture_step_size(resolved)
++    counted = capture_step_size(resolved)
++    if ends_episode:
++        assert call_budget is not None, f"{POLICY_TIMEOUT_ENDS_EPISODE} needs PT_POLICY_ATTEMPT_TIMEOUT"
++        counted = _end_episode_on_timeout(counted)
++    return counted
+ 
+ 
+ def attacker_agent(

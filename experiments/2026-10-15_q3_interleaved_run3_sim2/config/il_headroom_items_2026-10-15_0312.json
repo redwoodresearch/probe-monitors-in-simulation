@@ -1,0 +1,107 @@
+{
+ "note": "values read by the design fork 02:59-03:12 PT 10-15; sources per item. Sims priced at the done-IL mean $11.2368 per sim run (336 done IL simulated runs, launch.json, 02:46) + 30% = $14.6079; servers at $5.30 per H200-hour.",
+ "sim_spent": {
+  "il_q1": {
+   "usd": 501.52,
+   "source": "launch.json actual_usd (finished 02:43:56), cells_box1.json"
+  },
+  "il_q2": {
+   "usd": 470.93,
+   "source": "launch.json actual_usd (finished 02:44:18), cells_box2.json"
+  },
+  "il_q3": {
+   "usd": 470.38,
+   "source": "launch.json actual_usd (finished 02:44:24), cells_box3.json"
+  },
+  "il_q4": {
+   "usd": 348.73,
+   "source": "launch.json actual_usd (finished 02:44:45), cells_box4.json"
+  },
+  "il_old": {
+   "usd": 349.72,
+   "source": "launch.json actual_usd (finished 02:44:30), cells_xbox1.json"
+  },
+  "il_s2": {
+   "usd": 874.93,
+   "source": "launch.json actual_usd (finished 02:45:29), cells_xbox3.json"
+  },
+  "il_s1": {
+   "usd": 812.97,
+   "source": "launch.json actual_usd (finished 03:08:22), read on xbox2 03:10"
+  },
+  "il_s5": {
+   "usd": 30.65,
+   "source": "launch.json actual_usd at 03:05:44 (running), read on sims-astra 03:06"
+  }
+ },
+ "unbilled_usd": 31.8,
+ "unbilled_source": "about 5 live server sets x 6 H200 x 0.2 h (03:00-03:12) x $5.30",
+ "ec2_usd": 45.0,
+ "ec2_source": "estimate: 7 IL boxes since ~22:30 (earlier ~$40 at 02:45)",
+ "committed": {
+  "il_s5 remaining": {
+   "expected_usd": 977.3,
+   "hard_usd": 1424.35,
+   "basis": "69 sims (71 cells, 2 no reference) x $14.61 - spent; hard: cap $1,455 - spent"
+  },
+  "il_s3": {
+   "expected_usd": 905.69,
+   "hard_usd": 1271.0,
+   "basis": "62 cells x $14.61; hard cap $1,271"
+  },
+  "il_s4d": {
+   "expected_usd": 277.55,
+   "hard_usd": 389.0,
+   "basis": "19 cells x $14.61; hard cap $389"
+  },
+  "tier 1: 70 paired RL reruns (sims)": {
+   "expected_usd": 1022.55,
+   "hard_usd": 1433.0,
+   "basis": "70 x $14.61; caps $1,433 (SPEND @ 1ba95d0da)"
+  },
+  "4r follow-up sims (new-mains fork's S4 rerun)": {
+   "expected_usd": 891.08,
+   "hard_usd": 2306.0,
+   "basis": "61 sims x $14.61 (d9's median basis: 61 x $10.08 x 1.3 = $799); hard: config cap $2,306 (new-mains SPEND row)"
+  },
+  "4r servers (6 H200 from 02:44:14)": {
+   "expected_usd": 261.56,
+   "hard_usd": 310.85,
+   "basis": "main ~3.5 h + follow-up ~2 h (same 6 servers) + 1 h idle, +30%, minus $7.15 billed; hard: the 10 h timeout covers main and follow-up (Codex r19 item 3)"
+  },
+  "fresh rerun servers (4 sets x 6 H200)": {
+   "expected_usd": 469.7,
+   "hard_usd": 1265.7,
+   "basis": "SPEND row @ 1ba95d0da: $476 with 30%, minus $6.30 billed; hard 10 h each"
+  },
+  "q6/q7/q8 remaining (s4d + s1 reruns; s2 reruns; s5)": {
+   "expected_usd": 330.72,
+   "hard_usd": 572.4,
+   "basis": "q6 ~2.5 h, q7 ~1.5 h, q8 ~4 h incl. 1 h idle each, +30%; hard: to their 10 h timeouts (~6 h left each)"
+  },
+  "completion servers (5 launches)": {
+   "expected_usd": 413.4,
+   "hard_usd": 0.0,
+   "basis": "~2 extra busy hours on each host's live set (box1/box2/xbox1: the fresh rerun sets; xbox2: q6; xbox3: q7), +30%; hard $0: those sets' full 10 h lifetimes are already in the fresh-rerun-servers and q6/q7/q8 hard lines (Codex r19 item 2); a fresh set, if one is needed, gets its own SPEND row"
+  },
+  "EC2 remaining": {
+   "expected_usd": 30.0,
+   "hard_usd": 60.0,
+   "basis": "boxes to ~07:00"
+  },
+  "4r main (real runs only)": {
+   "expected_usd": 0.0,
+   "hard_usd": 0.0,
+   "basis": "61 cells x 4 real runs on the 4r servers (counted above): no simulator spend by construction; its config cap $5,325 is accounting only (new-mains RULE.md 4r block @ 59e947180). Counted as $5,325 it would lower the hard basis by that much"
+  }
+ },
+ "scope_confirmed_by_key": {
+  "il_s1": "xbox2 il_meta.json: launch il_s1, interleaved_launch true, worlds run3/sim2, cap 1353",
+  "il_s4d": "xbox2 il_meta.json: launch il_s4d, interleaved_launch true, cap 389",
+  "il_s2": "xbox3 il_meta.json: launch il_s2, interleaved_launch true, cap 1660",
+  "il_s5": "sims-astra il_meta.json: launch il_s5, interleaved_launch true, cap 1455",
+  "il_s3": "not started; il_nm_box.sh case 3 (run 2026-10-14_il_s3, pilot_il_s3.yaml, cap 1271) @ 2fc7f010",
+  "read_at_pt": "03:23",
+  "not_in_scope": "newmains_s<k> mains and _fu follow-ups, 5r (newmains_s5r_fu, $137.51): new-mains purchase"
+ }
+}

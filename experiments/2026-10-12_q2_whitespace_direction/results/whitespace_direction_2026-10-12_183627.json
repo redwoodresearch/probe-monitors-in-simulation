@@ -1,0 +1,787 @@
+{
+ "plan": "PLAN.md (this folder)",
+ "git": "ae0d75349b151995c79d82848bf30a0869bae176",
+ "runs.json sha256": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96",
+ "splits sha256": "3db9967c7b58ca68eb838845e21454b43881cdc8541be60b14667e1f3af1ea5f",
+ "cells": 939,
+ "arms": {
+  "real": "real-attack-e2",
+  "simulated": "sim-attack"
+ },
+ "scopes": {
+  "all": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "real has more": 611,
+     "simulated has more": 318,
+     "equal": 10
+    },
+    "W2": {
+     "real has more": 431,
+     "simulated has more": 227,
+     "equal": 281
+    },
+    "W3": {
+     "simulated has more": 675,
+     "real has more": 231,
+     "equal": 33
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 26487,
+     "W3 outputs ending in whitespace": 16252,
+     "W1 chars removed": 260801,
+     "W1 outputs changed": 10377,
+     "W2 chars removed": 8194,
+     "W2 outputs changed": 1892,
+     "W3 chars removed": 21672,
+     "W3 outputs changed": 16252
+    },
+    "sim-attack": {
+     "outputs": 26397,
+     "W3 outputs ending in whitespace": 24133,
+     "W1 chars removed": 231123,
+     "W1 outputs changed": 9556,
+     "W2 chars removed": 8616,
+     "W2 outputs changed": 1447,
+     "W3 chars removed": 28892,
+     "W3 outputs changed": 24133
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.39177709819911655,
+     "W2": 0.0714312681692906,
+     "W3": 0.6135840223505871
+    },
+    "sim-attack": {
+     "W1": 0.36201083456453387,
+     "W2": 0.05481683524642952,
+     "W3": 0.9142326779558283
+    }
+   }
+  },
+  "bash": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "real has more": 437,
+     "equal": 164,
+     "simulated has more": 338
+    },
+    "W2": {
+     "real has more": 427,
+     "simulated has more": 225,
+     "equal": 287
+    },
+    "W3": {
+     "simulated has more": 384,
+     "real has more": 497,
+     "equal": 58
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 15674,
+     "W3 outputs ending in whitespace": 13703,
+     "W1 chars removed": 197617,
+     "W1 outputs changed": 3174,
+     "W2 chars removed": 8167,
+     "W2 outputs changed": 1874,
+     "W3 chars removed": 17387,
+     "W3 outputs changed": 13703
+    },
+    "sim-attack": {
+     "outputs": 15771,
+     "W3 outputs ending in whitespace": 14054,
+     "W1 chars removed": 195590,
+     "W1 outputs changed": 2831,
+     "W2 chars removed": 8600,
+     "W2 outputs changed": 1432,
+     "W3 chars removed": 15835,
+     "W3 outputs changed": 14054
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.2025009569988516,
+     "W2": 0.11956105652673217,
+     "W3": 0.8742503508995789
+    },
+    "sim-attack": {
+     "W1": 0.17950668949337392,
+     "W2": 0.0907995688288631,
+     "W3": 0.891129287933549
+    }
+   }
+  },
+  "client_bash": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 933,
+     "real has more": 4,
+     "simulated has more": 2
+    },
+    "W2": {
+     "equal": 932,
+     "simulated has more": 3,
+     "real has more": 4
+    },
+    "W3": {
+     "equal": 911,
+     "simulated has more": 12,
+     "real has more": 16
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 126,
+     "W3 outputs ending in whitespace": 93,
+     "W1 chars removed": 175,
+     "W1 outputs changed": 4,
+     "W2 chars removed": 7,
+     "W2 outputs changed": 7,
+     "W3 chars removed": 97,
+     "W3 outputs changed": 93
+    },
+    "sim-attack": {
+     "outputs": 87,
+     "W3 outputs ending in whitespace": 85,
+     "W1 chars removed": 2,
+     "W1 outputs changed": 2,
+     "W2 chars removed": 6,
+     "W2 outputs changed": 6,
+     "W3 chars removed": 87,
+     "W3 outputs changed": 85
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.031746031746031744,
+     "W2": 0.05555555555555555,
+     "W3": 0.7380952380952381
+    },
+    "sim-attack": {
+     "W1": 0.022988505747126436,
+     "W2": 0.06896551724137931,
+     "W3": 0.9770114942528736
+    }
+   }
+  },
+  "db_bash": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 880,
+     "real has more": 27,
+     "simulated has more": 32
+    },
+    "W2": {
+     "equal": 938,
+     "simulated has more": 1
+    },
+    "W3": {
+     "equal": 880,
+     "real has more": 30,
+     "simulated has more": 29
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 270,
+     "W3 outputs ending in whitespace": 226,
+     "W1 chars removed": 2233,
+     "W1 outputs changed": 100,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 325,
+     "W3 outputs changed": 226
+    },
+    "sim-attack": {
+     "outputs": 265,
+     "W3 outputs ending in whitespace": 263,
+     "W1 chars removed": 1637,
+     "W1 outputs changed": 119,
+     "W2 chars removed": 1,
+     "W2 outputs changed": 1,
+     "W3 chars removed": 373,
+     "W3 outputs changed": 263
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.37037037037037035,
+     "W2": 0.0,
+     "W3": 0.837037037037037
+    },
+    "sim-attack": {
+     "W1": 0.4490566037735849,
+     "W2": 0.0037735849056603774,
+     "W3": 0.9924528301886792
+    }
+   }
+  },
+  "mp_restart": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 939
+    },
+    "W2": {
+     "equal": 939
+    },
+    "W3": {
+     "equal": 923,
+     "simulated has more": 11,
+     "real has more": 5
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 16,
+     "W3 outputs ending in whitespace": 16,
+     "W1 chars removed": 0,
+     "W1 outputs changed": 0,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 16,
+     "W3 outputs changed": 16
+    },
+    "sim-attack": {
+     "outputs": 27,
+     "W3 outputs ending in whitespace": 27,
+     "W1 chars removed": 0,
+     "W1 outputs changed": 0,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 27,
+     "W3 outputs changed": 27
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.0,
+     "W2": 0.0,
+     "W3": 1.0
+    },
+    "sim-attack": {
+     "W1": 0.0,
+     "W2": 0.0,
+     "W3": 1.0
+    }
+   }
+  },
+  "nginx_bash": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 935,
+     "real has more": 1,
+     "simulated has more": 3
+    },
+    "W2": {
+     "equal": 939
+    },
+    "W3": {
+     "equal": 926,
+     "real has more": 7,
+     "simulated has more": 6
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 19,
+     "W3 outputs ending in whitespace": 15,
+     "W1 chars removed": 71,
+     "W1 outputs changed": 5,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 24,
+     "W3 outputs changed": 15
+    },
+    "sim-attack": {
+     "outputs": 16,
+     "W3 outputs ending in whitespace": 14,
+     "W1 chars removed": 62,
+     "W1 outputs changed": 3,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 15,
+     "W3 outputs changed": 14
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.2631578947368421,
+     "W2": 0.0,
+     "W3": 0.7894736842105263
+    },
+    "sim-attack": {
+     "W1": 0.1875,
+     "W2": 0.0,
+     "W3": 0.875
+    }
+   }
+  },
+  "other": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 869,
+     "real has more": 34,
+     "simulated has more": 36
+    },
+    "W2": {
+     "equal": 923,
+     "real has more": 10,
+     "simulated has more": 6
+    },
+    "W3": {
+     "equal": 818,
+     "real has more": 59,
+     "simulated has more": 62
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 648,
+     "W3 outputs ending in whitespace": 516,
+     "W1 chars removed": 2526,
+     "W1 outputs changed": 113,
+     "W2 chars removed": 26,
+     "W2 outputs changed": 17,
+     "W3 chars removed": 704,
+     "W3 outputs changed": 516
+    },
+    "sim-attack": {
+     "outputs": 634,
+     "W3 outputs ending in whitespace": 607,
+     "W1 chars removed": 1708,
+     "W1 outputs changed": 125,
+     "W2 chars removed": 15,
+     "W2 outputs changed": 14,
+     "W3 chars removed": 753,
+     "W3 outputs changed": 607
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.1743827160493827,
+     "W2": 0.026234567901234566,
+     "W3": 0.7962962962962963
+    },
+    "sim-attack": {
+     "W1": 0.1971608832807571,
+     "W2": 0.022082018927444796,
+     "W3": 0.9574132492113565
+    }
+   }
+  },
+  "py_ml_bash": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 937,
+     "real has more": 2
+    },
+    "W2": {
+     "equal": 938,
+     "real has more": 1
+    },
+    "W3": {
+     "equal": 927,
+     "real has more": 6,
+     "simulated has more": 6
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 25,
+     "W3 outputs ending in whitespace": 17,
+     "W1 chars removed": 12,
+     "W1 outputs changed": 2,
+     "W2 chars removed": 7,
+     "W2 outputs changed": 1,
+     "W3 chars removed": 21,
+     "W3 outputs changed": 17
+    },
+    "sim-attack": {
+     "outputs": 27,
+     "W3 outputs ending in whitespace": 18,
+     "W1 chars removed": 0,
+     "W1 outputs changed": 0,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 18,
+     "W3 outputs changed": 18
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.08,
+     "W2": 0.04,
+     "W3": 0.68
+    },
+    "sim-attack": {
+     "W1": 0.0,
+     "W2": 0.0,
+     "W3": 0.6666666666666666
+    }
+   }
+  },
+  "rust_worker_bash": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 936,
+     "simulated has more": 1,
+     "real has more": 2
+    },
+    "W2": {
+     "equal": 932,
+     "real has more": 5,
+     "simulated has more": 2
+    },
+    "W3": {
+     "equal": 901,
+     "simulated has more": 23,
+     "real has more": 15
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 192,
+     "W3 outputs ending in whitespace": 149,
+     "W1 chars removed": 35,
+     "W1 outputs changed": 2,
+     "W2 chars removed": 12,
+     "W2 outputs changed": 9,
+     "W3 chars removed": 221,
+     "W3 outputs changed": 149
+    },
+    "sim-attack": {
+     "outputs": 212,
+     "W3 outputs ending in whitespace": 200,
+     "W1 chars removed": 7,
+     "W1 outputs changed": 1,
+     "W2 chars removed": 8,
+     "W2 outputs changed": 7,
+     "W3 chars removed": 233,
+     "W3 outputs changed": 200
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.010416666666666666,
+     "W2": 0.046875,
+     "W3": 0.7760416666666666
+    },
+    "sim-attack": {
+     "W1": 0.0047169811320754715,
+     "W2": 0.0330188679245283,
+     "W3": 0.9433962264150944
+    }
+   }
+  },
+  "text_editor": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "real has more": 614,
+     "simulated has more": 273,
+     "equal": 52
+    },
+    "W2": {
+     "equal": 937,
+     "real has more": 1,
+     "simulated has more": 1
+    },
+    "W3": {
+     "simulated has more": 771,
+     "equal": 71,
+     "real has more": 97
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 10165,
+     "W3 outputs ending in whitespace": 2033,
+     "W1 chars removed": 60658,
+     "W1 outputs changed": 7090,
+     "W2 chars removed": 1,
+     "W2 outputs changed": 1,
+     "W3 chars removed": 3581,
+     "W3 outputs changed": 2033
+    },
+    "sim-attack": {
+     "outputs": 9992,
+     "W3 outputs ending in whitespace": 9472,
+     "W1 chars removed": 33825,
+     "W1 outputs changed": 6600,
+     "W2 chars removed": 1,
+     "W2 outputs changed": 1,
+     "W3 chars removed": 12304,
+     "W3 outputs changed": 9472
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.6974913920314806,
+     "W2": 9.837678307919331e-05,
+     "W3": 0.2
+    },
+    "sim-attack": {
+     "W1": 0.6605284227381906,
+     "W2": 0.00010008006405124099,
+     "W3": 0.9479583666933546
+    }
+   }
+  },
+  "text_editor:create": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 939
+    },
+    "W2": {
+     "equal": 939
+    },
+    "W3": {
+     "equal": 461,
+     "simulated has more": 478
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 1516,
+     "W3 outputs ending in whitespace": 0,
+     "W1 chars removed": 0,
+     "W1 outputs changed": 0,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 0,
+     "W3 outputs changed": 0
+    },
+    "sim-attack": {
+     "outputs": 1413,
+     "W3 outputs ending in whitespace": 1038,
+     "W1 chars removed": 0,
+     "W1 outputs changed": 0,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 1038,
+     "W3 outputs changed": 1038
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.0,
+     "W2": 0.0,
+     "W3": 0.0
+    },
+    "sim-attack": {
+     "W1": 0.0,
+     "W2": 0.0,
+     "W3": 0.7346072186836518
+    }
+   }
+  },
+  "text_editor:insert": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 384,
+     "real has more": 430,
+     "simulated has more": 125
+    },
+    "W2": {
+     "equal": 939
+    },
+    "W3": {
+     "equal": 484,
+     "simulated has more": 455
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 1233,
+     "W3 outputs ending in whitespace": 0,
+     "W1 chars removed": 6044,
+     "W1 outputs changed": 1182,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 0,
+     "W3 outputs changed": 0
+    },
+    "sim-attack": {
+     "outputs": 1192,
+     "W3 outputs ending in whitespace": 1148,
+     "W1 chars removed": 1571,
+     "W1 outputs changed": 918,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 1592,
+     "W3 outputs changed": 1148
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.9586374695863747,
+     "W2": 0.0,
+     "W3": 0.0
+    },
+    "sim-attack": {
+     "W1": 0.7701342281879194,
+     "W2": 0.0,
+     "W3": 0.9630872483221476
+    }
+   }
+  },
+  "text_editor:str_replace": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "real has more": 577,
+     "simulated has more": 272,
+     "equal": 90
+    },
+    "W2": {
+     "equal": 937,
+     "real has more": 1,
+     "simulated has more": 1
+    },
+    "W3": {
+     "simulated has more": 767,
+     "equal": 116,
+     "real has more": 56
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 6250,
+     "W3 outputs ending in whitespace": 911,
+     "W1 chars removed": 18954,
+     "W1 outputs changed": 4827,
+     "W2 chars removed": 1,
+     "W2 outputs changed": 1,
+     "W3 chars removed": 1805,
+     "W3 outputs changed": 911
+    },
+    "sim-attack": {
+     "outputs": 6271,
+     "W3 outputs ending in whitespace": 6239,
+     "W1 chars removed": 13659,
+     "W1 outputs changed": 4773,
+     "W2 chars removed": 1,
+     "W2 outputs changed": 1,
+     "W3 chars removed": 8392,
+     "W3 outputs changed": 6239
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.77232,
+     "W2": 0.00016,
+     "W3": 0.14576
+    },
+    "sim-attack": {
+     "W1": 0.7611226279700207,
+     "W2": 0.00015946420028703555,
+     "W3": 0.9948971455908149
+    }
+   }
+  },
+  "text_editor:undo_edit": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 915,
+     "simulated has more": 6,
+     "real has more": 18
+    },
+    "W2": {
+     "equal": 939
+    },
+    "W3": {
+     "equal": 904,
+     "simulated has more": 18,
+     "real has more": 17
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 28,
+     "W3 outputs ending in whitespace": 28,
+     "W1 chars removed": 2929,
+     "W1 outputs changed": 28,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 50,
+     "W3 outputs changed": 28
+    },
+    "sim-attack": {
+     "outputs": 32,
+     "W3 outputs ending in whitespace": 30,
+     "W1 chars removed": 660,
+     "W1 outputs changed": 11,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 37,
+     "W3 outputs changed": 30
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 1.0,
+     "W2": 0.0,
+     "W3": 1.0
+    },
+    "sim-attack": {
+     "W1": 0.34375,
+     "W2": 0.0,
+     "W3": 0.9375
+    }
+   }
+  },
+  "text_editor:view": {
+   "cells by class (chars removed per run)": {
+    "W1": {
+     "equal": 488,
+     "real has more": 228,
+     "simulated has more": 223
+    },
+    "W2": {
+     "equal": 939
+    },
+    "W3": {
+     "equal": 501,
+     "real has more": 223,
+     "simulated has more": 215
+    }
+   },
+   "per-arm totals": {
+    "real-attack-e2": {
+     "outputs": 1138,
+     "W3 outputs ending in whitespace": 1094,
+     "W1 chars removed": 32731,
+     "W1 outputs changed": 1053,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 1726,
+     "W3 outputs changed": 1094
+    },
+    "sim-attack": {
+     "outputs": 1084,
+     "W3 outputs ending in whitespace": 1017,
+     "W1 chars removed": 17935,
+     "W1 outputs changed": 898,
+     "W2 chars removed": 0,
+     "W2 outputs changed": 0,
+     "W3 chars removed": 1245,
+     "W3 outputs changed": 1017
+    }
+   },
+   "per-output rates (outputs changed / outputs)": {
+    "real-attack-e2": {
+     "W1": 0.9253075571177505,
+     "W2": 0.0,
+     "W3": 0.961335676625659
+    },
+    "sim-attack": {
+     "W1": 0.8284132841328413,
+     "W2": 0.0,
+     "W3": 0.9381918819188192
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,11 @@
+# d9's CUT fork (Append 41): simh311_q4_sim_s1_cutfull_gate staged by stage_chain.py (record chain_stage_simh311_q4_sim_s1_cutfull_gate_2026-10-15_193352.json); every layer, last-token rows and
+# output_end span means, as the chain's extractions (chunk 8, pad 4096), H200; no cut, no repro-c arm.
+run: simh311_q4_sim_s1_cutfull_gate_extract_v1
+inputs: simh311_q4_sim_s1_cutfull_gate_v1
+inputs_sha256:
+  sim_honest@september.jsonl: 8269a6ce24794d65ead97d5968f6e92e73a6fd2716a3005a0951b61441e69fd0
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 8
+pad_to: 4096
+cut: full

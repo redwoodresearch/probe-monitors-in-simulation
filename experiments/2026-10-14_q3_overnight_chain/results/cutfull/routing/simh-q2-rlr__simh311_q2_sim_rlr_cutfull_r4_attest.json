@@ -1,0 +1,10 @@
+{
+ "batch": "simh-q2-rlr",
+ "original_target": "simh311_q2_sim_rlr",
+ "revision": 4,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/simh-q2-rlr__simh311_q2_sim_rlr_cutfull_r4.json @ 3767cf3a78c7",
+ "commit": "3767cf3a78c7",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_simh-q2-rlr__simh311_q2_sim_rlr_cutfull_r4.json",
+ "sets": 1,
+ "failing": {}
+}

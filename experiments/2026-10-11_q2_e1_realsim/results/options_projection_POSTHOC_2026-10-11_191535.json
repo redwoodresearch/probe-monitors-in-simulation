@@ -1,0 +1,74 @@
+{
+ "label": "POST HOC (after the pilot readout was read; no verdict)",
+ "git": "74df57df79a0f017b5aef421aeef305b9951b946",
+ "index sha256": "c288eca8b29da7f1d7b8538217ba562b66fb8c74fae9000be39b27ac4db893ee",
+ "primary": {
+  "usable pairs per arm (of 40 tasks)": {
+   "real_a": 12,
+   "real_b": 4,
+   "sim": 10
+  },
+  "both usable (share of 40)": {
+   "real_a & sim": 0.125,
+   "real_a & real_b": 0.05
+  },
+  "per-run SD of D per arm": {
+   "real_a": 0.6927578156068132,
+   "real_b": 1.2808905551252654,
+   "sim": 1.2518720549083635
+  },
+  "projection": {
+   "163 same-batch tasks": {
+    "usable tasks for S": 54.625,
+    "usable tasks for R": 8.15,
+    "SE of S": 0.1935857963729315,
+    "SE of R": 0.5100937006782057,
+    "corr(S, R)": 0.23033762746376935,
+    "P": 0.0
+   },
+   "163 + the plan's ~233 from zoo C": {
+    "usable tasks for S": 54.625,
+    "usable tasks for R": 19.8,
+    "SE of S": 0.1935857963729315,
+    "SE of R": 0.3272624441301693,
+    "corr(S, R)": 0.23033762746376935,
+    "P": 0.0
+   }
+  }
+ },
+ "looser": {
+  "usable pairs per arm (of 40 tasks)": {
+   "real_a": 18,
+   "real_b": 14,
+   "sim": 16
+  },
+  "both usable (share of 40)": {
+   "real_a & sim": 0.25,
+   "real_a & real_b": 0.275
+  },
+  "per-run SD of D per arm": {
+   "real_a": 0.6322002065307236,
+   "real_b": 0.9367702983110037,
+   "sim": 1.2605941341416314
+  },
+  "projection": {
+   "163 same-batch tasks": {
+    "usable tasks for S": 109.25,
+    "usable tasks for R": 44.825,
+    "SE of S": 0.1349217816345781,
+    "SE of R": 0.16879981794218765,
+    "corr(S, R)": 0.25077506609655537,
+    "P": 0.633385
+   },
+   "163 + the plan's ~233 from zoo C": {
+    "usable tasks for S": 109.25,
+    "usable tasks for R": 108.9,
+    "SE of S": 0.1349217816345781,
+    "SE of R": 0.10829743812762244,
+    "corr(S, R)": 0.25077506609655537,
+    "P": 0.91252
+   }
+  }
+ },
+ "primary reproduces the readout": true
+}

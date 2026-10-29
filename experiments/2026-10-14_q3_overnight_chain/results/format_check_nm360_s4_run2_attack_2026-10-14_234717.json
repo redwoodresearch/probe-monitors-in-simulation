@@ -1,0 +1,23 @@
+{
+ "target": "nm360_s4_run2",
+ "arm": "attack",
+ "staged_file": "/ev/nm360_s4_run2_v1/inputs/attack.jsonl",
+ "staged_sha": "373c7a50df75c01eb168a8d3757436a03f9792a1dda58be9ba9ffbba7955d029",
+ "template": "fixed",
+ "seed": 20261014,
+ "n": 1,
+ "tasks": null,
+ "rows": [
+  {
+   "line": 0,
+   "assistant_turns": 100,
+   "prefix_mismatches": 0,
+   "think_blocks": 100,
+   "nonempty_think_blocks": 0,
+   "staged_len": 32768,
+   "full_len": 41146,
+   "cut_equal": true
+  }
+ ],
+ "passes": true
+}

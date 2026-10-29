@@ -1,0 +1,12 @@
+# q3 (2026-10-12, post hoc; ../../2026-10-12_q3_edit_honest_fa/RULE.md): the pipeline check before the edited run. Four
+# UNEDITED simulated honest runs (staged byte-identical by stage_edit_honest.py) re-extracted at layers 48 and 63, to be
+# compared row for row with the stored v4 all-layers activations of the same runs (check_smoke.py). One shard.
+run: 2026-10-12_q3_edithonest_smoke_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-12_q3_edithonest_smoke_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 1
+chunk_size: 2
+layers: [48, 63]

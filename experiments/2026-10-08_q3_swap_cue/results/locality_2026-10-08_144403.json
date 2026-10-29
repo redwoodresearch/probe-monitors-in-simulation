@@ -1,0 +1,104 @@
+{
+ "inputs": {
+  "calls": [
+   "swap_frozen_calls_2026-10-08_140611.jsonl.gz",
+   "swap_frozen_calls_2026-10-08_140503.jsonl.gz"
+  ],
+  "stage_reports": [
+   "stage_report_comb.json",
+   "stage_report_ext.json"
+  ]
+ },
+ "readouts": {
+  "output_end": {
+   "outputs": {
+    "changed": 2296,
+    "after": 2007,
+    "before": 2050
+   },
+   "mean_change_per_output (changed)": {
+    "logits": 0.8085939087834004,
+    "ci95": [
+     0.7247110899468446,
+     0.8882365164060078
+    ]
+   },
+   "mean_change_per_output (after)": {
+    "logits": 0.14280728725034336,
+    "ci95": [
+     0.11068964746788809,
+     0.17486320409559897
+    ]
+   },
+   "mean_change_per_output (before)": {
+    "logits": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "share_of_common_output_change (changed)": {
+    "share": 0.8580572461646834,
+    "ci95": [
+     0.8239173713107683,
+     0.8884266305699223
+    ]
+   },
+   "share_of_common_output_change (after)": {
+    "share": 0.14194275383531682,
+    "ci95": [
+     0.11157336943007776,
+     0.17608262868923172
+    ]
+   },
+   "runs": 217,
+   "as_simulated_only_outputs (outside the decomposition)": 111,
+   "common_output_mean_run_change_logits": 0.3205160492188311
+  },
+  "output_end@48": {
+   "outputs": {
+    "changed": 2296,
+    "after": 2007,
+    "before": 2050
+   },
+   "mean_change_per_output (changed)": {
+    "logits": -0.15880505328787853,
+    "ci95": [
+     -0.21955087452770647,
+     -0.09781396499299387
+    ]
+   },
+   "mean_change_per_output (after)": {
+    "logits": -0.07460586728985683,
+    "ci95": [
+     -0.09460445499323288,
+     -0.05436025431696999
+    ]
+   },
+   "mean_change_per_output (before)": {
+    "logits": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "share_of_common_output_change (changed)": {
+    "share": 0.6501692852457176,
+    "ci95": [
+     0.4714030523354511,
+     0.7521546676841221
+    ]
+   },
+   "share_of_common_output_change (after)": {
+    "share": 0.3498307147542827,
+    "ci95": [
+     0.24784533231587774,
+     0.5285969476645488
+    ]
+   },
+   "runs": 217,
+   "as_simulated_only_outputs (outside the decomposition)": 111,
+   "common_output_mean_run_change_logits": -0.0659534237022199
+  }
+ }
+}

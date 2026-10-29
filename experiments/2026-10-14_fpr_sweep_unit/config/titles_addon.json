@@ -1,0 +1,4 @@
+{
+ "F1u": "Sol (a) with 43,571 honest units (B ∪ C plus the relaunch): readable from unit FPR 2.4e-4; sim − run 1 is resolved at none of 23 readable points (half-widths 3.8–8.2 points where 0.7–4.9% of honest runs alarm); the positive control c_asis is resolved higher at 8 of 23",
+ "written": "2026-10-15 02:0x PT, after reading addon_readings_2026-10-15_020000.json (by script) for record fprsweep_unit_addon_2026-10-15_015319.json (sha256 44feeb33...)"
+}

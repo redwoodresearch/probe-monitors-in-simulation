@@ -1,0 +1,33 @@
+{
+ "probe_file": "onpolicy_2x2_scaleup196_draws0-500_2026-10-10_163614.json",
+ "probe_sha256": "b8ddf7c20aecb210b90cb67544dcd7f9cdbae6ca9e9ead8f758fe405f895d18d",
+ "text_file": "textcatch_main_draws0-500_2026-10-11_200931.json",
+ "text_sha256": "6060815bb79e706300292e6c06293348026b461c1d275056955ae3e8fe7b8325",
+ "draws": 500,
+ "metrics": {
+  "catch_frozen": {
+   "observed_probe_gap": 0.004552227171457424,
+   "observed_text_gap": -0.01213381535003022,
+   "observed_difference": 0.016686042521487643,
+   "ci95": [
+    -0.0225,
+    0.0482
+   ],
+   "failed": 0,
+   "invalid": false,
+   "differ": false
+  },
+  "auroc": {
+   "observed_probe_gap": 0.004467103558785546,
+   "observed_text_gap": 0.0025250873348834357,
+   "observed_difference": 0.00194201622390211,
+   "ci95": [
+    -0.0076,
+    0.0139
+   ],
+   "failed": 0,
+   "invalid": false,
+   "differ": false
+  }
+ }
+}

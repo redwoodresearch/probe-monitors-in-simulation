@@ -1,0 +1,179 @@
+# Morning figures spec: what each figure draws and where each number comes from (read by plot_morning_figures.py).
+figures:
+- fig: Q2.1
+  slug: offpolicy_catch
+  title: Reading Sol's runs, the monitor catches simulated and real impactful commands alike
+  caption: 'Q2.1: reading Sol''s runs (530 tasks: 522 per world, 514 in both), the real-trained monitor catches 90.8% of real vs 90.8% of simulated impactful commands at 1% false alarms (+0.06 points [−1.07, +1.34]); with the published monitor, real − simulated (+0.02) is no larger than two real runs (+0.40), and 5 points is ruled out for both (published-monitor control on open PR #499).'
+  panels:
+  - title: Caught at 1% false alarms (refit monitor)
+    kind: bars
+    unit: percent
+    ylabel: "Impactful commands caught (%)\n(higher is better)"
+    bars:
+    - {label: Real, role: real, ref: 5564a2ee2e64, path: experiments/2026-10-09_q2_tpr_at_1pct/README.md, scale: 100, value: 90.81, lo: 85.13, hi: 93.64, quote: 'real->real: TPR 0.9081 [0.8513, 0.9364]', n: 522 tasks, n_quote: 522 tasks in each world, raw: ['0.9081', '0.8513', '0.9364']}
+    - {label: Simulated, role: sim, ref: 5564a2ee2e64, path: experiments/2026-10-09_q2_tpr_at_1pct/README.md, scale: 100, value: 90.75, lo: 84.75, hi: 93.61, quote: 'real->sim: TPR 0.9075 [0.8475, 0.9361]', n: 522 tasks, n_quote: 522 tasks in each world, raw: ['0.9075', '0.8475', '0.9361']}
+  - title: Gaps, with the ±5-point line
+    kind: bars
+    unit: points
+    ylabel: "Difference (points)\n(closer to 0 is better)"
+    lines:
+    - {y: 5, label: '+5', source: {ref: e577e6cf107e, path: experiments/2026-10-10_route3_phase1_e2/README.md, quote: '''5-point gap ruled out'': True', raw: '5', scale: 1, pm: true}}
+    - {y: -5, label: −5, source: {ref: e577e6cf107e, path: experiments/2026-10-10_route3_phase1_e2/README.md, quote: '''5-point gap ruled out'': True', raw: '5', scale: 1, pm: true}}
+    bars:
+    - {label: "Real − simulated\n(refit)", role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-09_q2_tpr_at_1pct/README.md, scale: 100, value: 0.06, lo: -1.07, hi: 1.34, quote: '"catch, frozen training-world threshold": {"value": 0.0006, "ci95": [-0.0107, 0.0134]}', raw: ['0.0006', '-0.0107', '0.0134']}
+    - {label: "Real run 1 − simulated\n(published monitor)", role: gap, ref: e577e6cf107e, path: experiments/2026-10-10_route3_phase1_e2/README.md, scale: -100, value: 0.02, lo: -1.07, hi: 1.22, quote: "gap sim-e1 {'catch@0.01': -0.0002, 'false_alarms@0.01': -0.0005, 'catch@0.05': -0.0004, 'false_alarms@0.05': -0.0002, 'auroc': -0.0008}\n  ci95 {'catch@0.01': [-0.0122, 0.0107]", raw: ['-0.0002', '0.0107', '-0.0122']}
+    - {label: "Real run 2 − run 1\n(published monitor)", role: control, ref: e577e6cf107e, path: experiments/2026-10-10_route3_phase1_e2/README.md, scale: 100, value: 0.4, lo: -0.65, hi: 1.35, quote: "gap e2-e1 {'catch@0.01': 0.004, 'false_alarms@0.01': -0.0024, 'catch@0.05': -0.0007, 'false_alarms@0.05': -0.0054, 'auroc': 0.0007}\n  ci95 {'catch@0.01': [-0.0065, 0.0135]", raw: ['0.004', '-0.0065', '0.0135']}
+- fig: Q2.2
+  slug: onpolicy_catch_196
+  title: With Qwen acting on 196 tasks, a 10-point catch gap is ruled out at the frozen threshold; the post hoc recalibration is inconclusive
+  caption: 'Q2.2: with Qwen3.5-27B acting (196 tasks, September simulator), the real-trained monitor catches 89.2% [74.5, 91.7] of real and 88.7% [75.7, 91.5] of simulated impactful commands at a frozen 1% threshold (a second real run 87.2%); real − simulated is +0.46 points [−2.32, +2.50] and two real runs −1.98 [−4.41, +1.72], so a 10-point gap is ruled out and no gap is established; the same threshold gives 2.9% false alarms on simulated harmless commands vs 1.1% on real (levels are a post hoc export, branch aswin/d196-control). With each world''s own threshold targeting 1% false alarms (post hoc), real − simulated is +5.8 points [−6.3, +10.6] against two real runs'' run 2 − run 1 of +4.6 [−3.4, +9.6]; the thresholds achieve 3.03% false alarms in simulation vs 1.14% on real runs.'
+  panels:
+  - title: Caught at the frozen threshold targeting 1% false alarms
+    kind: bars
+    unit: percent
+    ylabel: "Impactful commands caught (%)\n(higher is better)"
+    lines: []
+    bars:
+    - {label: "Real\n(run 1)", role: real, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/q22_levels_POSTHOC_2026-10-11_003931.json, key: 1% target (refit draws 1-500)/real catch (real → real)/catch_frozen/observed, lo_key: 1% target (refit draws 1-500)/real catch (real → real)/catch_frozen/ci95/0, hi_key: 1% target (refit draws 1-500)/real catch (real → real)/catch_frozen/ci95/1, scale: 100, value: 89.16, lo: 74.53, hi: 91.67}
+    - {label: "Real\n(run 2)", role: real2, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/q22_levels_POSTHOC_2026-10-11_003931.json, key: 1% target (refit draws 1-500)/run 2 catch (real → run 2)/catch_frozen/observed, lo_key: 1% target (refit draws 1-500)/run 2 catch (real → run 2)/catch_frozen/ci95/0, hi_key: 1% target (refit draws 1-500)/run 2 catch (real → run 2)/catch_frozen/ci95/1, scale: 100, value: 87.18, lo: 74.24, hi: 90.83}
+    - {label: Simulated, role: sim, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/q22_levels_POSTHOC_2026-10-11_003931.json, key: 1% target (refit draws 1-500)/simulated catch (real → sim)/catch_frozen/observed, lo_key: 1% target (refit draws 1-500)/simulated catch (real → sim)/catch_frozen/ci95/0, hi_key: 1% target (refit draws 1-500)/simulated catch (real → sim)/catch_frozen/ci95/1, scale: 100, value: 88.7, lo: 75.71, hi: 91.45}
+  - title: Catch gaps at the frozen threshold targeting 1% false alarms
+    kind: bars
+    unit: points
+    ylabel: "Difference (points)\n(closer to 0 is better)"
+    lines:
+    - {y: 10, label: +10 margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/plan_scaleup_196_scoring_2026-10-10.md, quote: margin 10 points., raw: '10', scale: 1, pm: true}}
+    - {y: -10, label: −10 margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/plan_scaleup_196_scoring_2026-10-10.md, quote: margin 10 points., raw: '10', scale: 1, pm: true}}
+    bars:
+    - {label: Real − simulated, role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/results/scaleup196_verdicts_2026-10-10_164622.json, key: endpoints/main_tpr_gap_real_minus_sim/observed, lo_key: endpoints/main_tpr_gap_real_minus_sim/ci95/0, hi_key: endpoints/main_tpr_gap_real_minus_sim/ci95/1, scale: 100, value: 0.46, lo: -2.32, hi: 2.5}
+    - {label: "Real run 2 − run 1\n(control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/results/scaleup196_verdicts_2026-10-10_164622.json, key: endpoints/catch_control_run2_minus_run1/observed, lo_key: endpoints/catch_control_run2_minus_run1/ci95/0, hi_key: endpoints/catch_control_run2_minus_run1/ci95/1, scale: 100, value: -1.98, lo: -4.41, hi: 1.72}
+  - title: Each world's own threshold targeting 1% false alarms (post hoc)
+    kind: bars
+    unit: points
+    ylabel: "Difference (points)\n(closer to 0 is better)"
+    lines:
+    - {y: 10, label: +10 margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/plan_scaleup_196_scoring_2026-10-10.md, quote: margin 10 points., raw: '10', scale: 1, pm: true}}
+    - {y: -10, label: −10 margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/plan_scaleup_196_scoring_2026-10-10.md, quote: margin 10 points., raw: '10', scale: 1, pm: true}}
+    bars:
+    - {label: Real − simulated, role: gap, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/q22_matched_fa_POSTHOC_2026-10-11_033516.json, key: targets/1%/gap real - sim/observed, lo_key: targets/1%/gap real - sim/ci95/0, hi_key: targets/1%/gap real - sim/ci95/1, scale: 100, value: 5.78, lo: -6.27, hi: 10.61}
+    - {label: "Real run 2 − run 1\n(control)", role: control, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/q22_matched_fa_POSTHOC_2026-10-11_033516.json, key: targets/1%/control run 1 - run 2/observed, lo_key: targets/1%/control run 1 - run 2/ci95/0, hi_key: targets/1%/control run 1 - run 2/ci95/1, scale: -100, value: 4.59, lo: -3.39, hi: 9.59}
+- fig: Q2.3
+  slug: threshold_set_in_sim
+  ncols: 2
+  title: A threshold set in simulation gives about 1% real false alarms when Sol acts; with Qwen acting it is inconclusive
+  caption: 'Q2.3: a 1% threshold set on simulated runs gives 1.07% real false alarms when Sol acts (inside 0.5–2%); with Qwen acting, check (b) gives 1.19% [0.82, 2.57] and adding honest runs 2.64% [1.57, 4.75] per command (2.15% each task once); two honest runs differ (4.42% vs 1.89%), mostly from two long clinical-trial runs, so it stays inconclusive; at a 5% target, 6.66% (post hoc).'
+  panels:
+  - title: Sol acts, threshold set in simulation
+    kind: bars
+    unit: percent
+    ylabel: "Real false alarms (%)\n(inside the band is better)"
+    lines:
+    - {y: 1.0, label: 1% target}
+    - {band: [0.5, 2.0], label: 0.5–2%}
+    bars:
+    - {label: Real-trained probe, role: real, ref: 5564a2ee2e64, path: experiments/2026-10-09_q2_threshold_in_sim/README.md, scale: 100, value: 1.07, lo: 0.55, hi: 1.74, quote: '"real FPR": 0.0107, "real FPR 95% (task resamples, thresholds recomputed)": [0.0055, 0.0174]', n: 530 tasks, n_quote: Off-policy (530 tasks), raw: ['0.0107', '0.0055', '0.0174']}
+    - {label: "Trained in\nsimulation", role: real, ref: 5564a2ee2e64, path: experiments/2026-10-09_q2_threshold_in_sim/README.md, scale: 100, value: 1.23, lo: 0.71, hi: 2.13, quote: '"real FPR": 0.0123, "real FPR 95% (task resamples, thresholds recomputed)": [0.0071, 0.0213]', n: 530 tasks, n_quote: Off-policy (530 tasks), raw: ['0.0123', '0.0071', '0.0213']}
+    ylim:
+    - 0
+    - 12
+  - title: Qwen acts (196 tasks)
+    kind: bars
+    unit: percent
+    ylabel: "Real false alarms (%)\n(inside the band is better)"
+    lines:
+    - {y: 1.0, label: 1% target}
+    - {band: [0.5, 2.0], label: 0.5–2%}
+    bars:
+    - {label: Check (b), role: real, ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/results/scaleup_plants_2026-10-10_164614.json, key: (b) threshold set in simulation/real_false_alarm_rate, lo_key: (b) threshold set in simulation/ci95/0, hi_key: (b) threshold set in simulation/ci95/1, scale: 100, value: 1.19, lo: 0.82, hi: 2.57}
+    - {label: "+ honest runs,\nper command", role: real, ref: 53ec4fbaa772, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_2026-10-10_234755.json, key: real_false_alarm_rate, lo_key: ci95/0, hi_key: ci95/1, scale: 100, value: 2.64, lo: 1.57, hi: 4.75}
+    - {label: "+ honest runs,\neach task once", role: real, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_POSTHOC_pertask_2026-10-11_000854.json, key: 'Q2.3 per-task: real run 1 + honest A + honest B/point', lo_key: 'Q2.3 per-task: real run 1 + honest A + honest B/ci95/0', hi_key: 'Q2.3 per-task: real run 1 + honest A + honest B/ci95/1', scale: 100, value: 2.15, lo: 1.49, hi: 3.7}
+    ylim:
+    - 0
+    - 12
+  - title: Two real honest runs (control)
+    kind: bars
+    unit: percent
+    ylabel: "Real false alarms (%)\n(inside the band is better)"
+    lines:
+    - {y: 1.0, label: 1% target}
+    - {band: [0.5, 2.0], label: 0.5–2%}
+    bars:
+    - {label: "A, per\ncommand", role: real, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_POSTHOC_sources_2026-10-11_001718.json, key: (1) pool/per world/honA/point, lo_key: (1) pool/per world/honA/ci95/0, hi_key: (1) pool/per world/honA/ci95/1, scale: 100, value: 4.42, lo: 1.73, hi: 9.01}
+    - {label: "B, per\ncommand", role: real2, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_POSTHOC_sources_2026-10-11_001718.json, key: (1) pool/per world/honB/point, lo_key: (1) pool/per world/honB/ci95/0, hi_key: (1) pool/per world/honB/ci95/1, scale: 100, value: 1.89, lo: 1.14, hi: 3.33}
+    - {label: "A, each\ntask once", role: real, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_POSTHOC_pertask_2026-10-11_000854.json, key: 'per-task rate: honA/point', lo_key: 'per-task rate: honA/ci95/0', hi_key: 'per-task rate: honA/ci95/1', scale: 100, value: 2.34, lo: 1.46, hi: 4.0}
+    - {label: "B, each\ntask once", role: real2, ref: c389983764f9, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_POSTHOC_pertask_2026-10-11_000854.json, key: 'per-task rate: honB/point', lo_key: 'per-task rate: honB/ci95/0', hi_key: 'per-task rate: honB/ci95/1', scale: 100, value: 1.75, lo: 1.15, hi: 3.17}
+    ylim:
+    - 0
+    - 12
+  - title: Qwen acts, 5% target (post hoc)
+    kind: bars
+    unit: percent
+    ylabel: "Real false alarms (%)\n(closer to 5% is better)"
+    lines:
+    - {y: 5.0, label: 5% target}
+    bars:
+    - {label: Per command, role: real, ref: b1c29f59d36a, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_POSTHOC_5pct_2026-10-11_002011.json, key: '5% target/per call: Q2.3 (run 1 + honest A + honest B)/point', lo_key: '5% target/per call: Q2.3 (run 1 + honest A + honest B)/ci95/0', hi_key: '5% target/per call: Q2.3 (run 1 + honest A + honest B)/ci95/1', scale: 100, value: 6.66, lo: 5.33, hi: 10.65}
+    - {label: "Each task\nonce", role: real, ref: b1c29f59d36a, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_POSTHOC_5pct_2026-10-11_002011.json, key: '5% target/per task: Q2.3 (run 1 + honest A + honest B)/point', lo_key: '5% target/per task: Q2.3 (run 1 + honest A + honest B)/ci95/0', hi_key: '5% target/per task: Q2.3 (run 1 + honest A + honest B)/ci95/1', scale: 100, value: 6.01, lo: 5.09, hi: 9.27}
+    - {label: Honest A, role: real, ref: b1c29f59d36a, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_POSTHOC_5pct_2026-10-11_002011.json, key: '5% target/per call: world honA/point', lo_key: '5% target/per call: world honA/ci95/0', hi_key: '5% target/per call: world honA/ci95/1', scale: 100, value: 9.81, lo: 6.67, hi: 16.31}
+    - {label: Honest B, role: real2, ref: b1c29f59d36a, path: experiments/2026-10-08_q3_onpolicy_figures/results/b_honest_POSTHOC_5pct_2026-10-11_002011.json, key: '5% target/per call: world honB/point', lo_key: '5% target/per call: world honB/ci95/0', hi_key: '5% target/per call: world honB/ci95/1', scale: 100, value: 5.18, lo: 4.18, hi: 9.72}
+    ylim:
+    - 0
+    - 20
+- fig: Q2.4
+  slug: acting_vs_reading
+  title: 'Acting vs reading: the real-vs-simulated gap does not change in ranking quality'
+  caption: 'Q2.4: the real-vs-simulated gap is the same whether Qwen acts or reads (184 tasks): in ranking quality D = −0.002 [−0.014, +0.011], so a 0.03 change is ruled out (control passes); in catch at 1% D_catch = +0.5 points [−3.3, +5.1], but its two-real-runs control fails (+2.3 [−2.1, +7.7]), so that is inconclusive.'
+  panels:
+  - title: Ranking quality (AUROC gap)
+    kind: bars
+    unit: AUROC diff
+    ylabel: "Change in gap (AUROC)\n(closer to 0 is better)"
+    lines:
+    - {y: 0.03, label: +0.03 margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/plan_D_redo_196_2026-10-09.md, quote: 'inside (−0.03, +0.03)', raw: '+0.03', scale: 1}}
+    - {y: -0.03, label: −0.03 margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/plan_D_redo_196_2026-10-09.md, quote: 'inside (−0.03, +0.03)', raw: '-0.03', scale: 1}}
+    bars:
+    - {label: Acting − reading, role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/results/D196_verdicts_2026-10-10_213831.json, key: endpoints/D/observed, lo_key: endpoints/D/ci95/0, hi_key: endpoints/D/ci95/1, scale: 1, value: -0.0022, lo: -0.0138, hi: 0.0112}
+    - {label: "Two real runs\n(control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/results/D196_verdicts_2026-10-10_213831.json, key: endpoints/D_control/observed, lo_key: endpoints/D_control/ci95/0, hi_key: endpoints/D_control/ci95/1, scale: 1, value: 0.0036, lo: -0.0038, hi: 0.0126}
+  - title: Catch at 1% false alarms
+    kind: bars
+    unit: points
+    ylabel: "Change in gap (points)\n(closer to 0 is better)"
+    lines:
+    - {y: 10, label: +10 margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/plan_D_redo_196_2026-10-09.md, quote: a 10-point margin, raw: '10', scale: 1, pm: true}}
+    - {y: -10, label: −10 margin, source: {ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/plan_D_redo_196_2026-10-09.md, quote: a 10-point margin, raw: '10', scale: 1, pm: true}}
+    bars:
+    - {label: Acting − reading, role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/results/Dcatch196_2026-10-10_215525.json, key: endpoints/D_catch/observed, lo_key: endpoints/D_catch/ci95/0, hi_key: endpoints/D_catch/ci95/1, scale: 100, value: 0.48, lo: -3.33, hi: 5.06}
+    - {label: "Two real runs\n(control, fails)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-08_q3_onpolicy_figures/results/Dcatch196_2026-10-10_215525.json, key: endpoints/D_catch_control/observed, lo_key: endpoints/D_catch_control/ci95/0, hi_key: endpoints/D_catch_control/ci95/1, scale: 100, value: 2.29, lo: -2.15, hi: 7.74}
+- fig: Q2.5
+  slug: destructive_transfer
+  title: 'Destructive and data-transfer monitors: real and simulated catch agree within 10 points at 5% false alarms; not established at 1%'
+  caption: 'Q2.5: reading Sol''s honest runs, real − simulated catch is +2.8 points [−3.1, +9.7] (destructive) and +6.8 [−1.0, +12.5] (data transfer) at 1% false alarms, and +0.5 and +0.8 at 5%; under the post hoc ±10-point margin both agree at 5% after Holm, at 1% neither is established, and nothing is established at ±5, where even two real runs can''t be shown to agree (destructive −4.4 [−12.2, +4.4] at 1%; #532).'
+  panels:
+  - title: Destructive commands
+    kind: bars
+    unit: points
+    ylabel: "Difference caught (points)\n(closer to 0 is better)"
+    lines:
+    - {y: 10, label: '+10', source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: '**Margins:** ±5 and ±10 points.', raw: '10', scale: 1}}
+    - {y: 5, label: '+5', source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: '**Margins:** ±5 and ±10 points.', raw: '5', scale: 1}}
+    - {y: -5, label: −5, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: '**Margins:** ±5 and ±10 points.', raw: '5', scale: 1}}
+    - {y: -10, label: −10, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: '**Margins:** ±5 and ±10 points.', raw: '10', scale: 1}}
+    bars:
+    - {label: "Real − sim,\n1%", role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q25_margins_POSTHOC_2026-10-11_003031.json, key: destructive_raw target 1%/gap/point, lo_key: destructive_raw target 1%/gap/95%/0, hi_key: destructive_raw target 1%/gap/95%/1, scale: 100, value: 2.77, lo: -3.12, hi: 9.67}
+    - {label: "Real 1 − real 2,\n1% (control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q25_margins_POSTHOC_2026-10-11_003031.json, key: destructive_raw target 1%/real-vs-real (run 1 minus run 2)/point, lo_key: destructive_raw target 1%/real-vs-real (run 1 minus run 2)/95%/0, hi_key: destructive_raw target 1%/real-vs-real (run 1 minus run 2)/95%/1, scale: 100, value: -4.4, lo: -12.21, hi: 4.36}
+    - {label: "Real − sim,\n5%", role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q25_margins_POSTHOC_2026-10-11_003031.json, key: destructive_raw target 5%/gap/point, lo_key: destructive_raw target 5%/gap/95%/0, hi_key: destructive_raw target 5%/gap/95%/1, scale: 100, value: 0.51, lo: -4.99, hi: 6.56}
+    - {label: "Real 1 − real 2,\n5% (control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q25_margins_POSTHOC_2026-10-11_003031.json, key: destructive_raw target 5%/real-vs-real (run 1 minus run 2)/point, lo_key: destructive_raw target 5%/real-vs-real (run 1 minus run 2)/95%/0, hi_key: destructive_raw target 5%/real-vs-real (run 1 minus run 2)/95%/1, scale: 100, value: -2.12, lo: -10.91, hi: 4.46}
+  - title: Data-transfer commands
+    kind: bars
+    unit: points
+    ylabel: "Difference caught (points)\n(closer to 0 is better)"
+    lines:
+    - {y: 10, label: '+10', source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: '**Margins:** ±5 and ±10 points.', raw: '10', scale: 1}}
+    - {y: 5, label: '+5', source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: '**Margins:** ±5 and ±10 points.', raw: '5', scale: 1}}
+    - {y: -5, label: −5, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: '**Margins:** ±5 and ±10 points.', raw: '5', scale: 1}}
+    - {y: -10, label: −10, source: {ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/PLAN_POSTHOC.md, quote: '**Margins:** ±5 and ±10 points.', raw: '10', scale: 1}}
+    bars:
+    - {label: "Real − sim,\n1%", role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q25_margins_POSTHOC_2026-10-11_003031.json, key: transfer target 1%/gap/point, lo_key: transfer target 1%/gap/95%/0, hi_key: transfer target 1%/gap/95%/1, scale: 100, value: 6.79, lo: -0.95, hi: 12.54}
+    - {label: "Real 1 − real 2,\n1% (control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q25_margins_POSTHOC_2026-10-11_003031.json, key: transfer target 1%/real-vs-real (run 1 minus run 2)/point, lo_key: transfer target 1%/real-vs-real (run 1 minus run 2)/95%/0, hi_key: transfer target 1%/real-vs-real (run 1 minus run 2)/95%/1, scale: 100, value: -0.29, lo: -7.47, hi: 8.56}
+    - {label: "Real − sim,\n5%", role: gap, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q25_margins_POSTHOC_2026-10-11_003031.json, key: transfer target 5%/gap/point, lo_key: transfer target 5%/gap/95%/0, hi_key: transfer target 5%/gap/95%/1, scale: 100, value: 0.8, lo: -2.98, hi: 5.96}
+    - {label: "Real 1 − real 2,\n5% (control)", role: control, ref: 5564a2ee2e64, path: experiments/2026-10-11_q2_margins_POSTHOC/results/q25_margins_POSTHOC_2026-10-11_003031.json, key: transfer target 5%/real-vs-real (run 1 minus run 2)/point, lo_key: transfer target 5%/real-vs-real (run 1 minus run 2)/95%/0, hi_key: transfer target 5%/real-vs-real (run 1 minus run 2)/95%/1, scale: 100, value: 0.23, lo: -6.98, hi: 6.21}

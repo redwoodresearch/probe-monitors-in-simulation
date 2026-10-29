@@ -1,0 +1,24 @@
+{
+ "target": "ep2_t196",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "ep2_t196",
+   "arm": "honest_a",
+   "staged_file": "/ev/ep2_t196_v1/inputs/honest_a.jsonl",
+   "staged_sha": "644dc2558423a11372729843c02a2b32a2e4cfcef358aaf9b511b5276854b120",
+   "epochs": 192,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  },
+  {
+   "target": "ep2_t196",
+   "arm": "honest_b",
+   "staged_file": "/ev/ep2_t196_v1/inputs/honest_b.jsonl",
+   "staged_sha": "490b2ecb520854a3964ea4dd92eff8c86eda4793aee39e93b2c619b7b447c0f9",
+   "epochs": 191,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

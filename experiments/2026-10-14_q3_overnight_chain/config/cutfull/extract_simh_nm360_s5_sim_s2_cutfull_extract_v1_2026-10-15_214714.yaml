@@ -1,0 +1,11 @@
+# d9's CUT fork (Append 41): simh_nm360_s5_sim_s2_cutfull staged by stage_chain.py (record chain_stage_simh_nm360_s5_sim_s2_cutfull_2026-10-15_193803.json); every layer, last-token rows and
+# output_end span means, as the chain's extractions (chunk 8, pad 4096), H200; no cut, no repro-c arm.
+run: simh_nm360_s5_sim_s2_cutfull_extract_v1
+inputs: simh_nm360_s5_sim_s2_cutfull_v1
+inputs_sha256:
+  sim_honest@september.jsonl: 8db6e11ff730fd6a58e9ed8c0360813781be7d89d2d60fd0ad0b94bb4a5bebd6
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 8
+pad_to: 4096
+cut: full

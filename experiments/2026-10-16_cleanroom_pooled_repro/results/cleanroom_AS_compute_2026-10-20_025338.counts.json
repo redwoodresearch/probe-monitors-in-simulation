@@ -1,0 +1,15 @@
+{
+  "rows": 736,
+  "rows_expected_from_A": 736,
+  "rows_passed": 736,
+  "thresholds": 72,
+  "thresholds_passed": 72,
+  "cells": 36,
+  "cells_passed": 36,
+  "controls": 3,
+  "controls_passed": 3,
+  "groups": 40,
+  "groups_equal": 40,
+  "PASS": true,
+  "COUNTS_OK": true
+}

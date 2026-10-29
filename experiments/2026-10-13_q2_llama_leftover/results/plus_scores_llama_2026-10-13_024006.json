@@ -1,0 +1,49 @@
+{
+ "plan": "PLAN.md (this folder)",
+ "git": "3a806b72fc32db5afc4b2f7c21bffdf62c0a7fe9",
+ "run": "2026-10-12_143129",
+ "extraction": [
+  "2026-10-12_la_output-end-r2j_llama33-70b_alllayers_v1",
+  "2026-10-12_la_output-end-r2j_llama33-70b_alllayers_v1_fix939",
+  "2026-10-12_la_output-end-r2j_llama33-70b_alllayers_v1_plus"
+ ],
+ "inputs sha256": {
+  "fix939_frozen_runs_POSTHOC_2026-10-11_020458.jsonl": "5f6ecbc42b1c6bb9586cb58e474d74c5c1d914bedb95d80a5a07dd078b0e5ebd",
+  "runs.json": "ad10475afccc285bde39a389a17cb8b278a15d670c5d673933a094c6ffbc5254",
+  "build_plus_2026-10-13_014244.json": "1ab8c14c2465d8f4575e9212f6f09c8a45fe719365e5e4b63496a4e4fd20e8c0",
+  "scores_L20.npz": "a2855046fb03d643e66b339d0d3b4655af819bf29c5e68b7217b38f3acab4fb0",
+  "scores_L30.npz": "70e68ec851edad4184da44974d217804a0a7a5e043e6898b4cd03c0021851353",
+  "scores_L40.npz": "6fa1b3bf568b92bc7bf755580fd4640f1c05558188fe63ef552f1f03b1b162b4",
+  "scores_L50.npz": "1accda0f05c3b6495422d5d351a42db3899d83d7603d329cf3f60bb75b2b44c4",
+  "scores_L60.npz": "6d21272535104de7cf6aa179cde98070dea0cbc823fc0aee9639763c8938906b",
+  "scores_L70.npz": "f58f71edc48333cc362d3814fb83880b1abab74d3270b5a358ce3385f8b16c0c",
+  "scores_L79.npz": "ed03295de16f97290de6fc4825fd4cacbdff9dc37463c09a86664109dde28676"
+ },
+ "gate: max |re-scored - stored| nested score, by layer (tolerance 1e-3)": {
+  "20": 3.5663445790423687e-06,
+  "30": 2.5431315104906815e-06,
+  "40": 2.86102294921875e-06,
+  "50": 2.7815500893701994e-06,
+  "60": 2.950429916381836e-06,
+  "70": 2.7418136596679688e-06,
+  "79": 2.610186735793607e-06
+ },
+ "prefix gate": {
+  "run": "2026-10-12_la_output-end-r2j_llama33-70b_alllayers_v1_plus",
+  "rows": 5921,
+  "max |plus - repaired| per-row score, by layer (tolerance 1e-3)": {
+   "20": 0.0,
+   "30": 0.0,
+   "40": 0.0,
+   "50": 0.0,
+   "60": 0.0,
+   "70": 0.0,
+   "79": 0.0
+  }
+ },
+ "as-simulated runs": 939,
+ "with repaired-plus scores": 865,
+ "unchanged (part 2's scores stand)": 74,
+ "scores file": "plus_scores_llama_2026-10-13_024006.npz",
+ "scores sha256": "6a7b1742860fc749e5f5f5298c08ce50d1a989df95aadb2c7945d8da1938e7f0"
+}

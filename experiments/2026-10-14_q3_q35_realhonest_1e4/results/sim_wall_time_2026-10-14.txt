@@ -1,0 +1,2 @@
+980 tasks, 10 environments; floor (stagger and order only): last start 5.47 h
+cap 60, bootstrapped durations: last start median 6.03 h; wall (last end) median 6.82 h, p90 7.21 h, max 7.56 h

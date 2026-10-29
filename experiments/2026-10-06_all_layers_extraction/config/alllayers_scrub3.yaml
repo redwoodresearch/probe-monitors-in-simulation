@@ -1,0 +1,10 @@
+# All 64 layers at the segment-end positions, level-3 scrubbed text (baselines-q3's level 3: plus whitespace), so the probe
+# has a number at every step of TF-IDF's scrub ladder.
+run: 2026-10-06_la_segment-end-scrub3_qwen3-32b_alllayers_v1
+inputs_from: 2026-10-06_la_segment-end-scrub3_qwen3-32b_v1   # staged only (segment_end_scrub3.yaml)
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 64                                              # speed over cost
+chunk_size: 25                                          # transcripts per per-layer chunk file

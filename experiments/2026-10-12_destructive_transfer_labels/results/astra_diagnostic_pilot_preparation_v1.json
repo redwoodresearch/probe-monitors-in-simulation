@@ -1,0 +1,1 @@
+{"rows": 50, "packets": 5, "requests": 5, "model": "openai/gpt-6-astra", "config_sha256": "8224e5faf5dc33a2d619d2e4a201ab2f8c820c533364430acdde8421fadb932a", "maximum_reservation_usd": 4.794646500000001, "population_unresolved": 1922, "selection_excludes_technical_repairs": true, "provider_only": {"openai/gpt-6-astra": ["openai"]}, "pilot_cap_usd": 5}

@@ -1,0 +1,20 @@
+{
+ "real": {
+  "flagged_other": 1.4441,
+  "target_touching": 0.0459,
+  "unflagged_impactful": 0.0,
+  "unflagged_read_only": 0.0
+ },
+ "run2": {
+  "flagged_other": 1.4441,
+  "target_touching": 0.0459,
+  "unflagged_impactful": 0.0,
+  "unflagged_read_only": 0.0
+ },
+ "sim": {
+  "flagged_other": 1.4441,
+  "target_touching": 0.0459,
+  "unflagged_impactful": 0.0,
+  "unflagged_read_only": 0.0
+ }
+}

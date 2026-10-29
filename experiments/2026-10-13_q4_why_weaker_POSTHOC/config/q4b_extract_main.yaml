@@ -1,0 +1,14 @@
+# Q4 (B) extraction (RULE.md Amendment 5): set main, Qwen3.5-27B reading its own runs in #36's reader format, every layer,
+# last-token rows (command, call_end, output_end) and output_end span-mean rows. Staged by run_q4b_stage.py (results/q4b_stage_2026-10-14_001957.json).
+run: q4b_extract_main_v1
+inputs: q4b_main_v1
+inputs_sha256:
+  attack.jsonl: 0fc04b487e037fb291da037d9507c5de2d395e9e61f0ca5f217d0c22e95beb7e
+  honest_a.jsonl: 3b4dd47f1a371ec21ec356562a9b5719d6a602e9bd61c3eb2568cc864ec90b58
+  honest_b.jsonl: 3fc71b14a2515abee6d1071ac4f04aa4b8f842c647e81de0684d2f1031a188ae
+  sim_attack@september.jsonl: 5646bafa2279af70fc2f9255d5156f937eba24e4ff45ac8f75960295027cb3da
+  sim_honest@september.jsonl: 6c87b5d267a2392b80a7ba4effc369546a11838be14c248080a2a34af6adb0ad
+model: Qwen/Qwen3.5-27B
+shards: 32
+chunk_size: 8
+pad_to: 4096

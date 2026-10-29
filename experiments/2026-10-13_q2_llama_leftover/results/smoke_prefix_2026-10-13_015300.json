@@ -1,0 +1,21 @@
+{
+ "git": "5ed24bc8590cb0f1159c975fc90b1b6dd09db4c2",
+ "smoke prefix check": {
+  "run": "2026-10-12_la_output-end-r2j_llama33-70b_alllayers_v1_plus_test_d703a5ef",
+  "rows": 9,
+  "max |plus - repaired| per-row score, by layer (tolerance 1e-3)": {
+   "20": 0.0,
+   "30": 0.0,
+   "40": 0.0,
+   "50": 0.0,
+   "60": 0.0,
+   "70": 0.0,
+   "79": 0.0
+  }
+ },
+ "plus runs found": 4,
+ "passed": true,
+ "inputs sha256": {
+  "build_plus_2026-10-13_014244.json": "1ab8c14c2465d8f4575e9212f6f09c8a45fe719365e5e4b63496a4e4fd20e8c0"
+ }
+}

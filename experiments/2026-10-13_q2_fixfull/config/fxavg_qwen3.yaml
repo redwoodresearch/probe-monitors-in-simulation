@@ -1,0 +1,14 @@
+# Fix-full averaged readout + F10 (PLAN_F10.md Amendment 8b): d9's mean-pool36 settings (alllayers_meanpool36.yaml: mean_final,
+# the 7 layers, cut, model, revision) on the full + F9 simulated arms (939 attack, 437 honest), the F10 arms (74, 36) and 48
+# as-is reproduction runs copied byte-identically from d9's two mean-pool dumps' inputs (one per shard; stage_fxavg.py).
+# 48 shards so no container runs past about 15 min; chunks of 10 checkpoint often.
+run: 2026-10-13_q2_fxavg_qwen3-32b_l7_v1
+inputs_from: 2026-10-13_q2_fxavg_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 48
+chunk_size: 10
+layers: [16, 24, 32, 40, 48, 56, 63]
+mean_final: true

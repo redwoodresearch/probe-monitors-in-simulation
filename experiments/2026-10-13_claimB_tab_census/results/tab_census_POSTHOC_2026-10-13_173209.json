@@ -1,0 +1,3406 @@
+{
+ "label": "POST HOC, descriptive, preliminary until reviewed",
+ "rule": "RULE.md (this folder)",
+ "git": "642ba8e52a2a93a973b03b474086650050b3d449",
+ "script_sha256": "1ab17daab9747d4d001ebe5b8634851428e9d63a8a82777ea6dc4f071bcc77ce",
+ "inputs": {
+  "v4": "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs",
+  "fixfull": "2026-10-13_q2_fixfull_inputs_v2/inputs",
+  "shard_sha256": {
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_0.jsonl": "8508f2bb81bfead74945d1a052055cb0edce66880b2a61352994d45671c32fc2",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_1.jsonl": "b837c75b7126cba18d3e87852466f8c77c2776319beba4371a9eb526fa93c4e0",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_10.jsonl": "fa0eb5b1d186f1b48a542b1587d84f9208380e5458096a45605b640d5c4dd6b2",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_11.jsonl": "fa23b0948e5f89605abdf2911c10dd3268f4b492f5497ff867d39726a21d8c18",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_12.jsonl": "1fb3f1198ccebfb157299350c5c4e619b86bc62851e09fc33c40453a037ced24",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_13.jsonl": "9d6215a349b54040d59ddcdd7e9b89d07433c91e72855687f1898d68fda2c025",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_14.jsonl": "b3e5d6cf8ab8316e8f854016e785f0fd568f638d495608a808fc89711041fa3a",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_15.jsonl": "47046a366886f7a9584e28b34ef82f97b72886c5be58991633128889504064ca",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_16.jsonl": "e67010bba6c169fbbdee1884068f74caf786962e7f2c67052ea427cf44659a34",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_17.jsonl": "99d5ff9209ab5d560c540b3b0a9fdbe066cdd49cbbd5e0d27499220326d18950",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_18.jsonl": "5e4554083c0754672852d1bea518c3f920ca7939a49f2ae14a65b56f5aa574a4",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_19.jsonl": "4f8c44d72f450f3f2e2edc2949e1acf95bb2bf5adc0a4ce68692e1d87214100b",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_2.jsonl": "6144f0f368cd49f124d22bfed2a690145413be047d8fd9e9c9aa9c0badeab3ad",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_20.jsonl": "b94dfab3c7cf9ae59876bbbbb8e717d567d00c4017da5895b6f4bd3952b2b186",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_21.jsonl": "f556492936c98735f2497b04cad5356b063a3bb0086d9b3cb59f608af5aba292",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_22.jsonl": "7d7353b5a22a59f8b710f942bb91cee6682751282d260a2d937d4a0ef1517f40",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_23.jsonl": "45e282ee3577ec9b4b979f0bfe2db1a4a0da95566c1b871547e25662408047a2",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_24.jsonl": "d7024cf255cecc28ff7f6d77d96e488889512c1e324904dd5cb89eb546782163",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_25.jsonl": "dc5078cb5ec1ca149525cb9e42b83880c74ca56e3279f73ff343c1d42ff04558",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_26.jsonl": "c88d736ed669c2d39616b52479a8d2eeffb20efa434c365a91b069507c2c8595",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_27.jsonl": "8b7f575018cffd6a8a80d75d9d4eaa555358f91034295671aff9adbfa12cdb9b",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_28.jsonl": "0bfc8c4857d177f3f556209f7cf5e3d618c6e02f2686fccc90634170c892d856",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_29.jsonl": "110d8646bfd02d5bcb49a481152302d40961e8d17747f552b146bc06224214bd",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_3.jsonl": "7312c16ff89e17699e88ece594befff515385b07362f751a7a69767f0a31dd2f",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_30.jsonl": "bb62b05f4353f5cf5db00b5f546690d5952c6e6fe76e643817e1c36d44c170a9",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_31.jsonl": "449d263c07c5c5cb6e75f8477a1ef45b88323d5174ef8dd4261339c98ebbdb4b",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_32.jsonl": "ba565501cb4155d510245bd1f84770095d9659b649c39ebcb206ae003f591320",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_33.jsonl": "6e4caf38ec0554f185c4482a163a1e8f7aea26b7166a3edb932e2b166f7fdda6",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_34.jsonl": "50e5f65d55eea284c55a6f50e930afb0c7e32b685831935479fdb0bf130e3db8",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_35.jsonl": "90727bf7317177cafc768157f42338f57b68eaf99154bdcb3c3553b91d6842b2",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_36.jsonl": "9178589016bc885730fca84a5981ec6b3781754102c5493de798d9dcdb1c3743",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_37.jsonl": "af02ba3a58f911e01c61c4e5d3d770e5f5c89e1176498dd3797e47f4c7c6f3ca",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_38.jsonl": "84510d880d4dbc9b17fd8a4b7d956cb509da0541818b80e73f7b1fb9139aa1e2",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_39.jsonl": "cf5cc1a91077b3d33b1a01ce7c68927e94764c9c159b4c01ec3c1273860db307",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_4.jsonl": "9285505e760506ace31369317b8c829253959484daa938e6752598b6fc828d23",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_40.jsonl": "075be6822860d122fb858743f8195c68c63bd7b4a87c3fa93f0c8990076d9007",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_41.jsonl": "fdc634524fa10ff0ce8ee9e2ad75b09c291e3b562e0b566751b21d00e138868c",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_42.jsonl": "837036779496d07ee6dc3645cba002456cf011db6b0ad992b9a27ee3640954d1",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_43.jsonl": "4f252b2ddba0397e46dfe3a7137a19d02a7aee1585c7d91218bf575bdbfe5468",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_44.jsonl": "678fcf182a3b62403762696a54d529c3bd5470414375afa0eceda313c7f6fe1f",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_45.jsonl": "5204746d21330f8157e53d66f9606a7b5548c51a051ede9bd79e13e6fa11f4b7",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_46.jsonl": "1c381dafabc0861e769397fb0d2d41a0c97c73d4eda57ed984d31301d6fa7db3",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_47.jsonl": "ece3bdd7cb39ed08d2320508a973ba55147495888a1611370fa59a067b237058",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_48.jsonl": "67868703c02331ce8e97eb6115c399cdd662fcb5f294eff04b7a5fced2974b5b",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_49.jsonl": "c055b11481212152447caf5f3c62a2db421864c7eeb3a06fe369d32333724406",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_5.jsonl": "735d33e0604331d98e8b13c9841559dfe3f445a235883881247652a592f8fc4c",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_50.jsonl": "930637af9ac67cd3065a4c4ece4d255561820d30a2c03eae6449c2614743b9d9",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_51.jsonl": "c9b6ab751fa78553bc59294ca58d345ee48dbca4f72a6a928b99edcbcebf32c2",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_52.jsonl": "94151e0e772d9ce5e103bffb1457db6a6ca81be987a1b548b56fd46d6766dd9e",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_53.jsonl": "41d56018248ad293f5c79f12ced913c574ab821c18003a916a6c9395c4d0958c",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_54.jsonl": "c422c2da67dca9bab57af5466f2eb0ce622b832980e3f373729cafbcec41e793",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_55.jsonl": "b0ba1d03deaf26327416817dc1e835119821797abf0075a65eadb8d6338ed852",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_56.jsonl": "3f482ca89d93e01b84fb4a22e2643bfec8159be333f6d451cdc64d95ce1b7af9",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_57.jsonl": "6f8974c46e77d07ccd0701eb156d50c64d12be990dd574b34f65246668d6716f",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_58.jsonl": "3d84a21405fd5500f7e9a4e12b3635b54d201ddd428772b6f1b9a29304f7a277",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_59.jsonl": "7f72b39e330e6175a1ed291b9d24be8d888006434aa46b6f947405cf11da5d73",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_6.jsonl": "95998323c969f217bd080a3fc1043eb1d8af43a99343f5ced53b1d841c33e5d7",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_60.jsonl": "3c9c9c0b255c40bdc3a02f5d6cef0a6e32c749721179eeaf78ec5018a29d7cdd",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_61.jsonl": "b69b7bfcc65dcd7a3eccd5757f690050ff7187db425ebbd1578b110038fa6f16",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_62.jsonl": "75897f6de775fe9828e3f785967871e523cae3c5185e4a2288917f7c4b217114",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_63.jsonl": "fa5612d437eeb86ad6f04c010f47914b5d9128920e39903ce48ad367fe82a4f8",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_7.jsonl": "95c0b5211582c5e8fa60e7c5966eb42d9ea44ce764bbfb62c972fd5bb0be1cad",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_8.jsonl": "9be3855483495d22761752560b4208e88762f3ad44017c49cf2c0d1da1c43ad4",
+   "2026-10-06_la_segment-end-v4_qwen3-32b_v1/inputs/shard_9.jsonl": "b2e9dd1ed9db5f0acca7bed49f28a6204005ebac943040231983cd6f385b9f71",
+   "2026-10-13_q2_fixfull_inputs_v2/inputs/shard_10.jsonl": "5a3874814163b21e1c20dfedd00f1473dc01d2151b9769bb2930a1c16ae05652",
+   "2026-10-13_q2_fixfull_inputs_v2/inputs/shard_12.jsonl": "94ae36d6d3bbd420d607254fd7c389910aee80b512d2281e19d2f08ae693b799"
+  }
+ },
+ "arms": {
+  "real-attack-e1": {
+   "runs": 977,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 86,
+   "runs_with_go_content_tab": 0,
+   "run_share": 0.0,
+   "run_wilson95": [
+    0.0,
+    0.0428
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 9,
+     "N": 10499,
+     "share": 0.0009,
+     "wilson95": [
+      0.0005,
+      0.0016
+     ],
+     "gutter_tab_share": 0.2148
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 1659,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.0023
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 0,
+     "N": 1266,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.003
+     ],
+     "gutter_tab_share": 0.9637
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 41,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.0857
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "all|str_replace": {
+     "content_tab": 0,
+     "N": 6501,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0008
+    },
+    "all|view": {
+     "content_tab": 9,
+     "N": 1032,
+     "share": 0.0087,
+     "wilson95": [
+      0.0046,
+      0.0165
+     ],
+     "gutter_tab_share": 0.9583
+    },
+    "go|all": {
+     "content_tab": 0,
+     "N": 875,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0044
+     ],
+     "gutter_tab_share": 0.2469
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 123,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0303
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 0,
+     "N": 137,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0273
+     ],
+     "gutter_tab_share": 0.927
+    },
+    "go|other": {
+     "content_tab": 0,
+     "N": 3,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.5615
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "go|str_replace": {
+     "content_tab": 0,
+     "N": 526,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0073
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 0,
+     "N": 86,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0428
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "makefile|all": {
+     "content_tab": 0,
+     "N": 4,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.4899
+     ],
+     "gutter_tab_share": 0.5
+    },
+    "makefile|create": {
+     "content_tab": 0,
+     "N": 2,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.6576
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "makefile|view": {
+     "content_tab": 0,
+     "N": 2,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.6576
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "non_go|all": {
+     "content_tab": 9,
+     "N": 9624,
+     "share": 0.0009,
+     "wilson95": [
+      0.0005,
+      0.0018
+     ],
+     "gutter_tab_share": 0.2119
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 1536,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0025
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 0,
+     "N": 1129,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0034
+     ],
+     "gutter_tab_share": 0.9681
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 38,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0918
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "non_go|str_replace": {
+     "content_tab": 0,
+     "N": 5975,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0008
+    },
+    "non_go|view": {
+     "content_tab": 9,
+     "N": 946,
+     "share": 0.0095,
+     "wilson95": [
+      0.005,
+      0.018
+     ],
+     "gutter_tab_share": 0.9545
+    },
+    "rest|all": {
+     "content_tab": 9,
+     "N": 9620,
+     "share": 0.0009,
+     "wilson95": [
+      0.0005,
+      0.0018
+     ],
+     "gutter_tab_share": 0.2117
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 1534,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0025
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 0,
+     "N": 1129,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0034
+     ],
+     "gutter_tab_share": 0.9681
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 38,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0918
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "rest|str_replace": {
+     "content_tab": 0,
+     "N": 5975,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0008
+    },
+    "rest|view": {
+     "content_tab": 9,
+     "N": 944,
+     "share": 0.0095,
+     "wilson95": [
+      0.005,
+      0.018
+     ],
+     "gutter_tab_share": 0.9544
+    }
+   }
+  },
+  "real-attack-e2": {
+   "runs": 982,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 86,
+   "runs_with_go_content_tab": 3,
+   "run_share": 0.0349,
+   "run_wilson95": [
+    0.0119,
+    0.0976
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 10,
+     "N": 10798,
+     "share": 0.0009,
+     "wilson95": [
+      0.0005,
+      0.0017
+     ],
+     "gutter_tab_share": 0.2293
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 1669,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0023
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 0,
+     "N": 1296,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.003
+     ],
+     "gutter_tab_share": 0.9707
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 29,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.117
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "all|str_replace": {
+     "content_tab": 0,
+     "N": 6567,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0015
+    },
+    "all|view": {
+     "content_tab": 10,
+     "N": 1237,
+     "share": 0.0081,
+     "wilson95": [
+      0.0044,
+      0.0148
+     ],
+     "gutter_tab_share": 0.9531
+    },
+    "go|all": {
+     "content_tab": 3,
+     "N": 863,
+     "share": 0.0035,
+     "wilson95": [
+      0.0012,
+      0.0102
+     ],
+     "gutter_tab_share": 0.2654
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 123,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0303
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 0,
+     "N": 135,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0277
+     ],
+     "gutter_tab_share": 0.9778
+    },
+    "go|other": {
+     "content_tab": 0,
+     "N": 5,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.4345
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "go|str_replace": {
+     "content_tab": 0,
+     "N": 503,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0076
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 3,
+     "N": 97,
+     "share": 0.0309,
+     "wilson95": [
+      0.0106,
+      0.087
+     ],
+     "gutter_tab_share": 0.9485
+    },
+    "non_go|all": {
+     "content_tab": 7,
+     "N": 9935,
+     "share": 0.0007,
+     "wilson95": [
+      0.0003,
+      0.0015
+     ],
+     "gutter_tab_share": 0.2262
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 1546,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0025
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 0,
+     "N": 1161,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0033
+     ],
+     "gutter_tab_share": 0.9699
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 24,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.138
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "non_go|str_replace": {
+     "content_tab": 0,
+     "N": 6064,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0016
+    },
+    "non_go|view": {
+     "content_tab": 7,
+     "N": 1140,
+     "share": 0.0061,
+     "wilson95": [
+      0.003,
+      0.0126
+     ],
+     "gutter_tab_share": 0.9535
+    },
+    "rest|all": {
+     "content_tab": 7,
+     "N": 9935,
+     "share": 0.0007,
+     "wilson95": [
+      0.0003,
+      0.0015
+     ],
+     "gutter_tab_share": 0.2262
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 1546,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0025
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 0,
+     "N": 1161,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0033
+     ],
+     "gutter_tab_share": 0.9699
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 24,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.138
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "rest|str_replace": {
+     "content_tab": 0,
+     "N": 6064,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0016
+    },
+    "rest|view": {
+     "content_tab": 7,
+     "N": 1140,
+     "share": 0.0061,
+     "wilson95": [
+      0.003,
+      0.0126
+     ],
+     "gutter_tab_share": 0.9535
+    }
+   }
+  },
+  "real-honest": {
+   "runs": 1000,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 82,
+   "runs_with_go_content_tab": 2,
+   "run_share": 0.0244,
+   "run_wilson95": [
+    0.0067,
+    0.0846
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 35,
+     "N": 12303,
+     "share": 0.0028,
+     "wilson95": [
+      0.002,
+      0.004
+     ],
+     "gutter_tab_share": 0.2393
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 1566,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0024
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 0,
+     "N": 1725,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0022
+     ],
+     "gutter_tab_share": 0.9397
+    },
+    "all|other": {
+     "content_tab": 1,
+     "N": 33,
+     "share": 0.0303,
+     "wilson95": [
+      0.0054,
+      0.1532
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "all|str_replace": {
+     "content_tab": 0,
+     "N": 7611,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0005
+     ],
+     "gutter_tab_share": 0.0022
+    },
+    "all|view": {
+     "content_tab": 34,
+     "N": 1368,
+     "share": 0.0249,
+     "wilson95": [
+      0.0178,
+      0.0345
+     ],
+     "gutter_tab_share": 0.9306
+    },
+    "go|all": {
+     "content_tab": 2,
+     "N": 1020,
+     "share": 0.002,
+     "wilson95": [
+      0.0005,
+      0.0071
+     ],
+     "gutter_tab_share": 0.2294
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 105,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.0353
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 0,
+     "N": 170,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0221
+     ],
+     "gutter_tab_share": 0.8882
+    },
+    "go|other": {
+     "content_tab": 1,
+     "N": 7,
+     "share": 0.1429,
+     "wilson95": [
+      0.0257,
+      0.5131
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "go|str_replace": {
+     "content_tab": 0,
+     "N": 651,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.0059
+     ],
+     "gutter_tab_share": 0.0015
+    },
+    "go|view": {
+     "content_tab": 1,
+     "N": 87,
+     "share": 0.0115,
+     "wilson95": [
+      0.002,
+      0.0623
+     ],
+     "gutter_tab_share": 0.8621
+    },
+    "non_go|all": {
+     "content_tab": 33,
+     "N": 11283,
+     "share": 0.0029,
+     "wilson95": [
+      0.0021,
+      0.0041
+     ],
+     "gutter_tab_share": 0.2402
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 1461,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0026
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 0,
+     "N": 1555,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0025
+     ],
+     "gutter_tab_share": 0.9453
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 26,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1287
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "non_go|str_replace": {
+     "content_tab": 0,
+     "N": 6960,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0023
+    },
+    "non_go|view": {
+     "content_tab": 33,
+     "N": 1281,
+     "share": 0.0258,
+     "wilson95": [
+      0.0184,
+      0.036
+     ],
+     "gutter_tab_share": 0.9352
+    },
+    "rest|all": {
+     "content_tab": 33,
+     "N": 11283,
+     "share": 0.0029,
+     "wilson95": [
+      0.0021,
+      0.0041
+     ],
+     "gutter_tab_share": 0.2402
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 1461,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0026
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 0,
+     "N": 1555,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0025
+     ],
+     "gutter_tab_share": 0.9453
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 26,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1287
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "rest|str_replace": {
+     "content_tab": 0,
+     "N": 6960,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0023
+    },
+    "rest|view": {
+     "content_tab": 33,
+     "N": 1281,
+     "share": 0.0258,
+     "wilson95": [
+      0.0184,
+      0.036
+     ],
+     "gutter_tab_share": 0.9352
+    }
+   }
+  },
+  "real-honest|base200": {
+   "runs": 200,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 15,
+   "runs_with_go_content_tab": 0,
+   "run_share": 0.0,
+   "run_wilson95": [
+    0.0,
+    0.2039
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 7,
+     "N": 1806,
+     "share": 0.0039,
+     "wilson95": [
+      0.0019,
+      0.008
+     ],
+     "gutter_tab_share": 0.2564
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 202,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0187
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 0,
+     "N": 236,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.016
+     ],
+     "gutter_tab_share": 0.9534
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 4,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.4899
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "all|str_replace": {
+     "content_tab": 0,
+     "N": 1118,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0034
+     ],
+     "gutter_tab_share": 0.0009
+    },
+    "all|view": {
+     "content_tab": 7,
+     "N": 246,
+     "share": 0.0285,
+     "wilson95": [
+      0.0139,
+      0.0576
+     ],
+     "gutter_tab_share": 0.9472
+    },
+    "go|all": {
+     "content_tab": 0,
+     "N": 164,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.0229
+     ],
+     "gutter_tab_share": 0.2866
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 12,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.2425
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 0,
+     "N": 31,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1103
+     ],
+     "gutter_tab_share": 0.9032
+    },
+    "go|other": {
+     "content_tab": 0,
+     "N": 1,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.7935
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "go|str_replace": {
+     "content_tab": 0,
+     "N": 100,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.037
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 0,
+     "N": 20,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1611
+     ],
+     "gutter_tab_share": 0.9
+    },
+    "non_go|all": {
+     "content_tab": 7,
+     "N": 1642,
+     "share": 0.0043,
+     "wilson95": [
+      0.0021,
+      0.0088
+     ],
+     "gutter_tab_share": 0.2533
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 190,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0198
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 0,
+     "N": 205,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0184
+     ],
+     "gutter_tab_share": 0.961
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 3,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.5615
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "non_go|str_replace": {
+     "content_tab": 0,
+     "N": 1018,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0038
+     ],
+     "gutter_tab_share": 0.001
+    },
+    "non_go|view": {
+     "content_tab": 7,
+     "N": 226,
+     "share": 0.031,
+     "wilson95": [
+      0.0151,
+      0.0625
+     ],
+     "gutter_tab_share": 0.9513
+    },
+    "rest|all": {
+     "content_tab": 7,
+     "N": 1642,
+     "share": 0.0043,
+     "wilson95": [
+      0.0021,
+      0.0088
+     ],
+     "gutter_tab_share": 0.2533
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 190,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0198
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 0,
+     "N": 205,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0184
+     ],
+     "gutter_tab_share": 0.961
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 3,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.5615
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "rest|str_replace": {
+     "content_tab": 0,
+     "N": 1018,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0038
+     ],
+     "gutter_tab_share": 0.001
+    },
+    "rest|view": {
+     "content_tab": 7,
+     "N": 226,
+     "share": 0.031,
+     "wilson95": [
+      0.0151,
+      0.0625
+     ],
+     "gutter_tab_share": 0.9513
+    }
+   }
+  },
+  "real-honest|overlap800": {
+   "runs": 800,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 67,
+   "runs_with_go_content_tab": 2,
+   "run_share": 0.0299,
+   "run_wilson95": [
+    0.0082,
+    0.1025
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 28,
+     "N": 10497,
+     "share": 0.0027,
+     "wilson95": [
+      0.0018,
+      0.0039
+     ],
+     "gutter_tab_share": 0.2364
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 1364,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0028
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 0,
+     "N": 1489,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0026
+     ],
+     "gutter_tab_share": 0.9375
+    },
+    "all|other": {
+     "content_tab": 1,
+     "N": 29,
+     "share": 0.0345,
+     "wilson95": [
+      0.0061,
+      0.1718
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "all|str_replace": {
+     "content_tab": 0,
+     "N": 6493,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0025
+    },
+    "all|view": {
+     "content_tab": 27,
+     "N": 1122,
+     "share": 0.0241,
+     "wilson95": [
+      0.0166,
+      0.0348
+     ],
+     "gutter_tab_share": 0.9269
+    },
+    "go|all": {
+     "content_tab": 2,
+     "N": 856,
+     "share": 0.0023,
+     "wilson95": [
+      0.0006,
+      0.0085
+     ],
+     "gutter_tab_share": 0.2185
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 93,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0397
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 0,
+     "N": 139,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0269
+     ],
+     "gutter_tab_share": 0.8849
+    },
+    "go|other": {
+     "content_tab": 1,
+     "N": 6,
+     "share": 0.1667,
+     "wilson95": [
+      0.0301,
+      0.5635
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "go|str_replace": {
+     "content_tab": 0,
+     "N": 551,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.0069
+     ],
+     "gutter_tab_share": 0.0018
+    },
+    "go|view": {
+     "content_tab": 1,
+     "N": 67,
+     "share": 0.0149,
+     "wilson95": [
+      0.0026,
+      0.0798
+     ],
+     "gutter_tab_share": 0.8507
+    },
+    "non_go|all": {
+     "content_tab": 26,
+     "N": 9641,
+     "share": 0.0027,
+     "wilson95": [
+      0.0018,
+      0.0039
+     ],
+     "gutter_tab_share": 0.2379
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 1271,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.003
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 0,
+     "N": 1350,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0028
+     ],
+     "gutter_tab_share": 0.943
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 23,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1431
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "non_go|str_replace": {
+     "content_tab": 0,
+     "N": 5942,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0025
+    },
+    "non_go|view": {
+     "content_tab": 26,
+     "N": 1055,
+     "share": 0.0246,
+     "wilson95": [
+      0.0169,
+      0.0359
+     ],
+     "gutter_tab_share": 0.9318
+    },
+    "rest|all": {
+     "content_tab": 26,
+     "N": 9641,
+     "share": 0.0027,
+     "wilson95": [
+      0.0018,
+      0.0039
+     ],
+     "gutter_tab_share": 0.2379
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 1271,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.003
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 0,
+     "N": 1350,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0028
+     ],
+     "gutter_tab_share": 0.943
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 23,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1431
+     ],
+     "gutter_tab_share": 1.0
+    },
+    "rest|str_replace": {
+     "content_tab": 0,
+     "N": 5942,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0006
+     ],
+     "gutter_tab_share": 0.0025
+    },
+    "rest|view": {
+     "content_tab": 26,
+     "N": 1055,
+     "share": 0.0246,
+     "wilson95": [
+      0.0169,
+      0.0359
+     ],
+     "gutter_tab_share": 0.9318
+    }
+   }
+  },
+  "sim-attack": {
+   "runs": 974,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 77,
+   "runs_with_go_content_tab": 69,
+   "run_share": 0.8961,
+   "run_wilson95": [
+    0.8082,
+    0.9464
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 718,
+     "N": 10286,
+     "share": 0.0698,
+     "wilson95": [
+      0.065,
+      0.0749
+     ],
+     "gutter_tab_share": 0.0964
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 1499,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0026
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 118,
+     "N": 1233,
+     "share": 0.0957,
+     "wilson95": [
+      0.0805,
+      0.1134
+     ],
+     "gutter_tab_share": 0.0114
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 32,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1072
+     ],
+     "gutter_tab_share": 0.3438
+    },
+    "all|str_replace": {
+     "content_tab": 527,
+     "N": 6420,
+     "share": 0.0821,
+     "wilson95": [
+      0.0756,
+      0.0891
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|view": {
+     "content_tab": 73,
+     "N": 1102,
+     "share": 0.0662,
+     "wilson95": [
+      0.053,
+      0.0825
+     ],
+     "gutter_tab_share": 0.8775
+    },
+    "go|all": {
+     "content_tab": 707,
+     "N": 869,
+     "share": 0.8136,
+     "wilson95": [
+      0.7863,
+      0.8381
+     ],
+     "gutter_tab_share": 0.0829
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 102,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0363
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 116,
+     "N": 121,
+     "share": 0.9587,
+     "wilson95": [
+      0.9069,
+      0.9822
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|other": {
+     "content_tab": 0,
+     "N": 6,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3903
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|str_replace": {
+     "content_tab": 524,
+     "N": 544,
+     "share": 0.9632,
+     "wilson95": [
+      0.9439,
+      0.9761
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 67,
+     "N": 96,
+     "share": 0.6979,
+     "wilson95": [
+      0.5999,
+      0.7807
+     ],
+     "gutter_tab_share": 0.75
+    },
+    "non_go|all": {
+     "content_tab": 11,
+     "N": 9417,
+     "share": 0.0012,
+     "wilson95": [
+      0.0007,
+      0.0021
+     ],
+     "gutter_tab_share": 0.0977
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 1397,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0027
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 2,
+     "N": 1112,
+     "share": 0.0018,
+     "wilson95": [
+      0.0005,
+      0.0065
+     ],
+     "gutter_tab_share": 0.0126
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 26,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1287
+     ],
+     "gutter_tab_share": 0.4231
+    },
+    "non_go|str_replace": {
+     "content_tab": 3,
+     "N": 5876,
+     "share": 0.0005,
+     "wilson95": [
+      0.0002,
+      0.0015
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|view": {
+     "content_tab": 6,
+     "N": 1006,
+     "share": 0.006,
+     "wilson95": [
+      0.0027,
+      0.013
+     ],
+     "gutter_tab_share": 0.8897
+    },
+    "rest|all": {
+     "content_tab": 11,
+     "N": 9417,
+     "share": 0.0012,
+     "wilson95": [
+      0.0007,
+      0.0021
+     ],
+     "gutter_tab_share": 0.0977
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 1397,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0027
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 2,
+     "N": 1112,
+     "share": 0.0018,
+     "wilson95": [
+      0.0005,
+      0.0065
+     ],
+     "gutter_tab_share": 0.0126
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 26,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1287
+     ],
+     "gutter_tab_share": 0.4231
+    },
+    "rest|str_replace": {
+     "content_tab": 3,
+     "N": 5876,
+     "share": 0.0005,
+     "wilson95": [
+      0.0002,
+      0.0015
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|view": {
+     "content_tab": 6,
+     "N": 1006,
+     "share": 0.006,
+     "wilson95": [
+      0.0027,
+      0.013
+     ],
+     "gutter_tab_share": 0.8897
+    }
+   }
+  },
+  "sim-attack-fx-full": {
+   "runs": 939,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 74,
+   "runs_with_go_content_tab": 67,
+   "run_share": 0.9054,
+   "run_wilson95": [
+    0.8174,
+    0.9534
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 707,
+     "N": 9992,
+     "share": 0.0708,
+     "wilson95": [
+      0.0659,
+      0.076
+     ],
+     "gutter_tab_share": 0.0977
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 1413,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0027
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 117,
+     "N": 1192,
+     "share": 0.0982,
+     "wilson95": [
+      0.0825,
+      0.1164
+     ],
+     "gutter_tab_share": 0.0117
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 32,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1072
+     ],
+     "gutter_tab_share": 0.3438
+    },
+    "all|str_replace": {
+     "content_tab": 518,
+     "N": 6271,
+     "share": 0.0826,
+     "wilson95": [
+      0.076,
+      0.0897
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|view": {
+     "content_tab": 72,
+     "N": 1084,
+     "share": 0.0664,
+     "wilson95": [
+      0.0531,
+      0.0828
+     ],
+     "gutter_tab_share": 0.8773
+    },
+    "go|all": {
+     "content_tab": 700,
+     "N": 859,
+     "share": 0.8149,
+     "wilson95": [
+      0.7875,
+      0.8395
+     ],
+     "gutter_tab_share": 0.0838
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 99,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0374
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 116,
+     "N": 121,
+     "share": 0.9587,
+     "wilson95": [
+      0.9069,
+      0.9822
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|other": {
+     "content_tab": 0,
+     "N": 6,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3903
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|str_replace": {
+     "content_tab": 517,
+     "N": 537,
+     "share": 0.9628,
+     "wilson95": [
+      0.9432,
+      0.9758
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 67,
+     "N": 96,
+     "share": 0.6979,
+     "wilson95": [
+      0.5999,
+      0.7807
+     ],
+     "gutter_tab_share": 0.75
+    },
+    "non_go|all": {
+     "content_tab": 7,
+     "N": 9133,
+     "share": 0.0008,
+     "wilson95": [
+      0.0004,
+      0.0016
+     ],
+     "gutter_tab_share": 0.099
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 1314,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0029
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 1,
+     "N": 1071,
+     "share": 0.0009,
+     "wilson95": [
+      0.0002,
+      0.0053
+     ],
+     "gutter_tab_share": 0.0131
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 26,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1287
+     ],
+     "gutter_tab_share": 0.4231
+    },
+    "non_go|str_replace": {
+     "content_tab": 1,
+     "N": 5734,
+     "share": 0.0002,
+     "wilson95": [
+      0.0,
+      0.001
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|view": {
+     "content_tab": 5,
+     "N": 988,
+     "share": 0.0051,
+     "wilson95": [
+      0.0022,
+      0.0118
+     ],
+     "gutter_tab_share": 0.8897
+    },
+    "rest|all": {
+     "content_tab": 7,
+     "N": 9133,
+     "share": 0.0008,
+     "wilson95": [
+      0.0004,
+      0.0016
+     ],
+     "gutter_tab_share": 0.099
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 1314,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0029
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 1,
+     "N": 1071,
+     "share": 0.0009,
+     "wilson95": [
+      0.0002,
+      0.0053
+     ],
+     "gutter_tab_share": 0.0131
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 26,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1287
+     ],
+     "gutter_tab_share": 0.4231
+    },
+    "rest|str_replace": {
+     "content_tab": 1,
+     "N": 5734,
+     "share": 0.0002,
+     "wilson95": [
+      0.0,
+      0.001
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|view": {
+     "content_tab": 5,
+     "N": 988,
+     "share": 0.0051,
+     "wilson95": [
+      0.0022,
+      0.0118
+     ],
+     "gutter_tab_share": 0.8897
+    }
+   }
+  },
+  "sim-attack-fx-full|base200": {
+   "runs": 196,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 16,
+   "runs_with_go_content_tab": 14,
+   "run_share": 0.875,
+   "run_wilson95": [
+    0.6398,
+    0.965
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 159,
+     "N": 1768,
+     "share": 0.0899,
+     "wilson95": [
+      0.0775,
+      0.1042
+     ],
+     "gutter_tab_share": 0.1092
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 238,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0159
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 21,
+     "N": 199,
+     "share": 0.1055,
+     "wilson95": [
+      0.0701,
+      0.1559
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 9,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.2991
+     ],
+     "gutter_tab_share": 0.6667
+    },
+    "all|str_replace": {
+     "content_tab": 120,
+     "N": 1118,
+     "share": 0.1073,
+     "wilson95": [
+      0.0905,
+      0.1268
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|view": {
+     "content_tab": 18,
+     "N": 204,
+     "share": 0.0882,
+     "wilson95": [
+      0.0565,
+      0.1352
+     ],
+     "gutter_tab_share": 0.9167
+    },
+    "go|all": {
+     "content_tab": 156,
+     "N": 187,
+     "share": 0.8342,
+     "wilson95": [
+      0.7743,
+      0.8807
+     ],
+     "gutter_tab_share": 0.0909
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 18,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1759
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 20,
+     "N": 20,
+     "share": 1.0,
+     "wilson95": [
+      0.8389,
+      1.0
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|str_replace": {
+     "content_tab": 119,
+     "N": 124,
+     "share": 0.9597,
+     "wilson95": [
+      0.9091,
+      0.9827
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 17,
+     "N": 25,
+     "share": 0.68,
+     "wilson95": [
+      0.4841,
+      0.8279
+     ],
+     "gutter_tab_share": 0.68
+    },
+    "non_go|all": {
+     "content_tab": 3,
+     "N": 1581,
+     "share": 0.0019,
+     "wilson95": [
+      0.0006,
+      0.0056
+     ],
+     "gutter_tab_share": 0.1113
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 220,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0172
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 1,
+     "N": 179,
+     "share": 0.0056,
+     "wilson95": [
+      0.001,
+      0.031
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 9,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.2991
+     ],
+     "gutter_tab_share": 0.6667
+    },
+    "non_go|str_replace": {
+     "content_tab": 1,
+     "N": 994,
+     "share": 0.001,
+     "wilson95": [
+      0.0002,
+      0.0057
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|view": {
+     "content_tab": 1,
+     "N": 179,
+     "share": 0.0056,
+     "wilson95": [
+      0.001,
+      0.031
+     ],
+     "gutter_tab_share": 0.9497
+    },
+    "rest|all": {
+     "content_tab": 3,
+     "N": 1581,
+     "share": 0.0019,
+     "wilson95": [
+      0.0006,
+      0.0056
+     ],
+     "gutter_tab_share": 0.1113
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 220,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0172
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 1,
+     "N": 179,
+     "share": 0.0056,
+     "wilson95": [
+      0.001,
+      0.031
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 9,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.2991
+     ],
+     "gutter_tab_share": 0.6667
+    },
+    "rest|str_replace": {
+     "content_tab": 1,
+     "N": 994,
+     "share": 0.001,
+     "wilson95": [
+      0.0002,
+      0.0057
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|view": {
+     "content_tab": 1,
+     "N": 179,
+     "share": 0.0056,
+     "wilson95": [
+      0.001,
+      0.031
+     ],
+     "gutter_tab_share": 0.9497
+    }
+   }
+  },
+  "sim-attack-fx-full|overlap800": {
+   "runs": 743,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 58,
+   "runs_with_go_content_tab": 53,
+   "run_share": 0.9138,
+   "run_wilson95": [
+    0.8136,
+    0.9626
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 548,
+     "N": 8224,
+     "share": 0.0666,
+     "wilson95": [
+      0.0614,
+      0.0722
+     ],
+     "gutter_tab_share": 0.0952
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 1175,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0033
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 96,
+     "N": 993,
+     "share": 0.0967,
+     "wilson95": [
+      0.0798,
+      0.1166
+     ],
+     "gutter_tab_share": 0.0141
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 23,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1431
+     ],
+     "gutter_tab_share": 0.2174
+    },
+    "all|str_replace": {
+     "content_tab": 398,
+     "N": 5153,
+     "share": 0.0772,
+     "wilson95": [
+      0.0703,
+      0.0848
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|view": {
+     "content_tab": 54,
+     "N": 880,
+     "share": 0.0614,
+     "wilson95": [
+      0.0473,
+      0.0792
+     ],
+     "gutter_tab_share": 0.8682
+    },
+    "go|all": {
+     "content_tab": 544,
+     "N": 672,
+     "share": 0.8095,
+     "wilson95": [
+      0.7781,
+      0.8374
+     ],
+     "gutter_tab_share": 0.0818
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 81,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0453
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 96,
+     "N": 101,
+     "share": 0.9505,
+     "wilson95": [
+      0.8893,
+      0.9787
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|other": {
+     "content_tab": 0,
+     "N": 6,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3903
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|str_replace": {
+     "content_tab": 398,
+     "N": 413,
+     "share": 0.9637,
+     "wilson95": [
+      0.9409,
+      0.9779
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 50,
+     "N": 71,
+     "share": 0.7042,
+     "wilson95": [
+      0.5898,
+      0.7977
+     ],
+     "gutter_tab_share": 0.7746
+    },
+    "non_go|all": {
+     "content_tab": 4,
+     "N": 7552,
+     "share": 0.0005,
+     "wilson95": [
+      0.0002,
+      0.0014
+     ],
+     "gutter_tab_share": 0.0964
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 1094,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0035
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 0,
+     "N": 892,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0043
+     ],
+     "gutter_tab_share": 0.0157
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 17,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1843
+     ],
+     "gutter_tab_share": 0.2941
+    },
+    "non_go|str_replace": {
+     "content_tab": 0,
+     "N": 4740,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0008
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|view": {
+     "content_tab": 4,
+     "N": 809,
+     "share": 0.0049,
+     "wilson95": [
+      0.0019,
+      0.0126
+     ],
+     "gutter_tab_share": 0.8764
+    },
+    "rest|all": {
+     "content_tab": 4,
+     "N": 7552,
+     "share": 0.0005,
+     "wilson95": [
+      0.0002,
+      0.0014
+     ],
+     "gutter_tab_share": 0.0964
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 1094,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0035
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 0,
+     "N": 892,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0043
+     ],
+     "gutter_tab_share": 0.0157
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 17,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1843
+     ],
+     "gutter_tab_share": 0.2941
+    },
+    "rest|str_replace": {
+     "content_tab": 0,
+     "N": 4740,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0008
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|view": {
+     "content_tab": 4,
+     "N": 809,
+     "share": 0.0049,
+     "wilson95": [
+      0.0019,
+      0.0126
+     ],
+     "gutter_tab_share": 0.8764
+    }
+   }
+  },
+  "sim-attack|base200": {
+   "runs": 198,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 16,
+   "runs_with_go_content_tab": 14,
+   "run_share": 0.875,
+   "run_wilson95": [
+    0.6398,
+    0.965
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 159,
+     "N": 1771,
+     "share": 0.0898,
+     "wilson95": [
+      0.0773,
+      0.104
+     ],
+     "gutter_tab_share": 0.109
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 238,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0159
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 21,
+     "N": 199,
+     "share": 0.1055,
+     "wilson95": [
+      0.0701,
+      0.1559
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 9,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.2991
+     ],
+     "gutter_tab_share": 0.6667
+    },
+    "all|str_replace": {
+     "content_tab": 120,
+     "N": 1121,
+     "share": 0.107,
+     "wilson95": [
+      0.0903,
+      0.1265
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|view": {
+     "content_tab": 18,
+     "N": 204,
+     "share": 0.0882,
+     "wilson95": [
+      0.0565,
+      0.1352
+     ],
+     "gutter_tab_share": 0.9167
+    },
+    "go|all": {
+     "content_tab": 156,
+     "N": 187,
+     "share": 0.8342,
+     "wilson95": [
+      0.7743,
+      0.8807
+     ],
+     "gutter_tab_share": 0.0909
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 18,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1759
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 20,
+     "N": 20,
+     "share": 1.0,
+     "wilson95": [
+      0.8389,
+      1.0
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|str_replace": {
+     "content_tab": 119,
+     "N": 124,
+     "share": 0.9597,
+     "wilson95": [
+      0.9091,
+      0.9827
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 17,
+     "N": 25,
+     "share": 0.68,
+     "wilson95": [
+      0.4841,
+      0.8279
+     ],
+     "gutter_tab_share": 0.68
+    },
+    "non_go|all": {
+     "content_tab": 3,
+     "N": 1584,
+     "share": 0.0019,
+     "wilson95": [
+      0.0006,
+      0.0056
+     ],
+     "gutter_tab_share": 0.1111
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 220,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0172
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 1,
+     "N": 179,
+     "share": 0.0056,
+     "wilson95": [
+      0.001,
+      0.031
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 9,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.2991
+     ],
+     "gutter_tab_share": 0.6667
+    },
+    "non_go|str_replace": {
+     "content_tab": 1,
+     "N": 997,
+     "share": 0.001,
+     "wilson95": [
+      0.0002,
+      0.0057
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|view": {
+     "content_tab": 1,
+     "N": 179,
+     "share": 0.0056,
+     "wilson95": [
+      0.001,
+      0.031
+     ],
+     "gutter_tab_share": 0.9497
+    },
+    "rest|all": {
+     "content_tab": 3,
+     "N": 1584,
+     "share": 0.0019,
+     "wilson95": [
+      0.0006,
+      0.0056
+     ],
+     "gutter_tab_share": 0.1111
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 220,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0172
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 1,
+     "N": 179,
+     "share": 0.0056,
+     "wilson95": [
+      0.001,
+      0.031
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 9,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.2991
+     ],
+     "gutter_tab_share": 0.6667
+    },
+    "rest|str_replace": {
+     "content_tab": 1,
+     "N": 997,
+     "share": 0.001,
+     "wilson95": [
+      0.0002,
+      0.0057
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|view": {
+     "content_tab": 1,
+     "N": 179,
+     "share": 0.0056,
+     "wilson95": [
+      0.001,
+      0.031
+     ],
+     "gutter_tab_share": 0.9497
+    }
+   }
+  },
+  "sim-attack|overlap800": {
+   "runs": 776,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 61,
+   "runs_with_go_content_tab": 55,
+   "run_share": 0.9016,
+   "run_wilson95": [
+    0.8016,
+    0.9541
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 559,
+     "N": 8515,
+     "share": 0.0656,
+     "wilson95": [
+      0.0606,
+      0.0711
+     ],
+     "gutter_tab_share": 0.0938
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 1261,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.003
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 97,
+     "N": 1034,
+     "share": 0.0938,
+     "wilson95": [
+      0.0775,
+      0.1131
+     ],
+     "gutter_tab_share": 0.0135
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 23,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1431
+     ],
+     "gutter_tab_share": 0.2174
+    },
+    "all|str_replace": {
+     "content_tab": 407,
+     "N": 5299,
+     "share": 0.0768,
+     "wilson95": [
+      0.0699,
+      0.0843
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|view": {
+     "content_tab": 55,
+     "N": 898,
+     "share": 0.0612,
+     "wilson95": [
+      0.0474,
+      0.0789
+     ],
+     "gutter_tab_share": 0.8686
+    },
+    "go|all": {
+     "content_tab": 551,
+     "N": 682,
+     "share": 0.8079,
+     "wilson95": [
+      0.7767,
+      0.8357
+     ],
+     "gutter_tab_share": 0.0806
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 84,
+     "share": 0.0,
+     "wilson95": [
+      -0.0,
+      0.0437
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 96,
+     "N": 101,
+     "share": 0.9505,
+     "wilson95": [
+      0.8893,
+      0.9787
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|other": {
+     "content_tab": 0,
+     "N": 6,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3903
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|str_replace": {
+     "content_tab": 405,
+     "N": 420,
+     "share": 0.9643,
+     "wilson95": [
+      0.9419,
+      0.9782
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 50,
+     "N": 71,
+     "share": 0.7042,
+     "wilson95": [
+      0.5898,
+      0.7977
+     ],
+     "gutter_tab_share": 0.7746
+    },
+    "non_go|all": {
+     "content_tab": 8,
+     "N": 7833,
+     "share": 0.001,
+     "wilson95": [
+      0.0005,
+      0.002
+     ],
+     "gutter_tab_share": 0.095
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 1177,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0033
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 1,
+     "N": 933,
+     "share": 0.0011,
+     "wilson95": [
+      0.0002,
+      0.006
+     ],
+     "gutter_tab_share": 0.015
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 17,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1843
+     ],
+     "gutter_tab_share": 0.2941
+    },
+    "non_go|str_replace": {
+     "content_tab": 2,
+     "N": 4879,
+     "share": 0.0004,
+     "wilson95": [
+      0.0001,
+      0.0015
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|view": {
+     "content_tab": 5,
+     "N": 827,
+     "share": 0.006,
+     "wilson95": [
+      0.0026,
+      0.0141
+     ],
+     "gutter_tab_share": 0.8767
+    },
+    "rest|all": {
+     "content_tab": 8,
+     "N": 7833,
+     "share": 0.001,
+     "wilson95": [
+      0.0005,
+      0.002
+     ],
+     "gutter_tab_share": 0.095
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 1177,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0033
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 1,
+     "N": 933,
+     "share": 0.0011,
+     "wilson95": [
+      0.0002,
+      0.006
+     ],
+     "gutter_tab_share": 0.015
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 17,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.1843
+     ],
+     "gutter_tab_share": 0.2941
+    },
+    "rest|str_replace": {
+     "content_tab": 2,
+     "N": 4879,
+     "share": 0.0004,
+     "wilson95": [
+      0.0001,
+      0.0015
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|view": {
+     "content_tab": 5,
+     "N": 827,
+     "share": 0.006,
+     "wilson95": [
+      0.0026,
+      0.0141
+     ],
+     "gutter_tab_share": 0.8767
+    }
+   }
+  },
+  "sim-honest": {
+   "runs": 437,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 37,
+   "runs_with_go_content_tab": 35,
+   "run_share": 0.9459,
+   "run_wilson95": [
+    0.823,
+    0.985
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 406,
+     "N": 5329,
+     "share": 0.0762,
+     "wilson95": [
+      0.0694,
+      0.0836
+     ],
+     "gutter_tab_share": 0.1073
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 622,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0061
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 71,
+     "N": 706,
+     "share": 0.1006,
+     "wilson95": [
+      0.0805,
+      0.125
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 8,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3244
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|str_replace": {
+     "content_tab": 278,
+     "N": 3345,
+     "share": 0.0831,
+     "wilson95": [
+      0.0742,
+      0.0929
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|view": {
+     "content_tab": 57,
+     "N": 648,
+     "share": 0.088,
+     "wilson95": [
+      0.0685,
+      0.1123
+     ],
+     "gutter_tab_share": 0.8827
+    },
+    "go|all": {
+     "content_tab": 403,
+     "N": 494,
+     "share": 0.8158,
+     "wilson95": [
+      0.7792,
+      0.8475
+     ],
+     "gutter_tab_share": 0.1154
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 51,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.07
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 71,
+     "N": 87,
+     "share": 0.8161,
+     "wilson95": [
+      0.7219,
+      0.8835
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|str_replace": {
+     "content_tab": 278,
+     "N": 289,
+     "share": 0.9619,
+     "wilson95": [
+      0.9331,
+      0.9786
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 54,
+     "N": 67,
+     "share": 0.806,
+     "wilson95": [
+      0.6958,
+      0.8829
+     ],
+     "gutter_tab_share": 0.8507
+    },
+    "non_go|all": {
+     "content_tab": 3,
+     "N": 4835,
+     "share": 0.0006,
+     "wilson95": [
+      0.0002,
+      0.0018
+     ],
+     "gutter_tab_share": 0.1065
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 571,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0067
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 0,
+     "N": 619,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0062
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 8,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3244
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|str_replace": {
+     "content_tab": 0,
+     "N": 3056,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0013
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|view": {
+     "content_tab": 3,
+     "N": 581,
+     "share": 0.0052,
+     "wilson95": [
+      0.0018,
+      0.0151
+     ],
+     "gutter_tab_share": 0.8864
+    },
+    "rest|all": {
+     "content_tab": 3,
+     "N": 4835,
+     "share": 0.0006,
+     "wilson95": [
+      0.0002,
+      0.0018
+     ],
+     "gutter_tab_share": 0.1065
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 571,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0067
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 0,
+     "N": 619,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0062
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 8,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3244
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|str_replace": {
+     "content_tab": 0,
+     "N": 3056,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0013
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|view": {
+     "content_tab": 3,
+     "N": 581,
+     "share": 0.0052,
+     "wilson95": [
+      0.0018,
+      0.0151
+     ],
+     "gutter_tab_share": 0.8864
+    }
+   }
+  },
+  "sim-honest-fx-full": {
+   "runs": 437,
+   "tool_name_mismatches": 0,
+   "runs_with_go_reply": 37,
+   "runs_with_go_content_tab": 35,
+   "run_share": 0.9459,
+   "run_wilson95": [
+    0.823,
+    0.985
+   ],
+   "cells": {
+    "all|all": {
+     "content_tab": 406,
+     "N": 5329,
+     "share": 0.0762,
+     "wilson95": [
+      0.0694,
+      0.0836
+     ],
+     "gutter_tab_share": 0.1073
+    },
+    "all|create": {
+     "content_tab": 0,
+     "N": 622,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0061
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|insert": {
+     "content_tab": 71,
+     "N": 706,
+     "share": 0.1006,
+     "wilson95": [
+      0.0805,
+      0.125
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|other": {
+     "content_tab": 0,
+     "N": 8,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3244
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|str_replace": {
+     "content_tab": 278,
+     "N": 3345,
+     "share": 0.0831,
+     "wilson95": [
+      0.0742,
+      0.0929
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "all|view": {
+     "content_tab": 57,
+     "N": 648,
+     "share": 0.088,
+     "wilson95": [
+      0.0685,
+      0.1123
+     ],
+     "gutter_tab_share": 0.8827
+    },
+    "go|all": {
+     "content_tab": 403,
+     "N": 494,
+     "share": 0.8158,
+     "wilson95": [
+      0.7792,
+      0.8475
+     ],
+     "gutter_tab_share": 0.1154
+    },
+    "go|create": {
+     "content_tab": 0,
+     "N": 51,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.07
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|insert": {
+     "content_tab": 71,
+     "N": 87,
+     "share": 0.8161,
+     "wilson95": [
+      0.7219,
+      0.8835
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|str_replace": {
+     "content_tab": 278,
+     "N": 289,
+     "share": 0.9619,
+     "wilson95": [
+      0.9331,
+      0.9786
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "go|view": {
+     "content_tab": 54,
+     "N": 67,
+     "share": 0.806,
+     "wilson95": [
+      0.6958,
+      0.8829
+     ],
+     "gutter_tab_share": 0.8507
+    },
+    "non_go|all": {
+     "content_tab": 3,
+     "N": 4835,
+     "share": 0.0006,
+     "wilson95": [
+      0.0002,
+      0.0018
+     ],
+     "gutter_tab_share": 0.1065
+    },
+    "non_go|create": {
+     "content_tab": 0,
+     "N": 571,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0067
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|insert": {
+     "content_tab": 0,
+     "N": 619,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0062
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|other": {
+     "content_tab": 0,
+     "N": 8,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3244
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|str_replace": {
+     "content_tab": 0,
+     "N": 3056,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0013
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "non_go|view": {
+     "content_tab": 3,
+     "N": 581,
+     "share": 0.0052,
+     "wilson95": [
+      0.0018,
+      0.0151
+     ],
+     "gutter_tab_share": 0.8864
+    },
+    "rest|all": {
+     "content_tab": 3,
+     "N": 4835,
+     "share": 0.0006,
+     "wilson95": [
+      0.0002,
+      0.0018
+     ],
+     "gutter_tab_share": 0.1065
+    },
+    "rest|create": {
+     "content_tab": 0,
+     "N": 571,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0067
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|insert": {
+     "content_tab": 0,
+     "N": 619,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0062
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|other": {
+     "content_tab": 0,
+     "N": 8,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.3244
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|str_replace": {
+     "content_tab": 0,
+     "N": 3056,
+     "share": 0.0,
+     "wilson95": [
+      0.0,
+      0.0013
+     ],
+     "gutter_tab_share": 0.0
+    },
+    "rest|view": {
+     "content_tab": 3,
+     "N": 581,
+     "share": 0.0052,
+     "wilson95": [
+      0.0018,
+      0.0151
+     ],
+     "gutter_tab_share": 0.8864
+    }
+   }
+  }
+ },
+ "fixfull_vs_original": {
+  "sim-honest -> sim-honest-fx-full": {
+   "matched_equal_counts": 437,
+   "matched_count_differs": 0,
+   "only_original": 0,
+   "only_fixfull": 0,
+   "per_reply_content_tab_transitions": {
+    "go|create|0->0": 51,
+    "go|insert|0->0": 16,
+    "go|insert|1->1": 71,
+    "go|str_replace|0->0": 11,
+    "go|str_replace|1->1": 278,
+    "go|view|0->0": 13,
+    "go|view|1->1": 54,
+    "rest|create|0->0": 571,
+    "rest|insert|0->0": 619,
+    "rest|other|0->0": 8,
+    "rest|str_replace|0->0": 3056,
+    "rest|view|0->0": 578,
+    "rest|view|1->1": 3
+   }
+  },
+  "sim-attack -> sim-attack-fx-full": {
+   "matched_equal_counts": 939,
+   "matched_count_differs": 0,
+   "only_original": 35,
+   "only_fixfull": 0,
+   "per_reply_content_tab_transitions": {
+    "go|create|0->0": 99,
+    "go|insert|0->0": 5,
+    "go|insert|1->1": 116,
+    "go|other|0->0": 6,
+    "go|str_replace|0->0": 20,
+    "go|str_replace|1->1": 517,
+    "go|view|0->0": 29,
+    "go|view|1->1": 67,
+    "rest|create|0->0": 1314,
+    "rest|insert|0->0": 1070,
+    "rest|insert|1->1": 1,
+    "rest|other|0->0": 26,
+    "rest|str_replace|0->0": 5733,
+    "rest|str_replace|1->1": 1,
+    "rest|view|0->0": 983,
+    "rest|view|1->1": 5
+   }
+  }
+ }
+}

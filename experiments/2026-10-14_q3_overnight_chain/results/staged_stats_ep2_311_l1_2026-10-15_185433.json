@@ -1,0 +1,24 @@
+{
+ "target": "ep2_311_l1",
+ "suffix": "",
+ "sets": [
+  {
+   "target": "ep2_311_l1",
+   "arm": "honest_a",
+   "staged_file": "/ev/ep2_311_l1_v1/inputs/honest_a.jsonl",
+   "staged_sha": "65de6608af25fb1f94b37b9304b4b2e427eb932821b5c67c561b0416963c389f",
+   "epochs": 261,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  },
+  {
+   "target": "ep2_311_l1",
+   "arm": "honest_b",
+   "staged_file": "/ev/ep2_311_l1_v1/inputs/honest_b.jsonl",
+   "staged_sha": "ea550f2fa2c37fb71a86e8c529dc09cd0f76a9ca5250f113f27cebbbafe614a1",
+   "epochs": 261,
+   "max_staged_tokens": 32768,
+   "n_epochs_over_32768": 0
+  }
+ ]
+}

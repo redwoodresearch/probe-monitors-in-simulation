@@ -1,0 +1,78 @@
+{
+ "label": "STUB eligibility in the v1 schema (launch_disjoint_eligibility @ 9268c66b4) for code tests only; NOT the census fork's file (none case)",
+ "sets": {
+  "own_all_L48": {
+   "S_old": {
+    "withheld": true,
+    "pools_failing_or_unknown": [
+     "H_A",
+     "H_B"
+    ],
+    "eligible_cells": [],
+    "eligible_mains": 0,
+    "eligible_mains_before_pool_check": 0
+   },
+   "S_new": {
+    "withheld": true,
+    "pools_failing_or_unknown": [
+     "H_A",
+     "H_B"
+    ],
+    "eligible_cells": [],
+    "eligible_mains": 0,
+    "eligible_mains_before_pool_check": 0
+   },
+   "S_newmains": {
+    "withheld": true,
+    "pools_failing_or_unknown": [
+     "H_A",
+     "H_B"
+    ],
+    "eligible_cells": [],
+    "eligible_mains": 0,
+    "eligible_mains_before_pool_check": 0
+   }
+  },
+  "own_frac100_L48": {
+   "S_old": {
+    "withheld": true,
+    "pools_failing_or_unknown": [
+     "H_A",
+     "H_B"
+    ],
+    "eligible_cells": [],
+    "eligible_mains": 0,
+    "eligible_mains_before_pool_check": 0
+   },
+   "S_new": {
+    "withheld": true,
+    "pools_failing_or_unknown": [
+     "H_B"
+    ],
+    "eligible_cells": [],
+    "eligible_mains": 0,
+    "eligible_mains_before_pool_check": 272
+   },
+   "S_newmains": {
+    "withheld": true,
+    "pools_failing_or_unknown": [
+     "H_B"
+    ],
+    "eligible_cells": [],
+    "eligible_mains": 0,
+    "eligible_mains_before_pool_check": 300
+   }
+  }
+ },
+ "availability": {
+  "own_all_L48": {
+   "eligible_mains_total": 0,
+   "available": false
+  },
+  "own_frac100_L48": {
+   "eligible_mains_total": 0,
+   "available": false
+  }
+ },
+ "global_choice": "none"
+}

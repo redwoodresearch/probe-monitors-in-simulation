@@ -1,0 +1,10 @@
+{
+ "batch": "sp493-g7x_s1",
+ "original_target": "sp493_g7_sim_x_s1",
+ "revision": 1,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/sp493-g7x_s1__sp493_g7_sim_x_s1_cutfull.json @ 6bcf0e241a5d",
+ "commit": "6bcf0e241a5d",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_sp493-g7x_s1__sp493_g7_sim_x_s1_cutfull.json",
+ "sets": 1,
+ "failing": {}
+}

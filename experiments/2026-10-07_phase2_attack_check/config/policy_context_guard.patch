@@ -1,0 +1,84 @@
+--- a/src/runner/policy/agent.py
++++ b/src/runner/policy/agent.py
+@@ -103,6 +103,48 @@
+     return model
+ 
+ 
++# Opt-in: PT_POLICY_CONTEXT_WINDOW=N (the server's window, in tokens) ends the episode cleanly, as "out of context",
++# at the first policy call whose prompt plus PT_POLICY_MAX_TOKENS is over N. That call's reply is discarded, so the
++# episode keeps exactly the transcript a check before sending would have left. A call the server rejects for its
++# length ends the episode the same way. The sample records `policy_ended_by = "out_of_context"`
++# (`runner.build.arena_policy`); unset, nothing changes.
++POLICY_CONTEXT_WINDOW = "PT_POLICY_CONTEXT_WINDOW"
++CONTEXT_REJECTED = ("maximum context length", "longer than the maximum model length")  # vLLM's two messages
++
++
++class PolicyOutOfContext(Exception):
++    """The next policy call's prompt plus its reply cap would overflow PT_POLICY_CONTEXT_WINDOW. Carries the
++    conversation that call was given, and its prompt length when the server reported one."""
++
++    def __init__(self, messages: list, prompt_tokens: int | None) -> None:
++        super().__init__("the policy's next call would overflow the context window; the episode ends here")
++        self.messages = messages
++        self.prompt_tokens = prompt_tokens
++
++
++def _end_episode_out_of_context(model: Model, window: int, max_tokens: int) -> Model:
++    generate = model.generate
++
++    async def guarded(input, *args, **kwargs):  # noqa: A002 — Model.generate's own parameter name
++        messages = [input] if isinstance(input, str) else list(input)
++        try:
++            output = await generate(input, *args, **kwargs)
++        except Exception as error:
++            if any(text in str(error) for text in CONTEXT_REJECTED):
++                raise PolicyOutOfContext(messages, None) from error
++            raise
++        if output.stop_reason == "model_length":  # Inspect's reading of a server's context-length rejection
++            raise PolicyOutOfContext(messages, None)
++        used = output.usage.input_tokens if output.usage else None
++        assert used is not None, f"{POLICY_CONTEXT_WINDOW} needs each reply's usage.input_tokens"
++        if used + max_tokens > window:
++            raise PolicyOutOfContext(messages, used)
++        return output
++
++    model.generate = guarded
++    return model
++
++
+ def dedupe_tools(tools: Sequence[Tool]) -> list[Tool]:
+     """Keep the first tool of each name.
+ 
+@@ -192,6 +234,11 @@
+     if ends_episode:
+         assert call_budget is not None, f"{POLICY_TIMEOUT_ENDS_EPISODE} needs PT_POLICY_ATTEMPT_TIMEOUT"
+         counted = _end_episode_on_timeout(counted)
++    window = _policy_limit(POLICY_CONTEXT_WINDOW)
++    if window is not None:  # private to the policy, like the timeout wrapper: only on an unmemoized model
++        assert ends_episode and max_tokens is not None, (
++            f"{POLICY_CONTEXT_WINDOW} needs {POLICY_TIMEOUT_ENDS_EPISODE}=1 and PT_POLICY_MAX_TOKENS")
++        counted = _end_episode_out_of_context(counted, window, max_tokens)
+     return counted
+ 
+ 
+--- a/src/runner/build/arena_policy.py
++++ b/src/runner/build/arena_policy.py
+@@ -28,6 +28,7 @@
+ from inspect_ai.tool import Tool
+ 
+ from runner.policy.agent import (
++    PolicyOutOfContext,
+     PolicyTimeout,
+     attacker_agent,
+     build_policy_model,
+@@ -107,6 +108,10 @@
+         except PolicyTimeout as timeout:  # only raised with PT_POLICY_TIMEOUT_ENDS_EPISODE set (runner.policy.agent)
+             state.messages = timeout.messages
+             state.store.set("policy_ended_by", "policy_timeout")
++        except PolicyOutOfContext as full:  # only raised with PT_POLICY_CONTEXT_WINDOW set (runner.policy.agent)
++            state.messages = full.messages
++            state.store.set("policy_ended_by", "out_of_context")
++            state.store.set("policy_out_of_context_prompt_tokens", full.prompt_tokens)
+         return state
+ 
+     return solve

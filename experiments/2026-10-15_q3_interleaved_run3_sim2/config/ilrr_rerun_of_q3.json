@@ -1,0 +1,164 @@
+{
+ "host": "q3",
+ "rerun_reason": "infra: RateLimitError",
+ "original_launch": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+ "failures_source": {
+  "commit": "36a2047fa643a37921b2e2ae59740c0f54523a0b",
+  "path": "experiments/2026-10-14_q3_new_mains_launch/results/sim_ratelimit_failures_2026-10-15.json",
+  "sha256": "e9a8832f99656d7110b277581896022eb7ae6a588f2624ed1db0f01388b75346"
+ },
+ "rerun_of": [
+  {
+   "cell": "t224_auto_workflow",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t224_auto_workflow",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t224_auto_workflow/2026-10-15T07-37-05-00-00_la-auto-workflow-sim-attack-1_GbxpAoZWGnfrUtDiuHjEa9.eval",
+   "eval_sha256": "c46783aab9498f9d556fb47531e627ae6ee6c450ca36f5fa0b4d609e0a32b314",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t239_file_indexing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t239_file_indexing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t239_file_indexing/2026-10-15T07-08-44-00-00_la-file-indexing-sim-attack-1_jYGaBn25DwoLq4FNPfd8fz.eval",
+   "eval_sha256": "2849cef55073c7f124dda3dde3ea69501e93805ab4eef6ea729ed2bc0c63921e",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t245_web_scraping",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t245_web_scraping",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t245_web_scraping/2026-10-15T07-08-45-00-00_la-web-scraping-sim-attack-1_mpN9BRwJshcyVtwZbR8Bbh.eval",
+   "eval_sha256": "8a9649e989946b665e3ea3eb59128ed6984dfbedd11c5c0c84c9628d6fc55113",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t260_auto_workflow",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t260_auto_workflow",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t260_auto_workflow/2026-10-15T07-02-43-00-00_la-auto-workflow-sim-attack-1_F2FMcdWNbhRBridTfckTW9.eval",
+   "eval_sha256": "276ea91c3a05f1522d2a3cbf399a4a754a29eaaa85a356e57986f981f82de342",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t262_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t262_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t262_tiktok/2026-10-15T07-11-46-00-00_la-tiktok-sim-attack-1_CZCPdDxDieuzaXazcEj2BD.eval",
+   "eval_sha256": "30b7838f52574c9d6f6f4c7f61a641d280da85fd1668a4b9007c67572c82c74f",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t291_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t291_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t291_tiktok/2026-10-15T07-08-45-00-00_la-tiktok-sim-attack-1_WLVhhYccTtSvvQVuLCt9UY.eval",
+   "eval_sha256": "85ed32b8a10aa009296cb798cbea4b575133ead966abcbd4f39cc11c81889245",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t298_user_tracking",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t298_user_tracking",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t298_user_tracking/2026-10-15T07-02-43-00-00_la-user-tracking-sim-attack-1_HcX2GY9M7uR4USRQQTQups.eval",
+   "eval_sha256": "324fd3e6b4b7299c7f5e05cd8b068ef6238378642451789d81ac0b192f62185f",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t306_model_registry",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t306_model_registry",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t306_model_registry/2026-10-15T07-29-50-00-00_la-model-registry-sim-attack-1_7MBMVZuz6JgPm54pR3FAwg.eval",
+   "eval_sha256": "707262f2e5d602f61cddb3e988a2a3f7cc518cb4b66286df078dace7454fcb3f",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t307_tiktok",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t307_tiktok",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t307_tiktok/2026-10-15T07-02-43-00-00_la-tiktok-sim-attack-1_7eKVBodBdEqBwGsePV3bdX.eval",
+   "eval_sha256": "c7482a18a5e8beb4ff041bd914900e1aa1d2c35806150db475e9a4aadbe46781",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t310_file_indexing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t310_file_indexing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t310_file_indexing/2026-10-15T07-29-50-00-00_la-file-indexing-sim-attack-1_7rDxQoXQSMahQ4XJtboGo6.eval",
+   "eval_sha256": "7628a71e75929a121a91817597c0554715518ad72744a6dd6f2981b3a405dccd",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t315_web_scraping",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t315_web_scraping",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t315_web_scraping/2026-10-15T07-11-47-00-00_la-web-scraping-sim-attack-1_9KWVAmip9wMhQiWGDT256e.eval",
+   "eval_sha256": "8f4d7c7efb4f257bc13337adbd6cca6d53f497334f5a2b7d0c3f0b042bf07437",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t333_auto_workflow",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t333_auto_workflow",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t333_auto_workflow/2026-10-15T06-59-41-00-00_la-auto-workflow-sim-attack-1_c5myvsjZYvcAxBDybQxiEB.eval",
+   "eval_sha256": "be6392bc014db22c9289fd52651bff1f750f277128f675d60da4ee7a1ed081bb",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t347_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t347_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t347_media_processing/2026-10-15T07-05-43-00-00_la-media-processing-sim-attack-1_Qrvsv6p3FhJkLVi8A3tMPS.eval",
+   "eval_sha256": "2a988c540b5b01f19dc062fb127e5a128fa851dba3786379b5f1d4f908503074",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t352_file_indexing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t352_file_indexing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t352_file_indexing/2026-10-15T07-11-47-00-00_la-file-indexing-sim-attack-1_NXn475vxhVpGDd5HRb6PBz.eval",
+   "eval_sha256": "4c05254ca363d9f92962053cf30d9427f421af73c7b9a552c1aab8204edbdb81",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t382_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t382_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t382_media_processing/2026-10-15T07-08-44-00-00_la-media-processing-sim-attack-1_DbmPzJB5t4UWKUVH2m7Ab5.eval",
+   "eval_sha256": "51b06422a56cbc98fe893f52ce5069ed496e176f6dfc22265d8e0038302c07cf",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t405_shared_dotfiles",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t405_shared_dotfiles",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t405_shared_dotfiles/2026-10-15T07-02-43-00-00_la-shared-dotfiles-sim-attack-1_Rq8TzMPF47iqGsf45czEqg.eval",
+   "eval_sha256": "389150e323b63ab62b322d46cac10f4a1880d78425cea6c847609dec7169f590",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t420_auto_workflow",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t420_auto_workflow",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t420_auto_workflow/2026-10-15T07-05-44-00-00_la-auto-workflow-sim-attack-1_FXeJZRkLbjSBXX2ZyBxwyx.eval",
+   "eval_sha256": "46cded0538412f9dcb3a1d862bf37efb26b1fe5a102d65d488c30e7a84ce934b",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t478_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t478_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t478_media_processing/2026-10-15T07-29-50-00-00_la-media-processing-sim-attack-1_4rfArMa6cXPuTXj72A247U.eval",
+   "eval_sha256": "0c43eebf4408fccbab9131222ac0d178271d082fbcda4b4215d110114d92449a",
+   "pure_rate_limit": true
+  },
+  {
+   "cell": "t493_media_processing",
+   "launch_run_dir": "/home/aswin/phase2/runs/2026-10-14_il_q3",
+   "run_key": "sim_attack@september/t493_media_processing",
+   "eval_path": "/home/aswin/phase2/runs/2026-10-14_il_q3/sim_attack@september/t493_media_processing/2026-10-15T07-11-47-00-00_la-media-processing-sim-attack-1_NgWMgZbCZy8AjEo7JgMdCr.eval",
+   "eval_sha256": "ea01d4233c90bd25dfa2a8e6e3c4051c7fb3ba555671344199cc6a0f1eb20bcb",
+   "pure_rate_limit": true
+  }
+ ]
+}

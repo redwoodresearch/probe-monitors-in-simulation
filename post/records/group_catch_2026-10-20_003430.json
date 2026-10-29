@@ -1,0 +1,277 @@
+{
+ "label": "route C pooled A (full-length; S_old tau_sim 191 = 149 + 20 pilot + 8 + 14; pilot runs have no 32k cross-check except p2's, unit identity PASS @ f4d1db66a); PRELIMINARY until S2, the value reproductions and the a1 clean-room reproduction | run_group_catch on route C pooled A @ 54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a",
+ "what": "group catch averages (equal-weight mean over the group's probes; left panel of Figures 1 and 5)",
+ "groups": {
+  "six|C": {
+   "members": [
+    "own_all_rs_uncut_L48 C",
+    "sol_a_uncut C",
+    "FIBS|uncut C",
+    "harmfulness|uncut C",
+    "refusal|uncut C",
+    "high-stakes|uncut C"
+   ],
+   "n": 6,
+   "level": "0.01",
+   "mode": "joint",
+   "combo": "pooled_all_origins",
+   "catch": {
+    "real_mean": {
+     "point": 0.6613059643224575,
+     "finite_draws": 10000,
+     "draws": 10000,
+     "ci95": [
+      0.646850111242328,
+      0.6753876032809558
+     ],
+     "degenerate": false,
+     "point_equals_mean_of_recorded_points": true
+    },
+    "sim": {
+     "point": 0.6512540876690182,
+     "finite_draws": 10000,
+     "draws": 10000,
+     "ci95": [
+      0.6336266908609158,
+      0.6686158563572255
+     ],
+     "degenerate": false,
+     "point_equals_mean_of_recorded_points": true
+    }
+   }
+  },
+  "auroc_subset|C": {
+   "members": [
+    "sol_a_uncut C",
+    "FIBS|uncut C",
+    "harmfulness|uncut C",
+    "own_all_rs_uncut_L48 C"
+   ],
+   "n": 4,
+   "level": "0.01",
+   "mode": "joint",
+   "combo": "pooled_all_origins",
+   "catch": {
+    "real_mean": {
+     "point": 0.7687458664021165,
+     "finite_draws": 10000,
+     "draws": 10000,
+     "ci95": [
+      0.7552818979017684,
+      0.7824843325127657
+     ],
+     "degenerate": false,
+     "point_equals_mean_of_recorded_points": true
+    },
+    "sim": {
+     "point": 0.7555875909391534,
+     "finite_draws": 10000,
+     "draws": 10000,
+     "ci95": [
+      0.7356899320575343,
+      0.7759859335213116
+     ],
+     "degenerate": false,
+     "point_equals_mean_of_recorded_points": true
+    }
+   }
+  },
+  "six|R": {
+   "members": [
+    "own_all_rs_uncut_L48 R",
+    "sol_a_uncut R",
+    "FIBS|uncut R",
+    "harmfulness|uncut R",
+    "refusal|uncut R",
+    "high-stakes|uncut R"
+   ],
+   "n": 6,
+   "level": "0.01",
+   "mode": "joint",
+   "combo": "pooled_all_origins",
+   "catch": {
+    "real_mean": {
+     "point": 0.6408307613168723,
+     "finite_draws": 10000,
+     "draws": 10000,
+     "ci95": [
+      0.6254531567909466,
+      0.6568688053989992
+     ],
+     "degenerate": false,
+     "point_equals_mean_of_recorded_points": true
+    },
+    "sim": {
+     "point": 0.6283084858171665,
+     "finite_draws": 10000,
+     "draws": 10000,
+     "ci95": [
+      0.6055167634215661,
+      0.6508186731418094
+     ],
+     "degenerate": false,
+     "point_equals_mean_of_recorded_points": true
+    }
+   }
+  },
+  "auroc_subset|R": {
+   "members": [
+    "sol_a_uncut R",
+    "FIBS|uncut R",
+    "harmfulness|uncut R",
+    "own_all_rs_uncut_L48 R"
+   ],
+   "n": 4,
+   "level": "0.01",
+   "mode": "joint",
+   "combo": "pooled_all_origins",
+   "catch": {
+    "real_mean": {
+     "point": 0.7828541804453263,
+     "finite_draws": 10000,
+     "draws": 10000,
+     "ci95": [
+      0.7677098649773239,
+      0.8000271760650828
+     ],
+     "degenerate": false,
+     "point_equals_mean_of_recorded_points": true
+    },
+    "sim": {
+     "point": 0.7774098875661376,
+     "finite_draws": 10000,
+     "draws": 10000,
+     "ci95": [
+      0.7564971011892498,
+      0.7972397256657361
+     ],
+     "degenerate": false,
+     "point_equals_mean_of_recorded_points": true
+    }
+   }
+  }
+ },
+ "gate": {
+  "pass": true,
+  "per_label": {
+   "FIBS|uncut C": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "harmfulness|uncut C": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "high-stakes|uncut C": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "own_all_rs_uncut_L48 C": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "refusal|uncut C": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "sol_a_uncut C": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "FIBS|uncut R": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "harmfulness|uncut R": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "high-stakes|uncut R": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "own_all_rs_uncut_L48 R": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "refusal|uncut R": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   },
+   "sol_a_uncut R": {
+    "real_mean": true,
+    "sim": true,
+    "delta_full_array": true,
+    "delta_full_max_abs_diff": 0.0
+   }
+  },
+  "rule": "each probe's rebuilt pooled catch summary == the record's catch node (point, ci95, draws, finite_draws, withheld) and its rebuilt sim - real_mean == the npz's pooled gap_delta_full array"
+ },
+ "meta": {
+  "record": {
+   "src": "xfer/fpr507prep/records/results/alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327.json",
+   "sha256": "54afad04422afd288db9b77043713cfdb708adf5c0eaa74499ea3e5dd600082a"
+  },
+  "npz": {
+   "path": "xfer/fpr507prep/alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327_perdraw.npz",
+   "record_npz_path": "xfer/fpr507prep/alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-19_180327_perdraw.npz",
+   "sha256": "5e6cd10e382d8b03d409982c67efd72512176d7e95d2f3c94752d2b90e5650d1"
+  },
+  "arms": {
+   "real_mean": "real_mean@B",
+   "sim": "sim@S|primary"
+  },
+  "level": "0.01",
+  "mode": "joint",
+  "combo": "pooled_all_origins",
+  "readouts": [
+   "C",
+   "R"
+  ],
+  "groups_requested": {
+   "six": [
+    "own_all_rs_uncut_L48",
+    "sol_a_uncut",
+    "FIBS|uncut",
+    "harmfulness|uncut",
+    "refusal|uncut",
+    "high-stakes|uncut"
+   ],
+   "auroc_subset": [
+    "sol_a_uncut",
+    "FIBS|uncut",
+    "harmfulness|uncut",
+    "own_all_rs_uncut_L48"
+   ]
+  },
+  "method": "per draw: each probe's pooled catch rebuilt from the per-origin npz arrays (sum over members of where(D>0, catch*D, 0) / sum D, run_peraction311 @ 20c6fbd20), np.mean over the group's probes, then summ (point = draw 0; 2.5/97.5 percentiles of the finite resampled draws; withheld below 95% complete)",
+  "created_pt": "2026-10-20T00:34:38-07:00",
+  "stamp": "_2026-10-20_003430",
+  "record_source": "route C pooled A, S7R app ap-fMh4wLy8mRQNGiCQrMeIRo, s7 head f2d47f19fd873aa44b5267d88bf7cb3795f875b7",
+  "label_sidecar": "git:095a9db4c0fedaa52fdcf103d167c8dff8675e3f:experiments/2026-10-15_fpr_sweep_507_prep/results/routec_A_label_sidecar_2026-10-19_181355.json@ffe923311b75313e9bd31b967326efe4c6e594da073f2c35a3ca72a07ad6e479",
+  "git": "74edde46f54c41e63e40eb988ce2d0931aebabd0",
+  "script_sha256": "f60bb8d50aafb966e1c07884fe16d63b73a09979869196fe9a96ace697c896ca"
+ }
+}

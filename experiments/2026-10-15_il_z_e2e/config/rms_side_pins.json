@@ -1,0 +1,71 @@
+{
+ "label": "SIDE PINS for the RMS stage-B dry run; to move into INPUTS_FINAL (sent to 507-prep 17:2x)",
+ "rms": {
+  "five_arm_cells": {
+   "commit": "668a3eb91",
+   "path": "experiments/2026-10-15_il_analysis_09/results/il_five_arm_cells_2026-10-15_v2.json",
+   "sha256": "5ca4574c8d627125f0a02f87e3a1e8f91d94dd307793c9b6f72e5fb629c6db14"
+  },
+  "arm_pin_sources": [
+   {
+    "kind": "il311",
+    "commit": "d851974f5",
+    "path": "experiments/2026-10-15_il_analysis_09/results/il_final_result_il_2026-10-15_130350.json",
+    "sha256": "66f430eb828637febef339df1a31607696407d0a5d1c2bfc4cebb704ad993abf",
+    "key": "result_il.inputs"
+   },
+   {
+    "kind": "ilnm",
+    "commit": "4d92cc2ca",
+    "path": "experiments/2026-10-15_il_analysis_09/results/il_ext_final_result_il_2026-10-15_134705.json",
+    "sha256": "8b2e382b99dd62d845b6f2b686cb1a4a04f6caff7d92a21c9c3d51f7164249b9",
+    "key": "result_il.inputs"
+   },
+   {
+    "kind": "su311",
+    "commit": "3ce6ea55e",
+    "path": "experiments/2026-10-14_xerr_scaleup_09/specs/final_spec_3_launch.json",
+    "sha256": "6bd2ab192337e1023a5454c17217eb2b44f0f7c94165cd8671639443d5f90a5a",
+    "key": "arms"
+   },
+   {
+    "kind": "nm360",
+    "commit": "1a7e95259",
+    "path": "experiments/2026-10-14_xerr_scaleup_09/results/xerr_scaleup_final_2026-10-15_113025.json",
+    "sha256": "43ea698a22418168c33f2c133902225acfadfd4111d7787f9156989e3a4b4c20",
+    "key": "result.scale_up_inputs"
+   }
+  ],
+  "H_B": {
+   "S_new": {
+    "commit": "3ce6ea55e",
+    "path": "experiments/2026-10-14_xerr_scaleup_09/results/xerr_scaleup_final_2026-10-15_013255.json",
+    "sha256": "7dceb8bb25752aa3619cfde64add702fd4f7d13a1309a56dbc8880a6b27af9f5",
+    "key": "result.calibration_records.primary[\"sol_a|R|0.01|primary|BuC|B\"].schemes[<primary>].pool_keys_new",
+    "n": 306
+   },
+   "S_newmains": {
+    "commit": "1a7e95259",
+    "path": "experiments/2026-10-14_xerr_scaleup_09/results/xerr_scaleup_final_2026-10-15_113025.json",
+    "sha256": "43ea698a22418168c33f2c133902225acfadfd4111d7787f9156989e3a4b4c20",
+    "key": "result.calibration_records.extended[\"sol_a|R|0.01|primary|BuC|B\"].schemes[<primary>].pool_keys_newmains",
+    "n": 268
+   }
+  },
+  "r36": {
+   "commit": "c24106ca0",
+   "path": "experiments/2026-10-06_q3_attack_detector/results/run_scores_2026-10-06_181548/runs.json",
+   "sha256": "76b11486cc353ab1eec390d49ef7449d729d4039d1e85643541d6679d73c3b96"
+  },
+  "S_old_rms_inputs": {
+   "commit": "1ed465a10",
+   "path": "experiments/2026-10-15_il_z_e2e/config/inputs_z.json",
+   "sha256": "5846f0c5b0e24349abe62955804f19fe829da4e4f27bd6364021b5359fc724ca"
+  }
+ },
+ "s4_source_map": {
+  "commit": "b68ab0a53",
+  "path": "experiments/2026-10-14_q3_overnight_chain/results/s4_source_map/s4_source_map_4r_2026-10-15.json",
+  "sha256": "4bbfa61d8e5e9b329600892d517b16cc463993d4d3a1275c9bc40fb7dc1f37d9"
+ }
+}

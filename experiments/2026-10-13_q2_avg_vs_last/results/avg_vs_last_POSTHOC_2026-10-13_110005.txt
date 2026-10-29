@@ -1,0 +1,43 @@
+POST HOC, preliminary until Codex. Catch and false alarms (FA) in % of runs; differences in points with fixed-probe task-bootstrap 95% ranges
+(frozen probes, thresholds fixed at the point estimate, 2000 main-task draws, seed 20261012). Plant: -10 into the compared arm (+10 isn't
+constructible near the ceiling), or -5 and +5 (both needed) where -10 isn't; 'det' = detected (shift within 1 pt of the applied plant, planted
+range excludes the unplanted difference, paired shift range excludes 0 and covers the applied plant).
+Reading: unreadable if not detected; gap if the range excludes 0; within 5 if inside +-5; else inconclusive.
+
+reader        readout     layers                    rate    FA    e1    e2   sim   rep  sim-e2 [95%]         rep-e2 [95%]         e1-e2 [95%]          plant         reading sim / rep / e1
+Qwen3-32B     mean-pooled L48                        5%   5.6  91.7  90.3  91.6  90.8  +1.3 [-0.5,+3.1]     +0.4 [-1.3,+2.2]     +1.4 [-0.4,+3.2]     -10 det 3/3   within 5 / within 5 / within 5
+Qwen3-32B     mean-pooled L48                        1%   1.3  69.8  70.7  73.3  70.3  +2.6 [-0.3,+5.5]     -0.4 [-3.3,+2.4]     -1.0 [-3.8,+1.9]     -10 det 3/3   inconclusive / within 5 / within 5
+Qwen3-32B     mean-pooled L63                        5%   5.3  83.1  85.5  82.7  84.0  -2.8 [-5.0,-0.8]     -1.5 [-3.6,+0.4]     -2.4 [-4.3,-0.6]     -10 det 3/3   gap / within 5 / gap
+Qwen3-32B     mean-pooled L63                        1%   1.6  59.7  62.1  61.0  62.6  -1.1 [-4.1,+1.8]     +0.5 [-2.5,+3.2]     -2.4 [-5.0,+0.2]     -10 det 3/3   within 5 / within 5 / inconclusive
+Qwen3-32B     last-token  L48                        5%   4.9  60.9  63.0  67.2  63.8  +4.2 [+0.9,+7.3]     +0.8 [-2.5,+3.9]     -2.1 [-5.3,+0.8]     -10 det 3/3   gap / within 5 / inconclusive
+Qwen3-32B     last-token  L48                        1%   1.3  35.6  36.9  41.4  38.0  +4.5 [+1.5,+7.3]     +1.1 [-1.7,+4.0]     -1.3 [-4.0,+1.3]     -10 det 3/3   gap / within 5 / within 5
+Qwen3-32B     last-token  L63                        5%   5.3  69.3  68.8  54.5  68.2  -14.3 [-17.8,-10.9]  -0.6 [-3.8,+2.5]     +0.5 [-2.4,+3.3]     -10 det 3/3   gap / within 5 / within 5
+Qwen3-32B     last-token  L63                        1%   1.1  39.0  38.1  27.7  39.0  -10.4 [-13.2,-7.6]   +0.9 [-2.0,+3.8]     +0.9 [-2.2,+3.8]     -10 det 3/3   gap / within 5 / within 5
+Olmo-3.1-32B  mean-pooled L32                        5%   5.6  85.7  87.3  86.0  84.6  -1.3 [-3.5,+0.8]     -2.7 [-4.9,-0.7]     -1.6 [-3.7,+0.4]     -10 det 3/3   within 5 / gap / within 5
+Olmo-3.1-32B  mean-pooled L32                        1%   1.2  62.2  64.6  65.7  61.9  +1.0 [-2.1,+3.9]     -2.8 [-5.7,+0.0]     -2.4 [-5.2,+0.5]     -10 det 3/3   within 5 / inconclusive / inconclusive
+Olmo-3.1-32B  mean-pooled L40                        5%   6.0  84.3  85.6  83.4  83.1  -2.2 [-4.4,-0.1]     -2.5 [-4.6,-0.4]     -1.3 [-3.5,+0.8]     -10 det 3/3   gap / gap / within 5
+Olmo-3.1-32B  mean-pooled L40                        1%   1.5  62.9  65.4  64.3  62.9  -1.1 [-3.8,+1.6]     -2.5 [-5.1,+0.1]     -2.4 [-5.1,+0.2]     -10 det 3/3   within 5 / inconclusive / inconclusive
+Olmo-3.1-32B  mean-pooled L56                        5%   5.8  86.5  86.8  84.4  84.0  -2.5 [-4.7,-0.4]     -2.9 [-5.0,-0.9]     -0.3 [-2.5,+1.7]     -10 det 3/3   gap / gap / within 5
+Olmo-3.1-32B  mean-pooled L56                        1%   1.5  63.2  61.6  60.7  59.0  -0.9 [-3.7,+1.7]     -2.6 [-5.3,+0.0]     +1.6 [-0.9,+4.0]     -10 det 3/3   within 5 / inconclusive / within 5
+Olmo-3.1-32B  mean-pooled per-fold 32,56,56,56,40    5%   5.4  85.8  86.8  84.2  83.4  -2.6 [-4.8,-0.6]     -3.4 [-5.5,-1.3]     -1.0 [-3.1,+1.0]     -10 det 3/3   gap / gap / within 5
+Olmo-3.1-32B  mean-pooled per-fold 32,56,56,56,40    1%   1.1  63.0  62.6  61.5  58.9  -1.1 [-4.0,+1.7]     -3.8 [-6.5,-1.1]     +0.4 [-2.0,+2.9]     -10 det 3/3   within 5 / gap / within 5
+Olmo-3.1-32B  last-token  L32                        5%   5.2  68.8  67.4  63.8  67.7  -3.6 [-6.5,-0.5]     +0.3 [-2.7,+3.2]     +1.4 [-1.3,+4.1]     -10 det 3/3   gap / within 5 / within 5
+Olmo-3.1-32B  last-token  L32                        1%   1.2  38.4  37.9  35.1  37.7  -2.8 [-5.5,-0.1]     -0.2 [-2.9,+2.5]     +0.5 [-2.1,+3.2]     -10 det 3/3   gap / within 5 / within 5
+Olmo-3.1-32B  last-token  L40                        5%   5.3  70.5  70.0  64.9  69.3  -5.1 [-8.0,-2.5]     -0.7 [-3.5,+1.8]     +0.5 [-2.2,+3.1]     -10 det 3/3   gap / within 5 / within 5
+Olmo-3.1-32B  last-token  L40                        1%   1.5  38.6  36.9  31.8  35.6  -5.1 [-7.7,-2.5]     -1.3 [-4.0,+1.2]     +1.7 [-0.8,+4.0]     -10 det 3/3   gap / within 5 / within 5
+Olmo-3.1-32B  last-token  L56                        5%   5.0  70.8  70.8  59.9  69.6  -10.9 [-13.9,-8.0]   -1.2 [-4.1,+1.6]     -0.0 [-3.0,+2.9]     -10 det 3/3   gap / within 5 / within 5
+Olmo-3.1-32B  last-token  L56                        1%   1.4  42.9  43.3  31.4  40.7  -11.9 [-14.7,-9.1]   -2.6 [-5.5,+0.1]     -0.4 [-3.5,+2.6]     -10 det 3/3   gap / inconclusive / within 5
+Olmo-3.1-32B  last-token  per-fold 32,56,56,56,40    5%   5.8  71.9  71.2  62.5  69.1  -8.7 [-11.8,-5.8]    -2.1 [-5.0,+0.7]     +0.7 [-2.0,+3.4]     -10 det 3/3   gap / within 5 / within 5
+Olmo-3.1-32B  last-token  per-fold 32,56,56,56,40    1%   1.8  44.5  44.5  36.1  41.5  -8.4 [-11.4,-5.5]    -3.1 [-6.0,-0.2]     -0.0 [-2.9,+2.8]     -10 det 3/3   gap / gap / within 5
+Llama-3.3-70B mean-pooled L60                        5%   5.4  92.5  92.1  90.2  90.5  -1.9 [-3.9,-0.1]     -1.6 [-3.4,+0.2]     +0.4 [-1.4,+2.1]     -10 det 3/3   gap / within 5 / within 5
+Llama-3.3-70B mean-pooled L60                        1%   1.3  68.3  68.3  63.9  64.2  -4.4 [-7.2,-1.5]     -4.1 [-7.0,-1.2]     -0.0 [-2.4,+2.3]     -10 det 3/3   gap / gap / within 5
+Llama-3.3-70B mean-pooled L70                        5%   5.0  92.1  91.6  90.7  90.1  -1.0 [-2.9,+0.8]     -1.5 [-3.5,+0.3]     +0.5 [-1.3,+2.2]     -10 det 3/3   within 5 / within 5 / within 5
+Llama-3.3-70B mean-pooled L70                        1%   1.2  73.1  72.9  70.7  69.3  -2.2 [-5.1,+0.8]     -3.6 [-6.6,-0.6]     +0.2 [-2.5,+2.8]     -10 det 3/3   inconclusive / gap / within 5
+Llama-3.3-70B mean-pooled per-fold 60,70,60,60,70    5%   5.0  92.3  91.7  89.8  89.9  -1.9 [-3.8,-0.2]     -1.8 [-3.6,+0.0]     +0.5 [-1.3,+2.3]     -10 det 3/3   gap / within 5 / within 5
+Llama-3.3-70B mean-pooled per-fold 60,70,60,60,70    1%   1.3  69.7  69.3  65.2  65.2  -4.1 [-6.8,-1.4]     -4.1 [-6.7,-1.4]     +0.4 [-2.1,+2.8]     -10 det 3/3   gap / gap / within 5
+Llama-3.3-70B last-token  L60                        5%   5.7  79.3  79.4  69.3  74.0  -10.1 [-12.9,-7.3]   -5.4 [-8.3,-2.7]     -0.2 [-2.7,+2.3]     -10 det 3/3   gap / gap / within 5
+Llama-3.3-70B last-token  L60                        1%   2.0  55.5  56.0  44.6  50.5  -11.4 [-14.4,-8.4]   -5.6 [-8.6,-2.4]     -0.5 [-3.4,+2.5]     -10 det 3/3   gap / gap / within 5
+Llama-3.3-70B last-token  L70                        5%   5.1  80.8  80.2  67.6  75.7  -12.6 [-15.6,-9.7]   -4.4 [-7.4,-1.6]     +0.6 [-2.0,+3.2]     -10 det 3/3   gap / gap / within 5
+Llama-3.3-70B last-token  L70                        1%   1.4  50.7  51.0  37.8  46.8  -13.2 [-16.5,-9.9]   -4.2 [-7.5,-1.0]     -0.3 [-3.5,+3.0]     -10 det 3/3   gap / gap / within 5
+Llama-3.3-70B last-token  per-fold 60,70,60,60,70    5%   6.2  79.8  80.3  67.9  74.5  -12.4 [-15.4,-9.3]   -5.8 [-8.5,-3.0]     -0.5 [-2.9,+2.0]     -10 det 3/3   gap / gap / within 5
+Llama-3.3-70B last-token  per-fold 60,70,60,60,70    1%   1.9  51.7  53.5  40.0  47.2  -13.6 [-16.6,-10.4]  -6.3 [-9.4,-3.1]     -1.8 [-4.8,+1.3]     -10 det 3/3   gap / gap / within 5

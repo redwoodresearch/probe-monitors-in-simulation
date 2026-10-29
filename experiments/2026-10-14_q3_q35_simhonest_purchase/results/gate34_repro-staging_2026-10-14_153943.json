@@ -1,0 +1,18 @@
+{
+ "tasks": {
+  "t06_file_indexing": {
+   "ids_equal": true,
+   "calls_equal": true,
+   "tokens": 32768
+  },
+  "t19_web_scraping": {
+   "ids_equal": true,
+   "calls_equal": true,
+   "tokens": 29445
+  }
+ },
+ "pass": true,
+ "step": "repro-staging",
+ "git": "5619117ab914f97eab6d9e443c7b764f82fc4ad1",
+ "stamp": "2026-10-14_153943"
+}

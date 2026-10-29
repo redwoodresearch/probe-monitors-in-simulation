@@ -1,0 +1,23 @@
+{
+ "seed": 20261010,
+ "file": "sets_2026-10-10_004845.jsonl",
+ "sha256": "d72a649898eccea2bd27e07a1964628933d5bd7ec2c59d6730e59f394e8d9918",
+ "dialogues": 1080,
+ "pairs": 540,
+ "dialogues by family / split": {
+  "sys_A / train": 160,
+  "sys_A / dev": 50,
+  "sys_B / train": 160,
+  "sys_B / dev": 50,
+  "user_prefix / train": 160,
+  "user_prefix / dev": 50,
+  "harness_output / train": 160,
+  "harness_output / dev": 50,
+  "heldout_implied / heldout": 240
+ },
+ "tasks by split": {
+  "train": 120,
+  "dev": 40,
+  "heldout": 40
+ }
+}

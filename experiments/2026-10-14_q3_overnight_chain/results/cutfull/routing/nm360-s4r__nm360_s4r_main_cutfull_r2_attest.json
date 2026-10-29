@@ -1,0 +1,10 @@
+{
+ "batch": "nm360-s4r",
+ "original_target": "nm360_s4r_main",
+ "revision": 2,
+ "routing_record": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/routing/nm360-s4r__nm360_s4r_main_cutfull_r2.json @ dd00d9b6fd9b",
+ "commit": "dd00d9b6fd9b",
+ "path": "experiments/2026-10-14_q3_overnight_chain/results/cutfull/attest/attestations_nm360-s4r__nm360_s4r_main_cutfull_r2.json",
+ "sets": 1,
+ "failing": {}
+}

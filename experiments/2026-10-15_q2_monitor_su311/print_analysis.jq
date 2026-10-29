@@ -1,0 +1,6 @@
+def p: (. * 1000 | round / 10);
+def iv: "[\(.[0]|p), \(.[1]|p)]";
+def row($t; $b): $t[$b] as $r |
+  "  \($b): run1 \($r.run1.detected|p) \($r.run1.ci95|iv) | run2 \($r.run2.detected|p) \($r.run2.ci95|iv) | mean(real) \($r.real_mean.detected|p) \($r.real_mean.ci95|iv) | sim \($r.sim.detected|p) \($r.sim.ci95|iv)\n      sim−mean(real) \($r["sim_minus_mean_real (S primary)"].value|p) \($r["sim_minus_mean_real (S primary)"].ci95|iv) | run2−sim \($r["run2_minus_sim (P primary)"].value|p) \($r["run2_minus_sim (P primary)"].ci95|iv) | sim−run1 \($r.sim_minus_run1.value|p) \($r.sim_minus_run1.ci95|iv) | sim−run2 \($r.sim_minus_run2.value|p) \($r.sim_minus_run2.ci95|iv) | run2−run1 \($r["run2_minus_run1 (yardstick)"].value|p) \($r["run2_minus_run1 (yardstick)"].ci95|iv)";
+def block($name; $x):
+  "\($name): \($x.label)\n  tasks \($x.main.tasks), main tasks \($x.main.main_tasks), honest runs \($x.main.honest_runs), components \($x.main.components)\n\(row($x.main; "0.05"))\n\(row($x.main; "0.01"))\n  verdict 5%: \($x.verdict["5%"]|join("; ")) | 1%: \($x.verdict["1%"])\n  sensitivity: refusals \($x.sensitivity_refusals.forced_runs) forced, every_drop \($x.sensitivity_every_drop.forced_runs) forced";

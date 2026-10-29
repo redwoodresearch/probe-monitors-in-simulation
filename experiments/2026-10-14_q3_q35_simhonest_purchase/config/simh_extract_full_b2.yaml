@@ -1,0 +1,10 @@
+# RULE.md amendments 11-16: Qwen3.5-27B extraction of the continuation's batch 2 (the tail), CORRECTED staged
+# (results/simh_stage_c_full_b2_2026-10-14_230317.json; written by postrun_b2.sh)
+run: simh_full_b2
+inputs: simh_q4f_v1_full_b2
+inputs_sha256:
+  sim_honest@september.jsonl: 5584db0676f48f0bb34c8769900a6914be0b0b15a80574079bac01e92fe3ee3c
+model: Qwen/Qwen3.5-27B
+shards: 1
+chunk_size: 8
+pad_to: 4096

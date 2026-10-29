@@ -1,0 +1,14 @@
+# q3 (2026-10-12, post hoc; ../../2026-10-12_q3_edit_honest_fa/RULE.md): layers 48 and 63 (full forward pass) for the
+# edited copies (fix939's recipe) of the simulated honest runs whose messages the edits change (staged by
+# stage_edit_honest.py). Same model, revision, dtype, attention, cut and positions as the v4 all-layers extraction the
+# committed false-alarm numbers used; only layers 48 and 63 are written, as fix939. Shards are spawned on the deployed
+# app (spawn_extract.py); shard retries are off and chunk files are written atomically, so a relaunch resumes.
+run: 2026-10-12_q3_edithonest_qwen3-32b_l48-63_v1
+inputs_from: 2026-10-12_q3_edithonest_inputs_v1
+model: Qwen/Qwen3-32B
+dtype: bfloat16
+attn_implementation: sdpa
+max_tokens: 32768
+shards: 4
+chunk_size: 25
+layers: [48, 63]

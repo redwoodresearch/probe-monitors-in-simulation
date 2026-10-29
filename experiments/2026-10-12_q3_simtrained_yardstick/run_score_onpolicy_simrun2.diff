@@ -1,0 +1,20 @@
+--- a/experiments/2026-10-12_q3_simtrained_yardstick/run_score_onpolicy.py
++++ b/experiments/2026-10-12_q3_simtrained_yardstick/run_score_onpolicy.py
+@@ -42,7 +42,7 @@
+ 
+ HERE = Path(__file__).parent
+ RESTARTS = 3  # Amendment 8: restarts of a fit that missed the 1e-4 bar, each from the previous endpoint
+-APP = "probe-shift_aswin-surya_sub-q3onpol_score_kill-2026-11-08"
++APP = "probe-shift_aswin-surya_sub-simtr-yard_score_kill-2026-11-12"
+ ACTS = "probe-shift_aswin-surya_sub-q3onpol_acts_kill-2026-11-08"
+ SCORE = "probe-shift_aswin-surya_sub-q3onpol_score_kill-2026-11-08"
+ P1 = "probe-shift_aswin-surya_sub-qwen35_acts_kill-2026-11-06"  # Phase 1's all-layer dump (D only)
+@@ -472,7 +472,7 @@
+             "meta": [{"world": r[0], "task": r[1], "irid": r[6], "call": r[8], "y": r[5]} for r in rows], "fitter": cfg.get("fitter", "dual"), "warm_start": cfg.get("warm_start", False), "profile": cfg.get("profile", False),
+             "save_probes": cfg.get("save_probes", False),
+             "fold_of_task": [folds[t] for t in tasks], "worlds": ["real", "sim"],
+-            "cells": [("real", "real"), ("real", "sim"), ("sim", "real"), ("sim", "sim")] + [("real", "run2")] * ("run2" in worlds)
++            "cells": [("real", "real"), ("real", "sim"), ("sim", "real"), ("sim", "sim")] + [("real", "run2"), ("sim", "run2")] * ("run2" in worlds)
+                      + [("real", w) for w in ("honA", "honB", "simH") if w in worlds],  # follow-ups: real-trained probe on honest calls
+             "summary": {"calls": len(rows), "analyzable_pairs": len(tasks), "excluded_tasks": excluded,
+                         "tasks_per_fold": {k: sum(folds[t] == k for t in tasks) for k in range(5)},

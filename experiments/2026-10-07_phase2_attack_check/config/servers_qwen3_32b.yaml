@@ -1,0 +1,44 @@
+# The Qwen3-32B server, for the old-vs-new Qwen honest-success arm (10-08 design): everything as servers.yaml (vLLM,
+# GPU, limits, idle exit, timeouts, the repetition stop), except the model block, which is the feasibility pilot's
+# Qwen3-32B setup unchanged (experiments/2026-10-06_phase2_feasibility/config/servers.yaml, `qwen3_32b`): static YaRN
+# x4 to 131,072 tokens, hermes tool calls. Started with launch_servers.py --server-config servers_qwen3_32b.yaml.
+# - Context: 131,072 is Qwen3-32B's documented YaRN limit (Qwen3.5 serves 262,144 natively). The feasibility runs
+#   reached 25-67k tokens; a 200-step run past 131,072 gets vLLM's context error, recorded as the run's outcome.
+# - Capacity (an estimate; vLLM logs the exact KV-cache size at startup): about 256 KiB of bf16 KV cache per token
+#   (64 layers x 8 KV heads x 128 x 2 x 2 bytes), so about 245k tokens fit after the 65.5 GB of weights, about 4 runs
+#   at 60k tokens. Plan 3 servers for 10 concurrent runs, and check the logged size before raising it.
+vllm_version: "0.30.0"
+gpu: "H200"
+hard_timeout_h: 10         # the function's Modal timeout: the GPU is released after this whatever happens (4 in step 1,
+                           # 2.5 for the honest reruns, 3 for step 2; the pilot's 5-8 h plus margin). It must outlast
+                           # the whole launch plus server start and the live checks; the watcher stops it as runs end
+idle_exit_min: 20          # exit once no request has run for this long, after the first request was served
+startup_idle_min: 45       # ...or if no request ever arrives within this long of the server coming up
+startup_wait_min: 30       # vLLM must answer /v1/models within this long of launch (weights load + CUDA graphs: ~5 min)
+# Aswin's decision D (2026-10-07), from step 2 on, in every arm: end a generation once one token has repeated 256
+# times in a row. The honest arm's zero-parameter submit otherwise loops on whitespace to the 32,768-token cap; across
+# the reruns' other 258 completions the longest such run is 4. request_log_proxy.py injects it into every chat request
+# (vLLM 0.30's repetition_detection) and the log header records it; a stop shows as stop_reason "repetition_detected".
+# The pilot's choice between D and a multi-token setting is this one line (`repetition_setting`).
+# - d: decision D, as approved and as step 2 ran.
+# - multi_token (Codex, overnight 10-08; needs Aswin's OK): a 64-512-token pattern repeated 4 times. A run of one
+#   repeated token is also a 64-token pattern repeated 4 times, so the whitespace tails stop at the same token as under
+#   D (278, 282 and 774 in the reruns); auto_workflow's reasoning loop (a 427-token passage, no `</think>`) stops at
+#   token 3,308 instead of running to the cap. Over all 612 saved completions it stopped none of the 608 ordinary ones
+#   (analyze_repetition_settings.py). vLLM's check cost about 23 us per generated token against D's 1 us. Check
+#   (a'), check_repetition_cut.py --setting multi_token, takes the cut through vLLM's parser and Inspect.
+repetition_settings:
+  d: {min_pattern_size: 1, max_pattern_size: 1, min_count: 256}
+  multi_token: {min_pattern_size: 64, max_pattern_size: 512, min_count: 4}
+repetition_setting: multi_token  # Aswin, 10-08 12:10 (#82): replaces D in every arm
+model:
+  hf_id: Qwen/Qwen3-32B
+  revision: 9216db5781bf21249d130ec9da846c4624c16137   # the snapshot cached on the HF-cache volume (feasibility pilot)
+  args:
+    - --dtype=bfloat16
+    - --max-model-len=131072
+    - '--hf-overrides={"rope_parameters": {"rope_type": "yarn", "factor": 4.0, "original_max_position_embeddings": 32768, "rope_theta": 1000000.0}, "max_position_embeddings": 131072}'
+    - --enable-auto-tool-choice
+    - --tool-call-parser=hermes      # Qwen3 emits <tool_call>{json}</tool_call>
+    - --reasoning-parser=qwen3       # <think> goes to the reasoning field, not the content
+    - --gpu-memory-utilization=0.92

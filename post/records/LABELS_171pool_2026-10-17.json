@@ -1,0 +1,68 @@
+[
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/pooled_stageA_2026-10-16/alltasks_CRD_FULL_r2_allorigins_pooledworld_scored_e12_2026-10-16_211215.json.gz",
+    "commit": "d8fcb945fdfb6587ea727bf9af62332d969e1e55",
+    "record_sha256": "2981a8317ed1d006c7f498cc1c9b1c06514ce13a40f8b45ee7e9873e80d0d1c1",
+    "label": "171-pool; pooled A (pilot excluded; S_old τ_sim 171); superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/pooled_stageA_2026-10-16/alltasks_CRD_FULL_r2_allorigins_sweep15_pooledworld_scored_e12_2026-10-16_211415.json.gz",
+    "commit": "b25aceed650b0bfbcfa2e4e30e426bb4c001b034",
+    "record_sha256": "f40abaaed093def903aa21c816a6aa2a24eb47956bf3331f12a23eb890975bb5",
+    "label": "171-pool; pooled B (pilot excluded; S_old τ_sim 171); superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/pooled_stageA_2026-10-16/alltasks_CRD_FULL_r2_allorigins_rule37_pooledworld_scored_e12_2026-10-16_231356.json.gz",
+    "commit": "dc38b77e34962966327fb31733da6c2cf25b421f",
+    "record_sha256": "71ad0868e6c2db42e91eadda0a9069a1d737529db42a66eb4bf19c4cfb5d02fe",
+    "label": "171-pool; pooled R37 (pilot excluded; S_old τ_sim 171); superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/pooled_downstream_2026-10-17/pertask_full_2026-10-17_042410.json",
+    "commit": "30cca1a8033949fc846530495010771334e2fb97",
+    "record_sha256": "d34a86237cc1d4311abb78a7ece07e0545e3b658abca7a114e5c77def7bcdaa2",
+    "label": "171-pool; D1 read from pooled A @ d8fcb945f; superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/pertask_full_2026-10-17_042410_anchor_2026-10-17_051254_ap-HBw6gENoN3Rh4reXUUady1.json",
+    "commit": "a0daa22e24ef258ba0ffbf92b175c414be412fc3",
+    "record_sha256": "afb965678bb7e7c298ee25b3d4dad89af35a4582b2c9a4bb9960111e8a9c0e2f",
+    "label": "171-pool; D1 read from pooled A @ d8fcb945f via Stage D @ 30cca1a80 (recompute differs only at ulp scale by BLAS threads / host kernel; diag @ 4eaff0821); superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/pooled_downstream_2026-10-17/kappa_CRD_2026-10-17_053505.json",
+    "commit": "d9f661507389a93b4c3548ca657e94ddff4706b0",
+    "record_sha256": "a73519364380d61762e54c8cf9184ebe90f6963a95848f442b80f46a773e36b7",
+    "label": "171-pool; D1 read from pooled A @ d8fcb945f; superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/kappa_extra_kappa_CRD_2026-10-17_053505_2026-10-17_064339_ap-s7qN2n6hKZwKG9R5cnpPqh.json",
+    "commit": "0aeb477efedbd665f4546809adeaaaedd137ad57",
+    "record_sha256": "3e3276bf95403f0007287c5fe50ba21ebc4967866f2c1a426812380919f5afbd",
+    "label": "171-pool; D1 read from pooled A @ d8fcb945f; superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/detector_vs_drop_2026-10-17_060431_ap-0LSv3k8igfsPboc7vgNHYq.json",
+    "commit": "6a70c4a720c2b6288eda74044ef5e90834731210",
+    "record_sha256": "42c210b5b3f724d1785a0e3bed1f3472e121507dac914c4b753f03e479ebc43b",
+    "label": "171-pool; D1 read from pooled A @ d8fcb945f via Stage D @ 30cca1a80; superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_panel_noise_matched/results/panel_plant_rows_plant_rows_POOLED_FULL_2026-10-17_e2e_2026-10-17_082031.json",
+    "commit": "4c951ce6ffd681887f84942df55c06c7ffd2ffa7",
+    "record_sha256": "82654c89691e2ce5dbc4ba0aaa14b38d45d8e7615a6311c7cbd5b006ab0ee16f",
+    "label": "171-pool; pooled PLANT (pilot excluded; S_old τ_sim 171); superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_excess_2026-10-17_002221_e0c441342d30484a8ae5b8255617a56f.json",
+    "commit": "5bae3788b7c745d0d7afdc56287c164159f64f09",
+    "record_sha256": "59a14320e88c01158caf0f3700dae2861a6b3e25d779d4551f577a9ee93ca49e",
+    "label": "171-pool; built from pooled A @ d8fcb945f's per-draw arrays; superseded when the fix lands; PRELIMINARY"
+  },
+  {
+    "record": "experiments/2026-10-15_fpr_sweep_507_prep/results/group_catch_2026-10-16_235113.json",
+    "commit": "7ee63b85a8b675788bb8f825b964722f53600163",
+    "record_sha256": "d3bb191d7863afb580b2581c826d0a27f800a2fb74bced6ba2723d4ccf78dc15",
+    "label": "171-pool; built from pooled A @ d8fcb945f's per-draw arrays; superseded when the fix lands; PRELIMINARY"
+  }
+]
